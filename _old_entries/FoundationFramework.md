@@ -11,6 +11,6 @@ Foundation Framework は、どんなアプリケーションよりも先立っ�
 
 [[HarvestedFramework]] と比べてみてほしい。
 
-!comment
+## comment
 
 {{comment}}

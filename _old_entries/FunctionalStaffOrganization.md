@@ -5,7 +5,7 @@ tags: [team organization]
 
 http://martinfowler.com/bliki/FunctionalStaffOrganization.html
 
-[[技術別組織|TechnicalStaffOrganization]]よりも[[やっぱり機能別組織が好き|PreferFunctionalStaffOrganization]]。
+[技術別組織](TechnicalStaffOrganization)よりも[やっぱり機能別組織が好き](PreferFunctionalStaffOrganization)。
 
 機能別組織とは、ビジネスの機能に沿ってチームを組織化することである。
 大企業では、巨大なアプリケーションの周辺に集められたり、
@@ -25,7 +25,7 @@ http://martinfowler.com/bliki/FunctionalStaffOrganization.html
 機能別組織であれば、開発者とユーザーの関係はよりよく、長く続く。
 
 機能別組織では、タイム トゥ マーケットの向上が特に重要となってくる。
-[[技術別組織|TechnicalStaffOrganization]]だと、ビジネスニーズを考えていない人間に対して、
+[技術別組織](TechnicalStaffOrganization)だと、ビジネスニーズを考えていない人間に対して、
 どうにかプロジェクトを動かしてくれるよう働きかけなければならない。
 技術畑の人間はビジネス価値に関わろうとしないし、自ら何かをやろうとも思わない。
 こういった環境でビジネス価値を生み出すというのは、

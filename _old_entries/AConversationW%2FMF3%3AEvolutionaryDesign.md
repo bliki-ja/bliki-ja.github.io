@@ -14,7 +14,7 @@ AConversationWithMartinFowler
 ----
 {{toc}}
 
-!計画的設計 vs 進化的設計(Planned versus Evolutionary Design)
+## 計画的設計 vs 進化的設計(Planned versus Evolutionary Design)
 
 '''Bill Venners''': 「設計の終焉?」の中で計画的設計について述べられていますよね。計画的設計とはどういったものでしょうか？
 
@@ -37,7 +37,7 @@ AConversationWithMartinFowler
 私は80パーセントもの時間が節約できたように思います。
 私は、嫌味になるかもしれませんけど、平均よりも遥かに上のスキルを持った設計者ですけども、進化的設計はもっと幅広い方々のお役に立つように思います。
 
-!リファクタリングと前払いの設計(Refactoring and Upfront Design)
+## リファクタリングと前払いの設計(Refactoring and Upfront Design)
 
 '''Bill Venners''': リファクタリングは前払いの設計の役割をどのように変えたのでしょうか？
 
@@ -52,7 +52,7 @@ AConversationWithMartinFowler
 '''Martin Fowler''': 実際にはほとんど同じものでしょう。しかし、重要性という意味では違いがあるかもしれません。「設計」が「分解」に従事しているのです--プログラムをちょうどいい単位に「分解」することが「設計」なのです。
 よく分解されていれば、それらを見たり使ったりすることで、設計をどう行えばよいか分かってくるものです。
 
-!コードの不吉な匂い(Bad Smells in Code)
+## コードの不吉な匂い(Bad Smells in Code)
 
 '''Bill Venners''': いつリファクタリングを行えばよいか教えてください。『リファクタリング』の中で「Rather than appealing to some vague notion of programming aesthetics (which frankly is what we consultants usually do), I wanted something a bit more solid.」とおっしゃっていますね。
 
@@ -88,7 +88,7 @@ AConversationWithMartinFowler
 
 
 
-!優れた設計と生産性(Good Design and Productivity)
+## 優れた設計と生産性(Good Design and Productivity)
 
 '''Bill Venners''': 設計をしっかりやれと言わなくてはいけないのは、そうしないと転職してしまうからではないでしょうか。11ページものwhile文を作った張本人は、我々がそれをキレイにしなくてはならない頃にはすでに会社を去っていました。
 プログラマたちは、自分たちのダメな設計を自分たちでどうにかしなくてはならないなんて思っていないのだと思います。
@@ -112,10 +112,10 @@ AConversationWithMartinFowler
 デバッグほどフラストレーションがたまる上に時間が無駄なことはありません。
 最初からバグがなかったら、もっともっと早いってことじゃないですか？
 
-!Talk Back!
+## Talk Back!
 
-計画的設計、進化的設計、不吉な臭いについてご意見がありましたら、News & Ideas Forum [[Evolutionary Design|http://www.artima.com/forums/flat.jsp?forum=32&thread=2656]]で議論しましょう。
+計画的設計、進化的設計、不吉な臭いについてご意見がありましたら、News & Ideas Forum [Evolutionary Design](http://www.artima.com/forums/flat.jsp?forum=32&thread=2656)で議論しましょう。
 
 ----
-* [[Copyright|http://www.artima.com/copyright.html]] (c) 1996-2004 Artima Software, Inc. All Rights Reserved. 
+* [Copyright](http://www.artima.com/copyright.html) (c) 1996-2004 Artima Software, Inc. All Rights Reserved. 
 * translator:kdmsnr

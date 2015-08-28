@@ -5,12 +5,12 @@ tags: [refactoring boundary]
 
 http://martinfowler.com/bliki/RefactoringBoundary.html
 
-[[リファクタリングML|http://groups.yahoo.com/group/refactoring]]で「リファクタリングとは何か（何ではないか）」といった議論があった。
+[リファクタリングML](http://groups.yahoo.com/group/refactoring)で「リファクタリングとは何か（何ではないか）」といった議論があった。
 このように、ピンの上に何人の天使が立てるか (how many angels fit on a pin) といった不毛な議論をいつもやらかしてしまう
 {{fn('訳注：天使はカウントできないので答えが出ないため、意味のない議論の比喩に用いられる。答えが出ないが故に、ディベートの練習題材になることもあるらしい。')}}。
 しかし、リファクタリングの境界線について考えることは、いくらか意義があるように思う。
 
-[[リファクタリング本での定義|DefinitionOfRefactoring]]は、
+[リファクタリング本での定義](DefinitionOfRefactoring)は、
 わざと略式にしておいた。
 自由に解釈できるフレーズが2つほどある。
 
@@ -20,7 +20,7 @@ http://martinfowler.com/bliki/RefactoringBoundary.html
 
 リファクタリングの本質は、一連の振る舞いを保ったままの小さな変更にある。
 「リファクタリング」は正式に定義できるようなものではないが、
-非常に厳格な用語である——[[リファクタリングの誤用|RefactoringMalapropism]]は避けたい。
+非常に厳格な用語である——[リファクタリングの誤用](RefactoringMalapropism)は避けたい。
 正式に定義することは出来ないが、事例を考えることは有益だと思うので、
 いくつか bliki にエントリしていこうと思う。
 

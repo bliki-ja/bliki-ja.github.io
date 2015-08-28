@@ -12,7 +12,7 @@ http://martinfowler.com/bliki/PostIntelliJ.html
 2000年の後半、私はツールに注目していた——特にJavaのリファクタリング ツールにだ。
 その頃、まともなJavaリファクタリング ツールは存在しなかった。
 Smalltalk Refactoring Browserによって実証されてはいたが、
-私は[[Refactoring Rubicon|http://martinfowler.com/articles/refactoringRubicon.html]]を超える者を待っていた。
+私は[Refactoring Rubicon](http://martinfowler.com/articles/refactoringRubicon.html)を超える者を待っていた。
 それは（現在JetBrainsと呼ばれる会社の）IntelliJ IDEAを最初に触ったときに表れた。
 
 そのリファクタリング機能には感動した——Javaにおける最初のリファクタリング ツールであった。
@@ -30,7 +30,7 @@ JBuilder信者、textpad信者、slickedit信者がいたからだ——頼む�
 
 しかし、6ヶ月以内に、ほぼすべての人間がIntelliJを使うようになった。
 自発的に使っている者もいれば、一生懸命使おうとしている者もいた。
-[[Simon Harris|http://www.redhillconsulting.com.au/blogs/simon/]]も諦めて使うようになった。
+[Simon Harris](http://www.redhillconsulting.com.au/blogs/simon/)も諦めて使うようになった。
 
 私は「SmalltaklのIDEはどんなものよりも優れている」と言ってウザがられていたのだが、
 もうそんなことはない。

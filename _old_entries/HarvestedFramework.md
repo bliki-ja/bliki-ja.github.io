@@ -16,7 +16,7 @@ http://martinfowler.com/bliki/HarvestedFramework.html
 これは[[FoundationFramework]]に比べて大変で、効率的でないように聞こえるかもしれない。
 しかし実際にはうまくいくように思う。
 
-!comment
+## comment
 
 *2004-04-08 (木) 03:57:17 ''[[cept]]'' : ★部分、かなーり雰囲気訳です。主語も述語もよくわかりません
 *2004-04-08 (木) 10:15:40 ''[[kdmsnr]]'' : 直してみました。一文目とタイトルにうまい訳があればいいんですけどねえ。「Harvest」

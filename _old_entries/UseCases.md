@@ -17,9 +17,9 @@ http://martinfowler.com/bliki/UseCases.html
 ユースケース記述は、簡素で読みやすいものが良いでしょう。
 開発前にユースケースを記述するのに、何週間もかけてはいけません。何ヶ月なんてもってのほかです。
 
-!参考図書
+## 参考図書
 
 *{{isbn_image('4798101273')}}
-*[[Stencil Download|http://www.phruby.com/stencildownload.html]] : 上記の書籍で使われているアイコンをDLできます（Visio用）。
+*[Stencil Download](http://www.phruby.com/stencildownload.html) : 上記の書籍で使われているアイコンをDLできます（Visio用）。
 
 

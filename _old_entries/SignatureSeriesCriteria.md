@@ -18,7 +18,7 @@ http://www.martinfowler.com/bliki/SignatureSeriesCriteria.html
 シリーズの初期にはパターンへの言及が多かったように思いますが、
 これは単なる偶然であって、このシリーズの特徴ではありません。
 
-!!認可プロセス
+### 認可プロセス
 
 私が一番求めているのは、クオリティです。
 本当に良い本だけをシリーズに入れたいと思っています（読者のみなさん方は、このシリーズを信頼してくださって結構ですよ）。
@@ -48,9 +48,9 @@ http://www.martinfowler.com/bliki/SignatureSeriesCriteria.html
 将来このシリーズの著者になるあなたも、いずれこのテクニカルレビューに参加してもらうことになります。
 シリーズの質を保つことが、シリーズの著者全員の利益になると私は考えています。
 
-!関連リンク
+## 関連リンク
 
-* [[The Addison-Wesley Signature Series Series|http://www.awprofessional.com/series/series.asp?st=44126]]
+* [The Addison-Wesley Signature Series Series](http://www.awprofessional.com/series/series.asp?st=44126)
 
 
 * {{isbn_image('0321127420')}}

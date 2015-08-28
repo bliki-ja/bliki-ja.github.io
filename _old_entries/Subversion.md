@@ -13,8 +13,8 @@ Subversionは新しいオープンソースのバージョン管理システム�
 Subversionでは、CVSの大きな問題が修正されており、アトミックなコミットやファイル、ディレクトリのリネームが可能となっている。
 私も数ヶ月使ってきたが、動作が非常に安定している。
 
-同僚のMike Masonが『[[Pragmatic Programmer Book on Subversion|http://www.pragmaticprogrammer.com/titles/svn/]]』を執筆した。
-[[詳細な本はオンラインで|http://svnbook.red-bean.com/]]読めるが、
+同僚のMike Masonが『[Pragmatic Programmer Book on Subversion](http://www.pragmaticprogrammer.com/titles/svn/)』を執筆した。
+[詳細な本はオンラインで](http://svnbook.red-bean.com/)読めるが、
 Mikeの本はSubversionの優れた入門書となっている。
 できるだけ彼の本を買ってあげてくださいね。彼に昇給を与えなくて済みますからｗ。
 
@@ -46,9 +46,9 @@ Windows上だと、Tortoise SVNがいい感じだ。
 2004/9/7
 
 長年、CVSを使って作業ディレクトリのバックアップを行ってきた。
-今は[[複数のデスクトップ環境|MultipleDesktops]]を使っているが、
+今は[複数のデスクトップ環境](MultipleDesktops)を使っているが、
 ソース管理システムを使って、これらすべての環境を同期させることが出来ることに気が付いた。
-数ヶ月前、レポジトリを [[subverted|http://subversion.tigris.org/]]{{fn('訳注：CVSからSubversionへの移行')}} したんだが、
+数ヶ月前、レポジトリを [subverted](http://subversion.tigris.org/){{fn('訳注：CVSからSubversionへの移行')}} したんだが、
 これがもうめちゃくちゃウマくいってる。移行して良かった。ハッピー。
 シングルユーザーで利用してるもんだから、
 コミット衝突の回避みたいな恩恵はまったく受けてないんだけど、
@@ -57,13 +57,13 @@ Windows上だと、Tortoise SVNがいい感じだ。
 
 svnクライアントは今のところまだあまり存在してない。
 しかし、それは一時的な問題だ。
-私はWindows上のコマンドラインと[[tortoise|http://tortoisesvn.tigris.org/]]{{fn('訳注：エクスプローラを拡張する感じのsvnクライアント。')}}でやってるが、
+私はWindows上のコマンドラインと[tortoise](http://tortoisesvn.tigris.org/){{fn('訳注：エクスプローラを拡張する感じのsvnクライアント。')}}でやってるが、
 まあなんとかできとるよ。
 
 いちばん悩んだのは、レポジトリを単一にするか複数にするかだった。
 私の関わるプロジェクトはすべて独立しているため、
 別々のレポジトリを使ったほうがいいように思っていた。
-だが、同僚の [[Mike Mason|http://mikemason.ca/]] (subversionに詳しい) が
+だが、同僚の [Mike Mason](http://mikemason.ca/) (subversionに詳しい) が
 レポジトリは単一ですよ！と言うので、そうした。
 やっぱ単一ですよ！
 

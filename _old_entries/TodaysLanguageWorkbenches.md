@@ -10,11 +10,11 @@ tags: TAGS
 言語ワークベンチが大規模ソフトウェア開発に用いられるには、あと数年はかかるでしょう。
 
 
-!!Intentional Software
+### Intentional Software
 
 これらのツールのゴッドファーザーは、Intentional Programmingです。
 Intentional Programmingは、Microsoft ResearchのCharles Simonyiによって開発されました。
-数年前、SimonyiはMicrosoftを離れ、独立して自分の会社を設立し、[[Intentional Software|http://intentsoft.com/]]を開発しています。
+数年前、SimonyiはMicrosoftを離れ、独立して自分の会社を設立し、[Intentional Software](http://intentsoft.com/)を開発しています。
 ベンチャーではよくあることですが、彼は開発をオープンにしていません。
 ですから、Intentional Softwareについての情報が不足しており、どのように使用されるかもまだ分かっていません。
 
@@ -25,8 +25,8 @@ ThoughtWorksの同僚は、昨年、Intentional社と一緒に仕事をしてい
 
 （用語について。Intentionalの連中は、Microsoft時代の古い成果を「Intentional Programming」と呼び、現在開発中のものを「Intentional Software」と呼んでいます。）
 
-!!Meta Programming System
-[[JetBrains|http://jetbrains.com/]]が開発した[[Meta Programming System|http://www.jetbrains.com/mps]]は、Intentional Softwareよりも新しいツールです。
+### Meta Programming System
+[JetBrains](http://jetbrains.com/)が開発した[Meta Programming System](http://www.jetbrains.com/mps)は、Intentional Softwareよりも新しいツールです。
 JetBrainsはその優れたIDEツールにより、ソフトウェア開発者の間で名声を得ています。
 
 IDEで得た経験が言語ワークベンチにも色々と反映されています。
@@ -43,11 +43,11 @@ MPSは、使えるところがあれば、すぐにEarly Access Programで公開
 
 幸運にも私は、MPSのリーダーであるSergey Dmitrievと一緒に働いています。
 MPSの開発はJetBrainsのマサチューセッツ オフィスで行われていますので、彼らを訪ねやすいのです。
-物理的な距離の近さと、彼らのオープン性のおかげで、MPSを使った[[詳細な例|MpsAgree]]を書くことができました（先に進むまでまだ理解できなくても大丈夫です。時が来たらまたリンクを張ります）。
+物理的な距離の近さと、彼らのオープン性のおかげで、MPSを使った[詳細な例](MpsAgree)を書くことができました（先に進むまでまだ理解できなくても大丈夫です。時が来たらまたリンクを張ります）。
 
-!!Software Factories
+### Software Factories
 
-[[Software Factories|http://www.softwarefactories.com/]]は、MicrosoftのJack GreenfieldとKeith Shortによってリードされています。
+[Software Factories](http://www.softwarefactories.com/)は、MicrosoftのJack GreenfieldとKeith Shortによってリードされています。
 Software Factoriesにはいくつかの要素がありますが、ここでは詳細については述べません（名前がダメ過ぎということだけは言っておきましょう）。 
 この記事に関係する要素は、DSLです——言語指向プログラミングは、Software Factoriesでは主要な役割を担っています。
 
@@ -60,12 +60,12 @@ Software FactoriesチームはModel Driven Developmentのバックグラウン�
 Software FactoriesチームはDSLを開発、テスト、文書化などのような自動化できない分野に適用することに関心があります。
 また、DSLを直接実行したくない状況（DSLのデプロイメントなど）をシミュレートすることも調査しています。
 
-MicrosoftのDSLチームは数ヶ月前から、Visual Studio 2005 Team Systemの一部として、いくつかを[[ダウンロード可能|http://lab.msdn.microsoft.com/teamsystem/workshop/dsltools/default.aspx]]にしています。
+MicrosoftのDSLチームは数ヶ月前から、Visual Studio 2005 Team Systemの一部として、いくつかを[ダウンロード可能](http://lab.msdn.microsoft.com/teamsystem/workshop/dsltools/default.aspx)にしています。
 
-!!モデル駆動アーキテクチャ(MDA)
+### モデル駆動アーキテクチャ(MDA)
 
 OMGのMDAを追いかけているのであれば、言語ワークベンチについて私が述べてきたこととMDAのビジョンとの間に多くの共通点があることに気が付いたでしょう。
 これは論争を起こす問題ですが、今のところは、MDAの（すべてではありませんが）いくつかのビジョンは、言語ワークベンチであると言っておきましょう。
 また、MDAの上に言語ワークベンチを構築するのは、非常に脆いと思っています。
-この点についてより詳細に議論するために、[[関連した記事|http://www.martinfowler.com/articles/mdaLanguageWorkbench.html]]を書きました。
+この点についてより詳細に議論するために、[関連した記事](http://www.martinfowler.com/articles/mdaLanguageWorkbench.html)を書きました。
 ただし、この記事を最後まで読み終わるまで、よく理解できないかもしれません。

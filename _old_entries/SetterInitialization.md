@@ -8,7 +8,7 @@ http://martinfowler.com/bliki/SetterInitialization.html
 //One of two approaches to initializing objects, the other is ConstructorInitialization.
 
 オブジェクトを初期化する2つの方法のひとつ。
-もうひとつの方法は[[コンストラクタによる初期化|ConstructorInitialization]]である。
+もうひとつの方法は[コンストラクタによる初期化](ConstructorInitialization)である。
 
 //With setter initialization you construct an empty object and then use setter methods to setup various properties as you go. So create a person with firstname, lastname, and a collection of favorite bars we might see something like
 
@@ -48,6 +48,6 @@ Marko Schulzが、
 セッターメソッドとは新しいオブジェクトの使い方を説明する名前である、
 と指摘してくれた。
 ポジショナルパラメータしかない今日の言語では、
-この点は[[コンストラクタによる初期化|ConstructorInitialization]]よりも優れている。
+この点は[コンストラクタによる初期化](ConstructorInitialization)よりも優れている。
 コンストラクタのパラメータが汎用的な型（Stringなど）だと、
 すぐに混乱が生じてしまうだろう。

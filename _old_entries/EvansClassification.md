@@ -15,7 +15,7 @@ Eric Evansのエクセレントな著書『Domain Driven Design』では、
 //  * Service: A standalone operation within the context of your domain. A Service Object collects one or more services into an object. Typically you will have only one instance of each service object type within your execution context.
 
 * エンティティ：アイデンティティを持ち、時間経過によって形を変えるオブジェクト。「リファレンスオブジェクト」とも呼ばれることがある。
-* バリューオブジェクト：属性の組み合わせに意味があるオブジェクト。同じ値（バリュー）を持つ2つのバリューオブジェクトは、どちらもすべての属性が等しいと見なされる。[[バリューオブジェクト|PofEAA:ValueObject]]については、私も[[P of EAA|http://martinfowler.com/books.html#eaa]]で触れている。
+* バリューオブジェクト：属性の組み合わせに意味があるオブジェクト。同じ値（バリュー）を持つ2つのバリューオブジェクトは、どちらもすべての属性が等しいと見なされる。[バリューオブジェクト](PofEAA:ValueObject)については、私も[P of EAA](http://martinfowler.com/books.html#eaa)で触れている。
 * サービス：ドメインにおける独立したオペレーション。サービスオブジェクトは1つ以上のサービスを持つ。実行文脈におけるサービスオブジェクト型のインスタンスは、通常は1つだけである。
 
 //This classification is something that resonates well with my experience of what you need in domain models. The trouble is that the trio are hard to define precisely, they are of the "I know them when I see them" category.
@@ -62,7 +62,7 @@ Ericは著書のなかで「サービスはステートレスであるべきだ�
 分かりやすいことは分かりやすいのだが、困ったことに、他の意味と取り違えてしまうことがある。
 「エンティティ」は一般にデータベースのテーブルやそれに対応したオブジェクトのことを指す用語である。
 「サービス」はSOAの意味する"サービス"とかぶっているし、
-アプリケーションアーキテクチャの"[[サービスレイヤ|PofEAA:ServiceLayer]]"ともかぶっている。
+アプリケーションアーキテクチャの"[サービスレイヤ](PofEAA:ServiceLayer)"ともかぶっている。
 これらの3つの用語を使うときは、
 ドメインモデルの文脈で、
 Eric本で述べられている意味で、

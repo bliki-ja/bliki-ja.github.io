@@ -25,7 +25,7 @@ http://martinfowler.com/bliki/InterfaceImplementationPair.html
 //As often is the case the trade-offs are different depending on whether you are writing application classes or libraries. In an application if you ever need an interface where you don't have one you can just do Extract Interface and you're done. With published libraries your users don't get that fast feedback so it's much more useful to make your published types interfaces. However just mimicking the implementation classes in your PublishedInterfaces is rarely the best move. Interfaces should be designed around your clients' needs, often these don't match the implementation.
 
 よくあることだが、これも、アプリケーションのクラスを作っているのか、ライブラリを作っているのかによって、トレードオフの仕方が変わってくる。
-アプリケーションを作っている場合だと、インタフェースが用意されていない場合は[[インタフェースの抽出|http://www.refactoring.com/catalog/extractInterface.html]]を行えばよい。それで終わりだ。
+アプリケーションを作っている場合だと、インタフェースが用意されていない場合は[インタフェースの抽出](http://www.refactoring.com/catalog/extractInterface.html)を行えばよい。それで終わりだ。
 公布済みのライブラリだと、ユーザは素早いフィードバックを受けられないので、公布済み型のインタフェースを作るとよいだろう。
 ただし、[[PublishedInterface]]の中でクラスを実装したかのようにするだけでは、うまくはいかない。
 インタフェースは様々なクライアントの要求に合わせて設計される必要があるが、

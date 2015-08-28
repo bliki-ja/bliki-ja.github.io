@@ -5,14 +5,14 @@ tags: TAGS
 
 http://www.artima.com/intv/flexplexP.html
 
-!!Martin Fowlerとの対談 第４回
-!!!対談者 Bill Venners
-!!!2002/11/25
+### Martin Fowlerとの対談 第４回
+#### 対談者 Bill Venners
+#### 2002/11/25
 
-!!!Summary
+#### Summary
 Martin Fowler, chief scientist at Thoughtworks, Inc. and author of numerous books on software design and 　　process, talks with Bill Venners about how to combat design decay, the cost of flexibility and reusability, four criteria for a simple system, and test-first design of interfaces.
 
-!!!要約
+#### 要約
 Thoughtworks社のチーフサイエンティストであり、またソフトウェアの設計やプロセスについての多数の本の著者でもあるMartin FowlerとBill Vennersが、
 設計の劣化との戦い方、柔軟性と再利用性のコスト、シンプルなシステムのための４つの基準、およびテストファーストのインターフェイス設計について対談しました.
 
@@ -30,9 +30,9 @@ In this six-part interview, which is being published in weekly installments, Fow
 パートIIIでは、設計を計画的と進化的とにわけ、表面的な問題へと注目することが本質的な問題の発見に導き、また良い仕事が速度の低下を防ぐと提案します。
 この第４回では、設計の劣化、柔軟性と再利用性対複雑性、シンプルなシステムのための４つの基準、およびインターフェイスの設計について議論します.
 
-!!!Design Decay and Refactoring
+#### Design Decay and Refactoring
 
-!!!設計の劣化とリファクタリング
+#### 設計の劣化とリファクタリング
 
 '''Bill Venners:''' Why do designs decay over time?
 
@@ -43,9 +43,9 @@ In this six-part interview, which is being published in weekly installments, Fow
 '''Martin Fowler:''' 計画された設計の考え方をするなら、最初から何らかの設計が存在し、そうなると設計の劣化が避けられません.
 ポイントは設計を劣化から守るノウハウです。 それはリファクタリング、つまり設計の劣化を巻き戻す作業です。リファクタリングは割と新しいテクニックです。まだその利点を完全に使いこなせてはいません。ですが、設計の劣化を食い止める為に使える事はわかっています。実際、進行を逆転させて、本当に時間とともに設計を良くしていく事ができるんです。
 
-!!!Flexibility and Complexity
+#### Flexibility and Complexity
 
-!!!柔軟性と複雑性
+#### 柔軟性と複雑性
 
 '''Bill Venners:''' In Refactoring you write, "Before I used refactoring I always looked for flexible solutions. Because design changes were expensive, I would look to build a design that would stand up to changes I could forsee. The problem with building a flexible design is that flexibility costs." What is the cost and what is the alternative?
 
@@ -64,9 +64,9 @@ The alternative is to use the XP approach and not put the flexibility in at all.
 
 代案はXPのアプローチを使い、なんら柔軟性を加えない事です。XPに言わせると、たいてい間違えるんだから全く柔軟性を追加しません。もし安全に設計を進化させられなければ、その道を行くのは愚かな事です。しかし安全に設計を進化させる事ができれば、とても素晴らしいアプローチとなります。実際、それは自己強化的なアプローチとなります。もし柔軟性の思索からはなれてシンプルな設計を保つ努力を続ける事ができれば、複雑さが減りコードの変更を容易に行う事ができるでしょう。コードは簡単にわかり簡単に変えれます。結果として、もっと素早く変更を主なう事ができるでしょう。
 
-!!!Flexible versus Reusable
+#### Flexible versus Reusable
 
-!!!柔軟性と再利用性
+#### 柔軟性と再利用性
 
 '''Bill Venners:''' What about reuse? Is flexible just another word for reusable?
 
@@ -84,9 +84,9 @@ The alternative is to use the XP approach and not put the flexibility in at all.
 
 '''Martin Fowler:''' 再利用に対する私の姿勢は、再利用は発展させる物だという事です。問題を解決するためにアプリケーションを作ります。もし、よく似た別のアプリケーションを作るときに、共通部分を要素として抜き出してください。３つ目の同様のアプリケーションで、さらに共通部分を抜き出します。そのときには、再利用出来るフレームワークの様な物を持ち始めるでしょう。再利用可能なフレームワークを作ってからその上にアプリケーションを構築する事は薦められません。むしろ、アプリケーションを作るたびにフレームワークを発展させることです。
 
-!!!Up-Front Design versus Refactoring
+#### Up-Front Design versus Refactoring
 
-!!!先行設計対リファクタリング
+#### 先行設計対リファクタリング
 
 '''Bill Venners:''' How would you describe the balance between up front design and refactoring?
 
@@ -104,9 +104,9 @@ The alternative is to use the XP approach and not put the flexibility in at all.
 
 '''Martin Fowler:''' 進化的設計の方がかなり多いですね。先行させるのはかなり少ないです。
 
-!!!Criteria for a Simple System
+#### Criteria for a Simple System
 
-!!!シンプルなシステムの基準
+#### シンプルなシステムの基準
 
 '''Bill Venners:''' In Refactoring, you quote Kent Beck's four criteria for a simple system: 1) Runs all the tests. 2) Reveals all the intention. 3) No duplication. 4) Fewest number of classes or methods. What is simplicity to you?
 
@@ -136,9 +136,9 @@ Once all of that is out of the way, you obviously don't want more lines of code 
 
 いったんその全てがout of the way (独特?)になれば、明快さにより多くのコードは必要ありません。後はクラス数とメソッド数を最小限にするだけです - それで全ての基準が当てはまります。意図を明らかすると重複させない、という基準の順序は２つ目と３つ目どちらが良いのか、と異論もあります。しかしテストを通さないといけない、というのは１番目であるべきですし、コード量を最小にの基準は最後でなければいけません。
 
-!!!Designing Interfaces
+#### Designing Interfaces
 
-!!!インターフェイスの設計
+#### インターフェイスの設計
 
 '''Bill Venners:''' The way I think about design, I tend to think a lot in terms of interfaces. The literature on patterns and agile methods, Design Patterns (the Gang of Four book), Kent Beck's Extreme Programming Explained, your Refactoring book, talk a lot about code, which is both interfaces and implementations. What is the design role of thinking in terms of interfaces?
 
@@ -186,10 +186,10 @@ I think that's also true of extreme programming. The whole value of test-first d
 *2004-02-27 (金) 23:47:44 ''[[kdmsnr]]'' : あ、いや、これはblikiじゃなかったんですが……大丈夫ですｗ　後から読ませていただきます。
 *2004-02-28 (土) 01:49:16 ''[[奥村]]'' : 申し訳ないです、勘違いの上にフライングでした。確かにこのページはblikiとはデザインが違いますね。大丈夫ですか？とりあえず書いた所までは保存します。
 *2004-02-29 (日) 02:55:06 ''[[奥村]]'' : 残りの訳も上げてしまいます。でもあちこち怪しい上にぜんぜん会話っぽくありません。訳すのって難しいですね。だいたいで読むだけなら何とかなるんですけど...
-*2006-04-28 (金) 16:49:14 pagerank : Thanks!!! Links: <a href='http://www.areaseo.com'>pagerank main</a> : [http://www.areaseo.com improve pagerank default] - [HTTP://www.areaseo.com improve pagerank default] : [PageRank 11|http://www.areaseo.com] - [PageRank 11|HTTP://www.areaseo.com] : http://www.areaseo.com/improvepr/ : [[http://www.areaseo.com google rank 20]] : [[http://www.areaseo.com | pagerank 5]] : "online pr16" http://www.areaseo.com : [http://www.areaseo.com|google pr]
+*2006-04-28 (金) 16:49:14 pagerank : Thanks!!! Links: <a href='http://www.areaseo.com'>pagerank main</a> : [http://www.areaseo.com improve pagerank default] - [HTTP://www.areaseo.com improve pagerank default] : [PageRank 11|http://www.areaseo.com] - [PageRank 11|HTTP://www.areaseo.com] : http://www.areaseo.com/improvepr/ : [http://www.areaseo.com google rank 20]] : [[http://www.areaseo.com ]( pagerank 5) : "online pr16" http://www.areaseo.com : [http://www.areaseo.com|google pr]
 {{comment}}
 
 
 ----
 
-* [[Copyright|http://www.artima.com/copyright.html]] (c) 1996-2004 Artima Software, Inc. All Rights Reserved. 
+* [Copyright](http://www.artima.com/copyright.html) (c) 1996-2004 Artima Software, Inc. All Rights Reserved. 

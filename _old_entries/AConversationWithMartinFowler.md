@@ -19,11 +19,11 @@ Martin Fowlerは、何十年にもわたり、ビジネス情報システム開�
 パート5では、テストファースト設計のゆっくりとした品質について語ってくれ、単一論理思考を定義してくれた。ユニットテストと機能テストの違いも述べてくれた。
 パート6では、保守性と効率性のバランスを保ちながら、いかに修正しやすいソフトウェアを作るかについて述べてくれた。パターンと役割とアジャイルソフトウェアマニフェストについても語ってくれた。
 
-!!インデックス（全6回）
+### インデックス（全6回）
 
 {{prefix_match_list_num('AConversationW/MF')}}
 
-!!情報リソース
+### 情報リソース
 
 *Refactoring: Improving the Design of Existing Code, by Martin Fowler with Kent Beck, John Brant, William Opdyke, and Don Roberts is at Amazon.com at:http://www.amazon.com/exec/obidos/ASIN/0201485672/
 **『リファクタリング—プログラムの体質改善テクニック』Ｍ・ファウラー 著、児玉 公信＋友野 晶夫＋平澤 章＋梅澤 真史 訳http://www.amazon.co.jp/exec/obidos/ASIN/4894712288/
@@ -79,5 +79,5 @@ Martin Fowlerは、何十年にもわたり、ビジネス情報システム開�
 ** Martin FowlerのWebサイト。多くの記事、本の見出し、Martinからの情報など。
 
 ----
-* [[Copyright|http://www.artima.com/copyright.html]] (c) 1996-2004 Artima Software, Inc. All Rights Reserved. 
+* [Copyright](http://www.artima.com/copyright.html) (c) 1996-2004 Artima Software, Inc. All Rights Reserved. 
 * translator:kdmsnr 
