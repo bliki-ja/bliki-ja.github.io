@@ -1,6 +1,6 @@
 ---
 title: 機能別組織
-tags: TAGS
+tags: [team organization]
 ---
 
 http://martinfowler.com/bliki/FunctionalStaffOrganization.html

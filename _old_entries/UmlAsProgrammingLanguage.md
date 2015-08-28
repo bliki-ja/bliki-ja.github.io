@@ -1,6 +1,6 @@
 ---
 title: プログラミング言語としてのUML
-tags: TAGS
+tags: [uml]
 ---
 
 http://www.martinfowler.com/bliki/UmlAsProgrammingLanguage.html

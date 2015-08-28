@@ -1,6 +1,6 @@
 ---
 title: データモデル
-tags: TAGS
+tags: [database]
 ---
 
 http://martinfowler.com/bliki/DataModels.html

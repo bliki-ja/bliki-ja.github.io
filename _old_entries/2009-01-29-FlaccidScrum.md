@@ -1,6 +1,6 @@
 ---
 title: ヘロヘロScrum
-tags: TAGS
+tags: [agile, agile adoption, bad things, scrum]
 ---
 
 http://martinfowler.com/bliki/FlaccidScrum.html

@@ -1,6 +1,6 @@
 ---
 title: MultipleDesktops
-tags: TAGS
+tags: [writing]
 ---
 
 http://www.martinfowler.com/bliki/MultipleDesktops.html

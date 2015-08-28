@@ -1,6 +1,6 @@
 ---
 title: AgileManifestoMeeting
-tags: TAGS
+tags: [agile, agile history]
 ---
 
 http://martinfowler.com/bliki/AgileManifestoMeeting.html

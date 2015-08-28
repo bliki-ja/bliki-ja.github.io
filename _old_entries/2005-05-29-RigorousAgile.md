@@ -1,6 +1,6 @@
 ---
 title: RigorousAgile
-tags: TAGS
+tags: [agile, certification, metrics]
 ---
 
 http://martinfowler.com/bliki/RigorousAgile.html

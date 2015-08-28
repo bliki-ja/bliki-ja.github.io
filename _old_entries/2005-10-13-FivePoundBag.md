@@ -1,6 +1,6 @@
 ---
 title: FivePoundBag
-tags: TAGS
+tags: [metrics, project planning, estimation]
 ---
 
 http://martinfowler.com/bliki/FivePoundBag.html

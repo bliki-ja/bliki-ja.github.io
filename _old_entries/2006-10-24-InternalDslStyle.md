@@ -1,6 +1,6 @@
 ---
 title: 内部DSL
-tags: TAGS
+tags: [domain specific language]
 ---
 
 http://martinfowler.com/bliki/InternalDslStyle.html

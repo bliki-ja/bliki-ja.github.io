@@ -1,6 +1,6 @@
 ---
 title: SemanticDiffusion
-tags: TAGS
+tags: [agile adoption]
 ---
 
 http://www.martinfowler.com/bliki/SemanticDiffusion.html

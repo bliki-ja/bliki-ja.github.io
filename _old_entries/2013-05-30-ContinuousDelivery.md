@@ -1,6 +1,6 @@
 ---
 title: 継続的デリバリー
-tags: TAGS
+tags: [delivery, version control, continuous integration]
 ---
 
 http://martinfowler.com/bliki/ContinuousDelivery.html

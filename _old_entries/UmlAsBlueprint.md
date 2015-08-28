@@ -1,6 +1,6 @@
 ---
 title: 設計図としてのUML
-tags: TAGS
+tags: [uml]
 ---
 
 http://www.martinfowler.com/bliki/UmlAsBlueprint.html

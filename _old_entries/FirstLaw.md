@@ -1,6 +1,6 @@
 ---
 title: 第一の法則
-tags: TAGS
+tags: [application architecture]
 ---
 
 http://martinfowler.com/bliki/FirstLaw.html

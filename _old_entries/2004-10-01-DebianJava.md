@@ -1,6 +1,6 @@
 ---
 title: DebianJava
-tags: TAGS
+tags: [tools]
 ---
 
 http://martinfowler.com/bliki/DebianJava.html

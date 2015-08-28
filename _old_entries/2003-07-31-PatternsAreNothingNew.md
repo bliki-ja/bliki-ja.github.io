@@ -1,6 +1,6 @@
 ---
 title: パターンは新しいもんじゃない
-tags: TAGS
+tags: [writing]
 ---
 
 http://martinfowler.com/bliki/PatternsAreNothingNew.html

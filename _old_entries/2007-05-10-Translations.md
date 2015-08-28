@@ -1,6 +1,6 @@
 ---
 title: Translations
-tags: TAGS
+tags: [writing]
 ---
 
 http://martinfowler.com/bliki/Translations.html

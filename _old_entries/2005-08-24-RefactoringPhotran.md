@@ -1,6 +1,6 @@
 ---
 title: RefactoringPhotran
-tags: TAGS
+tags: [refactoring]
 ---
 
 http://martinfowler.com/bliki/RefactoringPhotran.html

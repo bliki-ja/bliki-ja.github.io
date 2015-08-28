@@ -1,6 +1,6 @@
 ---
 title: スタブの生成
-tags: TAGS
+tags: [testing]
 ---
 
 http://www.martinfowler.com/bliki/MakingStubs.html

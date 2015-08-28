@@ -1,6 +1,6 @@
 ---
 title: Cringelyをリファクタリング
-tags: TAGS
+tags: [refactoring]
 ---
 
 http://martinfowler.com/bliki/RefactoringCringely.html

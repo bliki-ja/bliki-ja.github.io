@@ -1,6 +1,6 @@
 ---
 title: EvansClassification
-tags: TAGS
+tags: [domain driven design]
 ---
 
 http://martinfowler.com/bliki/EvansClassification.html

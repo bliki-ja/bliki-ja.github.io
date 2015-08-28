@@ -1,6 +1,6 @@
 ---
 title: 実例による仕様書
-tags: TAGS
+tags: [testing, requirements analysis]
 ---
 
 http://martinfowler.com/bliki/SpecificationByExample.html

@@ -1,6 +1,6 @@
 ---
 title: リファクタリングの定義
-tags: TAGS
+tags: [refactoring]
 ---
 
 http://martinfowler.com/bliki/DefinitionOfRefactoring.html

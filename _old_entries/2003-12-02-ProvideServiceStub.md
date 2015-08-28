@@ -1,6 +1,6 @@
 ---
 title: サービススタブを提供する
-tags: TAGS
+tags: [application integration]
 ---
 
 http://martinfowler.com/bliki/ProvideServiceStub.html

@@ -1,6 +1,6 @@
 ---
 title: ClockWrapper
-tags: TAGS
+tags: [testing]
 ---
 
 http://martinfowler.com/bliki/ClockWrapper.html

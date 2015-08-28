@@ -1,6 +1,6 @@
 ---
 title: ドット投票
-tags: TAGS
+tags: [writing]
 ---
 
 http://martinfowler.com/bliki/DotVoting.html

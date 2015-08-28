@@ -1,6 +1,6 @@
 ---
 title: UMLスケッチツール
-tags: TAGS
+tags: [uml]
 ---
 
 http://martinfowler.com/bliki/UmlSketchingTools.html

@@ -1,6 +1,6 @@
 ---
 title: カプセル化したコレクション
-tags: TAGS
+tags: [encapsulation]
 ---
 
 http://www.martinfowler.com/bliki/EncapsulatedCollection.html

@@ -1,6 +1,6 @@
 ---
 title: TestInvariant
-tags: TAGS
+tags: [testing]
 ---
 
 http://martinfowler.com/bliki/TestInvariant.html

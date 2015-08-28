@@ -1,6 +1,6 @@
 ---
 title: 度重なる変異
-tags: TAGS
+tags: [evolutionary design, technical leadership]
 ---
 
 http://martinfowler.com/bliki/AbundantMutation.html

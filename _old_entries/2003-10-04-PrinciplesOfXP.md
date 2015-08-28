@@ -1,6 +1,6 @@
 ---
 title: XPの原則
-tags: TAGS
+tags: [extreme programming]
 ---
 
 http://www.martinfowler.com/bliki/PrinciplesOfXP.html

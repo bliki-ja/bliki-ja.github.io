@@ -1,6 +1,6 @@
 ---
 title: 意味的衝突
-tags: TAGS
+tags: [bad things, version control, continuous integration]
 ---
 
 http://martinfowler.com/bliki/SemanticConflict.html

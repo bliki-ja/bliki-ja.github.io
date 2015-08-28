@@ -1,6 +1,6 @@
 ---
 title: Blikiとは
-tags: TAGS
+tags: [website]
 ---
 
 http://martinfowler.com/bliki/WhatIsaBliki.html

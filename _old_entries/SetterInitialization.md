@@ -1,6 +1,6 @@
 ---
 title: SetterInitialization
-tags: TAGS
+tags: [API design]
 ---
 
 http://martinfowler.com/bliki/SetterInitialization.html

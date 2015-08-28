@@ -1,6 +1,6 @@
 ---
 title: ストラングラーアプリケーション
-tags: TAGS
+tags: [application architecture, legacy rehab]
 ---
 
 http://martinfowler.com/bliki/StranglerApplication.html

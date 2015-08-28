@@ -1,6 +1,6 @@
 ---
 title: TestCancer
-tags: TAGS
+tags: [testing, bad things]
 ---
 
 http://martinfowler.com/bliki/TestCancer.html

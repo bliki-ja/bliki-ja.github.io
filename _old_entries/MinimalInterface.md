@@ -1,6 +1,6 @@
 ---
 title: 最小インタフェース
-tags: TAGS
+tags: [API design]
 ---
 
 http://martinfowler.com/bliki/MinimalInterface.html

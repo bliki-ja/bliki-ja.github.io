@@ -1,6 +1,6 @@
 ---
 title: アプリケーション境界
-tags: TAGS
+tags: [team organization, application integration, application architecture]
 ---
 
 http://martinfowler.com/bliki/ApplicationBoundary.html

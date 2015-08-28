@@ -1,6 +1,6 @@
 ---
 title: RubyAnnotations
-tags: TAGS
+tags: [language feature, domain specific language, ruby]
 ---
 
 http://martinfowler.com/bliki/RubyAnnotations.html

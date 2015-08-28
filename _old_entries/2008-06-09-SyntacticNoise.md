@@ -1,6 +1,6 @@
 ---
 title: 構文ノイズ
-tags: TAGS
+tags: [language feature, domain specific language]
 ---
 
 http://www.martinfowler.com/bliki/SyntacticNoise.html

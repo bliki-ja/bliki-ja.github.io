@@ -1,6 +1,6 @@
 ---
 title: ペンディングHEAD
-tags: TAGS
+tags: [version control]
 ---
 
 2007/4/26

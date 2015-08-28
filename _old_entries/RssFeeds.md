@@ -1,6 +1,6 @@
 ---
 title: Rssフィード
-tags: TAGS
+tags: [website]
 ---
 
 http://martinfowler.com/bliki/RssFeeds.html

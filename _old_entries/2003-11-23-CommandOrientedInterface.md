@@ -1,6 +1,6 @@
 ---
 title: コマンド指向インターフェイス
-tags: TAGS
+tags: [API design]
 ---
 
 http://martinfowler.com/bliki/CommandOrientedInterface.html

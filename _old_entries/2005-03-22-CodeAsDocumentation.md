@@ -1,6 +1,6 @@
 ---
 title: コードがドキュメントだ
-tags: TAGS
+tags: [agile, documentation]
 ---
 
 http://www.martinfowler.com/bliki/CodeAsDocumentation.html

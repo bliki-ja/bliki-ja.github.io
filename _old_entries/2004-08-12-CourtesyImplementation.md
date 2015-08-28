@@ -1,6 +1,6 @@
 ---
 title: 儀礼的実装
-tags: TAGS
+tags: [API design]
 ---
 
 http://martinfowler.com/bliki/CourtesyImplementation.html

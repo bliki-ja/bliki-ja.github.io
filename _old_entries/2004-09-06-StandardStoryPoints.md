@@ -1,6 +1,6 @@
 ---
 title: 標準ストーリーポイント
-tags: TAGS
+tags: [metrics, requirements analysis, project planning, estimation]
 ---
 
 http://martinfowler.com/bliki/StandardStoryPoints.html

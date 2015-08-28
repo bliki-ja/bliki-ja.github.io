@@ -1,6 +1,6 @@
 ---
 title: クラス図におけるローカル変数
-tags: TAGS
+tags: [uml]
 ---
 
 http://www.martinfowler.com/bliki/LocalVariablesInClassDiagrams.html

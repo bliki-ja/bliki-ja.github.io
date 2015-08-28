@@ -1,6 +1,6 @@
 ---
 title: ピープル指向
-tags: TAGS
+tags: [agile, process theory]
 ---
 
 http://martinfowler.com/bliki/PeopleOriented.html

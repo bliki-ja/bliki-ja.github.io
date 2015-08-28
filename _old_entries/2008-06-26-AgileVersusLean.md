@@ -1,6 +1,6 @@
 ---
 title: AgileVersusLean
-tags: TAGS
+tags: [agile, lean]
 ---
 
 http://martinfowler.com/bliki/AgileVersusLean.html

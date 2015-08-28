@@ -1,6 +1,6 @@
 ---
 title: 電子投票機
-tags: TAGS
+tags: [tools]
 ---
 
 http://martinfowler.com/bliki/VotingMachines.html

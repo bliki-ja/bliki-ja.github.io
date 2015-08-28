@@ -1,6 +1,6 @@
 ---
 title: OverloadedGetterSetter
-tags: TAGS
+tags: [bad things, API design]
 ---
 
 http://martinfowler.com/bliki/OverloadedGetterSetter.html

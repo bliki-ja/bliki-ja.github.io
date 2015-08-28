@@ -1,6 +1,6 @@
 ---
 title: GangOfFour
-tags: TAGS
+tags: [clean code, object collaboration design]
 ---
 
 http://martinfowler.com/bliki/GangOfFour.html

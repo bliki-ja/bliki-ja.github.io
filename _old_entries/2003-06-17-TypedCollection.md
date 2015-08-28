@@ -1,6 +1,6 @@
 ---
 title: 型付きコレクション
-tags: TAGS
+tags: [API design]
 ---
 
 http://martinfowler.com/bliki/TypedCollection.html

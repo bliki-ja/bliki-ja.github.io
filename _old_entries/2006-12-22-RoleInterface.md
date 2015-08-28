@@ -1,6 +1,6 @@
 ---
 title: RoleInterface
-tags: TAGS
+tags: [API design]
 ---
 
 http://martinfowler.com/bliki/RoleInterface.html

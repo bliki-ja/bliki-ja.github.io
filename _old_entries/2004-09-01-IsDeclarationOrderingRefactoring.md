@@ -1,6 +1,6 @@
 ---
 title: 宣言の順序変更はリファクタリングか？
-tags: TAGS
+tags: [refactoring boundary]
 ---
 
 http://martinfowler.com/bliki/IsDeclarationOrderingRefactoring.html

@@ -1,6 +1,6 @@
 ---
 title: ジャンケン見積り
-tags: TAGS
+tags: [project planning, collaboration, estimation]
 ---
 
 http://martinfowler.com/bliki/ThrownEstimate.html

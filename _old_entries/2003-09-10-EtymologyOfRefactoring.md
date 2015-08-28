@@ -1,6 +1,6 @@
 ---
 title: リファクタリングの語源
-tags: TAGS
+tags: [refactoring]
 ---
 
 http://martinfowler.com/bliki/EtymologyOfRefactoring.html

@@ -1,6 +1,6 @@
 ---
 title: 流れるようなインタフェース
-tags: TAGS
+tags: [API design, domain specific language]
 ---
 
 http://www.martinfowler.com/bliki/FluentInterface.html

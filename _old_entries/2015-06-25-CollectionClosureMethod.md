@@ -1,6 +1,6 @@
 ---
 title: コレクションクロージャメソッド
-tags: TAGS
+tags: [object collaboration design, API design, ruby, language feature]
 ---
 
 http://martinfowler.com/bliki/CollectionClosureMethod.html

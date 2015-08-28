@@ -1,6 +1,6 @@
 ---
 title: 昨日の天気
-tags: TAGS
+tags: [extreme programming, project planning, estimation]
 ---
 
 http://martinfowler.com/bliki/YesterdaysWeather.html

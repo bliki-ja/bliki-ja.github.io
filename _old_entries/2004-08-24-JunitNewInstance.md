@@ -1,6 +1,6 @@
 ---
 title: Junit新インスタンス
-tags: TAGS
+tags: [testing]
 ---
 
 http://martinfowler.com/bliki/JunitNewInstance.html

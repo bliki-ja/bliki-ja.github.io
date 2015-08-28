@@ -1,6 +1,6 @@
 ---
 title: 階層型データモデル
-tags: TAGS
+tags: [database]
 ---
 
 http://martinfowler.com/bliki/HierarchicDataModel.html

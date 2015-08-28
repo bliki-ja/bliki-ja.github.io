@@ -1,6 +1,6 @@
 ---
 title: ビルド言語
-tags: TAGS
+tags: [build scripting]
 ---
 
 http://martinfowler.com/bliki/BuildLanguage.html

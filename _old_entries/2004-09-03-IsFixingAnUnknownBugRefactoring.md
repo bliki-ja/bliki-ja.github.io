@@ -1,6 +1,6 @@
 ---
 title: 未知のバグフィックスはリファクタリングか？
-tags: TAGS
+tags: [refactoring boundary]
 ---
 
 http://martinfowler.com/bliki/IsFixingAnUnknownBugRefactoring.html

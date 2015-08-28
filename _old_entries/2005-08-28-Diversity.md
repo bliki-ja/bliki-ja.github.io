@@ -1,6 +1,6 @@
 ---
 title: 多様性
-tags: TAGS
+tags: [thoughtworks, diversity]
 ---
 
 http://martinfowler.com/bliki/Diversity.html

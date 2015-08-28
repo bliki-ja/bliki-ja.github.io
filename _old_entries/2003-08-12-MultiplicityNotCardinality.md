@@ -1,6 +1,6 @@
 ---
 title: 基数ではなく多重度
-tags: TAGS
+tags: [uml]
 ---
 
 http://martinfowler.com/bliki/MultiplicityNotCardinality.html

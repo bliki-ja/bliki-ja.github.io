@@ -1,6 +1,6 @@
 ---
 title: 委任主義
-tags: TAGS
+tags: [process theory]
 ---
 
 http://martinfowler.com/bliki/EnablingAttitude.html

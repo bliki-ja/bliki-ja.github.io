@@ -1,6 +1,6 @@
 ---
 title: 反復開発の歴史
-tags: TAGS
+tags: [agile history]
 ---
 
 http://martinfowler.com/bliki/HistoryOfIterativeDevelopment.html

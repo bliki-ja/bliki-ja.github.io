@@ -1,6 +1,6 @@
 ---
 title: 虎の威を借りてみる
-tags: TAGS
+tags: [writing]
 ---
 
 http://martinfowler.com/bliki/AppealToAuthority.html

@@ -1,6 +1,6 @@
 ---
 title: 技術的負債
-tags: TAGS
+tags: [technical debt, clean code]
 ---
 
 http://www.martinfowler.com/bliki/TechnicalDebt.html

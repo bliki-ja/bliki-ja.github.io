@@ -1,6 +1,6 @@
 ---
 title: Knoppix
-tags: TAGS
+tags: [tools]
 ---
 
 http://martinfowler.com/bliki/Knoppix.html

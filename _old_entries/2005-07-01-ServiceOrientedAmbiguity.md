@@ -1,6 +1,6 @@
 ---
 title: ServiceOrientedAmbiguity
-tags: TAGS
+tags: [application integration]
 ---
 
 http://martinfowler.com/bliki/ServiceOrientedAmbiguity.html

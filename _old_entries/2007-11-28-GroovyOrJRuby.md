@@ -1,6 +1,6 @@
 ---
 title: GroovyOrJRuby
-tags: TAGS
+tags: [ruby]
 ---
 
 http://martinfowler.com/bliki/GroovyOrJRuby.html

@@ -1,6 +1,6 @@
 ---
 title: バグが超少ないプロジェクト
-tags: TAGS
+tags: [delivery, extreme programming]
 ---
 
 http://martinfowler.com/bliki/VeryLowDefectProject.html

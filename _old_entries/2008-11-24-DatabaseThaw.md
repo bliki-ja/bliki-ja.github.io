@@ -1,6 +1,6 @@
 ---
 title: DatabaseThaw
-tags: TAGS
+tags: [database, noSQL]
 ---
 
 http://www.martinfowler.com/bliki/DatabaseThaw.html

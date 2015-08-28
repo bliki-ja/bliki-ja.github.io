@@ -1,6 +1,6 @@
 ---
 title: POJO
-tags: TAGS
+tags: [programming platforms]
 ---
 
 http://martinfowler.com/bliki/POJO.html

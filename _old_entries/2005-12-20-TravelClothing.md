@@ -1,6 +1,6 @@
 ---
 title: TravelClothing
-tags: TAGS
+tags: [travel]
 ---
 
 http://martinfowler.com/bliki/TravelClothing.html

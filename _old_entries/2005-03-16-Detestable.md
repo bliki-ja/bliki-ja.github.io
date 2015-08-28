@@ -1,6 +1,6 @@
 ---
 title: ディテスタブル
-tags: TAGS
+tags: [dictionary, testing, bad things, technical debt, clean code]
 ---
 
 http://martinfowler.com/bliki/Detestable.html

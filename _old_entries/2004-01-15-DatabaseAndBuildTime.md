@@ -1,6 +1,6 @@
 ---
 title: データベースとビルドタイム
-tags: TAGS
+tags: [delivery, testing]
 ---
 
 http://martinfowler.com/bliki/DatabaseAndBuildTime.html

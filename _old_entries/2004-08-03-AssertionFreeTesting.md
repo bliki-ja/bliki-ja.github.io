@@ -1,6 +1,6 @@
 ---
 title: AssertionFreeTesting
-tags: TAGS
+tags: [testing, bad things]
 ---
 
 http://martinfowler.com/bliki/AssertionFreeTesting.html

@@ -1,6 +1,6 @@
 ---
 title: クラス図におけるコレクション
-tags: TAGS
+tags: [uml]
 ---
 
 http://www.martinfowler.com/bliki/CollectionsOnClassDiagrams.html

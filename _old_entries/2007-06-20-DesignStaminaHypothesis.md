@@ -1,6 +1,6 @@
 ---
 title: 設計＝スタミナ説
-tags: TAGS
+tags: [productivity, technical debt, process theory, evolutionary design, clean code, software craftsmanship]
 ---
 
 http://martinfowler.com/bliki/DesignStaminaHypothesis.html

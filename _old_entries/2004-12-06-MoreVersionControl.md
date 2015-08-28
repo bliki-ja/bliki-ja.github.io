@@ -1,6 +1,6 @@
 ---
 title: もっとVersionControlを！
-tags: TAGS
+tags: [version control, writing]
 ---
 
 http://martinfowler.com/bliki/MoreVersionControl.html

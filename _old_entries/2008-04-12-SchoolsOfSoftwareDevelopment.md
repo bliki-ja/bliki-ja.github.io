@@ -1,6 +1,6 @@
 ---
 title: ソフトウェア開発の学派
-tags: TAGS
+tags: [agile, certification, process theory]
 ---
 
 http://martinfowler.com/bliki/SchoolsOfSoftwareDevelopment.html

@@ -1,6 +1,6 @@
 ---
 title: 失敗とは
-tags: TAGS
+tags: [metrics, process theory]
 ---
 
 !CHAOSレポートによると、成功したプロジェクトはわずか34%

@@ -1,6 +1,6 @@
 ---
 title: 集約とコンポジション
-tags: TAGS
+tags: [uml]
 ---
 
 http://martinfowler.com/bliki/AggregationAndComposition.html

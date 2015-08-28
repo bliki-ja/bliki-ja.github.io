@@ -1,6 +1,6 @@
 ---
 title: 欠陥技術の二分法
-tags: TAGS
+tags: [process theory]
 ---
 
 http://martinfowler.com/bliki/FaultyTechniqueDichotomy.html

@@ -1,6 +1,6 @@
 ---
 title: ウェスタン
-tags: TAGS
+tags: [diversions]
 ---
 
 http://martinfowler.com/bliki/OnceUponaTimeInTheWest.html

@@ -1,6 +1,6 @@
 ---
 title: DecoratedCommand
-tags: TAGS
+tags: [API design]
 ---
 
 http://martinfowler.com/bliki/DecoratedCommand.html

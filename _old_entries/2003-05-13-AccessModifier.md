@@ -1,6 +1,6 @@
 ---
 title: アクセス修飾子
-tags: TAGS
+tags: [encapsulation, language feature]
 ---
 
 http://martinfowler.com/bliki/AccessModifier.html

@@ -1,6 +1,6 @@
 ---
 title: ポストイットタイムライン
-tags: TAGS
+tags: [collaboration, retrospective]
 ---
 
 http://martinfowler.com/bliki/StickyTimeline.html

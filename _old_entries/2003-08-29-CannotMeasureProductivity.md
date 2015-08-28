@@ -1,6 +1,6 @@
 ---
 title: 生産性は計測不能
-tags: TAGS
+tags: [productivity, metrics, project planning, estimation]
 ---
 
 http://www.martinfowler.com/bliki/CannotMeasureProductivity.html

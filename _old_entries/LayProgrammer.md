@@ -1,6 +1,6 @@
 ---
 title: LayProgrammer
-tags: TAGS
+tags: [team organization, domain specific language]
 ---
 
 http://martinfowler.com/bliki/LayProgrammer.html

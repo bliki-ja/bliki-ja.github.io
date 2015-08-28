@@ -1,6 +1,6 @@
 ---
 title: 歴史はでたらめじゃない
-tags: TAGS
+tags: [requirements analysis, legacy rehab]
 ---
 
 http://www.martinfowler.com/bliki/HistoryIsNotBunk.html

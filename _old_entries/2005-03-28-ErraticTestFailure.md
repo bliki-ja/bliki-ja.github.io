@@ -1,6 +1,6 @@
 ---
 title: テストが失敗したりしなかったり
-tags: TAGS
+tags: [testing, bad things]
 ---
 
 http://martinfowler.com/bliki/ErraticTestFailure.html

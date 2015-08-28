@@ -1,6 +1,6 @@
 ---
 title: やっぱり機能別組織が好き
-tags: TAGS
+tags: [team organization, process theory]
 ---
 
 http://martinfowler.com/bliki/PreferFunctionalStaffOrganization.html

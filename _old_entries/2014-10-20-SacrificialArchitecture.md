@@ -1,6 +1,6 @@
 ---
 title: 犠牲的アーキテクチャ
-tags: TAGS
+tags: [process theory, evolutionary design, application architecture]
 ---
 
 http://martinfowler.com/bliki/SacrificialArchitecture.html

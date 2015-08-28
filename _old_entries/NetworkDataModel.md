@@ -1,6 +1,6 @@
 ---
 title: ネットワーク型データモデル
-tags: TAGS
+tags: [database]
 ---
 
 http://martinfowler.com/bliki/NetworkDataModel.html

@@ -1,6 +1,6 @@
 ---
 title: PostModernProgramming
-tags: TAGS
+tags: [programming platforms]
 ---
 
 http://martinfowler.com/bliki/PostModernProgramming.html

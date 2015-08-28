@@ -1,6 +1,6 @@
 ---
 title: XPの速度
-tags: TAGS
+tags: [extreme programming, project planning, estimation]
 ---
 
 http://martinfowler.com/bliki/XpVelocity.html

@@ -1,6 +1,6 @@
 ---
 title: CommandQuerySeparation
-tags: TAGS
+tags: [API design, clean code]
 ---
 
 http://martinfowler.com/bliki/CommandQuerySeparation.html

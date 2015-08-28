@@ -1,6 +1,6 @@
 ---
 title: フィーチャブランチ
-tags: TAGS
+tags: [version control, continuous integration]
 ---
 
 http://martinfowler.com/bliki/FeatureBranch.html

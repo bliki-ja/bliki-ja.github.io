@@ -1,6 +1,6 @@
 ---
 title: コードの所有
-tags: TAGS
+tags: [team organization, extreme programming, process theory]
 ---
 
 http://martinfowler.com/bliki/CodeOwnership.html

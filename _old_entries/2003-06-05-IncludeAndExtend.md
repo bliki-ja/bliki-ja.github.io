@@ -1,6 +1,6 @@
 ---
 title: includeとextend
-tags: TAGS
+tags: [uml]
 ---
 
 http://www.martinfowler.com/bliki/IncludeAndExtend.html

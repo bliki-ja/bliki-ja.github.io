@@ -1,6 +1,6 @@
 ---
 title: PostIntelliJ
-tags: TAGS
+tags: [tools]
 ---
 
 http://martinfowler.com/bliki/PostIntelliJ.html

@@ -1,6 +1,6 @@
 ---
 title: 技術的負債の四象限
-tags: TAGS
+tags: [technical debt]
 ---
 
 http://martinfowler.com/bliki/TechnicalDebtQuadrant.html

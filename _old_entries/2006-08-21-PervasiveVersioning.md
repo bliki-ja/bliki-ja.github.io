@@ -1,6 +1,6 @@
 ---
 title: PervasiveVersioning
-tags: TAGS
+tags: [version control]
 ---
 
 http://martinfowler.com/bliki/PervasiveVersioning.html

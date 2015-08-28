@@ -1,6 +1,6 @@
 ---
 title: UnwantedModelingLanguage
-tags: TAGS
+tags: [uml]
 ---
 
 http://www.martinfowler.com/bliki/UnwantedModelingLanguage.html

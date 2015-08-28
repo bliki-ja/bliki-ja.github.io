@@ -1,6 +1,6 @@
 ---
 title: TouchFile
-tags: TAGS
+tags: [build scripting]
 ---
 
 http://martinfowler.com/bliki/TouchFile.html

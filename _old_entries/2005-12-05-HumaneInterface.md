@@ -1,6 +1,6 @@
 ---
 title: ヒューメイン・インタフェース
-tags: TAGS
+tags: [API design]
 ---
 
 http://martinfowler.com/bliki/HumaneInterface.html

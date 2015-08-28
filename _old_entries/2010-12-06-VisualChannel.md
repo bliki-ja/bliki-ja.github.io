@@ -1,6 +1,6 @@
 ---
 title: VisualChannel
-tags: TAGS
+tags: [presentations]
 ---
 
 http://martinfowler.com/bliki/VisualChannel.html

@@ -1,6 +1,6 @@
 ---
 title: PublicCsharpFields
-tags: TAGS
+tags: [encapsulation, language feature]
 ---
 
 http://martinfowler.com/bliki/PublicCsharpFields.html

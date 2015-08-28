@@ -1,6 +1,6 @@
 ---
 title: ExtemporarySpeaking
-tags: TAGS
+tags: [presentations]
 ---
 
 http://martinfowler.com/bliki/ExtemporarySpeaking.html

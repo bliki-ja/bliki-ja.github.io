@@ -1,6 +1,6 @@
 ---
 title: レポーティングデータベース
-tags: TAGS
+tags: [database, application architecture]
 ---
 
 http://www.martinfowler.com/bliki/ReportingDatabase.html

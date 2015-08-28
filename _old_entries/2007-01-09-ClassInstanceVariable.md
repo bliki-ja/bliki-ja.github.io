@@ -1,6 +1,6 @@
 ---
 title: ClassInstanceVariable
-tags: TAGS
+tags: [language feature, ruby]
 ---
 
 http://martinfowler.com/bliki/ClassInstanceVariable.html

@@ -1,6 +1,6 @@
 ---
 title: CheaperTalentHypothesis
-tags: TAGS
+tags: [bad things, productivity, recruiting, thoughtworks]
 ---
 
 http://martinfowler.com/bliki/CheaperTalentHypothesis.html

@@ -1,6 +1,6 @@
 ---
 title: オープンな知的財産
-tags: TAGS
+tags: [thoughtworks]
 ---
 
 http://martinfowler.com/bliki/OpenIntellectualProperty.html

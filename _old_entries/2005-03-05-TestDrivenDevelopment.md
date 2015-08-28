@@ -1,6 +1,6 @@
 ---
 title: テスト駆動開発
-tags: TAGS
+tags: [testing, clean code]
 ---
 
 http://martinfowler.com/bliki/TestDrivenDevelopment.html

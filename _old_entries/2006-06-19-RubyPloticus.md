@@ -1,6 +1,6 @@
 ---
 title: RubyPloticus
-tags: TAGS
+tags: [ruby]
 ---
 
 http://martinfowler.com/bliki/RubyPloticus.html

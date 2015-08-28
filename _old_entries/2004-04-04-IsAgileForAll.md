@@ -1,6 +1,6 @@
 ---
 title: アジャイルは誰のもの？
-tags: TAGS
+tags: [agile, agile adoption]
 ---
 
 http://www.martinfowler.com/bliki/IsAgileForAll.html

@@ -1,6 +1,6 @@
 ---
 title: EvaluatingRuby
-tags: TAGS
+tags: [ruby]
 ---
 
 http://martinfowler.com/bliki/EvaluatingRuby.html

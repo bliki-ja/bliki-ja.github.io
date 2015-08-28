@@ -1,6 +1,6 @@
 ---
 title: レイヤリングの原則
-tags: TAGS
+tags: [application architecture]
 ---
 
 http://martinfowler.com/bliki/LayeringPrinciples.html

@@ -1,6 +1,6 @@
 ---
 title: データベーススタイル
-tags: TAGS
+tags: [application integration, database]
 ---
 
 http://martinfowler.com/bliki/DatabaseStyles.html

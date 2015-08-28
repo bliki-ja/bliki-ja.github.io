@@ -1,6 +1,6 @@
 ---
 title: 統合データベース
-tags: TAGS
+tags: [application integration, database]
 ---
 
 http://martinfowler.com/bliki/IntegrationDatabase.html

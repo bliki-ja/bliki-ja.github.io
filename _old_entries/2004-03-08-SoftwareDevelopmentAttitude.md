@@ -1,6 +1,6 @@
 ---
 title: ソフトウェア開発の心構え
-tags: TAGS
+tags: [process theory, API design]
 ---
 
 http://martinfowler.com/bliki/SoftwareDevelopmentAttitude.html

@@ -1,6 +1,6 @@
 ---
 title: RollerSkateImplementation
-tags: TAGS
+tags: [projects, requirements analysis, project planning]
 ---
 
 http://martinfowler.com/bliki/RollerSkateImplementation.html

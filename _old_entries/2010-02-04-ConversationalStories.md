@@ -1,6 +1,6 @@
 ---
 title: 対話的ストーリー
-tags: TAGS
+tags: [agile, extreme programming, requirements analysis, collaboration]
 ---
 
 http://martinfowler.com/bliki/ConversationalStories.html

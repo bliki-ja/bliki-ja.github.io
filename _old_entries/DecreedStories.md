@@ -1,6 +1,6 @@
 ---
 title: 命令的ストーリー
-tags: TAGS
+tags: [requirements analysis]
 ---
 
 [[http://martinfowler.com/bliki/images/conversationalStories/decreed.png]]

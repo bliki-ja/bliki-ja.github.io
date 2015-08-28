@@ -1,6 +1,6 @@
 ---
 title: Royの社会的実験
-tags: TAGS
+tags: [thoughtworks]
 ---
 
 http://www.martinfowler.com/bliki/RoysSocialExperiment.html

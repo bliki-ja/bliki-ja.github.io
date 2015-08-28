@@ -1,6 +1,6 @@
 ---
 title: superの呼び出し
-tags: TAGS
+tags: [bad things, language feature]
 ---
 
 http://martinfowler.com/bliki/CallSuper.html

@@ -1,6 +1,6 @@
 ---
 title: コードの臭い
-tags: TAGS
+tags: [technical debt, clean code, refactoring]
 ---
 
 http://www.martinfowler.com/bliki/CodeSmell.html

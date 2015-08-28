@@ -1,6 +1,6 @@
 ---
 title: 依存と関連
-tags: TAGS
+tags: [uml]
 ---
 
 http://www.martinfowler.com/bliki/DependencyAndAssociation.html

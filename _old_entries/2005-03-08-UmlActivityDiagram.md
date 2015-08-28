@@ -1,6 +1,6 @@
 ---
 title: UMLアクティビティ図
-tags: TAGS
+tags: [uml]
 ---
 
 http://martinfowler.com/bliki/UmlActivityDiagram.html

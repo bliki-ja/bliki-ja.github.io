@@ -1,6 +1,6 @@
 ---
 title: Datensparsamkeit
-tags: TAGS
+tags: [database, web development, internet culture, legal, data analytics]
 ---
 
 http://martinfowler.com/bliki/Datensparsamkeit.html

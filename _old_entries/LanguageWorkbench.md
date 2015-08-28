@@ -1,6 +1,6 @@
 ---
 title: LanguageWorkbench
-tags: TAGS
+tags: [domain specific language]
 ---
 
 put "Hello,world!"

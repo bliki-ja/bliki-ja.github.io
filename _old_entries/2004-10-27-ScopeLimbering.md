@@ -1,6 +1,6 @@
 ---
 title: 柔軟なスコープ
-tags: TAGS
+tags: [requirements analysis, project planning, thoughtworks]
 ---
 
 http://martinfowler.com/bliki/ScopeLimbering.html

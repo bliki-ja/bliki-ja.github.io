@@ -1,6 +1,6 @@
 ---
 title: 直轄主義
-tags: TAGS
+tags: [process theory]
 ---
 
 http://martinfowler.com/bliki/DirectingAttitude.html

@@ -1,6 +1,6 @@
 ---
 title: DynamicTypeCheck
-tags: TAGS
+tags: [ruby]
 ---
 
 //DynamicTypeCheck      design  2 June 2009     Reactions

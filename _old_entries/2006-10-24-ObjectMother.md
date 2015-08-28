@@ -1,6 +1,6 @@
 ---
 title: ObjectMother
-tags: TAGS
+tags: [testing]
 ---
 
 http://martinfowler.com/bliki/ObjectMother.html

@@ -1,6 +1,6 @@
 ---
 title: 事例証拠
-tags: TAGS
+tags: [writing]
 ---
 
 http://martinfowler.com/bliki/AnecdotalEvidence.html

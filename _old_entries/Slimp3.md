@@ -1,6 +1,6 @@
 ---
 title: Slimp3
-tags: TAGS
+tags: [gadgets]
 ---
 
 http://www.martinfowler.com/bliki/Slimp3.html

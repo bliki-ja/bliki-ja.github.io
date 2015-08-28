@@ -1,6 +1,6 @@
 ---
 title: 大きな画面
-tags: TAGS
+tags: [team environment, productivity, tools]
 ---
 
 http://martinfowler.com/bliki/BigScreen.html

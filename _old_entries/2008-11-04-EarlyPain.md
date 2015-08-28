@@ -1,6 +1,6 @@
 ---
 title: EarlyPain
-tags: TAGS
+tags: [agile, agile adoption]
 ---
 
 http://martinfowler.com/bliki/EarlyPain.html

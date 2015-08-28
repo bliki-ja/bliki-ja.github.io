@@ -1,6 +1,6 @@
 ---
 title: スケッチとしてのUML
-tags: TAGS
+tags: [uml]
 ---
 
 http://www.martinfowler.com/bliki/UmlAsSketch.html

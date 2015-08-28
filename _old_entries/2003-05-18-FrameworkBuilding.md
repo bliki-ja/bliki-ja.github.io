@@ -1,6 +1,6 @@
 ---
 title: フレームワーク構築
-tags: TAGS
+tags: [refactoring]
 ---
 
 http://www.martinfowler.com/bliki/FrameworkBuilding.html

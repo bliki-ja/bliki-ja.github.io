@@ -1,6 +1,6 @@
 ---
 title: Seal
-tags: TAGS
+tags: [encapsulation, API design]
 ---
 
 http://martinfowler.com/bliki/Seal.html

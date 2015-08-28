@@ -1,6 +1,6 @@
 ---
 title: Subversion
-tags: TAGS
+tags: [version control]
 ---
 
 http://martinfowler.com/bliki/Subversion.html

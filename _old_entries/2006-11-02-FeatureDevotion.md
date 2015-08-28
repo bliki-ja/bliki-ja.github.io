@@ -1,6 +1,6 @@
 ---
 title: FeatureDevotion
-tags: TAGS
+tags: [agile, bad things, requirements analysis, process theory]
 ---
 
 http://martinfowler.com/bliki/FeatureDevotion.html

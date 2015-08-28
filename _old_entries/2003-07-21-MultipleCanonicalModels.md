@@ -1,6 +1,6 @@
 ---
 title: 複数の正規化モデル
-tags: TAGS
+tags: [application integration]
 ---
 
 http://martinfowler.com/bliki/MultipleCanonicalModels.html

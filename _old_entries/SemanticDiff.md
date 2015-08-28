@@ -1,6 +1,6 @@
 ---
 title: セマンティックdiff
-tags: TAGS
+tags: [version control]
 ---
 
 http://martinfowler.com/bliki/SemanticDiff.html

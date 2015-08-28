@@ -1,6 +1,6 @@
 ---
 title: テスト用言語
-tags: TAGS
+tags: [testing]
 ---
 
 http://martinfowler.com/bliki/TestingLanguage.html

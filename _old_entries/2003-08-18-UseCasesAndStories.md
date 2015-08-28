@@ -1,6 +1,6 @@
 ---
 title: ユースケースとストーリー
-tags: TAGS
+tags: [requirements analysis, uml]
 ---
 
 http://www.martinfowler.com/bliki/UseCasesAndStories.html

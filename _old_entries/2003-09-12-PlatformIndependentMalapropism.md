@@ -1,6 +1,6 @@
 ---
 title: プラットフォーム独立の誤用
-tags: TAGS
+tags: [uml]
 ---
 
 http://martinfowler.com/bliki/PlatformIndependentMalapropism.html

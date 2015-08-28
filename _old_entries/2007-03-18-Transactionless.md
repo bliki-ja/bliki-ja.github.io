@@ -1,6 +1,6 @@
 ---
 title: Transactionless
-tags: TAGS
+tags: [database, application architecture]
 ---
 
 http://martinfowler.com/bliki/Transactionless.html

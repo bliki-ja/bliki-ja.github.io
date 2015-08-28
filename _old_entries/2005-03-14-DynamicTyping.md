@@ -1,6 +1,6 @@
 ---
 title: ダイナミックタイピング
-tags: TAGS
+tags: [language feature, ruby]
 ---
 
 http://martinfowler.com/bliki/DynamicTyping.html

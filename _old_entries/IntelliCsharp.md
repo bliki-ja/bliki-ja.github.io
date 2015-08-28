@@ -1,6 +1,6 @@
 ---
 title: IntelliCsharp
-tags: TAGS
+tags: [tools]
 ---
 
 http://martinfowler.com/bliki/IntelliCsharp.html

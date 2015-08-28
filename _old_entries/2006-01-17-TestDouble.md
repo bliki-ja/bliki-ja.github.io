@@ -1,6 +1,6 @@
 ---
 title: テストダブル
-tags: TAGS
+tags: [testing]
 ---
 
 http://martinfowler.com/bliki/TestDouble.html

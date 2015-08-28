@@ -1,6 +1,6 @@
 ---
 title: アプリケーションデータベース
-tags: TAGS
+tags: [application integration, database]
 ---
 
 http://martinfowler.com/bliki/ApplicationDatabase.html

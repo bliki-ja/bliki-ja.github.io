@@ -1,6 +1,6 @@
 ---
 title: 漸進主義の広まり
-tags: TAGS
+tags: [agile, agile adoption, process theory]
 ---
 
 http://martinfowler.com/bliki/SpreadingIncrementalism.html

@@ -1,6 +1,6 @@
 ---
 title: PatternShare
-tags: TAGS
+tags: [writing]
 ---
 
 http://martinfowler.com/bliki/PatternShare.html

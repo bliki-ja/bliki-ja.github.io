@@ -1,6 +1,6 @@
 ---
 title: オープンソースリサーチ
-tags: TAGS
+tags: [thoughtworks]
 ---
 
 http://martinfowler.com/bliki/OpenSourceResearch.html

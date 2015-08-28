@@ -1,6 +1,6 @@
 ---
 title: 回収不能コスト駆動型アーキテクチャ
-tags: TAGS
+tags: [bad things, application architecture]
 ---
 
 http://martinfowler.com/bliki/SunkCostDrivenArchitecture.html

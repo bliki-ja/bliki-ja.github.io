@@ -1,6 +1,6 @@
 ---
 title: デプロイメントパイプライン
-tags: TAGS
+tags: [delivery, build scripting]
 ---
 
 http://martinfowler.com/bliki/DeploymentPipeline.html

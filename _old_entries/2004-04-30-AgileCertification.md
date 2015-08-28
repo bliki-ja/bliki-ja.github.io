@@ -1,6 +1,6 @@
 ---
 title: アジャイル認定試験
-tags: TAGS
+tags: [agile, certification]
 ---
 
 http://martinfowler.com/bliki/AgileCertification.html

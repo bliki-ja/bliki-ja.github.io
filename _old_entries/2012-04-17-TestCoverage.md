@@ -1,6 +1,6 @@
 ---
 title: TestCoverage
-tags: TAGS
+tags: [testing, metrics]
 ---
 
 http://martinfowler.com/bliki/TestCoverage.html

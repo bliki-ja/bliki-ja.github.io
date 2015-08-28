@@ -1,6 +1,6 @@
 ---
 title: JRubyVelocity
-tags: TAGS
+tags: [tools]
 ---
 
 http://martinfowler.com/bliki/JRubyVelocity.html

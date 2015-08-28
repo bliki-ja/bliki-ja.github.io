@@ -1,6 +1,6 @@
 ---
 title: サンプルコード
-tags: TAGS
+tags: [writing]
 ---
 
 http://martinfowler.com/bliki/CodeExamples.html

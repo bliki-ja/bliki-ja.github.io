@@ -1,6 +1,6 @@
 ---
 title: 公布済みインターフェイス
-tags: TAGS
+tags: [encapsulation, language feature, application architecture, API design]
 ---
 
 http://martinfowler.com/bliki/PublishedInterface.html

@@ -1,6 +1,6 @@
 ---
 title: DataClump
-tags: TAGS
+tags: [bad things, clean code, refactoring]
 ---
 
 http://martinfowler.com/bliki/DataClump.html

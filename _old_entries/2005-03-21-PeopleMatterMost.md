@@ -1,6 +1,6 @@
 ---
 title: いちばん大切なのは人
-tags: TAGS
+tags: [thoughtworks]
 ---
 
 http://martinfowler.com/bliki/PeopleMatterMost.html

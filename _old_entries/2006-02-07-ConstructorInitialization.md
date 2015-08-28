@@ -1,6 +1,6 @@
 ---
 title: ConstructorInitialization
-tags: TAGS
+tags: [API design]
 ---
 
 http://martinfowler.com/bliki/ConstructorInitialization.html

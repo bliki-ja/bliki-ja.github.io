@@ -1,6 +1,6 @@
 ---
 title: ProtectedData
-tags: TAGS
+tags: [encapsulation, language feature]
 ---
 
 http://martinfowler.com/bliki/ProtectedData.html

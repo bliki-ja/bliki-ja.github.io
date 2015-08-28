@@ -1,6 +1,6 @@
 ---
 title: ServiceCustodian
-tags: TAGS
+tags: [team organization, application integration]
 ---
 
 //Let's imagine a pretty world of SOA-happiness where the computing needs of an enterprise are split into many small applications that provide services to each other to allow effective collaboration. One fine morning a consumer service needs some information from a supplier service. The twist is that although the supplier service has the necessary data and processing logic to get this information, it doesn't yet expose that information through a service interface. The supplier has a potential service, but it isn't actually there yet.

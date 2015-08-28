@@ -1,6 +1,6 @@
 ---
 title: リソースプール
-tags: TAGS
+tags: [database, application architecture]
 ---
 
 http://martinfowler.com/bliki/ResourcePool.html

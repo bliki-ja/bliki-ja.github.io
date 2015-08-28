@@ -1,6 +1,6 @@
 ---
 title: Annotation
-tags: TAGS
+tags: [language feature]
 ---
 
 http://martinfowler.com/bliki/Annotation.html

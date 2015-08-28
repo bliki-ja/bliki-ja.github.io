@@ -1,6 +1,6 @@
 ---
 title: LeadershipDivide
-tags: TAGS
+tags: [thoughtworks]
 ---
 
 http://martinfowler.com/bliki/LeadershipDivide.html

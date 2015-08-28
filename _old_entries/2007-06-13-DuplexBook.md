@@ -1,6 +1,6 @@
 ---
 title: DuplexBook
-tags: TAGS
+tags: [writing]
 ---
 
 http://martinfowler.com/bliki/DuplexBook.html

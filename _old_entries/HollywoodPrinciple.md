@@ -1,6 +1,6 @@
 ---
 title: ハリウッド原則
-tags: TAGS
+tags: [API design, object collaboration design]
 ---
 
 http://martinfowler.com/bliki/HollywoodPrinciple.html

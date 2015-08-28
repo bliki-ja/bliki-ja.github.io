@@ -1,6 +1,6 @@
 ---
 title: 顧客満足
-tags: TAGS
+tags: [agile, collaboration]
 ---
 
 http://martinfowler.com/bliki/PleasingTheCustomer.html

@@ -1,6 +1,6 @@
 ---
 title: パーサー恐怖症
-tags: TAGS
+tags: [domain specific language]
 ---
 
 http://martinfowler.com/bliki/ParserFear.html

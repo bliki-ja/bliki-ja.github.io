@@ -1,6 +1,6 @@
 ---
 title: モデル駆動ソフトウェア開発
-tags: TAGS
+tags: [programming platforms, domain specific language, uml]
 ---
 
 2008/7/14

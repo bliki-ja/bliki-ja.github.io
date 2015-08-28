@@ -1,6 +1,6 @@
 ---
 title: オンサイト顧客
-tags: TAGS
+tags: [extreme programming, requirements analysis]
 ---
 
 http://martinfowler.com/bliki/PleasingTheCustomer.html

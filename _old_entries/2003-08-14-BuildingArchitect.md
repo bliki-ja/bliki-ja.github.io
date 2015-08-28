@@ -1,6 +1,6 @@
 ---
 title: 建築家
-tags: TAGS
+tags: [process theory, collaboration]
 ---
 
 http://martinfowler.com/bliki/BuildingArchitect.html

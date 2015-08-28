@@ -1,6 +1,6 @@
 ---
 title: バリューオブジェクト
-tags: TAGS
+tags: [domain driven design, API design]
 ---
 
 http://martinfowler.com/bliki/ValueObject.html

@@ -1,6 +1,6 @@
 ---
 title: CobolInference
-tags: TAGS
+tags: [domain specific language]
 ---
 
 http://martinfowler.com/bliki/CobolInference.html

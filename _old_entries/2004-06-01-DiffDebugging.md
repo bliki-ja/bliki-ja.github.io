@@ -1,6 +1,6 @@
 ---
 title: diffデバッグ
-tags: TAGS
+tags: [delivery, version control]
 ---
 
 http://martinfowler.com/bliki/DiffDebugging.html

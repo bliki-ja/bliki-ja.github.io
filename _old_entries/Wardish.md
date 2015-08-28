@@ -1,6 +1,6 @@
 ---
 title: Wardish
-tags: TAGS
+tags: [dictionary]
 ---
 
 http://martinfowler.com/bliki/Wardish.html

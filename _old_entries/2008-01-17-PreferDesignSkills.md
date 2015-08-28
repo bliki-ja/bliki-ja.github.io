@@ -1,6 +1,6 @@
 ---
 title: PreferDesignSkills
-tags: TAGS
+tags: [team organization, recruiting, technical leadership, thoughtworks]
 ---
 
 http://martinfowler.com/bliki/PreferDesignSkills.html

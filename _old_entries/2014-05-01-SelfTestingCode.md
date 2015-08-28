@@ -1,6 +1,6 @@
 ---
 title: 自己テストコード
-tags: TAGS
+tags: [agile, delivery, testing, extreme programming, clean code, continuous integration, refactoring]
 ---
 
 http://martinfowler.com/bliki/SelfTestingCode.html

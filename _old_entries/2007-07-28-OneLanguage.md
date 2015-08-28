@@ -1,6 +1,6 @@
 ---
 title: 1つの言語
-tags: TAGS
+tags: [programming platforms]
 ---
 
 http://martinfowler.com/bliki/OneLanguage.html

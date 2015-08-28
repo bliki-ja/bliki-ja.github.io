@@ -1,6 +1,6 @@
 ---
 title: RubyMicrosoft
-tags: TAGS
+tags: [microsoft, ruby]
 ---
 
 http://martinfowler.com/bliki/RubyMicrosoft.html

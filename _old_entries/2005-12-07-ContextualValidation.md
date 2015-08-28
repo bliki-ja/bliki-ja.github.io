@@ -1,6 +1,6 @@
 ---
 title: ContextualValidation
-tags: TAGS
+tags: [domain driven design, application architecture]
 ---
 
 http://martinfowler.com/bliki/ContextualValidation.html

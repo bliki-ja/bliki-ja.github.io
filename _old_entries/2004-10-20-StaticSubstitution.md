@@ -1,6 +1,6 @@
 ---
 title: staticの置き換え
-tags: TAGS
+tags: [testing, application architecture, refactoring]
 ---
 
 http://martinfowler.com/bliki/StaticSubstitution.html

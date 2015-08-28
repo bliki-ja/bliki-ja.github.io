@@ -1,6 +1,6 @@
 ---
 title: Rubyピープル
-tags: TAGS
+tags: [ruby]
 ---
 
 http://martinfowler.com/bliki/RubyPeople.html

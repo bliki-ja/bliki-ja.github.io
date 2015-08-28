@@ -1,6 +1,6 @@
 ---
 title: LanguageWorkbenchReadings
-tags: TAGS
+tags: [domain specific language]
 ---
 
 http://martinfowler.com/bliki/LanguageWorkbenchReadings.html

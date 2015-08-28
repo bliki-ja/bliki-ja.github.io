@@ -1,6 +1,6 @@
 ---
 title: Debianのインストール
-tags: TAGS
+tags: [tools]
 ---
 
 http://martinfowler.com/bliki/InstallingDebian.html

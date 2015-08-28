@@ -1,6 +1,6 @@
 ---
 title: OpenSpace
-tags: TAGS
+tags: [conferences, collaboration]
 ---
 
 http://martinfowler.com/bliki/OpenSpace.html

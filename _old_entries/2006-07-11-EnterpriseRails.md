@@ -1,6 +1,6 @@
 ---
 title: エンタープライズRails
-tags: TAGS
+tags: [ruby]
 ---
 
 http://www.martinfowler.com/bliki/EnterpriseRails.html

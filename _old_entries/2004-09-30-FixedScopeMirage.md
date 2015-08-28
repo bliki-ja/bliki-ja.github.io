@@ -1,6 +1,6 @@
 ---
 title: 固定スコープの幻想
-tags: TAGS
+tags: [agile, requirements analysis, project planning, estimation]
 ---
 
 http://martinfowler.com/bliki/FixedScopeMirage.html

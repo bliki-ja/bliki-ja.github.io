@@ -1,6 +1,6 @@
 ---
 title: メタプログラミングシステム
-tags: TAGS
+tags: [domain specific language]
 ---
 
 http://martinfowler.com/bliki/MetaProgrammingSystem.html

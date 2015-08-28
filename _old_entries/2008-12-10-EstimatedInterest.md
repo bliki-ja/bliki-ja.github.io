@@ -1,6 +1,6 @@
 ---
 title: 支払利息の見積もり
-tags: TAGS
+tags: [metrics, technical debt, project planning]
 ---
 
 2008/11/6

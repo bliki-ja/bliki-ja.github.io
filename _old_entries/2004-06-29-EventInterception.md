@@ -1,6 +1,6 @@
 ---
 title: イベントインターセプション
-tags: TAGS
+tags: [legacy rehab]
 ---
 
 http://martinfowler.com/bliki/EventInterception.html

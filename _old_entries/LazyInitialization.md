@@ -1,6 +1,6 @@
 ---
 title: LazyInitialization
-tags: TAGS
+tags: [object collaboration design]
 ---
 
 http://martinfowler.com/bliki/LazyInitialization.html

@@ -1,6 +1,6 @@
 ---
 title: DSLの境界線
-tags: TAGS
+tags: [domain specific language]
 ---
 
 http://www.martinfowler.com/bliki/DslBoundary.html

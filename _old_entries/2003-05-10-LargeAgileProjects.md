@@ -1,6 +1,6 @@
 ---
 title: 大規模アジャイルプロジェクト
-tags: TAGS
+tags: [agile, agile adoption, team organization, project planning]
 ---
 
 http://martinfowler.com/bliki/LargeAgileProjects.html

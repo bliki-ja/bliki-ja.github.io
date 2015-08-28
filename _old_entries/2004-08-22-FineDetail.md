@@ -1,6 +1,6 @@
 ---
 title: FineDetail
-tags: TAGS
+tags: [tools]
 ---
 
 http://martinfowler.com/bliki/FineDetail.html

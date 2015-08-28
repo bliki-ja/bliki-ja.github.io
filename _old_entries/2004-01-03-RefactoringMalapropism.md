@@ -1,6 +1,6 @@
 ---
 title: リファクタリングの誤用
-tags: TAGS
+tags: [refactoring]
 ---
 
 http://martinfowler.com/bliki/RefactoringMalapropism.html

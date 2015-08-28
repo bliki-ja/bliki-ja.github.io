@@ -1,6 +1,6 @@
 ---
 title: 見積もりの目的
-tags: TAGS
+tags: [metrics, project planning, estimation]
 ---
 
 http://martinfowler.com/bliki/PurposeOfEstimation.html

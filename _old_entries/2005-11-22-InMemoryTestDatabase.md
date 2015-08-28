@@ -1,6 +1,6 @@
 ---
 title: メモリ内データベース
-tags: TAGS
+tags: [testing, database]
 ---
 
 http://martinfowler.com/bliki/InMemoryTestDatabase.html

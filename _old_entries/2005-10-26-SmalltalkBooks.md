@@ -1,6 +1,6 @@
 ---
 title: SmalltalkBooks
-tags: TAGS
+tags: [language feature, writing]
 ---
 
 http://martinfowler.com/bliki/SmalltalkBooks.html

@@ -1,6 +1,6 @@
 ---
 title: ThoughtWorksChina
-tags: TAGS
+tags: [thoughtworks]
 ---
 
 http://martinfowler.com/bliki/ThoughtWorksChina.html

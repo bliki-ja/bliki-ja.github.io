@@ -1,6 +1,6 @@
 ---
 title: StandardsSpeak
-tags: TAGS
+tags: [writing]
 ---
 
 http://martinfowler.com/bliki/StandardsSpeak.html

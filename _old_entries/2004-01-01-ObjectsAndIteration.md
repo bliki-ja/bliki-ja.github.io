@@ -1,6 +1,6 @@
 ---
 title: オブジェクト指向と反復開発
-tags: TAGS
+tags: [agile history]
 ---
 
 http://martinfowler.com/bliki/ObjectsAndIteration.html

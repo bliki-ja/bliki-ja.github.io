@@ -1,6 +1,6 @@
 ---
 title: リレーショナル型データモデル
-tags: TAGS
+tags: [database]
 ---
 
 http://martinfowler.com/bliki/RelationalDataModel.html

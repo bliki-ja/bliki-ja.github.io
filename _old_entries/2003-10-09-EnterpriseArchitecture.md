@@ -1,6 +1,6 @@
 ---
 title: エンタープライズアーキテクチャ
-tags: TAGS
+tags: [application integration, application architecture]
 ---
 
 http://martinfowler.com/bliki/EnterpriseArchitecture.html

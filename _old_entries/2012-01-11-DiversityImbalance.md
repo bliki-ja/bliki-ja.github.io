@@ -1,6 +1,6 @@
 ---
 title: DiversityImbalance
-tags: TAGS
+tags: [bad things, diversity, internet culture]
 ---
 
 http://martinfowler.com/bliki/DiversityImbalance.html

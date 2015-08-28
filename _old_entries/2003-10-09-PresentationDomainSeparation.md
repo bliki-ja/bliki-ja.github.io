@@ -1,6 +1,6 @@
 ---
 title: プレゼンテーションとドメインの分離
-tags: TAGS
+tags: [application architecture]
 ---
 
 http://martinfowler.com/bliki/PresentationDomainSeparation.html

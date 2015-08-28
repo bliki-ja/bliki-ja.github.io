@@ -1,6 +1,6 @@
 ---
 title: セキュリティと設計
-tags: TAGS
+tags: [team organization]
 ---
 
 http://martinfowler.com/bliki/SecurityAndDesign.html

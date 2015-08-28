@@ -1,6 +1,6 @@
 ---
 title: モデル駆動型アーキテクチャ
-tags: TAGS
+tags: [uml]
 ---
 
 http://martinfowler.com/bliki/ModelDrivenArchitecture.html

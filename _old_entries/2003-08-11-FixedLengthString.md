@@ -1,6 +1,6 @@
 ---
 title: 固定長文字型
-tags: TAGS
+tags: [application architecture]
 ---
 
 http://martinfowler.com/bliki/FixedLengthString.html

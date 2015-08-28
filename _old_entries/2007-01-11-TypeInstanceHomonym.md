@@ -1,6 +1,6 @@
 ---
 title: TypeInstanceHomonym
-tags: TAGS
+tags: [domain driven design]
 ---
 
 http://martinfowler.com/bliki/TypeInstanceHomonym.html

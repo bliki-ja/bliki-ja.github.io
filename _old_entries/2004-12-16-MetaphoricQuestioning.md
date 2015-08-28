@@ -1,6 +1,6 @@
 ---
 title: メタファによる問いかけ
-tags: TAGS
+tags: [lean, process theory]
 ---
 
 http://martinfowler.com/bliki/MetaphoricQuestioning.html

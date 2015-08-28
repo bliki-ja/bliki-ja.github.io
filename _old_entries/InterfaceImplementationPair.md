@@ -1,6 +1,6 @@
 ---
 title: インタフェースと実装のペア
-tags: TAGS
+tags: [API design, object collaboration design]
 ---
 
 http://martinfowler.com/bliki/InterfaceImplementationPair.html

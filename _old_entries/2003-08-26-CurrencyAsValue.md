@@ -1,6 +1,6 @@
 ---
 title: CurrencyAsValue
-tags: TAGS
+tags: [domain driven design]
 ---
 
 http://martinfowler.com/bliki/CurrencyAsValue.html

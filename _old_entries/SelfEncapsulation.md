@@ -1,6 +1,6 @@
 ---
 title: 自己カプセル化
-tags: TAGS
+tags: [encapsulation]
 ---
 
 http://martinfowler.com/bliki/SelfEncapsulation.html

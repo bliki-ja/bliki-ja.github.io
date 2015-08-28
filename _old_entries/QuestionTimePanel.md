@@ -1,6 +1,6 @@
 ---
 title: Question Time方式の討論会
-tags: TAGS
+tags: [presentations]
 ---
 
 http://martinfowler.com/bliki/QuestionTimePanel.html

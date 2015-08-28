@@ -1,6 +1,6 @@
 ---
 title: アジャイルな引継ぎ
-tags: TAGS
+tags: [agile, delivery]
 ---
 
 http://martinfowler.com/bliki/AgileHandover.html

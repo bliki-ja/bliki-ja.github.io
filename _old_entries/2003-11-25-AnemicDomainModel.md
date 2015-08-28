@@ -1,6 +1,6 @@
 ---
 title: ドメインモデル貧血症
-tags: TAGS
+tags: [bad things, domain driven design, application architecture]
 ---
 
 http://martinfowler.com/bliki/AnemicDomainModel.html

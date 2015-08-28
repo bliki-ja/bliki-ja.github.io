@@ -1,6 +1,6 @@
 ---
 title: トヨタの欠陥
-tags: TAGS
+tags: [lean]
 ---
 
 http://martinfowler.com/bliki/ToyotaFailings.html

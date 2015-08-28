@@ -1,6 +1,6 @@
 ---
 title: 技術別組織
-tags: TAGS
+tags: [team organization]
 ---
 
 http://martinfowler.com/bliki/TechnicalStaffOrganization.html

@@ -1,6 +1,6 @@
 ---
 title: InversionOfControl
-tags: TAGS
+tags: [application architecture, API design, object collaboration design]
 ---
 
 http://martinfowler.com/bliki/InversionOfControl.html

@@ -1,6 +1,6 @@
 ---
 title: 暗黙的インタフェースの実装
-tags: TAGS
+tags: [API design]
 ---
 
 http://martinfowler.com/bliki/ImplicitInterfaceImplementation.html

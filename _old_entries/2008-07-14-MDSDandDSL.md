@@ -1,6 +1,6 @@
 ---
 title: MDSDとDSL
-tags: TAGS
+tags: [domain specific language]
 ---
 
 http://martinfowler.com/bliki/MDSDandDSL.html

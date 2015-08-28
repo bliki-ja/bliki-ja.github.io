@@ -1,6 +1,6 @@
 ---
 title: リファクタリングの境界線
-tags: TAGS
+tags: [refactoring boundary]
 ---
 
 http://martinfowler.com/bliki/RefactoringBoundary.html

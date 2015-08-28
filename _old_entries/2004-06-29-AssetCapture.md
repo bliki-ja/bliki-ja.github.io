@@ -1,6 +1,6 @@
 ---
 title: 財産確保
-tags: TAGS
+tags: [evolutionary design, legacy rehab]
 ---
 
 http://martinfowler.com/bliki/AssetCapture.html
