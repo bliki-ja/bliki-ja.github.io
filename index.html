@@ -1,7 +1,18 @@
 ---
 layout: default
 ---
+
 <div class="home">
+<h1 id="articles">article</h1>
+  <ul>
+{% for page in site.pages %}
+{% if page.title %}
+    <li><a class="page-link" href="{{ page.dir | prepend: site.baseurl }}">{{ page.title }}</a></li>
+{% endif %}
+{% endfor %}
+      </ul>
+
+
 {% for tag in site.tags %}
   <h1 id="tag_{{ tag[0] }}">{{ tag[0] }}</h1>
   <ul>
