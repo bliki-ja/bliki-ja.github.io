@@ -1,0 +1,151 @@
+http://martinfowler.com/bliki/Closure.html
+
+動的言語に興味がでてくると、
+クロージャやブロックと呼ばれる概念に出会うと思います。
+C/C++/Java/C# などクロージャを持たない言語をご使用の方は、
+どういったものなのかご存知ないかもしれません。
+ここでは簡単にクロージャについて説明します。
+クロージャを持った素晴らしい言語を使ったことある方にとっては、
+あまり面白くない話かもしれません。
+
+クロージャは長年使用されてきました。
+私が最初に出会ったのは、おそらく Smalltalk だったと思います。
+Smalltalk ではブロックと呼んでいました。
+Lisp ではクロージャを多用しています。
+Ruby でもクロージャが提供されています——多くの rubyist がスクリプト言語に Ruby を選ぶのはこのためです。
+
+基本的にクロージャとは、ブロック化されたコードのことを指します。
+コードブロックは関数呼び出しの際に引数として使うことができます。
+以下に簡単な例を挙げました。
+employee オブジェクトのリストがあるとします。
+どの employee が manager であるか知りたいとしましょう。
+その際、{{code(IsManager)}} プロパティを使用します。
+C# なら、こんな感じになるでしょうか。
+
+ public static IList Managers(IList emps) {
+   IList result = new ArrayList();
+   foreach(Employee e in emps)
+     if (e.IsManager) result.Add(e);
+   return result;
+ }
+
+クロージャのある言語だと、こういう感じになります (ここでは Ruby を使いました) 。
+
+ def managers(emps)
+    return emps.select {|e| e.isManager}
+ end
+
+select は Ruby のコレクションクラスで定義されたメソッドです{{fn('訳注：Enumerable#select')}}。
+select メソッドはコードブロック (クロージャ) を引数として受け取ることができます。
+Ruby は "{" と "}" で挟んでコードブロックを表します (他にもやり方はあります)。
+コードブロックに引数がある場合は、垂直のバー ("|") で挟んで宣言します。
+select メソッドは emps 配列をイテレートして、
+各要素に対してコードブロックを実行します。
+そして、ブロック内で真と評価された要素で新たに配列を作り、戻します。
+
+あなたがCプログラマなら、「そんなの関数ポインタでできるじゃん」と言うかもしれません。
+あなたが Java プログラマなら、「無名クラスでできるよ」と言うかもしれません。
+C# プログラマなら、デリゲートが使えると考えるかもしれません。
+これらのメカニズムはクロージャに似ています。
+しかし、決定的な2つの違いがあるのです。
+
+まずは、形式的な違いです（a formal difference）。
+クロージャはスコープ内の変数を参照することが出来ます。
+以下のメソッドを見てください。
+
+ def highPaid(emps)
+    threshold = 150
+    return emps.select {|e| e.salary > threshold}
+ end
+
+select のブロック内で、highPaid メソッド (ブロックがあるメソッド) のローカル変数が参照されています。
+真のクロージャを持たない言語の代替案では、こういったことはできません。
+クロージャを使ってさらに面白いことができます。
+以下の関数を見てください。
+
+ def paidMore(amount)
+    return Proc.new {|e| e.salary > amount}
+ end
+
+この関数はクロージャを戻します。
+このクロージャがメソッドの引数を参照していることが分かるでしょうか。
+クロージャを使って、このような関数を作ることができます。
+これを変数に入れることも可能です。
+
+ highPaid = paidMore(150)
+
+{{code('highPaid')}}変数は、
+コードブロック (Ruby では Proc と呼ばれます) を保持しています。
+このブロックはオブジェクトの salary が 150 以上かどうか評価します。
+これは、以下のように使うことができます。
+
+ john = Employee.new
+ john.salary = 200
+ print highPaid.call(john)
+
+{{code('highPaid.call(john)')}} は、先ほど定義した {{code('e.salary > amount')}} を呼び出しています。ここにある変数 {{code('amount')}} は、Proc オブジェクトを生成したときに渡した 150 を保持しています。
+値 150 はスコープ外にありますが、
+print を呼び出すとそれが生きていることが分かります。
+
+クロージャのカッコいいところ、其の壱。
+クロージャはコードブロックである。
+かつ、使われる環境と結合できること。
+これが正式なクロージャの形であり、
+関数ポインタやら内部クラスやらその他もろもろのクロージャっぽいものと一線を画す機能です。
+
+2つ目の違いは、それほど形式的に定義はされていませんが、大変重要なことです。
+これがないと、実際に使ってられないからです。
+クロージャをサポートする言語は、簡単なシンタックスでクロージャを定義できます。
+あまり重要じゃないように思えますが、
+私はものすごく重要なことだと信じています——
+これがクロージャを自然に使えるようにするための鍵なのです。
+Lisp や Smalltalk や Ruby を見てください。
+あちこちでクロージャが使われています。
+他の言語のクロージャに似た機能が、こんなにも使われていますか？
+ローカル変数と結びつけることできるというのも、
+クロージャが頻繁に使われる理由のひとつでしょうが、
+いちばんの理由は、記法がシンプルで明快だからだと思います。
+
+いい例があります。
+元 Smalltalk ユーザーだったひとが Java を始めたときのことです。
+(私も含め) 多くの人が Smalltalk ではブロックを使ってやっていたところを、
+無名クラスを使ってやろうとしました。
+しかし、出来上がったコードはめちゃくちゃでヒドいものでした。
+結局、私たちは諦めたのです。
+
+//Like any term in software there is a lot of blur about the exact definition of closure. Some people say that the term only applies to an actual value that includes bindings from its environment, such as the value returned by highPaid. Others use the term 'closure' to refer to a programming construct that has the ability to bind to its environment. This debate, an example of the TypeInstanceHomonym, is usually carried out with the politeness and lack of pedantry that our profession is known for.
+
+ソフトウェアの用語はだいたいそうですが、「クロージャ」の定義も曖昧です。
+highPaidメソッドの戻り値のように、環境と結合した実値（ここではProcの最終実値）だけを指す人もいますし、環境と結合できる能力を持っているプログラミング構文(a programming construct)だという人もいます。
+この議論は、[[TypeInstanceHomonym]]の一例でもあります。
+礼節を失ってしまい、我々ソフトウェア業界に備わっているはずの論理的な思考ができなくなってしまいます。
+
+//I use closures a lot in Ruby, but I don't tend to create Procs and pass them around. Most of the time my use of closures is based around CollectionClosureMethods similar to the select method I showed earlier. Another common use is the 'execute around method', such as when processing a file.
+
+私はRubyでよくクロージャを使います。
+しかし、Procを作ったりProcをあちこちに渡すことはあまりありません。
+私の場合は、さっき見せたselectメソッドのような[[CollectionClosureMethod]]と一緒に使うことがほとんどです。
+他にも、"[[execute around method|WikiWikiWeb:ExecuteAroundMethod]]" をよく使います。
+例えば、ファイル処理のような場合です。
+
+ File.open(filename) {|f| doSomethingWithFile(f)}
+
+ファイルをオープンする open メソッドがありますが、
+これがブロック内のコードを実行し、ファイルをクローズしています。
+これはトランザクションなどを処理するときなどに大変使い勝手のよいイディオムです (最後にコミットやロールバックのし忘れがなくなります)。
+私は、XML の変換処理でよく使っています。
+
+こういったクロージャの使い方は、
+Lisp や関数プログラミングの世界の人たちのそれとは比べ物になりません。
+私のクロージャの使い方は限られてはいますが、
+クロージャがない言語を使うとぜんぜん物足りません。
+最初は、どうせマイナーな機能だろ？と思うかもしれませんが、
+すぐにクロージャのことが好きになりますよ。
+
+'''他の言語：''' [[C#|http://joe.truemesh.com/blog//000390.html]] | [[Python|http://ivan.truemesh.com/archives/000392.html]] | [[Boo|http://boo.codehaus.org/Martin+Fowler%27s+closure+examples+in+boo]] | [[Lisp|http://stefanroock.blogspot.com/2006/08/closures-in-common-lisp.html]] | [[JavaScript|http://nonn-et-twk.net/twk/node/50]]
+
+'''削除''' ==Joe Walnes が[[次のバージョンの C# のクロージャ|http://joe.truemesh.com/blog//000390.html]]について blog を書いていました。非常に真っ当で、静的型言語にとってよく考えられた文法のようです。委譲を基にしており、delegate キーワードを使うそうです。==
+
+'''削除''' ==Javaのローカルクラスだって、final がついたローカル変数ならアクセスできると指摘するひとがいました。この制限があっても、真のクロージャと呼べるのでしょうか。何度も言うようですが、実際問題、これはきたない文法ですし、使うのに一番のハードルになっていると思います。==
+
+Neal Gafter が[[クロージャの歴史|http://gafter.blogspot.com/2007/01/definition-of-closures.html]]について素晴らしい投稿をしています。Vadim Nasardinov が Guy Steele による [[Java におけるクロージャ|http://article.gmane.org/gmane.comp.lang.lightweight/2274]] の経緯についての興味深い話を教えてくれました。

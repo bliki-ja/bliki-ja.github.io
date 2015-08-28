@@ -1,0 +1,9 @@
+http://martinfowler.com/bliki/POJO.html
+
+Plain Old Java Object.
+
+この言葉は、Rebecca Parsons と Josh MacKenzie と私が、
+2000年9月のカンファレンス用トークの準備中に作り出したものだ。
+そのトークのなかで私たちは、ビジネスロジックを普通のJavaオブジェクトに入れたほうが、Entity Bean を使うよりもメリットがたくさんあると指摘した。
+なぜみんな普通のJavaオブジェクトをシステムの中で使わないのか疑問に思い、こう結論付けた。ファンシーな名前が無いからだ、と。
+というわけで、私たちはPOJOという名前を付けた。いい具合にハマった。

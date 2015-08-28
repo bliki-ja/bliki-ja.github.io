@@ -1,0 +1,1 @@
+http://martinfowler.com/bliki/PleasingTheCustomer.html

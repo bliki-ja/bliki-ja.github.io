@@ -1,0 +1,66 @@
+以下の文章は、Martin Fowler による [[Simple Ruby Syntax|http://martinfowler.com/articles/simpleRuby.html]] の日本語訳である。
+
+※ blikiではないので凍結します。
+
+----
+
+最終更新日: 2003年3月
+
+''Ruby は私が思うほど広く使われてはいないようだ。ここでは、私の記事の中に出てくるコードを読めるよう、必要十分な Ruby のシンタックスを紹介する。''
+
+Ruby はオブジェクト指向言語であり、クラスとメソッドがある。クラスは  class というキーワードで始まり、
+メソッドは def というキーワードで始まる。すべてのブロックは end で終わる。
+クラス内のインスタンス変数は @ から始まり、グローバル変数は $ から始まる。
+アクセサ付のインスタンス変数を宣言するには、attr_accessor を用いる。
+initialize メソッドはオブジェクトが生成されるときに呼び出される。
+
+「ブロック」は Ruby の素晴らしい機能のひとつだ。コレクションをループする処理は良い例である。ここでは、「注文コレクション」中の「注文」を出力するシンタックスを２つ挙げた。どちらも同じ処理を行う。
+
+ orders.each {|o| print o}
+
+ orders.each do |o|
+   print o
+ end
+
+ブロックはリソースを自動的に解放してくれるから便利だ。これを見て欲しい。
+
+ $dbh.select_all("select * from FOO") do |row|
+   print row
+ end
+
+この実行メソッドは必要な statement と result set オブジェクトを生成し、ブロックの終わりにそれらを確実に close する。Java や C# では、このようなブロックを使うことは難しいか、不可能であろう。
+(今は別の言語を使っている)旧Smalltalkerはこの機能を待ち望んでいた。
+（$dbh はデータベースのハンドラである。dbiパッケージにちなんで省略した）
+
+Rubyの配列は動的なリストである。配列は [foo, bar] のように生成することが出来る。
+空の配列は [] のようにして生成できる。要素を配列に追加するには、<< を使用する。
+
+Rubyはハッシュ（連想配列、ディクショナリ、ハッシュマップ）も持っている。
+空のハッシュは {} のようにして生成できる。要素にアクセスするには aHash[aKey] のように行う。
+
+複数行の文字列を作るのに「ヒアドキュメント」という機能がある。
+そういったテキストを作るときは、sql = <<-END_SQL で始める。END_SQLに続く部分はすべて文字列となる。#{anOrder.price} のようにして、動的に文字列を挿入することもできる。
+
+Rubyについてもっと知りたい場合は、Andy Hunt とDave Thomas による[[名著|http://www.amazon.com/exec/obidos/ASIN/0201710897]]を強くオススメする。[[オンラインでも読める|http://www.rubycentral.com/book/]]ので、ケチなひとはこちらで。それから、Rubyのホームページは[[ここ|http://www.ruby-lang.org/]]にある。
+
+!!改定履歴
+
+メジャーアップデートをしたときにここに記す。
+
+*2003年3月： 
+
+----
+* (C) Copyright Martin Fowler, all rights reserved 
+* 日本語訳：kdmsnr
+
+!コメント
+
+*2008-12-03 (水) 10:45:37 umejava : and is something old Smalltalkers miss a lot.の訳は、「(今は別の言語を使っている)旧Smalltalkerはこの機能を待ち望んでいた」ということだと思います。SmalltalkもまさにRubyと同様、リソースを自動解放するためにブロックを使いますので。
+* kdmsnr : ありがとうございます。反映しました。
+*2008-12-07 (日) 00:40:38 vaxmbasvm : BfJTjOsrD
+*2008-12-10 (水) 12:00:05 dwxdkkg : PzmZQMKoTKbfdX
+*2009-04-25 (土) 09:31:48 vvcjiejoywj : MDbjAdROYfXjEF
+*2009-05-08 (金) 16:18:57 dxodctnxw : UHnQlEhHg
+*2014-02-10 (月) 02:55:30 Ogpeqfvs : VeEkpzXbhKj
+*2014-03-27 (木) 03:25:38 xzvguopd : LuoStMTPxOaIsS
+{{comment}}
