@@ -3,26 +3,19 @@ title: ThoughtWorksにおけるRuby
 tags: TAGS
 ---
 
-----
+<hr />
+
 以下の文章は、Martin Fowlerによる[Ruby at ThoughtWorks](http://martinfowler.com/articles/rubyAtThoughtWorks.html)の日本語訳である。
-----
+
+<hr />
 
 
 
-""ThoughtWorksは、2006年から本格的なプロジェクトにRubyを使い始めた。2008年の終わりまでには、Rubyプロジェクトの数は41個になった。この経験から我々は何を学んだのか。QConの講演に備えて、私は調べてみることにした。ここでは、Rubyの生産性、スピード、保守性など、よくある質問に対する現時点での我々の考えについて述べていく。現時点での我々の結論としては、Rubyは十分に使えるプラットフォームであり、様々な形態のアプリケーションに利用することを真剣に考慮すべきである、というものだ。特に、Ruby on Rails を利用したWebアプリケーションにおいてはそうである。最後に、Active Record のテスティングに対する考えなど、技術的な教訓についても触れる。
+> ThoughtWorksは、2006年から本格的なプロジェクトにRubyを使い始めた。2008年の終わりまでには、Rubyプロジェクトの数は41個になった。この経験から我々は何を学んだのか。QConの講演に備えて、私は調べてみることにした。ここでは、Rubyの生産性、スピード、保守性など、よくある質問に対する現時点での我々の考えについて述べていく。現時点での我々の結論としては、Rubyは十分に使えるプラットフォームであり、様々な形態のアプリケーションに利用することを真剣に考慮すべきである、というものだ。特に、Ruby on Rails を利用したWebアプリケーションにおいてはそうである。最後に、Active Record のテスティングに対する考えなど、技術的な教訓についても触れる。
 
 最終更新日：2009/6/11
 
-目次：
-
-{{toc_here}}
-
-----
-
-
-
-
-
+<hr />
 
 
 私の雇用主であるThoughtWorksは、主にソフトウェア開発を生業としている。
@@ -65,9 +58,9 @@ Webサイトの開発プロジェクトが多く、RailsはRubyと同様に重�
 
 
 
-[http://martinfowler.com/articles/rubyAtThoughtWorks/projectScatter.png]]
+![](http://martinfowler.com/articles/rubyAtThoughtWorks/projectScatter.png)
 
-''図1: 2006年から2008年におけるThoughtWorksでのRubyプロジェクトに関わった人数（ピーク時）と期間の散布図''
+**図1: 2006年から2008年におけるThoughtWorksでのRubyプロジェクトに関わった人数（ピーク時）と期間の散布図**
 
 
 
