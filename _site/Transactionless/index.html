@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Transactionless</title>
+  <meta name="description" content="http://martinfowler.com/bliki/Transactionless.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bliki-ja.github.io/Transactionless">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://bliki-ja.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Transactionless</h1>
+    <p class="post-meta">Mar 18, 2007</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://martinfowler.com/bliki/Transactionless.html">http://martinfowler.com/bliki/Transactionless.html</a></p>
+
+<p>2007/3/18</p>
+
+<p>//A couple of years ago I was talking to a couple of friends of mine who were doing some work at eBay. It&#39;s always interesting to hear about the techniques people use on high volume sites, but perhaps one of the most interesting tidbits was that eBay mostly hardly ever uses database transactions.</p>
+
+<p>数年前にeBayで働く友人たちと話していたときのことだ。
+大規模サイトで使われる技術の話を聞くのはいつも楽しいが、特に興味深かったのが、eBayでは滅多にデータベーストランザクションを使用しないという話だった。</p>
+
+<p>//For most people, coming into a transactionless environment is quite a shock. Using transactions is a very accepted part of working with databases. A lot of people, including myself, see transactions as one of the key benefits that databases give you.</p>
+
+<p>トランザクションがない環境というのは驚くべきことではないだろうか。
+データベースを扱うときにトランザクションを使うのはごくごく一般的なことだ。
+多くの人にとって（私もそうだが）トランザクションはデータベースを使う利点のひとつだ。</p>
+
+<p>// The rationale for not using transactions was that they harm performance at the sort of scale that eBay deals with. This effect is exacerbated by the fact that eBay heavily partitions its data into many, many physical databases. As a result using transactions would mean using distributed transactions, which is a common thing to be wary of.</p>
+
+<p>eBayがトランザクションを使わないのは、あのような規模ではパフォーマンスに影響が出てしまうからだというものだった。
+eBayではデータをいくつもの物理的データベースにパーテション分割しており、
+それがトランザクションを使わない理由に拍車をかけていた。
+その状況でトランザクションを使うとなると、分散トランザクションを使わざるを得ないからだ。</p>
+
+<p>// This heavy partitioning, and the database&#39;s central role in performance issues, means that eBay doesn&#39;t use many other database facilities. Referential integrity and sorting are done in application code. There&#39;s hardly any triggers or stored procedures.</p>
+
+<p>高度にパーテショニングするというのがパフォーマンス問題におけるデータベースの中心的な役割であり、eBayではその他のデータベース機能を使っていなかった。
+参照整合性やソートなどはすべてアプリケーションコード側で行っており、トリガーやストアドプロシージャも使っていなかった。</p>
+
+<p>//My immediate follow-up to the news of transactionless was to ask what the consequences were for the application programmer, in particular the overall feeling about transactionlessness. The reply was that it was odd at first, but ended up not being a big deal - much less of a problem than you might think. You have to pay attention to the order of your commits, getting the more important ones in first. At each commit you have to check that it succeeded and decide what to do if it fails.</p>
+
+<p>その話を聞いたとき、私はすぐに「アプリケーションプログラマへの影響はどうだった？トランザクションがないことについてはどんな感じだった？」と質問した。
+答えは「最初は変な感じだったけど、あまり問題にならなくなった。考えていたほどの問題はなかった。データベースコミットの順番については、より重要なものを先に処理するなどして、注意を払う必要がある。また、各コミットが成功したかどうかを確認する必要があるし、失敗した場合にどう対処すればよいかも決めておかなければならない」というものだった。</p>
+
+<p>// This style of programming intrigued me, but since I was told about it quietly, I wouldn&#39;t talk about it more widely. I can now because Dan Pritchett gave a fascinating talk at QCon this week about eBay&#39;s architecture, including this aspect. (I expect his talk, as well as an interview, will appear on InfoQ in a while.)</p>
+
+<p>このプログラミングスタイルは非常に興味深いものだった。
+だがその時はおとなしく話を聞いていて、誰かに言いふらしたりはしなかった。
+今になってこの話ができるのは、[[Dan Pritchett|<a href="http://www.addsimplicity.com/%5D%5D%E3%81%8C%E4%BB%8A%E9%80%B1%E3%81%AEQCon%E3%81%A7eBay%E3%81%AE%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%5B%5B%E8%AC%9B%E6%BC%94%7Chttp://qcon.infoq.com/qcon/speakers/show_speaker.jsp?oid=175%5D%5D%E3%81%97%E3%81%9F%E3%81%8B%E3%82%89%E3%81">http://www.addsimplicity.com/]]が今週のQConでeBayのアーキテクチャについて[[講演|http://qcon.infoq.com/qcon/speakers/show_speaker.jsp?oid=175]]したから�</a>�。そこではこのトランザクションレスの話についても述べられていた。（インタビューだけでなく、彼の講演も[[InfoQ|<a href="http://www.infoq.com/%5D%5D%E3%81%AB%E6%8E%B2%E8%BC%89%E3%81%95%E3%82%8C%E3%82%8B%E3%81%A8%E3%81%84%E3%81%84%E3%81%AE%E3%81">http://www.infoq.com/]]に掲載されるといいの�</a>�けれど）</p>
+
+<p>// I&#39;d like to see more about the details of programming without transactions in this kind of manner. Apart from the fact that it&#39;s always worth thinking about alternatives, it&#39;s also the case that transactionlessness is more common than many people think. It&#39;s common to have multi-step business processes with multiple resources that either would need long-running distributed transactions, or resources that have no support for transactions.</p>
+
+<p>私はこのようなトランザクションレスのプログラミングについて、もっと詳しく知りたいと思っている。
+代替案を考えることは重要だという意味もあるが、それよりもこれは、トランザクションレスは多くの人たちが考えている以上に普通のことなんだという事例である。
+複数のリソースを使ってマルチステップビジネスプロセスを実行するのはよくあることだ。
+そこでは長時間の分散トランザクションやトランザクションをサポートしないリソースが必要となる。</p>
+
+<p>// We shouldn&#39;t read too much into this. Nobody is arguing that we should tear transactions out of our toolkit. I don&#39;t know enough details about eBay to judge whether avoiding transactions is the right approach even for them. But eBay&#39;s example suggests that living without transactions is far less impossible than many people think.</p>
+
+<p>この話を深読みしてはいけない。
+誰もトランザクションをツールボックスから叩き出せと言っているわけではない。
+eBayが、少なくとも彼らにとって、トランザクションを使用しない手法が正しいと判断した理由を私は与り知らない。
+だがeBayの事例は、トランザクションなしでやっていくことは思っているほど不可能なことではないことを示している。</p>
+
+<p>!参考</p>
+
+<ul>
+<li><a href="http://www.addsimplicity.com/downloads/eBaySDForum2006-11-29.pdf">http://www.addsimplicity.com/downloads/eBaySDForum2006-11-29.pdf</a></li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

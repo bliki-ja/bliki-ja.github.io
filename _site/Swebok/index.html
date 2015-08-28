@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Swebok</title>
+  <meta name="description" content="http://www.martinfowler.com/bliki/Swebok.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bliki-ja.github.io/Swebok">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://bliki-ja.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Swebok</h1>
+    <p class="post-meta">Jun 24, 2003</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://www.martinfowler.com/bliki/Swebok.html">http://www.martinfowler.com/bliki/Swebok.html</a></p>
+
+<p>今月は IEEE による [[SWEBOK|<a href="http://www.swebok.org/%5D%5D%EF%BC%88%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E7%9F%A5%E8%AD%98%E4%BD%93%E7%B3%BB%EF%BC%89">http://www.swebok.org/]]（ソフトウェアエンジニアリング知識体系）</a> のレビュー月間である。これは、我々の専門分野についての知識体系を定義しようという試みで、ライセンス化へ向けての土台となるものだ。</p>
+
+<p>いつもならこういった類のものは無視することにしている。いくつもの IEEE 標準が出されたが、それらは決まって商業ソフトウェア開発者たちに無視されてきた。そういったものは学術的であり、大規模な政府プロジェクトに関わるものだった。ビジネス側の人間は「政府」と「効率的」を同一視していないのである。</p>
+
+<p>しかし、Cem Kaner はこのことを真摯に受け止めている（彼の判断には敬服しているところだ）。彼は [[blog|<a href="http://blackbox.cs.fit.edu/blog/kaner/archives/000056.html%5D">http://blackbox.cs.fit.edu/blog/kaner/archives/000056.html]</a>] の中でこう言っている。</p>
+
+<p>&quot;&quot;SWEBOKがライセンス試験の根拠となるというのであれば、SWEBOKのプラクティスは不正行為訴訟の根拠ともなりうる。SWEBOKにおいて「グッドプラクティス」と呼ばれているプラクティスを実践していれば、たとえ不正行為だと訴えられたとしても、自らの活動を「SWEBOKに従っている」と弁護することができる。逆に、はるかによいプラクティスを実践しながらも、そのプラクティスがSWEBOKと相容れなかったら、法廷で厳しい追求を受けるリスクがある。ライセンス試験の根拠としてSWEBOKをとらえてしまうと、SWEBOKが業界認定のプラクティスであるという公式声明となってしまう。まるでライセンス制の業種のようにだ。</p>
+
+<p>さて、Swebok のどこがダメなのか？ 今月は忙しく、詳しく精査する時間が取れなかったが、ちょっと読んだだけで赤旗を揚げることが出来るくらいダメダメである。Swebok は必要以上に計画駆動開発(plan-driven development)を強調しており、アジャイル手法はまったく認めていないことがよく分かった。</p>
+
+<p>まず読んだのは設計の節である。Swebok は設計をプログラミングとはまったく別の活動であると見なしていることは明白である（アジャイルムーブメントにいる我々とは対照的な見方である）。ここでは、非常に詳細なレベルの設計は、コーディングとテストのインプットとして必要であると提案されている（どれだけ詳細であればよいのかということは、事実上、言及することは出来ないのだが）。</p>
+
+<p>載ってる本の選択はそんなに悪くなかった——GoF本が推薦リストに載ってなかったが 
+　(GoF本は、重要度が高い『お勧め参考文献』の章じゃなくて、重要度が一段低い『もっと詳しく知りたい人のための参考文献』の章にあった）。</p>
+
+<p>プロセスの節は、測定管理の記述に多くを費やされている。これは本当にダメなことだ。以前、私は、[[生産性を計測する|MeasuringProductivity]]ことは不可能だと述べたはずだ。これは科学的管理法を基にしており、プロセス中の人間の役割や人々の相互やり取りについては、完全に無視されている。繰り返すが、「人」や「相互作用」は、「プロセス」よりも勝るのである。これは知識体系の大きな欠陥である。</p>
+
+<p>要求の節では、開発を始めることよりも、理解しやすいシステム要求仕様(SRS)を構築することに集中していた……ああ、またウォーターフォール派かと。（面白いことに、スパイラル型の絵が貼ってある……が、要求仕様のドキュメントを作るだけ！）。要求段階においてコストのトレードオフをあれこれ考えるのは意味がない。要求に不可欠な要素が、きちんと機能するかどうかが大切なのだと思う。</p>
+
+<p>ざっと見てきたたわけだが、いずれきちんと見ることにする。ただ、基本的に Cem Kaner と同意見である。私達の産業は未熟で、こういった知識体系を作ることはまだ出来ない。我々はソフトウェア開発についてまだ学ぶべきことがある。今のところ、いろんな学派が存在している。ソフトウェアエンジニアリングのコミュニティは、それぞれ意見を持っており、ソフトウェア開発において、それらは部分的には最適なことなのかもしれない。
+だが、広く認知されたコンセンサスはまだ存在していない。</p>
+
+<p>(さらに詳しく知りたい方は [[Robert Levy|<a href="http://robertlevy.net/2003_06_22_archive.aspx#105652424204797983%5D">http://robertlevy.net/2003_06_22_archive.aspx#105652424204797983]</a>] を見てください)</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

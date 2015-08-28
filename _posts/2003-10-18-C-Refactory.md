@@ -1,6 +1,6 @@
 ---
 title: C-Refactory
-tags: TAGS
+tags: refactoring
 ---
 
 http://martinfowler.com/bliki/C-Refactory.html

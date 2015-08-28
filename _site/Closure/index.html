@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>クロージャ</title>
+  <meta name="description" content="http://martinfowler.com/bliki/Closure.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bliki-ja.github.io/Closure">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://bliki-ja.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">クロージャ</h1>
+    <p class="post-meta">Sep 8, 2004</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://martinfowler.com/bliki/Closure.html">http://martinfowler.com/bliki/Closure.html</a></p>
+
+<p>動的言語に興味がでてくると、
+クロージャやブロックと呼ばれる概念に出会うと思います。
+C/C++/Java/C# などクロージャを持たない言語をご使用の方は、
+どういったものなのかご存知ないかもしれません。
+ここでは簡単にクロージャについて説明します。
+クロージャを持った素晴らしい言語を使ったことある方にとっては、
+あまり面白くない話かもしれません。</p>
+
+<p>クロージャは長年使用されてきました。
+私が最初に出会ったのは、おそらく Smalltalk だったと思います。
+Smalltalk ではブロックと呼んでいました。
+Lisp ではクロージャを多用しています。
+Ruby でもクロージャが提供されています——多くの rubyist がスクリプト言語に Ruby を選ぶのはこのためです。</p>
+
+<p>基本的にクロージャとは、ブロック化されたコードのことを指します。
+コードブロックは関数呼び出しの際に引数として使うことができます。
+以下に簡単な例を挙げました。
+employee オブジェクトのリストがあるとします。
+どの employee が manager であるか知りたいとしましょう。
+その際、 プロパティを使用します。
+C# なら、こんな感じになるでしょうか。</p>
+
+<p>public static IList Managers(IList emps) {
+   IList result = new ArrayList();
+   foreach(Employee e in emps)
+     if (e.IsManager) result.Add(e);
+   return result;
+ }</p>
+
+<p>クロージャのある言語だと、こういう感じになります (ここでは Ruby を使いました) 。</p>
+
+<p>def managers(emps)
+    return emps.select {|e| e.isManager}
+ end</p>
+
+<p>select は Ruby のコレクションクラスで定義されたメソッドです。
+select メソッドはコードブロック (クロージャ) を引数として受け取ることができます。
+Ruby は &quot;{&quot; と &quot;}&quot; で挟んでコードブロックを表します (他にもやり方はあります)。
+コードブロックに引数がある場合は、垂直のバー (&quot;|&quot;) で挟んで宣言します。
+select メソッドは emps 配列をイテレートして、
+各要素に対してコードブロックを実行します。
+そして、ブロック内で真と評価された要素で新たに配列を作り、戻します。</p>
+
+<p>あなたがCプログラマなら、「そんなの関数ポインタでできるじゃん」と言うかもしれません。
+あなたが Java プログラマなら、「無名クラスでできるよ」と言うかもしれません。
+C# プログラマなら、デリゲートが使えると考えるかもしれません。
+これらのメカニズムはクロージャに似ています。
+しかし、決定的な2つの違いがあるのです。</p>
+
+<p>まずは、形式的な違いです（a formal difference）。
+クロージャはスコープ内の変数を参照することが出来ます。
+以下のメソッドを見てください。</p>
+
+<p>def highPaid(emps)
+    threshold = 150
+    return emps.select {|e| e.salary &gt; threshold}
+ end</p>
+
+<p>select のブロック内で、highPaid メソッド (ブロックがあるメソッド) のローカル変数が参照されています。
+真のクロージャを持たない言語の代替案では、こういったことはできません。
+クロージャを使ってさらに面白いことができます。
+以下の関数を見てください。</p>
+
+<p>def paidMore(amount)
+    return Proc.new {|e| e.salary &gt; amount}
+ end</p>
+
+<p>この関数はクロージャを戻します。
+このクロージャがメソッドの引数を参照していることが分かるでしょうか。
+クロージャを使って、このような関数を作ることができます。
+これを変数に入れることも可能です。</p>
+
+<p>highPaid = paidMore(150)</p>
+
+<p>変数は、
+コードブロック (Ruby では Proc と呼ばれます) を保持しています。
+このブロックはオブジェクトの salary が 150 以上かどうか評価します。
+これは、以下のように使うことができます。</p>
+
+<p>john = Employee.new
+ john.salary = 200
+ print highPaid.call(john)</p>
+
+<p>は、先ほど定義した  を呼び出しています。ここにある変数  は、Proc オブジェクトを生成したときに渡した 150 を保持しています。
+値 150 はスコープ外にありますが、
+print を呼び出すとそれが生きていることが分かります。</p>
+
+<p>クロージャのカッコいいところ、其の壱。
+クロージャはコードブロックである。
+かつ、使われる環境と結合できること。
+これが正式なクロージャの形であり、
+関数ポインタやら内部クラスやらその他もろもろのクロージャっぽいものと一線を画す機能です。</p>
+
+<p>2つ目の違いは、それほど形式的に定義はされていませんが、大変重要なことです。
+これがないと、実際に使ってられないからです。
+クロージャをサポートする言語は、簡単なシンタックスでクロージャを定義できます。
+あまり重要じゃないように思えますが、
+私はものすごく重要なことだと信じています——
+これがクロージャを自然に使えるようにするための鍵なのです。
+Lisp や Smalltalk や Ruby を見てください。
+あちこちでクロージャが使われています。
+他の言語のクロージャに似た機能が、こんなにも使われていますか？
+ローカル変数と結びつけることできるというのも、
+クロージャが頻繁に使われる理由のひとつでしょうが、
+いちばんの理由は、記法がシンプルで明快だからだと思います。</p>
+
+<p>いい例があります。
+元 Smalltalk ユーザーだったひとが Java を始めたときのことです。
+(私も含め) 多くの人が Smalltalk ではブロックを使ってやっていたところを、
+無名クラスを使ってやろうとしました。
+しかし、出来上がったコードはめちゃくちゃでヒドいものでした。
+結局、私たちは諦めたのです。</p>
+
+<p>//Like any term in software there is a lot of blur about the exact definition of closure. Some people say that the term only applies to an actual value that includes bindings from its environment, such as the value returned by highPaid. Others use the term &#39;closure&#39; to refer to a programming construct that has the ability to bind to its environment. This debate, an example of the TypeInstanceHomonym, is usually carried out with the politeness and lack of pedantry that our profession is known for.</p>
+
+<p>ソフトウェアの用語はだいたいそうですが、「クロージャ」の定義も曖昧です。
+highPaidメソッドの戻り値のように、環境と結合した実値（ここではProcの最終実値）だけを指す人もいますし、環境と結合できる能力を持っているプログラミング構文(a programming construct)だという人もいます。
+この議論は、[[TypeInstanceHomonym]]の一例でもあります。
+礼節を失ってしまい、我々ソフトウェア業界に備わっているはずの論理的な思考ができなくなってしまいます。</p>
+
+<p>//I use closures a lot in Ruby, but I don&#39;t tend to create Procs and pass them around. Most of the time my use of closures is based around CollectionClosureMethods similar to the select method I showed earlier. Another common use is the &#39;execute around method&#39;, such as when processing a file.</p>
+
+<p>私はRubyでよくクロージャを使います。
+しかし、Procを作ったりProcをあちこちに渡すことはあまりありません。
+私の場合は、さっき見せたselectメソッドのような[[CollectionClosureMethod]]と一緒に使うことがほとんどです。
+他にも、&quot;[[execute around method|WikiWikiWeb:ExecuteAroundMethod]]&quot; をよく使います。
+例えば、ファイル処理のような場合です。</p>
+
+<p>File.open(filename) {|f| doSomethingWithFile(f)}</p>
+
+<p>ファイルをオープンする open メソッドがありますが、
+これがブロック内のコードを実行し、ファイルをクローズしています。
+これはトランザクションなどを処理するときなどに大変使い勝手のよいイディオムです (最後にコミットやロールバックのし忘れがなくなります)。
+私は、XML の変換処理でよく使っています。</p>
+
+<p>こういったクロージャの使い方は、
+Lisp や関数プログラミングの世界の人たちのそれとは比べ物になりません。
+私のクロージャの使い方は限られてはいますが、
+クロージャがない言語を使うとぜんぜん物足りません。
+最初は、どうせマイナーな機能だろ？と思うかもしれませんが、
+すぐにクロージャのことが好きになりますよ。</p>
+
+<p>&#39;&#39;&#39;他の言語：&#39;&#39;&#39; [[C#|<a href="http://joe.truemesh.com/blog//000390.html%5D">http://joe.truemesh.com/blog//000390.html]</a>] | [[Python|<a href="http://ivan.truemesh.com/archives/000392.html%5D">http://ivan.truemesh.com/archives/000392.html]</a>] | [[Boo|<a href="http://boo.codehaus.org/Martin+Fowler%27s+closure+examples+in+boo%5D">http://boo.codehaus.org/Martin+Fowler%27s+closure+examples+in+boo]</a>] | [[Lisp|<a href="http://stefanroock.blogspot.com/2006/08/closures-in-common-lisp.html%5D">http://stefanroock.blogspot.com/2006/08/closures-in-common-lisp.html]</a>] | [[JavaScript|<a href="http://nonn-et-twk.net/twk/node/50%5D">http://nonn-et-twk.net/twk/node/50]</a>]</p>
+
+<p>&#39;&#39;&#39;削除&#39;&#39;&#39; ==Joe Walnes が[[次のバージョンの C# のクロージャ|<a href="http://joe.truemesh.com/blog//000390.html%5D%5D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">http://joe.truemesh.com/blog//000390.html]]について</a> blog を書いていました。非常に真っ当で、静的型言語にとってよく考えられた文法のようです。委譲を基にしており、delegate キーワードを使うそうです。==</p>
+
+<p>&#39;&#39;&#39;削除&#39;&#39;&#39; ==Javaのローカルクラスだって、final がついたローカル変数ならアクセスできると指摘するひとがいました。この制限があっても、真のクロージャと呼べるのでしょうか。何度も言うようですが、実際問題、これはきたない文法ですし、使うのに一番のハードルになっていると思います。==</p>
+
+<p>Neal Gafter が[[クロージャの歴史|<a href="http://gafter.blogspot.com/2007/01/definition-of-closures.html%5D%5D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%B4">http://gafter.blogspot.com/2007/01/definition-of-closures.html]]について�</a>�晴らしい投稿をしています。Vadim Nasardinov が Guy Steele による [[Java におけるクロージャ|<a href="http://article.gmane.org/gmane.comp.lang.lightweight/2274%5D">http://article.gmane.org/gmane.comp.lang.lightweight/2274]</a>] の経緯についての興味深い話を教えてくれました。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

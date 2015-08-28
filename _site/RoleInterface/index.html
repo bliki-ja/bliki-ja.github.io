@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RoleInterface</title>
+  <meta name="description" content="http://martinfowler.com/bliki/RoleInterface.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bliki-ja.github.io/RoleInterface">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://bliki-ja.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">RoleInterface</h1>
+    <p class="post-meta">Dec 22, 2006</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://martinfowler.com/bliki/RoleInterface.html">http://martinfowler.com/bliki/RoleInterface.html</a></p>
+
+<p>2006/12/22</p>
+
+<p>// Interfaces for software elements take two forms, what I call role interface and HeaderInterface. A role interface is defined by looking at a specific interaction between suppliers and consumers. A supplier component will usually implement several role interfaces, one for each of these patterns of interaction. This contrasts to a header interface, where the supplier will only have a single interface.</p>
+
+<p>ソフトウェアの構成要素としてのインタフェースには二種類ある。
+ひとつは私がロールインタフェースと呼んでいるもの、もうひとつはHeaderInterfaceである。
+ロールインタフェースは、サプライヤ(suppliers)とクライアント(consumers)間の、ある特定のやり取りを考慮して定義される。
+サプライヤコンポーネントは通常、いくつかのロールインタフェースを実装する。
+インタフェースのひとつひとつが、この種のやり取りに使用される。
+サプライヤコンポーネントがただひとつのインタフェースしか持たないヘッダーインタフェースとは対称的である。</p>
+
+<p>// Let&#39;s look at this with an example. Consider a program for PERT style project planning. In this scheme we break down a project into a set of activities. We then arrange these activities into a network (strictly a directed acyclic graph) to show the dependencies between the tasks. So if &#39;have breakfast&#39; is a task, then &#39;make coffee&#39; and &#39;mix cereal&#39; might be predecessor activities. This means I cannot begin to have my breakfast until all the predecessors have completed.</p>
+
+<p>[[PERT|<a href="http://en.wikipedia.org/wiki/PERT_Chart%5D%5D%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E8%A8%88%E7%94%BB%E3%81%AE%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83">http://en.wikipedia.org/wiki/PERT_Chart]]を使ったプロジェクト計画のプログラ�</a>�を例にして見ていこう。
+ここでは、プロジェクトをいくつかのアクティビティに分解する。
+次に、これらのアクティビティをネットワーク（厳密に言えば、[[非循環有向グラフ|<a href="http://en.wikipedia.org/wiki/Directed_acyclic_graph%5D%5D%EF%BC%89%E3%81%AB%E9">http://en.wikipedia.org/wiki/Directed_acyclic_graph]]）に�</a>��置し直して、
+タスク間の依存関係を示す。
+「朝食を食べる」がタスクならば、「コーヒーをいれる」や「シリアルを混ぜる」などは事前に行われるアクティビティとなる。
+つまり、事前処理が完了しない限り、朝食を食べ始めることはできないのだ。</p>
+
+<p>//Each activity has a duration, how long we expect it to take. With that duration, together with the relationships in the network, we can figure out other information. We can calculate the earliest start of an activity as the latest earliest finish of its predecessors. We calculate the earliest finish of an activity as its earliest start plus its duration. Similarly we can work out the latest finish and latest start. The code would look something like this.</p>
+
+<p>各アクティビティには、どれだけ時間がかかるかという、所要時間がある。
+所要時間があれば、ネットワーク内での相互関係を使って、その他の情報を算出することができる。
+アクティビティの最早開始時間は、事前処理の最遅終了時間から算出することができる。
+最早終了時間は、最早開始時間に所要時間を足せば算出できる。
+同様に、最遅終了時間と最遅開始時間も算出できる。
+コードは以下のようになる。
+&lt;&lt;&lt;
+  private int duration;</p>
+
+<p>public MfDate earliestStart() {
+    MfDate result = MfDate.PAST;
+    for (?TYPE? p : predecessors())
+      if (p.earliestFinish().after(result))
+        result = p.earliestFinish();
+    return result;
+  }</p>
+
+<p>public MfDate earliestFinish() {
+    return earliestStart().addDays(duration);
+  }</p>
+
+<p>public MfDate latestFinish() {
+    MfDate result = MfDate.FUTURE;
+    for (?TYPE? s : successors())
+      if (s.latestStart().before(result))
+        result = s.latestStart();
+    return result;
+  }</p>
+
+<p>public MfDate latestStart() {
+    return latestFinish().minusDays(duration);
+  }</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>// You&#39;ll notice a hole in that code above - the ?TYPE?s. If we ask an activity for its predecessors and successors, what type of objects should we expect back? (To be precise we expect to return a collection, so the real question is what should the type of the elements of the returned collection be?)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>上のコードが穴埋め式になっていることに気づいたかもしれない。「?TYPE?」の部分である。
+アクティビティに（事前処理）と（事後処理）を呼び出させると、どんな型のオブジェクトが戻ってくればよいだろうか？（正確に言えばコレクション型が戻って来るので、「戻り値であるコレクションの要素の型は何がよいだろうか？」が正しい質問）</p>
+
+<p>// If you use a header interface, the returned interface would be an activity and would mirror the public methods of our activity class to create an InterfaceImplementationPair.</p>
+
+<p>ヘッダーインタフェースを使うと、戻ってきたインタフェースはアクティビティ型であり、InterfaceImplementationPairを作るためにパブリックなメソッドを実装している。
+&lt;&lt;&lt;
+ public interface Activity ...
+   MfDate earliestStart();
+   MfDate earliestFinish();
+   MfDate latestFinish();
+   MfDate latestStart();</p>
+
+<p>class ActivityImpl...
+   List<Activity> predecessors() ...
+   List<Activity> successors() ...</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>//With a role interface, however, we look at how the collaborating objects are actually used. In this case a successor is only used for its latestStart and a predecessor is only used for its earliestFinish. So as a result we create two interfaces which only have the methods we actually use.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>一方、ロールインタフェースであれば、協調するオブジェクトがどのように使われるかを考慮することになる。
+この場合、successor は  でのみ使用され、predecessor は  でのみ使用される。
+そのため、実際に使うメソッドを持つ２つのインタフェースを作ることになる。
+&lt;&lt;&lt;
+ public interface Successor {
+   MfDate latestStart();
+ }
+ public interface Predecessor {
+   MfDate earliestFinish();
+ }</p>
+
+<p>class Activity
+   List<Predecessor> predecessors() ...
+   List<Successor> successors() ...</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>// We can think of a successor as a role that a collaborating object plays with respect to this object. This approach of thinking about objects and the roles that they play in collaborating with others has a long history in the object-oriented world.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>successor はこのオブジェクトとのみ協調するロールだと考えることができる。
+オブジェクトとロールがお互いに協調し合うと考える手法は、オブジェクト指向の世界ではずいぶんと歴史のあるものである。</p>
+
+<p>//The strength of a role interface is that it clearly communicates the actual collaboration between an activity and its successors. Often a class doesn&#39;t use all the methods of a class, so it&#39;s good to show which ones are actually needed. This can be particularly useful if you need to substitute it later on. A header interface forces you to implement every method, even if you&#39;re not going to need them; but with a role interface you only need to implement exactly what&#39;s needed.</p>
+
+<p>ロールインタフェースの利点は、アクティビティとsuccessorsという実際の協調関係の間で、明確にコミュニケートするという点である。
+通常、クラスはすべてのメソッドを使うことはない。
+そのため、実際に必要なものだけ見せるというのはよい考えだ。
+あとで代替が必要となる場合には、特に有用である。
+ヘッダインタフェースだと、これから必要にならなくても、すべてのメソッドを実装しなければならない。
+しかし、ロールインタフェースならば、実際に必要なものだけを実装すればよい。</p>
+
+<p>//The disadvantage of a role interface is that it&#39;s more effort to come up with, since you need to look at each collaboration to form the role interface. With a header interface all you have to do is duplicate the public methods, no thought needed. There is also a sense of dependence on your consumers. I say a &quot;sense&quot; because there isn&#39;t a formal dependency, but it&#39;s still enough to make many people uncomfortable. They prefer header interfaces because they believe that you shouldn&#39;t care who uses your service, or how. You publish an interface and they can use it if they find it useful.</p>
+
+<p>ロールインタフェースの不利点は、作る手間がかかるという点である。
+なぜなら、ロールインタフェースを作るには、それぞれの協調関係を考慮する必要があるからである。
+ヘッダインタフェースならば、必要ではなくとも、パブリックメソッドを置いておけばよい。
+また、クライアントに依存するような感じもする。
+「感じ」と言ったのは、フォーマルな依存関係があるわけではないが、多くの人々を不快にするからだ。
+クライアントは、あなたが「誰が、どのように、サービスを使うか」を気にせずに済むと信じているので、ヘッダインタフェースを好む。
+あなたがインタフェースを公布すれば、クライアントは（有用だと思えば）それを使うことができる。</p>
+
+<p>// On the whole I much prefer role interfaces, so I suggest pushing towards them as much as you can. There is work involved in doing it, but my belief has always been that you should only use interfaces when you really need substitutability, and if you do need interfaces you should think hard about what the consumer of that interface needs.</p>
+
+<p>私はロールインタフェースのほう好みなので、できるだけそちらを使っていくことをおすすめする。
+これには手間がかかるが、私にはインタフェースは代替性が本当に必要なときのみ使うべきだという信念がある。
+また、インタフェースが必要であれば、インタフェースのクライアントが何を必要としてるかを真剣に考えるべきである。</p>
+
+<p>// There is an interesting twist if you think of this in a remoting context using something like web services. If we were to ask a remote service for details on predecessors, what should we expect back? Some might argue that for it to be a role interface, it should only return a document with earliest finish data. I would disagree - I think it&#39;s perfectly valid for it to return a document with more data than I asked for. The point is that any type checking involved should only check that the earliest finish data is present. If extra data can be ignored, then it&#39;s no crime to supply it; just as a class may implement multiple interfaces. This thinking matches the philosophy of Consumer Driven Contracts, which is one of the reasons I find consumer driven contracts so compelling.</p>
+
+<p>Webサービスのようなリモート環境では、興味深い「ねじれ」が発生する。
+リモートサービスにpredecessorsの詳細を問い合わせた場合、何が戻ってきて欲しいだろうか？
+最早終了日を含んだドキュメントを戻すだけのロールインタフェースだという者もいるだろう。
+だが私は反対である——求めたもの以上のデータを含んだドキュメントが、この場合最適だと思う。
+ポイントは、ここで必要とされる型チェックは、最早終了日が存在しているかどうかだけでよい点である。
+それ以外のデータを無視することができれば、そのデータを提供しても問題ない。
+クラスは複数のインタフェースを実装すればよい。
+この考えは<a href="%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E9%A7%86%E5%8B%95%E5%A5%91%E7%B4%84">[Consumer Driven Contracts|http://martinfowler.com/articles/consumerDrivenContracts.html]</a>の考えとも一致する。
+私が、クライアント駆動契約が非常に強い影響力を持つと考えているのは、このためである。</p>
+
+<p>// As I&#39;ve indicated, this notion has been around for a long time. Trygve Reenskaug wrote a methodology book based around analyzing roles and synthesizing them into classes. Robert Martin talks about this topic as the Interface Segregation Principle: role interfaces follow that principle but header interfaces do not. </p>
+
+<p>先ほども述べたが、これは古くからある考え方である。
+Trygve Reenskaugが、ロール分析に基づいたクラス設計の方法論をを著している。
+Robert Martinは、このトピックを「<a href="Interface%20Segregation%20Principle">[インターフェイス分離の原則|http://www.objectmentor.com/resources/articles/isp.pdf]</a>」として述べている。
+ロールインタフェースはこの原則に沿っているが、ヘッダインタフェースはそうではない。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

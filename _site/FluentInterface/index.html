@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>流れるようなインタフェース</title>
+  <meta name="description" content="http://www.martinfowler.com/bliki/FluentInterface.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bliki-ja.github.io/FluentInterface">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://bliki-ja.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">流れるようなインタフェース</h1>
+    <p class="post-meta">Dec 20, 2005</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://www.martinfowler.com/bliki/FluentInterface.html">http://www.martinfowler.com/bliki/FluentInterface.html</a></p>
+
+<p>2005/12/20</p>
+
+<p>//A few months ago I attended a workshop with Eric Evans, and he talked about a certain style of interface which we decided to name a fluent interface. It&#39;s not a common style, but one we think should be better known. Probably the best way to describe it is by example.</p>
+
+<p>数ヶ月前、[[Eric Evans|<a href="http://domainlanguage.com/about/ericevans.html%5D%5D%E3%81%A8%E4%B8%80%E7%B7%92%E3%81%AB%E3%81%82%E3%82%8B%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%E3%81%AB%E5%8F%82%E5%8A">http://domainlanguage.com/about/ericevans.html]]と一緒にあるワークショップに参�</a>�した。
+そこで彼がとあるインターフェースのスタイルについて語ったのだが、
+我々はそれを「流れるようなインターフェース（fluent interface）」と名づけることにした。
+一般的なスタイルではないが、もっと評価されるべき代物だ。
+おそらく例を示したほうがいいだろうから、そうしてみることにする。</p>
+
+<p>//The simplest example is probably from Eric&#39;s timeAndMoney library. To make a time interval in the usual way we might see something like this:</p>
+
+<p>一番簡単な例は、Ericの[[timeAndMoney|<a href="http://timeandmoney.sourceforge.net/%5D%5D%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81">http://timeandmoney.sourceforge.net/]]ライブラリ�</a>�ろう。
+時間の間隔を作るには、通常は、以下のようにする。</p>
+
+<p>TimePoint fiveOClock, sixOClock;
+ ...
+ TimeInterval meetingTime = new TimeInterval(fiveOClock, sixOClock);</p>
+
+<p>//The timeAndMoney library user would do it this way:</p>
+
+<p>ライブラリの利用者は以下のようなことを行うだろう。</p>
+
+<p>TimeInterval meetingTime = fiveOClock.until(sixOClock);</p>
+
+<p>//I&#39;ll continue with the common example of making out an order for a customer. The order has line-items, with quantities and products. A line item can be skippable, meaning I&#39;d prefer to deliver without this line item rather than delay the whole order. I can give the whole order a rush status.</p>
+
+<p>続いて、これまたありふれた例だが、顧客からの注文を例に挙げよう。
+注文には、商品とその数量を記載した注文明細が含まれる。
+注文明細はスキップすることができる（skippable）。
+たとえば、注文全体の配送が遅れるよりは、
+ある商品を除いて残りを配送したほうがよい場合が考えられるからだ。
+注文の状態を「至急（rush）」にすることもできる。</p>
+
+<p>//The most common way I see this kind of thing built up is like this:</p>
+
+<p>このような場合は、以下のようにすることが多い。</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">private void makeNormal(Customer customer) {
+    Order o1 = new Order();
+    customer.addOrder(o1);
+    OrderLine line1 = new OrderLine(6, Product.find(&quot;TAL&quot;));
+    o1.addLine(line1);
+    OrderLine line2 = new OrderLine(5, Product.find(&quot;HPK&quot;));
+    o1.addLine(line2);
+    OrderLine line3 = new OrderLine(3, Product.find(&quot;LGV&quot;));
+    o1.addLine(line3);
+    line2.setSkippable(true);
+    o1.setRush(true);
+}
+</code></pre></div>
+<p>//In essence we create the various objects and wire them up together. If we can&#39;t set up everything in the constructor, then we need to make temporary variables to help us complete the wiring - this is particularly the case where you&#39;re adding items into collections.</p>
+
+<p>ここでは、様々なオブジェクトを作ってから、それらをつなぎ合わせている。
+すべての設定をコンストラクタで行うことはできないので、一時的に変数を作って、後からつなぎ合わせるようなことをしている——コレクションにアイテムを追加するのはこのような時だ。</p>
+
+<p>//Here&#39;s the same assembly done in a fluent style:</p>
+
+<p>以下は上記と同じつなぎ合わせを、流れるようなスタイルで行っている。</p>
+
+<p>private void makeFluent(Customer customer) {
+        customer.newOrder()
+                .with(6, &quot;TAL&quot;)
+                .with(5, &quot;HPK&quot;).skippable()
+                .with(3, &quot;LGV&quot;)
+                .priorityRush();
+    }</p>
+
+<p>//Probably the most important thing to notice about this style is that the intent is to do something along the lines of an internal DomainSpecificLanguage. Indeed this is why we chose the term &#39;fluent&#39; to describe it, in many ways the two terms are synonyms. The API is primarily designed to be readable and to flow. The price of this fluency is more effort, both in thinking and in the API construction itself. The simple API of constructor, setter, and addition methods is much easier to write. Coming up with a nice fluent API requires a good bit of thought.</p>
+
+<p>このスタイルで気づくべき重要な点は、「内部[[DomainSpecificLanguage]]」のようなことを実現しようとしているところだ。これが我々が「流れるような」と表現した理由だ。
+この2つの用語は、様々な点で同意語と見なすことができる。
+このAPIは読みやすさを第一に設計されている。
+流れるようにするには、設計とAPIの構築に時間がかかるという代償をともなう。
+コンストラクタ、セッター、addXXXメソッドといったシンプルなAPIは簡単に書くことができるが、ナイスで流れるようなAPIにたどり着くには、それなりの長考が必要だ。</p>
+
+<p>//Indeed one of the problems of this little example is that I just knocked it up in a Calgary coffee shop over breakfast. Good fluent APIs take a while to build. If you want a much more thought out example of a fluent API take a look at JMock. JMock, like any mocking library, needs to create complex specifications of behavior. There have been many mocking libraries built over the last few years, JMock&#39;s contains a very nice fluent API which flows very nicely. Here&#39;s an example expectation:</p>
+
+<p>先ほどの例はカルガリーのコーヒーショップで朝食をとっているときに、私がチャチャっと書き上げたものなのでちょっと違うのだが、本来、流れるようなAPIの構築には時間がかかる。
+流れるようなAPIについてもっと考えてみたいのであれば、[[JMock|<a href="http://www.jmock.org/%5D%5D%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%A6%8B%E3%81%A6%E3%81%BF%E3%82%8B%E3%81%A8%E3%81%84%E3%81%84%E3%81">http://www.jmock.org/]]のコードを見てみるといい�</a>�ろう。
+JMockなどのモックライブラリは、振舞の複雑なスペック（仕様）を作る必要がある。
+ここ数年で様々なモックライブラリが作られてきたが、JMockには非常にナイスで流れるようなAPIが含まれており、それが正に流れるが如くなのである。
+以下にエクスペクテーション（期待）の例を挙げる。</p>
+
+<p>mock.expects(once()).method(&quot;m&quot;).with( or(stringContains(&quot;hello&quot;),
+                                           stringContains(&quot;howdy&quot;)) );</p>
+
+<p>//I saw Steve Freeman and Nat Price give an excellent talk at JAOO2005 on the evolution of the JMock API, they since wrote it up in an OOPSLA paper.</p>
+
+<p>私は[[JAOO2005|<a href="http://martinfowler.com/bliki/JAOO2005.html%5D%5D%E3%81%A7%E3%80%81%5B%5BSteve">http://martinfowler.com/bliki/JAOO2005.html]]で、[[Steve</a> Freeman|<a href="http://stevef.truemesh.com/%5D%5D%E3%81%A8%5B%5BNat">http://stevef.truemesh.com/]]と[[Nat</a> Price|<a href="http://nat.truemesh.com/%5D%5D%E3%81%8CJMock">http://nat.truemesh.com/]]がJMock</a> APIの進化についての素晴らしい講演を拝聴したが、彼らはそれを[[OOPSLAの論文(PDF)|<a href="http://www.mockobjects.com/files/evolving_an_edsl.ooplsa2006.pdf%5D%5D%E3%81%A8%E3%81%97%E3%81%A6%E3%81%BE%E3%81%A8%E3%82%81%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82">http://www.mockobjects.com/files/evolving_an_edsl.ooplsa2006.pdf]]としてまとめている。</a></p>
+
+<p>//So far we&#39;ve mostly seen fluent APIs to create configurations of objects, often involving value objects. I&#39;m not sure if this is a defining characteristic, although I suspect there is something about them appearing in a declarative context. The key test of fluency, for us, is the Domain Specific Language quality. The more the use of the API has that language like flow, the more fluent it is.</p>
+
+<p>これまで我々が流れるようなAPIを目にしたのは、
+オブジェクト（特にバリューオブジェクト）を組み立てるときだった。
+宣言的文脈のなかで何か現れるものがあるのではないと思うのだが、
+これが特性を定義づけるものかどうかは分からない。
+我々にとって、流れを表す試金石とは、DomainSpecificLanguageの特性を持っているかどうかだ。
+DomainSpecificLanguageのようなAPIを使っていると、だんだんと流れていくのである。</p>
+
+<p>//Building a fluent API like this leads to some unusual API habits. One of the most obvious ones are setters that return a value. (In the order example with adds an order line to the order and returns the order.) The common convention in the curly brace world is that modifier methods are void, which I like because it follows the principle of CommandQuerySeparation. This convention does get in the way of a fluent interface, so I&#39;m inclined to suspend the convention for this case.</p>
+
+<p>このように流れるようなAPIを構築すると、一風変わったAPIになる。
+最も分かりやすいのは、セッターが値を返すようになることだろう。
+（先ほどの注文の例だと、注文に注文明細を追加すると注文が返ってくる。）
+中括弧言語の世界では、何かを変更するメソッドにはを付けるのが一般的だ。これは[[CommandQuerySeparation]]の原則に則しているので私は好きなのだが、
+この慣習が流れるようなインターフェースでは邪魔なのだ。
+この場合は、慣習を一時的に停止するようにしている。</p>
+
+<p>//You should choose your return type based on what you need to continue fluent action. JMock makes a big point of moving its types depending on what&#39;s likely to be needed next. One of the nice benefits of this style is that method completion (intellisense) helps tell you what to type next - rather like a wizard in the IDE. In general I find dynamic languages work better for DSLs since they tend to have a less cluttered syntax. Using method completion, however, is a plus for static languages.</p>
+
+<p>返り値の型は、流れるようなアクションを続けるために必要なものを選択すべきである。
+JMockは次に必要になりそうなものに応じて型を変えると強調している。
+このスタイルでナイスなのは、IDEのウィザードではなく、メソッド補完（インテリセンス）によって次に必要な型が分かるということだ。
+DSLには文法が比較的整った動的型言語が向いていると思うが、
+メソッド補完を使えば、静的型言語にもプラスになるだろう。</p>
+
+<p>//One of the problems of methods in a fluent interface is that they don&#39;t make much sense on their own. Looking at a method browser of method by method documentation doesn&#39;t show much sense to with. Indeed sitting there on its own I&#39;d argue that it&#39;s a badly named method that doesn&#39;t communicate its intent at all well. It&#39;s only in the context of the fluent action that it shows its strengths. One way around this may be to use builder objects that are only used in this context.</p>
+
+<p>流れるようなインターフェースで作られたメソッドの問題点は、分かりにくいという点だ。
+メソッド別ドキュメントをメソッドブラウザで見ても、with の意味はよく分からない。
+それだけを取り出せば、メソッドの意図を全く伝えない悪い名前が付けられていると言うこともできる。
+その強みは流れるようなアクションの文脈でしか現れない。
+この問題を避けるには、このような文脈でのみ使われるビルダーオブジェクトを使うという手があるだろう。</p>
+
+<p>//One thing that Eric mentioned was that so far he&#39;s used, and seen, fluent interfaces mostly around configurations of value objects. Value objects don&#39;t have domain-meaningful identity so you can make them and throw them away easily. So the fluency rides on making new values out of old values. In that sense the order example isn&#39;t that typical since it&#39;s an entity in the EvansClassification.</p>
+
+<p>Ericが述べていたことだが、彼が流れるようなインターフェースをこれまでに使ったり目にしたりしてきたのは、バリューオブジェクトの組み立てだったそうだ。
+バリューオブジェクトはドメインに依存したものではないので、
+簡単に作ったり捨てたりすることができる。
+古いバリューから新しいバリューを作るときに流れが漂うのだ。
+その意味で、注文の例は典型的なものではなかった。
+[[EvansClassification]]では、エンティティと分類されていているものだからだ。</p>
+
+<p>//I haven&#39;t seen a lot of fluent interfaces out there yet, so I conclude that we don&#39;t know much about their strengths and weaknesses. So any exhortations to use them can only be preliminary - however I do think they are ripe for more experimentation.</p>
+
+<p>私はまだそれほど多くの流れるようなインタフェースを見たことがないので、
+メリット、デメリットについて結論づけるまでには至らない。
+ここで勧めているのも、ほんの触りに過ぎない——ただ、もっと試されるべき時期であるとは考えている。</p>
+
+<p>//There&#39;s a good follow up to this from Piers Cawley.</p>
+
+<p>[[Piers Cawley|<a href="http://www.bofh.org.uk/articles/2005/12/21/fluent-interfaces%5D%5D%E3%81%8B%E3%82%89%E3%80%81%E3%81%84%E3%81%84%E3%83%95%E3%82%A9%E3%83%AD%E3%83%BC%E3%81%8C%E5">http://www.bofh.org.uk/articles/2005/12/21/fluent-interfaces]]から、いいフォローが�</a>��った。</p>
+
+<p>!SEE ALSO</p>
+
+<p><em>ひがやすを blog
+*</em> [[流れるようなインターフェースと脱CoC|<a href="http://d.hatena.ne.jp/higayasuo/20071018#1192681950%5D">http://d.hatena.ne.jp/higayasuo/20071018#1192681950]</a>]
+** [[流れるようなインターフェース|<a href="http://d.hatena.ne.jp/higayasuo/20071019#1192757543%5D">http://d.hatena.ne.jp/higayasuo/20071019#1192757543]</a>]</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

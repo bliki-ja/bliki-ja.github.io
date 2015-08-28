@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RubyPloticus</title>
+  <meta name="description" content="http://martinfowler.com/bliki/RubyPloticus.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bliki-ja.github.io/RubyPloticus">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://bliki-ja.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">RubyPloticus</h1>
+    <p class="post-meta">Jun 19, 2006</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://martinfowler.com/bliki/RubyPloticus.html">http://martinfowler.com/bliki/RubyPloticus.html</a></p>
+
+<p>//In my recent post on EvaluatingRuby I mentioned that a colleague had put together a web app with some fancy numerical graphs. Someone emailed to ask how he did that. I added my short answer, ploticus, to the original bliki entry, but that led to the question of how he interfaced ruby with ploticus?</p>
+
+<p>先ごろ[[EvaluatingRuby]]を投稿したが、その中で私は、
+同僚がWebアプリケーションにファンシーな数値グラフを組み込んだと述べた。
+それについて、どのようにやっているのかという質問のメールを頂いた。
+簡単な答えとして「Ploticusを使った」と元のエントリーに追記しておいたのだが、
+今度は、RubyとPloticusをどのようにつなげたのかという疑問がでてくる。</p>
+
+<p>//I actually ran into a similar problem myself recently as I wanted to use ploticus to graph some data for a personal project. The solution I came up with was actually very similar, if rather less refined, than the one my colleague used. As a result I thought I&#39;d share it.</p>
+
+<p>実は私も、最近、同様の問題に出くわしたのだ。
+個人的なプロジェクトでploticusを使ってデータをグラフ化したいと思っていた。
+解決策としては、先ほどの同僚が使ったものと似たようなものになった（私のほうが洗練されていないだろうけど）。
+なので、ここでその情報を共有したいと思う。</p>
+
+<p>//First a caveat - this is literally something I knocked up one evening. It isn&#39;t intended to be robust, performant or otherwise enterprisey. It&#39;s just for some data I use for me, myself, and I.</p>
+
+<p>最初に注意しておくこと（文字通り「注意」して欲しい。私が本当にハマったところだから）。
+これは堅牢的、パフォーマンス的、エンタープライズ的なものは一切考慮していない。
+単に、私の、私の、（何度も言うよ）私のデータに使用したものだからだ。</p>
+
+<p>//A sophisticated way to drive a C library like ploticus is to bind directly to the C API. Ruby makes this easy, so I&#39;m told, but it&#39;s too much work for me (particularly if I want to be done before cocktail-hour). So my approach is to build a ploticus script and pipe it into ploticus. Ploticus can run by taking a script from standard input that controls what it does, so all I have to do is run ploticus within ruby and pipe commands into it. Roughly like this:</p>
+
+<p>ploticusのようなCライブラリを使用するときにイケてるやり方は、C APIを使って直接バインドすることだ。
+Rubyではこれを簡単に行うことができる……と私も聞いた。
+だが、私には難しいよ（お酒の時間の前に終わらせなきゃいけないんだったら、なおさら無理）。
+なので私がやったのは、ploticusのスクリプトを作って、ploticusに渡すやり方だ。ploticusは標準入力から命令の書かれたスクリプトを受け取って実行することができる。
+私がやることは、rubyでploticusを起動して、コマンドを渡してやることだ。
+だいたいこんな感じになる。</p>
+
+<p>def generate script, outfile
+    IO.popen(&quot;ploticus -png -o #{outfile} -stdin&quot;, &#39;w&#39;){|p| p &lt;&lt; script}
+  end</p>
+
+<p>//To build up the script, I like to get objects that can work in my terms, and produce the necessary ploticus stuff. If you have anything that uses the prefabs, then putting together something is easy. I wanted to do clustered bar graphs, like this, which requires a ploticus script.</p>
+
+<p>このスクリプトを作ることで、
+自分の言葉で動くオブジェクトを手にすることができた。
+そして、必要なploticusの結果を手にすることができた。
+プレハブ式なものを使っていれば、それを組み合わせるのは簡単だ。
+[[こういう感じの|<a href="http://ploticus.sourceforge.net/gallery/students.htm%5D">http://ploticus.sourceforge.net/gallery/students.htm]</a>]
+棒グラフが欲しかったのだが、おれにはploticusスクリプトが必要だった。</p>
+
+<p>//I built what I needed in three levels. At the lowest level is PloticusScripter, a class that builds up ploticus script commands. Here it is:</p>
+
+<p>私は必要なものを3つのレベルで作った。
+最下層はPloticusScripter。これはploticusスクリプトコマンドを作成するクラスだ。
+こんな感じである。</p>
+
+<p>class PloticusScripter
+   def initialize
+     @procs = []
+   end
+   def proc name
+     result =  PloticusProc.new name
+     yield result
+     @procs &lt;&lt; result
+     return result
+   end
+   def script
+     result = &quot;&quot;
+     @procs.each do |p|
+       result &lt;&lt; p.script<em>output &lt;&lt; &quot;\n\n&quot;
+     end
+     return result<br>
+   end
+ end
+ class PloticusProc
+   def initialize name
+     @name = name
+     @lines = []
+   end
+   def script</em>output
+     return ([&quot;#proc &quot; + @name] + @lines).join(&quot;\n&quot;)
+   end
+   def method<em>missing name, *args, &amp;proc
+     line = name.to</em>s + &quot;: &quot;
+     line.tr!(&#39;<em>&#39;, &#39;.&#39;)
+     args.each {|a| line &lt;&lt; a.to</em>s &lt;&lt; &quot; &quot;}
+     @lines &lt;&lt; line
+   end
+ end</p>
+
+<p>//As you see the scripter is just a list of proc commands (well they could be anything that responds to script_output - but I didn&#39;t need anything else yet). I can instantiate the scripter, call proc repeatedly to define my ploticus procs, then when I&#39;m done call script to get the entire script for piping into ploticus.</p>
+
+<p>ご覧のように、PloticusScripterはprocコマンドのリストである
+（script_outputに反応するものでもよかったが、そのときは必要なかった）。
+これを使用するには、
+procメソッドを繰り返し呼び出して自分のploticus procを定義していき、
+すべてが終わったところで、scriptメソッドを呼び出して、
+できあがったスクリプトをゲットして、ploticusに投げる。</p>
+
+<p>//The next level is something to build clustered bar graphs:</p>
+
+<p>次のレベルは棒グラフを作るためのものだ。</p>
+
+<p>class PloticusClusterBar 
+   attr<em>accessor :rows, :column</em>names
+   def initialize
+     @rows = []
+   end
+   def add<em>row label, data
+     @rows &lt;&lt; [label] + data
+   end
+   def getdata scripter
+     scripter.proc(&quot;getdata&quot;) do |p|
+       p.data generate</em>data
+     end
+   end
+   def colors
+     %w[red yellow blue green  orange]
+   end
+   def clusters scripter
+     column<em>names.size.times do |i|
+       scripter.proc(&quot;bars&quot;) do |p|
+         p.lenfield i + 2
+         p.cluster i+1 , &quot;/&quot;, column</em>names.size
+         p.color colors[i]
+         p.hidezerobars &#39;yes&#39;
+         p.horizontalbars &#39;yes&#39;
+         p.legendlabel column_names[i]
+       end<br>
+     end
+   end</p>
+
+<p>def generate_data
+     result = []
+     rows.each {|r| result &lt;&lt; r.join(&quot; &quot;)}
+     result &lt;&lt; &quot;\n&quot;
+     return result.join(&quot;\n&quot;)<br>
+   end<br>
+ end</p>
+
+<p>//This allows me to build a graph with simple calls to add_row to add data rows. This makes it much more easy for me to build up the data for the graph.</p>
+
+<p>add_rowメソッドを使ってデータ行を追加することで、
+簡単にグラフを作ることができる。
+グラフの元となるデータをより簡単に作ることができる。</p>
+
+<p>//To make a particular graph, I&#39;ll write a third class on top of that:</p>
+
+<p>特定のグラフを作るには、
+これらの上に位置する3つ目のクラスを作ることになる。</p>
+
+<p>//#produces similar to  ploticus example in ploticus/gallery/students.htm</p>
+
+<p>＃[[ploticusのサイトにある例|<a href="http://ploticus.sourceforge.net/gallery/students.htm%5D%5D%E3%81%A8%E5%90%8C%E3%81%98%E3%82%88%E3%81%86%E3%81%AA%E3%82%82%E3%81%AE%E3%82%92%E4%BD%9C%E3%82%8B">http://ploticus.sourceforge.net/gallery/students.htm]]と同じようなものを作る</a></p>
+
+<p>class StudentGrapher
+   def initialize
+     @ps = PloticusScripter.new
+     @pcb = PloticusClusterBar.new
+   end
+   def run
+     load<em>data
+     @pcb.getdata @ps
+     areadef
+     @pcb.clusters @ps<br>
+   end
+   def load</em>data
+     @pcb.column<em>names = [&#39;Exam A&#39;, &#39;Exam B&#39;, &#39;Exam C&#39;, &#39;Exam D&#39;]
+     @pcb.add</em>row &#39;01001&#39;, [44, 45, 71, 89]
+     @pcb.add<em>row &#39;01002&#39;, [56, 44, 54, 36]
+     @pcb.add</em>row &#39;01003&#39;, [46, 63, 28, 87]
+     @pcb.add<em>row &#39;01004&#39;, [42, 28, 39, 49]
+     @pcb.add</em>row &#39;01005&#39;, [52, 74, 84, 66]<br>
+   end
+   def areadef
+     @ps.proc(&quot;areadef&quot;) do |p|
+       p.title &quot;Example Student Data&quot;
+       p.yrange 0, 6
+       p.xrange 0, 100
+       p.xaxis<em>stubs &quot;inc 10&quot;
+       p.yaxis</em>stubs &quot;datafield=1&quot;
+       p.rectangle 1, 1, 6, 6
+     end
+   end
+   def generate outfile
+     IO.popen(&quot;ploticus -png -o #{outfile} -stdin&quot;, &#39;w&#39;){|p| p &lt;&lt; script}
+   end
+   def script
+     return @ps.script
+   end</p>
+
+<p>end</p>
+
+<p>def run
+   output = &#39;fooStudents.png&#39;
+   File.delete output if File.exists? output
+   s = StudentGrapher.new
+   s.run
+   s.generate output
+ end</p>
+
+<p>//It&#39;s a very simple example, but it&#39;s a good illustration of what I call the Gateway  pattern. The PloticusClusterBar class is the gateway with the perfect interface for what I want to do. I make it transform between that convenient interface and what the real output needs to be. The PloticusScripter class is another level of gateway. Even for a simple thing like this I find a design of composed objects like this a good way to go. Which may only say how my brain&#39;s got twisted over the years.</p>
+
+<p>非常にシンプルな例だが、私が[[Gatewayパターン|<a href="http://martinfowler.com/eaaCatalog/gateway.html%5D%5D%EF%BC%88%5B%5B%E7%BF%BB%E8%A8%B3%7Chttp://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?Gateway%5D%5D%EF%BC%89%E3%81%A8%E5%91%BC%E3%82%93%E3%81%A7%E3%81%84%E3%82%8B%E3%82%82%E3%81%AE%E3%81%AE%E8%89%AF%E3%81%84%E4%BE%8B%E3%81">http://martinfowler.com/eaaCatalog/gateway.html]]（[[翻訳|http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?Gateway]]）と呼んでいるものの良い例�</a>�。
+PloticusClusterBarクラスは、私がやりたいことへの完璧なインタフェースを持ったゲートウェイとなっている。
+この便利なインタフェースから実際に必要とされる出力に変換することができる。
+PloticusScripterクラスはまた別のレベルのゲートウェイである。
+このようなシンプルなものでも、composed objectを用いた設計は有用であると分かった。
+長い間かけて私の脳がゆがんだだけかもしれないけど。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

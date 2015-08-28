@@ -168,7 +168,7 @@ injectは、コレクションの累計を出す場合などに便利です。
    total += e.salary
  end
 
-injectを使うと、以下のようになります{{fn('訳注：+=ではなく+でOK。→ total = employees.inject(0) {|result, e| result + e.salary}')}}。
+injectを使うと、以下のようになります('訳注：+=ではなく+でOK。→ total = employees.inject(0) {|result, e| result + e.salary}')。
 
  total = employees.inject(0) {|result, e| result + e.salary}
 

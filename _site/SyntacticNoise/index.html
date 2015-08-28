@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>構文ノイズ</title>
+  <meta name="description" content="http://www.martinfowler.com/bliki/SyntacticNoise.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bliki-ja.github.io/SyntacticNoise">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://bliki-ja.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">構文ノイズ</h1>
+    <p class="post-meta">Jun 9, 2008</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://www.martinfowler.com/bliki/SyntacticNoise.html">http://www.martinfowler.com/bliki/SyntacticNoise.html</a></p>
+
+<p>2008/6/9</p>
+
+<p>[[DomainSpecificLanguage]]について話していると（DSLに限らずあらゆるコンピュータ言語でそうなんだけど）、構文にノイズがあるって話をよく聞く。 RubyはJavaよりもノイズが少ないとか、外部DSLは内部DSLよりノイズが少ないとか。構文ノイズっていうのは、言語としての記述には必要だけど、プログラマがやりたいことには関係のない文字のことだ。ノイズ文字はプログラムの意図をぼかしてしまうため、プログラムの動作を読み解かなければならなくなってしまう。</p>
+
+<p>「構文ノイズ」という言葉も意味があいまいで主観的な言葉なので、ちょっと使いにくかったりする。ちょっと前にGilhad BrahaがJAOOで構文ノイズについて説明しようとしていたが、私も同じようにやってみたいと思う。[[DSL本のイントロダクション|<a href="http://martinfowler.com/dslwip/Intro.html%5D%5D%E3%81%A7%E4%BD%BF%E3%81%A3%E3%81%9FDSL%E3%81%AB%E9%81%A9%E7%94%A8%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F%E3%81%84%E3%81%A8%E6%80%9D%E3%81%86%EF%BC%88%E3%81%93%E3%81%93%E3%81%AE%E8%AA%8C%E9%9D%A2%E3%82%92%E8%80%83%E3%81%88%E3%81%A6%E3%80%81%E7%8A%B6%E6">http://martinfowler.com/dslwip/Intro.html]]で使ったDSLに適用してみたいと思う（ここの誌面を考えて、状�</a>��マシンの例の一部分だけを使っている）。</p>
+
+<p>彼は自分がノイズだと思う文字に色をつけていた。ここで問題となるのは、何をもってノイズ文字とするかである。しかし、ここではそれを定義することは避け、違った分け方をしようと思う。それぞれ「ドメインテキスト」と「句読点」と呼びたい。ここで使っているDSLスクリプトは状態マシンを定義したものなので、 states、events、commandsが存在している。この状態マシンについての情報を記述するもの（状態名など）は、ドメインテキストで定義することにした。それ以外は句読点であり、赤字にしてある。</p>
+
+<p>外部DSLのカスタム構文から始めよう。</p>
+
+<p>[[./img/SyntacticNoise-1.gif]]</p>
+
+<p>カスタム構文はノイズを最小化できるので、ここでは句読点があまり見られない。このテキストでは、必要な句読点がはっきりと分かる。 eventsとcommandsは、その名前とコードで定義されている——それぞれを区別するために句読点が必要である。句読点はノイズと等価ではない。間違った句読点や多すぎる句読点がノイズなのだと言えよう。句読点の絶対数を最小にすればいいというわけではない。句読点が少なすぎると、DSLが理解しにくくなる。</p>
+
+<p>次は同じドメイン情報の内部DSLをRubyで書いたものである。</p>
+
+<p>[[./img/SyntacticNoise-2.gif]]</p>
+
+<p>句読点が増えたのが分かるだろう。句読点をもっと減らすこともできるかもしれないが、カスタム構文よりRubyで書いたDSLのほうが句読点が多くなることは理解していただけるのではないだろうか。ノイズ（私にとってのノイズ）はそれほどない。シンボルを示す「:」、引数を区切る「,」、文字列の引用符「&quot;」くらいだ。</p>
+
+<p>私は、DSLとはフレームワークに息を吹き込む術だと考えている。ここでは、フレームワークは状態マシンを記述している。 DSLだけでなく、プッシュボタン式のAPIを使うこともできる。それでは、句読点を色づけしてみよう。</p>
+
+<p>[[./img/SyntacticNoise-3.gif]]</p>
+
+<p>句読点が多くなった。引用符や括弧以外にも、メソッドキーワードやローカル変数の宣言が見られる。後者の分類は興味深い。ローカル変数は宣言の部分では句読点にカウントされているが、あとでドメインテキストとしてカウントされている（名前は同じなのに）。</p>
+
+<p>Javaでも流れるように記述できる。以下はDSL本の流れるバージョンだ。</p>
+
+<p>[[./img/SyntacticNoise-4.gif]]</p>
+
+<p>例をいくつか集めたら、必ずやってくるのはXMLだ。</p>
+
+<p>[[./img/SyntacticNoise-5.gif]]</p>
+
+<p>この例だと、あまり深いところまでは読み取れないかもしれない。だけど、何らかの思考の糧にはなるんじゃないだろうか。私は、句読点とノイズを明確に分けられるとは思っていない。しかし、ドメインテキストと句読点を区別することで、句読点に集中できるようになるし、句読点の効用についても気づくことができるだろうと思う。 DSLのなかにドメインテキストよりも句読点の文字の方が多いと、それは不吉な臭いだということも付け加えておこう。</p>
+
+<p>(Mikael Jansson が[[lispバージョン|<a href="http://mikael.jansson.be/journal/2008/06/martin-fowlers-syntactic-noise%5D%5D%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%8F%E3%82%8C%E3%81%9F%E3%80%82Mihailo">http://mikael.jansson.be/journal/2008/06/martin-fowlers-syntactic-noise]]を作ってくれた。Mihailo</a> Lalevicが[[JavaScriptバージョン|<a href="http://digitalmihailo.blogspot.com/2008/06/martin-fowlers-syntactic-noise-in.html%5D%5D%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%8F%E3%82%8C%E3%81%9F%E3%80%82">http://digitalmihailo.blogspot.com/2008/06/martin-fowlers-syntactic-noise-in.html]]を作ってくれた。</a>)</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

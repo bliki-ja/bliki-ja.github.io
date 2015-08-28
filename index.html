@@ -1,20 +1,15 @@
 ---
 layout: default
 ---
-
 <div class="home">
-
-  <h1 class="page-heading">Pages</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts | sort : 'title' %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+{% for tag in site.tags %}
+  <h1 id="tag_{{ tag[0] }}">{{ tag[0] }}</h1>
+  <ul>
+    {% for post in tag[1] %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
+{% endfor %}
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PreferDesignSkills</title>
+  <meta name="description" content="http://martinfowler.com/bliki/PreferDesignSkills.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bliki-ja.github.io/PreferDesignSkills">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://bliki-ja.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">PreferDesignSkills</h1>
+    <p class="post-meta">Jan 17, 2008</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://martinfowler.com/bliki/PreferDesignSkills.html">http://martinfowler.com/bliki/PreferDesignSkills.html</a></p>
+
+<p>2008/1/18</p>
+
+<p>//Imagine a hiring situation. There&#39;s two candidates both with a few years of experience. In the blue corner we have someone with good broad design skills in the style of design that you favor (in my case that would be things like DRY, judicious use of patterns, TDD, communicative code etc, but the actual list isn&#39;t important - just that it&#39;s what you favor). However she knows nothing of the particular platform technology that you&#39;re using. In the red corner we have someone who has little knowledge (or interest) in those issues, but knows your platform really well - edge cases in the language, what libraries are available, fingers move naturally over the tools. Assume all else about them is equal (which it never is except for thought experiments like this) and that your team doesn&#39;t have any gaping holes that this candidate might fill. Which one would you prefer?</p>
+
+<p>雇用について考えてみよう。
+応募者が2人。どちらも経験が数年間。
+青コーナーの人には、あなたが好きな設計スタイルの広範な設計力が備わっている（私の場合だと、DRY、分別のあるパターンの使用、TDD、伝わるようなコード、なんかが挙げられるけど、自分の好きなやつでいいよ）。ただし、彼女には、あなたが使っているプラットフォーム技術についての知識がない。
+赤コーナーの人には、そういった設計の知識は（それに興味も）ないが、プラットフォーム技術についての知識はめちゃくちゃある。言語には詳しいし、どのライブラリが使えるかはよく知ってるし、ツールも流暢に使いこなす。
+これ以外のことについては（こうした思考実験以外については）、2人ともまったく一緒だとしよう。
+また、あなたのチームには、応募者の力によって埋めるべき欠陥は特に見当たらない。
+それでは、どちらの応募者のほうが好ましいだろうか？</p>
+
+<p>//My answer is simple, I&#39;d take the one in the with broad design skills. I&#39;ve always held the view that a good programmer should be able to pick up a new platform relatively quickly. Learning basic design aesthetics is both harder and carries over better to new platforms. Good design practices that matter in Java are equally valuable in .NET. Not being familiar with the platform does slow you down (how do I get a literal class name in C# again?), but producing well designed code is what really makes a difference.</p>
+
+<p>私の答えは簡単だ。広範な設計力を持っている人のほうだ。
+以前から、良いプログラマというのは、比較的すぐに新しいプラットフォームについての知識を身につけられるものだと私は思っている。
+基本的な設計美を学習するのは、新しいプラットフォームを学習することよりも難しいことだが、ずっと長く使えるものになる。
+Javaにおける良い設計プラクティスは、.NETにおいても同じように使うことができる。
+馴染みのないプラットフォームを扱うとスピードは落ちるかもしれないが（C#でクラス名の取得はどうやんの？とか）、良く設計されたコードを生成することが、本当の違いをもたらすのである。</p>
+
+<p>//Broad design skills aren&#39;t completely portable. Java and .NET are mostly equivalent as languages - moving to Ruby, however, changes more. Moving to a significantly different beast, like functional languages, is a bigger shift. In any case, you can&#39;t just blindly replicate all design habits in a new environment. But if you&#39;re aware of the new world, an awful lot does carry over.</p>
+
+<p>広範な設計力は、完璧に移行可能なものではない。
+Javaから.NETならば、言語としてほぼ等価なので移行は簡単だが、Rubyに移行しようとするとその違いが大きい。関数型言語のようにまったく違う代物に移行すると、さらに大きな違いとなる。
+いずれにしても、新しい環境においてすべての設計の習慣を盲目的に適用することはできない。
+もちろん、環境に配慮さえすれば、多くのことが適用可能だ。</p>
+
+<p>//We&#39;ve seen this principle prove itself at ThoughtWorks. In our early days with Java, we found the skills experienced developers had learned in Forte gave us excellent instincts for working with Java. We moved away early from the EJB-dominant thinking, and I think it was experience with other platforms that guided us. We saw it even more strongly with .NET. Time and again we saw that good developers with a Java background were rapidly more effective than those with a longer .NET or Microsoft background who lacked those skills. The difference was visible in weeks, not months (and sometimes days).</p>
+
+<p>ThoughtWorksでは、これまでに何度もこの法則が証明されている。
+Javaを扱い始めた頃、熟練開発者がForteで学んだスキルがJavaにおいても大いに役立つことに気づいた。
+我々はEJB中心の考えを早くからやめた。それは、それまでに使ってきたプラットフォームで得た経験があったからだ。
+このことは.NETにおいて顕著だ。それまで.NETやマイクロソフト技術に携わってきた広範な設計力を持たない開発者よりも、Javaのバックグラウンドを持つ優れた開発者のほうが、すぐにバリバリ仕事をするようになったのを何度となく目にしてきた。
+その違いは、数ヶ月ではなく、数週間で現れた（時には数日で現れた）。</p>
+
+<p>//At the moment we see this shift most notably in Ruby. We&#39;ve had quite the run of Ruby projects this year, and often we turn to people with long experience in curly-brace languages to fill the need. Again we&#39;ve seen the value that broad design skills gives us.</p>
+
+<p>現在、この流れを最も目にするのはRubyにおいてである。
+昨年は、かなりの量のRubyプロジェクトがあったが、中括弧言語での経験が長い開発者をその人材として充てることが多かった。
+ここでも、広範な設計力がもたらす価値を目にすることができた。</p>
+
+<p>//It&#39;s not always a sure thing. I have seen cases where someone experienced in another platform just doesn&#39;t desire to get in and learn the new one. Desire to learn is a necessary component here - I&#39;d take the single platform specialist if he wanted to learn broad design and the broad designer didn&#39;t want to learn the new platform. It&#39;s also essential to have someone on the team who knows the platform well.</p>
+
+<p>これは常に確かなことではない。
+あるプラットフォームで経験を積んだ人が、新しいプラットフォームについて学びたいと思わないケースもある。
+学びたいと思う気持ちは必要不可欠だ。
+広範な設計力を学びたいと思っているプラットフォームスペシャリストと新しいプラットフォームについて学びたいと思わない広範な設計力を持った人がいれば、私は前者を採用するだろう。
+チームに1人はプラットフォームをよく知る人間が必要不可欠だということもある。</p>
+
+<p>//I&#39;d say most people at ThoughtWorks prefer design skills over platform knowledge. Many clients don&#39;t share that point of view - which can lead to some difficult pragmatic and ethical choices.</p>
+
+<p>ThoughtWorksでは、多くの人がプラットフォームの知識よりも設計力のほうを好んでいる。だが、多くのクライアントはこの考え方を理解していない。そのために、難しい倫理的な選択を迫られることもある。</p>
+
+<p>//What happens if you have someone you want to bring onto the team with strong design skills and no platform background - yet the client insists on at least two years experience on the platform. In your professional judgment, the broad candidate is going to be more productive than anyone else available. You need to be honest with your client, but on the other hand he is paying you for your professional judgment. Does this change if the client has given you responsibility for delivery of the project?</p>
+
+<p>設計力は高いけれどプラットフォームの知識がない人をチームに入れたいとしよう。クライアントはそのプラットフォームでの経験が少なくとも2年は必要だと言っている。
+専門家としてあなたは、その人が他の誰よりも生産性が高いと判断した。
+クライアントに嘘はつけないが、彼はきっとあなたの期待に応えてくれるだろう。
+プロジェクトの一切の責任をあなたが負うのであれば、状況は変わるだろうか？</p>
+
+<p>//For us these questions are more charged because there is a financial interest involved. If we add a ThoughtWorker to a team, then we bill for that person. If a client hires a platform specialist contractor, we don&#39;t get that income. For many people this is a crucial fact in the situation, yet I expect our project managers are wise enough to know that the risk of adding the wrong person is much more important than one billable income.</p>
+
+<p>こうした質問は多くの議論を巻き起こすことになる。
+なぜなら、お金にまつわる問題だからだ。
+ThoughtWorkerを1人チームに加えたら、その人に給料を支払うことになる。
+クライアントがプラットフォームスペシャリストを雇ってしまったら、
+我々はそこで得られるはずの収益を手にすることができない。
+こうした状況では、これは多くの人にとっての重要な要因である。
+しかし、我々のプロジェクトマネージャには、ひとつの収益よりも間違った人を加えることのほうが、リスクが高いことを承知しておいてもらいたい。</p>
+
+<p>//Consider another case where you&#39;re open with the client and the client demands a reduced rate for the broad design person due to her lack of platform knowledge as she&#39;ll be learning on the job. You&#39;re sure that she, despite that lack, will be more productive than the competing platform expert due to those design skills. Should you accept a reduced rate?</p>
+
+<p>他のケースについても考えてみよう。
+広範な設計力を持つ彼女にプラットフォームの知識がないことをクライアントに正直に話したところ、値引きを要求された。彼女が仕事の中でプラットフォームを勉強するからということだ。
+彼女にはプラットフォームの知識が足りないかもしれないが、
+広範な設計力のおかげで他のプラットフォーム専門家よりも生産性が高いとあなたは考えている。
+この値引きを受け入れるべきだろうか？</p>
+
+<p>//It&#39;s the nature of our, and most other, professions that you learn on the job. A platform specialist also has to learn broad design skills if he&#39;s going to produce maintainable code. Here it&#39;s important to remember that not just is it usually harder to learn design than platforms, it&#39;s also less certain. Given a motivated broad-designer, I can be pretty sure she&#39;ll pick up a platform in time. But there&#39;s no guarantee the other way around. Some people are good at learning details of a platform, but never figure out how to write clear code.</p>
+
+<p>仕事を通じて学ぶということは、我々の（そしてみんなの）業界の特性なのである。
+保守性の高いコードを書こうと思えば、
+プラットフォーム専門家も広範な設計力を学ぶ必要がある。
+ここで覚えておいてもらいたいのは、
+プラットフォームよりも設計のほうが学習が難しいということだけでなく、
+確実度が高いということなのである。
+ヤル気のある広範な設計者は、いずれプラットフォームの知識を身につけるだろう。
+しかし、逆は確かではない。
+プラットフォームの細かなことには詳しくても、
+明快なコードを書く方法が分からない人もいるのである。</p>
+
+<p>//I&#39;ve talked here about broad design skills - and I do believe this makes a difference on the technical axis. But there are other dimensions of broadness too. Most risk in software projects lies in the communication between businesspeople and programmers, so a candidate who can communicate well with users brings a great deal to a team.</p>
+
+<p>ここでは広範な設計力について述べてきた。
+私は、これが技術面において違いをもたらすことだと信じている。
+ただし、「広さ」にはもうひとつの種類がある。
+ソフトウェアプロジェクトにおけるリスクのほとんどが、
+ビジネス人間とプログラマとのコミュニケーションに起因する。
+つまり、ユーザーとコミュニケーションができる応募者のほうが、
+チームに貢献できるのである。</p>
+
+<p>//A similar issue is knowledge of the problem domain. Often clients want people who already know their business, yet are surprised when someone rapidly gains enough understanding to be useful. I&#39;ve long held that it&#39;s the ability to collaborate with others which is central here. By collaborating with a domain expert, or a platform expert, someone with broad skills can be become effective very quickly. Knowledge of other domains often introduces surprising insights into a project and similarities often crop up in sup-rising places. It&#39;s remarkable how often things like core accounting patterns crop up in places that don&#39;t look like accounting on the surface. In the end it&#39;s the ability to work with others, coupled with being a fast learner, that is the critical skill.</p>
+
+<p>ドメイン（問題領域）の知識についても同様である。
+よくクライアントが彼らのビジネスについて詳しい人を要求することがあるが、
+開発者の理解のスピードの速さにビックリしている。
+長年、そう思っていることではあるが、
+これは誰かと一緒に働くという能力なのである★。
+ドメイン専門家やプラットフォーム専門家、あるいは広範な設計力を持つ人と働くことによって、すぐに役に立てるようになる。
+他のドメインの知識がプロジェクトに驚くべき見識をもたらすこともよくあるし、
+類似点が思いがけないところでひょっこり顔を出すこともある。
+見た目上は会計とは関係のないようなところで
+会計パターンがしばしば使えるというのは特筆すべきことだろう。
+つまりは、他の人と一緒に働くというのは能力であり、
+高速学習と組み合わせることは必要不可欠なスキルなのである。</p>
+
+<p>//I&#39;m not dismissing deep platform knowledge here. In an ideal world every team member would be excellent broad programmers with several years platform experience, good familiarity with the problem domain, and written similar systems at least twice before. But we all know how far our world is from that ideal. You need some platform knowledge on a team, and if it were a gap I would reach for the platform specialist to fill it. But that doesn&#39;t alter my default position to prefer broad design skills most of the time.</p>
+
+<p>私はプラットフォームの知識を無視しているわけではない。
+理想的な世界では、
+チームメンバ全員が優れた広範なプログラマで、
+プラットフォームの経験も数年あり、
+問題ドメインに精通し、
+同様のシステムを少なくとも2回経験しているわけだが、
+我々の現実世界は理想とはかけ離れている。
+チームにはプラットフォームに精通した人が数人は欲しい。
+もし知識が足りないようだったら、専門家をチームに入れる必要があるだろう。
+しかし、広範な設計力のほうが重要だという立ち位置は、常に変わらない。</p>
+
+<p>!反応</p>
+
+<ul>
+<li><a href="http://mixi.jp/view_diary.pl?id=690428093&amp;owner_id=93155">http://mixi.jp/view_diary.pl?id=690428093&amp;owner_id=93155</a></li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

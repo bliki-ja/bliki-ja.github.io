@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ClassInstanceVariable</title>
+  <meta name="description" content="http://martinfowler.com/bliki/ClassInstanceVariable.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bliki-ja.github.io/ClassInstanceVariable">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://bliki-ja.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">ClassInstanceVariable</h1>
+    <p class="post-meta">Jan 9, 2007</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://martinfowler.com/bliki/ClassInstanceVariable.html">http://martinfowler.com/bliki/ClassInstanceVariable.html</a></p>
+
+<p>2007/1/9</p>
+
+<p>//When you learn about objects, you usually learn that they can capture two kinds of data: instance and class. Instance variables are the most common case, the data varies with each instance of the object. Class variables, often referred to as static variables, are shared across all instances of a class. Every instance points to same value and any changes are seen by all. Class variables are much less common than instance variables, especially mutable class variables.</p>
+
+<p>オブジェクトについて学ぶと、オブジェクトのデータには二種類あることが分かる。
+インスタンス変数とクラス変数だ。
+通常、インスタンス変数はオブジェクトのインスタンスごとに値が変わる。
+クラス変数は（static変数とも呼ばれるが）クラスのインスタンスで共有される。つまり、すべてのインスタンスが同じ値をポイントしていた場合、クラス変数の変更はすべてのインスタンスに影響する。
+クラス変数はインスタンス変数ほど頻繁に見かけるものではない。
+特にミュータブルなクラス変数(mutable class variables)はほとんど見かけないだろう。</p>
+
+<p>//A particular wrinkle with class variables is how they interact with inheritance. Consider a class variable that&#39;s used to store instances of itself. (If the ruby is unfamiliar see my reading guide.)</p>
+
+<p>クラス変数の欠点は、継承が絡んできた場合の振る舞いにある。
+クラス変数が自身のインスタンスを保持することを考えてみてもらいたい。
+（rubyに不慣れなら[[ガイド|<a href="http://martinfowler.com/articles/readingRuby.html%5D%5D%E3%82%92%E5%8F%82%E7">http://martinfowler.com/articles/readingRuby.html]]を参�</a>��しておくれ）</p>
+
+<p>&lt;&lt;&lt;</p>
+
+<h1>ruby</h1>
+
+<p>class Employee
+  @@instances = []
+  def self.instances
+    return @@instances
+  end
+  def store
+    @@instances &lt;&lt; self
+  end
+  def initialize name
+    @name = name
+  end
+end</p>
+
+<p>Employee.new(&#39;Martin&#39;).store
+Employee.new(&#39;Roy&#39;).store
+Employee.new(&#39;Erik&#39;).store</p>
+
+<p>puts Employee.instances.size</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>まだ驚くところではない。
+employeeの数は3になる。
+では、次のコードを試して欲しい。</p>
+
+<p>&lt;&lt;&lt;</p>
+
+<h1>ruby</h1>
+
+<p>class Employee
+  @@instances = []
+  def self.instances
+    @@instances
+  end
+  def store
+    @@instances &lt;&lt; self
+  end
+  def initialize name
+    @name = name
+  end
+end</p>
+
+<p>class Programmer &lt; Employee; end
+class Overhead &lt; Employee; end</p>
+
+<p>Overhead.new(&#39;Martin&#39;).store
+Overhead.new(&#39;Roy&#39;).store
+Programmer.new(&#39;Erik&#39;).store</p>
+
+<p>puts Overhead.instances.size
+puts Programmer.instances.size</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>//The output here is 3 and 3, while we&#39;d probably prefer 2 and 1. The reason is that a class variable is shared across all instances of a class, which includes all subclasses. There are two classes but only one variable.</p>
+
+<p>2と1が出力されて欲しいところだが、3と3が出力された。
+なぜなら、クラス変数はクラスのインスタンスで共有されるからだ。
+この場合、サブクラスも含まれる。
+つまり、クラスは2つあるが、クラス変数は1つなのだ。</p>
+
+<p>//Sometimes this variable across a hierarchy is exactly what we want, but soemtimes, as in this case, we&#39;d prefer a different variable for each class. I first came across this concept in some later versions of Smalltalk under the name of class instance variable. You could refer to a class instance variable the same way as with a class variable, but you got a different value per class.</p>
+
+<p>この継承階層を横断したクラス変数が役に立つこともある。
+だが、今回のような場合は、クラスごとに異なるクラス変数があったほうがよい。
+私は後期のSmalltalkで初めてこのコンセプトに出会った（Smalltalkでは「クラスインスタンス変数」と呼ばれている）。
+クラスインスタンス変数をクラス変数として扱うこともできる。
+ただし、クラスごとに値が異なる点がクラス変数とは異なる。</p>
+
+<p>//Support for class instance variables isn&#39;t common in OO languages, but it&#39;s not too hard to it yourself. The obvious way is to use a dictionary keyed by class name.</p>
+
+<p>クラスインスタンス変数は主なオブジェクト指向言語ではサポートされていない。
+だが、それほど難しいことではない。
+クラス名をキーにしたディクショナリを使うことができる。</p>
+
+<p>&lt;&lt;&lt;</p>
+
+<h1>ruby</h1>
+
+<p>class Employee
+  @@instances = {}
+  def self.instances
+    @@instances[self]
+  end
+  def store
+    @@instances[self.class] ||= []
+    @@instances[self.class] &lt;&lt; self
+  end
+  def initialize name
+    @name = name
+  end
+end</p>
+
+<p>class Overhead &lt; Employee; end
+class Programmer &lt; Employee; end</p>
+
+<p>Overhead.new(&#39;Martin&#39;).store
+Overhead.new(&#39;Roy&#39;).store
+Programmer.new(&#39;Erik&#39;).store
+puts Overhead.instances.size
+puts Programmer.instances.size</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>//You can use this technique in any OO language. Ruby, however, actually has class instance variables.</p>
+
+<p>このテクニックはどのオブジェクト指向言語でも利用可能だろう。
+ただし、Rubyの場合は、クラスインスタンス変数をあらかじめ持っている。</p>
+
+<p>&lt;&lt;&lt;</p>
+
+<h1>ruby</h1>
+
+<p>class Employee
+  class &lt;&lt; self; attr_accessor :instances; end
+  def store
+    self.class.instances ||= []
+    self.class.instances &lt;&lt; self
+  end
+  def initialize name
+    @name = name
+  end
+end</p>
+
+<p>class Overhead &lt; Employee; end
+class Programmer &lt; Employee; end</p>
+
+<p>Overhead.new(&#39;Martin&#39;).store
+Overhead.new(&#39;Roy&#39;).store
+Programmer.new(&#39;Erik&#39;).store
+puts Overhead.instances.size
+puts Programmer.instances.size</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+<p>//The definition of the class instance variable is the fragment class &lt;&lt; self; attr_accessor :instances; end. For reasons that I don&#39;t really want to go into, this defines an instance variable (and getters and setters) on the class employee that&#39;s inherited by its descendents. Unlike class variables these class instance variables will take different values for each class object.</p>
+
+<p>クラスインスタンス変数の定義は、の部分で行っている。
+あまり深追いはしたくないのだが、これは継承元であるEmployeeクラスのインスタンス変数を定義している（それからgetterとsetterも）。
+クラス変数と違い、クラスインスタンス変数はクラスオブジェクトごとに異なる値を保持することになる。</p>
+
+<p>//Class instance variables are pretty rare, but useful when you do need them.</p>
+
+<p>クラスインスタンス変数は非常にレアだ。
+だが、必要になったときには非常に有用である。</p>
+
+<p>!参考</p>
+
+<ul>
+<li><a href="http://www.rubyist.net/%7Ematz/20061220.html#p01">http://www.rubyist.net/~matz/20061220.html#p01</a></li>
+</ul>
+
+<p>&quot;&quot;1.9では解決されている(クラス変数は継承しない)。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

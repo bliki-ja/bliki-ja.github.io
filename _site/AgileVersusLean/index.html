@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AgileVersusLean</title>
+  <meta name="description" content="http://martinfowler.com/bliki/AgileVersusLean.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bliki-ja.github.io/AgileVersusLean">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://bliki-ja.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">AgileVersusLean</h1>
+    <p class="post-meta">Jun 26, 2008</p>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://martinfowler.com/bliki/AgileVersusLean.html">http://martinfowler.com/bliki/AgileVersusLean.html</a></p>
+
+<p>2008/6/26</p>
+
+<p>アジャイル対リーン</p>
+
+<p>//I&#39;m thinking of using agile software development - but should I use Lean software development instead?</p>
+
+<p>「アジャイルソフトウェア開発をしようと思っています。
+ですが、アジャイルの代わりにリーンソフトウェア開発をしたほうがいいんでしょうか？」</p>
+
+<p>//This question is one I&#39;ve run into a few times recently. It&#39;s not a question I can answer quickly as the question is based on a false premise about the relationship between lean and agile. So first I need to go into some history to help explain that relationship.</p>
+
+<p>最近、こういう質問を何回か受けた。安易に答えるわけにはいかない——
+そもそも、アジャイルとリーンの関係について誤解があるのだ。
+そこで、まず歴史をひもといて、その関係について説明しよう。</p>
+
+<p>//&quot;Lean&quot; fundamentally refers an approach in the manufacturing world that was originally developed by Toyota in the 1950&#39;s. At this time Japanese industry was recovering from the ravages of the second world war. This approach, often called the Toyota Production System is mostly credited to Taiichi Ohno, although he was influenced by various western thinkers - particularly Deming. The Toyota Production System became well known in the rest of the world in the 1990&#39;s when westerners started writing books to explain why the Japanese were beating the US at so many industries. The western writers called this approach Lean Manufacturing. Although Japanese industry in general has run into stickier times since then, Toyota continues to outperform most western auto companies.</p>
+
+<p>「リーン」は、もともとは工業生産の世界で1950年代にトヨタが開発した手法を指す。
+当時日本は第二次世界大戦の打撃から立ち直りつつあった。
+リーン手法は、トヨタ生産方式と呼ばれることも多いが、
+主に[[大野耐一|<a href="http://en.wikipedia.org/wiki/Taiichi_Ohno%5D%5D%E3%81%AE%E5%8A%9F%E7%B8%BE%E3%81%A8%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82">http://en.wikipedia.org/wiki/Taiichi_Ohno]]の功績とされている。</a>
+もっとも、大野は西洋の多くの思想の影響を受けている。
+特に[[デミング|<a href="http://en.wikipedia.org/wiki/W._Edwards_Deming%5D%5D%E3%81%AE%E5%BD%B1%E9%9F%BF%E3%81%8C%E5%BC%B7%E3%81%84%E3%80%82">http://en.wikipedia.org/wiki/W._Edwards_Deming]]の影響が強い。</a>
+トヨタ生産方式が日本以外の世界中で知られるようになったのは、
+日本が数多くの業種でアメリカを打ち負かした理由について、
+西洋人が1990年代になってから多数の書籍を著してからである。
+西洋の著者はこの手法をリーン生産方式と呼んだ。
+その後日本の業界は全体としては苦しい時代を迎えているが、
+トヨタは西洋のほとんどの自動車会社に勝ち続けている。</p>
+
+<p>//Agile software development is an umbrella term for several software development methods (including Extreme Programming and Scrum) that were developed in the 1990s. These methods share a common philosophy which was described as values and principles in the Manifesto for Agile Software Development. (My essay &quot;The New Methodology&quot; goes into this in more depth.)</p>
+
+<p>アジャイルソフトウェア開発とは、エクストリームプログラミングやSCRUMなど、
+いくつかのソフトウェア開発手法を総称する名前である。
+これらの多くの手法は1990年代に開発された。
+こうした手法はいずれも、[[アジャイルソフトウェア開発マニフェスト|<a href="http://agilemanifesto.org/%5D%5D%E3%81%A7%E4%BE%A1%E5%80%A4%E3%81%A8%E5%8E%9F%E7%90%86%E3%81%A8%E3%81%97%E3%81%A6%E8%BF%B0%E3%81%B9%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E5%93%B2%E5%AD%A6%E3%82%92%E5%90%AB%E3%82%93%E3%81%A7%E3%81%84%E3%82%8B%E3%80%82">http://agilemanifesto.org/]]で価値と原理として述べられている哲学を含んでいる。</a>
+(私のエッセイ「[[The New Methodology|<a href="http://martinfowler.com/articles/newMethodology.html%5D%5D%E3%80%8D%E3%81%A7%E8%A9%B3%E3%81%97%E3%81%8F%E8%AA%AC%E6%98%8E%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82">http://martinfowler.com/articles/newMethodology.html]]」で詳しく説明している。</a>)</p>
+
+<p>//There was a connection between lean manufacturing and agile software from the beginning in that many of the developers of the various agile methods were influenced by the ideas of lean manufacturing. This connection was made more explicit by Mary and Tom Poppendieck. Mary had worked in a manufacturing plant that had adopted lean manufacturing and her husband Tom is an experienced software developer. They have written a couple of books on the application of Lean ideas in the software world. When people talk about Lean Software they are usually referring to the ideas in these books, although others have been making similar links.</p>
+
+<p>リーン生産とアジャイルソフトウェアには最初からつながりがあったのだ。
+アジャイル手法の開発者は、いろいろな形でリーン生産から影響を受けている。
+[[メリー・ポペンディークとトム・ポペンディーク|<a href="http://www.poppendieck.com/%5D%5D%E3%81%8C%E3%81%93%E3%81%AE%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8A%E3%82%92%E3%82%88%E3%82%8A%E3%81%AF%E3%81%A3%E3%81%8D%E3%82%8A%E3%81%95%E3%81%9B%E3%81%9F%E3%80%82">http://www.poppendieck.com/]]がこのつながりをよりはっきりさせた。</a>
+メリーはリーン生産方式を導入した生産工場で働いていたことがあり、
+トムのほうは熟練したソフトウェア開発者だ。
+2人はリーンをソフトウェアの世界に適用することについて何冊も本を書いた。
+リーンソフトウェアという言葉は、ほとんどの場合、2人の著書から来ている。
+もっとも、他にも同じようなつながりを作った人たちがいる。</p>
+
+<p>//Lean manufacturing and agile software methods have a very similar philosophy. Both place a lot of stress on adaptive planning and a people focused approach. As a result lean&#39;s ideas fit in very well with the agile software story. Mary and Tom have both been very active in the agile community - indeed I&#39;d credit Mary with an important role in forming the Agile Alliance. (Like me, she was a founding board member of the Agile Alliance, but she was far more effective in it than I was.)</p>
+
+<p>リーン生産方式とアジャイルソフトウェア手法はきわめて似通った哲学を持っている。
+どちらも柔軟で適応的な計画を重視し、人間に焦点を当てた手法を大事にしている。
+その結果、リーンのアイデアはアジャイルソフトウェアの場面にとてもしっくりと馴染む。
+メリーとトムは2人ともアジャイルコミュニティで精力的に活動している
+——[[アジャイルアライアンス|<a href="http://www.agilealliance.org/%5D%5D%E3%81%AE%E8%A8%AD%E7%AB%8B%E3%81%AB%E3%81%AF%E3%83%A1%E3%83%AA%E3%83%BC%E3%81%8C%E9%87%8D%E8%A6%81%E3%81%AA%E5%BD%B9%E5%89%B2%E3%82%92%E6%9E%9C%E3%81%9F%E3%81%97%E3%81%9F%E3%81%A8%E7%A7%81%E3%81%AF%E8%80%83%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82">http://www.agilealliance.org/]]の設立にはメリーが重要な役割を果たしたと私は考えている。</a>
+(私と同じく彼女もアジャイルアライアンスの創立メンバーだ。
+だが私より、彼女のほうがはるかに功績がある。)</p>
+
+<p>//I&#39;ve already mentioned that lean manufacturing was an influence on agilists from the beginning, and in the last few years more ideas have appeared in the agile world with a clear lean manufacturing heritage. These range from concrete techniques like Value Stream Maps, to articulations of existing agile concepts such as the Last Responsible Moment for making design decisions. The idea of thinking of analysis and design documentation as inventory came from the Poppendiecks. Several agilists I know emphasize the importance of reducing cycle time - another strongly lean-influenced idea. My colleague Richard Durnall has a nice summary of how lean knowledge can blend in with agile thinking.</p>
+
+<p>前に述べたように、リーン生産は最初からアジャイルに影響を与えてきており、ここ数年は特に、
+リーン生産から継承されていることがはっきりしているアイデアがアジャイルで採用されている。
+バリューストリームマップのような確立した手法や、
+以前からアジャイルでうたわれていたことに名前を付けたと言える「最終責任時点」など、
+多岐にわたっている。
+分析や設計のドキュメントを在庫と考える手法はポペンディークの書籍から来たものだ。
+私が知っている何人ものアジャイラーがサイクルタイムを短縮することの重要さを訴えている
+——これもまたリーンに強い影響を受けたアイデアである。
+私の同僚のRichard Durnallが[[リーンの知識がアジャイル思想とどう混ざったかに関する考察|<a href="http://www.richarddurnall.com/?p=44#more-44%5D%5D%E3%82%92%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%E3%80%82">http://www.richarddurnall.com/?p=44#more-44]]を書いている。</a></p>
+
+<p>//A particularly strong appeal to many people about lean ideas is that they provide a way of explaining agile software development to people - particularly senior people both within IT and senior customers. This explanation ranges from a crude appeal to emulate Toyota to detailed discussions of how lean manufacturing&#39;s benefits translate to the ideas in agile software development.</p>
+
+<p>リーンのアイデアが多くの人に特に強く訴えかけるポイントは、
+アジャイルソフトウェア開発を人に説明する方法、
+とりわけIT業界や顧客のなかでも年寄りの人々(senior)に対してうまく説明する方法を提供してくれるところだ。
+リーンを利用した説明には、単純にトヨタ式と同じだと乱暴に説明するものから、
+リーン生産方式をソフトウェア開発にあてはめるとどんな利点があるか詳細に議論するものまで、いろいろある。</p>
+
+<p>//So as you can see, lean and agile are deeply intertwined in the software world. You can&#39;t really talk about them being alternatives, if you are doing agile you are doing lean and vice-versa. Agile was always meant as a very broad concept, a core set of values and principles that was shared by processes that look superficially different. You don&#39;t do agile or lean you do agile and lean. The only question is how explicitly you use ideas that draw directly from lean manufacturing.</p>
+
+<p>このとおり、リーンとアジャイルはソフトウェア業界において互いに深い関係にある。
+そのため、互いに代替できるものではないことがわかると思う。
+アジャイルをやっていればリーンをやっていることになるし、その逆もまた真である。
+アジャイルという言葉はとても広い意味を持つものとして扱われてきた。
+表面的には異なるプロセスであっても、価値と原理というコアの部分を共有しており、そここそがアジャイルである。
+実践するのはアジャイルまたはリーンではない。
+アジャイルとリーンだ。
+違いがあるとしたら、リーン生産方式のアイデアをどれだけ直接的に利用するかという部分だけである。</p>
+
+<p>//The Poppendiecks didn&#39;t introduce lean as a separate idea, nor did they introduce lean as a published process in the style of Scrum or XP. Rather they introduced lean as a set of thinking tools that could easily blend in with any agile approach. I think of lean as a strand of thinking within the agile community, like a pattern in a rich carpet.</p>
+
+<p>ポペンディーク夫妻はリーンを、独立したアイデアだとか、
+SCRUMやXPのような確立したプロセスだとかいうふうには紹介していない。
+2人の紹介の仕方は、リーンを一連の思考ツールとして扱い、
+どのアジャイル手法とも簡単に混ぜることができるというものだ。</p>
+
+<p>//There is a distinct lean software community, as in a mailing list calling itself lean and people who label themselves as lean thinkers. But this is no different to the fact that there are also strong XP, Scrum, and other communities. Most people in these communities consider themselves part of the broader agile movement and many people are active in more than one of these agile communities. The whole point of coining the word &#39;agile&#39; comes from a recognition that we share a core set of values and principles and this common core means what we have in common is greater than our differences.</p>
+
+<p>リーンの名を冠したメーリングリストや、自分自身を「リーン思想」と呼ぶ人々のように、
+リーンソフトウェアだけの独立したコミュニティは存在する。
+これはXPだけ、あるいはSCRUMだけ、または他の手法だけのコミュニティが存在するという状況となんら変わりない。
+こうしたコミュニティの多くのメンバーは、広範な意味でのアジャイル活動に参加していると考えているし、
+一つ以上のアジャイルコミュニティで活動している人も少なくない。
+「アジャイル」という言葉を使うことのそもそもの目的は、私たちがコアの価値と原理を共有し、
+そして共有している部分のほうが互いの差異よりもずっと大きいと認め合うことにあるのだ。</p>
+
+<p>(最初に訳した人: [[やっとむ|<a href="http://d.hatena.ne.jp/yach/%5D%5D">http://d.hatena.ne.jp/yach/]]</a>)</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
