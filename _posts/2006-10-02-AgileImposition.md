@@ -9,7 +9,7 @@ http://martinfowler.com/bliki/AgileImposition.html
 
 //According to the current board of the Agile Alliance, agile methods have "crossed the chasm" , which I think means they are becoming more widespread. While this has its advantages, it also brings problems. As a methodology or design approach becomes fashionable, then we see a lot people using it, or teaching it, who are focusing on the fashion rather than the real details. This can lead to reports of things done in agile's name which are a polar opposite to the principles of movement's founders.
 
-アジャイルアライアンスのボードメンバによると、アジャイル方法論は「[[キャズムを超えた|http://www.infoq.com/articles/agile-alliance-survey-2006]]」そうだ。
+アジャイルアライアンスのボードメンバによると、アジャイル方法論は「[キャズムを超えた](http://www.infoq.com/articles/agile-alliance-survey-2006)」そうだ。
 つまり、より多くの人に知れ渡ったということだろう。
 これはアジャイルの利点だが、同時に問題も起きている。
 方法論や設計手法が単なる流行になってしまったために、流行にのみ注目して、使用したり、教えたりする人が多い。
@@ -22,11 +22,11 @@ Webを巡回していると、ある開発チームが上層部からアジャ�
 
 //For me, one of the key features of agile methods is that they are PeopleOriented. They recognize that people and how they work together is the primary factor in software development, and that processes are a secondary factor. This is reflected in the first value of the agile manifesto "Individuals and interactions over processes and tools" and is reinforced by two principles of the manifesto:
 
-私にとって、アジャイル方法論とは[[PeopleOriented]]なものだ。
+私にとって、アジャイル方法論とは[PeopleOriented]]なものだ。
 「人」を認識し、いかに一緒に働くかに気づくことが、
 ソフトウェア開発においてもっとも重要な要因である。
 プロセスは二の次だ。
-これは[[アジャイルマニフェスト|http://agilemanifesto.org/]]の第一項「プロセスやツールより個人と相互作用を重視します{{fn('http://www.agileprocess.jp/wg/agilepm/modules/bwiki/index.php?AP(M)BOK%A4%CE%C7%D8%B7%CAより引用')}}」を反映したものであり、アジャイルマニフェストの2つの[[原則|http://agilemanifesto.org/principles.html]]により補足されている。
+これは[[アジャイルマニフェスト](http://agilemanifesto.org/)の第一項「プロセスやツールより個人と相互作用を重視します{{fn('http://www.agileprocess.jp/wg/agilepm/modules/bwiki/index.php?AP(M)BOK%A4%CE%C7%D8%B7%CAより引用')}}」を反映したものであり、アジャイルマニフェストの2つの[原則](http://agilemanifesto.org/principles.html)により補足されている。
 
 //* Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.
 //* The best architectures, requirements, and designs emerge from self-organizing teams.
@@ -67,7 +67,7 @@ Webを巡回していると、ある開発チームが上層部からアジャ�
 アジャイルを導入するときは通常、多くの新しいことを一度に学習することになる。
 中には直感では理解できないことも多い。
 これは、部分的には、XPの真実である。
-慣れるまでしばらくは、プロセスをチームに合わせることは難しい（この点については、数年前にXPを交えた[[記事を書いた|http://martinfowler.com/articles/xpVariation.html]]（[[邦訳|http://www.objectclub.jp/community/XP-jp/xp_relate/xpvariations-j]]））。
+慣れるまでしばらくは、プロセスをチームに合わせることは難しい（この点については、数年前にXPを交えた[記事を書いた](http://martinfowler.com/articles/xpVariation.html)（[邦訳](http://www.objectclub.jp/community/XP-jp/xp_relate/xpvariations-j)））。
 チームはまだ[[ShuHaRi]]の「守」の段階で、コツをつかむまでは盲目的にプラクティスをこなす必要がある。
 このような状況では、「教義主義」や「非柔軟性」も（一時的には）良い学習ツールとなっているのである。
 

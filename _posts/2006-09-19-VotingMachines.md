@@ -11,5 +11,5 @@ http://martinfowler.com/bliki/VotingMachines.html
 どうして投票に用いられるのかが理解できない。
 
 いつものように、Cem Kaner がこの問題について激しく追求している。
-[[Brian Matrick の blog|http://www.testing.com/cgi-bin/blog/2004/11/15#voting-cem]] には、
+[Brian Matrick の blog](http://www.testing.com/cgi-bin/blog/2004/11/15#voting-cem) には、
 この議論にある意向を持ち込もうとする彼の試みがより詳細に書かれてある。

@@ -72,4 +72,4 @@ C++はこういったリフレクションを持っていません。しかし�
 プロジェクトチーム内において他のクラスに公開する機能と、他のチームに公開する（APIのような）ものとは根本的に異なると思っています。
 publishedな機能はpublicな機能のサブセットであり、異なるものとして扱われなければなりません。
 publishedとpublicの違いは、publicとprivateの違いよりもずっと重要です。
-これについては[[IEEEソフトウェアのコラム(PDF)|http://www.martinfowler.com/articles/published.pdf]]で詳しく論じています。
+これについては[IEEEソフトウェアのコラム(PDF)](http://www.martinfowler.com/articles/published.pdf)で詳しく論じています。

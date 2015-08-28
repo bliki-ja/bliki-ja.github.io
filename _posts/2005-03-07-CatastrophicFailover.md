@@ -37,7 +37,7 @@ http://martinfowler.com/bliki/CatastrophicFailover.html
 これは正しいフェールオーバーではあるが、
 ITファームに何度もやらせたくはないだろう。
 
-更新: [[Christopher Baus|http://www.baus.net/catastrophic-failover]]がこう指摘してくれた。この問題から言えるのは、クラスタには異なる装置を慎重に使用したほうがよいということである。Javaアプリを走らせているのであれば、様々なアプリケーション サーバ、OS、およびハードウェアをmixiして使用することも考慮するべきだ。mixiしてしまうと、当然、管理は複雑になる。しかし、このような問題の発生は飛躍的に減少する。
+更新: [Christopher Baus](http://www.baus.net/catastrophic-failover)がこう指摘してくれた。この問題から言えるのは、クラスタには異なる装置を慎重に使用したほうがよいということである。Javaアプリを走らせているのであれば、様々なアプリケーション サーバ、OS、およびハードウェアをmixiして使用することも考慮するべきだ。mixiしてしまうと、当然、管理は複雑になる。しかし、このような問題の発生は飛躍的に減少する。
 
 {{rcomment}}
 *2005-03-10 (木) 18:34:26 ''[[dot]]'' : mixがmixiになってます。

@@ -19,7 +19,7 @@ http://martinfowler.com/bliki/FeatureDevotion.html
 
 //The problem comes when this list suddenly grows horns and fangs and becomes a Fixed-Price Fixed-Scope Big Up-Front Project Plan. Craig Larman once joked that the waterfall process has strong antibodies that reject iterative processes by warping them into some form of waterfall. RUP has been a common victim of these antibodies, seeing its phases turn into some variant of the analysis-design-build-test conveyor.
 
-ただし、この機能リストが[[突如としてツノを生やし、牙を剥き、固定価格、固定スコープ、前払い設計プロジェクトになってしまう|http://dannorth.net/archives/32]]ときが問題だ。
+ただし、この機能リストが[突如としてツノを生やし、牙を剥き、固定価格、固定スコープ、前払い設計プロジェクトになってしまう](http://dannorth.net/archives/32)ときが問題だ。
 Caraig Larmanは、かつて「ウォーターフォールプロセスには、反復開発を何らかのウォーターフォールに変形させる強い抗体がある」というジョークを言った。
 RUPはその抗体の犠牲になった一例だ。
 RUPの「フェーズ」は「分析、設計、実装、テスト」コンベアの変種へと形を変えてしまった。
@@ -34,7 +34,7 @@ RUPの「フェーズ」は「分析、設計、実装、テスト」コンベ�
 
 重要なのは、機能リストはプロジェクトが進むにつれて変わりうるものだということを、あらかじめ認識しておくところにある。
 その都度、新しくできることを発見し、再度、優先付けを行う。
-これが[[適応型計画|http://www007.upp.so-net.ne.jp/kengai/fowler/newMethodology_j.html#A40]]の肝であり、アジャイルな考え方の指標である。
+これが[適応型計画](http://www007.upp.so-net.ne.jp/kengai/fowler/newMethodology_j.html#A40)の肝であり、アジャイルな考え方の指標である。
 これにより、計画に対する考えに大きな変化がもたらされた。
 計画駆動プロジェクトでは、成功（あるいは失敗）は「計画通りだったか？」という観点で語られることが多い。
 しかしアジャイルプロジェクトでは、これは意味のない質問である。
@@ -48,7 +48,7 @@ RUPの「フェーズ」は「分析、設計、実装、テスト」コンベ�
 機能リストには他にも問題がある——機能に価値をもたらすコンテクストを容易に見失ってしまう点だ。
 Alistair Cockburnがユースケースを提唱しているのはそのためだ。
 ユースケースは、システム利用者の利用方法をナラティブ（物語）として描写しているからだ。
-Marc NcNeilも「[[Customer Journeys|http://www.dancingmango.com/blog/2006/10/19/ditch-the-feature-shopping-list-think-customer-journeys/]]（顧客旅行）」という言葉を使って同様のことを述べている。
+Marc NcNeilも「[Customer Journeys](http://www.dancingmango.com/blog/2006/10/19/ditch-the-feature-shopping-list-think-customer-journeys/)（顧客旅行）」という言葉を使って同様のことを述べている。
 計画時におけるユースケースの弱点は、
 進捗をチェックしたり、プロジェクトの★したりできるような明確な単位に分かれていないことだ。
 そのため、ユースケースは計画ツールとしてはあまり役に立たない。

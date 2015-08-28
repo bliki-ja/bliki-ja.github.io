@@ -13,6 +13,6 @@ http://martinfowler.com/bliki/ResourcePool.html
 
 リソースプールを使う場合によくある問題は、クライアントがリソースを返してくれないこと—つまりはリソースリークだ。この問題に対処するよい方法は、テスト中はプールの上限を1に設定しておき、上限に達した状態での要求に対してはプールが例外を投げるようにしておくことだ。これはリークを起こすクライアントの特定を容易にしてくれる。
 
-リソースプールに関するさらに詳しい情報については、[[POSA 3|http://www.amazon.com/gp/product/0470845252?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0470845252]]を参照のこと。
+リソースプールに関するさらに詳しい情報については、[POSA 3](http://www.amazon.com/gp/product/0470845252?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0470845252)を参照のこと。
 
 {{comment}}

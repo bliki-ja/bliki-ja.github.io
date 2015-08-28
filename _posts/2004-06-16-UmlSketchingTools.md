@@ -6,11 +6,11 @@ tags: [uml]
 http://martinfowler.com/bliki/UmlSketchingTools.html
 
 私は多くのUMLダイアグラムを描いているが、CASEツールは使っていない。
-というのも、私は[[スケッチとしてのUML|UmlAsSketch]]に興味があるのであって、
+というのも、私は[スケッチとしてのUML](UmlAsSketch)に興味があるのであって、
 あの倉庫に積まれた一式全部には興味がないからだ。
 今のところ、よく使っているのはVisioだ。
 Visioには最初からUMLテンプレートがついてくるが、
-私は[[Pavel Hruby|http://www.phruby.com/]]のテンプレートの方を好んで使っている。
+私は[Pavel Hruby](http://www.phruby.com/)のテンプレートの方を好んで使っている。
 
 これまでVisioには大変お世話になった。
 今でも私のファースト・チョイスはVisioである。
@@ -25,7 +25,7 @@ Windows以外でVisioを使えないのならば仕方ない。
 Macだと、Omni Graffle をちょっとだけ触ったことがあるが、
 評価できるだけちゃんと触ったわけじゃない。
 アンチエイリアスの効いたかっちょいい見た目なんだけどね。
-[[UMLet|http://qse.ifs.tuwien.ac.at/~auer/umlet/index.html]]もなんだか見た目が面白い。
+[UMLet](http://qse.ifs.tuwien.ac.at/~auer/umlet/index.html)もなんだか見た目が面白い。
 
 中でも一番面白いと思ったのは、UMLダイアグラムをテキストで記述するというものだ。
 UML「ダイアグラム」なのに、テキストだぁ？なんじゃそりゃ。って、そう思うはずだ。
@@ -35,10 +35,10 @@ UML「ダイアグラム」なのに、テキストだぁ？なんじゃそり�
 図を使って編集するんじゃなくて、図は見せるためだけに使うのだ。
 テキストならcvsとdiffを使って、簡単に変更履歴管理も出来るしね。
 
-というわけで、私は[[UmlGraph|http://www.spinellis.gr/sw/umlgraph/]]に興味を持っている。
+というわけで、私は[UmlGraph](http://www.spinellis.gr/sw/umlgraph/)に興味を持っている。
 私の心をわし掴みしたのは、シーケンス図のエディタだ。
 従来からある画像系プログラムの手法を使っている。
-[[このページ|http://www.spinellis.gr/sw/umlgraph/doc/uml-appa.html]]にちょっとしたマクロがあるが、
+[このページ](http://www.spinellis.gr/sw/umlgraph/doc/uml-appa.html)にちょっとしたマクロがあるが、
 これでシーケンス図が作れるのだ。ナイス杉。
 もちろん、このマクロにはいくつかの制限がある。
 だが、こんな感じに、もっとコンパクトで簡潔なものになると私は思っている。
@@ -70,7 +70,7 @@ Javaソースファイルからクラス図を作れちゃうんだぜ。
 でも、単なるダイアグラム生成というだけじゃあ、ちょっとばかし不満かも。
 やはりクラスの位置まで指定したいよね。
 とはいっても、CustomerはOrderの左に、とかだけで私は十分。
-たとえば、[[この図|http://www.spinellis.gr/sw/umlgraph/doc/ceg-adv.html]]を描くには、こういう感じで書けるといいな：
+たとえば、[この図](http://www.spinellis.gr/sw/umlgraph/doc/ceg-adv.html)を描くには、こういう感じで書けるといいな：
 
  layout
    row: Controller, EmbeddedAgent, URLStreamHandler, ChannelIterator

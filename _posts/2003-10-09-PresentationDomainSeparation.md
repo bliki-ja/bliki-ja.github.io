@@ -24,4 +24,4 @@ http://martinfowler.com/bliki/PresentationDomainSeparation.html
 
 人間ではなく、コンピュータ相手の Web Services だって、プレゼンテーション部分です。ですから、ドメイン部分のコードと Web Services 部分のコードをごちゃまぜにしてはいけないのです。外部APIにしてもそうです。
 
-（このことについて[[IEEE Software column|http://martinfowler.com/ieeeSoftware/separation.pdf]] (PDF)でも書きました。）
+（このことについて[IEEE Software column](http://martinfowler.com/ieeeSoftware/separation.pdf) (PDF)でも書きました。）

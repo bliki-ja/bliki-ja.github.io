@@ -9,7 +9,7 @@ http://martinfowler.com/bliki/ToyotaFailings.html
 
 //One of the arguments used to support the adoption of lean techniques in software is the success of Toyota. So do Toyota's recent quality failings undermine the case for lean software development?
 
-'''リーン手法をソフトウェアに導入を支持する理由として、トヨタの成功を挙げることが多い。では、[[最近のトヨタの品質欠陥|http://www.guardian.co.uk/business/toyota]]は、リーンソフトウェア手法を貶めることになるのだろうか？'''
+'''リーン手法をソフトウェアに導入を支持する理由として、トヨタの成功を挙げることが多い。では、[最近のトヨタの品質欠陥](http://www.guardian.co.uk/business/toyota)は、リーンソフトウェア手法を貶めることになるのだろうか？'''
 
 //One answer for this is to take a sense of proportion. Lean manufacturing techniques were the underpinning of Toyota's rise from an insignificant company in the 1950's to a global giant in the 2000's. By the 1990's other car companies, and many other manufacturers, were busily copying Toyota's techniques. The general sense is that copying these techniques did much to raise the overall quality of cars in the last decade or so. I would be very surprised if the recent problems at Toyota are enough negate that half-century of success.
 

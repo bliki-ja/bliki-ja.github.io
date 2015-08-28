@@ -13,7 +13,7 @@ http://martinfowler.com/bliki/RubyMicrosoft.html
 
 //At RailsConf2007 there was a lot of excitement over JRuby. This small team had taken a moribund project and turned it into what looks like a first class implementation of the Ruby platform on the JVM. They got a lot of cheers and deserved them all.
 
-[[RailsConf2007]]ではJRubyが大盛況だった。
+[RailsConf2007]]ではJRubyが大盛況だった。
 この小さなチームは瀕死のプロジェクトを引き受け、JVM上で動くファーストクラスのRubyプラットフォームに変えた。彼らが多くの賞賛を得たのは当然だ。
 
 //So with JRuby pretty much here, the spotlight moves onto the other common managed code runtime - .NET. Microsoft's intentions for Ruby are currently much less clear. They have announced Ruby as a language for scripting Silverlight - but that still leaves a lot of open questions. Is this a full implementation of the ruby language, or is some form of Ruby++ - an enhanced subset of Ruby?
@@ -61,12 +61,12 @@ Chris Sellsが指摘したように、「マイクロソフトは何を狙って
 
 //Another reason is people. Microsoft doesn't like to acknowledge this in public, but there is a real concern that AlphaGeeks are moving away from the Microsoft platform. There's a growing sense that Microsoft's vision is armies of Morts in command-and-control organizations. There often seems to be outright discouragement of tools to enable talented enterprise developers, or of agile development processes.
 
-もう1つの理由は人だ。マイクロソフトは公式に認めたくないだろうが、[[AlphaGeek]]たちがマイクロソフトプラットフォームから[[去りつつある|http://www.hanselman.com/blog/IsMicrosoftLosingTheAlphaGeeks.aspx]]というのが本当に懸念されている。
+もう1つの理由は人だ。マイクロソフトは公式に認めたくないだろうが、[[AlphaGeek]]たちがマイクロソフトプラットフォームから[[去りつつある](http://www.hanselman.com/blog/IsMicrosoftLosingTheAlphaGeeks.aspx)というのが本当に懸念されている。
 マイクロソフトのビジョンは指揮管理組織における死の軍隊だという意見が増えている。優秀なエンタープライズ開発者に可能性を与えるツールや、アジャイル開発プロセスに対するあからさまな支障がたびたび見られる。
 
 //A few years ago my (limited) contacts in Redmond told me that they were seeing a real drift of technical leaders away from the Windows platform. More recently these signs seem to be increasing. Reading the 'softie part of my blogroll I got a sense of real disillusionment amongst people who have been long-time Microsoft supporters. Agile-oriented developers have been frustrated with the direction of Microsoft tools. Microsoft conferences barely mentioning agile processes, leaning much more to waterfall approaches. The tools, with their rigid role-separations, actively discourage the blurry boundaries that agilists prefer.
 
-数年前、レドモンドの（ちょっとした）伝手が、技術リーダーたちがWindowsプラットフォームから実際に離れていっているのを見ていると言っていた。最近、この兆候は増加しているようだ。うちのブログロール（訳注：[[blog roll|http://blogs.thoughtworks.com/]]）のマイクロソフト関連記事★'softie part★を読んでいると、長い間マイクロソフトのサポーターだった人たちの間に実際に幻滅があるという感じを受けた。
+数年前、レドモンドの（ちょっとした）伝手が、技術リーダーたちがWindowsプラットフォームから実際に離れていっているのを見ていると言っていた。最近、この兆候は増加しているようだ。うちのブログロール（訳注：[blog roll](http://blogs.thoughtworks.com/)）のマイクロソフト関連記事★'softie part★を読んでいると、長い間マイクロソフトのサポーターだった人たちの間に実際に幻滅があるという感じを受けた。
 アジャイル指向の開発者たちはマイクロソフトツールの方向性に不満を持っている。マイクロソフトのカンファレンスは、アジャイルプロセスにはほとんど触れず、ウォーターフォールアプローチにかなり傾いている。ツールは、役割の分離が厳密なため、アジャイラーたちが好むぼんやりとした境界を積極的に阻止している。
 
 //At RailsConf, Tim Bray contended that the key decisions on technology are made by the programming community. I partly agree with this. The reason we have so much bloatware in IT is because IT purchasing decisions are usually made on golf courses by people who have lost meaningful contact with the realities of software development. However golf-course decisions may dominate the short-term, but as time rolls on I think Tim's contention is true. So losing the alpha geeks may not matter this year or next, but will inexorably harm Microsoft over time.
@@ -92,7 +92,7 @@ Mike TwoはWindows Workflowツールにすごく熱心だし、私はLINQや他�
 でも、マイクロソフト技術の全体図にはあくびが出る。
 これが重要なのは、Tim O'Reillyが信じるように、アルファギークたちは他の人たちが数年以内にやるであろうことを指し示すからだ★。
 そして決定的な点は、マイクロソフトに対する態度が憎悪（多くのギークの一般的な態度）ではなく、退屈であるということだ。
-これが、Paul Grahamが「[[マイクロソフトは死んだ|http://www.yamdas.org/column/technique/microsoftj.html]]」と言ったことの意味だ。
+これが、Paul Grahamが「[マイクロソフトは死んだ](http://www.yamdas.org/column/technique/microsoftj.html)」と言ったことの意味だ。
 マイクロソフトはもはや危険な存在ではないのである。
 
 //The attitude to open-source is a large part of this problem. When Java appeared there were yawning gaps in its portfolio, and worse some dreadful standard tools in its API (visions of Entity Beans spring to mind). Those gaps and bad ideas were fixed by the open-source community. Ant gave us a build tool, EJB was displaced by Spring and Hibernate. .NET has also got its gaps, and again the open source community has stepped up to fill them. Yet Microsoft refuses to collaborate with these efforts, even seems to go out of its way to undermine them. I was particularly sickened by Microsoft's reaction to NUnit - an excellent XUnit testing tool, elements of whose design were lauded by Anders Hejlsberg at OOPSLA. Microsoft ended not just bringing out a competitive library, but deliberately making it incompatible. That's not the kind of reaction that encourages people to invest their time in the platform.
@@ -103,7 +103,7 @@ Javaが現れたとき、そのポートフォリオには大きな隙間があ�
 Antがビルドツールを与え、EJBはSpringとHibernateで置き換えられた。
 .NETにもギャップはあって、再びオープンソースコミュニティがギャップを埋めるために力を注いだ。ところがマイクロソフトは、こうした努力に協力することを拒否している。
 むしろ台無しにしようと努力しているかのようだ。
-特にうんざりしたのは[[NUnit|http://nunit.com/]]に対するマイクロソフトの反応だ——優れたxUnitテストツールであり、その設計要素がOOPSLAでAnders Hejlsbergに称賛されたが、マイクロソフトは競合ライブラリを出荷してきただけでなく、故意に非互換にしてきた。これは、人々がプラットフォームに対して時間をつぎこむことを奨励するような反応ではない。
+特にうんざりしたのは[NUnit](http://nunit.com/)に対するマイクロソフトの反応だ——優れたxUnitテストツールであり、その設計要素がOOPSLAでAnders Hejlsbergに称賛されたが、マイクロソフトは競合ライブラリを出荷してきただけでなく、故意に非互換にしてきた。これは、人々がプラットフォームに対して時間をつぎこむことを奨励するような反応ではない。
 
 //To be fair, that debacle was a couple of years ago. Actions like hiring Jim Hugunin and John Lam have helped counter that impression. Technologists like Chris Sells, Don Box, and Jim Newkirk are working to make Microsoft are a more open environment. But like any large organization, Microsoft is full of contradictory forces and we don't know which ones will prevail.
 
@@ -130,8 +130,8 @@ Rubyコミュニティは、マイクロソフトとともに働きたがって�
 
 //There's been quite a few reactions to this (see Technorati for a full list). Particularly worth reading are the ones from: Sam Gentile, Cory Foy, Luke Melia, Jeremy Miller, Rockford Lhotka, John Lam, Evan Hoff, Karl Seguin, Ola Bini, Miro Adamy, Charles Nutter, Peter Laudati, Nick Malik
 
-これについてかなりの反応があった(全リストは[[Technorati|http://technorati.com/search/http://martinfowler.com/bliki/RubyMicrosoft.html]]にある)。特に読むべきなのは次の人たちからの反応だ: Sam Gentile, Cory Foy, Luke Melia, Jeremy Miller, Rockford Lhotka, John Lam, Evan Hoff, Karl Seguin, Ola Bini, Miro Adamy, Charles Nutter, Peter Laudati, Nick Malik{{fn('訳注：リンクするのが面倒なので本家を見てください。')}}。
+これについてかなりの反応があった(全リストは[Technorati](http://technorati.com/search/http://martinfowler.com/bliki/RubyMicrosoft.html)にある)。特に読むべきなのは次の人たちからの反応だ: Sam Gentile, Cory Foy, Luke Melia, Jeremy Miller, Rockford Lhotka, John Lam, Evan Hoff, Karl Seguin, Ola Bini, Miro Adamy, Charles Nutter, Peter Laudati, Nick Malik{{fn('訳注：リンクするのが面倒なので本家を見てください。')}}。
 
 !参考
 
-* [[空気を読まずにRubyMicrosoft粗訳した|http://blog.inomata.lolipop.jp/?eid=662847]]←あとでコピる←コピった。
+* [空気を読まずにRubyMicrosoft粗訳した](http://blog.inomata.lolipop.jp/?eid=662847)←あとでコピる←コピった。

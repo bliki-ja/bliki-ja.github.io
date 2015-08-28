@@ -7,7 +7,7 @@ http://martinfowler.com/bliki/MDSDandDSL.html
 
 2008/7/14
 
-[[ModelDrivenSoftwareDevelopment]]（MDSD）と[[DomainSpecificLanguage]]（DSL）の関係は？
+[ModelDrivenSoftwareDevelopment]]（MDSD）と[[DomainSpecificLanguage]]（DSL）の関係は？
 
 MDSDの文脈でいきなり「DSL」って言葉が出てくることがよくある。 MDSDな人たちは「DSLはMDSDの世界だけに存在する」って思ってるみたいだ。書籍の執筆のためにDSLについてはいろいろと書いているんだけど、 MDSDから見たDSLについては何も書いてない。普通のプログラミングにおけるDSLの役割ばかり書いている。 DSLはテキストを使う言語の世界にも図を使うMDSDの世界のどちらにも存在していて、その役割はどちらの場合もほとんど同じものなのだ。
 
@@ -17,8 +17,8 @@ MDSDの場合でも、DSLは、UMLのような汎用言語と対になる特定�
 
 DSLは、主流のプログラミング世界よりも、MDSDの世界のほうが注目を集めている。 Cynicsは、これはMDSDコミュニティが必死に生き残りの術を模索し、MDSDのファンがMDSDの洗練さの高さの証だと見なした結果であると考えている。私は、MDSDコミュニティがまだ小さく、確立したやり方が少ないからだと考えている。
 
-特に、MDSDの可視化サブコミュニティは、[[ModelDrivenArchitecture]]（MDA）を軸として展開している。私は別にMDAのファンでもなんでもないが、[[MDAのDSLには特に懐疑的だ|http://martinfowler.com/articles/mdaLanguageWorkbench.html]]。
+特に、MDSDの可視化サブコミュニティは、[[ModelDrivenArchitecture]]（MDA）を軸として展開している。私は別にMDAのファンでもなんでもないが、[[MDAのDSLには特に懐疑的だ](http://martinfowler.com/articles/mdaLanguageWorkbench.html)。
 
-モデル指向DSLはテキストDSLと共有するものが多い。私は、[[意味モデル|http://martinfowler.com/dslwip/SemanticModel.html]]の扱いにおいて、テキストDSLには注目している。 MDSDは、その名が示すように、モデルでシステムを駆動するものだ。 MDSD好きは、モデルをそのまま実行するのではなく、モデルからコードを生成したいと考えているようだ。
+モデル指向DSLはテキストDSLと共有するものが多い。私は、[意味モデル](http://martinfowler.com/dslwip/SemanticModel.html)の扱いにおいて、テキストDSLには注目している。 MDSDは、その名が示すように、モデルでシステムを駆動するものだ。 MDSD好きは、モデルをそのまま実行するのではなく、モデルからコードを生成したいと考えているようだ。
 
 これを書いているなかで、私の著書にある言語ワークベンチについてどれだけ触れればよいか分からなかった。包括的な概念の表面的なことしか触れるつもりはなく、それほど深いものにはならないかもしれない。それは、ひとつには、テキストDSLの生成の題材が多すぎることに原因がある。また、言語ワークベンチの概念が新しく、移ろいやすく、まだ成熟していない代物だからでもある。

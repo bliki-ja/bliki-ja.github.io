@@ -5,7 +5,7 @@ tags: [technical debt, clean code, refactoring]
 
 http://www.martinfowler.com/bliki/CodeSmell.html
 
-コードの臭いとは表層の兆候で、だいたいにおいてシステムの根深い問題に関係している。この単語はKent Beckが私の[[リファクタリング|http://martinfowler.com/books.html#refactoring]]本を手伝っているときにはじめて考え出したものだ。
+コードの臭いとは表層の兆候で、だいたいにおいてシステムの根深い問題に関係している。この単語はKent Beckが私の[リファクタリング](http://martinfowler.com/books.html#refactoring)本を手伝っているときにはじめて考え出したものだ。
 
 上記の簡単な定義では伝わりにくい点が2、3ある。第1に、臭いとは定義上、すぐに見つけられる——私の最近の表現だと''嗅ぎつけられる''——ものだ。長いメソッドはこれのいい例だ——十数行以上のJavaコードを見かけたら、コードを眺めただけで鼻がヒクヒクしてしまう。
 
@@ -15,4 +15,4 @@ http://www.martinfowler.com/bliki/CodeSmell.html
 
 臭いに関するいいことの1つは、未熟な人でも見つけ出すのが簡単だということだ。もしも、実際に問題があるかを判断したり問題を修正したりできるほどの知識がなかったとしてもだ。私は、リード開発者たちが「今週のにおい」を選び、みんなに探してもらい、チームの上級メンバーたちと話し合うという事例を聞いたことがある。においにひとつずつ取り掛かるというのは、チームの人々をいいプログラマーに導いていくいい方法だ。
 
-Gene Garciaが、[[私の本からにおいについて抜粋|http://wiki.java.net/bin/view/People/SmellsToRefactorings]]し、オンラインに置いている。
+Gene Garciaが、[私の本からにおいについて抜粋](http://wiki.java.net/bin/view/People/SmellsToRefactorings)し、オンラインに置いている。

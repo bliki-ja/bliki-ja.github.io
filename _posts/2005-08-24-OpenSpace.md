@@ -10,8 +10,8 @@ http://martinfowler.com/bliki/OpenSpace.html
 12〜24人程度の小規模グループから100〜200名程度の大規模グループまで、この手法は非常にうまく機能しているようだ。
 ここ1〜3日の間にいろいろ目にしたので、これまで経験した活用事例を交えながら紹介していこう。
 Crested Butteは、毎年開催されている20名程度の小さなワークショップだ。
-[[Agile Universe 2002|http://www.agileuniverse.com/2002/openSpace]]では、100名ほどの参加者が集まったが、あるトラックでオープン スペースを採用した（その後も継続して行っているようだが、私は参加できていない）。
-[[foocamp|http://headrush.typepad.com/creating_passionate_users/2005/08/foo_camp_adhoc_.html]]では、数百人規模でオープンスペースを行った。
+[Agile Universe 2002](http://www.agileuniverse.com/2002/openSpace)では、100名ほどの参加者が集まったが、あるトラックでオープン スペースを採用した（その後も継続して行っているようだが、私は参加できていない）。
+[foocamp](http://headrush.typepad.com/creating_passionate_users/2005/08/foo_camp_adhoc_.html)では、数百人規模でオープンスペースを行った。
 この手法はHarrison Owenによって開発されたものだ。
 詳細については、{{isbn('1576750248','彼の著書')}}に記されている。
 
@@ -90,6 +90,6 @@ Owenが、オープンスペースの1つの法則は「主体的移動の法則
 以上、オープンスペースについて簡単に述べてきた。
 もしこの手法を使ってイベントを開催したいのであれば、情報はたくさんある。
 まず、{{isbn('1576750248','Owenの素晴らしい本')}}★if a touch Californian for my taste★。
-数ヶ国語に対応した[[Webサイト|http://www.openspaceworld.org/]]もある。
+数ヶ国語に対応した[Webサイト](http://www.openspaceworld.org/)もある。
 
 {{isbn_image '4990329813'}}

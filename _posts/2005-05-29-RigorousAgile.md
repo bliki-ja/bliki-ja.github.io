@@ -20,7 +20,7 @@ http://martinfowler.com/bliki/RigorousAgile.html
 システムが異なれば、困難や制約も異なってくる。
 そのため、それらすべてをカバーするような行いを厳密に表すことは非常に難しい。
 さらに、ソフトウェア開発が人間系の活動であること、
-そして、人間は生来、[[矛盾した非常に気まぐれ|http://alistair.cockburn.us/crystal/articles/cpanfocisd/characterizingpeopleasnonlinear.html]]な生き物であることが、
+そして、人間は生来、[矛盾した非常に気まぐれ](http://alistair.cockburn.us/crystal/articles/cpanfocisd/characterizingpeopleasnonlinear.html)な生き物であることが、
 事態をさらに悪化させている。
 このことからアジャイラー達（agilists）が導き出した結論は、
 「ソフトウェア開発に厳密なプロセスを結びつけようとすることは有効ではない」

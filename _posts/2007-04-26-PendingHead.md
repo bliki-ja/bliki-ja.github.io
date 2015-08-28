@@ -7,10 +7,10 @@ tags: [version control]
 
 //I'm a big fan of Continuous Integration, it's an relatively simple practice that can make a huge difference to most development teams. However like most practices it has its flaws^H^H^H^H^H opportunities for improvement. Paul Duvall, author of the soon-to-be-standard book on the subject, pointed out one of these recently. If the commit build breaks, the whole team is affected and potentially slowed until it's fixed.
 
-諸君、私は[[継続的インテグレーション|http://www.objectclub.jp/community/XP-jp/xp_relate/cont-j]]が大好きだ。
+諸君、私は[継続的インテグレーション](http://www.objectclub.jp/community/XP-jp/xp_relate/cont-j)が大好きだ。
 シンプルなプラクティスが開発チームに甚大な影響を与えるのが好きだ。
 だがあらゆるプラクティスがそうであるように、欠陥^H^H^H^Hカイゼンの余地がある。
-[[Paul Duvall|http://www.testearly.com/category/duvall/]]（{{isbn '0321336380','まもなく出版される継続的インテグレーション本'}}の著者）がこの点について[[指摘|http://www.testearly.com/2007/04/25/the-future-of-continuous-integration/]]していた。
+[Paul Duvall](http://www.testearly.com/category/duvall/)（{{isbn '0321336380','まもなく出版される継続的インテグレーション本'}}の著者）がこの点について[指摘](http://www.testearly.com/2007/04/25/the-future-of-continuous-integration/)していた。
 コミットビルドが失敗すると、チーム全体に影響し、それが修正されるまでスピードが落ちてしまう。
 
 //When we first started doing Continuous Integration at ThoughtWorks, this one of the of the things that worried me about the way we were doing it. It worried me because there was an important difference between between the ThoughtWorks 2000 style and the style we'd used at C3.
@@ -18,7 +18,7 @@ tags: [version control]
 ThoughtWorksで継続的インテグレーションを始めた頃、
 そのやり方について心配していたことがあった。
 ThoughtWorks 2000のスタイル（訳注：2000年頃のやり方）と
-[[C3]]プロジェクトで使っていたスタイルが違っていたからだ。
+[C3]]プロジェクトで使っていたスタイルが違っていたからだ。
 
 //The ThoughtWorks 2000 style is pretty much the canonical style of CI used today. Once you are happy with your work you commit it to the repository, and then build it on the build machine (either manually for with a CI server like CruiseControl). The problem lies if your commit is bad, anyone who updates will get failing code until you fix it.
 
@@ -58,7 +58,7 @@ Envyだとこのような使い方が簡単にできる。
 こういったものを自分でセットアップするのは難しいのだろうか？
 すでにやったことのあるチームがいるが、まだ話していないのでよく分からない。
 だが、いくつかのチーム指向のツールを使って、同等のことができる。
-たとえば、JetBrainの[[TeamCity|http://www.jetbrains.com/teamcity/]]では「遅延コミット」と呼ばれている。
+たとえば、JetBrainの[[TeamCity](http://www.jetbrains.com/teamcity/)では「遅延コミット」と呼ばれている。
 また、PaulがBorlandのGauntletについて言及している。
 
 //The other question is how much it matters. Despite my worries we didn't get enough pain from broken builds to want to install a pending head in 2000. If you get a lot of broken integration builds there are other ways to fix it. Often the main problem is that people aren't doing a private build before they commit. As usual the people-issue is often a more important issue to deal with before introducing more complicated technology.

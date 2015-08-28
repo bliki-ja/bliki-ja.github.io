@@ -79,7 +79,7 @@ Rubyにも「collect」のエイリアスとして「map」が用意されてい
 
 現代の関数型言語から出てきた概念があります。
 それは先ほどの2つのクロージャメソッドに似ています——List Comprehension（リスト内包表現）と呼ばれています。
-List Comprehensionは、Pythonに[[採用されました|http://www.secnetix.de/~olli/Python/list_comprehensions.hawk]]。
+List Comprehensionは、Pythonに[採用されました](http://www.secnetix.de/~olli/Python/list_comprehensions.hawk)。
 これまで見てきたようなメリットを得るために、
 List Comprehensionでは統合アプローチを提供しています。
 以下にPythonのList Comprehensionを使った例を2つ挙げました。
@@ -189,5 +189,5 @@ injectはブロックの実行結果を変数resultに代入しています。
 
 ----
 
-* [[sumim’s smalltalking-tos - コレクションクロージャメソッド|http://d.hatena.ne.jp/sumim/20050803/p1]]
-* [[sumim’s smalltalking-tos - Squeak の Smalltalk にあるコレクションブロックメソッド|http://d.hatena.ne.jp/sumim/20050803/p2]]
+* [sumim’s smalltalking-tos - コレクションクロージャメソッド](http://d.hatena.ne.jp/sumim/20050803/p1)
+* [sumim’s smalltalking-tos - Squeak の Smalltalk にあるコレクションブロックメソッド](http://d.hatena.ne.jp/sumim/20050803/p2)

@@ -5,7 +5,7 @@ tags: [refactoring boundary]
 
 http://martinfowler.com/bliki/IsDeclarationOrderingRefactoring.html
 
-[[リファクタリングの境界線|RefactoringBoundary]]のひとつ
+[リファクタリングの境界線](RefactoringBoundary)のひとつ
 
 !!宣言（Javaで言うメソッドやフィールド）の順序を変更することは、リファクタリングと呼べるのか？
 
@@ -16,7 +16,7 @@ http://martinfowler.com/bliki/IsDeclarationOrderingRefactoring.html
 故に、設計も変えていない。
 故に、これはリファクタリングではない。
 
-[[リファクタリングの定義|DefinitionOfRefactoring]]で、
+[リファクタリングの定義](DefinitionOfRefactoring)で、
 「理解や修正が簡単になるように」というフレーズを使った。
 宣言部分を変更すると、理解や修正が簡単になるのだろうか？ 
 私は、そういう場合もあると思う。

@@ -186,7 +186,7 @@ http://martinfowler.com/bliki/DiversityImbalance.html
 多様性の不均衡というのは、
 プログラマとしての優れたキャリアを築きたいが、
 そうする機会が得られない女性が数多く存在することを意味する。
-多様性の不均衡があるというのは、我々が思うほど実力主義ではないということだ、という[[Eric Riesの考え|http://techcrunch.com/2011/11/19/racism-and-meritocracy/]]に同意する。
+多様性の不均衡があるというのは、我々が思うほど実力主義ではないということだ、という[Eric Riesの考え](http://techcrunch.com/2011/11/19/racism-and-meritocracy/)に同意する。
 
 // This waste hurts our profession too. 
 // We need more and better software developers 
@@ -228,7 +228,7 @@ http://martinfowler.com/bliki/DiversityImbalance.html
 考えというのは人によって違う。その結果、問題の解決方法も違ってくる。
 同じバックグラウンドを持つ人ばかりだと、多くのアイデアを見失ってしまう。
 これはつまり、非生産的なことであり、イノベーションの欠如になるということだ。
-[[通常、多様性のあるグループというのは、より効果的なものである|http://www.amazon.com/gp/product/0691138540?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0691138540]]。
+[通常、多様性のあるグループというのは、より効果的なものである](http://www.amazon.com/gp/product/0691138540?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0691138540)。
 
 // This lack of diversity 
 // 	also contributes to our marginalization as a profession. 

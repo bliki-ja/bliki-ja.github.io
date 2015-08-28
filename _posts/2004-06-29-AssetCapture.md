@@ -5,7 +5,7 @@ tags: [evolutionary design, legacy rehab]
 
 http://martinfowler.com/bliki/AssetCapture.html
 
-財産確保とは、[[ストラングラーアプリケーション|StranglerApplication]]開発のための戦略である。
+財産確保とは、[ストラングラーアプリケーション](StranglerApplication)開発のための戦略である。
 多くのアプリケーションは、重要な財産を管理するためのものだと考えることができる。
 給与支払いシステムは従業員を管理するためのものだし、
 トレーディングシステムはトレーディングを扱うためのものだし、
@@ -28,12 +28,12 @@ http://martinfowler.com/bliki/AssetCapture.html
 従業員全員が病気で倒れた場合でもカバーできる。
 
 
-財産を管理するには、[[イベントインターセプション|EventInterception]]を使う必要があるだろう。
+財産を管理するには、[イベントインターセプション](EventInterception)を使う必要があるだろう。
 そうして、確保した財産のために必要なイベントを確実に捕獲できたかどうか確認するのだ。
 すべてのイベントを捕獲する必要はない。確保した財産に関係するものだけでいい。
 もしかすると、古いシステムが該当財産を管理しておらず、
 イベントも受け取っていないということがあるかもしれない。
-[[Content-Based Router|http://www.enterpriseintegrationpatterns.com/ContentBasedRouter.html]]などを使っているかもしれないから、
+[Content-Based Router](http://www.enterpriseintegrationpatterns.com/ContentBasedRouter.html)などを使っているかもしれないから、
 その点は確認しておこう。
 
 

@@ -5,7 +5,7 @@ tags: [domain specific language]
 
 http://martinfowler.com/bliki/DomainSpecificLanguage.html
 
-//[[モデル駆動型アーキテクチャ|ModelDrivenArchitecture]]への懐疑論を展開したために、いくつかの議論に巻き込まれてしまいました。MDA支持派からの反論は、MDAはドメイン特化言語の使用を可能にしたじゃないかというものでした。たしかにドメイン特化言語は優れたものです。しかし、ドメイン特化言語は以前からあったものなんです。
+//[モデル駆動型アーキテクチャ](ModelDrivenArchitecture)への懐疑論を展開したために、いくつかの議論に巻き込まれてしまいました。MDA支持派からの反論は、MDAはドメイン特化言語の使用を可能にしたじゃないかというものでした。たしかにドメイン特化言語は優れたものです。しかし、ドメイン特化言語は以前からあったものなんです。
 
 //The basic idea of a domain specific language (DSL) is a computer language that's targeted to a particular kind of problem, rather than a general purpose language that's aimed at any kind of software problem. Domain specific languages have been talked about, and used for almost as long as computing has been done.
 
@@ -19,7 +19,7 @@ http://martinfowler.com/bliki/DomainSpecificLanguage.html
 
 DSLを頻繁に使用しているコミュニティにUnixコミュニティがあります。
 そこでは、DSLは「リトル言語」や「ミニ言語」などと呼ばれています
-（この伝統について、Eric Raymondが素晴らしい[[議論|http://www.faqs.org/docs/artu/minilanguageschapter.html]]を提供してくれています）。
+（この伝統について、Eric Raymondが素晴らしい[議論](http://www.faqs.org/docs/artu/minilanguageschapter.html)を提供してくれています）。
 最も一般的なUnixスタイルのやり方は、
 言語の文法を定義し、コード生成機能を使ってDSLから汎用的な言語を生成する、
 あるいは、そのDSL用のインタプリタを書くことです。
@@ -32,7 +32,7 @@ XML設定ファイルも外部DSLのよく知られた形式の1つです。
 LispやSmalltalkのコミュニティにも脈々と流れるDSLの伝統があります。
 しかしこれは、Unixコミュニティのそれとは違ったやり方で行われています。
 新しい言語を作るというよりも、汎用的な言語をDSLに変化させるのです
-（Paul Grahamが[[Programming Bottom-Up|http://www.paulgraham.com/progbot.html]]の中でこのことについてうまく説明しています）。
+（Paul Grahamが[Programming Bottom-Up](http://www.paulgraham.com/progbot.html)の中でこのことについてうまく説明しています）。
 この「内部DSL」では、プログラミング言語それ自体を元にしてDSLを定義します。
 これはどの言語でもできる一般的なやり方です。
 私も問題を解決するためのDSLを作るように
@@ -49,7 +49,7 @@ LispやSmalltalkのコミュニティにも脈々と流れるDSLの伝統があ�
 //One of the tricky aspects of DSLs is that it can be difficult to say what is and isn't a DSL. There is a very fuzzy DslBoundary between internal DSLs and APIs; and between external DSLs and general purpose programming languages.
 
 DSLの扱いが難しい理由の1つに、何がDSLで、何がDSLでないのかが判断しにくいという点が挙げられます。
-[[DslBoundary]]はとても曖昧で、
+[DslBoundary]]はとても曖昧で、
 内部DSLとAPIの違い、
 あるいは、
 外部DSLと汎用言語の違いは、
@@ -66,10 +66,10 @@ DslReadings にまとめていくことにします。
 
 //The internal and external streams come to an interesting confluence in the figure of PragDave. The pragmatic programmers have long been fans of DSLs, primarily from the Unix tradition (there is an excellent discussion in section 12 of The Pragmatic Programmer - perhaps I should call that Pragmaticum 12). In a thoughtful interview Dave said that while he regularly uses code generation, he rarely uses it programming in Ruby.
 
-内部DSLと外部DSLの流れは、[[PragDave|http://pragprog.com/pragdave]]の言葉でうまく合流しました。
+内部DSLと外部DSLの流れは、[[PragDave](http://pragprog.com/pragdave)の言葉でうまく合流しました。
 達人プログラマーたちはずっとDSLのファンだったのです。
-DSLは元々、Unixの伝統から来たものでした（[[The Pragmatic Programmer|http://www.amazon.com/exec/obidos/tg/detail/-/020161622X]]（日本語『達人プログラマー』）のセクション12に素晴らしい議論が載っています——これは「達人の極意12」と呼んでもいいかもしれません）。
-[[インタビュー|http://www.codegeneration.net/tiki-read_article.php?articleId=9]]のなかでDaveはこう言っています。「コード生成はいつも使うけど、Rubyでプログラミングしているときはほとんど使わない」と。
+DSLは元々、Unixの伝統から来たものでした（[The Pragmatic Programmer](http://www.amazon.com/exec/obidos/tg/detail/-/020161622X)（日本語『達人プログラマー』）のセクション12に素晴らしい議論が載っています——これは「達人の極意12」と呼んでもいいかもしれません）。
+[インタビュー](http://www.codegeneration.net/tiki-read_article.php?articleId=9)のなかでDaveはこう言っています。「コード生成はいつも使うけど、Rubyでプログラミングしているときはほとんど使わない」と。
 
 //I've always used the analogy of creating a DSL to help think about building up a design - developing classes and methods with an eye to making them be a DSL. As much as possible I do this within the language I'm using, but if I can't I'm very ready to switch to code generation. At ThoughtWorks we've used code generation and similar techniques widely on our larger systems. The point at which I pull the separate language DSL lever is clearly different between languages. I never really felt the need in Smalltalk to use a separate language, while it's quite common in C++/Java/C#.
 

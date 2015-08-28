@@ -22,5 +22,5 @@ includeの方は便利です。
 
 
 ユースケースについて学びたいのであれば、
-[[Cockburn|http://www.amazon.com/exec/obidos/tg/detail/-/0201702258]]の本を手に入れましょう。ユースケースに関しては、この本がベストです。
+[Cockburn](http://www.amazon.com/exec/obidos/tg/detail/-/0201702258)の本を手に入れましょう。ユースケースに関しては、この本がベストです。
 私のアドバイスなんかよりよっぽどいいです。

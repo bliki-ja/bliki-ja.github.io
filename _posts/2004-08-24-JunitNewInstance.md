@@ -5,7 +5,7 @@ tags: [testing]
 
 http://martinfowler.com/bliki/JunitNewInstance.html
 
-[[JUnit|http://junit.org/]] testing framework のあるデザインについて、よく質問を受ける。
+[JUnit](http://junit.org/) testing framework のあるデザインについて、よく質問を受ける。
 テストメソッドを走らせるたびに、新しいオブジェクトができる点についてだ。
 blikiへ投稿するに値する内容だと思ったのでここに記す。
 （
@@ -17,9 +17,9 @@ JUnit やその親戚（xUnit）がいくら便利だからって、
 テストについて言及してるblogがいくつかあるから、
 そちらを読んでみることをお勧めする
 （
-[[Brett Pettichord|http://www.io.com/~wazmo/blog/]], 
-[[Brian Marick|http://www.testing.com/cgi-bin/blog]], 
-[[James Bach|http://blackbox.cs.fit.edu/blog/james/]]
+[Brett Pettichord](http://www.io.com/~wazmo/blog/), 
+[Brian Marick](http://www.testing.com/cgi-bin/blog), 
+[James Bach](http://blackbox.cs.fit.edu/blog/james/)
 ）。
 あと、これも念のために言っておくが、
 xUnitについて何か書くからといって、
@@ -47,7 +47,7 @@ xUnitについて何か書くからといって、
 ——ついでに言っておくと、実行順序はどちらが先でも構わない。
 なぜなら、JUnit が test メソッドごとに Tester クラスのインスタンスを作っているからだ。
 list は、テストが実行されるたびに新規にインスタンス化されている。
-[[JUnitのバグ|http://beust.com/weblog/archives/000082.html]]じゃねーの？そう思ったひともいるはずだ。
+[JUnitのバグ](http://beust.com/weblog/archives/000082.html)じゃねーの？そう思ったひともいるはずだ。
 でも、バグじゃない。意図的にこうデザインされているのだ
 （詳しくは{{isbn('0596007434','Kentの新刊')}}を読むべし）。
 
@@ -93,7 +93,7 @@ JUnitの支持者は、それはもっともだが、フィールドで初期化
 JUnitのテストケースや初期化における余分なオブジェクトの生成についてである。
 だがこれは、ほとんどの場合においてなんら問題にならない。
 オブジェクトを生成しすぎることを心配するかもしれないが、
-それには[[何ら根拠がない|http://www-106.ibm.com/developerworks/java/library/j-jtp01274.html#author1]]——そんな考えは時代遅れなのだ。
+それには[何ら根拠がない](http://www-106.ibm.com/developerworks/java/library/j-jtp01274.html#author1)——そんな考えは時代遅れなのだ。
 たしかにオブジェクトの生成が問題になることもあった。
 初期のJavaも、そんな問題を抱えていた。
 だが、現在のJavaではオブジェクトの生成コストはほとんどかからない。
@@ -113,7 +113,7 @@ Kent と Erich がそんなことに悩まなくて済んだのはそのため�
 一般に、static 変数の使用は避けたほうが賢明だが、
 テストなら別に構わないだろう——でもまあ、私はやらないけども。
 JUnitでは、テスト用のオブジェクトを共有するための柔軟なメカニズムが用意されている。
-[[TestSetup|http://junit.sourceforge.net/javadoc/junit/extensions/TestSetup.html]] デコレータだ。
+[TestSetup](http://junit.sourceforge.net/javadoc/junit/extensions/TestSetup.html) デコレータだ。
 これはテスト用にある状態をセットアップし、
 テスト間で柔軟に状態を共有できるようにしてくれるものだ。
 クラス内のメソッド間共有だけではなく、もっと広範囲で共有可能だ。
@@ -127,7 +127,7 @@ TestSetupを使うと分離が効かなくなる。
 本当に本当に本当に本当に必要になるまで、TestSetupは使わないようにすること。
 （
 それでも使うっていうんだったら、
-[[このスレ|http://www.testdriven.com/modules/newbb/viewtopic.php?viewmode=flat&order=ASC&topic_id=1115&forum=7&move=prev&topic_time=1089140252]]を読むとヒントを得られるかもしれない。
+[このスレ](http://www.testdriven.com/modules/newbb/viewtopic.php?viewmode=flat&order=ASC&topic_id=1115&forum=7&move=prev&topic_time=1089140252)を読むとヒントを得られるかもしれない。
 J.B. Rainsberger の{{isbn('1932394230','新刊')}}も役に立つだろう。
 ）
 
@@ -137,7 +137,7 @@ J.B. Rainsberger の{{isbn('1932394230','新刊')}}も役に立つだろう。
 インナークラスを TestCase のサブクラスにして使っていたのだ。
 これは分かりやすいデザインのようだが、
 テストを書くのがかなり大変だった。
-というわけで、ちょっと分かりにくい [[pluggable selector|http://junit.sourceforge.net/doc/cookstour/cookstour.htm]] パターン を使うようになっていったわけだ。
+というわけで、ちょっと分かりにくい [pluggable selector](http://junit.sourceforge.net/doc/cookstour/cookstour.htm) パターン を使うようになっていったわけだ。
 ）
 
 2番目の反論は「直感的ではない」というものだ。
@@ -150,8 +150,8 @@ Pluggable Selector パターンはあまり知られていないし、
 実装が難解でも別に構わないと思う。
 
 だが、これに賛同してくれない仲間もいる。
-Cedric Beust の [[TestNG|http://www.beust.com/testng/]] は分離していない。
-たぶん驚くと思うが、あの [[NUnit|http://nunit.org/]] も分離していないのだ。（★分離でいいのかな？）。
+Cedric Beust の [TestNG](http://www.beust.com/testng/) は分離していない。
+たぶん驚くと思うが、あの [NUnit](http://nunit.org/) も分離していないのだ。（★分離でいいのかな？）。
 以下の NUnit のテストケースは失敗する。
 
     [TestFixture]
@@ -186,6 +186,6 @@ IQが一桁しかないとか、
 よいことだと思うのだなあ。
 
 !comment
-*2004-08-27 (金) 11:14:12 ''[[holic]]'' : TestNG や NUnit はデザインとして分離しないことを選択しているので、「分離できていない」じゃなくて「分離していない」の方が訳として適切な気がします。
-*2004-08-30 (月) 12:33:12 ''[[kdmsnr]]'' : [[Otaku, Cedric's weblog: More on JUnit and multiple instantiations|http://beust.com/weblog/archives/000175.html]]
+*2004-08-27 (金) 11:14:12 ''[holic]]'' : TestNG や NUnit はデザインとして分離しないことを選択しているので、「分離できていない」じゃなくて「分離していない」の方が訳として適切な気がします。
+*2004-08-30 (月) 12:33:12 ''[[kdmsnr]]'' : [[Otaku, Cedric's weblog: More on JUnit and multiple instantiations](http://beust.com/weblog/archives/000175.html)
 *2005-01-12 (水) 00:19:49 ''[[babie]]'' : flossing はfloss(free libre open sourse software)化することかなぁ。文脈から「フリーソフトウェア化」というよりは日本で言う「オープン化」に近い物だと思います。

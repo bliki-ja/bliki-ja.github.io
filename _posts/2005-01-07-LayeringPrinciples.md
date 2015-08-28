@@ -15,7 +15,7 @@ http://martinfowler.com/bliki/LayeringPrinciples.html
 とにかく現場で聞いたことのある原則を残らず挙げていくのが、ここでのルールです。
 
 リストができあがると、投票の時間です。
-我々は[[ドット投票|DotVoting]]の変形を使いました。
+我々は[ドット投票](DotVoting)の変形を使いました。
 各自が賛成票と反対票をそれぞれ10票ずつ持つというものです。
 
 以下に投票結果を掲載しました。
@@ -70,7 +70,7 @@ http://martinfowler.com/bliki/LayeringPrinciples.html
 !comment
 
 {{rcomment}}
-*[[まさよしくんさんの日記|http://mixi.jp/view_diary.pl?id=6424555]]
+*[まさよしくんさんの日記](http://mixi.jp/view_diary.pl?id=6424555)
 
 ""ファウラー氏のブログに興味深い結果があります。 
 

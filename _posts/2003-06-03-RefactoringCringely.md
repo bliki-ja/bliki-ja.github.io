@@ -5,7 +5,7 @@ tags: [refactoring]
 
 http://martinfowler.com/bliki/RefactoringCringely.html
 
-[[Robert Cringely による最近の記事|http://www.pbs.org/cringely/pulpit/pulpit20030508.html]]が、リファクタリングコミュニティの中でちょっとした騒ぎとなりました。彼はリファクタリングを批判していたのです。Phlip は[[リファクタリングメーリングリスト|http://groups.yahoo.com/group/refactoring]]での反応をいつになく神妙にまとめていました。
+[Robert Cringely による最近の記事](http://www.pbs.org/cringely/pulpit/pulpit20030508.html)が、リファクタリングコミュニティの中でちょっとした騒ぎとなりました。彼はリファクタリングを批判していたのです。Phlip は[リファクタリングメーリングリスト](http://groups.yahoo.com/group/refactoring)での反応をいつになく神妙にまとめていました。
 
 ""……彼は読むつもりのない本にレビューを書く「懐疑論者」のようだ。
 

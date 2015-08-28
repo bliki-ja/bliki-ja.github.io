@@ -5,7 +5,7 @@ tags: [writing]
 
 http://www.martinfowler.com/bliki/MovingAwayFromXslt.html
 
-このサイトはすべてシンプルなXML文書で書かれたものをHTMLに変換して作られています。これが非常に具合がよいのです。もうHTMLフォーマットに悩まされることもありません（奇抜なレイアウトが私っぽくないのはご存知でしょう）。[[書籍もこうやってすべて書きました|http://www.martinfowler.com/articles/writingInXml.html]]。
+このサイトはすべてシンプルなXML文書で書かれたものをHTMLに変換して作られています。これが非常に具合がよいのです。もうHTMLフォーマットに悩まされることもありません（奇抜なレイアウトが私っぽくないのはご存知でしょう）。[書籍もこうやってすべて書きました](http://www.martinfowler.com/articles/writingInXml.html)。
 
 ほとんどの時間はXSLTで言語変換に要した時間でした。XSLTを投げつけてやりたいことをさせるのも上手くなりました。
 
@@ -16,7 +16,7 @@ http://www.martinfowler.com/bliki/MovingAwayFromXslt.html
 * XMLはプログラム言語にとってひどいシンタックスを作る。ノイズが多すぎるし、結果としてプログラムを見れたもんじゃない。
 * XSLTはサブルーチンを呼び出すのに手間がかかる。マジでいやになる。重複コードを招くことにもつながる。
 * XSLTは簡単なタスクだったら使える。でもちょっと複雑になったら、だんだん歪んできてしまう。まったく歯の立たないタスクもあるので、どっちにしろ他の言語をひっぱりださざるを得なくなる。
-* Rubyはきれいだ。きれいなシンタックスを持ち、[[クールなXMLライブラリ|http://www.germane-software.com/software/rexml/]]を持っているOO言語だ（Pythonもよさげかもしれないけれど、試してない）。
+* Rubyはきれいだ。きれいなシンタックスを持ち、[クールなXMLライブラリ](http://www.germane-software.com/software/rexml/)を持っているOO言語だ（Pythonもよさげかもしれないけれど、試してない）。
 * テンプレートスタイルと変換スタイルのコードを混ぜたまま書ける。
 
 私のコードは、XSLTのデザイン影響を受けています。

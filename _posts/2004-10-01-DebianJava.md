@@ -14,5 +14,5 @@ http://martinfowler.com/bliki/DebianJava.html
 
 ----
 
-* [[Journal In Time: DebianJava|http://shugo.net/jit/20041002.html#p01]]
-* [[hysteric programmer diary - DebianでJava 5|http://www.sgtpepper.net/hyspro/diary/20041005.html#p01]]
+* [Journal In Time: DebianJava](http://shugo.net/jit/20041002.html#p01)
+* [hysteric programmer diary - DebianでJava 5](http://www.sgtpepper.net/hyspro/diary/20041005.html#p01)

@@ -15,13 +15,13 @@ RSSとアグリゲーターのおかげです。
 
 作りかけのアイデアをポストするのにこれを使おうと思っています。本格的な記事にするには未熟であったり短すぎたりするものもです。メーリングリストやニュースグループで見かけた問いに対して、永続的な答えをここで提供していこうとも思っています。
 
-RSS利用者のために、RSSフィードを２つ用意しました。[[Updates|http://martinfowler.com/updates.rss]]は私のWebサイトの新しい記事のためだけに使われます。こちらのトラフィックは少な目にしたいと思っています。
-[[Bliki|http://martinfowler.com/bliki/bliki.rss]]のほうは、blikiに登場した記事を載せていきます。
+RSS利用者のために、RSSフィードを２つ用意しました。[Updates](http://martinfowler.com/updates.rss)は私のWebサイトの新しい記事のためだけに使われます。こちらのトラフィックは少な目にしたいと思っています。
+[Bliki](http://martinfowler.com/bliki/bliki.rss)のほうは、blikiに登場した記事を載せていきます。
 
-（'bliki'という用語はすでに[[使われています|http://www.rollerweblogger.org/page/roller/20020906]]。そのまま略しただけですので。
-[[SnipSoft|http://snipsnap.org/space/Bliki]]がGPLライセンスでJavaのblikiを作っています。
+（'bliki'という用語はすでに[使われています](http://www.rollerweblogger.org/page/roller/20020906)。そのまま略しただけですので。
+[SnipSoft](http://snipsnap.org/space/Bliki)がGPLライセンスでJavaのblikiを作っています。
 私の場合、ボストンからバンガロールへのフライト中に、数百行のRubyコードで作り上げました。）
 
 ----
 
-bliki_ja では、[[Hiki|http://www.namaraii.com/hiki/]]を利用しています。RSSは<http://capsctrl.que.jp/kdmsnr/wiki/bliki/?c=rss>となっております。どうぞご利用ください。--kdmsnr
+bliki_ja では、[Hiki](http://www.namaraii.com/hiki/)を利用しています。RSSは<http://capsctrl.que.jp/kdmsnr/wiki/bliki/?c=rss>となっております。どうぞご利用ください。--kdmsnr

@@ -9,7 +9,7 @@ http://www.martinfowler.com/bliki/FluentInterface.html
 
 //A few months ago I attended a workshop with Eric Evans, and he talked about a certain style of interface which we decided to name a fluent interface. It's not a common style, but one we think should be better known. Probably the best way to describe it is by example.
 
-数ヶ月前、[[Eric Evans|http://domainlanguage.com/about/ericevans.html]]と一緒にあるワークショップに参加した。
+数ヶ月前、[Eric Evans](http://domainlanguage.com/about/ericevans.html)と一緒にあるワークショップに参加した。
 そこで彼がとあるインターフェースのスタイルについて語ったのだが、
 我々はそれを「流れるようなインターフェース（fluent interface）」と名づけることにした。
 一般的なスタイルではないが、もっと評価されるべき代物だ。
@@ -17,7 +17,7 @@ http://www.martinfowler.com/bliki/FluentInterface.html
 
 //The simplest example is probably from Eric's timeAndMoney library. To make a time interval in the usual way we might see something like this:
 
-一番簡単な例は、Ericの[[timeAndMoney|http://timeandmoney.sourceforge.net/]]ライブラリだろう。
+一番簡単な例は、Ericの[timeAndMoney](http://timeandmoney.sourceforge.net/)ライブラリだろう。
 時間の間隔を作るには、通常は、以下のようにする。
 
  TimePoint fiveOClock, sixOClock;
@@ -75,7 +75,7 @@ http://www.martinfowler.com/bliki/FluentInterface.html
 
 //Probably the most important thing to notice about this style is that the intent is to do something along the lines of an internal DomainSpecificLanguage. Indeed this is why we chose the term 'fluent' to describe it, in many ways the two terms are synonyms. The API is primarily designed to be readable and to flow. The price of this fluency is more effort, both in thinking and in the API construction itself. The simple API of constructor, setter, and addition methods is much easier to write. Coming up with a nice fluent API requires a good bit of thought.
 
-このスタイルで気づくべき重要な点は、「内部[[DomainSpecificLanguage]]」のようなことを実現しようとしているところだ。これが我々が「流れるような」と表現した理由だ。
+このスタイルで気づくべき重要な点は、「内部[DomainSpecificLanguage]]」のようなことを実現しようとしているところだ。これが我々が「流れるような」と表現した理由だ。
 この2つの用語は、様々な点で同意語と見なすことができる。
 このAPIは読みやすさを第一に設計されている。
 流れるようにするには、設計とAPIの構築に時間がかかるという代償をともなう。
@@ -84,7 +84,7 @@ http://www.martinfowler.com/bliki/FluentInterface.html
 //Indeed one of the problems of this little example is that I just knocked it up in a Calgary coffee shop over breakfast. Good fluent APIs take a while to build. If you want a much more thought out example of a fluent API take a look at JMock. JMock, like any mocking library, needs to create complex specifications of behavior. There have been many mocking libraries built over the last few years, JMock's contains a very nice fluent API which flows very nicely. Here's an example expectation:
 
 先ほどの例はカルガリーのコーヒーショップで朝食をとっているときに、私がチャチャっと書き上げたものなのでちょっと違うのだが、本来、流れるようなAPIの構築には時間がかかる。
-流れるようなAPIについてもっと考えてみたいのであれば、[[JMock|http://www.jmock.org/]]のコードを見てみるといいだろう。
+流れるようなAPIについてもっと考えてみたいのであれば、[[JMock](http://www.jmock.org/)のコードを見てみるといいだろう。
 JMockなどのモックライブラリは、振舞の複雑なスペック（仕様）を作る必要がある。
 ここ数年で様々なモックライブラリが作られてきたが、JMockには非常にナイスで流れるようなAPIが含まれており、それが正に流れるが如くなのである。
 以下にエクスペクテーション（期待）の例を挙げる。
@@ -94,7 +94,7 @@ JMockなどのモックライブラリは、振舞の複雑なスペック（仕
 
 //I saw Steve Freeman and Nat Price give an excellent talk at JAOO2005 on the evolution of the JMock API, they since wrote it up in an OOPSLA paper.
 
-私は[[JAOO2005|http://martinfowler.com/bliki/JAOO2005.html]]で、[[Steve Freeman|http://stevef.truemesh.com/]]と[[Nat Price|http://nat.truemesh.com/]]がJMock APIの進化についての素晴らしい講演を拝聴したが、彼らはそれを[[OOPSLAの論文(PDF)|http://www.mockobjects.com/files/evolving_an_edsl.ooplsa2006.pdf]]としてまとめている。
+私は[JAOO2005](http://martinfowler.com/bliki/JAOO2005.html)で、[Steve Freeman](http://stevef.truemesh.com/)と[Nat Price](http://nat.truemesh.com/)がJMock APIの進化についての素晴らしい講演を拝聴したが、彼らはそれを[OOPSLAの論文(PDF)](http://www.mockobjects.com/files/evolving_an_edsl.ooplsa2006.pdf)としてまとめている。
 
 //So far we've mostly seen fluent APIs to create configurations of objects, often involving value objects. I'm not sure if this is a defining characteristic, although I suspect there is something about them appearing in a declarative context. The key test of fluency, for us, is the Domain Specific Language quality. The more the use of the API has that language like flow, the more fluent it is.
 
@@ -110,7 +110,7 @@ DomainSpecificLanguageのようなAPIを使っていると、だんだんと流�
 このように流れるようなAPIを構築すると、一風変わったAPIになる。
 最も分かりやすいのは、セッターが値を返すようになることだろう。
 （先ほどの注文の例だと、注文に注文明細を追加すると注文が返ってくる。）
-中括弧言語の世界では、何かを変更するメソッドには{{code void}}を付けるのが一般的だ。これは[[CommandQuerySeparation]]の原則に則しているので私は好きなのだが、
+中括弧言語の世界では、何かを変更するメソッドには{{code void}}を付けるのが一般的だ。これは[CommandQuerySeparation]]の原則に則しているので私は好きなのだが、
 この慣習が流れるようなインターフェースでは邪魔なのだ。
 この場合は、慣習を一時的に停止するようにしている。
 
@@ -147,10 +147,10 @@ Ericが述べていたことだが、彼が流れるようなインターフェ�
 
 //There's a good follow up to this from Piers Cawley.
 
-[[Piers Cawley|http://www.bofh.org.uk/articles/2005/12/21/fluent-interfaces]]から、いいフォローが入った。
+[[Piers Cawley](http://www.bofh.org.uk/articles/2005/12/21/fluent-interfaces)から、いいフォローが入った。
 
 !SEE ALSO
 
 *ひがやすを blog
-** [[流れるようなインターフェースと脱CoC|http://d.hatena.ne.jp/higayasuo/20071018#1192681950]]
-** [[流れるようなインターフェース|http://d.hatena.ne.jp/higayasuo/20071019#1192757543]]
+** [流れるようなインターフェースと脱CoC](http://d.hatena.ne.jp/higayasuo/20071018#1192681950)
+** [流れるようなインターフェース](http://d.hatena.ne.jp/higayasuo/20071019#1192757543)

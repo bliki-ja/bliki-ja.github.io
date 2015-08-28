@@ -8,8 +8,8 @@ tags: [conferences, microsoft]
 Microsoft 技術の長期利用者たちで、自分達の開発哲学が、レドモンド発の正統と思われるものから乖離してきたと感じている人たちのグループだ。
 一方、このグループから離れ、Microsoftの世界にとどまって影響を与えてみたいと考えた人たちもいる。
 
-alt.netという単語は David Laribeeがブログで[[初めて使った|http://laribee.com/blog/2007/04/10/altnet/]]ものだ。
-カンファレンスは[[オープンスペース|OpenSpace]]の手法で開催された。
+alt.netという単語は David Laribeeがブログで[初めて使った](http://laribee.com/blog/2007/04/10/altnet/)ものだ。
+カンファレンスは[オープンスペース](OpenSpace)の手法で開催された。
 このやり方はそのコミュニティの性質にちょうどぴったりくるものだったと思う。
 私はこのコミュニティを代表してしゃべりたいわけじゃないし、コミュニティの定義をしたいわけでもない。
 以下の文は私が見聞きしたものの私なりの解釈だ。
@@ -33,7 +33,7 @@ alt.netの考え方は私にはとても親しみやすいものだ。
 しかしここで大事なのは、alt.netコミュニティは、主流と思われるMicrosoftの道筋を消し去るべきだと考えているわけではなく、Microsoftの世界は広いのだから異なるアプローチがあってもいいだろうと考えているということだ。
 
 「オルタナティブ」がいい名前かどうかの議論以外にも、そもそも名前が必要なのかという議論もある。
-強迫的[[新造語|Neologisms]]作者として知られる私が「名前重要」と考えているというのは驚くようなことではないだろう。
+強迫的[新造語](Neologisms)作者として知られる私が「名前重要」と考えているというのは驚くようなことではないだろう。
 ここで形成されているソフトウェア開発には明らかに共通的な流儀があり、それに名前をつけることで、このことに関する話がしやすくなる。
 用語を作ることが癇にさわる人もいることは避けられないが、その反対意見よりも便利さの方が勝っていると思う。
 
@@ -55,6 +55,6 @@ Microsoftにとってこれから重要な問題なのは、このコミュニ�
 このようなコミュニティと付き合っていくことは重要な機会をもたらすのだ。
 エンタープライズJava界隈の参画型コミュニティがエンタープライズJavaプラットフォームを救ったことを言いたい。
 このことからMicrosoftが受ける大きな試練とは、オープンソース開発に順応する方法を探すことを意味するのだ。
-最近の兆候、特に[[Iron Ruby|http://www.iunknown.com/2007/08/ironruby-on-rub.html]]まわりのものは、少なくともMicrosoftのごく一部は正しい方向に向かっているということを示している。
+最近の兆候、特に[Iron Ruby](http://www.iunknown.com/2007/08/ironruby-on-rub.html)まわりのものは、少なくともMicrosoftのごく一部は正しい方向に向かっているということを示している。
 
-正しい方向性の兆候は、Scott Guthrieによる[[ASP.NET MVC framework|http://codebetter.com/blogs/jeffrey.palermo/archive/2007/10/05/altnetconf-scott-guthrie-announces-asp-net-mvc-framework-at-alt-net-conf.aspx]]のデモにも多く見られた。([[Scott Hanselmansのビデオ|http://www.hanselman.com/blog/ScottGuMVCPresentationAndScottHaScreencastFromALTNETConference.aspx]]も参照のこと。)
+正しい方向性の兆候は、Scott Guthrieによる[ASP.NET MVC framework](http://codebetter.com/blogs/jeffrey.palermo/archive/2007/10/05/altnetconf-scott-guthrie-announces-asp-net-mvc-framework-at-alt-net-conf.aspx)のデモにも多く見られた。([Scott Hanselmansのビデオ](http://www.hanselman.com/blog/ScottGuMVCPresentationAndScottHaScreencastFromALTNETConference.aspx)も参照のこと。)

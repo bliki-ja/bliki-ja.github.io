@@ -14,6 +14,6 @@ http://martinfowler.com/bliki/EtymologyOfRefactoring.html
 
 リファクタリングのクリエーターたち(the creators of refactoring)に語源を聞いてまわったら、口を揃えて「分からない」と言われました。用語としては、しばらく使われてきたはずなのですが、どこから来たのか、語源は分かりません。
 
-リファクタリングについて[[最初の論文|ftp://st.cs.uiuc.edu/pub/papers/refactoring/opdyke-thesis.ps.Z]]を書いた [[Bill Opdyke|http://csc.noctrl.edu/f/opdyke/]] から聞いた確かな情報があります。彼は、Ralph Johnson と立ち話で、当時流行っていた「ソフトウェアファクトリー」について議論していたそうです。
-ソフトウェア開発というものは、[[製造というより設計である|http://patricklogan.blogspot.com/2003_08_31_patricklogan_archive.html]]。故に、ソフトウェア''リ''ファクトリーと呼んだほうがいいんじゃないか。彼らはそう思ったそうです。
-「リファクトリー」は、Ralphらの[[コンサルティング会社|http://www.refactory.com/]]の名前となって残っています。
+リファクタリングについて[最初の論文](ftp://st.cs.uiuc.edu/pub/papers/refactoring/opdyke-thesis.ps.Z)を書いた [Bill Opdyke](http://csc.noctrl.edu/f/opdyke/) から聞いた確かな情報があります。彼は、Ralph Johnson と立ち話で、当時流行っていた「ソフトウェアファクトリー」について議論していたそうです。
+ソフトウェア開発というものは、[製造というより設計である](http://patricklogan.blogspot.com/2003_08_31_patricklogan_archive.html)。故に、ソフトウェア''リ''ファクトリーと呼んだほうがいいんじゃないか。彼らはそう思ったそうです。
+「リファクトリー」は、Ralphらの[コンサルティング会社](http://www.refactory.com/)の名前となって残っています。

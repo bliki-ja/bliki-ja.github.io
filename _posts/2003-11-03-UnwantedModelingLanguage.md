@@ -6,24 +6,24 @@ tags: [uml]
 http://www.martinfowler.com/bliki/UnwantedModelingLanguage.html
 
 UMLは人によって意味合いが異なります。
-このとき、[[UMLモード|UmlMode]]毎のユーザーの考え方が役に立つと考えました。
-大半のひとはUMLを[[スケッチとして|UmlAsSketch]]使っており、UML2にはあまり関心を示していません。
+このとき、[UMLモード](UmlMode)毎のユーザーの考え方が役に立つと考えました。
+大半のひとはUMLを[スケッチとして](UmlAsSketch)使っており、UML2にはあまり関心を示していません。
 
 この悲しい事実は、UML2がMDAを正式に完全サポートするため作られたものであるというところに起因しています。
-つまりUML2の第一の目的は、[[プログラミング言語として|UmlAsProgrammingLanguage]]作られたものだったのです（それから[[設計図用に|UmlAsBlueprint]]）。
+つまりUML2の第一の目的は、[プログラミング言語として](UmlAsProgrammingLanguage)作られたものだったのです（それから[設計図用に](UmlAsBlueprint)）。
 結果として、スケッチャーはほとんど無視されたわけです。
 これは、UMLに関心をよせず、UML委員会の中でも積極的に役割を担わなかったスケッチャーたち自身に責任があります。
 
 これらは驚くことではありません。
 ここ数週間で、いくつか新たな発見がありました（UML2003とOOPSLAに参加したことも含まれています）。
-UML蔑視は、[[UMLをプログラミング言語として用いる|UmlAsProgrammingLanguage]]コミュニティでも広まっているというのです。
+UML蔑視は、[UMLをプログラミング言語として用いる](UmlAsProgrammingLanguage)コミュニティでも広まっているというのです。
 UML2003での講演（スケッチャーズたちの要望を無視しないよう広くアピールしました）の後、数名が私のところに来て、こう指摘しました。
 MDAに積極的な人々も特にUMLには興味を持っていない、と。
 
 OOPSLAのMDAパネルにおいても、MDA支持者は簡素化されたUMLのサブセットを利用することを前提に話をしていました。
 それからこう強調するのです。
 「UML上のMDAだけで判断しないでください」
-（これでは[[Dave "OTI" Thomas|http://c2.com/cgi/wiki?DaveThomas]]の猛烈な攻撃は避けられませんでしたが）。
+（これでは[Dave "OTI" Thomas](http://c2.com/cgi/wiki?DaveThomas)の猛烈な攻撃は避けられませんでしたが）。
 
 UMLを離れて将来的にどこへ行くのか分かりません。
 UML標準が的外れになっていくことについて、スケッチャーたちがぶつぶつ言っているのを耳にします。

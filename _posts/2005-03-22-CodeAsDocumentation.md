@@ -17,7 +17,7 @@ XPのリーダー達がそんなことを言ってるのは聞いたことがな
 
 なぜコードが重要なドキュメントなのかというと、
 詳細かつ正確なドキュメントはコードしかないからだ
-——この点はJack Reevesの有名な論文『[[What is Design?（設計とは？）|http://www.developerdotstar.com/mag/articles/reeves_design_main.html]]』（[[一つ目の論文の日本語訳|http://www.biwa.ne.jp/~mmura/SoftwareDevelopment/WhatIsSoftwareDesignJ.html]]）で指摘されている。
+——この点はJack Reevesの有名な論文『[What is Design?（設計とは？）](http://www.developerdotstar.com/mag/articles/reeves_design_main.html)』（[一つ目の論文の日本語訳](http://www.biwa.ne.jp/~mmura/SoftwareDevelopment/WhatIsSoftwareDesignJ.html)）で指摘されている。
 
 コードがドキュメントなら、プログラマがコードをクリアで読みやすくするよう努力することが重要となる。
 「コードがドキュメントだ」ということは、「特定のコードが良いドキュメントだ」ということじゃない。

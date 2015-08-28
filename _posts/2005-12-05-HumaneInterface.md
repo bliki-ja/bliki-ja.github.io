@@ -7,7 +7,7 @@ http://martinfowler.com/bliki/HumaneInterface.html
 
 Ruby界隈で「ヒューメイン・インタフェース」という言葉を何度も耳にした。
 この言葉は、クラスのインタフェースを記述する際のrubyistたちの姿勢(attitude)の一部を表したものである。
-APIの設計については、2つの異なる考え方を対比していくと面白い（もうひとつは[[MinimalInterface]]である）。
+APIの設計については、2つの異なる考え方を対比していくと面白い（もうひとつは[MinimalInterface]]である）。
 
 ヒューメイン・インタフェースの肝は、みんなが何をやりたいかを見つけ出し、何度も起きることを簡単に行えるためのインタフェースを設計することだ。
 
@@ -16,8 +16,8 @@ APIの設計については、2つの異なる考え方を対比していくと�
 基本的な機能に関しては、どちらもよく似たものになる。
 
 ヒューメイン・インタフェースと最小インタフェースの違いを見つけるには、JavaとRubyのListコンポーネントを比べるとよいだろう。
-Javaには、インスタンスメソッドを25個持つinterface（[[java.util.List|http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html]]）がある。
-一方のRubyには、メソッドを78個持つ[[Array|http://www.ruby-doc.org/core/classes/Array.html]]クラス（arrayではなくlistである）がある。
+Javaには、インスタンスメソッドを25個持つinterface（[[java.util.List](http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html)）がある。
+一方のRubyには、メソッドを78個持つ[Array](http://www.ruby-doc.org/core/classes/Array.html)クラス（arrayではなくlistである）がある。
 両者のスタイルの違いが、メソッドの数の違いとして表れている。
 どちらのコンポーネントにも同じような基本的な機能がある。
 ただ、RubyのArrayには、その他多くの機能があるのだ。
@@ -95,8 +95,8 @@ Rubyistたちは、ライブラリの使用者にどっちのメソッドだっ�
 上の文章がちょっとした祭りになったようだ。
 興味深い、有用なディスカッションが繰り広げられている。
 いつか一連の話をまとめたいと思うが、とりあえずリストだけ。
-[[Elliotte Harold|http://www.cafeaulait.org/oldnews/news2005December6.html]]のヒューメイン手法に対する端的ながらも強い反論に対して、[[James Robertson|http://www.cincomsmalltalk.com/blog/blogView?showComments=true&entry=3311314085]]がコメントしたのが最初（そのコメントは自分でチェックしてくれ）。
-以降、[[Cees de Groot|http://www.cdegroot.com/blog/2005/12/06/simplicity-rules-in-the-right-place/]]、[[Antonio Vieiro|http://blogs.sun.com/roller/page/swinger?entry=harold_martin_and_kisses]]、[[David Hoefler|http://davidhoefler.com/blog/index.php?title=humane_interface_and_ruby_and_some_java&more=1&c=1&tb=1&pb=1]]、[[James Higgs|http://staff.interesource.com/james/PermaLink.aspx?guid=ac626a46-1728-4488-bbda-6c05254656ec]]、[[Peter Williams|http://pezra.barelyenough.org/blog/2005/12/humane-interfaces/]]、[[Cedric Beust|http://beust.com/weblog/archives/000346.html]]、[[John D. Mitchell|http://weblogs.java.net/blog/johnm/archive/2005/12/humane_interfac.html]]、[[Stuart Roebuck|http://www.typingahead.com/management/2005/12/humane_interfac.html]](ry{{fn('訳注：めんどーなので本家でリンクを確認してください')}}らが加わって祭り化。
+[Elliotte Harold](http://www.cafeaulait.org/oldnews/news2005December6.html)のヒューメイン手法に対する端的ながらも強い反論に対して、[James Robertson](http://www.cincomsmalltalk.com/blog/blogView?showComments=true&entry=3311314085)がコメントしたのが最初（そのコメントは自分でチェックしてくれ）。
+以降、[Cees de Groot](http://www.cdegroot.com/blog/2005/12/06/simplicity-rules-in-the-right-place/)、[Antonio Vieiro](http://blogs.sun.com/roller/page/swinger?entry=harold_martin_and_kisses)、[David Hoefler](http://davidhoefler.com/blog/index.php?title=humane_interface_and_ruby_and_some_java&more=1&c=1&tb=1&pb=1)、[James Higgs](http://staff.interesource.com/james/PermaLink.aspx?guid=ac626a46-1728-4488-bbda-6c05254656ec)、[Peter Williams](http://pezra.barelyenough.org/blog/2005/12/humane-interfaces/)、[Cedric Beust](http://beust.com/weblog/archives/000346.html)、[John D. Mitchell](http://weblogs.java.net/blog/johnm/archive/2005/12/humane_interfac.html)、[Stuart Roebuck](http://www.typingahead.com/management/2005/12/humane_interfac.html)(ry{{fn('訳注：めんどーなので本家でリンクを確認してください')}}らが加わって祭り化。
 
 つーか、多杉ｗ。
 燃料を投下しつつ殺伐としないお前ら最高。
@@ -104,4 +104,4 @@ Rubyistたちは、ライブラリの使用者にどっちのメソッドだっ�
 議論はいくつかのよい方向に進んでいる。
 私もそのうちの1つ2つについて議論を深めてみたい。
 
-もしくは、[[Joey deVilla|http://farm.tucows.com/blog/_archives/2005/12/9/1443435.html]]がまとめてくれているのでそれを読むのもよいだろう。
+もしくは、[Joey deVilla](http://farm.tucows.com/blog/_archives/2005/12/9/1443435.html)がまとめてくれているのでそれを読むのもよいだろう。

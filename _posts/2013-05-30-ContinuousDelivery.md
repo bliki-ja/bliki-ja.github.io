@@ -20,7 +20,7 @@ http://martinfowler.com/bliki/ContinuousDelivery.html
 継続的デリバリーを実現するには、開発チームがソフトウェアを継続的に統合し、実行ファイルをビルドして、
 さらにそれを自動的にテストして問題を検出すればいい。
 さらに、その実行ファイルを疑似本番環境に置いて、本番環境でもきちんと動作することを確かめる。
-そのために使うのが[[DeploymentPipeline]]だ。
+そのために使うのが[DeploymentPipeline]]だ。
 
 重要なポイントは、顧客から
 '''今開発中のそのバージョンを、すぐに本番環境にデプロイしろ'''
@@ -39,16 +39,16 @@ http://martinfowler.com/bliki/ContinuousDelivery.html
 業務的に、あまり頻繁なデプロイが好ましくないなどの理由であることが多い。
 つまり、継続的デプロイメントをするためには継続的デリバリーが必須だということだ。
 
-[[継続的インテグレーション|http://martinfowler.com/articles/continuousIntegration.html]]
+[[継続的インテグレーション](http://martinfowler.com/articles/continuousIntegration.html)
 は、開発環境の中での統合やビルドそしてテストを指すという考えかたが一般的だ。
 継続的デリバリーはこれをベースにしたもので、最終段階を本番環境へのデプロイまでにするというものだ。
 
-詳しい情報は、[[ガイドページ|http://martinfowler.com/delivery.html]]からたどれる資料をあたって欲しい。
-特に[[この本|http://martinfowler.com/books/continuousDelivery.html]]を読もう。
+詳しい情報は、[ガイドページ](http://martinfowler.com/delivery.html)からたどれる資料をあたって欲しい。
+特に[この本](http://martinfowler.com/books/continuousDelivery.html)を読もう。
 
 !!謝辞
 
-このページを書くにあたり、[[Jez Humble|http://continuousdelivery.com/]]にいろいろ助けてもらった。
+このページを書くにあたり、[Jez Humble](http://continuousdelivery.com/)にいろいろ助けてもらった。
 
 [*1]これらの指標は、ThoughtWorksの継続的デリバリーワーキンググループが考えたものだ。
 

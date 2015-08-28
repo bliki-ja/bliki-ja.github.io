@@ -18,7 +18,7 @@ http://martinfowler.com/bliki/Translations.html
 一連の生焼けな私の考えを読んでもらうことを歓迎したい。
 
 ----
-[[日本語訳|http://capsctrl.que.jp/kdmsnr/wiki/bliki/]]はずいぶん前からあるが、
-Jesus Perez Sanchezが[[スペイン語への翻訳|http://www.agile-spain.com/agilev2/blog/traduccionmartinfowler]]があることを教えてくれた。これは、アジャイルスペイングループ (アジャイルアライアンスのユーザーグループ)のメンバーによって翻訳されている。
+[日本語訳](http://capsctrl.que.jp/kdmsnr/wiki/bliki/)はずいぶん前からあるが、
+Jesus Perez Sanchezが[スペイン語への翻訳](http://www.agile-spain.com/agilev2/blog/traduccionmartinfowler)があることを教えてくれた。これは、アジャイルスペイングループ (アジャイルアライアンスのユーザーグループ)のメンバーによって翻訳されている。
 
 いずれも右側のリンク項目からたどることができる。

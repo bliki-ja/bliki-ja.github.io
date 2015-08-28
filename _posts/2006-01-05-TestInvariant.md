@@ -10,7 +10,7 @@ http://martinfowler.com/bliki/TestInvariant.html
 以前から、息の長い、地味な議論があります。
 契約による設計(DbC: Design by Contract)とテスト駆動開発(TDD: Test Driven Development)に関する議論です。
 ここでは詳細については触れませんが、
-[[Daniel Jackson|http://people.csail.mit.edu/dnj/]]と会話をしていたときに「DbCとTDDをマージする」というアイデアが出ました。それについて、みなさんにも軽くお話したいと思います。
+[Daniel Jackson](http://people.csail.mit.edu/dnj/)と会話をしていたときに「DbCとTDDをマージする」というアイデアが出ました。それについて、みなさんにも軽くお話したいと思います。
 
 DbCでは各クラスに不変表明(invariant)を定義します。
 不変表明とは、クラスが常に真となる特性を表しています。

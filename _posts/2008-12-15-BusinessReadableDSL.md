@@ -56,7 +56,7 @@ DSLの話になると、ビジネスピープルが自分でコードを書く�
 ただ、そのスウィートスポットは、
 ''ビジネスライタブル''なDSLよりも''ビジネスリーダブル''なDSLの方だろう。
 ビジネスピープルがDSLのコードを見て理解できれば、ソフトウェア開発とそのドメインとの間に、深く、豊かなコミュニケーションチャンネルを構築することができる。
-ここはソフトウェア業界での[[大きな亀裂|http://www.infoq.com/news/2008/08/Fowler-North-Crevasse-of-Doom]]である。
+ここはソフトウェア業界での[大きな亀裂](http://www.infoq.com/news/2008/08/Fowler-North-Crevasse-of-Doom)である。
 DSLがこれを克服する助けになれば、非常に価値のあることだろう。
 
 //With a business-readable DSL, programmers write the code but they show that code frequently to business people who can understand what it means. 

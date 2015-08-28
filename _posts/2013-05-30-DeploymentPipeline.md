@@ -13,7 +13,7 @@ http://martinfowler.com/bliki/DeploymentPipeline.html
 ひとつのステージを通過するごとに信頼性が増すが、それぞれのステージにはそれなりの時間がかかる。
 前半のステージで大半の問題をあぶり出してしまって素早くフィードバックし、
 後半ではじっくり時間をかけた調査をする。
-デプロイメントパイプラインは[[ContinuousDelivery]]の肝となるものだ。
+デプロイメントパイプラインは[ContinuousDelivery]]の肝となるものだ。
 
 一般的に、デプロイメントパイプラインの最初のステージは、
 何らかのコンパイルをしてバイナリを作るという作業だ。これを、それ以降のステージで使うことになる。
@@ -30,9 +30,9 @@ http://martinfowler.com/bliki/DeploymentPipeline.html
 継続的デリバリーをうまく導入するには、まず現在のデリバリープロセスをデプロイメントパイプライン化してみればいい。
 それを精査して、ボトルネックを探したりさらなる自動化の余地を見つけたり、共同でできる作業を検討したりする。
 
-詳細な情報は、書籍『[[Continuous Delivery|http://martinfowler.com/books/continuousDelivery.html]]』
-の第5章を参照すること。[[ここで、無料で読める|http://www.informit.com/articles/article.aspx?p=1621865]]。
+詳細な情報は、書籍『[[Continuous Delivery](http://martinfowler.com/books/continuousDelivery.html)』
+の第5章を参照すること。[ここで、無料で読める](http://www.informit.com/articles/article.aspx?p=1621865)。
 
 !!謝辞
 
-このページを書くにあたり、[[Jez Humble|http://continuousdelivery.com/]]にいろいろ助けてもらった。
+このページを書くにあたり、[Jez Humble](http://continuousdelivery.com/)にいろいろ助けてもらった。

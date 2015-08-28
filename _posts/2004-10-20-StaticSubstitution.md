@@ -11,7 +11,7 @@ http://martinfowler.com/bliki/StaticSubstitution.html
 
 (ほとんどの言語において)staticが由々しき問題なのは、ポリモフィズムを利用してある実装を別の実装に置き換えることができないからだ。
 
-確かにこれは萎える。なぜなら我われはテスティング野郎だからだ——テストを巧くやるためにはサービスを[[Service Stub|http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?ServiceStub]]に置き換えられることが重要なのだ。
+確かにこれは萎える。なぜなら我われはテスティング野郎だからだ——テストを巧くやるためにはサービスを[Service Stub](http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?ServiceStub)に置き換えられることが重要なのだ。
 
 以下はこのテのstaticのサンプルだ:
 
@@ -102,9 +102,9 @@ http://martinfowler.com/bliki/StaticSubstitution.html
 
 これでテスティング(あるいは他の目的)のために置き換える準備が整った。テストケースのsetUpメソッドで適切な呼び出しが可能だ。すなわち、{{code('AddressBook.loadInstance(new StubAddressBook())')}};と。スタブが{{code(AddressBook)}}のサブクラスであれば、テストを本番オブジェクトに対してではなくスタブに対して書ける。
 
-ところが話はこれで終わりではない。上のコードでいえば、本物のサービスを実際に利用する・しないにかかわらず、必ずサービスのインスタンスを生成しなければならない——唯一のインスタンスをstaticイニシャライザで初期化しているからだ。これはサービスにアクセスするコード、つまりこのクラス自身の悩みの種になる。これをどうにかするためには、初期化処理をstaticイニシャライザから括り出して別の初期化用クラスへと分離し、初期化用クラスを置き換えるようにするのだ(これについては[[Chrisのエントリ|http://www.skizz.biz/archives/000421.html]]に詳しい)。とはいえ現状でも、最初の一歩として有効なことは間違いない。
+ところが話はこれで終わりではない。上のコードでいえば、本物のサービスを実際に利用する・しないにかかわらず、必ずサービスのインスタンスを生成しなければならない——唯一のインスタンスをstaticイニシャライザで初期化しているからだ。これはサービスにアクセスするコード、つまりこのクラス自身の悩みの種になる。これをどうにかするためには、初期化処理をstaticイニシャライザから括り出して別の初期化用クラスへと分離し、初期化用クラスを置き換えるようにするのだ(これについては[Chrisのエントリ](http://www.skizz.biz/archives/000421.html)に詳しい)。とはいえ現状でも、最初の一歩として有効なことは間違いない。
 
-これはSingletonのインスタンスを抱えこんでしまいがちになるのと同じ問題でもある。Singleton(または[[Registry|http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?Registry]])を採用しているすべての人の肝に銘じておいて欲しいのだが、Singletonは簡単に置き換え可能だ。Singletonの初期化処理についても同様。これも簡単に置き換えられる。
+これはSingletonのインスタンスを抱えこんでしまいがちになるのと同じ問題でもある。Singleton(または[Registry](http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?Registry))を採用しているすべての人の肝に銘じておいて欲しいのだが、Singletonは簡単に置き換え可能だ。Singletonの初期化処理についても同様。これも簡単に置き換えられる。
 
 ちょうど手元に入手したばかりのMichael Feathersの新刊{{isbn('0131177052','『Working Effectively With Legacy Code』')}}があるのだが、彼はこうした問題についてより多く(そして上手に)語っている。
 

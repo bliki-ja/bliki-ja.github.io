@@ -6,12 +6,12 @@ tags: [ruby]
 http://martinfowler.com/bliki/RubyPeople.html
 
 ここの読者ならご存知だろうが、ここ数年、私は熱心なrubyistだ。
-[[言語としてのruby|http://www.ruby-lang.org/]]は、リッチでありながらも整った文法、そして、よくデザインされたフレームワークが一体となっていて、すごく気に入っている。
+[言語としてのruby](http://www.ruby-lang.org/)は、リッチでありながらも整った文法、そして、よくデザインされたフレームワークが一体となっていて、すごく気に入っている。
 rubyは個人的なプロジェクトで日常的に使う言語となり、
 このサイトの多くもrubyで作っている。
 
 昨年、Rubyは爆発的な注目を集めた。
-Webアプリケーション フレームワーク[[Ruby on Rails|http://www.rubyonrails.org/]]がその火付け役だ。
+Webアプリケーション フレームワーク[Ruby on Rails](http://www.rubyonrails.org/)がその火付け役だ。
 私はまだrailsを触ることができていないが、
 信頼を置ける多くの人から強烈な支持の声を聞いている。
 その声はThoughtWorksの内外から聞こえてくる。

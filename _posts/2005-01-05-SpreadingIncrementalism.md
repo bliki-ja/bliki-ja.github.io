@@ -33,7 +33,7 @@ http://martinfowler.com/bliki/SpreadingIncrementalism.html
 コントロールされていない漸進的設計をヤってしまうと、
 でたらめな設計になってしまう可能性が高い。
 漸進的設計を機能させるには、設計を律する何かが必要となる。
-[[Is Design Dead|http://martinfowler.com/articles/designDead.html]]（[[設計の終焉?|http://www.objectclub.jp/community/XP-jp/xp_relate/isdesigndead#n110]]）で私は、これを「enabling practice{{fn('翻訳では"「できることを増やす」プラクティス"となっているが、これはおかしいので原文ママにした。')}}」と名付けた。
+[Is Design Dead](http://martinfowler.com/articles/designDead.html)（[設計の終焉?](http://www.objectclub.jp/community/XP-jp/xp_relate/isdesigndead#n110)）で私は、これを「enabling practice{{fn('翻訳では"「できることを増やす」プラクティス"となっているが、これはおかしいので原文ママにした。')}}」と名付けた。
 ソフトウェア設計だと、
 テスト、継続的インテグレーション、リファクタリング
 がキーとなる enabling practice であり、

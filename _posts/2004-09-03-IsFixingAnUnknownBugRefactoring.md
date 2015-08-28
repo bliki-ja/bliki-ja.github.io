@@ -5,12 +5,12 @@ tags: [refactoring boundary]
 
 http://martinfowler.com/bliki/IsFixingAnUnknownBugRefactoring.html
 
-[[リファクタリングの境界線|RefactoringBoundary]]のひとつ
+[リファクタリングの境界線](RefactoringBoundary)のひとつ
 
 Przemyslaw Pokrywka が興味深い難題を投稿してくれた。
-[[リファクタリング本|http://martinfowler.com/books.html#refactoring]]に [[Null Object の導入|http://www.refactoring.com/catalog/introduceNullObject.html]]が載っている
+[リファクタリング本](http://martinfowler.com/books.html#refactoring)に [Null Object の導入](http://www.refactoring.com/catalog/introduceNullObject.html)が載っている
 ——これは非常に有用なリファクタリングである
-（[[Joshの新刊|http://martinfowler.com/books.html#r2p]]でも触れられている）。
+（[Joshの新刊](http://martinfowler.com/books.html#r2p)でも触れられている）。
 Przemyslaw は、このリファクタリングは振る舞いを変化させてしまうと指摘した。
 例えば、null を戻すメソッドがあるとする。
 戻ってきた null に対してメソッドを呼び出そうとすると、
@@ -19,10 +19,10 @@ Null Pointer Exception が発生する。
 
 多くのリファクタリングは振る舞いを変化させる。
 リファクタリングとは、振る舞いを変化させることを目的としているのだ。
-[[Form Template Method|http://www.refactoring.com/catalog/formTemplateMethod.html]] を使うと、
+[Form Template Method](http://www.refactoring.com/catalog/formTemplateMethod.html) を使うと、
 プログラムの振る舞いは変わってしまう。
 ここで重要となるのは、ここで言う「振る舞い」が
-[[リファクタリングの定義|DefinitionOfRefactoring]]のなかで述べた
+[リファクタリングの定義](DefinitionOfRefactoring)のなかで述べた
 「''外部から見たときの''振る舞い」なのかどうかだ。
 これは、本来プログラム行うべき振る舞いを変更しているだろうか？
 Null Object を導入するときは、

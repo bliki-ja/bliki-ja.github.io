@@ -15,7 +15,7 @@ http://martinfowler.com/bliki/ConversationalStories.html
 この考えでは、流れはプロダクトオーナーから開発者に向かっている。
 プロダクトオーナーの責任は''何が''必要かを決めることであり、開発者の責任は''どうやって''実現するかを決めることだというのだ。
 
-[[http://martinfowler.com/bliki/images/conversationalStories/decreed.png]]
+[http://martinfowler.com/bliki/images/conversationalStories/decreed.png]]
 
 //A justification for this approach is that this separates the responsibilities along the lines of competence. The product owner knows the business, what the software is for, and thus what needs to be done. The developers know technology and know how to do things, so they can figure out how to realize the demands of the product owner.
 
@@ -27,10 +27,10 @@ http://martinfowler.com/bliki/ConversationalStories.html
 
 プロダクトオーナーが[[DecreedStories]]を思いつくというこの考えは、
 アジャイル開発方法論が機能するにあたって、実に深刻な誤解であると言える。
-我々が[[Snowbird|http://martinfowler.com/articles/agileStory.html]]でブレインストーミングをしたときに、Kentが「対話」を提案したことが思い出される。
+我々が[[Snowbird](http://martinfowler.com/articles/agileStory.html)でブレインストーミングをしたときに、Kentが「対話」を提案したことが思い出される。
 これは、顧客と開発者が開発プロジェクトの進め方について継続的に対話を行うべきだということが我々の考えの肝であることを強調するものだった。
 
-[[http://martinfowler.com/bliki/images/conversationalStories/conversation.png]]
+[http://martinfowler.com/bliki/images/conversationalStories/conversation.png]]
 
 //In terms of coming up with stories, what this means is that they are always something to be refined through conversation - and that developers should play an active role in helping that definition.
 
@@ -49,7 +49,7 @@ http://martinfowler.com/bliki/ConversationalStories.html
 
 //This is the Negotiable principle in Bill Wake's INVEST test for stories. Any member of an agile team can create stories and suggest modifications. It may be that just a few members of a team gravitate to writing most of the stories. That's up to the team's self-organization as to how they want that to happen. But everyone should be engaged in coming up and refining stories. (This involvement is in addition to the develpers' responsibility to estimate stories.)
 
-これが、Bill Wakeによるストーリーの[[INVEST|http://xp123.com/xplor/xp0308]]試験の1つ、Negotiable（交渉可能）の原則だ。
+これが、Bill Wakeによるストーリーの[[INVEST](http://xp123.com/xplor/xp0308)試験の1つ、Negotiable（交渉可能）の原則だ。
 アジャイルチームのメンバーは誰もがストーリーを作成したり、修正を提案したりできる。
 一部のチームメンバーがほとんどのストーリーを書くことになるかもしれない。
 ただそれは、チームがどうしたいかによるものであり、チームの自己組織の判断次第である。

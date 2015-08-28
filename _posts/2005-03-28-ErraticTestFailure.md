@@ -12,7 +12,7 @@ http://martinfowler.com/bliki/ErraticTestFailure.html
 だが、この本のサンプルコードは（変更を行った箇所とは）完全に独立している。
 おかしい。
 
-デバッグするまえに、[[diffデバッグ|DiffDebugging]]を試した。
+デバッグするまえに、[diffデバッグ](DiffDebugging)を試した。
 コミットしてから何も変更していないから、{{code('svn revert')}}を行った。
 そして、テストを走らせた……ら、また失敗した。
 コミット前にテストはパスしたはずだ。

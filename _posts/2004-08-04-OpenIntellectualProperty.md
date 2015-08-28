@@ -9,9 +9,9 @@ ThoughtWorksで働くことが快適なのには、いくつもの理由があ�
 なかでも、ここで働く多くの人間が、私と価値観を共有してくれていることが一番大きな理由だ。
 ここ数年、我々は知的財産に対する立場について何度も話し合ってきた——基本的に知的財産は放棄する方向である。
 
-[[Continuous Integration|http://martinfowler.com/articles/continuousIntegration.html]]（[[継続的インテグレーション|http://www.objectclub.jp/community/XP-jp/xp_relate/cont-j]]）に関する、我々のアプローチやツールを例として挙げよう。
+[Continuous Integration](http://martinfowler.com/articles/continuousIntegration.html)（[継続的インテグレーション](http://www.objectclub.jp/community/XP-jp/xp_relate/cont-j)）に関する、我々のアプローチやツールを例として挙げよう。
 ノウハウは秘密にし、ツールは社内だけで利用すればいいじゃないかと思う人もいるだろうが、
-我々はそこで学んだノウハウを公開し、[[我々|http://cruisecontrol.sourceforge.net/]]の[[ツール群|http://ccnet.thoughtworks.com/]]はオープンソースコミュニティに還元している。
+我々はそこで学んだノウハウを公開し、[我々](http://cruisecontrol.sourceforge.net/)の[ツール群](http://ccnet.thoughtworks.com/)はオープンソースコミュニティに還元している。
 これをおかしな行動と見る人間もいるだろう。
 財務の知識をもった人間ならばなおさらだ——こんなことをやっているコンサルティング会社はない。
 
@@ -34,7 +34,7 @@ ThoughtWorksで働くことが快適なのには、いくつもの理由があ�
 最高のアイデアを持っていたとしても、誰もそのことを知らなければ、お金にはならない。
 アイデアを発表すれば、あなたのことを雇いたいと申し出る人が出てくるだろう。
 そんなときは一般的なアイデアを示すとよい。
-[[一般的な考えには限界|LimitationsOfGeneralAdvice]]もあるが、その一般的な考えを具体的な状況に適用して欲しいと言ってくる人間がいるはずだ。
+[一般的な考えには限界](LimitationsOfGeneralAdvice)もあるが、その一般的な考えを具体的な状況に適用して欲しいと言ってくる人間がいるはずだ。
 別の人間は違う観点でパッケージしたアイデアを好むかも知れない。だから人々は、別の形でも入手できるネタについてトレーニングコースを実施する人を雇うだろう。★
 
 

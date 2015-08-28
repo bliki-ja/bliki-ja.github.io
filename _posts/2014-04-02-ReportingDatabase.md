@@ -5,7 +5,7 @@ tags: [database, application architecture]
 
 http://www.martinfowler.com/bliki/ReportingDatabase.html
 
-'''[[domain model|http://martinfowler.com/eaaCatalog/domainModel.html]]（[[ドメインモデル|PofEAA:DomainModel]]）を使っているとき、アドホックなSQLへの対応はどうすればよいか？'''
+'''[domain model](http://martinfowler.com/eaaCatalog/domainModel.html)（[ドメインモデル](PofEAA:DomainModel)）を使っているとき、アドホックなSQLへの対応はどうすればよいか？'''
 
 ドメインモデルの利点として、アプリケーション内のデータに重要な振る舞いを与えるという点が挙げられる。データのレポートが欲しいのであれば、ドメインモデルは非常に便利である。しかし、多くのレポーティングツールはSQL対応のデータベースを前提としている。つまり、ドメインモデルには対応していないのだ。では、ドメインモデルが出来ることは何だろう？
 

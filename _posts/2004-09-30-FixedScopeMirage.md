@@ -41,5 +41,5 @@ http://martinfowler.com/bliki/FixedScopeMirage.html
 
 これが、スコープとコストを固定した契約が顧客にとって悪いと思う理由だ。
 以上のことから、ThoughtWorksではこういったモデルをできるだけ回避するようにしている。
-アジャイル手法では、[[固定価格|FixedPrice]]の契約は可能である。
+アジャイル手法では、[固定価格](FixedPrice)の契約は可能である。
 しかし、スコープを固定にするのは賢明ではない。

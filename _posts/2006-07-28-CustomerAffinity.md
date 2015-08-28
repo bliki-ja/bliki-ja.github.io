@@ -67,7 +67,7 @@ Kentが「アジャイル」以外に提案した名前は「''対話型''(''con
 ビジネスソフトウェアの真の知的挑戦とは、ソフトウェアがビジネスにとってどのように貢献できるかを見つけ出すことである。
 そのためには技術スキルとビジネス知識の両方が必要となる。
 ビジネス側の人間と密接に仕事をすることでビジネス知識を高めていき、
-また同時に、[[顧客を満足させていく|PleasingTheCustomer]]のだ。
+また同時に、[顧客を満足させていく](PleasingTheCustomer)のだ。
 これこそがエンタープライズソフトウェアの楽しみである——そしてこれが、よい製品を作り出すための鍵となるモチベーションになる。
 
 //There are plenty of bright and capable people who want to learn about the businesses they write software for. Too often organizations make it hard for them to do so. Until that changes, our profession will continue to under-deliver on our potential.

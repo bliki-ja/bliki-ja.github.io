@@ -31,7 +31,7 @@ http://martinfowler.com/bliki/VisualChannel.html
 しかし、去年あたりから、またスライドを使い始めたのだ。
 同僚のNeal Fordからの影響が大きい。
 彼のスライドは、講演のいい味付けになっている
-（彼のプレゼンテーション技術を伝える[[本を共著で執筆中|http://presentationpatterns.com/]]のようだ）。
+（彼のプレゼンテーション技術を伝える[本を共著で執筆中](http://presentationpatterns.com/)のようだ）。
 スライドを使い始めてから、
 どうすればスライドを効果的に使えるかを考えている。
 私が実践している原則は、

@@ -54,7 +54,7 @@ Dave Riceはこう指摘している。
 典型的な建築家とは違って、彼らはソフトウェアアーキテクトに対する効果的な協力を求められていないのだ。
 
 建築家のメタファーについて最後に。
-Michael Pollanが執筆中の「[[A Place of My Own|http://www.amazon.com/exec/obidos/tg/detail/-/0385319908]]」は、
+Michael Pollanが執筆中の「[A Place of My Own](http://www.amazon.com/exec/obidos/tg/detail/-/0385319908)」は、
 建築家と大工との衝突を描いている。
 Pollanは、建築家が最終的にこのバトルに勝ち、建物の設計を変更する様を描いている。
 彼が指摘しているが、悲しいことに、そのスキルに対して低賃金しか与えていない。

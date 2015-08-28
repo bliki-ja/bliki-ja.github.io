@@ -27,7 +27,7 @@ http://martinfowler.com/bliki/SchoolsOfSoftwareDevelopment.html
 その代わりに私たちが見ているものは、ソフトウェア開発には数多くの学派があり、それぞれには独自の定義とよいプラクティスの宣言があるという状況である。
 専門職としては、複数の学派が存在すること、そしてソフトウェア開発に対するそれぞれのアプローチが大きく異なっていることを認識しなければならない。
 その違いは、ある学派が模範とするものが別の学派では不適格とみなされるまでに至っている。
-さらに、我々にはどちらが正しいかなんて分からないのだ(理由の一部は、[[生産性は計測不能]]だからだ)。どちらの学派も自分たちが正しいと考えていて、他学派の許容度はそれぞれ異なっているけれども。
+さらに、我々にはどちらが正しいかなんて分からないのだ(理由の一部は、[生産性は計測不能]]だからだ)。どちらの学派も自分たちが正しいと考えていて、他学派の許容度はそれぞれ異なっているけれども。
 
 //I'm using "school" here in the style of this definition:
 
@@ -39,7 +39,7 @@ http://martinfowler.com/bliki/SchoolsOfSoftwareDevelopment.html
 
 //I came across this notion explicitly from the Context-Driven School of Software Testing (see James Bach and Brett Pettichord). I like their way of looking at this because it's a model that explains why intelligent software developers have such different approaches.
 
-この概念は明らかにソフトウェアテストのコンテキスト駆動学派([[James Bach|http://www.satisfice.com/blog/archives/74]] と [[Brett Pettichord|http://www.io.com/%7Ewazmo/papers/four_schools.pdf]]を見よ)から来ている。
+この概念は明らかにソフトウェアテストのコンテキスト駆動学派([[James Bach](http://www.satisfice.com/blog/archives/74) と [Brett Pettichord](http://www.io.com/%7Ewazmo/papers/four_schools.pdf)を見よ)から来ている。
 私が彼らのものの見方を好きなのは、知的なソフトウェア開発者たちがそんなにも異なったアプローチを取る理由を説明するモデルだからだ。
 
 //The Context-Driven folks have done some looking at different schools within the testing world, but I don't know of any good attempt to classify the schools within the broader world of software development. I feel a sense of belonging to a school, one that for me is rooted in the people I met through OOPSLA in the 90's. Object-orientation is a key practice of this school, as is agile methods. You could reasonably argue that this is the agile school, except I think that agile methods are a core component of this school's thinking but not the whole picture. The leaders of this school include people like Ward Cunningham, Ralph Johnson, Kent Beck, and Robert Martin. ThoughtWorks is, on the whole, an organization that follows this school (which is why I'm comfortable here).

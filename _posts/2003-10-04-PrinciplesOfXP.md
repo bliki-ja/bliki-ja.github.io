@@ -5,7 +5,7 @@ tags: [extreme programming]
 
 http://www.martinfowler.com/bliki/PrinciplesOfXP.html
 
-XP愛好者はみんな4つの価値と12のプラクティス知っているでしょうけども、15の原則を知っているひとは何人いるでしょうか？ 正直申し上げますと、私も先週の[[JAOO|http://www.jaoo.dk/]]でKent Beckに話を聞くまで存じ上げませんでした。話の後、Kentにこう聞きました。「[[白本|http://www.amazon.com/exec/obidos/tg/detail/-/0201616416]]に書いてあった？」「うん。“基本原則”という章の中にうまく隠れているんだ」
+XP愛好者はみんな4つの価値と12のプラクティス知っているでしょうけども、15の原則を知っているひとは何人いるでしょうか？ 正直申し上げますと、私も先週の[JAOO](http://www.jaoo.dk/)でKent Beckに話を聞くまで存じ上げませんでした。話の後、Kentにこう聞きました。「[白本](http://www.amazon.com/exec/obidos/tg/detail/-/0201616416)に書いてあった？」「うん。“基本原則”という章の中にうまく隠れているんだ」
 
 !!基本原則
 

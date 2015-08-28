@@ -7,10 +7,10 @@ http://martinfowler.com/bliki/ProtectedData.html
 
 !!優れたOO設計者はクラス内のデータをprotectedにする？
 
-[[すべてのデータはprivateにするべきだというOO設計者もいれば、いくつかはpublicにするというOO設計者もいます|http://groups.google.com/groups?threadm=db9bbf31.0303260938.a4bad42%40posting.google.com]]。
+[すべてのデータはprivateにするべきだというOO設計者もいれば、いくつかはpublicにするというOO設計者もいます](http://groups.google.com/groups?threadm=db9bbf31.0303260938.a4bad42%40posting.google.com)。
 
 （この底の見えないプールに飛び込む前に、
-protected [[アクセス修飾子]]の意味が言語によって
+protected [アクセス修飾子]]の意味が言語によって
 微妙に変わるということを指摘しておきましょう。
 これは重要です。）
 
@@ -27,7 +27,7 @@ protected [[アクセス修飾子]]の意味が言語によって
 一方、フレームワークを構築する際に、オーバーライドしてもらうようなフックとなるクラスを提供するとします。
 このときは、サブクラスを壊さないように変更を行うために、データをprotectにするかもしれません。
 注意しないとサブクラスはスーパークラスを簡単に壊すことができるから、というのが本当の理由だったりしますけども。
-（これについては[[脆弱な基クラス問題|http://www.cas.mcmaster.ca/~emil/publications/fragile/]]を参照のこと）
+（これについては[[脆弱な基クラス問題](http://www.cas.mcmaster.ca/~emil/publications/fragile/)を参照のこと）
 
 このように、データをprotectedにすることは、常に良いとも悪いとも言えません。
 まったく知らない人間がオーバーライドするようなクラスの場合は、
@@ -41,4 +41,4 @@ protectedな機能をPublishedInterfaceの一部として扱うべきです。
 まあ、理解できないこともありません。
 ですが、私は通常、フィールドをprivateにし、滅多にprotectedにはしません。
 
-関連した問題に、[[自己カプセル化|SelfEncapsulation]]を使うか否かがあります。
+関連した問題に、[自己カプセル化](SelfEncapsulation)を使うか否かがあります。

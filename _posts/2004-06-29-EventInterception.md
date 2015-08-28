@@ -8,7 +8,7 @@ http://martinfowler.com/bliki/EventInterception.html
 バックエンドにあるアプリケーションの多くは、
 外の世界での重要な出来事を伝えられて動いている、と考えることもできる。
 イベントドリブンエンタープライズアプリケーションというアイデアは、非常に古くからある考え方だ。
-私は[[MｃMenaminとPalmerの著書|http://www.amazon.com/exec/obidos/tg/detail/-/0132879050]]でこの考え方に出会った。
+私は[MｃMenaminとPalmerの著書](http://www.amazon.com/exec/obidos/tg/detail/-/0132879050)でこの考え方に出会った。
 80年代のことだ。
 
 ...（★）

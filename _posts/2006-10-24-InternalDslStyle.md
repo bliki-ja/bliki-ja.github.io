@@ -7,7 +7,7 @@ http://martinfowler.com/bliki/InternalDslStyle.html
 
 2006/10/24
 
-内部DSL（組込みDSLとも呼ばれる）は、ホスト言語内に書かれた[[DomainSpecificLanguage]]である。これは多くのプログラミング言語コミュニティでは一般的な考え方だ——特にLispコミュニティではそうだ。だが最近では、急速に成長を遂げているRubyコミュニティでのDSLの扱いに、多くの注目が集まっている。
+内部DSL（組込みDSLとも呼ばれる）は、ホスト言語内に書かれた[DomainSpecificLanguage]]である。これは多くのプログラミング言語コミュニティでは一般的な考え方だ——特にLispコミュニティではそうだ。だが最近では、急速に成長を遂げているRubyコミュニティでのDSLの扱いに、多くの注目が集まっている。
 
 私は、内部DSLには二つのスタイルがあると思っている。ひとつは、内部ミニ言語。もうひとつは、言語エンハンスメント（強化）だ。
 
@@ -34,8 +34,8 @@ http://martinfowler.com/bliki/InternalDslStyle.html
 
  validates_numericality_of :age
  validates_uniqueness_of :ssn
- validates_format_of :length, :with => /^\d+(in|cm)/
+ validates_format_of :length, :with => /^\d+(in](cm)/
 
-まるでRubyの新しいキーワードのようだが、Rubyに手を入れているわけではない。 [[メタプログラミング|http://ola-bini.blogspot.com/2006/09/ruby-metaprogramming-techniques.html]]をうまくやっているだけだ。だが、Rubyという言語そのものを強化しているように感じられないだろうか。
+まるでRubyの新しいキーワードのようだが、Rubyに手を入れているわけではない。 [[メタプログラミング|http://ola-bini.blogspot.com/2006/09/ruby-metaprogramming-techniques.html)をうまくやっているだけだ。だが、Rubyという言語そのものを強化しているように感じられないだろうか。
 
 どちらのテクニックも非常に有用である。ただ、一般的に言えることだが、この区別も境界が曖昧である（たとえばRakeはどちらにも含まれる）。

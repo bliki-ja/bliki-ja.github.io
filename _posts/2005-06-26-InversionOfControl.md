@@ -39,7 +39,7 @@ http://martinfowler.com/bliki/InversionOfControl.html
 
 ""フレームワークの第一の重要な特徴は、フレームワークに合わせて利用者が定義したメソッドが、アプリケーションコードからはあまり呼ばれず、フレームワーク自身からよく呼び出されるという点だ。 フレームワークは、アプリケーションの動作を調整したり、動作の順番を制御したりするためのメインプログラムとしての役割を果たす。 制御の逆転によって、フレームワークを拡張可能なスケルトンとして動作することができる。 フレームワークが定義した汎用アルゴリズムにあわせて、利用者はメソッドを作成し、個別のアプリケーションをつくりあげる。
 
-[[Ralph Johnson and Brian Foote|http://www.laputan.org/drc/drc.html]]
+[Ralph Johnson and Brian Foote](http://www.laputan.org/drc/drc.html)
 
 制御の逆転の存在が、フレームワークとライブラリを決定的に違うものにしている。 ライブラリとは、基本的に呼び出し可能な関数の集まりである。最近では、通常はクラスの集まりとして構成されている。 関数を呼び出すと、何らかの作業を行い、クライアントに制御を返す。
 
@@ -55,14 +55,14 @@ EJBはこういった制御の逆転の良い例だ。 Session Beanを開発す�
 
 これらは制御の逆転の複雑なケースであるが、もっと簡単な状況に出会うことがある。 テンプレートメソッドが良い例だ。 スーパークラスが制御の流れを定義し、サブクラスがメソッドや抽象メソッドをオーバーイドして拡張する。 JUnitでは、フレームワークのコードがsetUpとtearDownメソッドを呼び出し、あなたの書く本文部分の準備と掃除をしてくれる。 フレームワークは呼び出しを行い、それにあなたのコードが反応する——そう、また制御が反転している。
 
-最近、IoCコンテナの盛り上がりにより、制御の逆転の意味をめぐっていくつかの混乱がある。 ここで挙げた一般的な原則を、[[依存性注入|http://martinfowler.com/articles/injection.html]](dependency injection){{fn '訳注：邦訳 http://www.kakutani.com/trans/fowler/injection.html'}}のような特化したスタイルの制御の逆転と混同している人がいる。 IoCコンテナがEJBの競合と見なされるため、その名前が（皮肉にも）紛らわしいのだろう。 EJBも制御の逆転をIoCコンテナ以上に使っているのだが。
+最近、IoCコンテナの盛り上がりにより、制御の逆転の意味をめぐっていくつかの混乱がある。 ここで挙げた一般的な原則を、[依存性注入](http://martinfowler.com/articles/injection.html)(dependency injection){{fn '訳注：邦訳 http://www.kakutani.com/trans/fowler/injection.html'}}のような特化したスタイルの制御の逆転と混同している人がいる。 IoCコンテナがEJBの競合と見なされるため、その名前が（皮肉にも）紛らわしいのだろう。 EJBも制御の逆転をIoCコンテナ以上に使っているのだが。
 
-語源：ここまで述べてきた「制御の逆転」という言葉は、1988年、Object-Oriented Programming誌に掲載されたJohnsonとFooteの論文『[[Designing Reusable Classes|http://www.laputan.org/drc/drc.html]]』に最初に登場した。 この雑誌は古いが、15年以上経った今でも十分に読む価値がある。 彼らはこの言葉をどこか別の場所で手に入れたと考えているが、どこなのかは思い出せないようだ。
+語源：ここまで述べてきた「制御の逆転」という言葉は、1988年、Object-Oriented Programming誌に掲載されたJohnsonとFooteの論文『[Designing Reusable Classes](http://www.laputan.org/drc/drc.html)』に最初に登場した。 この雑誌は古いが、15年以上経った今でも十分に読む価値がある。 彼らはこの言葉をどこか別の場所で手に入れたと考えているが、どこなのかは思い出せないようだ。
 
-この言葉はその後、オブジェクト指向コミュニティに取り込まれ、GoF本に表れた。 より鮮やかな同義語「ハリウッド原則」は、1983年、Mesaについての[[Richard Sweetの論文|http://www.digibarn.com/friends/curbow/star/XDEPaper.pdf]]が初出のようだ。 Desing Goalsの章で彼は、
+この言葉はその後、オブジェクト指向コミュニティに取り込まれ、GoF本に表れた。 より鮮やかな同義語「ハリウッド原則」は、1983年、Mesaについての[Richard Sweetの論文](http://www.digibarn.com/friends/curbow/star/XDEPaper.pdf)が初出のようだ。 Desing Goalsの章で彼は、
 
 ""我々を呼ぶな。我々が呼ぶ。（ハリウッド規則）：ツールは、「ユーザーにコマンドや実行を尋ねる」モデルを採用するのではなく、Tajo(訳注：Mesaプロジェクトにおけるユーザーインターフェース部品)をあらかじめ準備して、利用者がツールにイベント知らせたいと思ったときに通知できるようにすべきだ。
 
-と書いている。 John Vlissidesは[[C++レポートというコラム|http://www.research.ibm.com/designpatterns/pubs/ph-feb96.txt]]のなかで、「ハリウッド原則」の概念についてうまく説明している。（語源は、Brian FooteとRalph Johnsonにご協力いただいた。ありがとう。）
+と書いている。 John Vlissidesは[C++レポートというコラム](http://www.research.ibm.com/designpatterns/pubs/ph-feb96.txt)のなかで、「ハリウッド原則」の概念についてうまく説明している。（語源は、Brian FooteとRalph Johnsonにご協力いただいた。ありがとう。）
 
 2005-06-28 (火) 18:13:38 pline? : adminさん、清書してもらってすみません。ちょっとだけ直しました。

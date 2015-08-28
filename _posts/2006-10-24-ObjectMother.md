@@ -19,4 +19,4 @@ http://martinfowler.com/bliki/ObjectMother.html
 
 オブジェクトマザーにも欠点はある。特に、そうした多くのテスト同士が密接に結びついていて、それがマザーの特定のデータに依存しているような場合だ。何らかの理由で定型データを変更したいと思ったら、トリッキーになってしまう。常に問題となることではあるのだが、クラスを変更したらテストの移行も必要になってくる。
 
-Peter Schuh と Stephanie Punkeが、 XP Universeにおいて、 オブジェクトマザーに関する[[論文|http://www.xpuniverse.com/2001/pdfs/Testing03.pdf]]を書いている。
+Peter Schuh と Stephanie Punkeが、 XP Universeにおいて、 オブジェクトマザーに関する[論文](http://www.xpuniverse.com/2001/pdfs/Testing03.pdf)を書いている。

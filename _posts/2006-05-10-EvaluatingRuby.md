@@ -15,7 +15,7 @@ Railsはプログラミングの未来を表したものだという人もいれ
 //I started with ruby several years ago. The pragmatics got me interested and it soon became my preferred scripting language. Over time it grew to handle much of the production of this website - in particular this bliki. I like the language a lot.
 
 私がRubyに触れたのは数年前のことだ。
-[[達人たち|http://www.pragmaticprogrammer.com/]]にすすめられて、興味を持つようになった。
+[達人たち](http://www.pragmaticprogrammer.com/)にすすめられて、興味を持つようになった。
 そしてすぐにお気に入りのスクリプト言語となった。
 そのうちRubyを使ってこのサイトのプロダクトを作るようになった。
 たとえばこのblikiがそうだ。
@@ -42,7 +42,7 @@ Rubyを使ったことのある人間を探すのだ。
 他の分野で実績を上げているが、
 Rubyを使えばもうひとつ別の強みを得ることができると思っている人たちを、
 Rubyは魅了してきた。
-達人の[[2|http://toolshed.com/blog/]][[人|http://pragprog.com/pragdave]]、[[Justin Gehtland|http://blogs.relevancellc.com/]]、[[Bruce Tate|http://weblogs.java.net/blog/batate/]]、[[David Geary|http://www.jroller.com/page/dgeary]]などといった人たちがそうである。
+達人の[2](http://toolshed.com/blog/)[人](http://pragprog.com/pragdave)、[Justin Gehtland](http://blogs.relevancellc.com/)、[Bruce Tate](http://weblogs.java.net/blog/batate/)、[David Geary](http://www.jroller.com/page/dgeary)などといった人たちがそうである。
 Rubyを評価するには十分な面子ではないだろうか。
 しかし、私のように視野の狭い人間は、同僚の意見を聞くかもしれない。
 同僚ならばその人についてよく知っており、
@@ -98,13 +98,13 @@ Rubyのシンプルさがその差を補っているという人間もいる。
 
 Cedric Beustが
 「Rubyがいかに素晴らしかろうと、主流になることはないだろう」
-と[[詳しく述べて|http://www.beust.com/weblog/archives/000382.html]]いる。
+と[詳しく述べて](http://www.beust.com/weblog/archives/000382.html)いる。
 その点については私も理解している。
 私も含め、かつてのsmalltalkerたちは、現在の主流よりも生産性の高いプラットフォームを以前から知っているのである。
 主流のプラットフォームだけを使うことが重要なのであれば、
 今起きていることを目にするにはしばらく時間がかかることだろう。
 道はいくらでもある。
-[[主流を追いかけない人だってたくさんいるのだ|http://www.loudthinking.com/arc/000584.html]]。
+[主流を追いかけない人だってたくさんいるのだ](http://www.loudthinking.com/arc/000584.html)。
 
 //There's also plenty of projects where development productivity is swamped by political and other communication factors. Here Ruby's advantage would be significantly attenuated.
 

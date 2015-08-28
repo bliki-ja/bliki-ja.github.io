@@ -25,9 +25,9 @@ http://martinfowler.com/bliki/AgileVersusLean.html
 「リーン」は、もともとは工業生産の世界で1950年代にトヨタが開発した手法を指す。
 当時日本は第二次世界大戦の打撃から立ち直りつつあった。
 リーン手法は、トヨタ生産方式と呼ばれることも多いが、
-主に[[大野耐一|http://en.wikipedia.org/wiki/Taiichi_Ohno]]の功績とされている。
+主に[大野耐一](http://en.wikipedia.org/wiki/Taiichi_Ohno)の功績とされている。
 もっとも、大野は西洋の多くの思想の影響を受けている。
-特に[[デミング|http://en.wikipedia.org/wiki/W._Edwards_Deming]]の影響が強い。
+特に[デミング](http://en.wikipedia.org/wiki/W._Edwards_Deming)の影響が強い。
 トヨタ生産方式が日本以外の世界中で知られるようになったのは、
 日本が数多くの業種でアメリカを打ち負かした理由について、
 西洋人が1990年代になってから多数の書籍を著してからである。
@@ -40,14 +40,14 @@ http://martinfowler.com/bliki/AgileVersusLean.html
 アジャイルソフトウェア開発とは、エクストリームプログラミングやSCRUMなど、
 いくつかのソフトウェア開発手法を総称する名前である。
 これらの多くの手法は1990年代に開発された。
-こうした手法はいずれも、[[アジャイルソフトウェア開発マニフェスト|http://agilemanifesto.org/]]で価値と原理として述べられている哲学を含んでいる。
-(私のエッセイ「[[The New Methodology|http://martinfowler.com/articles/newMethodology.html]]」で詳しく説明している。)
+こうした手法はいずれも、[アジャイルソフトウェア開発マニフェスト](http://agilemanifesto.org/)で価値と原理として述べられている哲学を含んでいる。
+(私のエッセイ「[The New Methodology](http://martinfowler.com/articles/newMethodology.html)」で詳しく説明している。)
 
 //There was a connection between lean manufacturing and agile software from the beginning in that many of the developers of the various agile methods were influenced by the ideas of lean manufacturing. This connection was made more explicit by Mary and Tom Poppendieck. Mary had worked in a manufacturing plant that had adopted lean manufacturing and her husband Tom is an experienced software developer. They have written a couple of books on the application of Lean ideas in the software world. When people talk about Lean Software they are usually referring to the ideas in these books, although others have been making similar links.
 
 リーン生産とアジャイルソフトウェアには最初からつながりがあったのだ。
 アジャイル手法の開発者は、いろいろな形でリーン生産から影響を受けている。
-[[メリー・ポペンディークとトム・ポペンディーク|http://www.poppendieck.com/]]がこのつながりをよりはっきりさせた。
+[メリー・ポペンディークとトム・ポペンディーク](http://www.poppendieck.com/)がこのつながりをよりはっきりさせた。
 メリーはリーン生産方式を導入した生産工場で働いていたことがあり、
 トムのほうは熟練したソフトウェア開発者だ。
 2人はリーンをソフトウェアの世界に適用することについて何冊も本を書いた。
@@ -60,7 +60,7 @@ http://martinfowler.com/bliki/AgileVersusLean.html
 どちらも柔軟で適応的な計画を重視し、人間に焦点を当てた手法を大事にしている。
 その結果、リーンのアイデアはアジャイルソフトウェアの場面にとてもしっくりと馴染む。
 メリーとトムは2人ともアジャイルコミュニティで精力的に活動している
-——[[アジャイルアライアンス|http://www.agilealliance.org/]]の設立にはメリーが重要な役割を果たしたと私は考えている。
+——[アジャイルアライアンス](http://www.agilealliance.org/)の設立にはメリーが重要な役割を果たしたと私は考えている。
 (私と同じく彼女もアジャイルアライアンスの創立メンバーだ。
 だが私より、彼女のほうがはるかに功績がある。)
 
@@ -74,7 +74,7 @@ http://martinfowler.com/bliki/AgileVersusLean.html
 分析や設計のドキュメントを在庫と考える手法はポペンディークの書籍から来たものだ。
 私が知っている何人ものアジャイラーがサイクルタイムを短縮することの重要さを訴えている
 ——これもまたリーンに強い影響を受けたアイデアである。
-私の同僚のRichard Durnallが[[リーンの知識がアジャイル思想とどう混ざったかに関する考察|http://www.richarddurnall.com/?p=44#more-44]]を書いている。
+私の同僚のRichard Durnallが[リーンの知識がアジャイル思想とどう混ざったかに関する考察](http://www.richarddurnall.com/?p=44#more-44)を書いている。
 
 //A particularly strong appeal to many people about lean ideas is that they provide a way of explaining agile software development to people - particularly senior people both within IT and senior customers. This explanation ranges from a crude appeal to emulate Toyota to detailed discussions of how lean manufacturing's benefits translate to the ideas in agile software development.
 
@@ -112,4 +112,4 @@ SCRUMやXPのような確立したプロセスだとかいうふうには紹介�
 「アジャイル」という言葉を使うことのそもそもの目的は、私たちがコアの価値と原理を共有し、
 そして共有している部分のほうが互いの差異よりもずっと大きいと認め合うことにあるのだ。
 
-(最初に訳した人: [[やっとむ|http://d.hatena.ne.jp/yach/]])
+(最初に訳した人: [やっとむ](http://d.hatena.ne.jp/yach/))

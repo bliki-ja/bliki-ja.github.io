@@ -23,18 +23,18 @@ http://martinfowler.com/bliki/DesignStaminaHypothesis.html
 良い設計とは何ぞやと問われたらそれぞれ違う答えを返すだろうが、皆それぞれ何かしら、お気に入りの「良い設計」がある。
 そうすれば生産性が向上すると信じているからだ
 （ここでいう「設計」には、事前に行う設計も含むし、アジャイル開発の文脈での設計も含む。つまり、
-[[計画的設計と進化的設計|http://objectclub.jp/community/XP-jp/xp_relate/isdesigndead#n71]]
+[計画的設計と進化的設計](http://objectclub.jp/community/XP-jp/xp_relate/isdesigndead#n71)
 の両方の意味での設計だ）。
 
 設計に関する作業には時間も労力もかかる。それは間違いない。でも、それだけの価値はある。
 将来そのソフトウェアを成長させるのが楽になるからだ。設計をサボったら、短期的には時間の節約になるだろう。
-でも、そのぶんだけ[[技術的負債|TechnicalDebt]]はかさみ、後々の生産性を落としてしまう。
+でも、そのぶんだけ[技術的負債](TechnicalDebt)はかさみ、後々の生産性を落としてしまう。
 ソフトウェアの設計に力を入れると、あなたのプロジェクトのスタミナが向上するのだ。
 成長する速度も上がり、長生きできるようになる。
 
 その様子を図示してみたのが、この疑似グラフだ。
 
-[[設計スタミナグラフ|http://martinfowler.com/bliki/images/designStaminaGraph.gif]]
+[設計スタミナグラフ](http://martinfowler.com/bliki/images/designStaminaGraph.gif)
 
 この疑似グラフは、納品された機能（の累積）と時間との関係を、二種類のありがちなプロジェクトについてプロットしたものだ。
 一方のプロジェクトはきちんと設計をしたもの、もう一方のプロジェクトは設計を軽視したものになる。
@@ -50,7 +50,7 @@ http://martinfowler.com/bliki/DesignStaminaHypothesis.html
 
 これはあくまでも仮説に過ぎない。推測に基づくものだし、実際にそうなるという客観的な証拠もない。
 科学的に言うと、厳密には仮説としてもあまりよろしくない。というのも、検証するのが難しいからだ。
-[[生産性は計測不能|CannotMeasureProductivity]]
+[生産性は計測不能](CannotMeasureProductivity)
 だし、設計の品質もまた計測不能だ。
 
 ただ、仮説に過ぎないとは言え、大半の人にとっては「そのとおり」と納得できるものだ。

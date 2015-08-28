@@ -42,5 +42,5 @@ http://martinfowler.com/bliki/DynamicTypeCheck.html
 
 !参考
 
-* [[Matzにっき 20080219|http://www.rubyist.net/~matz/20080219.html]]
-* [[Matzにっき 20080312|http://www.rubyist.net/~matz/20080312.html]]
+* [Matzにっき 20080219](http://www.rubyist.net/~matz/20080219.html)
+* [Matzにっき 20080312](http://www.rubyist.net/~matz/20080312.html)

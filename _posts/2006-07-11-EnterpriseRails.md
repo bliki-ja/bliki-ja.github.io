@@ -8,17 +8,17 @@ http://www.martinfowler.com/bliki/EnterpriseRails.html
 //In the newly formed Rails community, the word 'enterprise' is becoming a dirty word. For many people the Rails framework, with its aggressive simplicity, is the antithesis of over-complex 'enterprisey' frameworks.
 
 Railsのコミュニティでは「エンタープライズ」という言葉がダーティーワードになりつつある。
-多くの人にとってRailsフレームワークとは、貪欲にシンプルさを備えたものであり、複雑になり過ぎた「[[エンタープライジー|http://patricklogan.blogspot.com/2006/03/its-enterprisey.html]]」なフレームワークへのアンチテーゼなのだ。
+多くの人にとってRailsフレームワークとは、貪欲にシンプルさを備えたものであり、複雑になり過ぎた「[エンタープライジー](http://patricklogan.blogspot.com/2006/03/its-enterprisey.html)」なフレームワークへのアンチテーゼなのだ。
 
 //At the recent RailsConf, PragDave's opening keynote highlighted a bunch of unsolved issues with Rails, several of which involved dealing with some of these enterprisey concerns. An example of this was his call for support of more varied database structures, such as having compound primary keys.
 
-先ごろ開かれた[[RailsConf|http://www.railsconf.org/]]では、オープニング[[キーノート|http://blog.scribestudio.com/articles/2006/06/30/railsconf-2006-keynote-series-dave-thomas]]において[[PragDave|http://blogs.pragprog.com/cgi-bin/pragdave.cgi]]が「Railsでは解決できない事項」に焦点をあてていた。
+先ごろ開かれた[RailsConf](http://www.railsconf.org/)では、オープニング[キーノート](http://blog.scribestudio.com/articles/2006/06/30/railsconf-2006-keynote-series-dave-thomas)において[PragDave](http://blogs.pragprog.com/cgi-bin/pragdave.cgi)が「Railsでは解決できない事項」に焦点をあてていた。
 その中にはエンタープライジーなことも含まれていた。
 たとえば、複合キーを持つような、様々なデータ構造を扱うことが必要だというのだ。
 
 //DHH's response to this could not have been a more emphatic refusal. With a clever visual manipulation of his recent wired cover, DHH projected himself as the Neo of the software world, forcefully proclaiming himself to be in a better place, and telling the enterprise world that they need to join him, not the other way around. Applying this principle to compound keys, the reaction is "no way". Rails will do what it does, and will not complicate itself to support things it doesn't like.
 
-これに対する[[DHH|http://www.loudthinking.com/]]の反応は、この上なく痛烈な拒絶であった。Wired誌{{fn('訳注：Linux Journal誌だと思われ。')}}の表紙になった画像をうまく編集して、DHHは自らをソフトウェア界の[[ネオ|http://imdb.com/title/tt0133093/]]（救世主）としてプロジェクタに映し出した。
+これに対する[DHH](http://www.loudthinking.com/)の反応は、この上なく痛烈な拒絶であった。Wired誌{{fn('訳注：Linux Journal誌だと思われ。')}}の表紙になった画像をうまく編集して、DHHは自らをソフトウェア界の[ネオ](http://imdb.com/title/tt0133093/)（救世主）としてプロジェクタに映し出した。
 それは、彼のいる場所が「より良い場所」だということを強烈に宣言するものであり、
 エンタープライズ界に対して「こちら側へ来い」と声明するものであった。
 これを複合キーの話に当てはめると、返答は「嫌だ」となる。
@@ -61,14 +61,14 @@ PragDaveの講演は、さらに深いものだった。
 先のパラグラフの最後の言葉が、答えの鍵となる。
 「Rails」がエンタープライジーな世界を相手にしないのは、私は正しいと思う。
 だがこれは、「Ruby」がそうだということではない。
-Rubyのようなスクリプト言語の強みは、混沌としたソフトウェアエコシステムの海にダイブできる[[ポストモダン|PostModernProgramming]]な楽しみである。
+Rubyのようなスクリプト言語の強みは、混沌としたソフトウェアエコシステムの海にダイブできる[ポストモダン](PostModernProgramming)な楽しみである。
 Railsの"こだわり"に遅れをとった他のフレームワークにとって、Rubyはその差を埋めるのに相応しい言語である。
 
 // My colleague Badri gave a talk, that was sadly not very well attended, about one of these - rBatis. rBatis is a ruby port of the popular Java framework iBatis (led by Clinton Begin, another colleague). The port is being done by yet a third colleague Jon Tirsen. rBatis is still a work in progress but already it shows the same elements that made iBatis popular - fearlessly embracing the strength of SQL rather than just trying to hide it under layer of Query Objects. It also strengthens its appeal by making the most of Ruby - stealing many functions from Active Record (such as validation), and using convenient Ruby syntax rather than XML. (Is XML the hunchback of programming languages?) rBatis could be the answer to complicated database issues, still fitting into a Rails web-app, but introducing a different set of trade-offs. If you're comfortable with SQL, rBatis looks pretty damn simple. (BTW any Rubyists out there Sydney? We may need you to kidnap Jon's surfboard if work slows down on rBatis.)
 
 同僚のBadriが、まさにこういう話をしていた（残念ながら私は聞くことができなかったのだが）——rBatisについてだ。
-rBatisは、Javaのフレームワークである[[iBatis|http://ibatis.apache.org/]]（同僚のClinton Begin他によって開発されている）をRubyにポートしたものだ。
-ポートは同僚の[[Jon Tirsen|http://jutopia.tirsen.com/]]によって行われている。
+rBatisは、Javaのフレームワークである[iBatis](http://ibatis.apache.org/)（同僚のClinton Begin他によって開発されている）をRubyにポートしたものだ。
+ポートは同僚の[Jon Tirsen](http://jutopia.tirsen.com/)によって行われている。
 rBatisはまだ開発中の段階だが、iBatisがポピュラーになった機能——SQLをQuery Objectレイヤーの裏に隠すのではなく、恐れずにSQLの強みを包括している——については、すでに実装されている。
 大部分をRubyで構築したことにより、さらに強みが増している。
 Active Recordからいくつかの機能（バリデーションなど）を拝借し、XMLではなく便利なRubyの構文を使用している（XMLはプログラム言語のせむし男ではないだろうか？）。
@@ -84,8 +84,8 @@ rBatisの開発が進まないからね。）
 そういう意味で言うと、「エンタープライズRails」という言葉は矛盾語法かもしれない。
 しかし、「エンタープライズRuby」はそうではない。
 エンタープライズ界が動いている様を見ているからこそ、そう言えるのだ。
-エンタープライズ界は、メッセージングの利用、[[ApplicationDatabase]]を持つ自律型サービス、ポストモダンな多様性の受容、の方向に動いている。
-つまり、[[型に嵌めないグルー（糊）|http://blogs.pragprog.com/cgi-bin/pragdave.cgi/Tech/UnsetGlue.html]]のようなツールが理想となっている。
+エンタープライズ界は、メッセージングの利用、[ApplicationDatabase]]を持つ自律型サービス、ポストモダンな多様性の受容、の方向に動いている。
+つまり、[[型に嵌めないグルー（糊）](http://blogs.pragprog.com/cgi-bin/pragdave.cgi/Tech/UnsetGlue.html)のようなツールが理想となっている。
 
 //Although some people felt these talks implied that there was a rift appearing between the Davids, further conversation suggests to me any rift is founded on misunderstanding (now there's a mangled metaphor). PragDave's call wasn't for Rails to support these things but for the wider community to find a way. Similarly DHH's response was about the Rails core team; which hardly limits other peoples' efforts - as rBatis demonstrates. Furthermore DHH felt that most of PragDave's calls were consistent with the Core. The notion of a narrow core rails and a wider ruby world (including rails) supports both concerns - this is the strength of composing small tools.
 
@@ -104,7 +104,7 @@ DHHは、PragDaveの要望はコアチームの要望とも一致していると
 私はキーノートのなかでこんなジョークを言った。
 「RailsConfはRailsの失敗を示している。なぜなら、本当にRailsが成功していれば、カンファレンスが必要ではないほどシンプルなはずだからだ」。
 これは、RubyでWebアプリケーションといえばRailsになったという事実があるからだ。エンタープライズアプリケーションでもRailsかもしれない。
-RailsConfには[[RubyConf|http://www.rubyconf.com/]]よりも多くのエンタープライジーな人間が参加しているのではないだろうか。
+RailsConfには[RubyConf](http://www.rubyconf.com/)よりも多くのエンタープライジーな人間が参加しているのではないだろうか。
 Railsがそれほど注目を集めているからだ。
 そのため、Railsのこだわりの特性が、Ruby自体の声明だと受け取られてしまう危険性がある。
 これではRubyはエンタープライズのグルーには適していないと受け止められてしまうかもしれない。

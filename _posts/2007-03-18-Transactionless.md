@@ -39,7 +39,7 @@ eBayではデータをいくつもの物理的データベースにパーテシ�
 
 このプログラミングスタイルは非常に興味深いものだった。
 だがその時はおとなしく話を聞いていて、誰かに言いふらしたりはしなかった。
-今になってこの話ができるのは、[[Dan Pritchett|http://www.addsimplicity.com/]]が今週のQConでeBayのアーキテクチャについて[[講演|http://qcon.infoq.com/qcon/speakers/show_speaker.jsp?oid=175]]したからだ。そこではこのトランザクションレスの話についても述べられていた。（インタビューだけでなく、彼の講演も[[InfoQ|http://www.infoq.com/]]に掲載されるといいのだけれど）
+今になってこの話ができるのは、[Dan Pritchett](http://www.addsimplicity.com/)が今週のQConでeBayのアーキテクチャについて[講演](http://qcon.infoq.com/qcon/speakers/show_speaker.jsp?oid=175)したからだ。そこではこのトランザクションレスの話についても述べられていた。（インタビューだけでなく、彼の講演も[InfoQ](http://www.infoq.com/)に掲載されるといいのだけれど）
 
 // I'd like to see more about the details of programming without transactions in this kind of manner. Apart from the fact that it's always worth thinking about alternatives, it's also the case that transactionlessness is more common than many people think. It's common to have multi-step business processes with multiple resources that either would need long-running distributed transactions, or resources that have no support for transactions.
 

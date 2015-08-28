@@ -31,12 +31,12 @@ Cindyとオーストラリアに行ったとき、
 この方法は難しそうに聞こえるが、私はこう思うようになってきた。
 「それって、ちゃんとやってないだけなんじゃねーの？」
 私はいくつかの基本戦略がうまくいくのではないかと思っている。
-まずは、[[イベントインターセプション|EventInterception]]。
+まずは、[イベントインターセプション](EventInterception)。
 これは段階的に機能を移行する際に使える。
-また、[[財産確保|AssetCapture]]を可能にしてくれる。
+また、[財産確保](AssetCapture)を可能にしてくれる。
 
-最近、同僚の[[Chris Stevenson|http://www.skizz.biz/]]があるプロジェクトで非常に大きな成功をあげた。
-このプロジェクトについての[[最初の論文|http://www.skizz.biz/whitepapers/an-agile-approach-to-a-legacy-system.pdf]]を[[XP 2004|http://www.xp2004.org/]]発表していたが、
+最近、同僚の[Chris Stevenson](http://www.skizz.biz/)があるプロジェクトで非常に大きな成功をあげた。
+このプロジェクトについての[最初の論文](http://www.skizz.biz/whitepapers/an-agile-approach-to-a-legacy-system.pdf)を[XP 2004](http://www.xp2004.org/)発表していたが、
 私はこのプロジェクトの様々な側面についてもっと記述してもらいたいと思っている。
 彼らはまだ古いアプリケーションを窒息死させるところまでは出来ていない。
 だが、彼らは価値ある機能をビジネスにもたらした。

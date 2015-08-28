@@ -9,7 +9,7 @@ http://www.martinfowler.com/bliki/DslBoundary.html
 
 //When the topic of DomainSpecificLanguage comes up, one of the common puzzles is exactly what is or isn't a DSL. The trouble is that there is no precise definition for a DSL and there is a large gray area between DSLs and other things.
 
-[[DomainSpecificLanguage]]が表れたときに疑問として挙がったのが、
+[DomainSpecificLanguage]]が表れたときに疑問として挙がったのが、
 「DSLは何なのか」そして「DSLは何でないか」だった。
 混乱の元はDSLに厳密な定義が存在しないためであり、
 DSLとその他とを区別するグレーゾーンが広大だったためである。
@@ -28,7 +28,7 @@ DSLとその他とを区別するグレーゾーンが広大だったためで�
 だが、違いはないとはいったものの、DSLっぽく書かれたAPIを使うときはなんとなく「感覚」が異なるように感じられる。
 [[FluentInterface]]のようなものはAPIを使用することを質的に変えてしまうのだ。
 DSLを使って考えると読みやすさを違った方法で考えるようになる。
-ホスト言語のシンタックスを利用して、それ自身に依存した何かを作るようになる——[[rake|http://www.martinfowler.com/articles/rake.html]]が良い例だ。
+ホスト言語のシンタックスを利用して、それ自身に依存した何かを作るようになる——[[rake](http://www.martinfowler.com/articles/rake.html)が良い例だ。
 
 //When it comes to external DSLs the question often comes in the form of what the difference is between a DSL and a general purpose language (GPL). Often a clear sign is when the DSL isn't Turing complete or lacks abstraction facilities. Regexps are a fine example of this limitation in capability. SQL is a more interesting candidate. It's a complex and capable language, yet lacks both Turing completeness and the ability to build new abstractions.
 
@@ -39,7 +39,7 @@ SQLは興味深い。複雑かつ能力のある言語だが、やはりチュ�
 //Can a language be Turing complete and still be a DSL? Ploticus's script language is Turing complete, but it's clear focus on producing graphs within Ploticus makes it a DSL - at least for me. But then what about XSLT? It too has a limited focus on transforming XML documents, yet it has gained so many capabilities that increasingly people think of it as a GPL.
 
 では、チューリング完全かつDSLな言語というのはあり得るのだろうか？
-[[Ploticus|http://ploticus.sourceforge.net/]]のスクリプト言語はチューリング完全である。そして、Ploticusでグラフを作成するというところに焦点をしぼっていることから、DSLだともいえる——少なくとも私にとってはDSLだ。
+[Ploticus](http://ploticus.sourceforge.net/)のスクリプト言語はチューリング完全である。そして、Ploticusでグラフを作成するというところに焦点をしぼっていることから、DSLだともいえる——少なくとも私にとってはDSLだ。
 XSLTはどうだろうか？XML文書を変換することに焦点をしぼっているが、汎用言語ではないかと思われるほど非常に多くの能力を備えている。
 
 //The example of Ploticus raises the question of whether embedded languages are DSLs. Is Excel's macro language a DSL when it's virtually the same as Visual Basic? What happens if you embed a general scripting language into an application?

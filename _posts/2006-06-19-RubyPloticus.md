@@ -7,7 +7,7 @@ http://martinfowler.com/bliki/RubyPloticus.html
 
 //In my recent post on EvaluatingRuby I mentioned that a colleague had put together a web app with some fancy numerical graphs. Someone emailed to ask how he did that. I added my short answer, ploticus, to the original bliki entry, but that led to the question of how he interfaced ruby with ploticus?
 
-先ごろ[[EvaluatingRuby]]を投稿したが、その中で私は、
+先ごろ[EvaluatingRuby]]を投稿したが、その中で私は、
 同僚がWebアプリケーションにファンシーな数値グラフを組み込んだと述べた。
 それについて、どのようにやっているのかという質問のメールを頂いた。
 簡単な答えとして「Ploticusを使った」と元のエントリーに追記しておいたのだが、
@@ -36,7 +36,7 @@ Rubyではこれを簡単に行うことができる……と私も聞いた。
 だいたいこんな感じになる。
 
   def generate script, outfile
-    IO.popen("ploticus -png -o #{outfile} -stdin", 'w'){|p| p << script}
+    IO.popen("ploticus -png -o #{outfile} -stdin", 'w'){](p| p << script}
   end
 
 //To build up the script, I like to get objects that can work in my terms, and produce the necessary ploticus stuff. If you have anything that uses the prefabs, then putting together something is easy. I wanted to do clustered bar graphs, like this, which requires a ploticus script.
@@ -45,7 +45,7 @@ Rubyではこれを簡単に行うことができる……と私も聞いた。
 自分の言葉で動くオブジェクトを手にすることができた。
 そして、必要なploticusの結果を手にすることができた。
 プレハブ式なものを使っていれば、それを組み合わせるのは簡単だ。
-[[こういう感じの|http://ploticus.sourceforge.net/gallery/students.htm]]
+[[こういう感じの|http://ploticus.sourceforge.net/gallery/students.htm)
 棒グラフが欲しかったのだが、おれにはploticusスクリプトが必要だった。
 
 //I built what I needed in three levels. At the lowest level is PloticusScripter, a class that builds up ploticus script commands. Here it is:
@@ -151,7 +151,7 @@ add_rowメソッドを使ってデータ行を追加することで、
 
 //#produces similar to  ploticus example in ploticus/gallery/students.htm
 
-＃[[ploticusのサイトにある例|http://ploticus.sourceforge.net/gallery/students.htm]]と同じようなものを作る
+＃[ploticusのサイトにある例](http://ploticus.sourceforge.net/gallery/students.htm)と同じようなものを作る
 
  class StudentGrapher
    def initialize
@@ -202,7 +202,7 @@ add_rowメソッドを使ってデータ行を追加することで、
 
 //It's a very simple example, but it's a good illustration of what I call the Gateway  pattern. The PloticusClusterBar class is the gateway with the perfect interface for what I want to do. I make it transform between that convenient interface and what the real output needs to be. The PloticusScripter class is another level of gateway. Even for a simple thing like this I find a design of composed objects like this a good way to go. Which may only say how my brain's got twisted over the years.
 
-非常にシンプルな例だが、私が[[Gatewayパターン|http://martinfowler.com/eaaCatalog/gateway.html]]（[[翻訳|http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?Gateway]]）と呼んでいるものの良い例だ。
+非常にシンプルな例だが、私が[Gatewayパターン](http://martinfowler.com/eaaCatalog/gateway.html)（[翻訳](http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?Gateway)）と呼んでいるものの良い例だ。
 PloticusClusterBarクラスは、私がやりたいことへの完璧なインタフェースを持ったゲートウェイとなっている。
 この便利なインタフェースから実際に必要とされる出力に変換することができる。
 PloticusScripterクラスはまた別のレベルのゲートウェイである。

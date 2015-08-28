@@ -8,12 +8,12 @@ http://martinfowler.com/bliki/TechnicalDebtQuadrant.html
 2009/10/14
 
 ここ数ヶ月の間に、
-[[TechnicalDebt]]
+[TechnicalDebt]]
 に関する投稿がいくつかあった。設計上の不備の中で、技術的負債と呼ぶべきものは何か？
 逆に、そう呼ぶべきでないものは何か？といった疑問が挙げられていた。
 
 その一例が、アンクル・ボブの投稿「
-[[a mess is not a debt|http://blog.objectmentor.com/articles/2009/09/22/a-mess-is-not-a-technical-debt]]」だ。
+[[a mess is not a debt](http://blog.objectmentor.com/articles/2009/09/22/a-mess-is-not-a-technical-debt)」だ。
 彼の意見は、こういうことだ。
 良い設計方法を知らない人が書いた単に汚いだけのコードを負債と呼ぶべきではない。
 技術的負債という言葉はもっと特別な場合を指すものだ。
@@ -56,7 +56,7 @@ http://martinfowler.com/bliki/TechnicalDebtQuadrant.html
 「間に合わせの適当な」設計を選ぶこともある。
 クリーンなコードを書くだけの余裕がないと判断した場合などだ。
 こんな場合はほとんど無鉄砲な負債になるっていうことについては、私もアンクル・ボブに同意する。
-人はみな、[[DesignPayoffLine]]を過小評価するものだからだ。
+人はみな、[DesignPayoffLine]]を過小評価するものだからだ。
 よい設計とクリーンなコードの本質は、開発をすばやく進められるようにすることだ。
 そうでもなければ、アンクル・ボブやケント・ベックそしてウォード・カニンガムといった面々が、わざわざ時間をかけて議論することもないだろう。
 
@@ -81,7 +81,7 @@ http://martinfowler.com/bliki/TechnicalDebtQuadrant.html
 いったん破棄して最初から作り直すということだ。かつてフレッド・ブルックスもそんな提案をしていた。
 でも、なかなかそんなことも言っていられない。
 本来そうすべきだった設計を発見した時点で、あなたは無意識な負債を抱えたことを自覚することになる。
-これはある意味、ウォードが[[この映像|http://www.c2.com/cgi/wiki?ComplexityAsDebt]]で話している負債みたいなものだ。
+これはある意味、ウォードが[[この映像](http://www.c2.com/cgi/wiki?ComplexityAsDebt)で話している負債みたいなものだ。
 
 利息を払うことを選ぶか元本を返済することを選ぶかという判断がここでもあてはまる。
 今回の場合も、このたとえ話が使えるだろう。
@@ -92,7 +92,7 @@ http://martinfowler.com/bliki/TechnicalDebtQuadrant.html
 どんなにすばらしいチームだって、プロジェクトが進むにつれて負債を抱えることになる。
 そうしないで無茶をすれば、質の悪いコードに押しつぶされてしまうからだ。
 
-[[技術的負債の四象限|http://martinfowler.com/bliki/images/techDebtQuadrant.png]]
+[技術的負債の四象限](http://martinfowler.com/bliki/images/techDebtQuadrant.png)
 
 *Reckless(無鉄砲な) / Prudent(用心深い)
 *Deliberate(意図的な) / Inadvertent(無意識な)

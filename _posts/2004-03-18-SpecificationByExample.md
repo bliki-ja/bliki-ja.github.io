@@ -5,16 +5,16 @@ tags: [testing, requirements analysis]
 
 http://martinfowler.com/bliki/SpecificationByExample.html
 
-XP/Agile Universe 2002のワークショップで「Specification By Example（実例による仕様書、SbE）」という言葉に心を奪われた。これは、[[XP|http://martinfowler.com/articles/newMethodology.html#xp]]におけるテストのあり方のひとつではないか。
+XP/Agile Universe 2002のワークショップで「Specification By Example（実例による仕様書、SbE）」という言葉に心を奪われた。これは、[XP](http://martinfowler.com/articles/newMethodology.html#xp)におけるテストのあり方のひとつではないか。
 
-（このところ、テスト駆動開発(TDD)のテスト部分を語るのは流行遅れなのだそうだ。ひどい話だ。[[Jon|http://blogs.codehaus.org/people/tirsen/archives/000582_tdd_is_about_testing.html]]と同じく、私も、そんな副次的なものなんかよりも包括的な自動テストにこそTDDの真髄があると考えている。
+（このところ、テスト駆動開発(TDD)のテスト部分を語るのは流行遅れなのだそうだ。ひどい話だ。[Jon](http://blogs.codehaus.org/people/tirsen/archives/000582_tdd_is_about_testing.html)と同じく、私も、そんな副次的なものなんかよりも包括的な自動テストにこそTDDの真髄があると考えている。
 例えば、誰かに「100万ドルあげるから山にハイキングしておいで」と言われたとしよう。私は胸を張ってこう言うね。「今回のハイキングの目的は、自然の美を堪能するためである」と。いや、まあ、もちろん、懐もあたたかくなるけど……ね。
 ）
 
 仕様書について議論する際、SbEという考えは今まで出てこなかった。仕様書とは、システム全体を網羅するものである。しかし、実例は部分的にしかフォーカスしない。そのため、そこから全体を推測しなくてはならない。SbEだけで要求定義は出来ないように思う。だが、要求定義における主役級の技術に成り得るかもしれない。
 
 これまでは厳密な仕様書があり、事前／事後条件でもって、「成功した」「失敗した」という判定を明確に下すことができた。そして、こういった技術が一般的でもあった。
-これは[[契約による設計(DbC)|http://archive.eiffel.com/doc/manuals/technology/contract/]]にも適用されている。こういった技術が現在幅を利かせてはいるが、これが理想的だとはいえないだろう。
+これは[契約による設計(DbC)](http://archive.eiffel.com/doc/manuals/technology/contract/)にも適用されている。こういった技術が現在幅を利かせてはいるが、これが理想的だとはいえないだろう。
 事前／事後条件を使った方が簡単な状況もあるだろうが、
 むちゃくちゃトリッキーになってしまうこともあるのだ。
 私はこれまでいくつかのエンタープライズアプリケーションで使おうとしたことがあるが、
@@ -22,7 +22,7 @@ XP/Agile Universe 2002のワークショップで「Specification By Example（�
 SbEのグレートなところは、書くのがとても簡単だという点だ。
 我々がソフトウェアを提供する非ナードだって書けてしまう。
 （
-[[Timothy Budd|http://www.amazon.com/exec/obidos/tg/detail/-/0201824191]]がこう指摘している。
+[Timothy Budd](http://www.amazon.com/exec/obidos/tg/detail/-/0201824191)がこう指摘している。
 「
 スタックの振る舞いの多くは事前／事後条件という形で示すことができるけど、（スタックが）後入れ先出し(LIFO)になっていることがわかるように事前／事後条件を書こうとすると、相当トリッキーな仕事になっちゃうよね」。
 ）
@@ -60,14 +60,14 @@ SbE は明らかに十分じゃないのだから、すべてがまるっと伝�
 SbEは、みなが協調しており、ケンカなどしてない状況下でのみ有効である。
 実例は設計チームのアイデアの引き金となる。
 しかも、地に足のついたアイデアである。
-他にもまだやることはある。通常の会話、[[Domain Driven Design|http://www.amazon.com/exec/obidos/tg/detail/-/0321125215]] のような技術、DbCだって必要になるだろう。
+他にもまだやることはある。通常の会話、[Domain Driven Design](http://www.amazon.com/exec/obidos/tg/detail/-/0321125215) のような技術、DbCだって必要になるだろう。
 私はDbC（またはEiffel）を完璧に行う機会がなかったが、
 いつも契約通りにインターフェイスは作っている{{fn('訳注：DbCの「契約」と取引の「契約」が掛かっている……が、日本語にすると何が何やら')}}。
 SbEは強力なツールである。おそらく私が一番よく使ってるものかもしれないなあ。
 でも、唯一のツールというわけではない。
 
 （
-SbE に関してもうちょっと考えたい方へ。[[Brian Marick|http://testing.com/]] の書いたものを読んで欲しい（SbEという名前じゃないけど）。彼のサイトのどこかに、彼なりの意見をまとめたページがあるはずだ。もちろん、そのまとめページを探すよりも、全部読んじゃったほうがいいんだけど。
+SbE に関してもうちょっと考えたい方へ。[Brian Marick](http://testing.com/) の書いたものを読んで欲しい（SbEという名前じゃないけど）。彼のサイトのどこかに、彼なりの意見をまとめたページがあるはずだ。もちろん、そのまとめページを探すよりも、全部読んじゃったほうがいいんだけど。
 ）
 
 {{rcomment}}

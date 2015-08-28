@@ -11,7 +11,7 @@ http://martinfowler.com/bliki/TestCoverage.html
 
 「テストカバレッジ(コードカバレッジ)の目標値はどれくらいがいいのか？」という質問とか、コードカバレッジの高さの自慢とかを、ときどき耳にする。でも、大事なポイントを外している。コードカバレッジは、コードのテストされていない部分を発見するための有用なツールである。ただテスト自体がどれだけ良いかという指標としては、テストカバレッジはほとんど役に立たない。
 
-[[http://martinfowler.com/bliki/images/testCoverage/sketch.png]]
+[http://martinfowler.com/bliki/images/testCoverage/sketch.png]]
 
 // Let's look at the second statement first. I've heard of places that may say things like "you can't go into production with less than 87% coverage". I've heard some people say that you should use things like TDD and must get 100% coverage. A wise man once said:
 
@@ -61,6 +61,6 @@ http://martinfowler.com/bliki/TestCoverage.html
 
 !!参考
 
-Brian Marick has an excellent article on the [[misuse of code coverage|http://www.exampler.com/testing-com/writings/coverage.pdf]]. And it's worth reading the [[pithy commentary of Testivus|http://www.developertesting.com/archives/month200705/20070504-000425.html]].
+Brian Marick has an excellent article on the [[misuse of code coverage](http://www.exampler.com/testing-com/writings/coverage.pdf). And it's worth reading the [pithy commentary of Testivus](http://www.developertesting.com/archives/month200705/20070504-000425.html).
 
 1: By "you" here I mean the people writing the tests. Coverage is of little value to management since you need a technical background to understand whether the tests are good or whether the uncovered code is a problem.

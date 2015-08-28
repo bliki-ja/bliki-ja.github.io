@@ -18,9 +18,9 @@ http://martinfowler.com/bliki/RoleInterface.html
 
 // Let's look at this with an example. Consider a program for PERT style project planning. In this scheme we break down a project into a set of activities. We then arrange these activities into a network (strictly a directed acyclic graph) to show the dependencies between the tasks. So if 'have breakfast' is a task, then 'make coffee' and 'mix cereal' might be predecessor activities. This means I cannot begin to have my breakfast until all the predecessors have completed.
 
-[[PERT|http://en.wikipedia.org/wiki/PERT_Chart]]を使ったプロジェクト計画のプログラムを例にして見ていこう。
+[PERT](http://en.wikipedia.org/wiki/PERT_Chart)を使ったプロジェクト計画のプログラムを例にして見ていこう。
 ここでは、プロジェクトをいくつかのアクティビティに分解する。
-次に、これらのアクティビティをネットワーク（厳密に言えば、[[非循環有向グラフ|http://en.wikipedia.org/wiki/Directed_acyclic_graph]]）に配置し直して、
+次に、これらのアクティビティをネットワーク（厳密に言えば、[非循環有向グラフ](http://en.wikipedia.org/wiki/Directed_acyclic_graph)）に配置し直して、
 タスク間の依存関係を示す。
 「朝食を食べる」がタスクならば、「コーヒーをいれる」や「シリアルを混ぜる」などは事前に行われるアクティビティとなる。
 つまり、事前処理が完了しない限り、朝食を食べ始めることはできないのだ。
@@ -135,12 +135,12 @@ Webサービスのようなリモート環境では、興味深い「ねじれ�
 ポイントは、ここで必要とされる型チェックは、最早終了日が存在しているかどうかだけでよい点である。
 それ以外のデータを無視することができれば、そのデータを提供しても問題ない。
 クラスは複数のインタフェースを実装すればよい。
-この考えは[[Consumer Driven Contracts|http://martinfowler.com/articles/consumerDrivenContracts.html]](クライアント駆動契約)の考えとも一致する。
+この考えは[Consumer Driven Contracts](http://martinfowler.com/articles/consumerDrivenContracts.html)(クライアント駆動契約)の考えとも一致する。
 私が、クライアント駆動契約が非常に強い影響力を持つと考えているのは、このためである。
 
 // As I've indicated, this notion has been around for a long time. Trygve Reenskaug wrote a methodology book based around analyzing roles and synthesizing them into classes. Robert Martin talks about this topic as the Interface Segregation Principle: role interfaces follow that principle but header interfaces do not. 
 
 先ほども述べたが、これは古くからある考え方である。
 Trygve Reenskaugが、ロール分析に基づいたクラス設計の方法論を{{isbn('0134529308','本')}}を著している。
-Robert Martinは、このトピックを「[[インターフェイス分離の原則|http://www.objectmentor.com/resources/articles/isp.pdf]](Interface Segregation Principle)」として述べている。
+Robert Martinは、このトピックを「[インターフェイス分離の原則](http://www.objectmentor.com/resources/articles/isp.pdf)(Interface Segregation Principle)」として述べている。
 ロールインタフェースはこの原則に沿っているが、ヘッダインタフェースはそうではない。

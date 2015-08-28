@@ -7,7 +7,7 @@ http://www.martinfowler.com/bliki/IsChangingInterfacesRefactoring.html
 
 2007/9/2
 
-[[RefactoringBoundary]]のひとつ。
+[RefactoringBoundary]]のひとつ。
 
 //Is changing the interface of part of the code a refactoring?
 
@@ -17,7 +17,7 @@ http://www.martinfowler.com/bliki/IsChangingInterfacesRefactoring.html
 
 答えは簡単——インタフェースの変更はリファクタリングだ。
 もちろんすべての呼び出し元を変更する必要はある。
-このよい例が[[メソッド名の変更|http://www.refactoring.com/catalog/renameMethod.html]]だ。
+このよい例が[[メソッド名の変更](http://www.refactoring.com/catalog/renameMethod.html)だ。
 このインタフェースの変更によるリファクタリングは、
 ほとんどすべてのリファクタリングツールでサポートされている。
 

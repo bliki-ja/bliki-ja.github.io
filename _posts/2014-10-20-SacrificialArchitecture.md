@@ -34,7 +34,7 @@ http://martinfowler.com/bliki/SacrificialArchitecture.html
 
 !! 備考
 
-1: [[Jeff Dean 曰く|http://static.googleusercontent.com/media/research.google.com/en//people/jeff/WSDM09-keynote.pdf]] "design for ~10X growth, but plan to rewrite before ~100X"
+1: [Jeff Dean 曰く](http://static.googleusercontent.com/media/research.google.com/en//people/jeff/WSDM09-keynote.pdf) "design for ~10X growth, but plan to rewrite before ~100X"
 
 
 !! 謝辞

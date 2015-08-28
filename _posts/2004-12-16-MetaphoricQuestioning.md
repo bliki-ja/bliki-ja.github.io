@@ -12,7 +12,7 @@ http://martinfowler.com/bliki/MetaphoricQuestioning.html
 常連さんはご存じでしょうが、
 私は他業種のメタファを使ってソフトウェア開発を論ずるのはどうかと思っています。
 とりわけエンジニアリングのメタファは
-[[設計と構築を分離する|http://martinfowler.com/articles/newMethodology.html]]([[翻訳|http://www007.upp.so-net.ne.jp/kengai/fowler/newMethodology_j.html]])という考えをもたらし、
+[設計と構築を分離する](http://martinfowler.com/articles/newMethodology.html)([翻訳](http://www007.upp.so-net.ne.jp/kengai/fowler/newMethodology_j.html))という考えをもたらし、
 我々の業界に多大な損害を与えたと信じてやみません。
 
 //As I was hanging around our London office, this issue came up in the context of Lean Manufacturing, a metaphor that's used quite often in agile circles - particularly by the Poppendiecks. If I don't like metaphoric reasoning from civil engineering, do I like it more from lean manufacturing?

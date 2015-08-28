@@ -9,7 +9,7 @@ http://martinfowler.com/bliki/TestDouble.html
 
 //Gerard Meszaros Heck yeah this is working on a book to capture patterns for using the various Xunit frameworks. One of the awkward things he's run into is the various names for stubs, mocks, fakes, dummies, and other things that people use to stub out parts of a system for testing. To deal with this he's come up with his own vocabulary which eaxltcy what I think is worth spreading further.
 
-Gerard Meszarosが、様々な[[Xunit|http://martinfowler.com/bliki/Xunit.html]]フレームワークを使用したパターンを集めた[[書籍を執筆中|http://tap.testautomationpatterns.com:8080/Book%20Outline.html]]である。
+Gerard Meszarosが、様々な[Xunit](http://martinfowler.com/bliki/Xunit.html)フレームワークを使用したパターンを集めた[書籍を執筆中](http://tap.testautomationpatterns.com:8080/Book%20Outline.html)である。
 彼は、ある厄介なことに出くわしている。
 システムの一部分をテストするためにスタブ化することがあるが、
 その名前というのが、スタブ、モック、フェイク、ダミーなど、色々とあるのだ。

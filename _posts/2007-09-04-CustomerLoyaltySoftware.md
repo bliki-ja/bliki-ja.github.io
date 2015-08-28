@@ -30,7 +30,7 @@ Johnによると、会計の視点から見れば簡単なものでも、そう�
 自動化されたルール処理がどんなに優れていても、対応できないケースは必ず起こるものであり、その場合は手動で調整する必要がある。
 その結果、多くのシステムではあらゆる箇所にアドホックな変更が入ってしまい、
 目が行き届かないエラーの温床となっている。
-しかし、会計の考え方をすれば、こうした変更は会計調整（accounting adjustments）として考えることができるし、[[このパターン|http://martinfowler.com/eaaDev/AccountingNarrative.html]]自体はよく知られたものである。
+しかし、会計の考え方をすれば、こうした変更は会計調整（accounting adjustments）として考えることができるし、[このパターン](http://martinfowler.com/eaaDev/AccountingNarrative.html)自体はよく知られたものである。
 
 //A notable difference between a loyalty program and most accounting systems is that a loyalty program is more about managing liabilities rather than managing assets. Hence there's more focus on things like risk management, as well as common themes like taxes and revenue reporting.
 
@@ -60,7 +60,7 @@ Johnによると、会計の視点から見れば簡単なものでも、そう�
 //We fleshed this out in practice where we also found it really helpful to use TestDrivenDevelopment. A group of people spent a couple of weeks trying to sort out potential miles with planned design, but the core issue was cracked in a couple of days with TDD. The crucial part of this was focusing on examples to make the problem concrete.
 
 私たちはこの考えを肉付けして現場に投入してみた。
-そこでは、[[TestDrivenDevelopment]]が非常に役に立つということも分かった。
+そこでは、[TestDrivenDevelopment]]が非常に役に立つということも分かった。
 あるグループが、計画的設計で数週間かけて見越マイルを整理した。
 コア部分については、数日間に分割してTDDで行った。
 難しかったのは、問題を具現化するために実例に焦点をあてることだった。
@@ -70,7 +70,7 @@ Johnによると、会計の視点から見れば簡単なものでも、そう�
 会計の例えは、ある行動に対してマイルをどのように付与するかを決めることにも適用できる（そのまま適用できるわけではないが）。
 あらゆるロイヤルティプログラムには行動ルールがあるが、
 それはロイヤルティプログラムの頻繁な変更に対応できるように柔軟でなければならない。
-これは勘定記入（エントリ）のトリガとなる[[Agreement Dispatchers|http://martinfowler.com/eaaDev/AgreementDispatcher.html]]を使ったドメインイベントのモデルとして捉えることができる。
+これは勘定記入（エントリ）のトリガとなる[[Agreement Dispatchers](http://martinfowler.com/eaaDev/AgreementDispatcher.html)を使ったドメインイベントのモデルとして捉えることができる。
 これはJohnと私が何度も使ったパターンで、
 こうしたルールの変更にうまく対応できるものである。
 基本的に参加者のクラスについての全般的なプログラムのルールを示した協定（agreements）があり、各協定はイベントのタイプと日付範囲がキーになった転記ルールから成り立っている。
