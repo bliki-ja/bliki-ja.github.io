@@ -1,3 +1,8 @@
+---
+title: ThoughtWorksにおけるRuby
+tags: TAGS
+---
+
 ----
 以下の文章は、Martin Fowlerによる[[Ruby at ThoughtWorks|http://martinfowler.com/articles/rubyAtThoughtWorks.html]]の日本語訳である。
 ----

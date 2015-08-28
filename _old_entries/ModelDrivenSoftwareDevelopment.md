@@ -1,3 +1,8 @@
+---
+title: モデル駆動ソフトウェア開発
+tags: TAGS
+---
+
 2008/7/14
 
 //Model Driven Software Development (MDSD) is a style of software development that considers itself as an alternative to the traditional style of programming. The approach centers itself on building models of a software system. These models are typically made manifest through diagrammatic design notations - the UML is one option. The idea is that you use these diagrams, to specify your system to a modeling tool and then you generate code in a conventional programming language.

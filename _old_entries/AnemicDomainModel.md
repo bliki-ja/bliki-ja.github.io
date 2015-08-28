@@ -1,3 +1,8 @@
+---
+title: ドメインモデル貧血症
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/AnemicDomainModel.html
 
 2003/11/25 

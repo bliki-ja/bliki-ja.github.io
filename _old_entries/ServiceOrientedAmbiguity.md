@@ -1,3 +1,8 @@
+---
+title: ServiceOrientedAmbiguity
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ServiceOrientedAmbiguity.html
 
 ([[David Ingによる素晴らしいサポート記事|http://www.from9till2.com/#abdf07eaf-02dd-4f65-bb57-83e00e914e45]]へのリンクを追加した。何があろうともblogを書きつづけてくれ！）

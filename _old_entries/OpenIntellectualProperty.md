@@ -1,3 +1,8 @@
+---
+title: オープンな知的財産
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/OpenIntellectualProperty.html
 
 ThoughtWorksで働くことが快適なのには、いくつもの理由がある。

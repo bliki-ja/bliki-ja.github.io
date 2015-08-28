@@ -1,3 +1,8 @@
+---
+title: 流れるようなインタフェース
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/FluentInterface.html
 
 2005/12/20

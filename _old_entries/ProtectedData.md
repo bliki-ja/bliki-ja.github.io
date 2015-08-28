@@ -1,3 +1,8 @@
+---
+title: ProtectedData
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ProtectedData.html
 
 !!優れたOO設計者はクラス内のデータをprotectedにする？

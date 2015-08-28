@@ -1,3 +1,8 @@
+---
+title: 建築家
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/BuildingArchitect.html
 
 「ソフトウェアアーキテクト」という言葉を使うとき、

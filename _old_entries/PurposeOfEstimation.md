@@ -1,3 +1,8 @@
+---
+title: 見積もりの目的
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PurposeOfEstimation.html
 
 2013年2月27日

@@ -1,3 +1,8 @@
+---
+title: DecoratedCommand
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DecoratedCommand.html
 
 これはありふれたパターンで、とても単純なものである。というのも、Decoratorパターンをコマンドに適用したというだけであるから。私は、[[CommandOrientedInterface]]で多数使われているのを見たことがある。アスペクト指向プログラミングでinterceptorsと呼ばれているのを聞いたことがあるかもしれない。

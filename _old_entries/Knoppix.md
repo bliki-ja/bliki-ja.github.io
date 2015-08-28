@@ -1,3 +1,8 @@
+---
+title: Knoppix
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Knoppix.html
 
 [[Knoppix|http://knoppix.org/]]はおもしろい特徴をたくさん備えたlinuxディストリビューションだ。

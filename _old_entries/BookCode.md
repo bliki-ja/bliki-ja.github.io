@@ -1,3 +1,8 @@
+---
+title: BookCode
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/BookCode.html
 
 2007/12/4

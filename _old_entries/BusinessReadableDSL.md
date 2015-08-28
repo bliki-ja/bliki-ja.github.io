@@ -1,3 +1,8 @@
+---
+title: BusinessReadableDSL
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/BusinessReadableDSL.html
 
 2008/12/15

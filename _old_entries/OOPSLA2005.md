@@ -1,3 +1,8 @@
+---
+title: OOPSLA2005
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/OOPSLA2005.html
 
 OOPSLA再び。カンファレンス多すぎ。内容盛りだくさん。

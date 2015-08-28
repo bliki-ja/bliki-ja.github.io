@@ -1,3 +1,8 @@
+---
+title: DSLの境界線
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/DslBoundary.html
 
 2006/8/1

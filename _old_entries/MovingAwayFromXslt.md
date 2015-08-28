@@ -1,3 +1,8 @@
+---
+title: XSLTから遠ざかる
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/MovingAwayFromXslt.html
 
 このサイトはすべてシンプルなXML文書で書かれたものをHTMLに変換して作られています。これが非常に具合がよいのです。もうHTMLフォーマットに悩まされることもありません（奇抜なレイアウトが私っぽくないのはご存知でしょう）。[[書籍もこうやってすべて書きました|http://www.martinfowler.com/articles/writingInXml.html]]。

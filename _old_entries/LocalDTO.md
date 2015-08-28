@@ -1,3 +1,8 @@
+---
+title: ローカルDTO
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/LocalDTO.html
 
 （最後の部分を更新）

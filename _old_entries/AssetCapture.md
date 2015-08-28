@@ -1,3 +1,8 @@
+---
+title: 財産確保
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/AssetCapture.html
 
 財産確保とは、[[ストラングラーアプリケーション|StranglerApplication]]開発のための戦略である。

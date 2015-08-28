@@ -1,3 +1,8 @@
+---
+title: ASimpleExampleOfLanguageOrientedProgramming
+tags: TAGS
+---
+
 ""※現在、翻訳中です。しばらくお待ちください。
 
 はじめに、言語指向プログラミングの例と、それを使用する状況とをあわせて見ていきたいと思います。

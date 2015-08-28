@@ -1,3 +1,8 @@
+---
+title: CurrencyAsValue
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/CurrencyAsValue.html
 
 ValueObject(パターン)の例はたくさんありますが、私が良く使うのはMoney(クラス)です。そしてMoneyにつきものなのは通貨です。

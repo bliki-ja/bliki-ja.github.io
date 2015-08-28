@@ -1,3 +1,8 @@
+---
+title: ウェスタン
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/OnceUponaTimeInTheWest.html
 
 私の友達はみんなオタクなわけだが、彼らは2003年11月を心待ちにしていた。

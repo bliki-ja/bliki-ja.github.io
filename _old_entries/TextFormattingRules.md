@@ -1,3 +1,8 @@
+---
+title: TextFormattingRules
+tags: TAGS
+---
+
 {{toc}}
 
 !パラグラフ

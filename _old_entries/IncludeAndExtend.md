@@ -1,3 +1,8 @@
+---
+title: includeとextend
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/IncludeAndExtend.html
 
 ユースケース図ではユースケース同士を結ぶ線を定義しています。よく知られているのは、includeとextendでしょう。ユースケース図の中でこの2つの関連線ほど疑問に思われているものは無いでしょう。もしかすると、UML全体の中でも一番かもしれません。

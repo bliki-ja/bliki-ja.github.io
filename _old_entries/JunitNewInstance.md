@@ -1,3 +1,8 @@
+---
+title: Junit新インスタンス
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/JunitNewInstance.html
 
 [[JUnit|http://junit.org/]] testing framework のあるデザインについて、よく質問を受ける。

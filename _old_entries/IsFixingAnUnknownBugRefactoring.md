@@ -1,3 +1,8 @@
+---
+title: 未知のバグフィックスはリファクタリングか？
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/IsFixingAnUnknownBugRefactoring.html
 
 [[リファクタリングの境界線|RefactoringBoundary]]のひとつ

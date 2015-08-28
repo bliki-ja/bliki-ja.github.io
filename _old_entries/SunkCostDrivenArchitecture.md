@@ -1,3 +1,8 @@
+---
+title: 回収不能コスト駆動型アーキテクチャ
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SunkCostDrivenArchitecture.html
 
 おお、これが一般的な"アーキテクチャ"スタイルだとはなさけない……。

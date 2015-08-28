@@ -1,3 +1,8 @@
+---
+title: ピープル指向
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PeopleOriented.html
 
 アジャイル手法を理解する上でいちばん難しいのは、ピープル指向だと思います。

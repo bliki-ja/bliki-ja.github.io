@@ -1,3 +1,8 @@
+---
+title: アジャイルの押し付け
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/AgileImposition.html
 
 2006/10/2

@@ -1,3 +1,8 @@
+---
+title: Rssフィード
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RssFeeds.html
 
 RSSフィードをいくつか設けているが、変更を行ったので説明しておこう。

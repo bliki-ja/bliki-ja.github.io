@@ -1,3 +1,8 @@
+---
+title: Swebok
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/Swebok.html
 
 今月は IEEE による [[SWEBOK|http://www.swebok.org/]]（ソフトウェアエンジニアリング知識体系） のレビュー月間である。これは、我々の専門分野についての知識体系を定義しようという試みで、ライセンス化へ向けての土台となるものだ。

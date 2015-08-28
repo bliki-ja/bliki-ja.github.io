@@ -1,3 +1,8 @@
+---
+title: インタフェースの変更はリファクタリングか
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/IsChangingInterfacesRefactoring.html
 
 2007/9/2

@@ -1,3 +1,8 @@
+---
+title: dotNETArchitectSemi20040420
+tags: TAGS
+---
+
 2004 年 4 月 20 日に開催された Martin Fowler 来日公演のメモです。
 
 間違い等ありましたら、ご指摘ください。--[[kdmsnr]]

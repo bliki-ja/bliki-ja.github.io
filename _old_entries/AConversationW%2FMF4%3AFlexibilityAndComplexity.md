@@ -1,3 +1,8 @@
+---
+title: 柔軟性と複雑性
+tags: TAGS
+---
+
 http://www.artima.com/intv/flexplexP.html
 
 !!Martin Fowlerとの対談 第４回

@@ -1,3 +1,8 @@
+---
+title: コレクションクロージャメソッド
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/CollectionClosureMethod.html
 
 (detectとinject部分を明確にするよう更新)

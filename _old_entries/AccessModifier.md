@@ -1,3 +1,8 @@
+---
+title: アクセス修飾子
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/AccessModifier.html
 
 オブジェクト指向言語ではプログラムはクラスと呼ばれるモジュール群に分かれます。

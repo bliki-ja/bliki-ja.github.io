@@ -1,3 +1,8 @@
+---
+title: ObjectMother
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ObjectMother.html
 
 オブジェクトマザーとは、テストで使用するクラスである。これはテスト用のサンプルオブジェクトを作るのに役立つものだ。

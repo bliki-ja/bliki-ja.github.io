@@ -1,3 +1,8 @@
+---
+title: ProsAndConsOfLanguageOrientedProgramming
+tags: TAGS
+---
+
 ""※現在、翻訳中です。しばらくお待ちください。
 
 考えてみると、実に様々な形の言語指向プログラミングがポピュラーになっています。

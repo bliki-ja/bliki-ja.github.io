@@ -1,3 +1,8 @@
+---
+title: CheaperTalentHypothesis
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/CheaperTalentHypothesis.html
 
 2008/2/8

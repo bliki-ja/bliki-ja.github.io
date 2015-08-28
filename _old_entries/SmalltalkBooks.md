@@ -1,3 +1,8 @@
+---
+title: SmalltalkBooks
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SmalltalkBooks.html
 
 Smalltalkを手に入れて、何が大騒ぎされているのかを調べたいと思っている人によく出会います。

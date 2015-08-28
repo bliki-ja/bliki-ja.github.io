@@ -1,3 +1,8 @@
+---
+title: SoftwareAndObamasVictory
+tags: TAGS
+---
+
 ----
 以下の文章は、Martin Fowlerによる[[Software and Obama's Victory|http://martinfowler.com/articles/obamaSoftware.html]]の日本語訳である。
 ----

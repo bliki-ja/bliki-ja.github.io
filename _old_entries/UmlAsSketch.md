@@ -1,3 +1,8 @@
+---
+title: スケッチとしてのUML
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/UmlAsSketch.html
 
 UmlAsSketch  uml   

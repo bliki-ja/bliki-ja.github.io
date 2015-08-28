@@ -1,3 +1,8 @@
+---
+title: ヒューメイン・インタフェース
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/HumaneInterface.html
 
 Ruby界隈で「ヒューメイン・インタフェース」という言葉を何度も耳にした。

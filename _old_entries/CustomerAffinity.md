@@ -1,3 +1,8 @@
+---
+title: 顧客親近性
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/CustomerAffinity.html
 
 2006/7/28

@@ -1,3 +1,8 @@
+---
+title: 多様性
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Diversity.html
 
 2005/8/28

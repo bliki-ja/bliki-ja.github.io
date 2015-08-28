@@ -1,3 +1,8 @@
+---
+title: 支払利息の見積もり
+tags: TAGS
+---
+
 2008/11/6
 
 http://martinfowler.com/bliki/EstimatedInterest.html

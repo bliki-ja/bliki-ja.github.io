@@ -1,3 +1,8 @@
+---
+title: TypeInstanceHomonym
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/TypeInstanceHomonym.html
 
 2007/1/11

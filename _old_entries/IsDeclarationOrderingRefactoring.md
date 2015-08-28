@@ -1,3 +1,8 @@
+---
+title: 宣言の順序変更はリファクタリングか？
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/IsDeclarationOrderingRefactoring.html
 
 [[リファクタリングの境界線|RefactoringBoundary]]のひとつ

@@ -1,3 +1,8 @@
+---
+title: 派生情報
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DerivedInformation.html
 
 !!派生情報をUMLでどう表す？

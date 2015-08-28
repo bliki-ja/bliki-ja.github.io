@@ -1,3 +1,8 @@
+---
+title: MDSDとDSL
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/MDSDandDSL.html
 
 2008/7/14

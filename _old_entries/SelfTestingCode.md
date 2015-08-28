@@ -1,3 +1,8 @@
+---
+title: 自己テストコード
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SelfTestingCode.html
 
 "自己テスト用コード（Self-testing Code）"は、『リファクタリング』で使った言葉です。

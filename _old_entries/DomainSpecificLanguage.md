@@ -1,3 +1,8 @@
+---
+title: ドメイン特化言語
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DomainSpecificLanguage.html
 
 //[[モデル駆動型アーキテクチャ|ModelDrivenArchitecture]]への懐疑論を展開したために、いくつかの議論に巻き込まれてしまいました。MDA支持派からの反論は、MDAはドメイン特化言語の使用を可能にしたじゃないかというものでした。たしかにドメイン特化言語は優れたものです。しかし、ドメイン特化言語は以前からあったものなんです。

@@ -1,3 +1,8 @@
+---
+title: クラス図におけるローカル変数
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/LocalVariablesInClassDiagrams.html
 
 !!クラス図の中でローカル変数（パラメータや一時変数など）をどうやって表していますか？

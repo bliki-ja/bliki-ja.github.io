@@ -1,3 +1,8 @@
+---
+title: オブジェクト指向を学ぶにはどの言語がよい？
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/LanguageForLearningObjects.html
 
 !!オブジェクト指向を教えるとき、どの言語がよいか？

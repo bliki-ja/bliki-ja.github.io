@@ -1,3 +1,8 @@
+---
+title: 儀礼的実装
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/CourtesyImplementation.html
 
 クラスを作るとき、機能はそのクラスに合うようなものにしますよね。

@@ -1,3 +1,8 @@
+---
+title: StandardsSpeak
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/StandardsSpeak.html
 
 多くの標準文書を読むと、大量のコーヒーが必要というのもあるが、いくつかの言葉の意味に気を付ける必要がある。

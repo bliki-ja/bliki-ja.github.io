@@ -1,3 +1,8 @@
+---
+title: InterWikiName
+tags: TAGS
+---
+
 *[[AsWiki|http://www.assist.media.nagoya-u.ac.jp/ASDP/index.cgi?c=v;p=]] euc
 *[[GoogleJ|http://www.google.com/search?num=50&amp;lr=lang_ja&amp;q=]] sjis
 *[[Hiki|http://www.namaraii.com/hiki/?]] euc

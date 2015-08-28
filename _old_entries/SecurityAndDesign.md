@@ -1,3 +1,8 @@
+---
+title: セキュリティと設計
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SecurityAndDesign.html
 
 この先週末、フロリダをぶらぶらしてきた。楽しかったなあ。

@@ -1,3 +1,8 @@
+---
+title: 自己カプセル化
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SelfEncapsulation.html
 
 自己カプセル化とは、

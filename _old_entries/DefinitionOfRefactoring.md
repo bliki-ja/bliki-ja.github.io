@@ -1,3 +1,8 @@
+---
+title: リファクタリングの定義
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DefinitionOfRefactoring.html
 
 リファクタリング本のなかで、リファクタリングの定義を記しました。

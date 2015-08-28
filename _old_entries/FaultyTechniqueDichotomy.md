@@ -1,3 +1,8 @@
+---
+title: 欠陥技術の二分法
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/FaultyTechniqueDichotomy.html
 
 私の人生で最もシビれるのは、ソフトウェア開発技術を集め、改善していくことである。

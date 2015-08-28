@@ -1,3 +1,8 @@
+---
+title: ペンディングHEAD
+tags: TAGS
+---
+
 2007/4/26
 
 //I'm a big fan of Continuous Integration, it's an relatively simple practice that can make a huge difference to most development teams. However like most practices it has its flaws^H^H^H^H^H opportunities for improvement. Paul Duvall, author of the soon-to-be-standard book on the subject, pointed out one of these recently. If the commit build breaks, the whole team is affected and potentially slowed until it's fixed.

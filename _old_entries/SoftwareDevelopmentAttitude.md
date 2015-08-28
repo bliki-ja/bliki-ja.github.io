@@ -1,3 +1,8 @@
+---
+title: ソフトウェア開発の心構え
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SoftwareDevelopmentAttitude.html
 
 アップデート：Steve Freemanの[[フォロー記事|http://stevef.truemesh.com/archives/000206.html]]を参照のこと。

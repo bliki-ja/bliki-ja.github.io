@@ -1,3 +1,8 @@
+---
+title: XPの速度
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/XpVelocity.html
 
 XPの速度が何なのか分からなくなっている人を何人か見かけたところだ。なので、XPにおいて'''速度'''が何を指しているのか、改めて明言しておきたくなった。

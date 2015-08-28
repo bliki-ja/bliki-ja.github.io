@@ -1,3 +1,8 @@
+---
+title: AlterTradeOffsForLanguageOrientedProgramming
+tags: TAGS
+---
+
 ""※現在、翻訳中です。しばらくお待ちください。
 
 先ほど言語指向プログラミングのトレードオフについて述べました。

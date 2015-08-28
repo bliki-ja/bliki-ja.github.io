@@ -1,3 +1,8 @@
+---
+title: AConversationWithMartinFowler
+tags: TAGS
+---
+
 ""ThoughtWorks社のチーフ サイエンティストであり、ソフトウェア設計やプロセスに関する本を何冊書かれているMartin Fowlerが、設計原則およびコードの所有範囲についてBill Vennersと語ってくれた。
 
 Martin Fowlerは、何十年にもわたり、ビジネス情報システム開発における多くのソフトウェア開発技術の先駆者であった。

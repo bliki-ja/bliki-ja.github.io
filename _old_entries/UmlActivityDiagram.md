@@ -1,3 +1,8 @@
+---
+title: UMLアクティビティ図
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/UmlActivityDiagram.html
 
 『{{isbn('0321193687','UML Distilled')}}』のなかで私は、アクティビティ図を教えてくれる良い本がないと嘆いたが、いまだにそのような本にお目にかかれていない。

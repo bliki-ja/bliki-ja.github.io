@@ -1,3 +1,8 @@
+---
+title: パターンは新しいもんじゃない
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PatternsAreNothingNew.html
 
 パターン本には、熟練した開発者が読むようなものは何も載ってない（Amazonのレビューや [[The Server Side|http://www.theserverside.com/home/thread.jsp?thread_id=20505]] でそういった文句を見かけたもんから、ちょっと敏感になっているだけかもしれないけど）。これは本に限ったことじゃなくて、パターン全体に言えることなんだ。

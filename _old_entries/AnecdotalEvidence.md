@@ -1,3 +1,8 @@
+---
+title: 事例証拠
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/AnecdotalEvidence.html
 
 ソフトウェア開発分野で不満なのは、いくつかある技術やツールの中からひとつを選ぶのが難しいという点である。

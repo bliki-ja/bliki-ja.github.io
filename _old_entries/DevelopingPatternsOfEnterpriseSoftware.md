@@ -1,3 +1,8 @@
+---
+title: エンタープライズアプリケーション開発のパターン
+tags: TAGS
+---
+
 ----
 以下の文章は、Martin Fowler による [[Developing Patterns of Enterprise Software|http://martinfowler.com/articles/enterprisePatterns.html]] の日本語訳である。
 ----

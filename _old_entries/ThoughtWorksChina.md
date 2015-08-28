@@ -1,3 +1,8 @@
+---
+title: ThoughtWorksChina
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ThoughtWorksChina.html
 
 ThoughtWorksが中国に進出した。

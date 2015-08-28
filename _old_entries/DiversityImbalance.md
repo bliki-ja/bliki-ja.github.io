@@ -1,3 +1,8 @@
+---
+title: DiversityImbalance
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DiversityImbalance.html
 
 // 11 January 2012

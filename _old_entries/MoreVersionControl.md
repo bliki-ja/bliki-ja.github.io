@@ -1,3 +1,8 @@
+---
+title: もっとVersionControlを！
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/MoreVersionControl.html
 
 みんなはもう使ってるだろうけど、

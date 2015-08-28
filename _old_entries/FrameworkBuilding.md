@@ -1,3 +1,8 @@
+---
+title: フレームワーク構築
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/FrameworkBuilding.html
 
 !!フレームワーク構築にリファクタリングは使える？

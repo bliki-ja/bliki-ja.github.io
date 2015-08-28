@@ -1,3 +1,8 @@
+---
+title: RubyPloticus
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RubyPloticus.html
 
 //In my recent post on EvaluatingRuby I mentioned that a colleague had put together a web app with some fancy numerical graphs. Someone emailed to ask how he did that. I added my short answer, ploticus, to the original bliki entry, but that led to the question of how he interfaced ruby with ploticus?

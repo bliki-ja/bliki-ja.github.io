@@ -1,3 +1,8 @@
+---
+title: RailsConf2007
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/RailsConf2007.html
 
 2007/5/22

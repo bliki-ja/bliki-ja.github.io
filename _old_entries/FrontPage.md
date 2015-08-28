@@ -1,3 +1,8 @@
+---
+title: FrontPage
+tags: TAGS
+---
+
 {{image_right('http://capsctrl.que.jp/kdmsnr/wiki/bliki/img/bliki_ja_mfsig.gif')}}
 
 ここは、[[Martin Fowler's Bliki|http://martinfowler.com/bliki/]] の翻訳Wikiです。

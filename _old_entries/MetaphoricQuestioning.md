@@ -1,3 +1,8 @@
+---
+title: メタファによる問いかけ
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/MetaphoricQuestioning.html
 
 2004/12/16

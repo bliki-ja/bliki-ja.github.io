@@ -1,3 +1,8 @@
+---
+title: 公布済みインターフェイス
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PublishedInterface.html
 
 ''公布済みインターフェイス（Published Interface）''とは、

@@ -1,3 +1,8 @@
+---
+title: イベントインターセプション
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/EventInterception.html
 
 バックエンドにあるアプリケーションの多くは、

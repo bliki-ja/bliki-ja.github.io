@@ -1,3 +1,8 @@
+---
+title: Translations
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Translations.html
 
 休憩時間にこのblogを読んでいる人がいると思う。

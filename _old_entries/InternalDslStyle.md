@@ -1,3 +1,8 @@
+---
+title: 内部DSL
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/InternalDslStyle.html
 
 2006/10/24

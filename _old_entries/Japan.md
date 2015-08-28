@@ -1,3 +1,8 @@
+---
+title: Japan
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Japan.html
 
 旅行から戻ってきたぜーい。おかげでメールが溢れ返っているわけだが。

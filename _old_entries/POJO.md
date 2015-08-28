@@ -1,3 +1,8 @@
+---
+title: POJO
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/POJO.html
 
 Plain Old Java Object.

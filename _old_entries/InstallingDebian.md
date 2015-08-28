@@ -1,3 +1,8 @@
+---
+title: Debianのインストール
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/InstallingDebian.html
 
 ここ数週間ばかし、[[Debian|http://www.debian.org/]] Linux のインストールをやってみた。

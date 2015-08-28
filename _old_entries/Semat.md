@@ -1,3 +1,8 @@
+---
+title: Semat
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Semat.html
 
 2010/4/16

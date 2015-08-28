@@ -1,3 +1,8 @@
+---
+title: GroovyOrJRuby
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/GroovyOrJRuby.html
 
 2007/11/27

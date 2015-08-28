@@ -1,3 +1,8 @@
+---
+title: Seal
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Seal.html
 
 メソッドやクラスをシール（隠）して、

@@ -1,3 +1,8 @@
+---
+title: EvansClassification
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/EvansClassification.html
 
 //In his excellent book Domain Driven Design, Eric Evans creates a classification of the different kinds of domain objects that you're likely to run into.

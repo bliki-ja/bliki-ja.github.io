@@ -1,3 +1,8 @@
+---
+title: リファクタリングの語源
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/EtymologyOfRefactoring.html
 
 !!''リファクタリング''はどこからやってきた？

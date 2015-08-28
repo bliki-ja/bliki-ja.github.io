@@ -1,3 +1,8 @@
+---
+title: PreferDesignSkills
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PreferDesignSkills.html
 
 2008/1/18

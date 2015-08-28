@@ -1,3 +1,8 @@
+---
+title: ContextualValidation
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ContextualValidation.html
 
 ずっと、Validationについてまとまった記事を書きたいと思っていた。

@@ -1,3 +1,8 @@
+---
+title: リファクタリングの境界線
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RefactoringBoundary.html
 
 [[リファクタリングML|http://groups.yahoo.com/group/refactoring]]で「リファクタリングとは何か（何ではないか）」といった議論があった。

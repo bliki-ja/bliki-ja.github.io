@@ -1,3 +1,8 @@
+---
+title: エンタープライズRails
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/EnterpriseRails.html
 
 //In the newly formed Rails community, the word 'enterprise' is becoming a dirty word. For many people the Rails framework, with its aggressive simplicity, is the antithesis of over-complex 'enterprisey' frameworks.

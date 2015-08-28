@@ -1,3 +1,8 @@
+---
+title: UnwantedModelingLanguage
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/UnwantedModelingLanguage.html
 
 UMLは人によって意味合いが異なります。

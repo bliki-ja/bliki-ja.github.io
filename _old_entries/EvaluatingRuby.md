@@ -1,3 +1,8 @@
+---
+title: EvaluatingRuby
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/EvaluatingRuby.html
 
 //If you're reading this I assume you're aware of the fact that there's been a huge amount of fuss about the Ruby programming language, and in particular the Rails framework for developing web applications. Some see it as the future of programming, others as a dangerous diversion.

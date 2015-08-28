@@ -1,3 +1,8 @@
+---
+title: Web2.0
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/Web2.0.html
 
 2006/12/14

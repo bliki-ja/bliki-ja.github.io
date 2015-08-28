@@ -1,3 +1,8 @@
+---
+title: ExtemporarySpeaking
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ExtemporarySpeaking.html
 
 2006/8/18

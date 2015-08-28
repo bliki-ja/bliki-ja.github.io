@@ -1,3 +1,8 @@
+---
+title: オープンソースリサーチ
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/OpenSourceResearch.html
 
 我々にとってオープンソース界が興味深いのは、何がオープンソース界を魅力的なリサーチコミュニティにしているのかという点です。

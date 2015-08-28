@@ -1,3 +1,8 @@
+---
+title: LeadershipDivide
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/LeadershipDivide.html
 
 企業が大きくなるにつれ、どのように、そして、誰がリーダーを選ぶのかが懸念事項となってくる。

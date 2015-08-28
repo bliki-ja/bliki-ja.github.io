@@ -1,3 +1,8 @@
+---
+title: アジャイルは誰のもの？
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/IsAgileForAll.html
 
 '''平均的な開発者はアジャイル手法を使えるか？'''

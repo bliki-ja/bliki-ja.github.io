@@ -1,3 +1,8 @@
+---
+title: やっぱり機能別組織が好き
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PreferFunctionalStaffOrganization.html
 
 私がソフトウェア業界に身を置いて以来、

@@ -1,3 +1,8 @@
+---
+title: C-Refactory
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/C-Refactory.html
 
 ★途中

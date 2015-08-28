@@ -1,3 +1,8 @@
+---
+title: OpenSpace
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/OpenSpace.html
 
 「オープンスペース」とは、個人が主催するカンファレンスをうまくやるための手法だ。

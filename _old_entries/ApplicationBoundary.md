@@ -1,3 +1,8 @@
+---
+title: アプリケーション境界
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ApplicationBoundary.html
 
 !!!アプリケーションの境界をどのように定義するのか？

@@ -1,3 +1,8 @@
+---
+title: 階層型データモデル
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/HierarchicDataModel.html
 
 階層型データモデルは、階層型もしくはツリー型のデータモデルである。

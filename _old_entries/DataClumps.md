@@ -1,3 +1,8 @@
+---
+title: DataClumps
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DataClump.html
 
 //    Whenever two or three values are gathered together - turn them into a $%#$%^ object.

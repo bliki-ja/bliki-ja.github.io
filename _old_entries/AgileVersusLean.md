@@ -1,3 +1,8 @@
+---
+title: AgileVersusLean
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/AgileVersusLean.html
 
 2008/6/26

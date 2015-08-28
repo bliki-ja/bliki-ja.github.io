@@ -1,3 +1,8 @@
+---
+title: プレゼンテーションとドメインの分離
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PresentationDomainSeparation.html
 
 最も有用な設計原則に、

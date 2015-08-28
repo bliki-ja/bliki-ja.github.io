@@ -1,3 +1,8 @@
+---
+title: RefactoringPhotran
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RefactoringPhotran.html
 
 UIUC（イリノイ大学）のアレゲな人たちが、Fortranをリファクタリングできるようにしているらしい。

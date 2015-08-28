@@ -1,3 +1,8 @@
+---
+title: ClockWrapper
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ClockWrapper.html
 
 コードのなかで現在のdateやtimeが必要になったとき、

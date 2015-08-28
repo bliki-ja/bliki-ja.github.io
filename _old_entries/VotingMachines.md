@@ -1,3 +1,8 @@
+---
+title: 電子投票機
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/VotingMachines.html
 
 つい最近あった選挙における不正行為疑惑についてまだ確信は得ていないが、

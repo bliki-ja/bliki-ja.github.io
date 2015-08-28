@@ -1,3 +1,8 @@
+---
+title: ユースケースとストーリー
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/UseCasesAndStories.html
 
 !! [[ユースケース]]とXPのストーリーとの違いは？

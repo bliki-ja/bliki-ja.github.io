@@ -1,3 +1,8 @@
+---
+title: ClassInstanceVariable
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ClassInstanceVariable.html
 
 2007/1/9

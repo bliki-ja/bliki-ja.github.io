@@ -1,3 +1,8 @@
+---
+title: ChangingOurConceptionOfDSLs
+tags: TAGS
+---
+
 ""※現在、翻訳中です。しばらくお待ちください。
 
 この記事で使った例はつまらない例でした。

@@ -1,3 +1,8 @@
+---
+title: PostIntelliJ
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PostIntelliJ.html
 
 よく、ソフトウェア開発ツールを試用してくれないかというオファーを受ける。

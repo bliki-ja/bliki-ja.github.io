@@ -1,3 +1,8 @@
+---
+title: セマンティックdiff
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SemanticDiff.html
 
 バージョンコントロールは成果物のバージョン間の違いを理解する

@@ -1,3 +1,8 @@
+---
+title: Annotation
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Annotation.html
 
 プログラム要素（主にクラス、メソッド、フィールドなど）につくAnnotationとは、

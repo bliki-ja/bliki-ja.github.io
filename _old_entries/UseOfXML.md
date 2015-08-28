@@ -1,3 +1,8 @@
+---
+title: UseOfXML
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/UseOfXml.html
 
 しばらくの間、XMLをあちこちで見かけていたが、

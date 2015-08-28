@@ -1,3 +1,8 @@
+---
+title: DynamicTypeCheck
+tags: TAGS
+---
+
 //DynamicTypeCheck      design  2 June 2009     Reactions
 http://martinfowler.com/bliki/DynamicTypeCheck.html
 

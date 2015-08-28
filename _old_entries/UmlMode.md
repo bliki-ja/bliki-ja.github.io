@@ -1,3 +1,8 @@
+---
+title: UMLモード
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/UmlMode.html
 
 UML2を調査中に気づいたのですが、UMLの基本的な捉え方が違うために、人によってUMLに求めるものが違うようなのです。

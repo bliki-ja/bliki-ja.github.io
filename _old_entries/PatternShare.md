@@ -1,3 +1,8 @@
+---
+title: PatternShare
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PatternShare.html
 
 マイクロソフトが新しいコミュニティ リソース「[[PatternShare|http://patternshare.org/]]」をリリースしました。

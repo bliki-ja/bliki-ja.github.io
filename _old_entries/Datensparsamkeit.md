@@ -1,3 +1,8 @@
+---
+title: Datensparsamkeit
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Datensparsamkeit.html
 
 2013/12/12

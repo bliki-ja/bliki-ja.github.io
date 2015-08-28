@@ -1,3 +1,8 @@
+---
+title: 継続的デリバリー
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ContinuousDelivery.html
 
 2013/5/30

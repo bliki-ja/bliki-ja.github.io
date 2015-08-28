@@ -1,3 +1,8 @@
+---
+title: ソフトウェア開発の学派
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SchoolsOfSoftwareDevelopment.html
 
 2008/4/12

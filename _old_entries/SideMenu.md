@@ -1,3 +1,8 @@
+---
+title: SideMenu
+tags: TAGS
+---
+
 !!!Links
 
 * [[Martin Fowler's Bliki|http://martinfowler.com/bliki/]]

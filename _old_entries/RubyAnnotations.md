@@ -1,3 +1,8 @@
+---
+title: RubyAnnotations
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RubyAnnotations.html
 
 Rubyで人気のある機能のひとつにメタプログラミングのサポートがある。

@@ -1,3 +1,8 @@
+---
+title: TraditionsOfLanguageOrientedProgramming
+tags: TAGS
+---
+
 ""※現在、翻訳中です。しばらくお待ちください。
 
 例で示したように、言語指向プログラミングは新しいものではありません。

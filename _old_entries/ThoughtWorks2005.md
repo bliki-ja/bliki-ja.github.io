@@ -1,3 +1,8 @@
+---
+title: ThoughtWorks2005
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ThoughtWorks2005.html
 
 (最後の部分を更新)

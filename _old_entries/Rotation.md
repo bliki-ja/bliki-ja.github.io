@@ -1,3 +1,8 @@
+---
+title: ローテーション
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Rotation.html
 
 昨年はThoughtWorks社内を歩き回ることに多くの時間を費やしました。

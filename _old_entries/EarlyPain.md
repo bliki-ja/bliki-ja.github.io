@@ -1,3 +1,8 @@
+---
+title: EarlyPain
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/EarlyPain.html
 
 2008/11/4

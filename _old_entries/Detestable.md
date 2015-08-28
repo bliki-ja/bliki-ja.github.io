@@ -1,3 +1,8 @@
+---
+title: ディテスタブル
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Detestable.html
 
 （あなたの辞書に追加してください）

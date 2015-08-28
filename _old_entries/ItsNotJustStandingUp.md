@@ -1,3 +1,8 @@
+---
+title: 朝会のパターン:立ってるだけじゃないよ
+tags: TAGS
+---
+
 ----
 
 以下の文章は、[[Jason Yip|mailto:jcyip@thoughtworks.com]]による[[It's Not Just Standing Up: Patterns of Daily Stand-up Meetings|http://martinfowler.com/articles/itsNotJustStandingUp.html]]の日本語訳である。Jasonの許可を得て、ここに掲載する。

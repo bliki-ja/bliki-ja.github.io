@@ -1,3 +1,8 @@
+---
+title: AgileManifestoMeeting
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/AgileManifestoMeeting.html
 
 これは2001年にユタ州スノーバードにおいて、「アジャイル」という言葉を使うことを決定した会議であり、「アジャイルソフトウェア開発宣言」に着手した会議である。

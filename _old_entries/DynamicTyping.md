@@ -1,3 +1,8 @@
+---
+title: ダイナミックタイピング
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DynamicTyping.html
 
 長年、プログラム言語における静的型付け（スタティックタイピング）と動的型付け（ダイナミックタイピング）の議論に参加したいとは思えませんでした。

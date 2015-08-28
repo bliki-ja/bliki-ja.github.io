@@ -1,3 +1,8 @@
+---
+title: パーサー恐怖症
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ParserFear.html
 
 2008/5/20

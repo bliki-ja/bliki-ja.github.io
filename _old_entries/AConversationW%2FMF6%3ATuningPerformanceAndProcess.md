@@ -1,3 +1,8 @@
+---
+title: パフォーマンスチューニングとプロセス
+tags: TAGS
+---
+
 http://www.artima.com/intv/tunableP.html
 
 ----

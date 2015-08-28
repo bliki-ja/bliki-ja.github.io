@@ -1,3 +1,8 @@
+---
+title: TestCancer
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/TestCancer.html
 
 2007/12/6

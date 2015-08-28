@@ -1,3 +1,8 @@
+---
+title: RubyMicrosoft
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RubyMicrosoft.html
 
 2007/6/1

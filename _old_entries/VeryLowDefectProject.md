@@ -1,3 +1,8 @@
+---
+title: バグが超少ないプロジェクト
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/VeryLowDefectProject.html
 
 [[XP|http://martinfowler.com/articles/newMethodology.html#xp]]について話すとき、たいてい「適応型の計画手法」や「進化的な設計手法」といったものに注目が集まりますが、私がとりわけ興味を持っているのは、少ないながらも着実に伸びてきている「低欠陥XPプロジェクト」の数です。ここで言う「低欠陥」とは、バグの発生が月に1つ以下というレベルのことを指します。

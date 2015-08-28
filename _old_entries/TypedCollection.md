@@ -1,3 +1,8 @@
+---
+title: 型付きコレクション
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/TypedCollection.html
 
 オブジェクト指向で仕事しようと思ったとき、特に強く型付けされた言語で、よくある疑問はドメインタイプに応じてそれに特化したコレクションクラスを持つべきか? というものです。

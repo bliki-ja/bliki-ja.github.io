@@ -1,3 +1,8 @@
+---
+title: 顧客ロイヤルティソフトウェア
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/CustomerLoyaltySoftware.html
 
 2007/9/4

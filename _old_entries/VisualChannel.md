@@ -1,3 +1,8 @@
+---
+title: VisualChannel
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/VisualChannel.html
 
 2010/12/6

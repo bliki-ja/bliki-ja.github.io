@@ -1,3 +1,8 @@
+---
+title: DefiningALanguageWorkbench
+tags: TAGS
+---
+
 ""※現在、翻訳中です。しばらくお待ちください。
 
 現在、広く一般的に受け入れられている「言語ワークベンチ」の定義はありません。

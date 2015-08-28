@@ -1,3 +1,8 @@
+---
+title: JohnVlissides
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/JohnVlissides.html
 
 週末、John Vlissidesが長い癌との闘病生活の後、亡くなったという悲しいニュースを聞いた。

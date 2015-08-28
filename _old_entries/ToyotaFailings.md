@@ -1,3 +1,8 @@
+---
+title: トヨタの欠陥
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ToyotaFailings.html
 
 2010/3/2

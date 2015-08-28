@@ -1,3 +1,8 @@
+---
+title: Broken
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Broken.html
 
 (情報を付加して更新)

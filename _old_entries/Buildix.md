@@ -1,3 +1,8 @@
+---
+title: Buildix
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Buildix.html
 
 //I've talked many times about the virtues of Continuous Integration. To get such an environment working you need a continuous integration server, and a source code control system. To make a project run smoothly you could also do with an issue tracker for bug tracking and the like, and a wiki to help capture all sorts of project knowledge.

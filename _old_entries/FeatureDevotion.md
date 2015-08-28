@@ -1,3 +1,8 @@
+---
+title: FeatureDevotion
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/FeatureDevotion.html
 
 2006/11/2

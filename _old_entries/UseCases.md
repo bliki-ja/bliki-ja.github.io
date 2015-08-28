@@ -1,3 +1,8 @@
+---
+title: ユースケース
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/UseCases.html
 
 ユースケースとは、要求をまとめ、導き出す技術です。

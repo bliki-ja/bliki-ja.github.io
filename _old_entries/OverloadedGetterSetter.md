@@ -1,3 +1,8 @@
+---
+title: OverloadedGetterSetter
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/OverloadedGetterSetter.html
 
 最近、Javascriptを触っていてひとつ気になったことがあるのだが、それはgetterとsetterに同じ関数名を使うという習慣についてだ。

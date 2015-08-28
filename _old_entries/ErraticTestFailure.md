@@ -1,3 +1,8 @@
+---
+title: テストが失敗したりしなかったり
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ErraticTestFailure.html
 
 先日、本のサンプルコードを書いていたときのことだ。

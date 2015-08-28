@@ -1,3 +1,8 @@
+---
+title: ElementsOfALanguageWorkbench
+tags: TAGS
+---
+
 ""※現在、翻訳中です。しばらくお待ちください。
 
 これらのツールはすべて異なりますが、共通した特性やよく似た部分があります。

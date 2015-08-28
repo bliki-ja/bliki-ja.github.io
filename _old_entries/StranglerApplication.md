@@ -1,3 +1,8 @@
+---
+title: ストラングラーアプリケーション
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/StranglerApplication.html
 
 Cindyとオーストラリアに行ったとき、

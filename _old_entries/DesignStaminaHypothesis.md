@@ -1,3 +1,8 @@
+---
+title: 設計＝スタミナ説
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DesignStaminaHypothesis.html
 
 2007/6/20

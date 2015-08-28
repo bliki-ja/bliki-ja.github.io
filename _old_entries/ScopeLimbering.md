@@ -1,3 +1,8 @@
+---
+title: 柔軟なスコープ
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ScopeLimbering.html
 
 アジャイル開発の基本的な教義のひとつに

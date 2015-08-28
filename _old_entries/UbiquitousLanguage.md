@@ -1,3 +1,8 @@
+---
+title: UbiquitousLanguage
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/UbiquitousLanguage.html
 
 ユビキタス言語とは、Eric Evansが『{{isbn '0321125215', 'Domain Driven Design'}}』において、開発者とユーザーとの間で共通の厳格な意味を持つ用語を構築するというプラクティスを表すために使用した用語である。ユビキタス言語はソフトウェアにおけるドメインモデルに基づいている。ソフトウェアは曖昧さをうまく扱うことができないため、厳格さが必要となるのである。

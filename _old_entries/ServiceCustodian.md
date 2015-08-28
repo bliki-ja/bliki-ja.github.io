@@ -1,3 +1,8 @@
+---
+title: ServiceCustodian
+tags: TAGS
+---
+
 //Let's imagine a pretty world of SOA-happiness where the computing needs of an enterprise are split into many small applications that provide services to each other to allow effective collaboration. One fine morning a consumer service needs some information from a supplier service. The twist is that although the supplier service has the necessary data and processing logic to get this information, it doesn't yet expose that information through a service interface. The supplier has a potential service, but it isn't actually there yet.
 
 SOAの幸せでできた、素敵な世界を想像してみましょう。その世界では、お互いに効果的なコラボレーションを可能にするサービスを提供するたくさんの小さなアプリケーションに、企業のコンピュータ計算のニーズが分割されています。ある晴れた朝に、コンシューマーサービスは、サプライヤーサービスからのいくつかの情報を必要とします。予想外の事態は、サプライヤーサービスがこの情報を得るために必要なデータと処理するロジックを持つけれど、それはまだサービスインターフェイスを通してその情報を明かしていないということです。サプライヤーは、将来性のあるサービスを持っていますが、それは実際にはまだそこにありません。

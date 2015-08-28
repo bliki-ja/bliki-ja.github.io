@@ -1,3 +1,8 @@
+---
+title: 技術別組織
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/TechnicalStaffOrganization.html
 
 [[機能別組織のほうが好み|PreferFunctionalStaffOrganization]]だが、

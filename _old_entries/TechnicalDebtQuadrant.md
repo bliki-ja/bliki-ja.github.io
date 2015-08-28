@@ -1,3 +1,8 @@
+---
+title: 技術的負債の四象限
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/TechnicalDebtQuadrant.html
 
 2009/10/14

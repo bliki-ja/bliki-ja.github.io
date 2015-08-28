@@ -1,3 +1,8 @@
+---
+title: コードの臭い
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/CodeSmell.html
 
 コードの臭いとは表層の兆候で、だいたいにおいてシステムの根深い問題に関係している。この単語はKent Beckが私の[[リファクタリング|http://martinfowler.com/books.html#refactoring]]本を手伝っているときにはじめて考え出したものだ。

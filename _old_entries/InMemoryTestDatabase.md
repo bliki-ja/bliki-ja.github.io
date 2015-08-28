@@ -1,3 +1,8 @@
+---
+title: メモリ内データベース
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/InMemoryTestDatabase.html
 
 2005/11/22

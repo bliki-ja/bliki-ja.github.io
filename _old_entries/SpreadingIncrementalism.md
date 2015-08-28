@@ -1,3 +1,8 @@
+---
+title: 漸進主義の広まり
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SpreadingIncrementalism.html
 
 漸進手法が他の分野でも使えることに疑問を抱いている人がいる。

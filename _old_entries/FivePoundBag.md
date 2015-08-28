@@ -1,3 +1,8 @@
+---
+title: FivePoundBag
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/FivePoundBag.html
 
 ""10ポンドのクソを5ポンドの鞄に入れることはできない——実際にやってみた人

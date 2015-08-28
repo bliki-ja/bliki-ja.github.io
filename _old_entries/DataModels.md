@@ -1,3 +1,8 @@
+---
+title: データモデル
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DataModels.html
 
 [[Tsichritzis と Lochovsky|http://www.amazon.com/exec/obidos/tg/detail/-/0131964283]] のデータモデル本が以前好きでした。

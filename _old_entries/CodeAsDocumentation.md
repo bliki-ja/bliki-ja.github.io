@@ -1,3 +1,8 @@
+---
+title: コードがドキュメントだ
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/CodeAsDocumentation.html
 
 アジャイル手法はプログラミングをソフトウェア開発の中心的役割に押し上げた、とよく言われる——ソフトウェア エンジニアリング コミュニティがやってるようなことよりもずっと優秀だよなあ。

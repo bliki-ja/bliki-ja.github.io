@@ -1,3 +1,8 @@
+---
+title: いちばん大切なのは人
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PeopleMatterMost.html
 
 最近、考えるようになったことがいくつかある。

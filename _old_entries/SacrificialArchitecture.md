@@ -1,3 +1,8 @@
+---
+title: 犠牲的アーキテクチャ
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SacrificialArchitecture.html
 
 

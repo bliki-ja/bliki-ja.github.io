@@ -1,3 +1,8 @@
+---
+title: リファクタリングの誤用
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RefactoringMalapropism.html
 
 かつて、わずかな人しか知らなかった用語「リファクタリング」は、今ではコンピュータ業界の中でフラフラ迷走している。

@@ -1,3 +1,8 @@
+---
+title: staticの置き換え
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/StaticSubstitution.html
 
 周囲の開発チームのそれぞれに、自分たちの仕事について思うところを訊いてみた。すると共通するテーマがあきらかになった。staticで保持することは嫌われている。

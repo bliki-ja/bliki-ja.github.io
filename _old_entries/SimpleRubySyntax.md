@@ -1,3 +1,8 @@
+---
+title: SimpleRubySyntax
+tags: TAGS
+---
+
 以下の文章は、Martin Fowler による [[Simple Ruby Syntax|http://martinfowler.com/articles/simpleRuby.html]] の日本語訳である。
 
 ※ blikiではないので凍結します。

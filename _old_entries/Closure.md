@@ -1,3 +1,8 @@
+---
+title: クロージャ
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Closure.html
 
 動的言語に興味がでてくると、

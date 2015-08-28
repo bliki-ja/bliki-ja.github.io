@@ -1,3 +1,8 @@
+---
+title: Wardish
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/Wardish.html
 
 形容詞：アホなくらいシンプルな技術、ツール、設計アイデアは、使い始めるとシンプルだとは思えないくらいの大きな力を発揮するという意。

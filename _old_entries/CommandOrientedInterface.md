@@ -1,3 +1,8 @@
+---
+title: コマンド指向インターフェイス
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/CommandOrientedInterface.html
 
 モジュールのインターフェイスには、

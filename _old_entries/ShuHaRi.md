@@ -1,3 +1,8 @@
+---
+title: ShuHaRi
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ShuHaRi.html
 
 http://martinfowler.com/bliki/ShuHaRi.html

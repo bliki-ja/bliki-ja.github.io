@@ -1,3 +1,8 @@
+---
+title: ヘロヘロScrum
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/FlaccidScrum.html
 
 2009/1/29

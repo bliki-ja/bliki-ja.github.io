@@ -1,3 +1,8 @@
+---
+title: MultipleDesktops
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/MultipleDesktops.html
 
 ここ数ヶ月の間に、仕事環境の重要な側面に変化があった。これまでは1台のコンピュータで（厳密にいえば1台のハードディスクで）なんとか仕事をしようとしていた。仕事ファイルはすべてラップトップのハードディスク上に保存してあり、デスクトップマシンを使うときには、ファイル共有を行っていた。

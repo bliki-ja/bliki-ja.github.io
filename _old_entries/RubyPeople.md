@@ -1,3 +1,8 @@
+---
+title: Rubyピープル
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RubyPeople.html
 
 ここの読者ならご存知だろうが、ここ数年、私は熱心なrubyistだ。

@@ -1,3 +1,8 @@
+---
+title: ジャンケン見積り
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ThrownEstimate.html
 
 XPスタイルで計画を行っているのであれば、

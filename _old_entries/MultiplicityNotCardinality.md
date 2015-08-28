@@ -1,3 +1,8 @@
+---
+title: 基数ではなく多重度
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/MultiplicityNotCardinality.html
 
 データモデリング手法が関係を扱う際、いくつのエンティティが同時にリンクされるのかということを示すために、「基数」という用語が用いられます。注文と顧客の関係は、1:多の関係と言えます。0:多という場合もあるかもしれません。

@@ -1,3 +1,8 @@
+---
+title: レポーティングデータベース
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/ReportingDatabase.html
 
 '''[[domain model|http://martinfowler.com/eaaCatalog/domainModel.html]]（[[ドメインモデル|PofEAA:DomainModel]]）を使っているとき、アドホックなSQLへの対応はどうすればよいか？'''

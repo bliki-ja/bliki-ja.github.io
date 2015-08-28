@@ -1,3 +1,8 @@
+---
+title: OOPSLA2004
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/OOPSLA2004.html
 
 私はここ10年間、OOPSLA に参加し続けている。

@@ -1,3 +1,8 @@
+---
+title: 委任主義
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/EnablingAttitude.html
 
 [[ソフトウェア開発の心構え|SoftwareDevelopmentAttitude]]のひとつです。

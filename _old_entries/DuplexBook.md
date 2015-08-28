@@ -1,3 +1,8 @@
+---
+title: DuplexBook
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DuplexBook.html
 
 2007/6/13

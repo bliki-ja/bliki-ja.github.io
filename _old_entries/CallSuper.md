@@ -1,3 +1,8 @@
+---
+title: superの呼び出し
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/CallSuper.html
 
 親メソッド呼び出しは、オブジェクト指向フレームワークのなかで

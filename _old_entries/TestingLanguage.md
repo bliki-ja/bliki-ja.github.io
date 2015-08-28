@@ -1,3 +1,8 @@
+---
+title: テスト用言語
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/TestingLanguage.html
 
 私はいま、[[XP day|http://www.xpday.org/]] のセッション会場にいる。

@@ -1,3 +1,8 @@
+---
+title: テストダブル
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/TestDouble.html
 
 2006/01/17 

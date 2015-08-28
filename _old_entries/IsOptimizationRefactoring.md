@@ -1,3 +1,8 @@
+---
+title: 最適化はリファクタリングか？
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/IsOptimizationRefactoring.html
 
 [[RefactoringBoundary]]のひとつ

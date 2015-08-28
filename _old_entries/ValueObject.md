@@ -1,3 +1,8 @@
+---
+title: バリューオブジェクト
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ValueObject.html
 
 P of EAA で、[[Value Object|http://martinfowler.com/eaaCatalog/valueObject.html]] は通貨や時間のような、小さなオブジェクトだと述べました。

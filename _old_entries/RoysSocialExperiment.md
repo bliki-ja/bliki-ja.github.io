@@ -1,3 +1,8 @@
+---
+title: Royの社会的実験
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/RoysSocialExperiment.html
 
 //When we talk about ThoughtWorks, we mostly talk about us as a software application development company. We also talk a bit about our values and how we are trying to be a different kind of company to most corporations. But all this is dancing around the point - fundamentally ThoughtWorks isn't about being a company.

@@ -1,3 +1,8 @@
+---
+title: 直轄主義
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DirectingAttitude.html
 
 [[ソフトウェア開発の心構え|SoftwareDevelopmentAttitude]]のひとつです。

@@ -1,3 +1,8 @@
+---
+title: シグニチャシリーズの判断基準
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/SignatureSeriesCriteria.html
 
 時々、私のシグニチャシリーズに入れてもらうにはどうすればよいかと聞かれます。

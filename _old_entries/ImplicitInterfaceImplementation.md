@@ -1,3 +1,8 @@
+---
+title: 暗黙的インタフェースの実装
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ImplicitInterfaceImplementation.html
 
 //Both Java and C# share the same model of pure interface types. You declare a pure interface by going interface Mailable, then you can declare you implement it with class Customer implements Mailable (in Java). A class may implement any number of pure interfaces.

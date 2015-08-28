@@ -1,3 +1,8 @@
+---
+title: 第一の法則
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/FirstLaw.html
 
 分散オブジェクト設計第一の法則: オブジェクトを分散させるな（[[P of EAA|http://martinfowler.com/books.html#eaa]]より）

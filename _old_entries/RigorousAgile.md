@@ -1,3 +1,8 @@
+---
+title: RigorousAgile
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RigorousAgile.html
 
 「アジャイル手法には厳密な定義がない」との不満をよく耳にする。

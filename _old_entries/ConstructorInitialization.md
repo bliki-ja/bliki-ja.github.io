@@ -1,3 +1,8 @@
+---
+title: ConstructorInitialization
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ConstructorInitialization.html
 
 2006/2/7

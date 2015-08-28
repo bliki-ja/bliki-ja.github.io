@@ -1,3 +1,8 @@
+---
+title: 1つの言語
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/OneLanguage.html
 
 !!!開発における言語は１つだけにするべきか？

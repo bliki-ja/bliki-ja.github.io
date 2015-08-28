@@ -1,3 +1,8 @@
+---
+title: RoleInterface
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RoleInterface.html
 
 2006/12/22

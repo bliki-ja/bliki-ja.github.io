@@ -1,3 +1,8 @@
+---
+title: JRubyVelocity
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/JRubyVelocity.html
 
 2007/01/19

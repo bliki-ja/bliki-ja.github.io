@@ -1,3 +1,8 @@
+---
+title: 顧客満足
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/PleasingTheCustomer.html
 
 すべてのアジャイル方法論は、

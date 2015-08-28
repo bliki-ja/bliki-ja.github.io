@@ -1,3 +1,8 @@
+---
+title: 固定スコープの幻想
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/FixedScopeMirage.html
 
 多くの企業はスコープとコストが固定された契約書の作成を好む。

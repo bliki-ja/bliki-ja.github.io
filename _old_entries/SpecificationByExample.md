@@ -1,3 +1,8 @@
+---
+title: 実例による仕様書
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SpecificationByExample.html
 
 XP/Agile Universe 2002のワークショップで「Specification By Example（実例による仕様書、SbE）」という言葉に心を奪われた。これは、[[XP|http://martinfowler.com/articles/newMethodology.html#xp]]におけるテストのあり方のひとつではないか。

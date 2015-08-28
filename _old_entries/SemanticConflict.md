@@ -1,3 +1,8 @@
+---
+title: 意味的衝突
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/SemanticConflict.html
 
 2011/08/04

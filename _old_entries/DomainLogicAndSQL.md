@@ -1,3 +1,8 @@
+---
+title: ドメインロジックとSQL
+tags: TAGS
+---
+
 ----
 
 以下の文章は、Martin Fowler による [[Domain Logic and SQL|http://martinfowler.com/articles/dblogic.html]] の日本語訳である。

@@ -1,3 +1,8 @@
+---
+title: DebianJava
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DebianJava.html
 
  # apt-get install java-package

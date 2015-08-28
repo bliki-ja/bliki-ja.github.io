@@ -1,3 +1,8 @@
+---
+title: 最小インタフェース
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/MinimalInterface.html
 
 最小インタフェースとはAPI設計のスタイルである。

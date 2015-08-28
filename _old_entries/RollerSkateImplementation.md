@@ -1,3 +1,8 @@
+---
+title: RollerSkateImplementation
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/RollerSkateImplementation.html
 
 2007/9/9	

@@ -1,3 +1,8 @@
+---
+title: 度重なる変異
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/AbundantMutation.html
 
 読者の方々は、私が[[evolutionary design|http://martinfowler.com/articles/designDead.html#PlannedAndEvolutionaryDesign]]（[[進化的設計|http://www.objectclub.jp/community/XP-jp/xp_relate/isdesigndead#n71]]）を広く提唱していることをご存知だと思う。

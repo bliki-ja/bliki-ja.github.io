@@ -1,3 +1,8 @@
+---
+title: 対話的ストーリー
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/ConversationalStories.html
 
 2010/2/4

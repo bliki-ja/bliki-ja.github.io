@@ -1,3 +1,8 @@
+---
+title: デプロイメントパイプライン
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DeploymentPipeline.html
 
 2013/5/30

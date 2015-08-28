@@ -1,3 +1,8 @@
+---
+title: 構文ノイズ
+tags: TAGS
+---
+
 http://www.martinfowler.com/bliki/SyntacticNoise.html
 
 2008/6/9

@@ -1,3 +1,8 @@
+---
+title: 大きな画面
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/BigScreen.html
 
 2006/12/16

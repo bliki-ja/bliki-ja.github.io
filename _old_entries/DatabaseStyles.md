@@ -1,3 +1,8 @@
+---
+title: データベーススタイル
+tags: TAGS
+---
+
 http://martinfowler.com/bliki/DatabaseStyles.html
 
 データベースとアプリケーションとの関係について話す際、データベースの2つのスタイルについて言及すると都合がいいようです。2つのスタイルとは、[[アプリケーションデータベース|ApplicationDatabase]]と[[統合データベース|IntegrationDatabase]]です。
