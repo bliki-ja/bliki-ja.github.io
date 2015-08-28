@@ -1,4 +1,4 @@
-# bliki-ja.github.io
+http://bliki-ja.github.io/
 
 ## 新しいエントリを作るとき
 
@@ -25,3 +25,7 @@ tags:
 
 ``jekyll serve``でローカルにサーバを起動して、ブラウザで確認してください。
 
+## TODO
+
+* _old_entries 以下の移行
+* HikiDoc形式からMarkdownへの変換
