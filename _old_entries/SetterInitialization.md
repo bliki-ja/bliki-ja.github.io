@@ -16,14 +16,14 @@ http://martinfowler.com/bliki/SetterInitialization.html
 空のオブジェクトを作ってから、セッターメソッドを使って様々なプロパティを設定することになる。
 「姓」、「名」、「好きな飲み屋」を持つ「人」オブジェクトを作るには、以下のようにする。
 
-<<<
+```ruby
 #ruby
 mf = Person.new
 mf.firstname = 'Martin'
 mf.lastname = 'Fowler'
 mf.add_bar "Turner's Oyster Bar"
 mf.add_bar "Square and Compass"
->>>
+```
 
 //This approach gives you the maximum flexibility in wiring up objects, allowing you to provide just the collaborators you need for a specific usage.
 

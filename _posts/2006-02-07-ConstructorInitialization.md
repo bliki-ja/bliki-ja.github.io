@@ -18,11 +18,11 @@ http://martinfowler.com/bliki/ConstructorInitialization.html
 生成メソッドに必要なコラボレータをすべて渡して、
 常に妥当な状態のオブジェクトを作るようにしなければならない。
 
-<<<
+```ruby
 # ruby
 mf = Person.new('martin', 'fowler', 
                 ['Turners Oyster Bar', 'Square and Compass'])
->>>
+```
 
 
 

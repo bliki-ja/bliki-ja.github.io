@@ -33,7 +33,8 @@ http://martinfowler.com/bliki/RoleInterface.html
 最早終了時間は、最早開始時間に所要時間を足せば算出できる。
 同様に、最遅終了時間と最遅開始時間も算出できる。
 コードは以下のようになる。
-<<<
+
+```java
   private int duration;
 
   public MfDate earliestStart() {
@@ -59,7 +60,7 @@ http://martinfowler.com/bliki/RoleInterface.html
   public MfDate latestStart() {
     return latestFinish().minusDays(duration);
   }
->>>
+```
 
 
 上のコードが穴埋め式になっていることに気づいたかもしれない。「?TYPE?」の部分である。
@@ -68,7 +69,8 @@ http://martinfowler.com/bliki/RoleInterface.html
 
 
 ヘッダーインタフェースを使うと、戻ってきたインタフェースはアクティビティ型であり、InterfaceImplementationPairを作るためにパブリックなメソッドを実装している。
-<<<
+
+```java
  public interface Activity ...
    MfDate earliestStart();
    MfDate earliestFinish();
@@ -78,13 +80,14 @@ http://martinfowler.com/bliki/RoleInterface.html
  class ActivityImpl...
    List<Activity> predecessors() ...
    List<Activity> successors() ...
->>>
+```
 
 
 一方、ロールインタフェースであれば、協調するオブジェクトがどのように使われるかを考慮することになる。
 この場合、successor は {{code('latestStart')}} でのみ使用され、predecessor は {{code('earliestFinish')}} でのみ使用される。
 そのため、実際に使うメソッドを持つ２つのインタフェースを作ることになる。
-<<<
+
+```java
  public interface Successor {
    MfDate latestStart();
  }
@@ -95,7 +98,7 @@ http://martinfowler.com/bliki/RoleInterface.html
  class Activity
    List<Predecessor> predecessors() ...
    List<Successor> successors() ...
->>>
+```
 
 
 successor はこのオブジェクトとのみ協調するロールだと考えることができる。
