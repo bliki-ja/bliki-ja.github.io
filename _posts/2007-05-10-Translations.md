@@ -11,7 +11,7 @@ http://martinfowler.com/bliki/Translations.html
 ----
 2006/8/1
 
-//I'd like to welcome a Chinese Translation which is being done by Ma Haoming. I've been told I get a lot of Chinese readers, so I'd like to welcome them to this stream of my half-baked thoughts.
+
 
 中国語の翻訳をMa Haomingが行ってくれた。
 中国には大勢の読者がいると聞いている。

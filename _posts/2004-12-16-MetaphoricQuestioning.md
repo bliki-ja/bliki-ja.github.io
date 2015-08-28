@@ -7,7 +7,7 @@ http://martinfowler.com/bliki/MetaphoricQuestioning.html
 
 2004/12/16
 
-//As regular readers of my work may know, I'm very suspicious of using metaphors of other professions to reason about software development. In particular, I believe the engineering metaphor has done our profession damage - in that it has encouraged the notion of separating design from construction. 
+
 
 常連さんはご存じでしょうが、
 私は他業種のメタファを使ってソフトウェア開発を論ずるのはどうかと思っています。
@@ -15,7 +15,7 @@ http://martinfowler.com/bliki/MetaphoricQuestioning.html
 [設計と構築を分離する](http://martinfowler.com/articles/newMethodology.html)([翻訳](http://www007.upp.so-net.ne.jp/kengai/fowler/newMethodology_j.html))という考えをもたらし、
 我々の業界に多大な損害を与えたと信じてやみません。
 
-//As I was hanging around our London office, this issue came up in the context of Lean Manufacturing, a metaphor that's used quite often in agile circles - particularly by the Poppendiecks. If I don't like metaphoric reasoning from civil engineering, do I like it more from lean manufacturing?
+
 
 ロンドン支社の辺りで、リーン生産方式絡みでこの問題について考えました
 （リーン生産方式とはアジャイル界隈でよく使われるメタファで、
@@ -23,7 +23,7 @@ http://martinfowler.com/bliki/MetaphoricQuestioning.html
 建築のメタファが好きではないなら、
 リーン生産方式のメタファならいいのでしょうか？
 
-//I think the same dangers apply, but it all comes down to how you use the metaphor. Comparing to another activity is useful if it helps you formulate questions, it's dangerous when you use it to justify answers.
+
 
 私は、同様の問題が発生すると思います。
 しかし、すべてはメタファの使いようです。
@@ -31,7 +31,7 @@ http://martinfowler.com/bliki/MetaphoricQuestioning.html
 他の活動と比較することも役に立つでしょう。
 しかし、答えを正当化するために使うのであれば、それは大変危険です。
 
-//So as an example - one of the principles of lean manufacturing is the elimination of inventory. This leads to the question of whether there is an analogous item to inventory in software development. People have suggested that up front documentation is such an analog. It sits there, producing no value, until you actually deliver some software that's based on it.
+
 
 リーン生産方式の原則のひとつ「在庫のムダとり」を例に挙げましょう。
 ソフトウェア開発において「在庫」とは何でしょうか。
@@ -39,13 +39,13 @@ http://martinfowler.com/bliki/MetaphoricQuestioning.html
 ドキュメントを元にして実際に何らかのソフトウェアを作り出すまで
 何の価値も生み出していませんから、ドキュメントはまさに「在庫」でしょう。
 
-//Here the metaphor is helping us look at our practices from a different point of view. It helps us to ask questions about what we do. Thus far I think a metaphor is useful.
+
 
 メタファを使うと、我々がいつもやっていることを新たな視点から見ることができます。
 我々が行っていることについて質問することができるのです。
 ここまでは、メタファは有益なものです。
 
-//The breaking point comes when people say: "we eliminate inventory in lean manufacturing, up front documentation is the equivalent of inventory, therefore we eliminate up front documentation". Now I agree we need to substantially reduce this kind of speculative documentation; but the rationale for doing so must come from thinking about the software development process, not from purely reasoning by analogy.
+
 
 しかし、「我々はリーン生産方式でいう"在庫"を廃止する。
 前払いのドキュメントは"在庫"だ。ゆえにドキュメントを廃止する。」

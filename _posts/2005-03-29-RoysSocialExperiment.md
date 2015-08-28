@@ -5,17 +5,17 @@ tags: [thoughtworks]
 
 http://www.martinfowler.com/bliki/RoysSocialExperiment.html
 
-//When we talk about ThoughtWorks, we mostly talk about us as a software application development company. We also talk a bit about our values and how we are trying to be a different kind of company to most corporations. But all this is dancing around the point - fundamentally ThoughtWorks isn't about being a company.
+
 
 私たちは、ThoughtWorksのことを「ソフトウェアアプリケーション開発企業」だと言ってる。
 時には、その価値観や他社との差別化について語ることもある。
 しかし、そうしたことはすべて的を射ていない——ThoughtWorksとは本来、企業ではないのだ。
 
-//ThoughtWorks is really Roy's Social Experiment.
+
 
 ThoughtWorksとは、Royの「社会的実験」なのである。
 
-//Roy Singham is our founder, and in many ways he started ThoughtWorks to see if it was possible to create the kind of company he wanted to make, and make that company last for many years. Many of the elements of that company were things that people told him couldn't be done:
+
 
 Roy SinghamはThoughtWorksの創業者だ。
 彼は、自分の作りたい企業が本当に作れるのかを確かめるためにThoughtWorksを起業した。

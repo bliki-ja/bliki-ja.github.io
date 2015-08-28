@@ -9,14 +9,14 @@ http://martinfowler.com/bliki/InMemoryTestDatabase.html
 
 最後の部分を更新
 
-//An in-memory database is a database that runs entirely in main memory, without touching a disk. Often they run as an embedded database: created when a process starts, running embedded within that process, and is destroyed when the process finishes.
+
 
 メモリ内データベース（別名：組込みデータベース）とは、ディスクにアクセスすることなく、完全に主記憶装置内だけで動作するデータベースのことである。
 プロセスが起動した時点で作成され、プロセス内で動作し、プロセス終了時に破棄される。
 
 一見すると、このすばらしいアイデアは、バカげた話のように聞こえる。データベースの主な目的は、プロセス終了後の情報の永続化と、複数のプロセスからの同時アクセスの制御の2つだ。だが、メモリ内データベースはそのどちらも行わない——では、利点は何なのだろう？
 
-//While most people think of databases as large disk-centered creatures, there's a small but busy world of in-memory databases out there. There are applications which need fast access to some sort of managed data which doesn't need to be persisted either because it doesn't change, or it can be reconstructed (imagine a routing table in a router, or an EventPoster.)
+
 
 多くの人はデータベースのことを巨大なディスクの化け物と思っているだろうが、
 体は小さいが働き者のメモリ内データベースの世界がやってきたのである。
@@ -24,7 +24,7 @@ http://martinfowler.com/bliki/InMemoryTestDatabase.html
 永続化されていないデータに高速にアクセスしたいアプリケーションがある。
 （たとえば、ルータのルーティングテーブルやEventPosterなどだ）
 
-//Yet even developers of traditional database systems can find an in-memory database useful, particularly for testing. When you're developing an enterprise application, tests that hit the database can be a huge time drain when running your test suites. Switching to an in-memory database can have an order of magnitude effect which can dramatically reduce build times. Since most ThoughtWorkers get the shakes if they haven't had a green bar recently, this makes a big difference to us.
+
 
 伝統的なデータベースシステムの開発者であっても、
 メモリ内データベースは便利なものになるだろう。
@@ -34,7 +34,7 @@ http://martinfowler.com/bliki/InMemoryTestDatabase.html
 ビルド時間を大幅に短縮できるなど桁違いの効果が得られるだろう。
 多くのThoughtWorkerはグリーンバーをしばらく見ないと震えあがるので、我々にとってこれは大きな違いである。
 
-//There are two routes people seem to take to a in-memory database for testing. The first one is to use a SQL in-memory database library. In Java-land the popular one seems to be HSQLDB. Elsewhere SQLite and Firebird come up. The nice thing about these tools is that they allow you to use regular SQL to query them. One issue is that they may not support quite the same dialects or have all the features of the target database. You can do something similar by running a file-based database on a ram disk, which allows you to keep the test and production deployments closer to each other.
+
 
 メモリ内データベースをテスト用に採用するには、2つの方法がある。
 まず、SQLメモリ内データベース ライブラリを使用することだ。
