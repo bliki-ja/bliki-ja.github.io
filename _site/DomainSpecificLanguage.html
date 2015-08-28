@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ドメイン特化言語</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/DomainSpecificLanguage.html">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="http://yourdomain.com/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">ドメイン特化言語</h1>
+  </header>
+
+  <article class="post-content">
+    <p><a href="http://martinfowler.com/bliki/DomainSpecificLanguage.html">http://martinfowler.com/bliki/DomainSpecificLanguage.html</a></p>
+
+<p>ドメイン特化言語(DSL:Domain Specific Language)とは、 ある特定の種類の問題に特化したコンピュータ言語のことです。 様々な問題に対応できる汎用的な言語のことではありません。 ドメイン特化言語についてはこれまでも議論されてきましたし、 コンピュータが使われてきたのと同じくらい長い間使われてきました。</p>
+
+<p>DSLを頻繁に使用しているコミュニティにUnixコミュニティがあります。 そこでは、DSLは「リトル言語」や「ミニ言語」などと呼ばれています （この伝統について、Eric Raymondが素晴らしい議論を提供してくれています）。 最も一般的なUnixスタイルのやり方は、 言語の文法を定義し、コード生成機能を使ってDSLから汎用的な言語を生成する、 あるいは、そのDSL用のインタプリタを書くことです。 こういったことを簡単にするツールがUnixにはたくさん揃っています。 こうしたDSLのことを私は「外部DSL」と呼んでいます。 XML設定ファイルも外部DSLのよく知られた形式の1つです。</p>
+
+<p>LispやSmalltalkのコミュニティにも脈々と流れるDSLの伝統があります。 しかしこれは、Unixコミュニティのそれとは違ったやり方で行われています。 新しい言語を作るというよりも、汎用的な言語をDSLに変化させるのです （Paul GrahamがProgramming Bottom-Upの中でこのことについてうまく説明しています）。 この「内部DSL」では、プログラミング言語それ自体を元にしてDSLを定義します。 これはどの言語でもできる一般的なやり方です。 私も問題を解決するためのDSLを作るように 関数を定義するよう常に心がけてきました。 しかしながら、LisperやSmalltalkerたちは私よりもずっと深くこの方法に取り組んでいます。 このやり方で書かれたAPIは 流れるようなインタフェース と呼ばれることもあります。</p>
+
+<p>先ごろ書いた論文では、この2種類のDSLについて例を交えて紹介しています。 両者のメリット／デメリットや最近の言語ワークベンチツールの開発については、かなりページを割いています。 これによってDSLがより一般的なものになればと願っています。</p>
+
+<p>DSLの扱いが難しい理由の1つに、何がDSLで、何がDSLでないのかが判断しにくいという点が挙げられます。 DSLの境界線はとても曖昧で、 内部DSLとAPIの違い、 あるいは、 外部DSLと汎用言語の違いは、 とても分かりにくいものとなっています。</p>
+
+<p>私が興味を持ったDSL関連の話題については、 DslReadings にまとめていくことにします。</p>
+
+<p>内部DSLと外部DSLのいずれかを選択する</p>
+
+<p>内部DSLと外部DSLの流れは、PragDaveの言葉でうまく合流しました。 達人プログラマーたちはずっとDSLのファンだったのです。 DSLは元々、Unixの伝統から来たものでした（The Pragmatic Programmer（日本語『達人プログラマー』）のセクション12に素晴らしい議論が載っています――これは「達人の極意12」と呼んでもいいかもしれません）。 インタビューのなかでDaveはこう言っています。「コード生成はいつも使うけど、Rubyでプログラミングしているときはほとんど使わない」と。</p>
+
+<p>私はいつもDSLを作成するのと似たようなことを、設計を肉付けする際に行っています――クラスやメソッドがDSLとなるように開発するのです。 できることなら、そのとき使っている言語でこれをやりたいのですが、 もしできないならできないで、コード生成を使うことになるでしょう。 ThoughtWorksでは、コード生成などの技術を大規模システムで広く使ってきました。 DSL用の言語を別の言語にするかどうかの決め手は、言語によってまったく違います。 Smalltalkでは分ける必要性を感じませんでしたが、 C++/Java/C#では分けるのが一般的です。</p>
+
+<p>つまり、言語によって内部DSLに向いたものとそうじゃないものがあるようです。 LispやSmalltalkを見ていると、内部DSLに一番適した言語は伝統的な言語よりも深く、シンプルな基本的な考え（Lispなら関数適用、Smalltalkならオブジェクトやメッセージ）のあるミニマルな言語だったのではないでしょうか。 ただし、Rubyはこの2つの言語よりも決まりごとが多く、より大きな言語でありますが、内部DSLにも向いている（素晴らしい）言語です。</p>
+
+<p>だから、たぶん、言語には選び抜かれた簡潔さが必要なのではないでしょうか。 一般的なものを書くのに簡単であり、複雑な絡み合いが入り込まないようなナイスなシンタックス。 まあ、どんなものであれ、この点が重要なのだと思います。 JavaやC#よりもSmalltalkやRubyのほうがなぜ楽しいかなんて、口では絶対表せないよなーといつも思います。 よく言われるのは、静的型言語と動的型言語の違いですけども、これはあるポイントを見逃しています。 「言語内DSLに合うか合わないか」ほうが、本質的な違いだと思います。</p>
+
+<p><hr /></p>
+
+<ul>
+<li>2004-02-16 (月) 22:04:57 kdmsnr : Unixには新しい言語をいちから作る文化があり、LispやSmalltalkではたとえば「Lispで新しい言語」を作り出す文化がある。</li>
+<li>2004-02-17 (火) 13:42:40 kdmsnr : specific を 「特化」とするか「依存」とするか。どっちがよいのでしょう。</li>
+<li>2004-02-17 (火) 16:20:18 kdmsnr : <a href="http://d.hatena.ne.jp/tomokuroo/20040216#p3">http://d.hatena.ne.jp/tomokuroo/20040216#p3</a></li>
+<li>2004-02-18 (水) 02:18:20 mizu? : はじめまして。「関数アプリケーション」は、「関数適用」の方が良いのではないでしょうか。</li>
+<li>2004-02-18 (水) 02:37:07 小人? : 直してみました &gt; mizu</li>
+<li>2004-02-18 (水) 12:04:26 kdmsnr : ありがとうございます＞小人さん</li>
+<li>2004-02-18 (水) 16:17:49 かくたに : 「特化」派です。<a href="http://www.kakutani.com/compass/20040218.html#p01">http://www.kakutani.com/compass/20040218.html#p01</a></li>
+<li>2004-02-18 (水) 19:31:15 kdmsnr : 特化にしてみました。</li>
+<li>2004-03-26 (金) 18:04:04 takai? : <a href="http://www.csg.is.titech.ac.jp/%7Echiba/notes/oosympo02.pdf">http://www.csg.is.titech.ac.jp/~chiba/notes/oosympo02.pdf</a> にドメイン専用言語(domain specific language)って訳あり。</li>
+<li>2004-03-26 (金) 18:21:45 kdmsnr : お、いい勝負だ（Google）。</li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Martin Fowler's Bliki (ja)</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr AT gmail.com">kdmsnr AT gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
