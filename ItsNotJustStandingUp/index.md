@@ -5,13 +5,13 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 
 ----
 
-以下の文章は、[[Jason Yip|mailto:jcyip@thoughtworks.com]]による[[It's Not Just Standing Up: Patterns of Daily Stand-up Meetings|http://martinfowler.com/articles/itsNotJustStandingUp.html]]の日本語訳である。Jasonの許可を得て、ここに掲載する。
+以下の文章は、[Jason Yip](mailto:jcyip@thoughtworks.com)による[It's Not Just Standing Up: Patterns of Daily Stand-up Meetings](http://martinfowler.com/articles/itsNotJustStandingUp.html)の日本語訳である。Jasonの許可を得て、ここに掲載する。
 
 ----
 {{image_center 'img/standingup.jpg', 'Standup at TW Pune'}}
 
 //We stand up to keep the meeting short
-!立ってやるのはミーティングの時間を短くするためだ
+## 立ってやるのはミーティングの時間を短くするためだ
 
 //The daily stand-up meeting (also known as a "daily scrum", a "daily huddle", a "morning roll-call", etc.) is simple to describe: the whole team meets every day for a quick status update.  We stand up to keep the meeting short.  That's it.  But this short definition does not really tell you the subtle details that distinguish a good stand-up from a bad one.
 
@@ -43,7 +43,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 熟練者にとってもこれまでの経験知への気づきとなるだろう。
 
 //The underlying theme is self-organisation
-!基本テーマは「自己組織化」
+## 基本テーマは「自己組織化」
 
 // The underlying theme for daily stand-up meetings is self-organisation. This is not just because self-organisation leads to better productivity but also, and perhaps more so, because it leads to a more humane, respectful, and mature work environment. Many of the problems that can arise in executing a good stand-up will derive from a mis-alignment with this underlying motivation of self-organisation.
 
@@ -58,7 +58,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 チームのパフォーマンスは必然的に悪化するだろう。
 
 //What is the purpose of the daily stand-up meeting?
-!朝会の目的は？
+## 朝会の目的は？
 
 //Summarizing several papers and references ([Anderson, 2002], [Beedle et al., 2000], [Cochango, 2006], [OrgPatternsStandUp], [Rising, 2002], [Rising and Janoff, 2002], [Wells, 1999]) daily stand-ups should achieve the following goals:
 
@@ -76,7 +76,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 * チームの形成
 
 //Share commitment
-!!コミットメントの共有
+### コミットメントの共有
 
 // Making daily commitments to each other as a team is the most important goal of daily stand-ups. Sharing commitment is more important than sharing progress or status. This is not to say that an observer will not have a sense of progress and status from the stand-up, but this is secondary to team members publicly committing to each other, and identifying obstacles that prevent them from meeting their commitments.
 
@@ -86,7 +86,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 お互いに公にコミットし合い、コミットメントを阻害する問題点を明確化しているチームメンバにとって、それは二次的なものなのだ。
 
 //Communicate status
-!!状況の報告
+### 状況の報告
 
 //The focus of the meetings is on the technical progress in the architecture and the work plan. [OrgPatternsStandUp]
 
@@ -99,7 +99,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 状況を毎日更新することで、チームが今何をやっているかを少なくとも日次単位で確認することができる。
 
 //Identify obstacles
-!!問題点を明確化
+### 問題点を明確化
 
 //When one team member shares an obstacle in the Scrum meeting, the entire team’s resources come together to bear on that problem. Because the team is working together toward a shared goal, every team member must cooperate to reach that goal. The entire team immediately owns any one individual’s problems. [Rising and Janoff, 2000]
 
@@ -111,7 +111,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 朝会が問題点を除去するわけではないが、問題点を特定し、他のチームメンバがそれを助ける「場」を朝会は提供している。
 
 //Set direction and focus
-!!進むべき方向と焦点の設定
+### 進むべき方向と焦点の設定
 
 //During the daily meetings, the Scrum master would call attention to backlog item priority. This was especially helpful for new team members, who might have gone off in another direction. [Rising and Janoff, 2000]
 
@@ -123,7 +123,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 朝会は進むべき方向を頻繁に思い出させてくれる。
 
 //Build a team
-!!チームの形成
+### チームの形成
 
 //More so than artificial “team-building” exercises, effective teams are built by regularly communicating, working, and helping each other. This is also strongly tied with team members helping each other with shared obstacles.
 
@@ -137,7 +137,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 このような環境だと、問題が起こったときに他のメンバが助けてくれるんだという実績が作られ、それによって問題を報告しやすくなる。
 
 //Effective daily stand-ups have a particular feel
-!良い朝会には特別な雰囲気がある
+## 良い朝会には特別な雰囲気がある
 
 //Technically, the meeting is a “daily stand-up” if everyone is standing up and the meeting is held every day. However, there is a different feel to a good stand-up that distinguishes it from an empty ritual.
 
@@ -164,12 +164,12 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 良い朝会には「'''自己管理'''してる感」があるのだ。
 
 //Patterns of daily stand-up meetings
-!朝会のパターン
+## 朝会のパターン
 //Who attends the daily stand-up?
-!!朝会に出席する人は？
+### 朝会に出席する人は？
 
 //All Hands
-!!!総動員
+#### 総動員
 
 //People and representatives from various areas (e.g., marketing, production support, upper management, training, etc.) wish to know about and/or contribute to the status and progress of the project. Communicating status in multiple meetings and reports requires a lot of duplicate effort.
 
@@ -177,7 +177,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 複数のミーティングで報告やレポートを行うと、余計な作業が発生してしまう。
 
 //Therefore
-!!!!だから
+#### !だから
 //Replace some or all of the meetings and reports with the daily stand-up. Anyone who is directly involved in or wants to know about the day-to-day operation of the project should attend the single daily stand-up meeting.
 
 すべての会議やレポートを朝会に置き換える。
@@ -185,7 +185,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 プロジェクトの日々の業務を知りたいと思っている人は、
 みんなで単一の朝会に参加すべきである。
 
-!!!!ただし
+#### !ただし
 //People not directly involved can disrupt the stand-up. This suggests that another forum would still be required for queries outside the scope of the stand-up.
 
 直接関わってない人が参加すると、朝会が崩壊する可能性がある。
@@ -204,7 +204,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 たとえば、プロジェクトの進捗などは、バーンダウン・チャート、バーンアップ・チャート、累積フローダイアグラムなどの「巨大見える化チャート」[Jeffries, 2004]を使うべきだ。
 
 //Pig and Chickens
-!!!豚と鶏
+#### 豚と鶏
 
 //A chicken and a pig are together when the chicken says, "Let's start a restaurant!".The pig thinks it over and says, "What would we call this restaurant?".The chicken says, "Ham n' Eggs!".The pig says, "No thanks, I'd be committed, but you'd only be involved!".[Schwaber and Beedle, 2001]
 
@@ -217,7 +217,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 そういった妨害が激しいと、チームメンバはわざわざ朝会でプロジェクトに関するやり取りをしたいとは思わないだろう。そうなると、朝会の代わりのものを作ってしまうか、まったくコミュニケーションをしなくなるか、いずれかになるだろう。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Institute a rule where only the “committed” participate and the “involved” are only allowed to observe. “Committed” means any people who contribute to the completion of the current iteration (i.e., developers, testers, immediate managers, etc.). In other words, people who can say something that directly affects the delivery of backlog items/features/stories. “Involved” are other people who may be interested in the status of the iteration but will not directly contribute to its completion. This could be other managers, sales staff, developers from other projects, etc. Any questions and issues that the “involved” have can be resolved after the meeting (Take it Offline) or communicated in a different medium.
 
@@ -228,7 +228,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 「関係者」の質問や問題提起は、朝会のあとで処理する（'''オフラインでやる'''）か、他の手段でやり取りする。
 
 //But
-!!!!ただし
+#### !ただし
 
 //Emphasizing too much distinction between the types of meeting attendees risks creating an adversarial relationship. It's not that observers are not allowed to communicate with the team; it is just that such communication is usually inappropriate during the daily stand-up.
 
@@ -237,7 +237,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 これは、朝会でやるのは適切ではないということを意味しているだけだ。
 
 //Attend by Proxy
-!!!代理参加
+#### 代理参加
 
 //All Team members are required to attend. If for some reason a Team member can't attend in person, the absent member must either attend by telephone or by having another Team member report on their status. [Cochango, 2006]
 
@@ -250,7 +250,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 だが、チームメンバが正当な理由（個人的な理由、製品サポート問題）でミーティングに参加できない場合は、何らかの形でコミットメントを表明してもらいたい。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Team members that cannot attend the stand-up in person should find a way to Attend by Proxy. This can be in the form of a representative, calling in by telephone, or sending an e-mail summary before hand. Virtual attendance is still better than non-attendance.
 
@@ -259,7 +259,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 いずれにしても欠席よりはマシである。
 
 //But
-!!!!ただし
+#### !ただし
 
 //If team members regularly can't make the stand-up, this may be an indication that the stand-up is being held at a time or location that is not convenient for the whole team. It may also mean that the member is not actually part of the team, whether due to allocation to other responsibilities or problems with team affinity. Of course, attendance by proxy is also inferior to actually attending the meeting in person.
 
@@ -269,10 +269,10 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 もちろん、代理参加は本人が参加することよりも劣る。
 
 //What do we talk about during the daily stand-up?
-!朝会で何を話す？
+## 朝会で何を話す？
 
 //Yesterday Today Obstacles
-!!昨日やったこと・今日やること・問題点
+### 昨日やったこと・今日やること・問題点
 
 //Some people are talkative and tend to wander off into Story Telling. Some people want to engage in Problem Solving immediately after hearing a problem. Meetings that take too long tend to have low energy and participants not directly related to a long discussion will tend to be distracted.
 
@@ -281,7 +281,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 朝会が長すぎるとエネルギーが低下し、議論に直接関係のない参加者たちは注意散漫になりがちだ。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Structure the contributions using the following format:
 
@@ -335,7 +335,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 私はこちらのフォーマットのほうが好みだ。
 
 //But
-!!!!ただし
+#### !ただし
 
 //The structure is not as important as the information the answers to the questions provide. If the information is provided in a less structured protocol, it is not important to stick to a checklist. As teams mature, you may find you want to adjust the structure as well. For example, I tend to add a fourth question: “What might help or hinder others in meeting their commitments?”
 
@@ -347,7 +347,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 「コミットメントを達成するために役に立つこと（あるいは邪魔になること）は何だろうか？」
 
 //Focus on the Backlog
-!!バックログに注目
+### バックログに注目
 
 //Some people find it difficult to keep the project context in mind when they are contributing. Symptoms of this would be attendees <leaving the stand-up without a clear awareness of what remains for the iteration and release, and not much of a direct relationship with issues raised during the stand-up and the progress of the iteration and release>.
 
@@ -359,7 +359,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 プロジェクトの状況を把握するには「見える化」ツールを使うのが簡単だ。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Remind stand-up attendees to Focus on the Backlog, where a backlog is simply a list of tasks and features to do. For example, maintain an information radiator [Cockburn, 2001] (aka Big Visible Chart) showing the iteration and release status and hold the stand-up near it. The display serves as an obvious reminder of what remains to be done.
 
@@ -369,7 +369,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 すると、これからやるべきことを明確に思い出させてくれる。
 
 //But
-!!!!ただし
+#### !ただし
 
 //Focusing on the backlog may cause a tendency for the stand-up to focus on tasks rather than people. There are always important and subtle people issues that will not be discovered if there is too much focus on task status.
 
@@ -377,14 +377,14 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 タスクの状況にばかり注目していると、重要かつ繊細な「人の問題」が見過ごされてしまう。
 
 //Blockage Board
-!!ブロッケージ・ボード(Blockage Board)
+### ブロッケージ・ボード(Blockage Board)
 
 //Obstacles raised in the stand-up are not removed or otherwise addressed in a timely fashion.
 
 朝会で起こった問題が除去されなかったり、逆にすぐに対処されたりする。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Post raised obstacles to a Blockage Board. This is a publicly visible whiteboard or chart that identifies raised obstacles and tracks the progress of their resolution. A Blockage Board can be updated outside of stand-ups and serves as a more immediate and perhaps less confronting way to initially raise obstacles. A common mistake is to not write large enough to allow people to read the blockages from a distance.
 
@@ -400,10 +400,10 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 みんなが問題だと思わなくても、とりあえず書いておいて、あとで話し合うことは重要である。
 
 //When and where are the daily stand-ups held?
-!朝会はいつどこでやる？
+## 朝会はいつどこでやる？
 
 //Same Place, Same Time
-!!同じ場所、同じ時間
+### 同じ場所、同じ時間
 
 //We want the team to have a sense of ownership of the stand-up. We also want interested parties to be able to drop by to observe a stand-up to avoid having to schedule yet another status meeting. This is difficult if any particular team member is allowed to force a delay or change of location of the stand-up.
 
@@ -412,7 +412,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 だが、誰かが朝会の時間を遅らせたり、場所を変更できるような権限を持っていると難しいだろう。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Run the daily stand-up at the Same Place, Same Time. Do not wait for stragglers, including architects and managers. The meeting is for the whole team, not for any particular individual. This is especially important if you Use the Stand-up to Start the Day.
 
@@ -429,7 +429,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 それよりも話し合いのほうが好きだ。
 
 //But
-!!!!ただし
+#### !ただし
 
 //Same Place, Same Time is not intended to be blindly inflexible. The important thing is for the start time to be mostly consistent and rescheduling to be rare. If rescheduling is required often, it may be an indication that the start time should change. If a particular location is inconvenient for everyone to get to, it's probably an indication the location should change.
 
@@ -439,7 +439,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 参加しにくい場所で開かれているなら、場所を変更したほうがよいだろう。
 
 //Use the Stand-up to Start The Day
-!!朝会で一日を始める
+### 朝会で一日を始める
 
 //The daily stand-up meeting provides focus and awareness of outstanding issues. If it occurs late in the day, this focus and awareness is wasted.
 
@@ -447,7 +447,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 朝会が一日の終わりに開かれてしまうと、その注目や気づきが無駄になってしまう。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Use the Stand-up to Start the Day. With flexible work hours, not every team member will arrive at work at the same time. A common practice with “flex-time” is to use a set of core working hours. The start time should be at the start of these core working hours. Similarly, if team members need to arrive later for personal reasons (e.g., need to drop off kids at school), the start time should be set at a time so that everyone can attend.
 
@@ -456,7 +456,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 同様に、チームメンバが個人的な理由（子供を学校に送るなど）で遅れる場合、朝会の開始時刻はその時刻に合わせ、全員が参加できるようにすべきだ。
 
 //But
-!!!!ただし
+#### !ただし
 
 //There is usually a tendency not to work on any project-related tasks until the stand-up. If the Stand-up Meeting Starts the Day... Late, this slack time may be significant. To some extent, this may simply be used as an opportunity to check e-mail, fill in timesheets, etc. but it may be worth investigating removing the stand-up as a “start of day” ritual by scheduling it later in the day.
 
@@ -467,7 +467,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 もっと後ろにズラせないか調査してみることは無駄ではないだろう。
 
 //Don't Use the Stand-up to Start the Day
-!!「朝会で一日を始める」を使わない
+### 「朝会で一日を始める」を使わない
 
 //The stand-up tends to serve as the ritual to set focus for the day, especially if you Use The Stand-up to Start the Day. Because of this, team members tend not to work on features until the stand-up. When the meeting is not actually held first thing, this tendency may have a significant impact on productivity.
 
@@ -477,7 +477,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 朝会が一日の始めに開かれないと、生産性に重大な影響をあたえかねない。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Don’t Use the Stand-up to Start the Day. Schedule the daily stand-up meeting far enough into the day that it will not be psychologically associated as starting the day.
 
@@ -485,7 +485,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 朝会を一日の開始だと感じないような時間に設定する。
 
 //But
-!!!!ただし
+#### !ただし
 
 //If the daily meeting doesn't start the day, then it can no longer be used as a shared ritual to set team focus at the start the day. Depending on the team, this price may not be worth the apparent increase in efficiency.
 
@@ -495,7 +495,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 //When there are many project using stand-ups, it is possible that multiple stand-ups are occurring simultaneously. Observers interested in multiple projects may want to change stand-up times to allow them to be able attend. This is problematic since it risks the sense of ownership for the team if an observer can force a stand-up to adjust to his/her schedule. Nevertheless, this must also be a consideration when deciding when to have the daily stand-up.
 
 //How do we keep up the energy level of the daily stand-up?
-!朝会のエネルギーレベルを維持するにはどうすればよいか？
+## 朝会のエネルギーレベルを維持するにはどうすればよいか？
 
 朝会を使うプロジェクトが多いと、複数の朝会を同時に行うことは不可能だ。
 複数のプロジェクトに興味のあるオブザーバはすべての朝会に参加できるよう時間を調整したくなるだろう。
@@ -505,7 +505,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 朝会のエネルギーレベルを維持するにはどうすればよいだろうか？
 
 //Huddle
-!!集まる
+### 集まる
 
 //Volume of speech affects attentiveness as well as effectiveness of communication. Physical distance changes the level of volume required to communicate well. Some people don't speak loudly and don't feel comfortable doing so.
 
@@ -514,7 +514,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 大声を出さない人もいるし、そうすることを心地よいと思わない人もいる。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //The stand-up should be more of a Huddle, than a meeting. If it's difficult to hear, bring everyone closer. Beyond allowing for a more relaxed speaking volume, being physically closer tends to cause participants to be more attentive on their own. Being able to stand physically closer is also an expression of greater trust within the team.
 
@@ -531,7 +531,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 小さくしようと努力する前に、集まることの理由を説くとよいだろう。
 
 //But
-!!!!ただし
+#### !ただし
 
 //The team must balance closeness with personal comfort zones. Even on a very trusting team, there is a point when people are just standing too close for comfort. Symptoms tend to be participants that are tense and/or fidgety.
 
@@ -540,7 +540,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 参加者が緊張したり、落ち着かなかったりするのが兆候だ。
 
 //Stand Up
-!!スタンドアップ
+### スタンドアップ
 
 //Some people are talkative and tend to wander off into Story Telling. Some people want to engage in Problem Solving immediately after hearing a problem. Meetings that take too long tend to have low-energy and participants not directly related to a long discussion will tend to be distracted.
 
@@ -549,7 +549,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 朝会が長すぎるとエネルギーが低下し、議論に直接関係のない参加者たちは注意散漫になりがちだ。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Require that all attendees Stand Up. Use standing up to link physical with mental readiness. Physical discomfort will also remind attendees when a meeting is taking too long. A simple way to encourage this is to simply hold the meeting where there are no chairs.
 
@@ -559,7 +559,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 手っ取り早くこれを強制するには、椅子を取っ払ってしまうことだ。
 
 //But
-!!!!ただし
+#### !ただし
 
 //Standing up tends to cause meetings to shorten, but does not guarantee that they will shorten to an optimal length. People may learn to cope with the discomfort instead of taking a more appropriate response. Also if the meetings are not taking too long nor wandering off-topic, standing up is an unnecessary ritual.
 
@@ -569,7 +569,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 また、時間が短かったり、話が脱線しない場合は、スタンドアップする必要はないだろう。
 
 //Fifteen Minutes or Less
-!!15分以内
+### 15分以内
 
 //Most people will wander mentally when they are in long meetings. A long, droning meeting is a horrible, energy-draining way to start the day. A specific number helps remind us when to consider adjustment to reduce the time of the meeting.
 
@@ -578,7 +578,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 朝会時間を決めておくと、調整しやすいだろう。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Keep the daily stand-ups to Fifteen Minutes or Less. As a general rule, after fifteen minutes, the average person's mind is going to wander which doesn't help with setting focus.
 
@@ -587,7 +587,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 そうなると、フォーカスの設定の邪魔になる。
 
 //But
-!!!!ただし
+#### !ただし
 
 //Fifteen minutes may even be too long for smaller teams. Because of the mind-wandering effect, even for larger teams, fifteen minutes is a good limit.  Also, it is also possible to have a meeting that is too short where on ending, the attendees still have no idea what's going on nor who to talk to in order to find out.
 
@@ -597,7 +597,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 チームの状況を把握できなかったり、問題を解決するために誰に話しかければよいのか分からなかったりすることもあるだろう。
 
 //Signal the End
-!!終了の合図
+### 終了の合図
 
 //After the last person has spoken, the team may not immediately realise that the meeting is over. The gradual realisation that it's time to walk away doesn't end the meeting on a high note and may contribute to Low Energy.
 
@@ -606,7 +606,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 高エネルギーの朝会にならないし、逆に低エネルギーになってしまうかもしれない。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Signal the End of the stand-up with a throwaway phrase (e.g., "Well, enjoy your lunch everyone." [Gibbs, 2006, Signal]) or some other action.
 
@@ -614,7 +614,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 たとえば、「楽しいランチを！」[Gibbs, 2006, Signal]と言ってみたり、決まった行動をとったりするなどだ。
 
 //Time the Meetings
-!!時間を計測
+### 時間を計測
 
 //It is difficult to qualitatively judge whether a stand-up is taking too long, especially if it only gradually increases in length.
 
@@ -622,7 +622,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 少しずつ時間が長くなっている場合は特にそうだ。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Time the Meetings and publish the results. Most of the time, attendees just don't realise the impact of Story Telling, not being prepared to Take It Offline, or not preparing have on how long the meeting will take. Make it quantifiable.
 
@@ -630,7 +630,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 参加者は''講演会''で時間がつぶれたり、'''オフラインでやる'''ことを前提にしないで話し込んだり、朝会がどれだけ時間がかかるか見積もらないことの影響を理解していない。そこはきちんと定量化しよう。
 
 //But
-!!!!ただし
+#### !ただし
 
 //As with all measures, timing the meetings shouldn't be introduced unless there is an actual goal to accomplish due to a problem with energy levels.  Once the goal is accomplished, the measurement should be dropped. Measuring for no particular reason leads to suspicion and metrics apathy.
 
@@ -639,7 +639,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 明確な理由もなく計測すると、疑惑や計測への無関心を助長するだけだ。
 
 //Take It Offline
-!!オフラインでやる
+### オフラインでやる
 
 //Some people want to engage in Problem Solving immediately after hearing a problem. Meetings that take too long tend to have low-energy and participants not directly related to a long discussion will tend to be distracted. It is still important to acknowledge that further discussion will be required to solve the raised problem. Some people may find it uncomfortable to enforce the structure of the stand-up by interrupting.
 
@@ -649,7 +649,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 なかには朝会の仕組みがくずれるのを快く思わない人たちもいるからだ。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Use a simple and consistent phrase like “Take it offline” as a reminder that such discussions should take place outside of the daily stand-up. If the discussion was Socialising, nothing more is required. If the discussion was Problem Solving, the facilitator (and eventually just the team) should ensure that the right people are nominated or sign up to deal with the issue later.
 
@@ -658,7 +658,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 ''問題解決''の話だったら、ファシリテータ（最終的にはチーム）が、適当な人にサインアップしてもらって、あとで処理してもらうようにする。
 
 //But
-!!!!ただし
+#### !ただし
 
 //There is a difference between Problem Solving and a clarifying question. Information that is not understood is not useful. The extent upon which clarifying questions are allowed should vary depending on how large the team is and whether it will impact Fifteen Minutes or Less.
 
@@ -667,10 +667,10 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 どれくらいまで明確にすればよいかは、チームの大きさや'''15分以内'''への影響によって違ってくる。
 
 //How do we encourage self-managing daily stand-ups?
-!自己組織型朝会にする方法は？
+## 自己組織型朝会にする方法は？
 
 //Last Arrival Speaks First
-!!最後に来たひとから話す
+### 最後に来たひとから話す
 
 //During a stand-up, attendees need to know who is supposed to speak first. Having the facilitator decide who should speak first is a subtle though definite force against self-organisation. The team should know without intervention who speaks first.
 
@@ -679,7 +679,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 何もせずに最初に話す人が誰なのか分かるようにすべきだ。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Agree that the Last Arrival Speaks First. This is a simple rule that also has the added benefit of encouraging people to be punctual about showing up for the stand-up.
 
@@ -687,7 +687,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 このシンプルなルールには、時間通りに参加するようになるという付加的なメリットもある。
 
 //Round Robin
-!!ラウンドロビン
+### ラウンドロビン
 
 //During a stand-up, attendees need to know who is supposed to speak next. Having a facilitator decide who speaks next is a subtle though definite force against self-organisation. The team should know without intervention who speaks next.
 
@@ -696,7 +696,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 何もせずに次に話す人が誰なのか分かるようにすべきだ。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Use a simple predetermined rule like a Round Robin to determine who should go next. It doesn't matter if it is clockwise or counter-clockwise. What does matter is that the team runs the meeting, not the facilitator or manager.
 
@@ -705,7 +705,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 ファシリテータやマネージャではなく、チームが朝会を運営できればそれでよい。
 
 //Pass the Token
-!!トークンを渡す
+### トークンを渡す
 
 //With simple, predictable ordering mechanisms (e.g., Round Robin), it is very easy for participants to ignore other speakers until it is closer to their turn. There may be a tendency to think of other things rather than pay attention to what others are saying.
 
@@ -715,7 +715,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 何か他のことを考えているのだろう。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Introduce an unpredictable ordering mechanism, like tossing a speaking token (e.g., a ball) to determine who should speak next. Having a speaking token also simplifies deciding who speaks first as it will be the person who happens to have retrieved the token (or the first person s/he tosses the token to).
 
@@ -737,7 +737,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 ビロードのおもちゃを使うチーム[Mar, 2006]もあるようだ。
 
 //But
-!!!!ただし
+#### !ただし
 
 //With larger teams, it may become difficult to remember who has already spoken. In those cases, it may be easier to stick to simpler mechanisms like Round Robin. Depending on the culture of the organisation or even team, tossing a ball around may also be seen as unprofessional and would create an unnecessary negative perception of the underlying ritual.
 
@@ -746,7 +746,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 組織やチームの文化によっては、ボールを投げるという行為はプロフェッショナルではないと見なされることもある。そうなると、朝会に対しても不要なネガティブの認識をされてしまう。
 
 //Take a Card
-!!カードを引く
+### カードを引く
 
 //During a stand-up, attendees need to know who is supposed to speak first and after that, who is supposed to speak next. Having a facilitator decide who should speak is a subtle though definite force against self-organisation. The team is not keen on Pass the Token because they typically have coffee cups in their hands.
 
@@ -756,14 +756,14 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 手にはコーヒーカップを持っているからだ。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Have team member Take a Card that has a number determining the order in which they will speak [Russell, 2006].
 
 チームメンバが'''カードを引く'''ことで話す順番を決める[Russell, 2006]。
 
 //Rotate the Facilitator
-!!ファシリテータを持ち回りにする
+### ファシリテータを持ち回りにする
 
 //Team members are Reporting to the Leader, that is, they're only talking to the meeting facilitator instead of each other. Only the meeting facilitator is raising and addressing process issues related to the stand-up. We want the team to take ownership of the stand-up and this requires removing any dependence on a single facilitator.
 
@@ -774,7 +774,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 そのためには、一人のファシリテータに頼らないようにする必要がある。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //Rotate the Facilitator. Rotate assignment of a role responsible for ensuring people attend the stand-up and stick to the agreed upon rules.
 
@@ -783,7 +783,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 
 
 //But
-!!!!ただし
+#### !ただし
 
 //Teams that are not experienced with stand-ups benefit greatly from having a coach experienced in the process. It is more that the team should be weaned into taking greater control of the stand-up. At some point, no explicit facilitator should be required at all.
 
@@ -792,14 +792,14 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 その時点ではまだファシリテータは必要ない。
 
 //Break Eye Contact
-!!アイコンタクトをやめる
+### アイコンタクトをやめる
 
 //Team members are Reporting to the Leader, that is, they're only talking to the meeting facilitator instead of each other. We want the team to take ownership of the stand-up and this requires removing any dependence on a single facilitator.
 
 チームメンバが''リーダーに報告''している。つまり、他のメンバではなく、朝会のファシリテータにだけ話しかけているのだ。
 
 //Therefore
-!!!!だから
+#### !だから
 
 //The facilitator should Break Eye Contact [Nicolette, 2006] as a subtle way of reminding the speaker that s/he should be addressing the team, not just one person. One way to do this is to move around [Shimp, 2006] so that the current speaker can't see the facilitator.
 
@@ -808,7 +808,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 そのためのひとつの方法として、辺りを歩き回って[Shimp, 2006]、スピーカーがファシリテータを見れないようにするというのがある。
 
 //Smells are about when things are going wrong
-!臭いがしたら、それ間違ってるから
+## 臭いがしたら、それ間違ってるから
 
 //I endured regular stand-up meetings for three years. What made the meetings most painful was my boss (I'll call him Wally). His main reason for the stand-up meeting was not to increase efficiency or embrace XP as much as it was to shorten human interaction beyond anything directly related to the work product. ... For Wally, however, the stand-up meeting (like the 7 a.m. Monday meeting and the 5 p.m. Friday meeting) was a loyalty test designed to reinforce the employer-employee relationship. [LaPlante, 2003]
 
@@ -827,7 +827,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 パターンとつながっていないものは、根底の問題が微妙なものだったり、朝会の範囲外のものだったりするので、自分達のソリューションを探す必要があるだろう。
 
 //Reporting to the Leader
-!!×リーダーに報告
+### ×リーダーに報告
 
 //Team members should address the Team. This is not a "Reporting to the ScrumMaster" meeting. [Cochango, 2006]
 
@@ -839,7 +839,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 これだと、本来チームのためであるべき朝会がマネージャやファシリテータのものであるかのようになってしまう。この従属関係を断ち切る方法がいくつかある。'''ファシリテータを持ち回りにする'''、'''アイコンタクトをしない'''、'''昨日やったこと・今日やること・問題点'''の形を変える、'''トークンを渡す'''などだ。
 
 //People are Late
-!!×遅刻
+### ×遅刻
 
 //This is directly addressed by Same Place, Same Time, but as mentioned may indicate that the stand-up is being held at the wrong time or at the wrong place.
 
@@ -847,7 +847,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 遅刻があるのは、先ほども述べたように、朝会を間違った場所、間違った時間に開いている可能性がある。
 
 //Stand-up Meeting Starts the Day... Late
-!!×朝会で一日を始める……遅くに
+### ×朝会で一日を始める……遅くに
 
 //Because the stand-up is seen to start the work day, no work is done before the stand-up. Depending on how late in the morning the stand-up is, this can have a significant impact on available working hours. This leads to Don't Use the Stand-up to Start the Day.
 
@@ -856,7 +856,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 これは'''「朝会で一日を始める」を使わない'''につながる。
 
 //Observers Interrupt
-!!×オブザーバが邪魔をする
+### ×オブザーバが邪魔をする
 
 //Regular interruption by observers is very disruptive to the delivery team by challenging the premise that the daily stand-up is primarily for the delivery team. Interruption also threatens Fifteen Minutes or Less. Enforce Pigs and Chickens.
 
@@ -867,7 +867,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 この場合、'''豚と鶏'''を発動する。
 
 //Socialising
-!!×仲良しこよし
+### ×仲良しこよし
 
 //One of the goals of the stand-up is to increase team socialisation. However, the daily stand-up is not intended for team members to “catch up” with each other on non project-related matters. It's difficult to provide examples of this since the degree to which socialising passes from team-building to distracting varies from team to team. The threshold can be detected from the behaviours of participants not directly involved in the socialisation. If their energy levels remain high, then it's probably just team-building; if their energy levels drop, then Take It Offline and perhaps provide another forum to act as a Water Cooler [OrgPatternsWaterCooler].
 
@@ -879,7 +879,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 彼らのエネルギーが下がったら、'''オフラインでやる'''か、'''ウォータークーラー'''[OrgPatternsWaterCooler]{{fn('訳注：ここには載っていないが、話したいだけ話して、みたいな意味？')}}をする別の会を提供する。
 
 //I Can't Remember
-!!×覚えてない
+### ×覚えてない
 
 //“What did I do yesterday?... I can't remember... What am I doing today?... I dunno...”
 
@@ -898,7 +898,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 '''15分以内'''にならない可能性もあるし、そうなれば、さらにエネルギーが低下する。
 
 //Story Telling
-!!×講演会
+### ×講演会
 
 //Instead of providing a brief description of an issue, the participant provides enough details and context to cause others to tune out. The general rule is to identify obstacles during the stand-up and discuss the details after the stand-up. This can be summarised as “Tell the headline, not the whole story” or Take it Offline.
 
@@ -910,7 +910,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 あるいは、'''オフラインでやる'''こと。
 
 //Problem Solving
-!!×問題解決
+### ×問題解決
 
 //The key to keeping the stand-ups Fifteen Minutes or Less is to limit the Story Telling and not succumb to Problem Solving during the meeting. Take it Offline.
 
@@ -919,7 +919,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 それらは'''オフラインでやる'''こと。
 
 //Low Energy
-!!×元気がない
+### ×元気がない
 
 //Could indicate a slow-down of pace due to Story Telling, Problem Solving, etc. In which case Take it Offline. Could be simply a matter of team size. Could be the time of day which suggests trying the alternative of Use the Stand-up to Start the Day and Don't Use the Stand-up to Start the Day.
 
@@ -929,7 +929,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 あるいは、'''朝会で一日を始める'''または'''「朝会で一日で始める」を使わない'''について考える時なのかもしれない。
 
 //Obstacles are not Raised
-!!×問題が起こらない
+### ×問題が起こらない
 
 //There may be several reasons for obstacles not being raised. Not remembering, high pain threshold, lack of trust in raising issues (because Obstacles are not Removed, Observers Interrupt with blaming), etc. Depending on the context, just introducing Yesterday Obstacles Today and enforcing Pigs and Chickens may not be enough. Introducing a Blockage Board may provide a less confronting medium to raise obstacles. Retrospectives [Kerth, 2001] are an effective way of discovering the underlying reason why Obstacles are not Raised.
 
@@ -942,7 +942,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 ふりかえり（レトロスペクティブ）[Kerth, 2001]は、''問題が挙がらない''根本的な理由を見つけ出す効果的な方法だ。
 
 //Obstacles are not Removed
-!!×問題が解決しない
+### ×問題が解決しない
 
 //With the exception of a blaming environment, the surest way to stop people from raising obstacles is to not remove them. To make it difficult to forget and/or ignore obstacles, track them publicly with a Blockage Board.
 
@@ -952,7 +952,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 '''ブロッケージ・ボード'''で公に追跡する。
 
 //Obstacles are Only Raised in the Stand-up
-!!×朝会だけで問題が起こる
+### ×朝会だけで問題が起こる
 
 //Stand-ups act as a safety net. At worst, an obstacle will be communicated to the greater team within one day. However, doing stand-ups is not intended to stop issues from being raised and resolved during the day. Introducing an alternative medium to raise obstacles such as a Blockage Board may help. If not, underlying reasons may be discovered using retrospectives.
 
@@ -964,7 +964,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 または、根本的な原因がふりかえりの中で判明するかもしれない。
 
 //If the feel is good, you're probably okay
-!雰囲気がよければ、たぶんOK
+## 雰囲気がよければ、たぶんOK
 
 //Hopefully this paper has provided some more insight into the subtle details of effective stand-up practices and also common problem indicators. It should be clear that a daily stand-up is not just standing up together every day.
 
@@ -977,7 +977,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 それなら、本当の意味で、一緒にデイリースタンドアップしていると言える。
 
 //What are other people saying?
-!他の人は何と言っているか？
+## 他の人は何と言っているか？
 
 //As far as I know, there are no other low-level patterns papers on daily stand-ups though the core ideas exist in the referenced papers. There are a couple online articles on daily stand-up anti-patterns or smells ([Miller, 2003], [Cohn, 2003]) though both are limited in scope.
 
@@ -988,7 +988,7 @@ Losse Koskelaはチームメンバが''リーダーに報告''しないように
 いくつかのオンライン記事が存在している（[Miller, 2003]、[Cohn, 2003]）。
 
 //Acknowledgements
-!謝辞
+## 謝辞
 
 //I'd like to thank Ivan Moore and Alan Francis for helping me determine what I wanted to express overall, Owen Rogers for some of the patterns, Susan Newton for reminding me that stand-ups should be supportive, James Ross and Rebecca Parsons for some editing, Brian Marick for his shepherding, all the people at my PLoP 2004 writer's workshop (Dick Gabriel, Linda Rising, James Coplien, Lise Hvatum, Cecilia and Terje Haskins, Danny Dig, David Hecksel, and Ali Arsanjani), Bill Wake for his detailed comments, all the people at my PLoP 2006 writer's workshop (Ralph Johnson, Pau Arumi, David Garcia, Leon Welicki, Djamal Bellebia, Dirk Riehle, Hesham Saadawi, and Paddy Fagan), Karthik Chandrasekarial for the stand-up picture, and everyone I've ever attended a daily stand-up with.
 
@@ -1004,7 +1004,7 @@ Karthik Chandrasekarialには、朝会の写真を提供していただいた。
 最後に、私がこれまでに参加した朝会のメンバみんなに感謝したい。
 
 //References
-!参考
+## 参考
 * [Anderson, 2002] Anderson, D., “Morning Roll Call”, The Coad Letter: Process, Issue 101 (August 2002), URL: http://bdn.borland.com/article/0,1410,29686,00.html
 * [Beedle et al., 2000] Beedle, M. et al., “SCRUM: An Extension Pattern Language for Hyperproductive Software Development”, Pattern Languages of Program Design 4, N. Harrison, B. Foote, and H. Rohnert, eds., Addison-Wesley, 2000, pp. 637-651
 * [Cockburn, 2001] Cockburn, A., Agile Software Development, Addison-Wesley, 2001
