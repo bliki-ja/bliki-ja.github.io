@@ -14,6 +14,7 @@ http://martinfowler.com/bliki/CallSuper.html
 ただし、メソッドの先頭でスーパークラスの呼び出しを行ってください。」
 例えばこんな感じです。
 
+```java
  public class EventHandler ...
    public void handle (BankingEvent e) {
     housekeeping(e);
@@ -24,12 +25,14 @@ http://martinfowler.com/bliki/CallSuper.html
      super.handle(e);
      initiateTransfer(e);
    }
+```
 
 毎回、何かを忘れずにやらないといけないなら、それは[悪いAPIの兆候](http://www.aristeia.com/Papers/IEEE_Software_JulAug_2004.pdf)です。
 ここでは、APIがhousekeepingの呼び出しを行うべきです。
 よくやるのは、handleメソッドをテンプレートメソッドにすることです、
 こんな風に。
 
+```java
  public class EventHandler ...
    public void handle (BankingEvent e) {
      housekeeping(e);
@@ -42,6 +45,7 @@ http://martinfowler.com/bliki/CallSuper.html
    protected void doHandle(BankingEvent e) {
      initiateTransfer(e);
    }
+```
 
 ここでスーパークラスは、publicメソッドとサブクラスがオーバライドするためのメソッド(フックメソッドと呼ばれます)を定義しています。
 サブクラスを書く人は、これで親クラスのメソッドを呼び出すことについて頭を悩ませる必要はありません。
@@ -85,6 +89,7 @@ handleやdoHandleといった名前を付けるという慣習もありますが
 ここで実際の例に切り替えます。しばしば登場するJUnitです。
 JUnitはテストケースを走らせることの総合的なコントロールにテンプレートメソッドを使っています。こんな感じです。
 
+```java
  public abstract class TestCase
    public void runBare() throws Throwable {
      setUp();
@@ -99,6 +104,7 @@ JUnitはテストケースを走らせることの総合的なコントロール
    }
    protected void tearDown() throws Exception {
    }
+```
 
 これは一般的なテンプレートメソッドと、オーバーライド用の2つのフックメソッドです。
 ここまではいいですね。
@@ -107,14 +113,17 @@ setUpとtearDownに独自のコードを追加すればいいのです。
 複雑になるのは、ユーザがJUnitから別のフレームワークを派生しようとしたときです。他に沢山の例がありますが、プロジェクト固有の規約を持っている簡単なケースを用います。
 こんな感じです。
 
+```java
  public class AlphaTestCase extends TestCase
    protected void setUp() throws Exception {
      alphaProjectSetup();
    }
+```
 
 親メソッド呼び出し問題に出くわしました。
 なので、先のアドバイスに従ってこう再定義します。
 
+```java
  public class AlphaTestCase extends TestCase...
    final protected void setUp() throws Exception {
      alphaProjectSetup();
@@ -122,6 +131,7 @@ setUpとtearDownに独自のコードを追加すればいいのです。
    }    
    protected void doSetUp() throws Exception {        
    }
+```
 
 一応これでも機能しますが、JUnitに馴れた人を困惑させるという問題に出くわします。
 これまで携わってきたのプロジェクトや、これまで読んできた本は、
@@ -133,6 +143,7 @@ setUpとtearDownに独自のコードを追加すればいいのです。
 第二レベルのフレームワークは、
 setUpの呼び出し側メソッドをオーバーライドできます。
 
+```java
  public class AlphaTestCase extends TestCase...
    public void runBare() throws Throwable {
      alphaProjectSetup();
@@ -146,6 +157,7 @@ setUpの呼び出し側メソッドをオーバーライドできます。
    }
    protected void setUp() throws Exception {
    } 
+```
 
 これだと誰でもsetUpを普通と同じように使うことができます。
 フレームワーク作者が振る舞いを追加したいのであれば、他にも選択肢はあります。
@@ -165,8 +177,7 @@ JUnitとその他のJavaベースフレームワークは、[[NUnit](http://nuni
 アノテーションはメソッド名以上のメタデータを与えることを許し、この種の状況にさらなる選択を許します。しかしそれは別の日のテーマです。
 
 
-{{rcomment}}
-*2005-08-31 (水) 20:22:53 kameda : とても読みやすくなりました。ありがとうございました。
+* 2005-08-31 (水) 20:22:53 kameda : とても読みやすくなりました。ありがとうございました。
 * kdmsnr ： 少し変更しました。
-*2005-08-30 (火) 23:18:39 kdmsnr : ありがとうございます。
-*2005-08-30 (火) 23:07:34 kameda : 初めて投稿します。拙い訳文で申し訳ありません。ビシバシツッコミのほど、よろしくお願いしますm(__)m
+* 2005-08-30 (火) 23:18:39 kdmsnr : ありがとうございます。
+* 2005-08-30 (火) 23:07:34 kameda : 初めて投稿します。拙い訳文で申し訳ありません。ビシバシツッコミのほど、よろしくお願いしますm(__)m

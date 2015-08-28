@@ -35,10 +35,11 @@ Rubyではこれを簡単に行うことができる……と私も聞いた。
 私がやることは、rubyでploticusを起動して、コマンドを渡してやることだ。
 だいたいこんな感じになる。
 
+```ruby
   def generate script, outfile
     IO.popen("ploticus -png -o #{outfile} -stdin", 'w'){](p| p << script}
   end
-
+```
 
 
 このスクリプトを作ることで、
@@ -54,6 +55,7 @@ Rubyではこれを簡単に行うことができる……と私も聞いた。
 最下層はPloticusScripter。これはploticusスクリプトコマンドを作成するクラスだ。
 こんな感じである。
 
+```ruby
  class PloticusScripter
    def initialize
      @procs = []
@@ -87,7 +89,7 @@ Rubyではこれを簡単に行うことができる……と私も聞いた。
      @lines << line
    end
  end
-
+```
 
 
 ご覧のように、PloticusScripterはprocコマンドのリストである
@@ -101,6 +103,7 @@ procメソッドを繰り返し呼び出して自分のploticus procを定義し
 
 次のレベルは棒グラフを作るためのものだ。
 
+```ruby
  class PloticusClusterBar 
    attr_accessor :rows, :column_names
    def initialize
@@ -137,7 +140,7 @@ procメソッドを繰り返し呼び出して自分のploticus procを定義し
      return result.join("\n")    
    end  
  end
-
+```
 
 
 add_rowメソッドを使ってデータ行を追加することで、
@@ -153,6 +156,7 @@ add_rowメソッドを使ってデータ行を追加することで、
 
 ＃[ploticusのサイトにある例](http://ploticus.sourceforge.net/gallery/students.htm)と同じようなものを作る
 
+```ruby
  class StudentGrapher
    def initialize
      @ps = PloticusScripter.new
@@ -199,7 +203,7 @@ add_rowメソッドを使ってデータ行を追加することで、
    s.run
    s.generate output
  end
-
+```
 
 
 非常にシンプルな例だが、私が[Gatewayパターン](http://martinfowler.com/eaaCatalog/gateway.html)（[翻訳](http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?Gateway)）と呼んでいるものの良い例だ。

@@ -1,13 +1,9 @@
 ---
-title: ClassInstanceVariable
+title: クラスインスタンス変数
 tags: [language feature, ruby]
 ---
 
 http://martinfowler.com/bliki/ClassInstanceVariable.html
-
-2007/1/9
-
-
 
 オブジェクトについて学ぶと、オブジェクトのデータには二種類あることが分かる。
 インスタンス変数とクラス変数だ。
@@ -22,7 +18,7 @@ http://martinfowler.com/bliki/ClassInstanceVariable.html
 クラス変数が自身のインスタンスを保持することを考えてみてもらいたい。
 （rubyに不慣れなら[ガイド](http://martinfowler.com/articles/readingRuby.html)を参照しておくれ）
 
-<<<
+```ruby
 #ruby
 class Employee
   @@instances = []
@@ -42,13 +38,13 @@ Employee.new('Roy').store
 Employee.new('Erik').store
 
 puts Employee.instances.size
->>>
+```
 
 まだ驚くところではない。
 employeeの数は3になる。
 では、次のコードを試して欲しい。
 
-<<<
+```ruby
 #ruby
 class Employee
   @@instances = []
@@ -72,7 +68,7 @@ Programmer.new('Erik').store
 
 puts Overhead.instances.size
 puts Programmer.instances.size
->>>
+```
 
 
 
@@ -96,7 +92,7 @@ puts Programmer.instances.size
 だが、それほど難しいことではない。
 クラス名をキーにしたディクショナリを使うことができる。
 
-<<<
+```ruby
 #ruby
 class Employee
   @@instances = {}
@@ -120,14 +116,14 @@ Overhead.new('Roy').store
 Programmer.new('Erik').store
 puts Overhead.instances.size
 puts Programmer.instances.size
->>>
+```
 
 
 
 このテクニックはどのオブジェクト指向言語でも利用可能だろう。
 ただし、Rubyの場合は、クラスインスタンス変数をあらかじめ持っている。
 
-<<<
+```ruby
 #ruby
 class Employee
   class << self; attr_accessor :instances; end
@@ -148,11 +144,11 @@ Overhead.new('Roy').store
 Programmer.new('Erik').store
 puts Overhead.instances.size
 puts Programmer.instances.size
->>>
+```
 
 
 
-クラスインスタンス変数の定義は、{{code('class << self; attr_accessor :instances; end')}}の部分で行っている。
+クラスインスタンス変数の定義は、``class << self; attr_accessor :instances; end``の部分で行っている。
 あまり深追いはしたくないのだが、これは継承元であるEmployeeクラスのインスタンス変数を定義している（それからgetterとsetterも）。
 クラス変数と違い、クラスインスタンス変数はクラスオブジェクトごとに異なる値を保持することになる。
 
@@ -165,4 +161,4 @@ puts Programmer.instances.size
 
 * http://www.rubyist.net/~matz/20061220.html#p01
 
-""1.9では解決されている(クラス変数は継承しない)。
+> 1.9では解決されている(クラス変数は継承しない)。
