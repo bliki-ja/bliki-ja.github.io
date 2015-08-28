@@ -10,6 +10,18 @@ github_username:  bliki-ja
 
 permalink: :title
 
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      type: "pages"
+    values:
+      layout: "page"
+
 # Build settings
 markdown: redcarpet
 redcarpet:
