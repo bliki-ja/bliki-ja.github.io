@@ -1,1 +1,0 @@
-# bliki-ja.github.io

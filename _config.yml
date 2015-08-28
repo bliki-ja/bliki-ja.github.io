@@ -9,6 +9,7 @@ twitter_username:
 github_username:  bliki-ja
 
 permalink: :title
+exclude: [Rakefile, README.md]
 
 defaults:
   -
