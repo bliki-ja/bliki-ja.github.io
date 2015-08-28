@@ -4,7 +4,7 @@ tags: TAGS
 ---
 
 ----
-以下の文章は、Martin Fowlerによる[[Ruby at ThoughtWorks|http://martinfowler.com/articles/rubyAtThoughtWorks.html]]の日本語訳である。
+以下の文章は、Martin Fowlerによる[Ruby at ThoughtWorks](http://martinfowler.com/articles/rubyAtThoughtWorks.html)の日本語訳である。
 ----
 
 // ThoughtWorks started using Ruby for production projects in 2006, from then till the end of 2008 we had done 41 ruby projects. In preparation for a talk at QCon I surveyed these projects to examine what lessons we can draw from the experience. I describe our thoughts so far on common questions about Ruby's productivity, speed and maintainability. So far our conclusions are that Ruby is a viable platform that should be seriously considered for many forms of applications - in particular web applications using Ruby on Rails. I also go through some technical lessons, including some thoughts on testing with Active Record.
@@ -52,7 +52,7 @@ WebアプリケーションフレームワークであるRuby on Railsの登場�
 最後に、実践で学んだRubyの教訓について触れる。
 
 //The Shape of Our Projects
-!プロジェクトの形態
+## プロジェクトの形態
 
 //During 2006-8, ThoughtWorks has been involved in some 41 Ruby projects. I define a Ruby project as a project where Ruby was the primary development language. Ruby has appeared on other projects too, there's a lot of recent developments using ruby for build automation or functional testing for Java projects. Almost all these projects have involved Rails, and most of them are web site projects where Rails is at least as important as Ruby.
 
@@ -65,7 +65,7 @@ Webサイトの開発プロジェクトが多く、RailsはRubyと同様に重�
 
 //Figure 1: Scatterplot of peak headcount versus involved length for ThoughtWorks Ruby projects in 2006-8.
 
-[[http://martinfowler.com/articles/rubyAtThoughtWorks/projectScatter.png]]
+[http://martinfowler.com/articles/rubyAtThoughtWorks/projectScatter.png]]
 
 ''図1: 2006年から2008年におけるThoughtWorksでのRubyプロジェクトに関わった人数（ピーク時）と期間の散布図''
 
@@ -143,10 +143,10 @@ Rubyはまた、アジャイルソフトウェア開発プロセスの使用を�
 開発環境の生産性が高まれば、頻繁にプロセスをレビューすることができるし、アジャイルの「検査と適応」プロセスがもっとうまく働くようになる。
 
 //Questions About Ruby
-!Rubyに関する質問
+## Rubyに関する質問
 
 //Was Ruby the Right Choice?
-!!Rubyで本当にいいのか？
+### Rubyで本当にいいのか？
 
 //When looking back on our 41 projects, perhaps the most important question to ask is whether the Ruby platform was the correct choice. One way to approach that question is to ask technical leads on the project whether, in hindsight, they think the choice was correct.
 
@@ -184,7 +184,7 @@ IT部門がRubyの奇妙な"歯"や"爪"に耐えられなかったそうだ。
 Rubyはソフトウェア開発作業に受け入れられ、推奨もされていたが、その使用が避けられる最大の原因は、クライアントからの政治的な抵抗にあった。
 
 //Is Ruby More Productive?
-!!Rubyの生産性は高いのか？
+### Rubyの生産性は高いのか？
 
 //When people are asked about why Ruby should be used on a project, the most common answer is for increased productivity. One early indicator was an assessment of a project that suggested that Ruby would have yielded an order of magnitude improvement in productivity.
 
@@ -234,7 +234,7 @@ Scott Conleyが「効率性のリスクと納品のリスクの違い」と表�
 難のあるコードを生み出しかねず、それが全体的な納品のリスクにつながる。
 
 //Is Ruby Slow?
-!!Rubyは遅いのか？
+### Rubyは遅いのか？
 
 //In a word "yes". Search around for benchmarks on the net and you'll find numerous surveys that show that, even by the standards of scripting languages, Ruby is a tortoise.
 
@@ -279,7 +279,7 @@ Mingleチームは多くの機能を素早く構築したが、Rubyから受け�
 ただしMingleは例外で、一般的なケースではない。
 
 //Is a Ruby Code-base Hard to Understand?
-!!Rubyのコードは理解しにくいのか？
+### Rubyのコードは理解しにくいのか？
 
 //A concern we frequently hear about Ruby is that its dynamic typing, support for meta-programming, and lack of tools makes it liable to leave a code base that's difficult to follow. In general this hasn't turned out to be a issue in practice for us. The story I hear is that the fact that you can write much less code for the same functionality means that it's easier to keep the code clean than it is for mainstream languages.
 
@@ -330,7 +330,7 @@ ThoughtWorksの開発者たちは、能力という点では平均よりも高�
 適切なサンドボックスがあれば、やり過ぎてもあとから簡単に戻すことができる。
 
 //Is Ruby a Viable Platform
-!!Rubyは使えるプラットフォームなのか？
+### Rubyは使えるプラットフォームなのか？
 
 //All of these questions sum up into the key question for us: is Ruby (and Rails) a viable platform for us and our clients. The answer thus far is a resounding "yes". It offers palpable gains in productivity, allowing us to be more responsive and produce better software, more quickly for our clients. This isn't to say it's the right choice for all situations. Choosing a development platform is never a simple choice, particularly since it usually is more of a social choice than a technological choice. But the headline conclusion is that Ruby is a choice that's worth considering, worthy enough for us to want to keep this tool in our toolkit.
 
@@ -356,17 +356,17 @@ ThoughtWorksの開発者たちは、能力という点では平均よりも高�
 Java/C#を使っている開発チームでも、サポート的なタスクにスクリプト言語を使うべきだとこれまで私は主張してきた。Rubyは最適な選択肢である。
 そして、この組み合わせを使うプロジェクトで増えてきているのを目の当たりにしている。
 JVMやCLR上でこうした言語がサポートされ始めているので、異なる強みを持つ異なる言語を混ぜる機会が増えている。
-Neal Fordはこのやり方を[[Polyglot Programming|http://memeagora.blogspot.com/2006/12/polyglot-programming.html]]と呼んでいる。
+Neal Fordはこのやり方を[[Polyglot Programming](http://memeagora.blogspot.com/2006/12/polyglot-programming.html)と呼んでいる。
 
 //Some Development Tips
-!開発のヒント
+## 開発のヒント
 
 //In this last section, I'll run over a grab-bag of lessons we've learned from using Ruby.
 
 最終節では、我々がRubyを使う上で学んだ教訓の詰め合わせをお届けしよう。
 
 //Testing with Active Record
-!!Active Recordのテスティング
+### Active Recordのテスティング
 
 //Right at the beginning of our use of Ruby, there was a debate on how best to organize testing in the presence of the Active Record database layer in Rails. The basic problem is that most of the time, performance of enterprise applications is dominated by database access. We've found that by using a Test Double we can greatly speed up our tests. Having fast tests is crucial to our test-intensive development process. Kent Beck recommends a basic commit build of under ten minutes. Most of our projects manage this these days, and using a database double is a vital part of achieving it.
 
@@ -389,7 +389,7 @@ Mingleチームでは、Railsがデータベースと密接に結びついてい
 まったく逆の視点が、AtlantaチームとJerseyチームから提唱された。
 Rubyにはメソッドを実行時に再定義できる強力な機能がある。
 これを使って、Active Recordのクラスにあるデータベースアクセスメソッドを再定義して、Active Recordクラスをスタブ化するのである。
-チームはこのために gem の [[unitrecord|http://github.com/dan-manges/unit-record]] を使い始めていた。
+チームはこのために gem の [unitrecord](http://github.com/dan-manges/unit-record) を使い始めていた。
 
 //In the three years, we've not seen a generally accepted victor in this debate. The Mingle team run a couple of thousand tests against a real postgres database in around 8 minutes. (They parallelize the tests to make use of multiple cores.) The Atlanta and Jersey teams consider it valuable that their commit test runs in 2 minutes with stubs versus 8 minutes without. The trade-off is the simplicity of the direct database tests versus the faster commit build of the stubbed tests.
 
@@ -408,7 +408,7 @@ Atlanta/Jerseyチームでは、スタブを使ったことでまた別の問題
 使いすぎがひどくなると、スタブ化されたユニットテストをやめて、railsスタイルのデータベースに直接アクセスする機能テストに移行せざるを得なくなるだろう。
 
 //Active Record Leaks
-!!Active Recordの漏れ
+### Active Recordの漏れ
 
 //A common situation that people report is time spent futzing with SQL. Active Record does a good job of hiding much database access from the programmer, but it fails to hide it all - essentially the abstraction leaks. As a result people have to spend a reasonable amount of time working with SQL directly.
 
@@ -438,7 +438,7 @@ O/Rの抽象化の漏れが激しく非難されているのを見たことは�
 こうした欠点はあるものの、正しく使えているのであれば、O/Rフレームワークのメリットを捨てる理由はない。
 
 //Long Running Requests
-!!長時間のリクエスト
+### 長時間のリクエスト
 
 //A common problem we've seen is applications that get into a tangle when they take on a task that takes some time to carry out. Done naively this can result in the web request handler going dark for a worryingly long time while it deals with the request.
 
@@ -464,7 +464,7 @@ Railsを使う多くの人たちは、こうしたことが起きるのをすぐ
 Railsは、Webアプリケーションの何度も起こる部分の多くを、簡単に、素早くできるようにしてくれている。しかし、やるべきことはまだ残っているのだ。
 
 //Deployment
-!!デプロイ
+### デプロイ
 
 //Rails applications are easy to build, but sadly have been very awkward to deploy. The common scenario of using a pack of several mongrel web servers is at best rather fiddly to set up. This is something that has stuck out rather starkly due to the contrast with the smoothness of much of the rest of the ruby experience.
 
@@ -486,7 +486,7 @@ Mingleチームは、MRIですべての開発を行っているが、デプロ�
 MRIは立ち上がりが速く、開発が早くできるからだ（JRubyはJVMの起動が必要なので、明らかに遅い）。
 
 //Controlling Gems
-!!Gemsの管理
+### Gemsの管理
 
 //Ruby includes a package-management system, Ruby Gems, that makes it easy to install and upgrade third-party libraries. Rails also has plugins that carry out a similar task for rails. These are good tools, but it's easy for teams to get in a tangle if different machines are set up with different versions of different libraries.
 
@@ -513,7 +513,7 @@ Gitなどの分散バージョン管理システムを使うと、もっと管�
 昔みたいにJavaアプリケーションサーバをデコンパイルしてパッチを書いた思い出よりかは、遙かに簡単だ。
 
 //Schedule Time for Updates
-!!アップデートのタイミング
+### アップデートのタイミング
 
 //Ruby generally, and Rails in particular, moves quickly. There are frequent updates to the rails system, with features that we want to use. We've found that we need to ensure we schedule time for handling rails updates and include these in the planning process. They are more significant than for other platforms, but the good news is that there's a steady stream of new capabilities.
 
@@ -524,7 +524,7 @@ Railsシステムの更新は頻繁に行われ、使いたい機能が追加さ
 これらは他のプラットフォームよりも重要なことだが、喜ばしいことに新しい機能が次々と追加されている。
 
 //Developing on Windows
-!!Windowsでの開発
+### Windowsでの開発
 
 //Ruby was born in the unix world, and most of the people who have flocked to the platform use forward slashes for directory paths. It is possible to run, deploy, and develop for ruby on a windows platform, but it's also much more tricky. Our general advice is to use a unix platform for all development. Macs are commonly preferred, but plenty of people use other FOSS Unixen too.
 
@@ -572,8 +572,8 @@ Rubyを評価するために必要だった情報を多くの同僚達が時間�
 
 ■日本語訳用: さらに詳しく知るために
 
-* [[QCon Tokyo 2009 に行ってきました。一日目のメモ|http://d.hatena.ne.jp/wayaguchi/20090411/1239470414]]
-* [[Yosuke's Perspective: QCon Tokyo 2009 1st Day#5: 実世界のRuby - Martin Fowler|http://yosuke-perspective.blogspot.com/2009/04/qcon-1st-day5-ruby-martin-fowler.html]]
+* [QCon Tokyo 2009 に行ってきました。一日目のメモ](http://d.hatena.ne.jp/wayaguchi/20090411/1239470414)
+* [Yosuke's Perspective: QCon Tokyo 2009 1st Day#5: 実世界のRuby - Martin Fowler](http://yosuke-perspective.blogspot.com/2009/04/qcon-1st-day5-ruby-martin-fowler.html)
 
 ■日本語訳について
 
