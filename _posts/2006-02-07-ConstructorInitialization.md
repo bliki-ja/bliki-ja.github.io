@@ -53,11 +53,11 @@ mf = Person.new('martin', 'fowler',
 ただし、コンストラクタによる初期化がベストな方法だ。
 
 //Common Issues
-!よくある疑問
+## よくある疑問
 
 //What if there's lots of different legal combinations for a new object? Often people get worried that there will be a gazillion constructor methods if you use this approach. Most of the time, this isn't an issue - there's only a few. You only really need the mandatory collaborators here, and there's hardly ever more than a handful of combinations of them.
 
-!!オブジェクトを作成する正しい組み合わせがいくつもあったらどうするの？
+### オブジェクトを作成する正しい組み合わせがいくつもあったらどうするの？
 
 この方法を使ったばっかりに、コンストラクタが一億と二千個もあるから困ってるっていう話をよく耳にする。
 たいていの場合、これはあまり問題にはならない。ごくごく稀なケースである。
@@ -66,7 +66,7 @@ mf = Person.new('martin', 'fowler',
 
 //What if there's a lot of collaborators to provide in the constructor? A large list of construction parameters, like any large parameter list, is a CodeSmell. Usually when I see these I find that many of the parameters are DataClumps and should be replaced by their own object. Having said that it's not unusual for constructor methods to have more parameters than other methods - but they are a good place to spot data clumps.
 
-!!コンストラクタに渡すコラボレータがたくさんあったらどうするの？
+### コンストラクタに渡すコラボレータがたくさんあったらどうするの？
 
 コンストラクタのパラメータがたくさんあったら、その他のパラメータと同じく、CodeSmellだ。
 この状況を目にしたら、パラメータをDataClumpsだと見なして、オブジェクトに置き換える。
@@ -75,7 +75,7 @@ mf = Person.new('martin', 'fowler',
 
 //How does this square with ContextualValidation? The context here is basic usage of the object - essentially a minimally useful state. This probably won't be valid for various other activities, but it should be valid enough to be useful. 
 
-!!ContextualValidationと一緒に使うにはどうすればいいの？
+### ContextualValidationと一緒に使うにはどうすればいいの？
 
 ここでの文脈は、オブジェクトの基本的な使用である——つまり、使い物になる状態であればそれでよいのだ。
 他の様々なアクティビティに使うには妥当でなくとも、

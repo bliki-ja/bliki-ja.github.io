@@ -5,7 +5,7 @@ tags: [refactoring]
 
 http://martinfowler.com/bliki/EtymologyOfRefactoring.html
 
-!!''リファクタリング''はどこからやってきた？
+### ''リファクタリング''はどこからやってきた？
 
 リファクタリング本を執筆中、この疑問が何度か頭に浮かびました。ただそのときは、語源を捜し求めることが遣り甲斐のあることだとは思えませんでした——焦点をあてていたのは''技術''だったからです。ですが、リファクタンリングのアイデアをつくりあげるのを手伝ってきた人ち（Ward Cunningham, Kent Beck, Bill Opdyke, John Brant, Don Roberts, Ralph Johnson...)に聞いてみることにはしました。
 

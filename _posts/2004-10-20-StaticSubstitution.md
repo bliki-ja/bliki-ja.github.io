@@ -108,7 +108,7 @@ http://martinfowler.com/bliki/StaticSubstitution.html
 
 ちょうど手元に入手したばかりのMichael Feathersの新刊{{isbn('0131177052','『Working Effectively With Legacy Code』')}}があるのだが、彼はこうした問題についてより多く(そして上手に)語っている。
 
-! コメント
+##  コメント
 {{rcomment}}
 *2004-11-13 (土) 00:26:11 ''[[かくたに]]'' : Hiki-devに手ぶらで相談できねーなー、と思って早数ヵ月。↓はイイ感じ。でもこの話題ってスレ違い？
 *2004-11-12 (金) 14:45:25 ''[[kdmsnr]]'' : いちおう

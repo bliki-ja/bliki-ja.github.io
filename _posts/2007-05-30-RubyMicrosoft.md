@@ -132,6 +132,6 @@ Rubyコミュニティは、マイクロソフトとともに働きたがって�
 
 これについてかなりの反応があった(全リストは[Technorati](http://technorati.com/search/http://martinfowler.com/bliki/RubyMicrosoft.html)にある)。特に読むべきなのは次の人たちからの反応だ: Sam Gentile, Cory Foy, Luke Melia, Jeremy Miller, Rockford Lhotka, John Lam, Evan Hoff, Karl Seguin, Ola Bini, Miro Adamy, Charles Nutter, Peter Laudati, Nick Malik{{fn('訳注：リンクするのが面倒なので本家を見てください。')}}。
 
-!参考
+## 参考
 
 * [空気を読まずにRubyMicrosoft粗訳した](http://blog.inomata.lolipop.jp/?eid=662847)←あとでコピる←コピった。

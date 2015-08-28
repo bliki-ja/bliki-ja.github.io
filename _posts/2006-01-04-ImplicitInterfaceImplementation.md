@@ -70,7 +70,7 @@ Javaでは、動的プロキシを使ってやる手もあるが、
 //Follow Up
 //Mike Rettig pointed out one problem with this kind of approach - not every client uses the public interface only. Consider if the class PaymentPlan is in the same package as customer - it can then call package visibility methods on customer. If you substituted an implicit implementation for Customer you'd be stuck.
 
-!!追記
+### 追記
 Mike Rettigがこの手法の問題点——すべてのクライアントがpublicインタフェースだけを使っているとは限らない点——を指摘してくれた。
 PaymentPlanクラスがCustomerと同じパッケージに入っている場合を考えてみよう——PaymentPlanクラスはCustomerのパッケージ可視性メソッドを呼び出すことができる。
 そこでCustomerを暗黙的な実装に置き換えてしまうと、ハマる。
@@ -80,7 +80,7 @@ PaymentPlanクラスがCustomerと同じパッケージに入っている場合�
 ここでの問題は、クラスには複数の暗黙的インタフェースがあるという点だ——アクセス制御ごとに1つのインタフェースがあることになる。
 これには、同じクラスの他のインスタンスからアクセスできるという広範囲なオープンアクセスも含まれる。
 
-!コメント
+## コメント
 
 *2006-01-29 (日) 11:43:37 keis : ★部分とそれに続く一文の訳を考えて見ました。「返答は、明示的に virtual と宣言されたメンバのみ、オーバーライドを許す方が好ましいという彼の考えと軌を一にするものだった。つきつめればこれは、サブクラスが（あるいはその実装者が）スーパークラスを破壊しやしないかという懸念であり、継承をどのように使うかというもっと広範な主題に関わってくる話だ」。Heljsbergのスタンスは、クラス設計者によるコントロールを重視する、といったところなんでしょうね。（Effective Java の著者である）Joshua Bloch的でもありますね。
 *2006-01-29 (日) 11:53:02 keis : It would be equivalent... で始まるパラグラフが抜けていたので追加しました。

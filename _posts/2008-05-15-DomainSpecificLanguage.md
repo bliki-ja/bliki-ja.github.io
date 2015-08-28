@@ -62,7 +62,7 @@ DslReadings にまとめていくことにします。
 
 //Choosing Between Internal and External
 
-!!内部DSLと外部DSLのいずれかを選択する
+### 内部DSLと外部DSLのいずれかを選択する
 
 //The internal and external streams come to an interesting confluence in the figure of PragDave. The pragmatic programmers have long been fans of DSLs, primarily from the Unix tradition (there is an excellent discussion in section 12 of The Pragmatic Programmer - perhaps I should call that Pragmaticum 12). In a thoughtful interview Dave said that while he regularly uses code generation, he rarely uses it programming in Ruby.
 
@@ -96,7 +96,7 @@ JavaやC#よりもSmalltalkやRubyのほうがなぜ楽しいかなんて、口�
 よく言われるのは、静的型言語と動的型言語の違いですけども、これはあるポイントを見逃しています。
 「言語内DSLに合うか合わないか」ほうが、本質的な違いだと思います。
 
-!comment
+## comment
 *2004-02-16 (月) 22:04:57 ''[[kdmsnr]]'' : Unixには新しい言語をいちから作る文化があり、LispやSmalltalkではたとえば「Lispで新しい言語」を作り出す文化がある。
 *2004-02-17 (火) 13:42:40 ''[[kdmsnr]]'' : specific を 「特化」とするか「依存」とするか。どっちがよいのでしょう。
 *2004-02-17 (火) 16:20:18 ''[[kdmsnr]]'' : http://d.hatena.ne.jp/tomokuroo/20040216#p3

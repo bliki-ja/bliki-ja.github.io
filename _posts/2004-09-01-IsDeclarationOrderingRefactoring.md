@@ -7,7 +7,7 @@ http://martinfowler.com/bliki/IsDeclarationOrderingRefactoring.html
 
 [リファクタリングの境界線](RefactoringBoundary)のひとつ
 
-!!宣言（Javaで言うメソッドやフィールド）の順序を変更することは、リファクタリングと呼べるのか？
+### 宣言（Javaで言うメソッドやフィールド）の順序を変更することは、リファクタリングと呼べるのか？
 
 現代のプログラミング言語では、宣言の順序が問題になることはない。
 2つのメソッドの位置を入れ替えても、プログラムは問題なく動く。

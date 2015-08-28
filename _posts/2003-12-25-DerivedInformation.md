@@ -5,7 +5,7 @@ tags: [uml]
 
 http://martinfowler.com/bliki/DerivedInformation.html
 
-!!派生情報をUMLでどう表す？
+### 派生情報をUMLでどう表す？
 
 簡単な例を考えてみましょう。長方形クラスがあるとします。その長方形の高さ、幅、面積を知りたい。さて、高さと幅を使って面積を導きだすには、どのようにすればよいでしょうか。
 

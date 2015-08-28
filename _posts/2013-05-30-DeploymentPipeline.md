@@ -33,6 +33,6 @@ http://martinfowler.com/bliki/DeploymentPipeline.html
 詳細な情報は、書籍『[[Continuous Delivery](http://martinfowler.com/books/continuousDelivery.html)』
 の第5章を参照すること。[ここで、無料で読める](http://www.informit.com/articles/article.aspx?p=1621865)。
 
-!!謝辞
+### 謝辞
 
 このページを書くにあたり、[Jez Humble](http://continuousdelivery.com/)にいろいろ助けてもらった。

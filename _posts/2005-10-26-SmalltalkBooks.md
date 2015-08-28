@@ -11,7 +11,7 @@ Smalltalkを手に入れて、何が大騒ぎされているのかを調べた�
 これらはStephane Ducasseによってホストされています。
 Ducasseは優れた{{isbn('1558606394','reengineering patterns')}}本の共著者です。
 
-!コメント
+## コメント
 
 {{rcomment}}
 *2005-10-27 (木) 23:25:04 kdmsnr : <http://d.hatena.ne.jp/sumim/20051027/p1>

@@ -5,7 +5,7 @@ tags: [language feature, programming platforms, ruby]
 
 http://martinfowler.com/bliki/LanguageForLearningObjects.html
 
-!!オブジェクト指向を教えるとき、どの言語がよいか？
+### オブジェクト指向を教えるとき、どの言語がよいか？
 
 ここ数年、オブジェクト指向を覚えるときには、Javaが使われてきました。Javaを使うのには、いくつかの理由があります。
 

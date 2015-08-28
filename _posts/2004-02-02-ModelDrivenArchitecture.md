@@ -34,11 +34,11 @@ MDAに対する思慮深い批判がいくつかあります：
 * Steve Cookが[Microsoft's views on MDA](http://www.bptrends.com/publicationfiles/01-04%20COL%20Dom%20Spec%20Modeling%20Frankel-Cook.pdf)とモデル駆動開発の包括的な話をしています。SteveはイギリスにおけるOO黎明期を支えた人物であり、UMLの中心的な貢献者でもあります。
 * ["Bedarra" Dave Thomas](http://c2.com/cgi/wiki?DaveThomas)がOOPSLAのパネルセッションでMDAへの懐疑論を爆発させていたようです。残念なことにその時のビデオは持っていませんが、以前の彼の[jotコラム](http://www.jot.fm/issues/issue_2003_01/column1)から論点の核心を垣間見ることが出来ます。
 
-!SA:
+## SA:
 
 *[Martin Fowler speaks out on MDA](http://www.theserverside.com/news/thread.jsp?thread_id=23693)
 
-!Comment:
+## Comment:
 
 *2004-02-19 (木) 11:23:13 ''[[名無しさん]]'' : http://cept.cocolog-nifty.com/ceptfield/2004/02/mda.html
 {{comment}}

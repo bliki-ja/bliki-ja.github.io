@@ -5,7 +5,7 @@ tags: [uml]
 
 http://www.martinfowler.com/bliki/LocalVariablesInClassDiagrams.html
 
-!!クラス図の中でローカル変数（パラメータや一時変数など）をどうやって表していますか？
+### クラス図の中でローカル変数（パラメータや一時変数など）をどうやって表していますか？
 
 単に「表してねー」と言うかもしれませんね。
 私もこれまで必要になった覚えがありません。

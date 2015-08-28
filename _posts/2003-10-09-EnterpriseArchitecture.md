@@ -29,7 +29,7 @@ http://martinfowler.com/bliki/EnterpriseArchitecture.html
 #比喩がよくわからないが、「アプリケーションの島々に建つストーブの煙突(the stovepipes of application islands)」とは業務機能単位で開発された既存アプリケーションプログラムのことを指し、それらを「バラバラにする(break down)」とは、業務機能横断的にそれらを整理して、標準化や共通化を図ることではないか。--keis
 #Architectus Reloadus と　Architectus Oryzus　は、論文 [“Who Needs an Architect”](http://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)でファウラー氏が描いたアーキテクトの二つの類型。ファウラー氏が冗談でラテン語の学名風に命名している。Architectus Reloadus は「マトリックスリローデッド」にでてくる、マトリックスを設計したアーキテクトのイメージ。プロジェクトの初期段階であらゆる重要な事柄について一人で意思決定する、常人に隔絶した存在。Architectus Oryzus　はファウラー氏の同僚のデイブ・ライス氏 がモデル(“Oryzus” はラテン語で「米」。Riceと掛けている)。プロジェクトの間中、メンバと密接に協力しながら活動し、問題を少し早めに見つけて深刻な状況になる前に対処したり、メンバが抱えている問題を解決するのを支援したり、バックグラウンドの異なる人々の間のコミュニケーションを助けたりする。--keis
 
-!update
+## update
 
 *2004-02-11 (水) 20:35:12 ''[[keis]]'' : 訳してみました。
 *2004-02-12 (木) 11:26:31 ''[[kdmsnr]]'' : 少々、修正させていただきました。注釈、素晴らしいです!!!ありがとうございます。

@@ -5,7 +5,7 @@ tags: [uml]
 
 http://www.martinfowler.com/bliki/CollectionsOnClassDiagrams.html
 
-!!曲の Array List をもった音楽アルバムクラスがあるとしよう。UMLクラス図ではどう表す？
+### 曲の Array List をもった音楽アルバムクラスがあるとしよう。UMLクラス図ではどう表す？
 
 クラス図を描くとき、普通、コレクションをクラスとして表すことはしません。アルバムクラスと曲クラスの関連で表すことになります。* の多重度で関連を表して、コレクションが動いていることを表すのです。
 

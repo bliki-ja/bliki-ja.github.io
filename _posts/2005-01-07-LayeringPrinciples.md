@@ -67,7 +67,7 @@ http://martinfowler.com/bliki/LayeringPrinciples.html
 実際にはそれほど行われてないものがこんなに得票するとは、
 という驚きの声も上がりました。
 
-!comment
+## comment
 
 {{rcomment}}
 *[まさよしくんさんの日記](http://mixi.jp/view_diary.pl?id=6424555)

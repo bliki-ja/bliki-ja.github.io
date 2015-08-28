@@ -55,13 +55,13 @@ Datensparsamkeitは別に、データを盗み出すような悪人のことだ�
 もし使う当てのないデータを抱えていたとして、誰かにそれを盗まれて被害を被ったとしよう。あなたはきっと、その損害に対する責任を問われることになるのではないだろうか。
 仮に法的責任を免れたとしても、世間での評判はがた落ちだ。Datensparsamkeitを実践しない人たちはみな、このリスクを抱えることになる。
 
-!!謝辞
+### 謝辞
 
 この言葉を教えてくれたのは[Erik Dörnenburg](http://erik.doernenburg.com/)だった。
 「すべてのものを…」というミームは、少なくともこの十年はずっと存在し続けてきたように思える。
 Korny Sietsmaに[それは2010年に始まったことだ](http://hyperboleandahalf.blogspot.com/2010/06/this-is-why-ill-never-be-adult.html)と教えてもらったことに感謝する。
 
-!!備考
+### 備考
 
 ＊1 読み方は、[このように](http://www.forvo.com/word/datensparsamkeit/)なる。
 

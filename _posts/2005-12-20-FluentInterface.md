@@ -149,7 +149,7 @@ Ericが述べていたことだが、彼が流れるようなインターフェ�
 
 [[Piers Cawley](http://www.bofh.org.uk/articles/2005/12/21/fluent-interfaces)から、いいフォローが入った。
 
-!SEE ALSO
+## SEE ALSO
 
 *ひがやすを blog
 ** [流れるようなインターフェースと脱CoC](http://d.hatena.ne.jp/higayasuo/20071018#1192681950)

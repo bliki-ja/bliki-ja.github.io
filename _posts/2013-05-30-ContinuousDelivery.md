@@ -46,7 +46,7 @@ http://martinfowler.com/bliki/ContinuousDelivery.html
 詳しい情報は、[ガイドページ](http://martinfowler.com/delivery.html)からたどれる資料をあたって欲しい。
 特に[この本](http://martinfowler.com/books/continuousDelivery.html)を読もう。
 
-!!謝辞
+### 謝辞
 
 このページを書くにあたり、[Jez Humble](http://continuousdelivery.com/)にいろいろ助けてもらった。
 

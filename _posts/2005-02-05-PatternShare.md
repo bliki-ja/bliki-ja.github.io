@@ -11,6 +11,6 @@ http://martinfowler.com/bliki/PatternShare.html
 ほとんどの作業は、Ward Cunningham 指揮の下で行われました（彼はパターンの生みの親です）。
 ここでは、私、GOF、POSA、Evans、Microsoftのパターンを見ることができます。
 
-!links
+## links
 
 * [MemoRanda](http://homepage.mac.com/keithray/blog/2005/02/05/)

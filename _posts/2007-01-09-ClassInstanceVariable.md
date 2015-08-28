@@ -161,7 +161,7 @@ puts Programmer.instances.size
 クラスインスタンス変数は非常にレアだ。
 だが、必要になったときには非常に有用である。
 
-!参考
+## 参考
 
 * http://www.rubyist.net/~matz/20061220.html#p01
 

@@ -32,11 +32,11 @@ http://martinfowler.com/bliki/SacrificialArchitecture.html
 
 犠牲的アーキテクチャのコードを書いたチームが、その潮時を決める。これは新しくやってきたチームがそれまでのコードを嫌って書き直す、という話とは違う。自分が書いたのではないコードを嫌うのは簡単だ。文脈なんてわかりはしないのだから。自分が書いたコードをわかった上で生贄に差し出すとき、そこにはまったく違う力が働いている。そして自分が今から書くコードを生贄に捧げると胸に刻むのは、その意義深い変奏なのだ。
 
-!! 備考
+###  備考
 
 1: [Jeff Dean 曰く](http://static.googleusercontent.com/media/research.google.com/en//people/jeff/WSDM09-keynote.pdf) "design for ~10X growth, but plan to rewrite before ~100X"
 
 
-!! 謝辞
+###  謝辞
 
 Randy Shoup との会話がこの記事を書く助けになった。具体的には eBay の歴史 (と同じような Google の逸話) に関する記述で助けられた。Jonny Leroy は会計上の問題を指摘してくれた。Keif Morris, Jason Yip, Mahendra Kariya, Jessica Kerr, Rahul Jain, Andrew Kiellor, Fabio Pereira, Pramod Sadalage, Jen Smith, Charles Haynes, Scott Robinson and Paul Hammant は有意義なコメントを寄せてくれた。

@@ -11,7 +11,7 @@ http://www.martinfowler.com/bliki/IsChangingInterfacesRefactoring.html
 
 //Is changing the interface of part of the code a refactoring?
 
-!!部分的なインタフェースの変更はリファクタリングか？
+### 部分的なインタフェースの変更はリファクタリングか？
 
 //The answer to this question is pretty simple - changing an interface is a refactoring providing you change all the callers too. A great example of this is Rename Method, which is an interface changing refactoring present on pretty much all refactoring tools.
 
