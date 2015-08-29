@@ -1,12 +1,9 @@
 ---
-title: Transactionless
+title: トランザクションレス
 tags: [database, application architecture]
 ---
 
 http://martinfowler.com/bliki/Transactionless.html
-
-2007/3/18
-
 
 
 数年前にeBayで働く友人たちと話していたときのことだ。
