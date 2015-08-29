@@ -31,6 +31,16 @@ layout: default
   </ul>
 {% endfor %}
 
+<!-- post without tag -->
+  <h1 id="no-tag">without tags</h1>
+  <ul>
+    {% for post in site.posts %}
+    {% if post.tags.size == 0 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
