@@ -56,8 +56,6 @@ div.clear {
 
 @font-face {
   font-family: 'Marydale';
-  src: url("/fonts/marydale/marydale-webfont.eot");
-  src: url("/fonts/marydale/marydale-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/marydale/marydale-webfont.woff") format("woff"), url("/fonts/marydale/marydale-webfont.ttf") format("truetype"), url("/fonts/marydale/marydale-webfont.svg#marydaleregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
@@ -114,7 +112,6 @@ div#banner {
     position: absolute;
     right: 20px;
     top: 20px;
-    background-image: url("http://martinfowler.com/search_bg.gif");
     background-position: 0 0;
     background-repeat: no-repeat;
     float: left;
