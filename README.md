@@ -15,6 +15,8 @@ tags: [tag1, tag2]
 
 なお、``rake post title=2004-08-03-C3``のように指定すれば、あらかじめひな形を作ることもできます。
 
+なおなお、``rake post_from url="http://martinfowler.com/bliki/C3.html"``のように指定すれば、あらかじめひな形を（もっと詳細に）作ることもできます。
+
 ## 他のエントリにリンクするとき
 
 ``[バグが超少ないプロジェクト]({% post_url 2004-01-24-VeryLowDefectProject %})``のようにすれば、他のページにリンクすることができます。
