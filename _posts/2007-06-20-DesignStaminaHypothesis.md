@@ -5,9 +5,7 @@ tags: [productivity, technical debt, process theory, evolutionary design, clean 
 
 http://martinfowler.com/bliki/DesignStaminaHypothesis.html
 
-2007/6/20
-
-'''ソフトウェアをきちんと設計するのは、その労力に見合うことなのか？'''
+> ソフトウェアをきちんと設計するのは、その労力に見合うことなのか？
 
 「ソフトウェアをきちんと設計することって、そんなに大切なことなの？」という問題について、遠回しなやりとりをすることが時々ある。
 あえて「遠回しなやりとり」と言ったのは、はっきりと「ソフトウェアの設計なんて無意味だ」と言う人を見たことがないからだ。
@@ -28,13 +26,13 @@ http://martinfowler.com/bliki/DesignStaminaHypothesis.html
 
 設計に関する作業には時間も労力もかかる。それは間違いない。でも、それだけの価値はある。
 将来そのソフトウェアを成長させるのが楽になるからだ。設計をサボったら、短期的には時間の節約になるだろう。
-でも、そのぶんだけ[技術的負債](TechnicalDebt)はかさみ、後々の生産性を落としてしまう。
+でも、そのぶんだけ[技術的負債](/TechnicalDebt)はかさみ、後々の生産性を落としてしまう。
 ソフトウェアの設計に力を入れると、あなたのプロジェクトのスタミナが向上するのだ。
 成長する速度も上がり、長生きできるようになる。
 
 その様子を図示してみたのが、この疑似グラフだ。
 
-[設計スタミナグラフ](http://martinfowler.com/bliki/images/designStaminaGraph.gif)
+![設計スタミナグラフ](http://martinfowler.com/bliki/images/designStaminaGraph.gif)
 
 この疑似グラフは、納品された機能（の累積）と時間との関係を、二種類のありがちなプロジェクトについてプロットしたものだ。
 一方のプロジェクトはきちんと設計をしたもの、もう一方のプロジェクトは設計を軽視したものになる。
@@ -50,7 +48,7 @@ http://martinfowler.com/bliki/DesignStaminaHypothesis.html
 
 これはあくまでも仮説に過ぎない。推測に基づくものだし、実際にそうなるという客観的な証拠もない。
 科学的に言うと、厳密には仮説としてもあまりよろしくない。というのも、検証するのが難しいからだ。
-[生産性は計測不能](CannotMeasureProductivity)
+[生産性は計測不能](/CannotMeasureProductivity)
 だし、設計の品質もまた計測不能だ。
 
 ただ、仮説に過ぎないとは言え、大半の人にとっては「そのとおり」と納得できるものだ。
@@ -83,4 +81,3 @@ http://martinfowler.com/bliki/DesignStaminaHypothesis.html
 もたらす価値が支払う利息を上回るかどうかを検討しなければいけないのはもちろんだが、
 それだけではなく、そもそももたらす価値が設計償却線を上回るのかどうかも判断する必要がある。
 
-{{rcomment}}
