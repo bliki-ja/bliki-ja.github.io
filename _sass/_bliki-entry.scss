@@ -4,22 +4,6 @@
 /* v1.0 | 20080212 */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400,700,800);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
 
 body {
   line-height: 1; }
@@ -249,10 +233,6 @@ ul {
 ol {
   list-style: decimal;
   margin-left: 1.5em; }
-
-pre {
-  font-size: 90%;
-  font-family: Inconsolata, monospace; }
 
 code {
   font-family: Inconsolata, monospace; }
