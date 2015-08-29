@@ -10,7 +10,7 @@ http://martinfowler.com/bliki/Datensparsamkeit.html
 ドイツ語にはDatensparsamkeitっていう言葉があるんだけど、それに該当する適切な英単語はない。
 この言葉は、データを取得したり保存したりするときの心がけを表すもので、「実際に必要なデータだけを扱うべき」という意味だ。
 
-[Datensparsamkeit](http://martinfowler.com/bliki/images/datensparsamkeit/sketch.png)
+![](http://martinfowler.com/bliki/images/datensparsamkeit/sketch.png)
 
 とにかく何でもかんでもビッグデータっていう時代だ。取得できるデータはとりあえず何でもかんでも取っておけという風潮になっている。
 アドレス帳の連絡先情報を今すぐに使うことはないとしても、とりあえずは取得しておく。あとで役立つかもしれないからだ。
@@ -66,3 +66,7 @@ Korny Sietsmaに[それは2010年に始まったことだ](http://hyperboleandah
 ＊1 読み方は、[このように](http://www.forvo.com/word/datensparsamkeit/)なる。
 
 ＊2 NATとかを考慮すると話はややこしくなるけど、とりあえずの一例ということでシンプルに考えた。
+
+----
+
+by m-takagi
