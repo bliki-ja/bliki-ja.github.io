@@ -14,11 +14,14 @@
       </a>
 
       <div class="trigger">
+{% comment %}
         {% for page in site.pages %}
           {% if page.title %}
-          {% comment %}<a class="page-link" href="{{ page.dir | prepend: site.baseurl }}">{{ page.title }}</a>{% endcomment %}
+          <a class="page-link" href="{{ page.dir | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
+{% endcomment %}
+	  <a class="page-link" href="/hot.html">人気エントリー</a>
       </div>
     </nav>
 
