@@ -15,6 +15,33 @@ task :post do
   end
 end
 
+# Usage: rake post_from url="http://martinfowler.com/bliki/UserStory.html"
+desc "post_from"
+task :post_from do
+  require 'open-uri'
+  require 'nokogiri'
+  require 'time'
+
+  url = ENV["url"]
+  title = url.gsub('http://martinfowler.com/bliki/', '').gsub('.html', '')
+  html = open(url).read
+  doc = Nokogiri::HTML.parse(html)
+  t = Time.parse(doc.xpath('//p[@class="date"]').children.first.to_s)
+  tags = "[" + doc.xpath('//p[@class="tags"]/a').map{|a|
+    a.children.first.to_s.strip
+  }.uniq.join(', ') + "]"
+  create_file_name = "#{t.strftime("%Y-%m-%d-")}#{title}.md"
+
+  puts "Creating new post: #{create_file_name}"
+  filename = File.join("_posts", create_file_name)
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "title: #{title}"
+    post.puts "tags: #{tags}"
+    post.puts "---"
+  end
+end
+
 # Usage: rake page title="A Title"
 desc "Create a new page."
 task :page do
