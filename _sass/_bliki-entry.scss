@@ -390,19 +390,6 @@ div.quote {
   div.quote p.quote-attribution {
     margin-left: 4em; }
 
-table {
-  border-collapse: collapse;
-  font-family: sans-serif;
-  border: thin solid grey;
-  font-size: 80%; }
-  table th, table td {
-    border: thin solid grey;
-    padding: 0 5px; }
-  table th {
-    background-color: black;
-    color: white; }
-  table tr:nth-child(2n) td {
-    background-color: #eee; }
 
 /* todo rename this to somethign like tags-sidebar */
 .sidebar {
