@@ -1,0 +1,530 @@
+@charset "UTF-8";
+/* derived from */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400,700,800);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+div.clear {
+  clear: both; }
+
+@font-face {
+  font-family: 'Marydale';
+  src: url("/fonts/marydale/marydale-webfont.eot");
+  src: url("/fonts/marydale/marydale-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/marydale/marydale-webfont.woff") format("woff"), url("/fonts/marydale/marydale-webfont.ttf") format("truetype"), url("/fonts/marydale/marydale-webfont.svg#marydaleregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("https://netdna.bootstrapcdn.com/font-awesome/4.0.0/fonts/fontawesome-webfont.eot");
+  src: url("https://netdna.bootstrapcdn.com/font-awesome/4.0.0/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("https://netdna.bootstrapcdn.com/font-awesome/4.0.0/fonts/fontawesome-webfont.woff") format("woff"), url("https://netdna.bootstrapcdn.com/font-awesome/4.0.0/fonts/fontawesome-webfont.ttf") format("truetype"), url("https://netdna.bootstrapcdn.com/font-awesome/4.0.0/fonts/fontawesome-webfont.svgfontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/*
+tw-grey is hsl(145, 5%, 52%)
+*/
+div#banner {
+  background-color: black;
+  height: 100px;
+  font-family: OpenSans, sans-serif;
+  color: white;
+  font-size: 14px;
+  position: relative; }
+  div#banner img.name-logo, div#banner img.ie6-name-logo {
+    position: absolute;
+    top: 0;
+    left: 10px; }
+  div#banner img.photo {
+    position: absolute; }
+  div#banner div.main-navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 10px; }
+    div#banner div.main-navigation p {
+      margin: 0;
+      padding: 0; }
+  div#banner a:link, div#banner a:visited {
+    color: white;
+    text-decoration: none; }
+  div#banner a:hover {
+    color: #BC85CC;
+    text-decoration: underline; }
+  div#banner a.tw:link, div#banner a.tw:visited {
+    color: #b5b935; }
+  div#banner ul {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  div#banner ul li {
+    float: left;
+    padding-right: 10px;
+    font-family: OpenSans, sans-serif;
+    font-size: 14px; }
+  div#banner img {
+    border: 0; }
+  div#banner div.search {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-image: url("http://martinfowler.com/search_bg.gif");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    float: left;
+    height: 23px;
+    width: 173px; }
+  div#banner div.search input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 12px; }
+  div#banner div.search input.field {
+    margin: 3px 3px 3px 4px;
+    width: 142px; }
+  div#banner div.search input.button {
+    width: 18px;
+    font-size: 99%;
+    background-color: transparent; }
+
+/* ================ footer ================ */
+div#footer {
+  margin-top: 15px;
+  background-color: black;
+  color: white; }
+  div#footer ul, div#footer li, div#footer h1, div#footer p {
+    font-size: 12px;
+    font-family: OpenSans, sans-serif;
+    text-align: left; }
+  div#footer a:link, div#footer a:visited {
+    color: white;
+    text-decoration: none; }
+  div#footer a:hover {
+    color: #BC85CC;
+    text-decoration: underline; }
+  div#footer a.tw:link, div#footer a.tw:visited {
+    color: #D5E14D; }
+  div#footer h1 {
+    color: #BC85CC;
+    padding: 0 0 5px 0; }
+  div#footer div.col1, div#footer div.col2, div#footer div.col3, div#footer div.col4 {
+    float: left;
+    margin: 5px 10px;
+    background-color: transparent; }
+  div#footer ul {
+    list-style-type: square;
+    margin: 0 0 0 15px;
+    padding: 0; }
+  div#footer div.col1 {
+    width: 100px; }
+  div#footer div.col2 {
+    width: 140px; }
+  div#footer div.col3 {
+    width: 220px; }
+  div#footer div.col4 {
+    width: 300px; }
+  div#footer div.copyright {
+    padding: 5px 10px;
+    clear: both; }
+  div#footer div.badges {
+    float: right; }
+    div#footer div.badges img {
+      width: 14px;
+      height: 14px;
+      padding: 0 1px; }
+  div#footer .tw-logo {
+    float: right;
+    margin-left: 100px; }
+    div#footer .tw-logo img {
+      width: 200px; }
+
+.icon-twitter:before {
+  content: "";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em; }
+
+.icon-rss:before {
+  content: "";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em; }
+
+body {
+  margin: 0; }
+
+body {
+  font-size: 16px;
+  font-family: OpenSans, sans-serif;
+  line-height: 1.2;
+  color: #303633; }
+
+body > div#banner, body > div#footer {
+  margin-left: 30px; }
+
+#content {
+  background-color: white;
+  margin: 2em auto 2em 30px;
+  width: 40em;
+  min-height: 500px; }
+
+h1, h2, h3, h4, h5 {
+  color: #5b2858;
+  font-weight: bold; }
+  h1 a:link, h1 a:visited, h2 a:link, h2 a:visited, h3 a:link, h3 a:visited, h4 a:link, h4 a:visited, h5 a:link, h5 a:visited {
+    color: #5b2858; }
+
+h1 {
+  font-size: 200%; }
+
+h2 {
+  font-size: 150%; }
+
+p, h1, h2, h3, h4, h5 ul {
+  margin: 1em 0; }
+
+dd {
+  margin-left: 2em; }
+
+a:link, a:visited {
+  color: #94388e;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+ul {
+  list-style: square;
+  margin-left: 1.5em; }
+
+ol {
+  list-style: decimal;
+  margin-left: 1.5em; }
+
+pre {
+  font-size: 90%;
+  font-family: Inconsolata, monospace; }
+
+code {
+  font-family: Inconsolata, monospace; }
+
+.error {
+  background-color: rgba(253, 147, 151, 0.34); }
+
+.todo {
+  background-color: rgba(255, 255, 0, 0.3); }
+
+span.credit {
+  color: #808080;
+  font-size: 80%; }
+
+hr {
+  border-style: dotted none none none;
+  border-top-width: thin;
+  margin: 10px 15px; }
+
+div.draft-notice {
+  border: thin solid red;
+  font-family: sans-serif;
+  margin: 1em 10%;
+  padding: 0.5em;
+  text-align: center; }
+  div.draft-notice h1 {
+    font-size: 120%;
+    color: black; }
+  div.draft-notice p {
+    color: red; }
+
+blockquote {
+  /* margin-left: 3em; */
+  border-left: 2px solid grey;
+  padding-left: 1em;
+  font-style: italic;
+  color: #5b2858; }
+
+.clear {
+  clear: both; }
+
+.clickable {
+  text-decoration: underline;
+  cursor: pointer; }
+
+.shares .label {
+  margin-right: 1em;
+  color: #11aa58; }
+.shares .icons {
+  float: left;
+  width: 40%; }
+.shares .comment {
+  font-size: 80%;
+  color: #11aa58;
+  float: left;
+  width: 60%;
+  margin-top: 0; }
+.shares img {
+  height: 16px;
+  margin-right: 10px; }
+
+div {
+  background-color: transparent;
+  border-width: thin; }
+
+div#banner, div#footer {
+  width: 962px; }
+
+div#content {
+  width: 960px; }
+
+div#main {
+  width: 540px;
+  padding: 10px;
+  float: left;
+  line-height: 1.4; }
+  div#main h1 {
+    margin: 0;
+    padding: 20px 0 10px 0;
+    font-size: 150%; }
+    div#main h1 a:link, div#main h1 a:visited {
+      color: #5b2858; }
+  div#main h2 {
+    font-size: 100%; }
+  div#main hr {
+    /* HACKTAG remove code in transformer that creates hr */
+    border: none; }
+  div#main img {
+    max-width: 100%; }
+  div#main pre {
+    font-size: 90%; }
+  div#main hr.entry-sep {
+    border: thick solid #5b2858;
+    margin: 50px; }
+  div#main p.tags, div#main p.tagLabel {
+    display: none; }
+  div#main p.tags, div#main p.tagLabel, div#main .author-date {
+    font-size: 80%;
+    font-style: italic;
+    margin-top: 0; }
+  div#main .soundbite {
+    width: 20em;
+    float: right;
+    margin: 1em -15em 1em 2em;
+    background-color: #eceeed;
+    padding: 1em;
+    font-style: italic;
+    color: #94388e;
+    font-size: 110%; }
+  div#main .tweet-sidebar {
+    width: 20em;
+    float: right;
+    margin: 1em -15em 1em 2em; }
+  div#main p.code-label {
+    margin-bottom: 0;
+    font-style: italic;
+    font-size: 90%; }
+
+#main.list p.tags, #main.list p.tagLabel {
+  display: block; }
+
+.author-date {
+  width: 200px;
+  float: left;
+  margin-right: 30px; }
+  .author-date p {
+    margin: 0; }
+
+p.author-photo {
+  float: left;
+  margin-right: 10px;
+  width: 60px; }
+
+p.tagLabel {
+  width: 40px;
+  float: right; }
+
+p.tags {
+  width: 170px;
+  float: right; }
+
+div.photo {
+  padding: 0 0 0 2em;
+  font-size: 80%;
+  font-style: italic; }
+
+.photo.right {
+  float: right;
+  margin-right: -250px; }
+
+div.quote {
+  font-style: italic;
+  font-size: 90%; }
+  div.quote p {
+    margin: 0.5em 3em; }
+  div.quote p.quote-attribution {
+    margin-left: 4em; }
+
+table {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  border: thin solid grey;
+  font-size: 80%; }
+  table th, table td {
+    border: thin solid grey;
+    padding: 0 5px; }
+  table th {
+    background-color: black;
+    color: white; }
+  table tr:nth-child(2n) td {
+    background-color: #eee; }
+
+/* todo rename this to somethign like tags-sidebar */
+.sidebar {
+  background-color: #fee0c9;
+  float: right;
+  margin: 7em 2em 0 0;
+  padding: 10px 40px 10px 20px;
+  width: 250px; }
+  .sidebar h2 {
+    font-style: italic;
+    font-weight: normal;
+    color: #11aa58; }
+  .sidebar p.tags {
+    float: none;
+    width: auto;
+    line-height: 2.5; }
+    .sidebar p.tags a {
+      background: #11aa58;
+      color: white;
+      font-family: OpenSans, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 5px;
+      border-radius: 5px;
+      margin: 2px;
+      white-space: nowrap; }
+      .sidebar p.tags a:hover {
+        background: #89b77f; }
+
+.book-sidebar {
+  float: right;
+  width: 200px;
+  margin-right: -300px;
+  font-size: 80%;
+  padding: 10px;
+  border: thin solid #fee0c9; }
+  .book-sidebar img {
+    width: 100px;
+    padding-left: 50px; }
+
+div#sidebar {
+  /* old sidebar stuff - remove when removed that sidebar */
+  background-color: #555555;
+  color: white;
+  width: 220px;
+  float: right;
+  font-size: 85%;
+  padding: 10px;
+  margin: 30px 0px 30px 0; }
+  div#sidebar a:link, div#sidebar a:visited {
+    color: white; }
+  div#sidebar a:hover {
+    color: #fec8fa; }
+  div#sidebar a.tw:link, div#sidebar a.tw:visited {
+    color: #D5E14D; }
+  div#sidebar h1 {
+    color: white;
+    font-size: 150%;
+    margin: 1em 0 0.5em 0; }
+  div#sidebar p {
+    margin: 0; }
+  div#sidebar a.all-entries {
+    color: #D5E14D; }
+
+div.entry-list {
+  column-count: 2;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  font-size: 90%; }
+  div.entry-list p {
+    margin: 0; }
+
+div.footnote-list {
+  font-size: 80%;
+  margin-top: 3em; }
+  div.footnote-list span.num {
+    color: #5b2858;
+    font-weight: bold; }
+
+.appendix, .furtherReading {
+  font-size: 80%; }
+
+div.acknowledgements {
+  font-size: 80%; }
+
+p.repost {
+  font-size: 90%; }
+
+.callout {
+  width: 40%;
+  background-color: #eceeed;
+  padding: 10px;
+  float: right;
+  margin: 1em -5em 1em 5em; }
+
+.shares {
+  padding: 1em;
+  background-color: #fee0c9;
+  margin-top: 3em;
+  overflow: auto; }
