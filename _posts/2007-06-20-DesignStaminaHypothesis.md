@@ -1,5 +1,5 @@
 ---
-title: 設計＝スタミナ説
+title: 設計＝スタミナ仮説
 tags: [productivity, technical debt, process theory, evolutionary design, clean code, software craftsmanship]
 ---
 
@@ -42,7 +42,7 @@ http://martinfowler.com/bliki/DesignStaminaHypothesis.html
 設計を軽視したプロジェクトの問題は、設計を軽視したが故に、
 コードベースがだんだん劣化して変更しづらくなるということだ。
 その結果、生産性も下がる。というのが、グラフの勾配にあらわれている。
-きちんと設計をすれば生産性もきちんと維持できるので、ある時点（design payoff line：設計償却線）
+きちんと設計をすれば生産性もきちんと維持できるので、ある時点（設計償却線）
 に達すると、設計を軽視したプロジェクトよりも累積の納品量が上回るようになる。
 そしてその後は、ずっと上回ったままだ。
 
