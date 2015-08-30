@@ -11,27 +11,24 @@ layout: default
 <img src="/images/bliki_ja_mfsig.gif" />
 
 <p class="toc">
-{% for tag in site.tags %}
-  <a href="#tag_{{ tag[0] }}">{{ tag[0] }}</a> / 
-{% endfor %}
+{% capture tagNames %}{% for tag in site.tags %}{{ tag[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign sortedTagNames = tagNames | split:',' | sort %}
+{% for tag in sortedTagNames %}<a href="#tag_{{ tag }}">{{ tag }}</a> / {% endfor %}
 </p>
 
-<h1 id="articles">article</h1>
+  <h1 id="articles">article</h1>
   <ul>
-{% for page in site.pages %}
-{% if page.title %}
-    {% if page.dir != '/' %}
+    {% for page in site.pages %}
+    {% if page.title %}{% if page.dir != '/' %}
     <li><a class="page-link" href="{{ page.dir | prepend: site.baseurl }}">{{ page.title }}</a></li>
-    {% endif %}
-{% endif %}
-{% endfor %}
-      </ul>
+    {% endif %}{% endif %}
+    {% endfor %}
+  </ul>
 
-
-{% for tag in site.tags %}
-  <h1 id="tag_{{ tag[0] }}">{{ tag[0] }}</h1>
+{% for tag in sortedTagNames %}
+  <h1 id="tag_{{ tag }}">{{ tag }}</h1>
   <ul>
-    {% for post in tag[1] %}
+    {% for post in site.tags[tag] %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
