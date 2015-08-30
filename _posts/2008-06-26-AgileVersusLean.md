@@ -1,13 +1,12 @@
 ---
-title: AgileVersusLean
+title: アジャイル対リーン
 tags: [agile, lean]
 ---
 
 http://martinfowler.com/bliki/AgileVersusLean.html
 
-2008/6/26
 
-アジャイル対リーン
+
 
 
 
