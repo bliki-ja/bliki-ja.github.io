@@ -10,6 +10,12 @@ layout: default
 
 <img src="/images/bliki_ja_mfsig.gif" />
 
+<p class="toc">
+{% for tag in site.tags %}
+  <a href="#tag_{{ tag[0] }}">{{ tag[0] }}</a> / 
+{% endfor %}
+</p>
+
 <h1 id="articles">article</h1>
   <ul>
 {% for page in site.pages %}
