@@ -5,4 +5,6 @@ tags: [API design, object collaboration design]
 
 http://martinfowler.com/bliki/HollywoodPrinciple.html
 
-[[InversionOfControl]]と同義。
+[InversionOfControl](/InversionOfControl)と同義。
+
+
