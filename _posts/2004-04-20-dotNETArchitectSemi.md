@@ -1,6 +1,6 @@
 ---
 title: dotNETArchitectSemi20040420
-tags: TAGS
+tags: 
 ---
 
 2004 年 4 月 20 日に開催された Martin Fowler 来日公演のメモです。
@@ -10,9 +10,9 @@ tags: TAGS
 * 動画：http://www.microsoft.com/japan/msdn/webcasts/
 * 資料：http://roots.dnd.no/downloads/2003/Fowler_Martin/eaa.ppt
 ** http://roots.dnd.no/repository/03_Fowler_Martin_eaa.ppt 
+
 ----
-{{toc_here}}
-----
+
 ## Q&A
 
 ### ドメインモデルにおけるパフォーマンスは？（instantiate costとか）
