@@ -1,5 +1,5 @@
 ---
-title: AssertionFreeTesting
+title: アサーションのないテスト
 tags: [testing, bad things]
 ---
 

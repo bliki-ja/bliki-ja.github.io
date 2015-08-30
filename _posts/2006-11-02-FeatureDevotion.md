@@ -1,11 +1,11 @@
 ---
-title: FeatureDevotion
+title: 機能の専念
 tags: [agile, bad things, requirements analysis, process theory]
 ---
 
 http://martinfowler.com/bliki/FeatureDevotion.html
 
-2006/11/2
+
 
 
 
@@ -26,9 +26,11 @@ RUPの「フェーズ」は「分析、設計、実装、テスト」コンベ�
 
 
 
-ウォーターフォールを跳ね返すカギは、Danも言っているように、アジャイラ(agilist)の価値である「機能よりも成果{{fn('訳注：アジャイル宣言の5番目の価値と呼ばれている。')}}」にある。
+ウォーターフォールを跳ね返すカギは、Danも言っているように、アジャイラ(agilist)の価値である「機能よりも成果[^fn]にある。
 機能リストは有用なツールである。だが、それは手段であって目的ではない。
 重要なのは、最終的な成果である。私はそれを「顧客価値」だと考えている。
+
+[^fn]: 訳注：アジャイル宣言の5番目の価値と呼ばれている。
 
 
 

@@ -1,11 +1,9 @@
 ---
-title: RollerSkateImplementation
+title: ローラースケート実装
 tags: [projects, requirements analysis, project planning]
 ---
 
 http://martinfowler.com/bliki/RollerSkateImplementation.html
-
-2007/9/9	
 
 
 
