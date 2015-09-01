@@ -20,29 +20,32 @@ http://www.martinfowler.com/bliki/FluentInterface.html
 一番簡単な例は、Ericの[timeAndMoney](http://timeandmoney.sourceforge.net/)ライブラリだろう。
 時間の間隔を作るには、通常は、以下のようにする。
 
+```java
  TimePoint fiveOClock, sixOClock;
  ...
  TimeInterval meetingTime = new TimeInterval(fiveOClock, sixOClock);
+```
 
 
+``timeAndMoney``ライブラリの利用者は以下のようなことを行うだろう。
 
-{{code timeAndMoney}}ライブラリの利用者は以下のようなことを行うだろう。
-
+```java
  TimeInterval meetingTime = fiveOClock.until(sixOClock);
-
+```
 
 
 続いて、これまたありふれた例だが、顧客からの注文を例に挙げよう。
 注文には、商品とその数量を記載した注文明細が含まれる。
-注文明細はスキップすることができる（skippable）。
+注文明細はスキップすることができる（``skippable``）。
 たとえば、注文全体の配送が遅れるよりは、
 ある商品を除いて残りを配送したほうがよい場合が考えられるからだ。
-注文の状態を「至急（rush）」にすることもできる。
+注文の状態を「至急（``rush``）」にすることもできる。
 
 
 
 このような場合は、以下のようにすることが多い。
 
+```java
     private void makeNormal(Customer customer) {
         Order o1 = new Order();
         customer.addOrder(o1);
@@ -55,7 +58,7 @@ http://www.martinfowler.com/bliki/FluentInterface.html
         line2.setSkippable(true);
         o1.setRush(true);
     }
-
+```
 
 
 ここでは、様々なオブジェクトを作ってから、それらをつなぎ合わせている。
@@ -65,6 +68,7 @@ http://www.martinfowler.com/bliki/FluentInterface.html
 
 以下は上記と同じつなぎ合わせを、流れるようなスタイルで行っている。
 
+```java
    private void makeFluent(Customer customer) {
         customer.newOrder()
                 .with(6, "TAL")
@@ -72,10 +76,10 @@ http://www.martinfowler.com/bliki/FluentInterface.html
                 .with(3, "LGV")
                 .priorityRush();
     }
+```
 
 
-
-このスタイルで気づくべき重要な点は、「内部[DomainSpecificLanguage]]」のようなことを実現しようとしているところだ。これが我々が「流れるような」と表現した理由だ。
+このスタイルで気づくべき重要な点は、「内部[ドメイン特化言語](/DomainSpecificLanguage)」のようなことを実現しようとしているところだ。これが我々が「流れるような」と表現した理由だ。
 この2つの用語は、様々な点で同意語と見なすことができる。
 このAPIは読みやすさを第一に設計されている。
 流れるようにするには、設計とAPIの構築に時間がかかるという代償をともなう。
@@ -89,9 +93,10 @@ JMockなどのモックライブラリは、振舞の複雑なスペック（仕
 ここ数年で様々なモックライブラリが作られてきたが、JMockには非常にナイスで流れるようなAPIが含まれており、それが正に流れるが如くなのである。
 以下にエクスペクテーション（期待）の例を挙げる。
 
+```java
  mock.expects(once()).method("m").with( or(stringContains("hello"),
                                            stringContains("howdy")) );
-
+```
 
 
 私は[JAOO2005](http://martinfowler.com/bliki/JAOO2005.html)で、[Steve Freeman](http://stevef.truemesh.com/)と[Nat Price](http://nat.truemesh.com/)がJMock APIの進化についての素晴らしい講演を拝聴したが、彼らはそれを[OOPSLAの論文(PDF)](http://www.mockobjects.com/files/evolving_an_edsl.ooplsa2006.pdf)としてまとめている。
@@ -102,15 +107,15 @@ JMockなどのモックライブラリは、振舞の複雑なスペック（仕
 オブジェクト（特にバリューオブジェクト）を組み立てるときだった。
 宣言的文脈のなかで何か現れるものがあるのではないと思うのだが、
 これが特性を定義づけるものかどうかは分からない。
-我々にとって、流れを表す試金石とは、DomainSpecificLanguageの特性を持っているかどうかだ。
-DomainSpecificLanguageのようなAPIを使っていると、だんだんと流れていくのである。
+我々にとって、流れを表す試金石とは、ドメイン特化言語の特性を持っているかどうかだ。
+ドメイン特化言語のようなAPIを使っていると、だんだんと流れていくのである。
 
 
 
 このように流れるようなAPIを構築すると、一風変わったAPIになる。
 最も分かりやすいのは、セッターが値を返すようになることだろう。
 （先ほどの注文の例だと、注文に注文明細を追加すると注文が返ってくる。）
-中括弧言語の世界では、何かを変更するメソッドには{{code void}}を付けるのが一般的だ。これは[CommandQuerySeparation]]の原則に則しているので私は好きなのだが、
+中括弧言語の世界では、何かを変更するメソッドには``void``を付けるのが一般的だ。これは[コマンド・問い合わせの分離](/CommandQuerySeparation)の原則に則しているので私は好きなのだが、
 この慣習が流れるようなインターフェースでは邪魔なのだ。
 この場合は、慣習を一時的に停止するようにしている。
 
@@ -137,7 +142,7 @@ Ericが述べていたことだが、彼が流れるようなインターフェ�
 簡単に作ったり捨てたりすることができる。
 古いバリューから新しいバリューを作るときに流れが漂うのだ。
 その意味で、注文の例は典型的なものではなかった。
-[[EvansClassification]]では、エンティティと分類されていているものだからだ。
+[エヴァンスの分類](/EvansClassification)では、エンティティと分類されていているものだからだ。
 
 
 
@@ -151,6 +156,6 @@ Ericが述べていたことだが、彼が流れるようなインターフェ�
 
 ## SEE ALSO
 
-*ひがやすを blog
-** [流れるようなインターフェースと脱CoC](http://d.hatena.ne.jp/higayasuo/20071018#1192681950)
-** [流れるようなインターフェース](http://d.hatena.ne.jp/higayasuo/20071019#1192757543)
+* ひがやすを blog
+  * [流れるようなインターフェースと脱CoC](http://d.hatena.ne.jp/higayasuo/20071018#1192681950)
+  * [流れるようなインターフェース](http://d.hatena.ne.jp/higayasuo/20071019#1192757543)
