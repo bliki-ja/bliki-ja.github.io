@@ -128,7 +128,7 @@ TestSetupを使うと分離が効かなくなる。
 （
 それでも使うっていうんだったら、
 [このスレ](http://www.testdriven.com/modules/newbb/viewtopic.php?viewmode=flat&order=ASC&topic_id=1115&forum=7&move=prev&topic_time=1089140252)を読むとヒントを得られるかもしれない。
-J.B. Rainsberger の{{isbn('1932394230','新刊')}}も役に立つだろう。
+J.B. Rainsberger の新刊も役に立つだろう。
 ）
 
 （

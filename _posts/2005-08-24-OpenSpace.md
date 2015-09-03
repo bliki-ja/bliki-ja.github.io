@@ -13,7 +13,7 @@ Crested Butteは、毎年開催されている20名程度の小さなワーク�
 [Agile Universe 2002](http://www.agileuniverse.com/2002/openSpace)では、100名ほどの参加者が集まったが、あるトラックでオープン スペースを採用した（その後も継続して行っているようだが、私は参加できていない）。
 [foocamp](http://headrush.typepad.com/creating_passionate_users/2005/08/foo_camp_adhoc_.html)では、数百人規模でオープンスペースを行った。
 この手法はHarrison Owenによって開発されたものだ。
-詳細については、{{isbn('1576750248','彼の著書')}}に記されている。
+詳細については、彼の著書に記されている。
 
 オープンスペースが一風変わっている（が強力な）のは、内容やスピーカーを事前に計画しなくても良いという点だ。
 代わりに、「時間」と「場所」を記したスケルトンを用意する。
@@ -89,7 +89,7 @@ Owenが、オープンスペースの1つの法則は「主体的移動の法則
 
 以上、オープンスペースについて簡単に述べてきた。
 もしこの手法を使ってイベントを開催したいのであれば、情報はたくさんある。
-まず、{{isbn('1576750248','Owenの素晴らしい本')}}★if a touch Californian for my taste★。
+まず、Owenの素晴らしい本★if a touch Californian for my taste★。
 数ヶ国語に対応した[Webサイト](http://www.openspaceworld.org/)もある。
 
-{{isbn_image '4990329813'}}
+

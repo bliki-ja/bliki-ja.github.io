@@ -34,7 +34,7 @@ Arrayクラスが複数のインターフェースをimplementすると、以下
 
 ボールとソケットはお互いに結びつきやすく、
 この2つが対になるのはごく自然なことでした。
-ですから『{{isbn('0321193687','UML Distilled')}}』を書くときに参考にしたUML仕様では、
+ですから『UML Distilled』を書くときに参考にしたUML仕様では、
 両者を結び付けることを許可していました。
 
 ![](http://martinfowler.com/bliki/images/ballAndSocket/mated.gif)
@@ -50,7 +50,7 @@ UML 1 では依存を使って表していました。
 
 ![](http://martinfowler.com/bliki/images/ballAndSocket/dependency.gif)
 
-Jim Rumbaughの{{isbn('0321245628','リファレンスマニュアル')}}では、別の方法が示されています。
+Jim Rumbaughのリファレンスマニュアルでは、別の方法が示されています。
 
 ![](http://martinfowler.com/bliki/images/ballAndSocket/rumbaugh.gif)
 

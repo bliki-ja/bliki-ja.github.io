@@ -144,6 +144,6 @@ Webサービスのようなリモート環境では、興味深い「ねじれ�
 
 
 先ほども述べたが、これは古くからある考え方である。
-Trygve Reenskaugが、ロール分析に基づいたクラス設計の方法論を{{isbn('0134529308','本')}}を著している。
+Trygve Reenskaugが、ロール分析に基づいたクラス設計の方法論を本を著している。
 Robert Martinは、このトピックを「[インターフェイス分離の原則](http://www.objectmentor.com/resources/articles/isp.pdf)(Interface Segregation Principle)」として述べている。
 ロールインタフェースはこの原則に沿っているが、ヘッダインタフェースはそうではない。

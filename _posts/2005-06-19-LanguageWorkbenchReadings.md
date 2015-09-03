@@ -14,7 +14,7 @@ http://martinfowler.com/bliki/LanguageWorkbenchReadings.html
 ここ数年間、'''Intentional Software'''は岩の奥深くに隠れていましたが、現在は顔を出し始めました。
 彼らの成果は、http://www.intentsoft.com で見ることができます。
 特に彼らの[blog](http://blog.intentsoft.com/)には注目すべきでしょう。
-Intentional Softwareの説明として最も優れたものは、おそらくMicrosoft Researchによるものです。{{isbn('0201309777','CzarneckiとEiseneckerの著書')}}の第11章に載っています。
+Intentional Softwareの説明として最も優れたものは、おそらくMicrosoft Researchによるものです。CzarneckiとEiseneckerの著書の第11章に載っています。
 
 JetBrainsには活発なコミュニティがあります。このコミュニティが今後も継続し、彼らの[Meta Programming System](http://www.jetbrains.com/mps)に貢献することを願います。
 MPSのリーダーであるSergey Dmitrievは、MPSやLanguage Oriented Programmingに関する彼なりのビジョンを[まとめた素晴らしい記事](http://www.onboard.jetbrains.com/is1/articles/04/10/lop/)を書いています。

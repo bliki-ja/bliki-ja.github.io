@@ -10,7 +10,7 @@ tags: [version control]
 諸君、私は[継続的インテグレーション](http://www.objectclub.jp/community/XP-jp/xp_relate/cont-j)が大好きだ。
 シンプルなプラクティスが開発チームに甚大な影響を与えるのが好きだ。
 だがあらゆるプラクティスがそうであるように、欠陥^H^H^H^Hカイゼンの余地がある。
-[Paul Duvall](http://www.testearly.com/category/duvall/)（{{isbn '0321336380','まもなく出版される継続的インテグレーション本'}}の著者）がこの点について[指摘](http://www.testearly.com/2007/04/25/the-future-of-continuous-integration/)していた。
+[Paul Duvall](http://www.testearly.com/category/duvall/)（まもなく出版される継続的インテグレーション本の著者）がこの点について[指摘](http://www.testearly.com/2007/04/25/the-future-of-continuous-integration/)していた。
 コミットビルドが失敗すると、チーム全体に影響し、それが修正されるまでスピードが落ちてしまう。
 
 
@@ -18,7 +18,7 @@ tags: [version control]
 ThoughtWorksで継続的インテグレーションを始めた頃、
 そのやり方について心配していたことがあった。
 ThoughtWorks 2000のスタイル（訳注：2000年頃のやり方）と
-[C3]]プロジェクトで使っていたスタイルが違っていたからだ。
+[C3](/C3)プロジェクトで使っていたスタイルが違っていたからだ。
 
 
 

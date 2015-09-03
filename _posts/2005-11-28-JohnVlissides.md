@@ -6,7 +6,7 @@ tags: [writing]
 http://www.martinfowler.com/bliki/JohnVlissides.html
 
 週末、John Vlissidesが長い癌との闘病生活の後、亡くなったという悲しいニュースを聞いた。
-Johnは、おそらくソフトウェア設計で{{isbn('4797311126','最良の本')}}を執筆した「Gang of Four」のひとりとしてよく知られている。
+Johnは、おそらくソフトウェア設計で最良の本を執筆した「Gang of Four」のひとりとしてよく知られている。
 
 カンファレンスのときは、Johnに会うのを楽しみにしていた。
 彼との友好はいつも楽しかったし、彼と一緒にいるとすごく心地よかった。

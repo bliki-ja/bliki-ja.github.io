@@ -13,4 +13,4 @@ http://martinfowler.com/bliki/DefinitionOfRefactoring.html
 
 ----
 
-訳注：定義は『{{isbn '4894712288' 'リファクタリング—プログラムの体質改善テクニック'}}』より引用。
+訳注：定義は『リファクタリング—プログラムの体質改善テクニック』より引用。
