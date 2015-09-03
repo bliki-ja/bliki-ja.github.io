@@ -5,7 +5,7 @@ tags: [build scripting]
 
 http://martinfowler.com/bliki/BuildLanguage.html
 
-'''追記:''' [Jon Tirsen](http://blogs.codehaus.org/people/jutopia/archives/000562_using_ruby_to_build_java_systems.html)が、Rubyを使って複雑なantビルドプロセスを動かすという面白いストーリーを書いていました。
+**追記:** [Jon Tirsen](http://blogs.codehaus.org/people/jutopia/archives/000562_using_ruby_to_build_java_systems.html)が、Rubyを使って複雑なantビルドプロセスを動かすという面白いストーリーを書いていました。
 
 Bruce Eckel が[最近、antとmakeに関する投稿](http://mindview.net/WebLog/log0046)をしたのだが、それに影響を受けて、私のビルド言語に関する考えをここでシェアしておきたいと思う。
 antとmakeはどちらもビルド方法を指定するものであり、ビルド方法を記述するための言語である。どちらも非常に広く使われており、成功もしている。
@@ -23,7 +23,7 @@ antは、XMLをファイルフォーマットとして使うことにした。
 階層構造はビルドスクリプトを記述するのにぴったりのようにも思えた。
 だが我々はそのとき以来、こう結論付けている。
 プログラム言語を使うことこそが進むべき道であり、
-そしてそれは[XML](UseOfXml)ではない、と。
+そしてそれは[XML](/UseOfXml)ではない、と。
 
 Rubyをやりこむようになってから、自然に[Rake](http://rake.rubyforge.org/)(Rubyのmake)と戯れるようになった。
 rakefilesの面白いところは、ちょっとした決まりのあるRubyプログラムで、タスクや依存を宣言できるところだ。

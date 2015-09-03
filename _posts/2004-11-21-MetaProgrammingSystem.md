@@ -10,9 +10,8 @@ http://martinfowler.com/bliki/MetaProgrammingSystem.html
 「言語指向プログラミング(Language Oriented Programming)」と呼ばれるムーブメントの一例であると捉えている。
 
 先週、私は同僚の Matt Foemmel と共に彼に会い、非常に感銘を受けた。
-[DSL](DomainSpecificLanguage)と密に統合したソフトウェア構築技術として、このムーブメントには非常に関心を持っている。
+[DSL](/DomainSpecificLanguage)と密に統合したソフトウェア構築技術として、このムーブメントには非常に関心を持っている。
 この分野には、他にも興味深いプレーヤーたちがいる。
 [Intentional Programming](http://c2.com/cgi/wiki?IntentionalProgramming) や Microsoft の Whitehorse が有名だろう。
 これから数年間、この分野は刮目して見よ。
---http://www.dokechi.com/
---http://www.buyraku.com/
+

@@ -5,7 +5,7 @@ tags: [refactoring boundary]
 
 http://martinfowler.com/bliki/IsFixingAnUnknownBugRefactoring.html
 
-[リファクタリングの境界線](RefactoringBoundary)のひとつ
+[リファクタリングの境界線](/RefactoringBoundary)のひとつ
 
 Przemyslaw Pokrywka が興味深い難題を投稿してくれた。
 [リファクタリング本](http://martinfowler.com/books.html#refactoring)に [Null Object の導入](http://www.refactoring.com/catalog/introduceNullObject.html)が載っている
@@ -22,8 +22,8 @@ Null Pointer Exception が発生する。
 [Form Template Method](http://www.refactoring.com/catalog/formTemplateMethod.html) を使うと、
 プログラムの振る舞いは変わってしまう。
 ここで重要となるのは、ここで言う「振る舞い」が
-[リファクタリングの定義](DefinitionOfRefactoring)のなかで述べた
-「''外部から見たときの''振る舞い」なのかどうかだ。
+[リファクタリングの定義](/DefinitionOfRefactoring)のなかで述べた
+「**外部から見たときの**振る舞い」なのかどうかだ。
 これは、本来プログラム行うべき振る舞いを変更しているだろうか？
 Null Object を導入するときは、
 戻り値を操作している個所に注意してプログラムを見渡さなければならない。
@@ -59,5 +59,4 @@ Null Object の導入によって未知のバグをフィックスしたが、
 ——ファイルから名前を読み取り、リフレクションを使ってメソッドが呼ばれた場合、
 メソッドのリネームでさえもリファクタリングを破壊してしまう（★）。
 
-## comment
-{{comment}}
+

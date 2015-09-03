@@ -6,7 +6,7 @@ tags: [uml]
 http://martinfowler.com/bliki/UmlSketchingTools.html
 
 私は多くのUMLダイアグラムを描いているが、CASEツールは使っていない。
-というのも、私は[スケッチとしてのUML](UmlAsSketch)に興味があるのであって、
+というのも、私は[スケッチとしてのUML](/UmlAsSketch)に興味があるのであって、
 あの倉庫に積まれた一式全部には興味がないからだ。
 今のところ、よく使っているのはVisioだ。
 Visioには最初からUMLテンプレートがついてくるが、
@@ -43,6 +43,7 @@ UML「ダイアグラム」なのに、テキストだぁ？なんじゃそり�
 もちろん、このマクロにはいくつかの制限がある。
 だが、こんな感じに、もっとコンパクトで簡潔なものになると私は思っている。
 
+```
  objects 
     thread, t:thread
     tool, :Toolkit
@@ -59,6 +60,7 @@ UML「ダイアグラム」なのに、テキストだぁ？なんじゃそり�
               peer: 
                 return      
             delete -> peer
+```
 
 これは単なる思いつきに過ぎない。
 実際に現場で使えるかどうかは分からない。
@@ -72,6 +74,7 @@ Javaソースファイルからクラス図を作れちゃうんだぜ。
 とはいっても、CustomerはOrderの左に、とかだけで私は十分。
 たとえば、[この図](http://www.spinellis.gr/sw/umlgraph/doc/ceg-adv.html)を描くには、こういう感じで書けるといいな：
 
+```
  layout
    row: Controller, EmbeddedAgent, URLStreamHandler, ChannelIterator
    SetTopController below: URLStreamHandler
@@ -102,6 +105,7 @@ Javaソースファイルからクラス図を作れちゃうんだぜ。
  class ChannelIterator
    dependencies
      -> SetTopController keyword:friend
+```
 
 何度も言うけど、これは単なる思い付きでしかない。
 誰かがこの道を進んでもらえるのであれば、私は嬉しく思う。

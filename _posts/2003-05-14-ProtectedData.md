@@ -41,4 +41,4 @@ protectedな機能をPublishedInterfaceの一部として扱うべきです。
 まあ、理解できないこともありません。
 ですが、私は通常、フィールドをprivateにし、滅多にprotectedにはしません。
 
-関連した問題に、[自己カプセル化](SelfEncapsulation)を使うか否かがあります。
+関連した問題に、[自己カプセル化](/SelfEncapsulation)を使うか否かがあります。

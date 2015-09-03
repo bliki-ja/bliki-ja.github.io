@@ -206,7 +206,7 @@ add_rowメソッドを使ってデータ行を追加することで、
 ```
 
 
-非常にシンプルな例だが、私が[Gatewayパターン](http://martinfowler.com/eaaCatalog/gateway.html)（[翻訳](http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?Gateway)）と呼んでいるものの良い例だ。
+非常にシンプルな例だが、私が[Gatewayパターン](http://martinfowler.com/eaaCatalog/gateway.html)と呼んでいるものの良い例だ。
 PloticusClusterBarクラスは、私がやりたいことへの完璧なインタフェースを持ったゲートウェイとなっている。
 この便利なインタフェースから実際に必要とされる出力に変換することができる。
 PloticusScripterクラスはまた別のレベルのゲートウェイである。
