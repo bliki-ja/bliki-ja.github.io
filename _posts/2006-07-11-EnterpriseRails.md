@@ -85,7 +85,7 @@ rBatisの開発が進まないからね。）
 しかし、「エンタープライズRuby」はそうではない。
 エンタープライズ界が動いている様を見ているからこそ、そう言えるのだ。
 エンタープライズ界は、メッセージングの利用、[ApplicationDatabase]]を持つ自律型サービス、ポストモダンな多様性の受容、の方向に動いている。
-つまり、[[型に嵌めないグルー（糊）](http://blogs.pragprog.com/cgi-bin/pragdave.cgi/Tech/UnsetGlue.html)のようなツールが理想となっている。
+つまり、[型に嵌めないグルー（糊）](http://blogs.pragprog.com/cgi-bin/pragdave.cgi/Tech/UnsetGlue.html)のようなツールが理想となっている。
 
 
 

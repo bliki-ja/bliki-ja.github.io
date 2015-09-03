@@ -5,7 +5,7 @@ tags: [domain driven design]
 
 http://martinfowler.com/bliki/CustomerLoyaltySoftware.html
 
-2007/9/4
+
 
 
 
@@ -70,7 +70,7 @@ Johnによると、会計の視点から見れば簡単なものでも、そう�
 会計の例えは、ある行動に対してマイルをどのように付与するかを決めることにも適用できる（そのまま適用できるわけではないが）。
 あらゆるロイヤルティプログラムには行動ルールがあるが、
 それはロイヤルティプログラムの頻繁な変更に対応できるように柔軟でなければならない。
-これは勘定記入（エントリ）のトリガとなる[[Agreement Dispatchers](http://martinfowler.com/eaaDev/AgreementDispatcher.html)を使ったドメインイベントのモデルとして捉えることができる。
+これは勘定記入（エントリ）のトリガとなる[Agreement Dispatchers](http://martinfowler.com/eaaDev/AgreementDispatcher.html)を使ったドメインイベントのモデルとして捉えることができる。
 これはJohnと私が何度も使ったパターンで、
 こうしたルールの変更にうまく対応できるものである。
 基本的に参加者のクラスについての全般的なプログラムのルールを示した協定（agreements）があり、各協定はイベントのタイプと日付範囲がキーになった転記ルールから成り立っている。
@@ -94,7 +94,7 @@ Johnによると、会計の視点から見れば簡単なものでも、そう�
 
 
 
-私同様、Johnも[[ReportingDatabase]]の強い支持者である。
+私同様、Johnも[ReportingDatabase](/ReportingDatabase)の強い支持者である。
 そして、この方式は上記のような問題にうまく適合している。
 会計の側には様々なデータ構造が必要で、アクティビティが発生したときに定期的に更新されるデータを使用する。
 一方、顧客行動分析の側のデータはすべて読み取り専用なので、

@@ -5,9 +5,9 @@ tags: [refactoring boundary]
 
 http://martinfowler.com/bliki/IsOptimizationRefactoring.html
 
-[[RefactoringBoundary]]のひとつ
+[リファクタリングの境界線](/RefactoringBoundary)のひとつ
 
-'''プログラムのパフォーマンスを向上させるために変更を行った。これはリファクタリングと呼べるのか？'''
+> プログラムのパフォーマンスを向上させるために変更を行った。これはリファクタリングと呼べるのか？
 
 最適化とリファクタリングはどちらも変化を伴うものだが（なかには最適化かつリファクタリングとなる変化もあるが）、両者は別物だと私は考えている。
 

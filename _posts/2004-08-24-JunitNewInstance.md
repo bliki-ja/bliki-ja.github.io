@@ -186,6 +186,6 @@ IQが一桁しかないとか、
 よいことだと思うのだなあ。
 
 ## comment
-*2004-08-27 (金) 11:14:12 ''[holic]]'' : TestNG や NUnit はデザインとして分離しないことを選択しているので、「分離できていない」じゃなくて「分離していない」の方が訳として適切な気がします。
-*2004-08-30 (月) 12:33:12 ''[[kdmsnr]]'' : [[Otaku, Cedric's weblog: More on JUnit and multiple instantiations](http://beust.com/weblog/archives/000175.html)
-*2005-01-12 (水) 00:19:49 ''[[babie]]'' : flossing はfloss(free libre open sourse software)化することかなぁ。文脈から「フリーソフトウェア化」というよりは日本で言う「オープン化」に近い物だと思います。
+* 2004-08-27 (金) 11:14:12 ''[holic]]'' : TestNG や NUnit はデザインとして分離しないことを選択しているので、「分離できていない」じゃなくて「分離していない」の方が訳として適切な気がします。
+* 2004-08-30 (月) 12:33:12 ''[[kdmsnr]]'' : [[Otaku, Cedric's weblog: More on JUnit and multiple instantiations](http://beust.com/weblog/archives/000175.html)
+* 2005-01-12 (水) 00:19:49 ''[[babie]]'' : flossing はfloss(free libre open sourse software)化することかなぁ。文脈から「フリーソフトウェア化」というよりは日本で言う「オープン化」に近い物だと思います。

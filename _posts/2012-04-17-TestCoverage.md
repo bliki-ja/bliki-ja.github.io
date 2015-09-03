@@ -61,6 +61,6 @@ http://martinfowler.com/bliki/TestCoverage.html
 
 ### 参考
 
-Brian Marick has an excellent article on the [[misuse of code coverage](http://www.exampler.com/testing-com/writings/coverage.pdf). And it's worth reading the [pithy commentary of Testivus](http://www.developertesting.com/archives/month200705/20070504-000425.html).
+Brian Marick has an excellent article on the [misuse of code coverage](http://www.exampler.com/testing-com/writings/coverage.pdf). And it's worth reading the [pithy commentary of Testivus](http://www.developertesting.com/archives/month200705/20070504-000425.html).
 
 1: By "you" here I mean the people writing the tests. Coverage is of little value to management since you need a technical background to understand whether the tests are good or whether the uncovered code is a problem.

@@ -39,6 +39,6 @@ http://martinfowler.com/bliki/InternalDslStyle.html
  validates_format_of :length, :with => /^\d+(in](cm)/
 ```
 
-まるでRubyの新しいキーワードのようだが、Rubyに手を入れているわけではない。 [[メタプログラミング|http://ola-bini.blogspot.com/2006/09/ruby-metaprogramming-techniques.html)をうまくやっているだけだ。だが、Rubyという言語そのものを強化しているように感じられないだろうか。
+まるでRubyの新しいキーワードのようだが、Rubyに手を入れているわけではない。 [メタプログラミング|http://ola-bini.blogspot.com/2006/09/ruby-metaprogramming-techniques.html)をうまくやっているだけだ。だが、Rubyという言語そのものを強化しているように感じられないだろうか。
 
 どちらのテクニックも非常に有用である。ただ、一般的に言えることだが、この区別も境界が曖昧である（たとえばRakeはどちらにも含まれる）。

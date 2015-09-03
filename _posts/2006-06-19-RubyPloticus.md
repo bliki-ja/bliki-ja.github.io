@@ -7,7 +7,7 @@ http://martinfowler.com/bliki/RubyPloticus.html
 
 
 
-先ごろ[EvaluatingRuby]]を投稿したが、その中で私は、
+先ごろ[EvaluatingRuby](/EvaluatingRuby)を投稿したが、その中で私は、
 同僚がWebアプリケーションにファンシーな数値グラフを組み込んだと述べた。
 それについて、どのようにやっているのかという質問のメールを頂いた。
 簡単な答えとして「Ploticusを使った」と元のエントリーに追記しておいたのだが、
@@ -46,7 +46,7 @@ Rubyではこれを簡単に行うことができる……と私も聞いた。
 自分の言葉で動くオブジェクトを手にすることができた。
 そして、必要なploticusの結果を手にすることができた。
 プレハブ式なものを使っていれば、それを組み合わせるのは簡単だ。
-[[こういう感じの|http://ploticus.sourceforge.net/gallery/students.htm)
+[こういう感じの|http://ploticus.sourceforge.net/gallery/students.htm)
 棒グラフが欲しかったのだが、おれにはploticusスクリプトが必要だった。
 
 

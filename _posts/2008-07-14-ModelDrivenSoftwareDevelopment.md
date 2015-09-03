@@ -3,7 +3,7 @@ title: モデル駆動ソフトウェア開発
 tags: [programming platforms, domain specific language, uml]
 ---
 
-2008/7/14
+http://www.martinfowler.com/bliki/ModelDrivenSoftwareDevelopment.html
 
 
 

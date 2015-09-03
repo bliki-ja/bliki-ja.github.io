@@ -3,7 +3,7 @@ title: ペンディングHEAD
 tags: [version control]
 ---
 
-2007/4/26
+
 
 
 
@@ -58,7 +58,7 @@ Envyだとこのような使い方が簡単にできる。
 こういったものを自分でセットアップするのは難しいのだろうか？
 すでにやったことのあるチームがいるが、まだ話していないのでよく分からない。
 だが、いくつかのチーム指向のツールを使って、同等のことができる。
-たとえば、JetBrainの[[TeamCity](http://www.jetbrains.com/teamcity/)では「遅延コミット」と呼ばれている。
+たとえば、JetBrainの[TeamCity](http://www.jetbrains.com/teamcity/)では「遅延コミット」と呼ばれている。
 また、PaulがBorlandのGauntletについて言及している。
 
 

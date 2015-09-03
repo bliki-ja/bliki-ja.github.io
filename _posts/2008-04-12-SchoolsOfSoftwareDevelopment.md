@@ -5,10 +5,6 @@ tags: [agile, certification, process theory]
 
 http://martinfowler.com/bliki/SchoolsOfSoftwareDevelopment.html
 
-2008/4/12
-
-ソフトウェア開発の学派
-
 
 
 この話はもう何度目だろう。今回で最後にはなるまい。
@@ -39,7 +35,7 @@ http://martinfowler.com/bliki/SchoolsOfSoftwareDevelopment.html
 
 
 
-この概念は明らかにソフトウェアテストのコンテキスト駆動学派([[James Bach](http://www.satisfice.com/blog/archives/74) と [Brett Pettichord](http://www.io.com/%7Ewazmo/papers/four_schools.pdf)を見よ)から来ている。
+この概念は明らかにソフトウェアテストのコンテキスト駆動学派([James Bach](http://www.satisfice.com/blog/archives/74) と [Brett Pettichord](http://www.io.com/%7Ewazmo/papers/four_schools.pdf)を見よ)から来ている。
 私が彼らのものの見方を好きなのは、知的なソフトウェア開発者たちがそんなにも異なったアプローチを取る理由を説明するモデルだからだ。
 
 

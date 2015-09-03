@@ -66,7 +66,7 @@ DslReadings にまとめていくことにします。
 
 
 
-内部DSLと外部DSLの流れは、[[PragDave](http://pragprog.com/pragdave)の言葉でうまく合流しました。
+内部DSLと外部DSLの流れは、[PragDave](http://pragprog.com/pragdave)の言葉でうまく合流しました。
 達人プログラマーたちはずっとDSLのファンだったのです。
 DSLは元々、Unixの伝統から来たものでした（[The Pragmatic Programmer](http://www.amazon.com/exec/obidos/tg/detail/-/020161622X)（日本語『達人プログラマー』）のセクション12に素晴らしい議論が載っています——これは「達人の極意12」と呼んでもいいかもしれません）。
 [インタビュー](http://www.codegeneration.net/tiki-read_article.php?articleId=9)のなかでDaveはこう言っています。「コード生成はいつも使うけど、Rubyでプログラミングしているときはほとんど使わない」と。

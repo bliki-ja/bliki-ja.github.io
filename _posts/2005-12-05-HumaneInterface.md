@@ -7,7 +7,7 @@ http://martinfowler.com/bliki/HumaneInterface.html
 
 Ruby界隈で「ヒューメイン・インタフェース」という言葉を何度も耳にした。
 この言葉は、クラスのインタフェースを記述する際のrubyistたちの姿勢(attitude)の一部を表したものである。
-APIの設計については、2つの異なる考え方を対比していくと面白い（もうひとつは[MinimalInterface]]である）。
+APIの設計については、2つの異なる考え方を対比していくと面白い（もうひとつは[MinimalInterface](/MinimalInterface)である）。
 
 ヒューメイン・インタフェースの肝は、みんなが何をやりたいかを見つけ出し、何度も起きることを簡単に行えるためのインタフェースを設計することだ。
 
@@ -16,7 +16,7 @@ APIの設計については、2つの異なる考え方を対比していくと�
 基本的な機能に関しては、どちらもよく似たものになる。
 
 ヒューメイン・インタフェースと最小インタフェースの違いを見つけるには、JavaとRubyのListコンポーネントを比べるとよいだろう。
-Javaには、インスタンスメソッドを25個持つinterface（[[java.util.List](http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html)）がある。
+Javaには、インスタンスメソッドを25個持つinterface（[java.util.List](http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html)）がある。
 一方のRubyには、メソッドを78個持つ[Array](http://www.ruby-doc.org/core/classes/Array.html)クラス（arrayではなくlistである）がある。
 両者のスタイルの違いが、メソッドの数の違いとして表れている。
 どちらのコンポーネントにも同じような基本的な機能がある。
@@ -33,17 +33,19 @@ Rubyだと、こうだ。
  anArray.last
 
 実際にはまだ他にも驚くべき点がある。
-例えば、RubyのArrayには{{code('first')}}メソッドもある。
-つまり、{{code('anArray[0]')}}ではなく、{{code('anArray.first')}}とできるわけだ。
+例えば、RubyのArrayには``first``メソッドもある。
+つまり、``anArray[0]``ではなく、``anArray.first``とできるわけだ。
 
 もっと大きな機能もある。
-RubyのArrayには{{code('flatten')}}メソッドがあり、
+RubyのArrayには``flatten``メソッドがあり、
 ネストされた配列を平滑化する。
 
+```ruby
  irb> [1,2,[3,4,[5,6],7],8].flatten
  => [1, 2, 3, 4, 5, 6, 7, 8]
+```
 
-ここでポイントとなるのは、以上のような機能（{{code('last')}}のようなシンプルなものにしろ{{code('flatten')}}のような複雑なものにしろ）は、クライアント自身が作ることもできるという点である。クライアント自身が作れば、listクラスのサイズは大きくはならない。
+ここでポイントとなるのは、以上のような機能（``last``のようなシンプルなものにしろ``flatten``のような複雑なものにしろ）は、クライアント自身が作ることもできるという点である。クライアント自身が作れば、listクラスのサイズは大きくはならない。
 最小インタフェース派は、このような振る舞いをサポートする必要最小限のメソッドに焦点をあてている。
 一方のヒューメイン・インタフェース派は、必要となるメソッドを追加したいと考えている。
 
@@ -57,15 +59,15 @@ RubyConfでは、田中哲氏が「よく使うメソッドは短い名前の方
 メソッドを使う機会が多くなれば、親しみが出てくる。
 何度も使うのであれば、短い名前のほうが覚えやすいし、
 タイプ量も減るし、コードを読む時間も少なくなる。
-田中氏の例では、{{code('DateTime')}}クラスの{{code('parse')}}メソッドは標準の日付フォーマットでパースするが、様々な日付フォーマットを扱うことのできるより柔軟な{{code('strptime')}}メソッドはあまり使われていない、とあった。
+田中氏の例では、``DateTime``クラスの``parse``メソッドは標準の日付フォーマットでパースするが、様々な日付フォーマットを扱うことのできるより柔軟な``strptime``メソッドはあまり使われていない、とあった。
 
 上記のようなメソッド名の原則は、最小インタフェース手法と衝突しない。
-実際、JavaのList interfaceが登場したとき、それは古いVectorの{{code('elementAt')}}メソッドを{{code('get')}}に変更した。
+実際、JavaのList interfaceが登場したとき、それは古いVectorの``elementAt``メソッドを``get``に変更した。
 
 Rubyのヒューメイン・インタフェース哲学の面白いところは、他にもある。
 メソッド名のエイリアスだ。
-listの長さを取得したいとき、{{code('length')}}を使う？それとも{{code('size')}}を使う？
-{{code('length')}}しか用意していないライブラリもあれば、{{code('size')}}しか用意していないライブラリもあるだろう。
+listの長さを取得したいとき、``length``を使う？それとも``size``を使う？
+``length``しか用意していないライブラリもあれば、``size``しか用意していないライブラリもあるだろう。
 RubyのArrayは、どちらも用意している。
 エイリアスが張られているので、同じコード内でどちらの名前でも呼ぶことができる。
 Rubyistたちは、ライブラリの使用者にどっちのメソッドだったかを覚させるよりも、
@@ -75,10 +77,10 @@ Rubyistたちは、ライブラリの使用者にどっちのメソッドだっ�
 
 オブジェクトの強みの大部分は、その振る舞いにあるのであって、データにあるのではない。
 最小の機能しか提供しないのであれば、複数のクライアントがよくある同じようなコードを重複して書かなければならない。
-{{code('flatten')}}のようなメソッドがなかったら、再帰処理を大勢の人間が書かなければならないだろう。
+``flatten``のようなメソッドがなかったら、再帰処理を大勢の人間が書かなければならないだろう。
 まあ、それほど難しいことではないかもしれない。だが、頻繁に使用するのになんでいちいち面倒くさいことをしなきゃいけないの？
 
-{{code('last')}}のようにシンプルにできる場合でも、読み手はイディオムを覚えなければならない。
+``last``のようにシンプルにできる場合でも、読み手はイディオムを覚えなければならない。
 どうしてそんな間接的なことをしなきゃいけないわけ？直接読めるメソッドがあるってのに？
 優れたソフトウェアはユーザのことを第一に考え、ユーザーの生活を楽にしようとする。
 ヒューメイン・インタフェースはこの原則に従っている。
@@ -96,7 +98,7 @@ Rubyistたちは、ライブラリの使用者にどっちのメソッドだっ�
 興味深い、有用なディスカッションが繰り広げられている。
 いつか一連の話をまとめたいと思うが、とりあえずリストだけ。
 [Elliotte Harold](http://www.cafeaulait.org/oldnews/news2005December6.html)のヒューメイン手法に対する端的ながらも強い反論に対して、[James Robertson](http://www.cincomsmalltalk.com/blog/blogView?showComments=true&entry=3311314085)がコメントしたのが最初（そのコメントは自分でチェックしてくれ）。
-以降、[Cees de Groot](http://www.cdegroot.com/blog/2005/12/06/simplicity-rules-in-the-right-place/)、[Antonio Vieiro](http://blogs.sun.com/roller/page/swinger?entry=harold_martin_and_kisses)、[David Hoefler](http://davidhoefler.com/blog/index.php?title=humane_interface_and_ruby_and_some_java&more=1&c=1&tb=1&pb=1)、[James Higgs](http://staff.interesource.com/james/PermaLink.aspx?guid=ac626a46-1728-4488-bbda-6c05254656ec)、[Peter Williams](http://pezra.barelyenough.org/blog/2005/12/humane-interfaces/)、[Cedric Beust](http://beust.com/weblog/archives/000346.html)、[John D. Mitchell](http://weblogs.java.net/blog/johnm/archive/2005/12/humane_interfac.html)、[Stuart Roebuck](http://www.typingahead.com/management/2005/12/humane_interfac.html)(ry{{fn('訳注：めんどーなので本家でリンクを確認してください')}}らが加わって祭り化。
+以降、[Cees de Groot](http://www.cdegroot.com/blog/2005/12/06/simplicity-rules-in-the-right-place/)、[Antonio Vieiro](http://blogs.sun.com/roller/page/swinger?entry=harold_martin_and_kisses)、[David Hoefler](http://davidhoefler.com/blog/index.php?title=humane_interface_and_ruby_and_some_java&more=1&c=1&tb=1&pb=1)、[James Higgs](http://staff.interesource.com/james/PermaLink.aspx?guid=ac626a46-1728-4488-bbda-6c05254656ec)、[Peter Williams](http://pezra.barelyenough.org/blog/2005/12/humane-interfaces/)、[Cedric Beust](http://beust.com/weblog/archives/000346.html)、[John D. Mitchell](http://weblogs.java.net/blog/johnm/archive/2005/12/humane_interfac.html)、[Stuart Roebuck](http://www.typingahead.com/management/2005/12/humane_interfac.html)(ry{{fn('訳注：めんどーなので本家でリンクを確認してください``らが加わって祭り化。
 
 つーか、多杉ｗ。
 燃料を投下しつつ殺伐としないお前ら最高。

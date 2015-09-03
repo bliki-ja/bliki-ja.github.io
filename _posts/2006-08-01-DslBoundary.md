@@ -5,11 +5,11 @@ tags: [domain specific language]
 
 http://www.martinfowler.com/bliki/DslBoundary.html
 
-2006/8/1
 
 
 
-[DomainSpecificLanguage]]が表れたときに疑問として挙がったのが、
+
+[ドメイン特化言語](/DomainSpecificLanguage)が表れたときに疑問として挙がったのが、
 「DSLは何なのか」そして「DSLは何でないか」だった。
 混乱の元はDSLに厳密な定義が存在しないためであり、
 DSLとその他とを区別するグレーゾーンが広大だったためである。
@@ -26,9 +26,9 @@ DSLとその他とを区別するグレーゾーンが広大だったためで�
 基本的に両者に違いはない。
 内部DSLとは、単なるイイ感じの名前のついたAPIなのだ（「ライブラリ設計は言語設計(library design is language design)」というベル研究所の古い諺があるように）。
 だが、違いはないとはいったものの、DSLっぽく書かれたAPIを使うときはなんとなく「感覚」が異なるように感じられる。
-[[FluentInterface]]のようなものはAPIを使用することを質的に変えてしまうのだ。
+[流れるようなインターフェイス](/FluentInterface)のようなものはAPIを使用することを質的に変えてしまうのだ。
 DSLを使って考えると読みやすさを違った方法で考えるようになる。
-ホスト言語のシンタックスを利用して、それ自身に依存した何かを作るようになる——[[rake](http://www.martinfowler.com/articles/rake.html)が良い例だ。
+ホスト言語のシンタックスを利用して、それ自身に依存した何かを作るようになる——[rake](http://www.martinfowler.com/articles/rake.html)が良い例だ。
 
 
 

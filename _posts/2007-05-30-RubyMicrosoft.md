@@ -5,7 +5,7 @@ tags: [microsoft, ruby]
 
 http://martinfowler.com/bliki/RubyMicrosoft.html
 
-2007/6/1
+
 
 
 
@@ -13,7 +13,7 @@ http://martinfowler.com/bliki/RubyMicrosoft.html
 
 
 
-[RailsConf2007]]ではJRubyが大盛況だった。
+[RailsConf2007](/RailsConf2007)ではJRubyが大盛況だった。
 この小さなチームは瀕死のプロジェクトを引き受け、JVM上で動くファーストクラスのRubyプラットフォームに変えた。彼らが多くの賞賛を得たのは当然だ。
 
 
@@ -61,7 +61,7 @@ Chris Sellsが指摘したように、「マイクロソフトは何を狙って
 
 
 
-もう1つの理由は人だ。マイクロソフトは公式に認めたくないだろうが、[[AlphaGeek]]たちがマイクロソフトプラットフォームから[[去りつつある](http://www.hanselman.com/blog/IsMicrosoftLosingTheAlphaGeeks.aspx)というのが本当に懸念されている。
+もう1つの理由は人だ。マイクロソフトは公式に認めたくないだろうが、[アルファギーク](/AlphaGeek)たちがマイクロソフトプラットフォームから[去りつつある](http://www.hanselman.com/blog/IsMicrosoftLosingTheAlphaGeeks.aspx)というのが本当に懸念されている。
 マイクロソフトのビジョンは指揮管理組織における死の軍隊だという意見が増えている。優秀なエンタープライズ開発者に可能性を与えるツールや、アジャイル開発プロセスに対するあからさまな支障がたびたび見られる。
 
 

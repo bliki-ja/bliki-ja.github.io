@@ -15,6 +15,7 @@ http://martinfowler.com/bliki/StaticSubstitution.html
 
 以下はこのテのstaticのサンプルだ:
 
+```java
  public class AddressBook {
      private static String connectionString, username, password;
  
@@ -44,6 +45,7 @@ http://martinfowler.com/bliki/StaticSubstitution.html
              cleanUp(conn, st, rs);
          }
      }
+```
 
 このサンプルでは、設定関連の初期化をstaticイニシャライザで行い、staticメソッドでデータベースに対してクエリを行っている。
 
@@ -51,6 +53,7 @@ http://martinfowler.com/bliki/StaticSubstitution.html
 
 シンプルにスタブと置き換え可能にするには、少々リファクタリングが必要だ。その最初のステップでは、staticをsingletonにする。
 
+```java
  public class AddressBook {
  
      private static AddressBook soleInstance = new AddressBook();
@@ -87,6 +90,7 @@ http://martinfowler.com/bliki/StaticSubstitution.html
              cleanUp(conn, st, rs);
          }
      }
+```
 
 なんとわかりやすいリファクタリングであることよ。
 
@@ -96,27 +100,24 @@ http://martinfowler.com/bliki/StaticSubstitution.html
 
 このリファクタリングはカタログには収録していない——もし収録するならば「Singletonによるstaticの置き換え(Replace Statics With Singleton)」と呼ぶだろうね。現状では、何も変更はされていないが、これは置き換えをサポート可能すべく刻むステップなのだ。この次のステップでは、唯一のインスタンス(the sole instance)を読み込むメソッドを導入する。
 
+```java
      public static void loadInstance(AddressBook arg) {
          soleInstance = arg;
      }
+```
 
-これでテスティング(あるいは他の目的)のために置き換える準備が整った。テストケースのsetUpメソッドで適切な呼び出しが可能だ。すなわち、{{code('AddressBook.loadInstance(new StubAddressBook())')}};と。スタブが{{code(AddressBook)}}のサブクラスであれば、テストを本番オブジェクトに対してではなくスタブに対して書ける。
+これでテスティング(あるいは他の目的)のために置き換える準備が整った。テストケースのsetUpメソッドで適切な呼び出しが可能だ。すなわち、``AddressBook.loadInstance(new StubAddressBook())``と。スタブが``AddressBook``のサブクラスであれば、テストを本番オブジェクトに対してではなくスタブに対して書ける。
 
 ところが話はこれで終わりではない。上のコードでいえば、本物のサービスを実際に利用する・しないにかかわらず、必ずサービスのインスタンスを生成しなければならない——唯一のインスタンスをstaticイニシャライザで初期化しているからだ。これはサービスにアクセスするコード、つまりこのクラス自身の悩みの種になる。これをどうにかするためには、初期化処理をstaticイニシャライザから括り出して別の初期化用クラスへと分離し、初期化用クラスを置き換えるようにするのだ(これについては[Chrisのエントリ](http://www.skizz.biz/archives/000421.html)に詳しい)。とはいえ現状でも、最初の一歩として有効なことは間違いない。
 
 これはSingletonのインスタンスを抱えこんでしまいがちになるのと同じ問題でもある。Singleton(または[Registry](http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?Registry))を採用しているすべての人の肝に銘じておいて欲しいのだが、Singletonは簡単に置き換え可能だ。Singletonの初期化処理についても同様。これも簡単に置き換えられる。
 
-ちょうど手元に入手したばかりのMichael Feathersの新刊{{isbn('0131177052','『Working Effectively With Legacy Code』')}}があるのだが、彼はこうした問題についてより多く(そして上手に)語っている。
+ちょうど手元に入手したばかりのMichael Feathersの新刊『Working Effectively With Legacy Code』があるのだが、彼はこうした問題についてより多く(そして上手に)語っている。
 
 ##  コメント
-{{rcomment}}
-*2004-11-13 (土) 00:26:11 ''[[かくたに]]'' : Hiki-devに手ぶらで相談できねーなー、と思って早数ヵ月。↓はイイ感じ。でもこの話題ってスレ違い？
-*2004-11-12 (金) 14:45:25 ''[[kdmsnr]]'' : いちおう
 
- {{code(hoge)}}
-
-で<code>タグになります。修正しときました。
-*2004-11-12 (金) 10:36:12 ''[[kdmsnr]]'' : どんな記法がいいんでしょうねえ。Hiki-devで聞きましょうか。
-*2004-11-11 (木) 01:34:15 ''[[かくたに]]'' : 遅ればせながら1周年のお祝いcontrib。忌憚無きツッコミ希望。WikiName抑止記法が欲しいのは私だけ？
+* 2004-11-13 (土) 00:26:11 ''[[かくたに]]'' : Hiki-devに手ぶらで相談できねーなー、と思って早数ヵ月。↓はイイ感じ。でもこの話題ってスレ違い？
+* 2004-11-12 (金) 10:36:12 ''[[kdmsnr]]'' : どんな記法がいいんでしょうねえ。Hiki-devで聞きましょうか。
+* 2004-11-11 (木) 01:34:15 ''[[かくたに]]'' : 遅ればせながら1周年のお祝いcontrib。忌憚無きツッコミ希望。WikiName抑止記法が欲しいのは私だけ？
 
 

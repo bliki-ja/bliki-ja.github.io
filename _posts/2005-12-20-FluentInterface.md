@@ -88,7 +88,7 @@ http://www.martinfowler.com/bliki/FluentInterface.html
 
 
 先ほどの例はカルガリーのコーヒーショップで朝食をとっているときに、私がチャチャっと書き上げたものなのでちょっと違うのだが、本来、流れるようなAPIの構築には時間がかかる。
-流れるようなAPIについてもっと考えてみたいのであれば、[[JMock](http://www.jmock.org/)のコードを見てみるといいだろう。
+流れるようなAPIについてもっと考えてみたいのであれば、[JMock](http://www.jmock.org/)のコードを見てみるといいだろう。
 JMockなどのモックライブラリは、振舞の複雑なスペック（仕様）を作る必要がある。
 ここ数年で様々なモックライブラリが作られてきたが、JMockには非常にナイスで流れるようなAPIが含まれており、それが正に流れるが如くなのである。
 以下にエクスペクテーション（期待）の例を挙げる。
@@ -152,7 +152,7 @@ Ericが述べていたことだが、彼が流れるようなインターフェ�
 
 
 
-[[Piers Cawley](http://www.bofh.org.uk/articles/2005/12/21/fluent-interfaces)から、いいフォローが入った。
+[Piers Cawley](http://www.bofh.org.uk/articles/2005/12/21/fluent-interfaces)から、いいフォローが入った。
 
 ## SEE ALSO
 
