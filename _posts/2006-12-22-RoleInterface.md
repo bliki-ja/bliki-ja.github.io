@@ -5,7 +5,7 @@ tags: [API design]
 
 http://martinfowler.com/bliki/RoleInterface.html
 
-2006/12/22
+
 
 
 
@@ -64,7 +64,7 @@ http://martinfowler.com/bliki/RoleInterface.html
 
 
 上のコードが穴埋め式になっていることに気づいたかもしれない。「?TYPE?」の部分である。
-アクティビティに{{code('predecessors')}}（事前処理）と{{code('successors')}}（事後処理）を呼び出させると、どんな型のオブジェクトが戻ってくればよいだろうか？（正確に言えばコレクション型が戻って来るので、「戻り値であるコレクションの要素の型は何がよいだろうか？」が正しい質問）
+アクティビティに``predecessors``（事前処理）と``successors``（事後処理）を呼び出させると、どんな型のオブジェクトが戻ってくればよいだろうか？（正確に言えばコレクション型が戻って来るので、「戻り値であるコレクションの要素の型は何がよいだろうか？」が正しい質問）
 
 
 
@@ -84,7 +84,7 @@ http://martinfowler.com/bliki/RoleInterface.html
 
 
 一方、ロールインタフェースであれば、協調するオブジェクトがどのように使われるかを考慮することになる。
-この場合、successor は {{code('latestStart')}} でのみ使用され、predecessor は {{code('earliestFinish')}} でのみ使用される。
+この場合、successor は ``latestStart`` でのみ使用され、predecessor は ``earliestFinish`` でのみ使用される。
 そのため、実際に使うメソッドを持つ２つのインタフェースを作ることになる。
 
 ```java

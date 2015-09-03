@@ -9,15 +9,18 @@ http://www.martinfowler.com/bliki/MakingStubs.html
 
 Jeremy Stell-Smithは、Abstract Factoryに基づくアプローチを見せてくれました。スタブにすることができるサービスを、すべて一つのファクトリから引き出すようにするのです。次の例は、そうして動くPersistenceクラスです。
 
+```java
  public abstract class Persistence ...
    public static Persistence getInstance() {
      return (Persistence)Factories.get(Persistence.class);
    }
  
   public abstract void save(Object obj);
+```
 
 Abstract Factoryでも可能なように、テストのファクトリも実装をうまく積み重ねることができます。—これによりファクトリの準備が簡単になります。
 
+```java
  public class FooTest ...
    public void setUp() {
      TestFactories.pushSingleton(Persistence.class, new MockPersistence());
@@ -37,9 +40,11 @@ Abstract Factoryでも可能なように、テストのファクトリも実装�
    public void save() {
      Persistence.getInstance().save(this);
    }
+```
 
 他のプロジェクトでは、Kraig Parkinson が少し違うやり方を見せています。単一の抽象ファクトリを使うのではなく、スタブを必要とするようなサービスはプロトタイプを使います。
 
+```java
  public class MyFacade {
    private static MyFacade prototype;
    
@@ -61,9 +66,11 @@ Abstract Factoryでも可能なように、テストのファクトリも実装�
      else
        return new MyFacade();
    }
+```
 
 これをテストで使うには、次のようにします。
 
+```java
  public class MyClientTest extends junit.framework.TestCase {
    private class Client {
      public String speak(String input) {
@@ -112,8 +119,9 @@ Abstract Factoryでも可能なように、テストのファクトリも実装�
        MyFacade.setPrototype(null);
      }
    }
+```
 
-この例においてKreigは、テストメソッドの{{code(finally)}}ブロックの中でリソースを開放しています。他の手段(私はそうすべきだと思うのですが)としては、開放のコードを{{code(tearDown)}}メソッドの中に置くようにもできます。
+この例においてKreigは、テストメソッドの``finally``ブロックの中でリソースを開放しています。他の手段(私はそうすべきだと思うのですが)としては、開放のコードを``tearDown``メソッドの中に置くようにもできます。
 
 ダンスのケースは、Mock Objectsを実践する人たちがモックオブジェクトに予想を設定するのと同じです。これをMock Objectsを行う簡便な方法であると考えてもいいでしょう。
 

@@ -15,6 +15,7 @@ http://martinfowler.com/bliki/CourtesyImplementation.html
 全部で何頭の象が箱に入っているかを知りたいとしましょう。
 これはもちろん再帰処理を使います。
 
+```ruby
  # Ruby
  class Node
  end
@@ -41,9 +42,10 @@ http://martinfowler.com/bliki/CourtesyImplementation.html
  
  class Elephant < Node
  end
+```
 
-あれれ、{{code('num_elephants')}} メソッド内で
-オブジェクトの型の判定に使っている {{code('kind_of?')}} がなんだか臭いますね。
+あれれ、``num_elephants``メソッド内で
+オブジェクトの型の判定に使っている``kind_of?``がなんだか臭いますね。
 何か代替案はあるでしょうか？
 上記では、象の中に箱や象は入らないんだから、
 象か箱かの判定を行いました。
@@ -56,6 +58,7 @@ http://martinfowler.com/bliki/CourtesyImplementation.html
 条件文を避けるため、象に「象がいくつ入ってますか？」メソッドを追加してみましょう。
 こんな感じです。
 
+```
  class Node
    # 型付けされた言語では、
    # 抽象メソッド num_elephants をここに定義します。
@@ -82,7 +85,7 @@ http://martinfowler.com/bliki/CourtesyImplementation.html
      return 1
    end
  end
-
+```
 
 はぁ？と思われる方も多いかもしれません。
 ですが、コンポジット構造のロジックをシンプルにするのに、

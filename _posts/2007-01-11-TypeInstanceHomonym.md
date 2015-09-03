@@ -5,7 +5,7 @@ tags: [domain driven design]
 
 http://martinfowler.com/bliki/TypeInstanceHomonym.html
 
-2007/1/11
+
 
 
 
@@ -14,9 +14,9 @@ http://martinfowler.com/bliki/TypeInstanceHomonym.html
 
 
 
-""『戦争と平和』は素晴らしい本だ。
+>『戦争と平和』は素晴らしい本だ。
 
-""あーあ、この本の表紙はボロボロだねえ。
+> あーあ、この本の表紙はボロボロだねえ。
 
 
 
@@ -43,9 +43,9 @@ http://martinfowler.com/bliki/TypeInstanceHomonym.html
 最初に挙げた2つの文では、「本」は、「著書」と「物理的な一冊の本」を指していた。
 おそらくここの読者はプログラマばかりだろうから、プログラミングのアナロジーを使おう。
 「本」クラスが2つある。だが、2つのクラスの意味は異なる。
-両者を区別するために、「{{code('LiteraryWork')}}（著書）」クラスと「{{code('PhysicalCopy')}}（物理的な本）」クラスという名前を付ける。
-最初の文で「『戦争と平和』は（素晴らしい）本だ」と言ったが、「『戦争と平和』は{{code('LiteraryWork')}}のインスタンスだ」と言うことができる。
-同様に、2番目の文章は、{{code('PhysicalCopy')}}のインスタンスの特性について述べたものである。
+両者を区別するために、「``LiteraryWork``（著書）」クラスと「``PhysicalCopy``（物理的な本）」クラスという名前を付ける。
+最初の文で「『戦争と平和』は（素晴らしい）本だ」と言ったが、「『戦争と平和』は``LiteraryWork``のインスタンスだ」と言うことができる。
+同様に、2番目の文章は、``PhysicalCopy``のインスタンスの特性について述べたものである。
 
 
 
