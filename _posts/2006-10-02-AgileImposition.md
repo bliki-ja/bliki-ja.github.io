@@ -26,7 +26,7 @@ Webを巡回していると、ある開発チームが上層部からアジャ�
 「人」を認識し、いかに一緒に働くかに気づくことが、
 ソフトウェア開発においてもっとも重要な要因である。
 プロセスは二の次だ。
-これは[アジャイルマニフェスト](http://agilemanifesto.org/)の第一項「プロセスやツールより個人と相互作用を重視します{{fn('http://www.agileprocess.jp/wg/agilepm/modules/bwiki/index.php?AP(M)BOK%A4%CE%C7%D8%B7%CAより引用')}}」を反映したものであり、アジャイルマニフェストの2つの[原則](http://agilemanifesto.org/principles.html)により補足されている。
+これは[アジャイルマニフェスト](http://agilemanifesto.org/)の第一項「プロセスやツールより個人と相互作用を重視します」を反映したものであり、アジャイルマニフェストの2つの[原則](http://agilemanifesto.org/principles.html)により補足されている。
 
 
 
