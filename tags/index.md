@@ -7,7 +7,7 @@ title: tag
 {% assign sortedTagNames = tagNames | split:',' | sort %}
 
 {% for tag in sortedTagNames %}
-<div id="tag_{{ tag }}" style="display:none;">
+<div id="tag_{{ tag }}" class="tagsec" style="display:none;">
   <h1>{{ tag }}</h1>
   <ul>
     {% for post in site.tags[tag] %}
@@ -19,11 +19,19 @@ title: tag
 
 <script>
 function getTag() {
-  var vars = [], hash;
-  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+  var href = window.location.href;
+  if (href.indexOf('?') == -1) {
+    return "";
+  }
+  var hashes = href.slice(href.indexOf('?') + 1).split('&');
   return unescape(hashes[0]);
 }
 
-<!-- jQuery cannot get tag with id includes blank ... so use getElementById -->
-$(document.getElementById("tag_" + getTag())).show();
+var tag = getTag();
+if (tag == "") {
+  $(".tagsec").each(function() {$(this).show()});
+} else {
+  <!-- jQuery cannot get tag with id includes blank ... so use getElementById -->
+  $(document.getElementById("tag_" + tag)).show();
+}
 </script>
