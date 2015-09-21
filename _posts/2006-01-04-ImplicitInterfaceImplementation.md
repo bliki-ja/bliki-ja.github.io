@@ -3,10 +3,6 @@ title: 暗黙的インタフェースの実装
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/ImplicitInterfaceImplementation.html
-
-
-
 JavaもC#も純粋なインタフェース型というものを用意している。
 純粋なインタフェースは``interface Mailable``のように宣言し、
 Javaの場合だと``class Customer implements Mailable``のようにして実装する。
@@ -15,7 +11,7 @@ Javaの場合だと``class Customer implements Mailable``のようにして実�
 
 
 このモデルが考慮していないのは、
-クラスには必ず''暗黙的な''インタフェース(implicit interface)があるという点である。
+クラスには必ず**暗黙的な**インタフェース(implicit interface)があるという点である。
 Customerの暗黙的なインタフェースは、Customerで宣言されたすべてのpublicなメンバである（この暗黙的なインタフェースは、今まで私が見てきたどのOO言語にも存在する）。
 JavaでもC#でも、暗黙的なインタフェースをimplementすることはできない——つまり、``class ValuedCustomer implements Customer``のように書くことはできない。
 

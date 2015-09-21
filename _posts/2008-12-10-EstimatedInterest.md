@@ -3,11 +3,6 @@ title: 支払利息の見積もり
 tags: [metrics, technical debt, project planning]
 ---
 
-
-http://martinfowler.com/bliki/EstimatedInterest.html
-
-
-
 [技術的負債](/TechnicalDebt)は、かなり使える考え方である。
 しかし、負債がどれくらいあるかなんて、どうやったら分かるのだろう。
 残念ながら金融の負債とは違い、どれだけ技術的負債があるのかは分かりづらい
