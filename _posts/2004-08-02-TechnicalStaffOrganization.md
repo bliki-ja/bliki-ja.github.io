@@ -3,10 +3,8 @@ title: 技術別組織
 tags: [team organization]
 ---
 
-http://martinfowler.com/bliki/TechnicalStaffOrganization.html
-
-[機能別組織のほうが好み](PreferFunctionalStaffOrganization)だが、
-[機能別組織](FunctionalStaffOrganization)にはない、技術別組織のテクニカルな意見を軽んじることも出来ないだろう。
+[機能別組織のほうが好み](/PreferFunctionalStaffOrganization)だが、
+[機能別組織](/FunctionalStaffOrganization)にはない、技術別組織のテクニカルな意見を軽んじることも出来ないだろう。
 
 技術ベースの組織では、プロジェクトや組織の技術的側面で人材を揃える。
 大企業では、Webインターフェイスのスペシャリストやデータベーススペシャリスト、ネットワークスペシャリストなどになるだろう。
