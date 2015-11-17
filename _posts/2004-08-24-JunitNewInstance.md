@@ -3,8 +3,6 @@ title: Junit新インスタンス
 tags: [testing]
 ---
 
-http://martinfowler.com/bliki/JunitNewInstance.html
-
 [JUnit](http://junit.org/) testing framework のあるデザインについて、よく質問を受ける。
 テストメソッドを走らせるたびに、新しいオブジェクトができる点についてだ。
 blikiへ投稿するに値する内容だと思ったのでここに記す。
@@ -28,6 +26,7 @@ xUnitについて何か書くからといって、
 
 下の Java の簡単な Test クラスを見て欲しい。
 
+```java
  import junit.framework.*;
  import java.util.*;
  
@@ -42,6 +41,7 @@ xUnitについて何か書くからといって、
              assertEquals(0, list.size());
        }
  }
+```
 
 気付かないひともいるかもしれないが、このテストメソッドはどちらもパスする
 ——ついでに言っておくと、実行順序はどちらが先でも構わない。
@@ -76,11 +76,11 @@ setUp と tearDown メソッドである。
 それぞれ、各テストメソッドの最初と最後に実行される。
 上記の例で使用するには、以下のようにすればいい。
 
-
+```java
        public void setUp() {
              list = new ArrayList();
        }
-
+```
 
 tearDownを使うことはほとんどない。
 setUp メソッドが、必要な初期化処理をやってくれる。
@@ -154,6 +154,7 @@ Cedric Beust の [TestNG](http://www.beust.com/testng/) は分離していない
 たぶん驚くと思うが、あの [NUnit](http://nunit.org/) も分離していないのだ。（★分離でいいのかな？）。
 以下の NUnit のテストケースは失敗する。
 
+```java
     [TestFixture]
     public class ServerTester
     {
@@ -168,6 +169,7 @@ Cedric Beust の [TestNG](http://www.beust.com/testng/) は分離していない
           Assert.AreEqual(0, list.Count);
        }
     }
+```
 
 こういった類のフレームワークを使っているのであれば、
 setupメソッドを使ってすべてのインスタンス変数を初期化しておくことを強くお奨めする。
