@@ -31,7 +31,7 @@ var tag = getTag();
 if (tag == "") {
   $(".tagsec").each(function() {$(this).show()});
 } else {
-  <!-- jQuery cannot get tag with id includes blank ... so use getElementById -->
+  // jQuery cannot get tag with id includes blank ... so use getElementById
   $(document.getElementById("tag_" + tag)).show();
 }
 </script>
