@@ -19,7 +19,7 @@ layout: default
   <h1 id="articles">article</h1>
   <ul>
     {% for page in site.pages %}
-    {% if page.title %}{% if page.dir != '/' and page.dir != '/tags/' and page.dir != '/hot/' and page.dir != '/pofeaa/' %}
+    {% if page.title %}{% if page.dir != '/' and page.dir != '/tags/' and page.dir != '/hot/' and page.dir != '/pofeaa' %}
     <li><a class="page-link" href="{{ page.dir | prepend: site.baseurl }}">{{ page.title }}</a></li>
     {% endif %}{% endif %}
     {% endfor %}
