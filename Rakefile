@@ -66,5 +66,5 @@ end # task :page
 
 desc "server"
 task :s do
-  sh "jekyll s -w -V"
+  sh "bundle exec jekyll s -w -V"
 end
