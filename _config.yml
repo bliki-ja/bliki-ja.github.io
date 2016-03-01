@@ -11,7 +11,7 @@ github_username:  bliki-ja
 timezone: Asia/Tokyo
 
 permalink: :title
-exclude: [Rakefile, README.md]
+exclude: [Rakefile, README.md, Gemfile, Gemfile.lock]
 
 defaults:
   -
@@ -26,7 +26,6 @@ defaults:
       layout: "page"
 
 # Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: [autolink,strikethrough,footnotes,tables]
-
+#kramdown:
+#  input: GFM
+#  syntax_highlighter: rouge
