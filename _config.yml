@@ -10,7 +10,7 @@ github_username:  bliki-ja
 
 timezone: Asia/Tokyo
 
-permalink: :title
+permalink: /:title/
 exclude: [Rakefile, README.md, Gemfile, Gemfile.lock]
 
 defaults:
