@@ -6,7 +6,7 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta" style="text-align:right">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
 
-      [<a href="http://martinfowler.com/bliki{{ page.url }}.html">original</a>]
+      [<a href="http://martinfowler.com/bliki/{{ page.url | remove:'/' }}.html">original</a>]
       [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/{{ page.path }}">source</a>]
 
     {% if page.tags.size != 0 %}<br />tags: 
