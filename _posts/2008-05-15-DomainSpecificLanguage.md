@@ -49,7 +49,7 @@ LispやSmalltalkのコミュニティにも脈々と流れるDSLの伝統があ�
 
 
 DSLの扱いが難しい理由の1つに、何がDSLで、何がDSLでないのかが判断しにくいという点が挙げられます。
-[DslBoundary]]はとても曖昧で、
+[DSLの境界線](/DslBoundary)はとても曖昧で、
 内部DSLとAPIの違い、
 あるいは、
 外部DSLと汎用言語の違いは、
