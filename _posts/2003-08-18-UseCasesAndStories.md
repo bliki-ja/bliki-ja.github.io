@@ -5,7 +5,7 @@ tags: [requirements analysis, uml]
 
 http://www.martinfowler.com/bliki/UseCasesAndStories.html
 
-###  [[ユースケース]]とXPのストーリーとの違いは？
+### [ユースケース](/UseCase)とXPの[ストーリー](/UserStory)との違いは？
 
 これはよくある質問だが、なかなか答えがまとまらない質問でもある。XPコミュニティの人々は、ストーリーはユースケースを簡単にしたものだと捉えている。私も以前はそう思っていたが、今は別の見方をしている。
 

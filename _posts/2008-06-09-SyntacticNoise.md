@@ -9,7 +9,7 @@ http://www.martinfowler.com/bliki/SyntacticNoise.html
 
 [ドメイン特化言語](/DomainSpecificLanguage)について話していると（DSLに限らずあらゆるコンピュータ言語でそうなんだけど）、構文にノイズがあるって話をよく聞く。 RubyはJavaよりもノイズが少ないとか、外部DSLは内部DSLよりノイズが少ないとか。構文ノイズっていうのは、言語としての記述には必要だけど、プログラマがやりたいことには関係のない文字のことだ。ノイズ文字はプログラムの意図をぼかしてしまうため、プログラムの動作を読み解かなければならなくなってしまう。
 
-「構文ノイズ」という言葉も意味があいまいで主観的な言葉なので、ちょっと使いにくかったりする。ちょっと前にGilhad BrahaがJAOOで構文ノイズについて説明しようとしていたが、私も同じようにやってみたいと思う。[[DSL本のイントロダクション](http://martinfowler.com/dslwip/Intro.html)で使ったDSLに適用してみたいと思う（ここの誌面を考えて、状態マシンの例の一部分だけを使っている）。
+「構文ノイズ」という言葉も意味があいまいで主観的な言葉なので、ちょっと使いにくかったりする。ちょっと前にGilhad BrahaがJAOOで構文ノイズについて説明しようとしていたが、私も同じようにやってみたいと思う。[DSL本のイントロダクション](http://martinfowler.com/dslwip/Intro.html)で使ったDSLに適用してみたいと思う（ここの誌面を考えて、状態マシンの例の一部分だけを使っている）。
 
 彼は自分がノイズだと思う文字に色をつけていた。ここで問題となるのは、何をもってノイズ文字とするかである。しかし、ここではそれを定義することは避け、違った分け方をしようと思う。それぞれ「ドメインテキスト」と「句読点」と呼びたい。ここで使っているDSLスクリプトは状態マシンを定義したものなので、 states、events、commandsが存在している。この状態マシンについての情報を記述するもの（状態名など）は、ドメインテキストで定義することにした。それ以外は句読点であり、赤字にしてある。
 
@@ -432,4 +432,4 @@ waitingForDraw
 
 この例だと、あまり深いところまでは読み取れないかもしれない。だけど、何らかの思考の糧にはなるんじゃないだろうか。私は、句読点とノイズを明確に分けられるとは思っていない。しかし、ドメインテキストと句読点を区別することで、句読点に集中できるようになるし、句読点の効用についても気づくことができるだろうと思う。 DSLのなかにドメインテキストよりも句読点の文字の方が多いと、それは不吉な臭いだということも付け加えておこう。
 
-(Mikael Jansson が[[lispバージョン](http://mikael.jansson.be/journal/2008/06/martin-fowlers-syntactic-noise)を作ってくれた。Mihailo Lalevicが[JavaScriptバージョン](http://digitalmihailo.blogspot.com/2008/06/martin-fowlers-syntactic-noise-in.html)を作ってくれた。)
+(Mikael Jansson が[lispバージョン](http://mikael.jansson.be/journal/2008/06/martin-fowlers-syntactic-noise)を作ってくれた。Mihailo Lalevicが[JavaScriptバージョン](http://digitalmihailo.blogspot.com/2008/06/martin-fowlers-syntactic-noise-in.html)を作ってくれた。)

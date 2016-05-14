@@ -10,7 +10,7 @@ http://martinfowler.com/bliki/ProtectedData.html
 [すべてのデータはprivateにするべきだというOO設計者もいれば、いくつかはpublicにするというOO設計者もいます](http://groups.google.com/groups?threadm=db9bbf31.0303260938.a4bad42%40posting.google.com)。
 
 （この底の見えないプールに飛び込む前に、
-protected [アクセス修飾子]]の意味が言語によって
+protected [アクセス修飾子](/AccessModifier)の意味が言語によって
 微妙に変わるということを指摘しておきましょう。
 これは重要です。）
 

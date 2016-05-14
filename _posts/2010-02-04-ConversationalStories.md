@@ -27,7 +27,7 @@ http://martinfowler.com/bliki/ConversationalStories.html
 
 プロダクトオーナーが[DecreedStories](/DecreedStories)を思いつくというこの考えは、
 アジャイル開発方法論が機能するにあたって、実に深刻な誤解であると言える。
-我々が[[Snowbird](http://martinfowler.com/articles/agileStory.html)でブレインストーミングをしたときに、Kentが「対話」を提案したことが思い出される。
+我々が[Snowbird](http://martinfowler.com/articles/agileStory.html)でブレインストーミングをしたときに、Kentが「対話」を提案したことが思い出される。
 これは、顧客と開発者が開発プロジェクトの進め方について継続的に対話を行うべきだということが我々の考えの肝であることを強調するものだった。
 
 ![](http://martinfowler.com/bliki/images/conversationalStories/conversation.png)
@@ -49,7 +49,7 @@ http://martinfowler.com/bliki/ConversationalStories.html
 
 
 
-これが、Bill Wakeによるストーリーの[[INVEST](http://xp123.com/xplor/xp0308)試験の1つ、Negotiable（交渉可能）の原則だ。
+これが、Bill Wakeによるストーリーの[INVEST](http://xp123.com/xplor/xp0308)試験の1つ、Negotiable（交渉可能）の原則だ。
 アジャイルチームのメンバーは誰もがストーリーを作成したり、修正を提案したりできる。
 一部のチームメンバーがほとんどのストーリーを書くことになるかもしれない。
 ただそれは、チームがどうしたいかによるものであり、チームの自己組織の判断次第である。
