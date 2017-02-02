@@ -9,7 +9,7 @@ title: "朝会のパターン:立ってるだけじゃないよ"
 
 <hr />
 
-![](http://martinfowler.com/articles/standingup.jpg)
+![](https://martinfowler.com/articles/itsNotJustStandingUp/standingup.jpg)
 
 
 ## 立ってやるのはミーティングの時間を短くするためだ
