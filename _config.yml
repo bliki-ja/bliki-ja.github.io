@@ -4,7 +4,7 @@ email: kdmsnr AT gmail.com
 description: > # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://bliki-ja.github.io" # the base hostname & protocol for your site
+url: "https://bliki-ja.github.io" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  bliki-ja
 
@@ -29,3 +29,17 @@ defaults:
 #kramdown:
 #  input: GFM
 #  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-sitemap
+  - jemoji
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .rvmrc
+  - .rbenv-version
+  - README.md
+  - Rakefile
+  - vendor
