@@ -12,6 +12,8 @@ Martin Fowler氏とAddison-Wesley Pub Coの許可を得て、パターンカタ�
 * [パターンカタログの日本語版](CatalogOfPofEAA_Ja)
 * [パターンカタログの英日対応表](CatalogOfPofEAA_EnJa)
 
+上記のカタログでは書籍の訳語を踏襲していますが、各ページでは「できるだけ正しい」訳語を使うようにしています。
+
 ## ページ一覧
 
 <ul>
