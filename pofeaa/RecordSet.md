@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: RecordSet
+title: レコードセット
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/recordSet.html

@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: Money.md
+title: マネー
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/money.html

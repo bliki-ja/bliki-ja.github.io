@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: ValueObject
+title: バリューオブジェクト
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/valueObject.html

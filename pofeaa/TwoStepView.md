@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: TwoStepView
+title: ツーステップビュー
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/twoStepView.html

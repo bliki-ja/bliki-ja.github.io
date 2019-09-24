@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: MetadataMapping.md
+title: メタデータマッピング
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/metadataMapping.html

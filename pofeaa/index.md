@@ -12,7 +12,7 @@ Martin Fowler氏とAddison-Wesley Pub Coの許可を得て、パターンカタ�
 * [パターンカタログの日本語版](CatalogOfPofEAA_Ja)
 * [パターンカタログの英日対応表](CatalogOfPofEAA_EnJa)
 
-上記のカタログでは書籍の訳語を踏襲していますが、各ページでは「できるだけ正しい」訳語を使うようにしています。
+上記のカタログでは書籍の訳語を踏襲していますが、各ページでは「できるだけ正しい」訳語を使うようにしています。邦訳版のパターン名に関する議論などは、[JapanesePatternNames](JapanesePatternNames)を参照。
 
 ## ページ一覧
 

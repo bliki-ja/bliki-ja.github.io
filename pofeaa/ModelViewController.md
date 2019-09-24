@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: ModelViewController
+title: モデルビューコントローラ
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/modelViewController.html

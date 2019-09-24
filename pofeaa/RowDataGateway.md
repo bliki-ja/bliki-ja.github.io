@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: RowDataGateway
+title: 行データゲートウェイ
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/rowDataGateway.html

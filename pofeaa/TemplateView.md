@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: TemplateView
+title: テンプレートビュー
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/templateView.html

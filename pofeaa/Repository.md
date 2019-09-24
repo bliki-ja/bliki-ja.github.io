@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: Repository
+title: リポジトリ
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/repository.html

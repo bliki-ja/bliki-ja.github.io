@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: TransformView
+title: トランスフォームビュー
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/transformView.html

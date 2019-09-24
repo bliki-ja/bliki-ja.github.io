@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: SeparatedInterface
+title: セバレートインターフェース
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/separatedInterface.html

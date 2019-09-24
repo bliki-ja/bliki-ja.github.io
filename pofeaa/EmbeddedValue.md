@@ -1,6 +1,6 @@
-n---
+---
 layout: pofeaa
-title: "Embedded Value"
+title: 組込みバリュー
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/embeddedValue.html

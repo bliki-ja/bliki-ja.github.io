@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: Gateway.md
+title: ゲートウェイ
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/gateway.html

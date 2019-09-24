@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: IdentityMap.md
+title: 一意マップ
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/identityMap.html

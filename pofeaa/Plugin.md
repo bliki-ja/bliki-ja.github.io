@@ -1,6 +1,6 @@
 ---
 layout: pofeaa
-title: Plugin
+title: プラグイン
 ---
 
 原文: http://www.martinfowler.com/eaaCatalog/plugin.html
