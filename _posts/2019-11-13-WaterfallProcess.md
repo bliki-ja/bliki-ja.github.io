@@ -20,7 +20,7 @@ tags: [BAD THINGS, PROCESS THEORY]
 
 <!-- Royce’s paper describes his observations on the software development process of the time (late 60s) and how the usual implementation steps could be improved.  [1] But “waterfall” has gone much further, to be used as a general description of a style of software development.  For people like me, who speak at software conferences, it almost always only appears in a derogatory manner - I can’t recall hearing any conference speaker saying anything good about waterfall for many years.  However when talking to practitioners in enterprises I do hear of it spoken as a viable, even preferred, development style.  Certainly less so now that in the 90s, but more frequently than one might assume by listening to process mavens. -->
 
-Royceの論文は、当時（60年代後半）のソフトウェア開発プロセスの観察結果と、通常の実装ステップをどのようにすれば改善できるかを示しているにすぎない[1]。だが、「ウォーターフォール」はさらに先まで行ってしまい、ソフトウェアの開発方式の一般的な説明として使われるようになった。私も含め、ソフトウェアのカンファレンスで講演する人たちは、必ずと言っていいほどウォーターフォールを軽蔑の対象として登場させている（ウォーターフォールの利点を話している講演を何年も耳にしたことがない）。だが、企業の実務家を相手にした講演では、ウォーターフォールは価値のある（むしろそのほうが好ましい）開発方式とされている話を耳にする。90年代に比べると少なくなってきてはいるが、プロセスの専門家の話を聞く限り、その頻度はみんなが思っているよりもずっと多い。
+Royceの論文は、当時（60年代後半）のソフトウェア開発プロセスの観察結果と、通常の実装ステップをどのようにすれば改善できるかを示しているにすぎない[^1]。だが、「ウォーターフォール」はさらに先まで行ってしまい、ソフトウェアの開発方式の一般的な説明として使われるようになった。私も含め、ソフトウェアのカンファレンスで講演する人たちは、必ずと言っていいほどウォーターフォールを軽蔑の対象として登場させている（ウォーターフォールの利点を話している講演を何年も耳にしたことがない）。だが、企業の実務家を相手にした講演では、ウォーターフォールは価値のある（むしろそのほうが好ましい）開発方式とされている話を耳にする。90年代に比べると少なくなってきてはいるが、プロセスの専門家の話を聞く限り、その頻度はみんなが思っているよりもずっと多い。
 
 <!-- But what exactly is “waterfall”? That’s not an easy question to answer as, like so many things in software, there is no clear definition. In my judgment, there is one common characteristic that dominates any definition folks use for waterfall, and that’s the idea of decomposing effort into phases based on activity. -->
 
@@ -43,7 +43,7 @@ Royceの図が示すウォーターフォール方式では、実施する活動
 <!-- If the origin of the word “waterfall” is murky, so is the notion of how this phase-based breakdown originated.  My guess is that it’s natural to break down a large task into different activities, especially if you look to activities such as building construction as an inspiration.  Each activity requires different skills, so getting all the analysts to complete analysis before you bring in all the coders makes intuitive sense.  It seems logical that a misunderstanding of requirements is cheaper to fix before people begin coding - especially considering the state of computers in the late 60s.  Finally the same activity-based breakdown can be used as a standard for many projects, while a feature-based breakdown is harder to teach. [2] -->
 
 
-「ウォーターフォール」の言葉の起源がはっきりしないというのなら、このフェーズベースの分割の起源はどこにあるのだろう？これは私の推測になるが、大きなタスクをさまざまな活動に分割するというのは、特に建築の活動を参考にしていたならば、ごく自然なことなのだろう。各活動にはさまざまなスキルが要求される。したがって、コーダーを集める前に、アナリストに分析を終わらせようとするのは、直感的に理にかなっている。コーディングを開始する前に要求の誤解を解決したほうがコストが安い、というのは論理的に思える。60年代後半のコンピューターの状態を考えればなおさらだ。最終的に、活動ベースの分割は多くのプロジェクトの標準として使われるようになった。その一方で、フィーチャーベースの分割はなかなか教えられなくなっていった[2]。
+「ウォーターフォール」の言葉の起源がはっきりしないというのなら、このフェーズベースの分割の起源はどこにあるのだろう？これは私の推測になるが、大きなタスクをさまざまな活動に分割するというのは、特に建築の活動を参考にしていたならば、ごく自然なことなのだろう。各活動にはさまざまなスキルが要求される。したがって、コーダーを集める前に、アナリストに分析を終わらせようとするのは、直感的に理にかなっている。コーディングを開始する前に要求の誤解を解決したほうがコストが安い、というのは論理的に思える。60年代後半のコンピューターの状態を考えればなおさらだ。最終的に、活動ベースの分割は多くのプロジェクトの標準として使われるようになった。その一方で、フィーチャベースの分割はなかなか教えられなくなっていった[^2]。
 
 <!-- Although it isn’t hard to find people explain why this waterfall thinking isn’t a good idea for software development, I should summarize my primary objections to the waterfall style here.  The waterfall style usually has testing and integration as two of the final phases in the cycle, but these are the most difficult to predict elements in a development project.  Problems at these stages lead to rework of many steps of earlier phases, and to significant project delays.  It's too easy to declare all but the late phases as "done" , with much work missing, and thus it's hard to tell if the project is going well.  There is no opportunity for early releases before all features are done.  All this introduces a great deal of risk to the development effort. -->
 
@@ -51,7 +51,7 @@ Royceの図が示すウォーターフォール方式では、実施する活動
 
 <!-- Furthermore, a waterfall approach forces us into a predictive style of planning, it assumes that once you are done with a phase, such as requirements analysis, the resulting deliverable is a stable platform for later phases to base their work on. [3] In practice the vast majority of software projects find they need to change their requirements significantly within a few months, due to everyone learning more about the domain, the characteristics of the software environment, and changes in the business environment.  Indeed we've found that delivering a subset of features does more than anything to help clarify what needs to be done next, so an iterative approach allows us to shift to an adaptive planning approach where we update our plans as we learn what the real software needs are. [4] -->
 
-さらにウォーターフォール方式は、予測型の計画づくりを強制してくる。このことは、あるフェーズ（たとえば要求分析フェーズ）が終わると、その成果物は後続のフェーズが乗っかる安定したプラットフォームになることが前提となっている[3]。実際には、ソフトウェアプロジェクトの大半は、数か月以内に要求を大きく変えることになる。その原因は、みんながドメインについて学ぶことだったり、ソフトウェアの環境の特性だったり、ビジネスの環境の変化だったりする。実際、フィーチャのサブセットをデリバリーすることで得られるのは、次に何をすべきかが明確になることに他ならない。つまり、反復型のアプローチによって、適応型の計画づくりに移行できるようになるということだ。本物のソフトウェアが必要とすることを学びながら、計画をアップデートしていけるのである[4]。
+さらにウォーターフォール方式は、予測型の計画づくりを強制してくる。このことは、あるフェーズ（たとえば要求分析フェーズ）が終わると、その成果物は後続のフェーズが乗っかる安定したプラットフォームになることが前提となっている[^3]。実際には、ソフトウェアプロジェクトの大半は、数か月以内に要求を大きく変えることになる。その原因は、みんながドメインについて学ぶことだったり、ソフトウェアの環境の特性だったり、ビジネスの環境の変化だったりする。実際、フィーチャのサブセットをデリバリーすることで得られるのは、次に何をすべきかが明確になることに他ならない。つまり、反復型のアプローチによって、適応型の計画づくりに移行できるようになるということだ。本物のソフトウェアが必要とすることを学びながら、計画をアップデートしていけるのである[^4]。
 
 <!-- These are the major reasons why I've glibly said that "you should use iterative development only in projects that you want to succeed". -->
 
@@ -67,7 +67,7 @@ Royceの図が示すウォーターフォール方式では、実施する活動
 
 <!-- Waterfall is often cast as the alternative to agile software development, but I don't see that as strictly true.  Certainly agile processes require an iterative approach and cannot work in a waterfall style.  But it is easy to follow an iterative approach (i.e. non-waterfall) but not be agile. [5] I might do this by taking 100 features and dividing them up into ten iterations over the next year, and then expecting that each iteration should complete on time with its planned set of features.  If I do this, my initial plan is a predictive plan, if all goes well I should expect the work to closely follow the plan.  But adaptive planning is an essential element of agile thinking.  I expect features to move between iterations, new features to appear, and many features to be discarded as no longer valuable enough. -->
 
-ウォーターフォールは、アジャイルソフトウェア開発の対抗馬としての役割を担わされることが多い。だが、私はこれは厳密には正しくないと考えている。確かにアジャイルプロセスには反復型のアプローチが必要であり、ウォーターフォール方式で作業することなどできない。だが、反復型のアプローチ（非ウォーターフォール）に従っているが、アジャイルではないことも可能である[5]。たとえば、100のフィーチャがあったときに、10のイテレーションに分割することもできる。各イテレーションでは、計画したフィーチャを納期通りに完成させることが求められる。このとき、私の初期の計画は予測型の計画になる。すべてがうまくいくのなら、物事を計画通りに進められるだろう。だが、アジャイルの考え方には、[適応型の計画づくりが必要不可欠な要素](https://martinfowler.com/articles/newMethodology.html#PredictiveVersusAdaptive)である。フィーチャはイテレーション間で移動し、新しいフィーチャが登場することもあれば、価値がなくなったフィーチャが破棄されることもある。
+ウォーターフォールは、アジャイルソフトウェア開発の対抗馬としての役割を担わされることが多い。だが、私はこれは厳密には正しくないと考えている。確かにアジャイルプロセスには反復型のアプローチが必要であり、ウォーターフォール方式で作業することなどできない。だが、反復型のアプローチ（非ウォーターフォール）に従っているが、アジャイルではないことも可能である[^5]。たとえば、100のフィーチャがあったときに、10のイテレーションに分割することもできる。各イテレーションでは、計画したフィーチャを納期通りに完成させることが求められる。このとき、私の初期の計画は予測型の計画になる。すべてがうまくいくのなら、物事を計画通りに進められるだろう。だが、アジャイルの考え方には、[適応型の計画づくりが必要不可欠な要素](https://martinfowler.com/articles/newMethodology.html#PredictiveVersusAdaptive)である。フィーチャはイテレーション間で移動し、新しいフィーチャが登場することもあれば、価値がなくなったフィーチャが破棄されることもある。
 
 ![](https://martinfowler.com/bliki/images/waterfallProcess/venn3.png)
 
@@ -75,22 +75,26 @@ Royceの図が示すウォーターフォール方式では、実施する活動
 
 私の経験則を述べよう。「納期通りかつ予算通りなので成功」と言っている人は、たとえ反復型プロセスに従っているとしても、それは予測型の計画づくりの観点で考えているのである。そして、それはアジャイルマインドセットの考え方ではない。アジャイルの世界では、数か月前の計画書に何が書いてあろうとも、成功はビジネス価値で判断する。計画は作る。だが、定期的にアップデートする。計画は次に何をすべきかを決めるガイドとなる。だが、成功基準として使うものではない。
 
-<!-- ##Notes -->
-## 注釈
-
-1: There have been quite a few people seeking to interpret the Royce paper. Some argue that his paper opposes waterfall, pointing out that the paper discusses flaws in the kind of process suggested by the figure 2 that I've quoted here. Certainly he does discuss flaws, but he also says the illustrated approach is "fundamentally sound". Certainly this activity-based decomposition of projects became the accepted model in the decades that followed.
-
-2: This leads to another common characteristic that goes with the term “waterfall” - rigid processes that tell everyone in detail what they should do. Certainly the software process folks in the 90s were keen on coming up with prescriptive methods, but such prescriptive thinking also affected many who advocated iterative techniques. Indeed although agile methods explicitly disavow this kind of Taylorist thinking, I often hear of faux-agile initiatives following this route.
-
-3: The notion that a phase should be finished before the next one is started is a convenient fiction. Even the most eager waterfall proponent would agree that some rework on prior stages is necessary in practice, although I think most would say that if executed perfectly, each activity wouldn't need rework. Royce's paper explicitly discussed how iteration was expected between adjacent steps (eg Analysis and Program Design in his figure). However Royce argued that longer backtracks (eg between Program Design and Testing) were a serious problem.
-
-4: This does raise the question of whether there are contexts where the waterfall style is actually better than the iterative one. In theory, waterfall might well work better in situations where there was a deep understanding of the requirements, and the technologies being used - and neither of those things would significantly change during the life of the product. I say "in theory" because I've not come across such a circumstance, so I can't judge if waterfall would be appropriate in practice. And even then I'd be reluctant to follow the waterfall style for the later phases (code-test-integrate) as I've found so much value in interleaving testing with coding while doing continuous integration..
-
-5: In the 90s it was generally accepted in the object-oriented world that waterfall was a bad idea and should be replaced with an iterative style. However I don't think there was the degree of embracing changing requirements that appeared with the agile community.
-
 <!-- ## Acknowledgements -->
 ## 謝辞
 
 <!-- My thanks to Ben Noble, Clare Sudbury, David Johnston, Karl Brown, Kyle Hodgson, Pramod Sadalage, Prasanna Pendse, Rebecca Parsons, Sriram Narayan, Sriram Narayanan, Tiago Griffo, Unmesh Joshi, and Vidhyalakshmi Narayanaswamy who discussed drafts of this post on our internal mailing list. -->
 
 社内メーリングリストに投稿したドラフトに意見をくれた方々（Ben Noble, Clare Sudbury, David Johnston, Karl Brown, Kyle Hodgson, Pramod Sadalage, Prasanna Pendse, Rebecca Parsons, Sriram Narayan, Sriram Narayanan, Tiago Griffo, Unmesh Joshi, Vidhyalakshmi Narayanaswamy）に感謝する。
+
+
+<!-- ##Notes -->
+## 注釈
+
+<!-- [^1]: There have been quite a few people seeking to interpret the Royce paper. Some argue that his paper opposes waterfall, pointing out that the paper discusses flaws in the kind of process suggested by the figure 2 that I've quoted here.  Certainly he does discuss flaws, but he also says the illustrated approach is "fundamentally sound".  Certainly this activity-based decomposition of projects became the accepted model in the decades that followed. -->
+
+[^1]: かなり多くの人たちがRoyceの論文を解読しようとした。ここで私が引用した図2が示すプロセスには欠陥があることを説明しているのだから、この論文はウォーターフォールに反対するものだと主張する人もいる。確かに彼は欠陥について触れている。だが、このアプローチは「基本的には健全（fundamentally sound）」とも述べている。このプロジェクトを活動ベースで分割するやり方は、その後の数十年にわたって受け入れられるモデルとなった。
+
+
+[^2]: This leads to another common characteristic that goes with the term “waterfall” - rigid processes that tell everyone in detail what they should do. Certainly the software process folks in the 90s were keen on coming up with prescriptive methods, but such prescriptive thinking also affected many who advocated iterative techniques. Indeed although agile methods explicitly disavow this kind of Taylorist thinking, I often hear of faux-agile initiatives following this route.
+
+[^3]: The notion that a phase should be finished before the next one is started is a convenient fiction. Even the most eager waterfall proponent would agree that some rework on prior stages is necessary in practice, although I think most would say that if executed perfectly, each activity wouldn't need rework. Royce's paper explicitly discussed how iteration was expected between adjacent steps (eg Analysis and Program Design in his figure). However Royce argued that longer backtracks (eg between Program Design and Testing) were a serious problem.
+
+[^4]: This does raise the question of whether there are contexts where the waterfall style is actually better than the iterative one. In theory, waterfall might well work better in situations where there was a deep understanding of the requirements, and the technologies being used - and neither of those things would significantly change during the life of the product. I say "in theory" because I've not come across such a circumstance, so I can't judge if waterfall would be appropriate in practice. And even then I'd be reluctant to follow the waterfall style for the later phases (code-test-integrate) as I've found so much value in interleaving testing with coding while doing continuous integration..
+
+[^5]: In the 90s it was generally accepted in the object-oriented world that waterfall was a bad idea and should be replaced with an iterative style. However I don't think there was the degree of embracing changing requirements that appeared with the agile community.
