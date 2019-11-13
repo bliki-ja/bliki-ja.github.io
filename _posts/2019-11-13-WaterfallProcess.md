@@ -88,7 +88,7 @@ Royceの図が示すウォーターフォール方式では、実施する活動
 
 <!-- [^1]: There have been quite a few people seeking to interpret the Royce paper. Some argue that his paper opposes waterfall, pointing out that the paper discusses flaws in the kind of process suggested by the figure 2 that I've quoted here.  Certainly he does discuss flaws, but he also says the illustrated approach is "fundamentally sound".  Certainly this activity-based decomposition of projects became the accepted model in the decades that followed. -->
 
-[^1]: かなり多くの人たちがRoyceの論文を解読しようとした。ここで私が引用した図2が示すプロセスには欠陥があることを説明しているのだから、この論文はウォーターフォールに反対するものだと主張する人もいる。確かに彼は欠陥について触れている。だが、このアプローチは「基本的には健全（fundamentally sound）」とも述べている。このプロジェクトを活動ベースで分割するやり方は、その後の数十年にわたって受け入れられるモデルとなった。
+[^1]: かなり多くの人たちがRoyceの論文を解読しようとしてきた。ここで私が引用した図2が示すプロセスには欠陥があることを説明しているのだから、この論文はウォーターフォールに反対するものだと主張する人もいる。確かに彼は欠陥について触れている。だが、このアプローチは「基本的には健全（fundamentally sound）」とも述べている。このプロジェクトを活動ベースで分割するやり方は、その後の数十年にわたって受け入れられるモデルとなった。
 
 
 [^2]: This leads to another common characteristic that goes with the term “waterfall” - rigid processes that tell everyone in detail what they should do. Certainly the software process folks in the 90s were keen on coming up with prescriptive methods, but such prescriptive thinking also affected many who advocated iterative techniques. Indeed although agile methods explicitly disavow this kind of Taylorist thinking, I often hear of faux-agile initiatives following this route.
