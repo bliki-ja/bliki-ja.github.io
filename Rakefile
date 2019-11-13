@@ -23,7 +23,7 @@ task :post_from do
   require 'time'
 
   url = ENV["url"]
-  title = url.gsub('http://martinfowler.com/bliki/', '').gsub('.html', '')
+  title = url.gsub('https://martinfowler.com/bliki/', '').gsub('.html', '')
   html = open(url).read
   doc = Nokogiri::HTML.parse(html)
   t = Time.parse(doc.xpath('//p[@class="date"]').children.first.to_s)
