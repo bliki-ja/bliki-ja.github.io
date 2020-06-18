@@ -68,3 +68,9 @@ desc "server"
 task :s do
   sh "bundle exec jekyll s -w -V"
 end
+
+
+desc "proof html"
+task :htmlproof do
+  sh "htmlproofer --empty-alt-ignore --allow-hash-href --only-4xx --http-status-ignore 429 ./_site"
+end
