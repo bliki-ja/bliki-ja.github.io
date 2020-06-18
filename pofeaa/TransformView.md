@@ -3,7 +3,7 @@ layout: pofeaa
 title: トランスフォームビュー
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/transformView.html
+原文: <http://www.martinfowler.com/eaaCatalog/transformView.html>
 
 *ドメイン モデル要素ごとに処理し、HTMLへと変換するビュー。*
 
@@ -13,6 +13,6 @@ title: トランスフォームビュー
 
 ドメインやデータ ソース
 レイヤにデータを要求した際に得たすべてのデータ（まだWebページで表示できる形にはフォーマットされていないデータ）を変換させる。
-[ModelViewController](ModelViewController) (330)
+[ModelViewController](../ModelViewController) (330)
 のViewの役割は、データをWebページ用にレンダリングすることである。
 TransformViewは、モデルのデータをHTMLへ出力させる作業を「トランスフォーメーション」と捉えている。

@@ -1,6 +1,6 @@
 # Site settings
 title: "Martin Fowler's Bliki (ja)"
-email: kdmsnr AT gmail.com
+email: kdmsnr@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog/

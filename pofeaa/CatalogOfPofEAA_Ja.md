@@ -3,9 +3,9 @@ layout: pofeaa
 title: "パターンカタログ（日本語）"
 ---
 
-[PofEAAのパターンカタログ](CatalogOfPofEAA)の邦訳名/原著名の対応です。以下の一覧にあるパターン名の後ろのカッコ内の数字は邦訳のページ番号です。原文のページ番号は[PofEAAのパターンカタログ](CatalogOfPofEAA)を参照してください。
+[PofEAAのパターンカタログ](../CatalogOfPofEAA)の邦訳名/原著名の対応です。以下の一覧にあるパターン名の後ろのカッコ内の数字は邦訳のページ番号です。原文のページ番号は[PofEAAのパターンカタログ](../CatalogOfPofEAA)を参照してください。
 
-邦訳版のパターン名に関する議論などは、[JapanesePatternNames](JapanesePatternNames)のページを参照。
+邦訳版のパターン名に関する議論などは、[JapanesePatternNames](../JapanesePatternNames)のページを参照。
 
 # 「ドメインロジックパターン」(Domain Logic Patterns):
 

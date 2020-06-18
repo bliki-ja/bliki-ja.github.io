@@ -3,7 +3,7 @@ layout: pofeaa
 title: 具象テーブル継承
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/concreteTableInheritance.html
+原文: <http://www.martinfowler.com/eaaCatalog/concreteTableInheritance.html>
 
 
 *クラスの継承構造を、ヒエラルキー内の具象クラスごとに1個のテーブルを使って表現する。*
@@ -13,7 +13,7 @@ title: 具象テーブル継承
 ![](http://www.martinfowler.com/eaaCatalog/leafInheritanceTableSketch.gif)
 
 
-オブジェクト純正主義者は言う。関係データベースは継承をサポートしない—事実、それがオブジェクト関係マッピングを難しくしている。オブジェクトのインスタンスの視点からテーブルのことを考えてみると、メモリ上にある各オブジェクトをデータベースの単一行にマップするのは賢いやり方だ。これは[具象テーブル継承](ConcreteTableInheritance) を意味していて、継承ヒエラルキー内の具象クラスそれぞれに対してテーブルが存在する。
+オブジェクト純正主義者は言う。関係データベースは継承をサポートしない—事実、それがオブジェクト関係マッピングを難しくしている。オブジェクトのインスタンスの視点からテーブルのことを考えてみると、メモリ上にある各オブジェクトをデータベースの単一行にマップするのは賢いやり方だ。これは[具象テーブル継承](../ConcreteTableInheritance) を意味していて、継承ヒエラルキー内の具象クラスそれぞれに対してテーブルが存在する。
 
 
 
