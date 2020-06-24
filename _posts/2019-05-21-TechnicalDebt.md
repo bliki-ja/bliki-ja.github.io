@@ -46,7 +46,7 @@ tags: [technical debt, programming style]
 
 <!-- There are regular debates whether different kinds of cruft should be considered as debt or not.  I found it useful to think about whether the debt is acquired deliberately and whether it is prudent or reckless - leading me to the TechnicalDebtQuadrant. -->
 
-クラフトの種類によって負債とそれ以外に分けるべきか、という議論が定期的に起こる。私としては、その負債が「意図的」なものか、「慎重」なのか「無鉄砲」なのかで考えることが有益であると思っている。このことについては、[技術的負債の四象限](TechnicalDebtQuadrant)にまとめた。
+クラフトの種類によって負債とそれ以外に分けるべきか、という議論が定期的に起こる。私としては、その負債が「意図的」なものか、「慎重」なのか「無鉄砲」なのかで考えることが有益であると思っている。このことについては、[技術的負債の四象限](/TechnicalDebtQuadrant)にまとめた。
 
 <!-- ## Further Reading -->
 ## さらに詳しく知るために
