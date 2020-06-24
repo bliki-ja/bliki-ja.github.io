@@ -42,7 +42,7 @@ tags: [technical debt, programming style]
 
 <!-- The danger here is that most of the time this analysis isn't done well.  Cruft has a quick impact, slowing down the very new features that are needed quickly.  Teams who do this end up maxing out all their credit cards, but still delivering later than they would have done had they put the effort into higher internal quality.  Here the metaphor often leads people astray, as the dynamics don't really match those for financial loans.  Taking on debt to speed delivery only works if you stay below the design payoff line of the DesignStaminaHypothesis, and teams hit that line in weeks rather than months. -->
 
-ここで危険なのは、分析が十分ではないことが多いことだ。クラフトの影響はすぐに出る。緊急で必要な新機能を遅延させてしまうのだ。クレジットカードの限度額いっぱいまで使ってしまったチームは、内部品質を高めるために労力をかけたときよりもデリバリーが遅い。こうしたダイナミクスはファイナンスのローンとは一致していないため、メタファーを使っているとよくわからなくなってくる。負債を抱えることでデリバリーを加速できるのは、[設計＝スタミナ仮説](/DesignStaminaHypothesis/)の設計損益ラインが下回っているときだけである。そして、この設計損益ラインに到達するのは数か月ではなく数週間以内である。
+ここで危険なのは、分析が十分ではないことが多いことだ。クラフトの影響はすぐに出る。緊急で必要な新機能を遅延させてしまうのだ。クレジットカードの限度額いっぱいまで使ってしまったチームは、内部品質を高めるために労力をかけたときよりもデリバリーが遅い。こうしたダイナミクスはファイナンスのローンとは一致していないため、メタファーを使っているとよくわからなくなってくる。負債を抱えることでデリバリーを加速できるのは、[設計＝スタミナ仮説](/DesignStaminaHypothesis/)の設計損益ラインを下回っているときだけである。そして、この設計損益ラインに到達するのは数か月ではなく数週間以内である。
 
 <!-- There are regular debates whether different kinds of cruft should be considered as debt or not.  I found it useful to think about whether the debt is acquired deliberately and whether it is prudent or reckless - leading me to the TechnicalDebtQuadrant. -->
 
