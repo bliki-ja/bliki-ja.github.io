@@ -80,11 +80,11 @@ Aaron Ericksonは、[エンロンの財務管理](https://www.informit.com/artic
 
 <!-- Henrik Kniberg argues that it's older technical debt that causes the greatest problem and that it's wise to a qualitative debt ceiling to help manage it. -->
 
-Henrik Knibergは、最大の問題を引き起こすのは最古の技術的負債であると主張している。そして、こうした負債を管理するには、質的に上限を設けるべきだと述べている。
+[Henrik Kniberg](https://blog.crisp.se/2013/10/11/henrikkniberg/good-and-bad-technical-debt)は、最大の問題を引き起こすのは最古の技術的負債であると主張している。そして、こうした負債を管理するには、質的に上限を設けるべきだと述べている。
 
 <!-- Erik Dietrich discusses the human cost of technical debt: team infighting, atrophied skills, and attrition. -->
 
-[Erik Dietrich](https://blog.crisp.se/2013/10/11/henrikkniberg/good-and-bad-technical-debt)は、技術的負債の[人的コスト](https://daedtech.com/human-cost-tech-debt/)（チーム内の紛争、スキルの退化、疲弊）について説明している。
+Erik Dietrichは、[技術的負債の人的コスト](https://daedtech.com/human-cost-tech-debt/)（チーム内の紛争、スキルの退化、疲弊）について説明している。
 
 <!-- ## Revisions -->
 ## 履歴
