@@ -26,7 +26,7 @@ tags: [technical debt, programming style]
 
 <!-- Stated like that, this sounds like a simple matter of working the numbers, and any manager with a spreadsheet should figure out the choices.  Sadly since we CannotMeasureProductivity, none of these costs are objectively measurable.  We can estimate how long it takes to do a feature, estimate what it might be like if the cruft was removed, and estimate the cost of removing the cruft.  But our accuracy of such estimates is pretty low. -->
 
-このように言うと、数字をいじるだけの簡単なことのように聞こえる。スプレッドシートを操作するマネージャーが選択すればいいだけのようにも思える。だが、残念ながら[生産性は計測できない](/CannotMeasureProductivity)ので、これらのコストも客観的にはわからない。ある機能に必要な工数、クラフトを削除したあとにかかる工数、フラクトの削除にかかる工数を見積もることはできる。だが、こうした見積もりの正確度はかなり低い。
+このように言うと、数字をいじるだけの簡単なことのように聞こえる。スプレッドシートを操作するマネージャーが選択すればいいだけのようにも思える。だが、残念ながら[生産性は計測できない](/CannotMeasureProductivity)ので、これらのコストも客観的にはわからない。ある機能に必要な工数、クラフトを削除したあとにかかる工数、クラフトの削除にかかる工数を見積もることはできる。だが、こうした見積もりの正確度はかなり低い。
 
 <!-- Given this, usually the best route is to do what we usually do with financial debts, pay the principal off gradually.  On the first feature I'll spend an extra couple of days to remove some of the cruft.  That may be enough to reduce the interest rate on future enhancements to a single day.  That's still going to take extra time, but by removing the cruft I'm making it cheaper for future changes to this code.  The great benefit of gradual improvement like this is that it naturally means we spend more time on removing cruft in those areas that we modify frequently, which are exactly those areas of the code base where we most need the cruft to be removed. -->
 
