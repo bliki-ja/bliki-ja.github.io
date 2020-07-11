@@ -21,3 +21,6 @@ DDDにおける集約はドメインコンセプト(注文、診察受診、プ�
 「集約」の言葉は一般的に使用され、様々なコンテキスト(UMLなど)で使用されますが、その場合はDDDにおける集約とは違うものを指します。
 
 もっと詳しく知りたかったら、[DDD本](http://domaindrivendesign.org/book/)を参照してください。
+
+translated by [@ko-flavor](https://github.com/ko-flavor)
+
