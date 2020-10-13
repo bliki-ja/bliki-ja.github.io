@@ -3,13 +3,13 @@ layout: pofeaa
 title: データ転送オブジェクト
 ---
 
-原文: <http://www.martinfowler.com/eaaCatalog/dataTransferObject.html>
+原文: <https://www.martinfowler.com/eaaCatalog/dataTransferObject.html>
 
 *メソッド呼び出しを減らすためにプロセス間でデータを運ぶオブジェクト*
 
 解説の全文は『PofEAA』 **401** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/dtoSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/dtoSketch.gif)
 
 [リモートファサード](../RemoteFacade)(388)のようなリモートインタフェースを使っているとき、そのインターフェースの各々の呼び出しは重いので呼び出す回数を減らさないといけない。つまり、1回の呼び出しでさらに多くのデータを渡さないといけないということだ。これを実現する方法の1つに、パラメータをたくさん使うという手がある。しかしながらこの方法ではしばしば問題を引き起こす——実際、1つの値しか返せないJavaのような言語ではこれは不可能だ。
 

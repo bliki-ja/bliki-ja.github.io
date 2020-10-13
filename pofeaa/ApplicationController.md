@@ -3,13 +3,13 @@ layout: pofeaa
 title: アプリケーションコントローラ
 ---
 
-原文: <http://www.martinfowler.com/eaaCatalog/applicationController.html>
+原文: <https://www.martinfowler.com/eaaCatalog/applicationController.html>
 
 *画面ナビゲーションやアプリケーション フローを扱う集中ポイント*
 
 解説の全文は『PofEAA』 **379** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/appControllerSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/appControllerSketch.gif)
 
 アプリケーションには、大量の画面ロジックが含まれるものがある。
 こういったロジックは、様々なポイントで使われる。

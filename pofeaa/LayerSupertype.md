@@ -3,7 +3,7 @@ layout: pofeaa
 title: レイヤスーパータイプ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/layerSupertype.html
+原文: <https://www.martinfowler.com/eaaCatalog/layerSupertype.html>
 
 *レイヤ内のすべての型のスーパータイプとして振舞う型。*
 

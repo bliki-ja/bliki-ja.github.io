@@ -3,13 +3,13 @@ layout: pofeaa
 title: リモートファサード
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/remoteFacade.html
+原文: <https://www.martinfowler.com/eaaCatalog/remoteFacade.html>
 
 *ネットワーク越しのレスポンスを改善するための細かい粒度のオブジェクトに対して荒い粒度のファサードを提供する*
 
 解説の全文は『PofEAA』 **388** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/distributedFacadeSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/distributedFacadeSketch.gif)
 
 オブジェクト指向モデルにおけるリモートファサードは小さなメソッドを持っている小さなオブジェクトがいっぱいある時に使うのがベストだ。これで、振る舞いを制御したり代用したり、またアプリケーションを分かりやすくするような命名規則を使う機会が多く得られる。きめ細かい動作のために、通常オブジェクト間のインタラクションが多数あると、そのようなインタラクションは通常多くのメソッド起動を必要とする、ということだ。
 

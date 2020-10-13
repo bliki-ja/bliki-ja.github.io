@@ -3,7 +3,7 @@ layout: pofeaa
 title: 楽観的オフラインロック
 ---
 
-原文: <http://www.martinfowler.com/eaaCatalog/optimisticOfflineLock.html>
+原文: <https://www.martinfowler.com/eaaCatalog/optimisticOfflineLock.html>
 
 **by David Rice**
 
@@ -11,7 +11,7 @@ title: 楽観的オフラインロック
 
 解説の全文は『PofEAA』 **416** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/OptimisticSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/OptimisticSketch.gif)
 
 ビジネストランザクションはしばしば一連のシステムトランザクションを跨いで実行される。一旦、ある1つのシステムトランザクションから抜けると、ビジネストランザクションがレコードデータを整合性を保持した状態で格納されていることを保証するのにデータベースマネージャ単体では任せられない。一旦2つのセッションが同じレコードに対して処理を始め、更新されたデータを紛失することがありえるのであれば、データの一貫性は危険に瀕している。また、あるセッションが別のセッションが読み込み中のデータを修正すると一貫しないデータが読まれることがありそうだ。
 

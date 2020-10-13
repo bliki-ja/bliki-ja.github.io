@@ -3,13 +3,13 @@ layout: pofeaa
 title: トランザクションスクリプト
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/transactionScript.html
+原文: <https://www.martinfowler.com/eaaCatalog/transactionScript.html>
 
 *ビジネスロジックをプロシージャ群によって形成する。各プロシージャはプレゼンテーションからの単一のリクエストを処理する。*
 
 解説の全文は『PofEAA』 **110** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/transactionScriptSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/transactionScriptSketch.gif)
 
 多くのビジネスアプリケーションは、一連のトランザクションであると考えられる。
 トランザクションは情報の集まりを、ある約束事に基づいてまとめられたものとみなし、変更を加えることもある。

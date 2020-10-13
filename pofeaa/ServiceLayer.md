@@ -3,7 +3,7 @@ layout: pofeaa
 title: サービスレイヤ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/serviceLayer.html
+原文: <https://www.martinfowler.com/eaaCatalog/serviceLayer.html>
 
 **by Randy Stafford**
 
@@ -11,7 +11,7 @@ title: サービスレイヤ
 
 解説の全文は『PofEAA』 **133** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/ServiceLayerSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/ServiceLayerSketch.gif)
 
 エンタープライズアプリケーションには、ストアしているデータと実装しているロジックとの間に様々なインターフェイスが必要である。例えば、データローダー、ユーザーインターフェース、統合ゲートウェイなど。それらは目的は異なるが、データにアクセスしたり、データを操作したり、ビジネスロジックを呼び出したりと、アプリケーションとの相互作用が必要である点で共通している。
 

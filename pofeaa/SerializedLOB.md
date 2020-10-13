@@ -3,13 +3,13 @@ layout: pofeaa
 title: シリアライズドLOB
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/serializedLOB.html
+原文: <https://www.martinfowler.com/eaaCatalog/serializedLOB.html>
 
 *オブジェクト同士の関係をシリアライズして、データベースに格納可能なひとつのラージオブジェクト(LOB)にする*
 
 解説の全文は『PofEAA』 **272** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/serializedLobSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/serializedLobSketch.gif)
 
 オブジェクトモデルは小さなオブジェクトの複雑な集まりになることが多い。この構造のもつ情報のほとんどは、オブジェクト内のデータではなく、これらオブジェクト間のリンクによって表される。例えばすべての顧客の組織階層を格納することを考えると、オブジェクトモデルの場合はコンポジションパターンを用いて自然に組織階層をあらわすことができ、子や兄弟、親を取得するためのメソッドを容易に付け加えることができる。
 

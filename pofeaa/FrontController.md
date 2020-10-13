@@ -3,13 +3,13 @@ layout: pofeaa
 title: フロントコントローラ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/frontController.html
+原文: <https://www.martinfowler.com/eaaCatalog/frontController.html>
 
 *Webサイトへの全てのリクエストを扱うコントローラ*
 
 解説の全文は『PofEAA』 **344** ページを参照。
 
-![](http:img/frontController-sketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/frontController-sketch.gif)
 
 複雑なWebサイトでリクエストを扱うとき、よく似たことを何度も行う必要がある。
 セキュリティだったり、国際化だったり、ユーザー別のビュー作成だったり。

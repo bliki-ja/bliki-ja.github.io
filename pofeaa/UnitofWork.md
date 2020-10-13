@@ -3,13 +3,13 @@ layout: pofeaa
 title: ユニットオブワーク
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/unitOfWork.html
+原文: <https://www.martinfowler.com/eaaCatalog/unitOfWork.html>
 
 *ビジネストランザクションの影響を受けるオブジェクト群の保持し、変更点の把握、並行性問題の解決を行う。*
 
 解説の全文は『PofEAA』 **184** ページを参照。
 
-![unitOfWorkInterface.gif](http://www.martinfowler.com/eaaCatalog/unitOfWorkInterface.gif)
+![unitOfWorkInterface.gif](https://www.martinfowler.com/eaaCatalog/unitOfWorkInterface.gif)
 
 データベースからデータを入出力する際、変更点を記録することが重要となる。
 変更点の記録を行わなければ、データベースにデータを正しく書き込むことができない。

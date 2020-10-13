@@ -3,13 +3,13 @@ layout: pofeaa
 title: レコードセット
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/recordSet.html
+原文: <https://www.martinfowler.com/eaaCatalog/recordSet.html>
 
 *テーブルデータのメモリ上での表現*
 
 解説の全文は『PofEAA』 **508** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/recordSetSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/recordSetSketch.gif)
 
 過去20年、データベースにおけるデータを表現するための支配的な方法は、リレーショナルなテーブル形式だった。大小のデータベースベンダや標準の問い合わせ言語に指示されたことで、新しい開発は全てリレーショナルデータを用いているように見える。
 

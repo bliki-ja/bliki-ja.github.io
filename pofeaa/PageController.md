@@ -3,13 +3,13 @@ layout: pofeaa
 title: ページコントローラ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/pageController.html
+原文: <https://www.martinfowler.com/eaaCatalog/pageController.html>
 
 *Webサイト上の特定のページやアクションへのリクエストを扱うオブジェクト*
 
 解説の全文は『PofEAA』 **333** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/actionController-sketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/actionController-sketch.gif)
 
 通常、Webページというと静的なHTMLページのことを指す。
 静的なHTMLを表示させるときは、HTMLドキュメントが保存されているパスと名前をWebサーバに送る。

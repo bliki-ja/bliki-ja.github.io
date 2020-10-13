@@ -3,13 +3,13 @@ layout: pofeaa
 title: マネー
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/money.html
+原文: <https://www.martinfowler.com/eaaCatalog/money.html>
 
 *金銭的価値を表現する*
 
 解説の全文は『PofEAA』 **488** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/moneySketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/moneySketch.gif)
 
 世界中の多くのコンピュータでは金銭が扱われているので、主流のプログラミング言語で金銭がま
 ず最初のクラスデータ型でないということに私はいつも当惑している。型が足らないために、問題が

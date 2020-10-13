@@ -3,13 +3,13 @@ layout: pofeaa
 title: テーブルモジュール
 ---
 
-原文: <http://www.martinfowler.com/eaaCatalog/tableModule.html>
+原文: <https://www.martinfowler.com/eaaCatalog/tableModule.html>
 
 *データベーステーブルまたはビュー内のすべての行に対するビジネスロジックを扱う単一のインスタンス。*
 
 解説の全文は『PofEAA』 **125** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/tableModuleSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/tableModuleSketch.gif)
 
 オブジェクト指向のキーは、データとそれを使う振る舞いとを一緒にすることにある。
 伝統的なオブジェクト指向のアプローチは、[ドメインモデル](../DomainMode) (116)のように識別子のあるオブジェクトがベースになっている。

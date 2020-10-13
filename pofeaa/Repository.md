@@ -3,7 +3,7 @@ layout: pofeaa
 title: リポジトリ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/repository.html
+原文: <https://www.martinfowler.com/eaaCatalog/repository.html>
 
 **by Edward Hieatt and Rob Mee**
 
@@ -11,7 +11,7 @@ title: リポジトリ
 
 解説の全文は『PofEAA』 **322** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/repositorySketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/repositorySketch.gif)
 
 複雑なドメインモデルのあるシステムは、ドメイン オブジェクトをデータベースアクセスコードから分離するDataMapper(165)などのレイヤの恩恵を受けやすい。
 そのようなシステムでは、クエリ構文を構築するマッピングレイヤ上にもうひとつ抽象的なレイヤを設けると良い。

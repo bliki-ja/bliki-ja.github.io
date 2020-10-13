@@ -3,11 +3,11 @@ layout: pofeaa
 title: パターンカタログ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/index.html
+原文: <https://www.martinfowler.com/eaaCatalog/index.html>
 
 Last Significant Update: January 2003
 
-*以下は、『[Patterns of Enterprise Application Architecture (P of EAA)](http://www.martinfowler.com/books.html#eaa)』で扱ったパターンの簡単なサマリである。*
+*以下は、『[Patterns of Enterprise Application Architecture (P of EAA)](https://www.martinfowler.com/books.html#eaa)』で扱ったパターンの簡単なサマリである。*
 
 各パターンの概要をページ毎に載せているが、パターンは単独で用いられることを想定していない。これは、パターンに馴染みのある人向けの、単なる覚書のようなものである。これで気軽にオンラインでパターンを参照することが出来ましょうぞ。
 将来的にここにコメントを追加するかもしれないが、とりあえずこれがうまく行くことを見守ろう。

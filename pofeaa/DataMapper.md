@@ -3,13 +3,13 @@ layout: pofeaa
 title: データマッパー
 ---
 
-原文: <http://www.martinfowler.com/eaaCatalog/dataMapper.html>
+原文: <https://www.martinfowler.com/eaaCatalog/dataMapper.html>
 
 *Mapper (473) レイヤは、オブジェクトとデータベース間でデータを移動させる。データは、オブジェクト、データベース、およびMapperから独立させる。*
 
 解説の全文は『PofEAA』 **165** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/databaseMapperSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/databaseMapperSketch.gif)
 
 オブジェクトとリレーショナルデータベースは、
 異なるメカニズムでデータを構成している。

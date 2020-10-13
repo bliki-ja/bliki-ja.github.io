@@ -3,7 +3,7 @@ layout: pofeaa
 title: サービススタブ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/serviceStub.html
+原文: <https://www.martinfowler.com/eaaCatalog/serviceStub.html>
 
 **by David Rice**
 
@@ -11,7 +11,7 @@ title: サービススタブ
 
 解説の全文は『PofEAA』 **504** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/serviceStubSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/serviceStubSketch.gif)
 
 企業システムはクレジット認証、税率の参照は値づけエンジンのようなサードパーティ製のサービスへのアクセスに頼っていることがしばしばある。このようなシステムを構築した開発者の中には、自分のコントロールが完全に及ばないリソースに頼っていることによるフラストレーションを口にする人がいる。機能の分配は予測不可能であり、こういったサービスが多くの場合遠隔なので、信頼性とパフォーマンスの点で苦労することになる。
 
