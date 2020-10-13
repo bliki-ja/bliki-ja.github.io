@@ -3,7 +3,7 @@ layout: pofeaa
 title: サーバーセッションステート
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/serverSessionState.html
+原文: <https://www.martinfowler.com/eaaCatalog/serverSessionState.html>
 
 *サーバのセッション状態をシリアライズされた形で保持する*
 

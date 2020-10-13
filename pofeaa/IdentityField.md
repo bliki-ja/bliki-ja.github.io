@@ -3,13 +3,13 @@ layout: pofeaa
 title: 一意フィールド
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/identityField.html
+原文: <https://www.martinfowler.com/eaaCatalog/identityField.html>
 
 *データベースのIDフィールドをオブジェクト内に格納し、メモリ内のオブジェクトとデータベース行との一意性を保持する。*
 
 解説の全文は『PofEAA』 **216** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/idFieldSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/idFieldSketch.gif)
 
 リレーショナルデータベースはキー（主キー）を使って行を特定している。
 しかし、メモリ内のオブジェクトにはそのようなキーは必要ない。

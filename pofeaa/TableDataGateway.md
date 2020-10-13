@@ -3,13 +3,13 @@ layout: pofeaa
 title: テーブルデータゲートウェイ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/tableDataGateway.html
+原文: <https://www.martinfowler.com/eaaCatalog/tableDataGateway.html>
 
 *データベース テーブルへの Gateway (466)として振舞うオブジェクト。インスタンスはテーブル内のすべての行を操作する。*
 
 解説の全文は『PofEAA』 **144** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/dbgateTable.gif)
+![](https://www.martinfowler.com/eaaCatalog/dbgateTable.gif)
 
 アプリケーションロジック内でSQLをミックスすると、いくつか問題が起きる。
 多くの開発者はSQLに不慣れで、慣れている人間でもうまく書ける者は少ないだろう。

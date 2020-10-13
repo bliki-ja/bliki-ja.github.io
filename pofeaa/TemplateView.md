@@ -3,13 +3,13 @@ layout: pofeaa
 title: テンプレートビュー
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/templateView.html
+原文: <https://www.martinfowler.com/eaaCatalog/templateView.html>
 
 *HTMLページにマーカを埋め込むことにより、情報をHTMLの形で表現する*
 
 解説の全文は『PofEAA』 **350** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/templateViewSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/templateViewSketch.gif)
 
 HTMLを吐くプログラムを書くのは、想像以上に難しい。
 以前よりはマシになったが

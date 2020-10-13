@@ -3,13 +3,13 @@ layout: pofeaa
 title: 継承マッパー
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/inheritanceMappers.html
+原文: <https://www.martinfowler.com/eaaCatalog/inheritanceMappers.html>
 
 *継承ヒエラルキーを制御するようなデータベースマッパーを組織化する構造*
 
 解説の全文は『PofEAA』 **302** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/inheritanceMappersSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/inheritanceMappersSketch.gif)
 
 
 メモリ上にあるオブジェクト指向の継承ヒエラルキーを関係データベースに対応付けるとき、データをデータベースにセーブしたりロードしたりするのに必要なコード量を最少にしなければならない。また、スーパークラスやサブクラスのセーブ、ロードを可能にするような、抽象ないし具象のマッピング動作も欲しいところだろう。

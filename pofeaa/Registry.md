@@ -3,13 +3,13 @@ layout: pofeaa
 title: レジストリ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/registry.html
+原文: <https://www.martinfowler.com/eaaCatalog/registry.html>
 
 *他のオブジェクトが共通的なオブジェクトやサービスを見つけるのに利用できる、よく知られたオブジェクト*
 
 解説の全文は『PofEAA』 **480** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/registrySketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/registrySketch.gif)
 
 あるオブジェクトを見つけたいとき、通常はそのオブジェクトと関連をもっているオブジェクトから探し始め、目的のオブジェクトに辿り着くために、その関連を利用する。よって、もしある顧客のための全てのオーダを見つけたかったら、カスタマオブジェクトから探し始め、オーダを取得するためにカスタマオブジェクト上のメソッドを叩く。しかしながら、探索を開始するのに適当なオブジェクトがないことがままある。カスタマのIDは分かるが、リファレンスがないのかもしれない。そういった場合、ルックアップするメソッド、つまりファインダが必要になるが、こんな問題が残る。じゃ、どうやってそのファインダを取得するんだ?
 

@@ -3,13 +3,13 @@ layout: pofeaa
 title: ツーステップビュー
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/twoStepView.html
+原文: <https://www.martinfowler.com/eaaCatalog/twoStepView.html>
 
 *ドメインのデータを2ステップに分けてHTMLに入れるパターン。最初に論理的プレゼンテーションを作り、そしてHTMLへとレンダリングする。*
 
 解説の全文は『PofEAA』 **365** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/twoStageViewSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/twoStageViewSketch.gif)
 
 Webアプリケーションの画面が多くなってくると、サイトの画面デザインを統一したくなるものだ。
 画面ごとにデザインが異なっていれば、ユーザーは混乱することになってしまう。

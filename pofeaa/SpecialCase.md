@@ -3,13 +3,13 @@ layout: pofeaa
 title: スペシャルケース
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/specialCase.html
+原文: <https://www.martinfowler.com/eaaCatalog/specialCase.html>
 
 *特定の場合に特別な振る舞いをするサブクラス*
 
 解説の全文は『PofEAA』 **496** ページを参照。
 
-![](http:./img/specialCaseSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/specialCaseSketch.gif)
 
 Nullはポリモルフィズムを壊すのでオブジェクト指向プログラミングでは扱いがやっかいなものだ。通常、アイテムが正確な型かサブクラスであるかどうかを気にせず与えられた型の変数参照でfooを自由に起動することができる。強い型チェックの言語ですら、コンパイラにその呼び出しが正しいかをチェックさせることができる。しかしながら、変数にはnullを格納できるので、nullのメッセージを起動することによってランタイムエラーを引き起こすかもしれない。
 

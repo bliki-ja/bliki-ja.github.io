@@ -3,13 +3,13 @@ layout: pofeaa
 title: レイジーロード
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/lazyLoad.html
+原文: <https://www.martinfowler.com/eaaCatalog/lazyLoad.html>
 
 *必要なデータ全てを持つのではなく、その取得方法を知っているオブジェクト*
 
 解説の全文は『PofEAA』 **200** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/lazyLoadSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/lazyLoadSketch.gif)
 
 データベースからデータをメモリ上にロードするとき、関心のあるオブジェクトだけでなく、それに関連するオブジェクトも同時に読み込むように設計してあると便利である。開発者にとってオブジェクトのロードが楽になり、必要なすべてのオブジェクトを明示的にロードする必要がなくなる。
 

@@ -3,7 +3,7 @@ layout: pofeaa
 title: 暗黙的ロック
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/implicitLock.html
+原文: <https://www.martinfowler.com/eaaCatalog/implicitLock.html>
 
 **by David Rice**
 
@@ -11,7 +11,7 @@ title: 暗黙的ロック
 
 解説の全文は『PofEAA』 **449** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/ImplicitLockSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/ImplicitLockSketch.gif)
 
 ロッキングスキームのカギは使う上でのギャップがないということだ。ロックを得るためのコードを1行書き忘れると、オフラインロッキングスキームが全く役に立たなくなる。他のトランザクションがライトロックをかけているとリードロックの検索の失敗は、すなわち最新のセッションデータが取得できていないかもしれない、ということを意味している。あるバージョンカウントを正しく使えなかったあら、誰かの変更に知らずに上書きしてしまうかもしれない。一般に、ある要素がどこかでロックされていたら、どこでもロックされているはずなのだ。アプリケーションのロッキング戦略を無視すると不整合のデータを生成するビジネストランザクションを許してしまう。ロックをリリースしなければレコードデータを崩してしまうことはないだろうが、結局は生産性を悪くしてしまうだろう。オフラインの並行性制御はテストするのが困難なので、このようなエラーはあなたのテストパターンでは発見できないかもしれない。
 

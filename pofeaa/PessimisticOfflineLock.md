@@ -3,7 +3,7 @@ layout: pofeaa
 title: 悲観的オフラインロック
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/pessimisticOfflineLock.html
+原文: <https://www.martinfowler.com/eaaCatalog/pessimisticOfflineLock.html>
 
 **by David Rice**
 
@@ -11,7 +11,7 @@ title: 悲観的オフラインロック
 
 解説の全文は『PofEAA』 **426** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/PessimisticSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/PessimisticSketch.gif)
 
 オフライン並行性により複数のリクエストを跨いだビジネストランザクションによるデータの操作が行われるので、最も簡単なアプローチは、ビジネストランザクション全体で1つのシステムトランザクションを開くことだと思われる。しかし残念ながら、トランザクションシステムはトランザクションが長くなるとうまく動かないのでこれがいつもうまくいくとは限らない。このため、データへの並行アクセスを管理するためのデバイスで複数のシステムトランザクションを使わないといけない。
 

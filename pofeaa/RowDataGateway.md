@@ -3,13 +3,13 @@ layout: pofeaa
 title: 行データゲートウェイ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/rowDataGateway.html
+原文: <https://www.martinfowler.com/eaaCatalog/rowDataGateway.html>
 
 *データソースにあるひとつのレコードへの Gateway (466)として振舞うオブジェクト。いちレコード（一行）につき、いちインスタンスとなる。*
 
 解説の全文は『PofEAA』 **152** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/dbgateRow.gif)
+![](https://www.martinfowler.com/eaaCatalog/dbgateRow.gif)
 
 メモリ内のオブジェクトにデータベースアクセスコードを埋め込むと、厄介なことになる。
 まず、メモリ内のオブジェクトにビジネスロジックがある場合、

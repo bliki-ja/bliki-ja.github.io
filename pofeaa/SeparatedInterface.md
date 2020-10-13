@@ -3,13 +3,13 @@ layout: pofeaa
 title: セバレートインターフェース
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/separatedInterface.html
+原文: <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 *実装とは別のパッケージにインタフェースを定義する*
 
 解説の全文は『PofEAA』 **476** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/separatedInterfaceSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/separatedInterfaceSketch.gif)
 
 システムの開発を進める中で、システム中の部品どうしの結合性を弱めていくことで設計のクオリティを改善することができる。このためのいい方法は、いくつかのクラスをパッケージにまとめ、依存関係を制御することだ。その際、そのクラスをどうパッケージに分類するかについてのルールに則ること。例えば、ドメインレイヤのクラスはプレゼンテーションパッケージのクラスを呼ばないというものだ。
 

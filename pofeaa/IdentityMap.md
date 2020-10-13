@@ -3,13 +3,13 @@ layout: pofeaa
 title: 一意マップ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/identityMap.html
+原文: <https://www.martinfowler.com/eaaCatalog/identityMap.html>
 
 *ロードしたオブジェクトをマップに保存して、オブジェクトが一度だけロードされることを保証する。オブジェクトが参照されたときは、マップを使って探し出す。*
 
 解説の全文は『PofEAA』 **195** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/idMapperSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/idMapperSketch.gif)
 
 古くから「時計を2つ持つ者は、決して時間が分からない」と言われる。
 2つの時計が間違っていたら、データベースからオブジェクトをロードする際により大きな混乱に巻き込まれる可能性がある。

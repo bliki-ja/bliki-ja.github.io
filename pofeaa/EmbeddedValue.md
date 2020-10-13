@@ -3,13 +3,13 @@ layout: pofeaa
 title: 組込みバリュー
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/embeddedValue.html
+原文: <https://www.martinfowler.com/eaaCatalog/embeddedValue.html>
 
 *オブジェクトを他のオブジェクトのテーブルのフィールドにマップする。*
 
 解説の全文は『PofEAA』 **268** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/aggregateMappingSketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/aggregateMappingSketch.gif)
 
 OOシステムでは意味のある多くの小さなオブジェクトは、
 データベースのテーブルとしては意味がない。

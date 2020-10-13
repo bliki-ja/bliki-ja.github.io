@@ -3,7 +3,7 @@ layout: pofeaa
 title: バリューオブジェクト
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/valueObject.html
+原文: <https://www.martinfowler.com/eaaCatalog/valueObject.html>
 
 *お金とか日付の範囲のような小さい単純なオブジェクトの同一性はアイデンティティによるものではない*
 

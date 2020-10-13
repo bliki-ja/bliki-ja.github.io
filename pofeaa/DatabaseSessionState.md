@@ -3,7 +3,7 @@ layout: pofeaa
 title: データベースセッションステート
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/databaseSessionState.html
+原文: <https://www.martinfowler.com/eaaCatalog/databaseSessionState.html>
 
 *Stores session data as committed data in the database.*
 

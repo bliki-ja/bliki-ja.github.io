@@ -3,7 +3,7 @@ layout: pofeaa
 title: クライアントセッションステート
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/clientSessionState.html
+原文: <https://www.martinfowler.com/eaaCatalog/clientSessionState.html>
 
 *クライアントのセッション状態を格納する*
 

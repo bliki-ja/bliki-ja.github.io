@@ -3,13 +3,13 @@ layout: pofeaa
 title: ゲートウェイ
 ---
 
-原文: http://www.martinfowler.com/eaaCatalog/gateway.html
+原文: <https://www.martinfowler.com/eaaCatalog/gateway.html>
 
 *外部のシステムやリソースへのアクセスをカプセル化するオブジェクト*
 
 解説の全文は『PofEAA』 **466** ページを参照。
 
-![](http://www.martinfowler.com/eaaCatalog/gatewaySketch.gif)
+![](https://www.martinfowler.com/eaaCatalog/gatewaySketch.gif)
 
 面白いソフトウェアは孤立していることがまれにある。最も純潔のオブジェクト指向システムでさえもリレーショナルデータベーステーブルや、CICSトランザクション、XMLデータ構造のような、オブジェクトではないものを扱うことがしばしばある。
 
