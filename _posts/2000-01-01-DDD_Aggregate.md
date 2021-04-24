@@ -22,5 +22,5 @@ DDDにおける集約はドメインコンセプト(注文、診察受診、プ�
 
 もっと詳しく知りたかったら、[DDD本](http://domaindrivendesign.org/book/)を参照してください。
 
-translated by [@ko-flavor](https://github.com/ko-flavor)
+translated by [@okaponta](https://github.com/okaponta)
 
