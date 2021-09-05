@@ -5,7 +5,7 @@ tags:
 
 <!-- A couple of months ago I announced that I was stepping back from speaking. A few people wondered whether I would still be writing. I did indicate in that article that I am, but I felt it may be worth saying a bit more about what I’m concentrating on these days. -->
 
-数か月前、私は講演活動から退くことを記事にしました。執筆活動は続けているのかと疑問に思った方もいるでしょう。その記事の中では執筆中であると書きましたが、最近取り組んでいることについてもう少しお話したほうがいいのではないかと思いました。
+数か月前、私は[講演活動から退くことを記事](https://martinfowler.com/articles/202106-reducing-speaking.html)にしました。執筆活動は続けているのかと疑問に思った方もいるでしょう。その記事の中では執筆中であると書きましたが、最近取り組んでいることについて、もう少しお話したほうがいいのではないかと考えました。
 
 <!-- One thing that’s different to much of my writing life is that I’m not tackling a big writing topic, such as a book-length material. 
 After I finished the second edition of Refactoring, 
@@ -24,24 +24,11 @@ I’d get a couple of solid mornings on it one week,
 	which meant I forgot where I was when I needed to pick it up again. 
 I wasn’t able to get momentum, and without that I wasn’t getting anywhere. -->
 
-これまでの執筆活動と違うのは、本になるような大きなテーマには取り組んでいないことです。
-[『リファクタリング』の第2版](https://martinfowler.com/books/refactoring.html)を完成させてからは、
-ほとんどの期間をこのウェブサイトに費やしてきました。
-数年間ずっと悩んでいた[ソースコードブランチ管理のパターン](/PatternsForManagingSourceCodeBranches)の記事にも数か月費やしました。
-それが終わってからは、
-探求し始めたものの放置したままだった2つの大きなテーマのひとつ、
-フロントエンドアーキテクチャとイベントについて改めて取り組んでみようと考えました。
-しばらくの間、私はフロントエンドアーキテクチャの再検討に時間を費やしました。
-20年前にリッチクライアントシステムで特定したパターンが、
-現在の世界のウェブやシングルページアプリケーションにどのようにマッピングできるかを探りました。
-しかし、目に見えた進歩がなかったので、冷凍庫に戻してしまいました。
-ある週の朝に2回ほど集中して作業ができても、その後の数週間は作業ができず、
-作業を再開しようと思ってもどこまでやったのか忘れてしまうのです。
-結局、勢いに乗れず、何もできませんでした。
+これまでの執筆活動と違うのは、本になるような大きなテーマには取り組んでいないことです。[『リファクタリング』の第2版](https://martinfowler.com/books/refactoring.html)を完成させてからは、ほとんどの期間をこのウェブサイトに費やしてきました。数年間ずっと悩んでいた[ソースコードブランチ管理のパターン](/PatternsForManagingSourceCodeBranches)の記事にも数か月かかりました。それが終わってからは、放置したままだった2つの大きなテーマであるフロントエンドアーキテクチャとイベントに改めて取り組んでみようと考えました。しばらくの間、フロントエンドアーキテクチャの再検討に時間をかけました。20年前にリッチクライアントシステムで特定したパターンが、現在の世界のウェブやシングルページアプリケーションにマッピングできるのではないかと探りました。しかし、目に見えた進歩がなかったので、冷凍庫に戻してしまいました。ある週の朝に2回ほど集中して作業ができても、その後の数週間はまったく作業ができず、作業を再開しようと思ってもどこまでやったのか忘れてしまうのです。結局、勢いに乗れないまま終わりました。
 
 <!-- Why wasn’t I able to spend time on these things? Simply put, plenty of other stuff I was working on. -->
 
-なぜ時間を割けなかったのでしょうか？簡単に言えば、他にもたくさんの仕事をしていたからです。
+なぜ時間を割けなかったのでしょうか？簡単に言えば、他にも多くの仕事をしていたからです。
 
 <!-- Some of this being involved in Thoughtworks leadership. My role in Thoughtworks is odd, I don’t have any management responsibilities, 
 but I’m often called to contribute my point of view. Watching how my colleagues run a business that employs thousands of people, 
@@ -50,11 +37,7 @@ but I’m often called to contribute my point of view. Watching how my colleague
 Yet they keep asking me to participate, 
 	and I should trust their good judgment and be as involved as they wish. -->
 
-その中には、Thoughtworksのリーダーシップに関係するものもあります。
-Thoughtworksでの私の役割はちょっと変わっています。
-マネジメント職ではありませんが、私の考えを示すように求められるのです。
-同僚たちは何千人もの授業員を抱えるビジネスを運営していますが、そこに私が何か価値を提供できるようには思えません。それなのに、私に参加を求めてくるのです。
-私は彼らの判断を信じて、彼らが望むように、そこに参加しています。
+そのひとつが、Thoughtworksのリーダーシップに関係するものです。Thoughtworksにおける私の役割はちょっと変わっています。管理職ではありませんが、私の考えを示すように求められるのです。同僚たちは何千人もの授業員を抱えるビジネスを運営していますが、私がそこに何か価値を提供できるようには思えません。それなのに、私に参加を求めてくるのです。私は彼らの判断を信じて、彼らが望むように、そこに参加しています。
 
 <!-- The main thing that’s been occupying my brain in the last months 
 	has been working with my colleagues 
@@ -69,18 +52,7 @@ While I’m certainly not a co-author of any of these works,
 These authors are much closer to the reality of software development these days than I am, 
 	so I think I can contribute more by using what experience and talent I have in writing to get their experiences and ideas out into the world. -->
 
-この数か月間、私の頭を占めていたのは、
-重要な執筆活動をしている同僚たちと一緒に仕事をすることでした。
-このサイトをご覧になっている方は、
-Unmesh Joshiの「[Patterns of Distributed Systems](https://martinfowler.com/articles/patterns-of-distributed-systems/)」に気づいていると思います。
-Zhamak Denghaniは、データメッシュに関する彼女のアプローチを解説する本を執筆中です。
-そして先月、Ian Cartwright、Rob Horn、James Lewisによる
-「[Patterns of Legacy Displacement](https://martinfowler.com/articles/patterns-legacy-displacement/)」の最初の数セクションを公開しました。
-私はこれらの作品の共著者ではありませんが、
-多くの時間とエネルギーを使って、作品を前進させることを支援してきました。
-私よりも著者たちのほうが、最近のソフトウェア開発の現場の近いところにいるので、
-私に貢献できることはこれまでの執筆の経験と才能を活かして、
-彼らの経験やアイデアを世の中に出していくことを後押しすることだと考えています。
+この数か月間、私の頭を大部分を占めていたのは、重要な執筆活動をしている同僚たちと一緒に仕事をすることでした。このサイトをご覧になっている方は、Unmesh Joshiの「[Patterns of Distributed Systems](https://martinfowler.com/articles/patterns-of-distributed-systems/)」の存在に気づいていると思います。Zhamak Denghaniは、データメッシュに関する彼女のアプローチを解説する本を執筆中です。そして先月、Ian Cartwright、Rob Horn、James Lewisによる「[Patterns of Legacy Displacement](https://martinfowler.com/articles/patterns-legacy-displacement/)」の最初の数セクションが公開されました。私はこれらの作品の共著者ではありませんが、多くの時間とエネルギーを使い、作品を前進させることを支援してきました。私よりも著者たちのほうが、最近のソフトウェア開発の現場の近いところにいるわけですから、私に貢献できるのはこれまでの執筆の経験と才能を活かして、彼らの経験やアイデアが世の中に出せるように後押しすることだと考えています。
 
 <!-- I should also mention that I suspect 
 I’m not as energetic as I used to be as I age. 
@@ -92,12 +64,7 @@ I’ve always been nagged by my conviction
 Sadly I’m not getting any better 
 	at not letting that bug me. -->
 
-年齢を重ねるごとに、以前のような元気がなくなってきたこともお伝えしておかなければいけません。
-執筆やプログラミングのようなクリエイティブな仕事をしていると、
-1日に使える時間は一般的な労働時間の8時間よりも短いことは以前からわかっていました。
-私は本当は熱心に働いていないのではないか、
-もっと効果的に働くべきではないか、そのように悩んでいました。
-悲しいことに、いまだに悩まずにはいられません。
+年齢を重ねるごとに、以前のような活気がなくなってきたこともお伝えしておかなければいけません。執筆やプログラミングのようなクリエイティブな仕事をしていると、1日に使える時間は一般的な労働時間の8時間よりも短いことは以前からわかっていました。本当は私は熱心に働いていないのではないか、あるいはもっと効果的に働くべきではないか、そのように悩んでいました。悲しいことに、いまだにそう悩まずにはいられません。
 
 
 <!-- I still have some writing of my own simmering, 
@@ -109,7 +76,4 @@ but I’ve gained an immense satisfaction
 	from seeing those I’ve helped 
 	making an impact on the industry over the years. -->
 
-自分でも執筆しているものもいくつかありますが、
-数週間作業をしなくても悲劇にならないように、小規模なものにしています。
-以前のように大きなテーマに取り組むことができないことに不満を感じている部分もありますが、
-ここ数年は私が支援した人たちが業界に影響を与えている様子を見て、非常に大きな満足感を得ています。
+自分でも執筆しているものもいくつかありますが、数週間作業をしなくても悲劇にならないように、小規模なものにしています。以前のような大きなテーマに取り組むことができないことに不満を感じている部分もありますが、ここ数年は私が支援した人たちが業界に影響を与えている様子を見て、非常に大きな満足感を得ています。
