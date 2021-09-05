@@ -77,3 +77,6 @@ but I’ve gained an immense satisfaction
 	making an impact on the industry over the years. -->
 
 自分でも執筆しているものもいくつかありますが、数週間作業をしなくても悲劇にならないように、小規模なものにしています。以前のような大きなテーマに取り組むことができないことに不満を感じている部分もありますが、ここ数年は私が支援した人たちが業界に影響を与えている様子を見て、非常に大きな満足感を得ています。
+
+
+Martin Fowler: 29 Jun 2021
