@@ -1,6 +1,6 @@
 ---
+layout: page
 title: 最近何をやっているのか
-tags: 
 ---
 
 <!-- A couple of months ago I announced that I was stepping back from speaking. A few people wondered whether I would still be writing. I did indicate in that article that I am, but I felt it may be worth saying a bit more about what I’m concentrating on these days. -->
