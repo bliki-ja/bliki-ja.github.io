@@ -15,7 +15,11 @@ tags: [tag1, tag2]
 
 なお、``rake post title=2004-08-03-C3``のように指定すれば、あらかじめひな形を作ることもできます。
 
-なおなお、``rake post_from url="https://martinfowler.com/bliki/C3.html"``のように指定すれば、あらかじめひな形を（もっと詳細に）作ることもできます。
+なおなお、``rake post_from url="https://martinfowler.com/bliki/C3.html"``のように指定すれば、あらかじめひな形を（もっと詳細に）作ることもできます（追記：なんか動いてないかも）。
+
+### articleの場合
+
+blikiとは別にarticleの記事を訳すときは、新規フォルダのなかにindex.mdを置いてから訳してください。たとえば「DomainLogicAndSQL」などのようになります。
 
 ## 他のエントリにリンクするとき
 
