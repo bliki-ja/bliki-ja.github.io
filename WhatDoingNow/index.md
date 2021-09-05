@@ -3,6 +3,8 @@ layout: page
 title: 最近何をやっているのか
 ---
 
+<https://martinfowler.com/articles/202106-reducing-speaking.html>
+
 <!-- A couple of months ago I announced that I was stepping back from speaking. A few people wondered whether I would still be writing. I did indicate in that article that I am, but I felt it may be worth saying a bit more about what I’m concentrating on these days. -->
 
 数か月前、私は[講演活動から退くことを記事](https://martinfowler.com/articles/202106-reducing-speaking.html)にしました。執筆活動は続けているのかと疑問に思った方もいるでしょう。その記事の中では執筆中であると書きましたが、最近取り組んでいることについて、もう少しお話したほうがいいのではないかと考えました。
