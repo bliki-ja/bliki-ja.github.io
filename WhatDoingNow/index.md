@@ -54,7 +54,7 @@ While I’m certainly not a co-author of any of these works,
 These authors are much closer to the reality of software development these days than I am, 
 	so I think I can contribute more by using what experience and talent I have in writing to get their experiences and ideas out into the world. -->
 
-この数か月間、私の頭を大部分を占めていたのは、重要な執筆活動をしている同僚たちと一緒に仕事をすることでした。このサイトをご覧になっている方は、Unmesh Joshiの「[Patterns of Distributed Systems](https://martinfowler.com/articles/patterns-of-distributed-systems/)」の存在に気づいていると思います。Zhamak Denghaniは、データメッシュに関する彼女のアプローチを解説する本を執筆中です。そして先月、Ian Cartwright、Rob Horn、James Lewisによる「[Patterns of Legacy Displacement](https://martinfowler.com/articles/patterns-legacy-displacement/)」の最初の数セクションが公開されました。私はこれらの作品の共著者ではありませんが、多くの時間とエネルギーを使い、作品を前進させることを支援してきました。私よりも著者たちのほうが、最近のソフトウェア開発の現場に近いわけですから、私に貢献できるのはこれまでの執筆の経験と才能を活かして、彼らの経験やアイデアが世の中に出せるように後押しすることだと考えています。
+この数か月間、私の頭の大部分を占めていたのは、重要な執筆活動をしている同僚たちと一緒に仕事をすることでした。このサイトをご覧になっている方は、Unmesh Joshiの「[Patterns of Distributed Systems](https://martinfowler.com/articles/patterns-of-distributed-systems/)」の存在に気づいていると思います。Zhamak Denghaniは、データメッシュに関する彼女のアプローチを解説する本を執筆中です。そして先月、Ian Cartwright、Rob Horn、James Lewisによる「[Patterns of Legacy Displacement](https://martinfowler.com/articles/patterns-legacy-displacement/)」の最初の数セクションが公開されました。私はこれらの作品の共著者ではありませんが、多くの時間とエネルギーを使い、作品を前進させることを支援してきました。私よりも著者たちのほうが、最近のソフトウェア開発の現場に近いわけですから、私に貢献できるのはこれまでの執筆の経験と才能を活かして、彼らの経験やアイデアが世の中に出せるように後押しすることだと考えています。
 
 <!-- I should also mention that I suspect 
 I’m not as energetic as I used to be as I age. 
