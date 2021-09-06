@@ -39,7 +39,7 @@ but I’m often called to contribute my point of view. Watching how my colleague
 Yet they keep asking me to participate, 
 	and I should trust their good judgment and be as involved as they wish. -->
 
-そのひとつが、Thoughtworksのリーダーシップに関係するものです。Thoughtworksにおける私の役割はちょっと変わっています。管理職ではありませんが、私の考えを示すように求められるのです。同僚たちは何千人もの授業員を抱えるビジネスを運営していますが、私がそこに何か価値を提供できるようには思えません。それなのに、私に参加を求めてくるのです。私は彼らの判断を信じて、彼らが望むように、そこに参加しています。
+そのひとつが、Thoughtworksのリーダーシップに関係するものです。Thoughtworksにおける私の役割はちょっと変わっています。管理職ではありませんが、私の考えを示すように求められるのです。同僚たちは何千人もの従業員を抱えるビジネスを運営していますが、私がそこに何か価値を提供できるようには思えません。それなのに、私に参加を求めてくるのです。私は彼らの判断を信じて、彼らが望むように、そこに参加しています。
 
 <!-- The main thing that’s been occupying my brain in the last months 
 	has been working with my colleagues 
