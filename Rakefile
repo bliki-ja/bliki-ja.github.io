@@ -24,7 +24,7 @@ task :post_from do
 
   url = ENV["url"]
   title = url.gsub('https://martinfowler.com/bliki/', '').gsub('.html', '')
-  html = open(url).read
+  html = URI.open(url).read
   doc = Nokogiri::HTML.parse(html)
   t = Time.parse(doc.xpath('//p[@class="date"]').children.first.to_s)
   tags = "[" + doc.xpath('//p[@class="tags"]/a').map{|a|
