@@ -1,5 +1,5 @@
 ---
-title: 謙虚なオブジェクト
+title: 質素なオブジェクト
 tags: [testing]
 ---
 
@@ -11,7 +11,7 @@ tags: [testing]
 プログラムの要素の中には、本質的にテストが難しい、あるいは不可能なものがあります。
 このような要素に含まれるロジックは、バグが発生しやすく、進化させるのも大変です。
 この問題を軽減するために、できるだけ多くのロジックを「テストが難しい要素」から「テストがしやすい部分」へ移動させます。
-テストできないオブジェクトを謙虚（Humble）にすることで[^1]、邪悪なバグが潜む可能性を減らすのです。
+テストできないオブジェクトを質素（Humble）にすることで[^1]、邪悪なバグが潜む可能性を減らすのです。
 
 ![](https://martinfowler.com/bliki/images/humble-object/sketch.png)
 
@@ -36,4 +36,4 @@ tags: [testing]
 <!-- Notes
  !-- 1: The use of the word "humble" originated in an article by Michael Feathers . -->
 
-[^1]: 「謙虚（Humble）」という用語は、[Michael Feathersの記事](https://martinfowler.com/articles/humble-dialog-box.html)に由来します。
+[^1]: 「質素（Humble）」という用語は、[Michael Feathersの記事](https://martinfowler.com/articles/humble-dialog-box.html)に由来します。
