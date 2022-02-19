@@ -1,6 +1,6 @@
 ---
 title: ウォーターフォールプロセス
-tags: [BAD THINGS, PROCESS THEORY]
+tags: [bad things, process theory]
 ---
 
 <!-- In the software world, “waterfall” is commonly used to describe a style of software process, one that contrasts with the ideas of iterative, or agile styles.  Like many well-known terms in software it's meaning is ill-defined and origins are obscure - but I find its essential theme is breaking down a large effort into phases based on activity. -->
