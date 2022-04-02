@@ -28,7 +28,7 @@ Kent Beckが1990年代に[エクストリームプログラミング（XP）](/E
  !-- 	the primary aim is that it works as intended and 
  !-- 	tests are there to ensure that happens. -->
 
-このルールで最も重要なのは「テストをパスさせる」だ。XPが革新的だったのは、テストをソフトウェア開発におけるファーストクラスの活動に持ち上げたことだろう。このルールのなかでテストが最も重要な役割を担うのは当然だろう。ソフトウェアで何をするにしても、第一の目的は意図どおりにソフトウェアが動作することであり、テストはそれを確実にするためのものである。
+このルールで最も重要なのは「テストをパスさせる」だ。XPが革新的だったのは、テストをソフトウェア開発におけるファーストクラスの活動に持ち上げたことである。このルールのなかでテストが最も重要な役割を担うのは当然だろう。ソフトウェアで何をするにしても、第一の目的は意図どおりにソフトウェアが動作することであり、テストはそれを確実にするためのものである。
 
 <!-- "Reveals intention" is Kent's way of saying the code should be easy to understand.  -->
 <!-- Communication is a core value of Extreme Programing, 
