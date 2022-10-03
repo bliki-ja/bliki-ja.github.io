@@ -1,5 +1,5 @@
 ---
-title: AgileManifestoMeeting
+title: アジャイルマニフェストのミーティング
 tags: [agile, agile history]
 ---
 
