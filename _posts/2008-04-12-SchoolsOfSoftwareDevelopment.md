@@ -3,10 +3,6 @@ title: ソフトウェア開発の学派
 tags: [agile, certification, process theory]
 ---
 
-http://martinfowler.com/bliki/SchoolsOfSoftwareDevelopment.html
-
-
-
 この話はもう何度目だろう。今回で最後にはなるまい。
 私は今、プラクティスを定義し、そのうちのいくつかを「ベスト」だとラベリングし、Cで始まる単語(認定[Certification])がどうとかいったような会話に陥っているのだ。
 これはありがちな議論なので、たった今始めたばかりにもかかわらず、私はこの議論の結末が見えている。
@@ -29,9 +25,9 @@ http://martinfowler.com/bliki/SchoolsOfSoftwareDevelopment.html
 
 私はここで「学派」を次のような定義で使っている。
 
-""4 a: a group of persons who hold a common doctrine or follow the same teacher (as in philosophy, theology, or medicine) <the Aristotelian school>; also : the doctrine or practice of such a group b: a group of artists under a common influence c: a group of persons of similar opinions or behavior; also : the shared opinions or behavior of such a group <other schools of thought>
-
---Merriam-Webster
+<!-- 4 a: a group of persons who hold a common doctrine or follow the same teacher (as in philosophy, theology, or medicine) <the Aristotelian school>; also : the doctrine or practice of such a group b: a group of artists under a common influence c: a group of persons of similar opinions or behavior; also : the shared opinions or behavior of such a group <other schools of thought> -->
+> 4 a: 共通の教義を持っているか、同じ教師 (哲学、神学、医学など) に従う人々のグループ <アリストテレス学派>。また : そのようなグループの教義または実践 b: 共通の影響下にあるアーティストのグループ c: 同様の意見または行動を持つ人々のグループ。また : そのようなグループの共有された意見または行動 <他の学派>
+> --Merriam-Webster
 
 
 
