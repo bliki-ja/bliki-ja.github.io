@@ -1,5 +1,5 @@
 ---
-title: ConstructorInitialization
+title: コンストラクタによる初期化
 tags: [API design]
 ---
 
