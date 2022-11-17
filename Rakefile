@@ -27,7 +27,7 @@ task :post_from do
   html = URI.open(url).read
   doc = Nokogiri::HTML.parse(html)
   t = Time.parse(doc.xpath('//p[@class="date"]').children.first.to_s)
-  tags = "[" + doc.xpath('//p[@class="tags"]/a').map{|a|
+  tags = "[" + doc.xpath('//p[@class="tag-link"]/a').map{|a|
     a.children.first.to_s.strip
   }.uniq.join(', ') + "]"
   create_file_name = "#{t.strftime("%Y-%m-%d-")}#{title}.md"
