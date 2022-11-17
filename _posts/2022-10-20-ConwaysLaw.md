@@ -191,7 +191,7 @@ This approach is often talked about in the world of microservices,  -->
 
 ドメイン駆動設計（DDD）はコンウェイの法則において重要な役割を果たします。
 DDDで重要となるのは[境界づけられたコンテキスト](/BoundedContext)を特定することなので、組織構造の定義を支援します。
-境界づけられたコンテキストの特徴は、独自の[ユビキタス言語](UbiquitousLanguage)を持ち、そのコンテキストで働く人たちが言語を定義および理解できることです。
+境界づけられたコンテキストの特徴は、独自の[ユビキタス言語](/UbiquitousLanguage)を持ち、そのコンテキストで働く人たちが言語を定義および理解できることです。
 そのようなコンテキストが、価値の流れに沿ったテーマの周囲に人々を集める方法になります。
 
 <!-- The key thing to remember about Conways Law is that the modular decomposition of a system and the decomposition of the development organization must be done together.  -->
