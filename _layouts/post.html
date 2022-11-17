@@ -6,12 +6,11 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta" style="text-align:right">
       {{ page.date | date: "%Y-%m-%d" }}
-      [<a href="http://martinfowler.com/bliki/{{ page.url | remove:'/' }}.html">original</a>]
-      <br />
-      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/{{ page.path }}">source and translators</a>]
+      [<a href="http://martinfowler.com/bliki/{{ page.url | remove:'/' }}.html">オリジナル記事</a>]
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/{{ page.path }}">翻訳者と原稿</a>]
 
     {% if page.tags.size != 0 %}<br />tags: 
-    {% for tag in page.tags %}<a href="/tags?{{tag | uri_escape}}">{{ tag }}</a>
+    {% for tag in page.tags %}<a href="/tags?{{tag | uri_escape}}" style="background-color: #ffc">{{ tag }}</a>
     {% unless forloop.last %},{% endunless %}
     {% endfor %}
     {% endif %}
