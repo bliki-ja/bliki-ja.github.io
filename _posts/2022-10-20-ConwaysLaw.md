@@ -142,7 +142,7 @@ This approach is often talked about in the world of microservices,  -->
 
 コンウェイの法則を受け入れることは無視するよりも優れていますが、この10年間で3番目の方法が見られるようになりました。
 開発チームの組織構造を変更して、望ましいソフトウェアアーキテクチャを目指すというものです。
-これは**逆コンウェイ戦略**と呼ばれるアプローチです[^4]。
+これは**逆コンウェイ作戦**と呼ばれるアプローチです[^4]。
 このアプローチは、[マイクロサービス](https://martinfowler.com/articles/microservices.html#OrganizedAroundBusinessCapabilities)の世界でよく話題に上ります。
 マイクロサービスの支持者たちは、顧客価値を提供するためのすべてのスキルを持つ、小規模で寿命の長い[ビジネスケイパビリティ中心](/BusinessCapabilityCentric)のチームを作ることを推奨しています。
 このような自律的なチームを編成し、コンウェイの法則を利用することで、チームと同様の自律的なサービスを促進するのです。各サービスは独立して改良およびデプロイできます。
@@ -153,7 +153,7 @@ This approach is often talked about in the world of microservices,  -->
 |------------------|----------------------------------------------------------------------------------------------------------------------------|
 | 無視する         | コンウェイの法則を考慮に入れていない。聞いたことがないか、当てはまらないと思っているからだ（ナレーター：当てはまります）。 |
 | 受け入れる       | コンウェイの法則の影響を認識している。アーキテクチャが設計者のコミュニケーションパターンと衝突しないようにしている。       |
-| 逆コンウェイ戦略 | 設計者のコミュニケーションパターンを変更して、望ましいソフトウェアアーキテクチャを促進している。                              |
+| 逆コンウェイ作戦 | 設計者のコミュニケーションパターンを変更して、望ましいソフトウェアアーキテクチャを促進している。                              |
 
 <!-- Responses to Conway's Law
  !-- Ignore	
@@ -175,7 +175,7 @@ This approach is often talked about in the world of microservices,  -->
 <!-- the point of Conway's Law is that we need to take into account its presence while changing both organization and code base.  -->
 <!-- And as usual, I'd recommend taking small steps while being vigilant for feedback. -->
 
-逆コンウェイ戦略は便利なツールですが、万能ではありません。
+逆コンウェイ作戦は便利なツールですが、万能ではありません。
 既存のシステムのアーキテクチャに柔軟性がない場合、それを変更しようとして開発組織を変更しても[即効性はありません](https://verraes.net/2022/05/conways-law-vs-rigid-designs/)。
 むしろ開発者とコードにミスマッチが生まれ、変更に摩擦が生じる可能性が高くなります。
 このような既存のシステムでは、コンウェイの法則の存在を考慮しながら、組織とコードベースの両方を変更する必要があります。
@@ -227,7 +227,7 @@ Bill Codding、Birgitta Boeckeler、Camilla Crispim、Chris Ford、Gabriel Sadak
 
 <!-- 2022-10-24: I added the paragraph about the inverse Conway maneuver and rigid architectures. I also added the footnote about remote-first working. -->
 
-2022-10-24: 逆コンウェイ戦略と柔軟性のないアーキテクチャに関する段落を追加しました。また、リモートファーストの働き方に関する脚注も追加しました。
+2022-10-24: 逆コンウェイ作戦と柔軟性のないアーキテクチャに関する段落を追加しました。また、リモートファーストの働き方に関する脚注も追加しました。
 
 
 <!-- ### Notes -->
@@ -253,4 +253,4 @@ Bill Codding、Birgitta Boeckeler、Camilla Crispim、Chris Ford、Gabriel Sadak
 [^3]: 場所は対面のコミュニケーションパターンに大きく貢献します。[リモートファースト](https://martinfowler.com/articles/remote-or-co-located.html#remote-first)の働き方では、全員がオンラインでコミュニケーションするため、距離の役割が低下します。コンウェイの法則は引き続き有効ですが、オンラインコミュニケーションパターンに基づきます。タイムゾーンはオンラインであっても大きな影響があります。
 
 <!-- 4: The term “inverse Conway maneuver” was coined by Jonny LeRoy and Matt Simons in an article published in the December 2010 issue of the Cutter IT journal. -->
-[^4]: 「逆コンウェイ戦略」という言葉は、Cutter ITジャーナルの2010年12月号に掲載された[記事](http://jonnyleroy.com/2011/02/03/dealing-with-creaky-legacy-platforms/)において、Jonny LeRoyとMatt Simonsが生み出したものです。
+[^4]: 「逆コンウェイ作戦」という言葉は、Cutter ITジャーナルの2010年12月号に掲載された[記事](http://jonnyleroy.com/2011/02/03/dealing-with-creaky-legacy-platforms/)において、Jonny LeRoyとMatt Simonsが生み出したものです。
