@@ -43,7 +43,7 @@ Cindyとオーストラリアに行ったとき、クイーンズランド州の
 <!-- My colleague Chris Stevenson was involved in a project that did this recently with a great deal of success. They published a first paper on this at XP 2004, and I'm hoping for more that describe more aspects of this project. They aren't yet at the point where the old application is strangled - but they've delivered valuable functionality to the business that gives the team the credibility to go further. And even if they stop now, they have a huge return on investment - which is more than many cut-over rewrites achieve. -->
 
 最近、同僚の[Chris Stevenson](http://www.skizz.biz/)があるプロジェクトで非常に大きな成功をあげた。
-このプロジェクトについての[最初の論文](http://www.skizz.biz/whitepapers/an-agile-approach-to-a-legacy-system.pdf)を[XP 2004](http://www.xp2004.org/)発表していたが、
+このプロジェクトについての[最初の論文](http://www.skizz.biz/whitepapers/an-agile-approach-to-a-legacy-system.pdf)を[XP 2004](http://www.xp2004.org/)で発表していたが、
 私はこのプロジェクトの様々な側面についてもっと記述してもらいたいと思っている。
 彼らはまだ古いアプリケーションを窒息死させるところまでは出来ていない。
 だが、彼らは価値ある機能をビジネスにもたらした。
