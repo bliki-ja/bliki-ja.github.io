@@ -10,7 +10,7 @@ http://martinfowler.com/bliki/ConstructorInitialization.html
 
 
 新しいオブジェクトを初期化する2つの方法のひとつ。
-もうひとつの方法はSetterInitializationである。
+もうひとつの方法は[セッターによる初期化](/SetterInitialization)である。
 
 
 
@@ -20,7 +20,7 @@ http://martinfowler.com/bliki/ConstructorInitialization.html
 
 ```ruby
 # ruby
-mf = Person.new('martin', 'fowler', 
+mf = Person.new('martin', 'fowler',
                 ['Turners Oyster Bar', 'Square and Compass'])
 ```
 
@@ -68,14 +68,14 @@ mf = Person.new('martin', 'fowler',
 
 ### コンストラクタに渡すコラボレータがたくさんあったらどうするの？
 
-コンストラクタのパラメータがたくさんあったら、その他のパラメータと同じく、CodeSmellだ。
-この状況を目にしたら、パラメータをDataClumpsだと見なして、オブジェクトに置き換える。
+コンストラクタのパラメータがたくさんあったら、その他のパラメータと同じく、[コードの臭い](/CodeSmell)だ。
+この状況を目にしたら、パラメータを[DataClumps](/DataClumps)だと見なして、オブジェクトに置き換える。
 コンストラクタのパラメータの数が他のメソッドよりも多いのはよくあることだ、
-なんて言われるけれど、ここはDataClumpsが見つかるいい場所なのだ。
+なんて言われるけれど、ここは[DataClumps](/DataClumps)が見つかるいい場所なのだ。
 
 
 
-### ContextualValidationと一緒に使うにはどうすればいいの？
+### [ContextualValidation](/ContextualValidation)と一緒に使うにはどうすればいいの？
 
 ここでの文脈は、オブジェクトの基本的な使用である——つまり、使い物になる状態であればそれでよいのだ。
 他の様々なアクティビティに使うには妥当でなくとも、
