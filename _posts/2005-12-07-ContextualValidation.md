@@ -1,5 +1,5 @@
 ---
-title: ContextualValidation
+title: 文脈型バリデーション
 tags: [domain driven design, application architecture]
 ---
 

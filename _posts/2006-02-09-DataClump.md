@@ -1,5 +1,5 @@
 ---
-title: DataClump
+title: データの塊
 tags: [bad things, clean code, refactoring]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: ServiceOrientedAmbiguity
+title: サービス指向あいまいさ
 tags: [application integration]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: CircuitBreaker
+title: サーキットブレイカー
 tags: [delivery, application architecture]
 ---
 

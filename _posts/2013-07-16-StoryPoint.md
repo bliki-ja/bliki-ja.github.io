@@ -1,5 +1,5 @@
 ---
-title: StoryPoint
+title: ストーリーポイント
 tags: [estimation]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: FoundationFramework
+title: 基礎型フレームワーク
 tags: [API design]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: HarvestedFramework
+title: 収穫型フレームワーク
 tags: [API design]
 ---
 

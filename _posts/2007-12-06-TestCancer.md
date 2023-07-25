@@ -1,5 +1,5 @@
 ---
-title: TestCancer
+title: テストの癌
 tags: [testing, bad things]
 ---
 

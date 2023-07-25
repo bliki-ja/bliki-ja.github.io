@@ -1,5 +1,5 @@
 ---
-title: DiversityImbalance
+title: 多様性のアンバランス
 tags: [bad things, diversity, internet culture]
 ---
 

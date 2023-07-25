@@ -1,5 +1,5 @@
 ---
-title: TypeInstanceHomonym
+title: 型インスタンス同音異義語
 tags: [domain driven design]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: OpenSpace
+title: オープンスペース
 tags: [conferences, collaboration]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: OverloadedGetterSetter
+title: オーバーロードしたゲッターとセッター
 tags: [bad things, API design]
 ---
 
