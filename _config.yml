@@ -31,10 +31,11 @@ defaults:
 #  syntax_highlighter: rouge
 
 plugins:
-  - jekyll-sitemap
-  - jemoji
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-sitemap
+  - jemoji
 
 exclude:
   - Gemfile
