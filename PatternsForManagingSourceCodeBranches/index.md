@@ -834,3 +834,6 @@ Badri Janakiraman、Dave Farley、James Shore、Kent Beck、Kevin Yeung、Marcos
 ## 更に知りたい方へ
 
 ブランチについて書かれた資料はたくさんありますが、私はそのすべてを真面目に調査できる立場にはありません。しかし、Steve Berczuk の本、[Software Configuration Management Patterns](https://www.amazon.co.jp/dp/4798112593/)は注目に値します。Steve 氏の著作は、彼の貢献者である Brad Appleton 氏の著作とともに、私がソースコード管理についてどのように考えるかに大きな影響を与えています。
+
+Originally translated by @yuichielectric
+

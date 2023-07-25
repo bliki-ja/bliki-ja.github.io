@@ -35,6 +35,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-relative-links
   - jekyll-sitemap
+  - jekyll-mentions
   - jemoji
 
 exclude:
