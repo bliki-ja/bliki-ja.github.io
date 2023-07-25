@@ -5,6 +5,9 @@ tags: [encapsulation]
 
 http://martinfowler.com/bliki/SelfEncapsulation.html
 
+**注意：以下は古いバージョン**
+
+
 自己カプセル化とは、
 たとえクラス内からであっても、
 アクセサメソッドを経由して
