@@ -5,7 +5,7 @@ tags: [team organization]
 
 <!-- A two-pizza team is a small team that fully supports software for a particular business capability. The term became popular as it used to describe how Amazon organized their software staff. -->
 
-「2枚のピザチーム」とは、特定のビジネス機能のソフトウェアを完全にサポートする小さなチームのことを指します。Amazonがソフトウェア人材の組織化について説明したときに用いられたことから、有名になりました。
+「2枚のピザチーム」とは、特定のビジネス機能のソフトウェアを完全にサポートする小さなチームのことを指します。Amazonがソフトウェア人材の組織化について説明するときに用いられたことから有名になりました。
 
 <!-- The name suggests the most obvious aspect of such teams, their size. 
  !-- The name comes from the principle that the team should no larger than can be fed with two pizzas. 
@@ -31,7 +31,7 @@ tags: [team organization]
 名前が示しているのは規模だけですが、同じくらい重要なのはチームのフォーカスです。
 チームは、他のチームへの引き継ぎや依存関係を最小限に抑えながら、価値のあるソフトウェアをユーザーに届けるために必要なすべての能力を備えている必要があります。
 顧客のニーズを把握し、それを動作するソフトウェアにすばやく変換し、
-顧客のニーズの変化に応じてソフトウェアの実験と進化を行なっていくことができます。
+顧客のニーズの変化に応じてソフトウェアの実験と進化を行なっていくことができるチームです。
 
 <!-- Two-pizza teams are Outcome Oriented rather than Activity Oriented.  -->
 <!-- They don't organize along lines of skills (databases, testing, operations), 
@@ -44,9 +44,9 @@ tags: [team organization]
  !-- famously responsible for any production outages (often meaning they on the hook for off-hours support) - a principle known as "you build it, you run it". -->
 
 2枚のピザチームは、[アクティビティ指向](/ActivityOriented)ではなく[アウトカム指向](/OutcomeOriented)です。
-スキル (データベース、テスト、運用) によって組織化されているのではなく、顧客をサポートするために必要なすべての責任を引き受けます。
+スキル（データベース、テスト、運用）によって組織化されているのではなく、顧客をサポートするために必要なすべての責任を引き受けます。
 こうすることで、
-顧客に機能が届くまでの流れのなかでチーム間の引き継ぎを最小限に抑え、
+顧客に機能が届くまでの流れのなかで、チーム間の引き継ぎを最小限に抑え、
 サイクルタイム（機能のアイデアを本番環境のコードに変えるまでに必要な時間）を短縮できます。
 このアウトカム指向とは、
 コードを本番環境にデプロイし、
@@ -64,7 +64,7 @@ tags: [team organization]
 顧客のニーズにフォーカスするというのは、
 ビジネス機能が生きている限りサポートする[ビジネス機能中心](/BusinessCapabilityCentric)の長寿なチームであるという意味です。
 ソフトウェアが「完成」すると解散するプロジェクト指向のチームとは違い、
-彼らは[寿命の長いプロダクト](https://martinfowler.com/articles/products-over-projects.html)の存続と強化のために自分たちはいると考えています。
+彼らは[寿命の長いプロダクト](https://martinfowler.com/articles/products-over-projects.html)の存続と強化のために自分たちは存在すると考えています。
 こうしたことから、**プロダクトチーム**と呼ばれることがあります。
 
 <!-- The wide scope of skills and responsibilities that a two-pizza team needs 
@@ -86,9 +86,9 @@ tags: [team organization]
 大規模な組織の場合は、
 面倒な引き継ぎをすることなく、
 2枚のピザチーム同士が協力しやすくなるように、
-独自の内部プラットフォームを構築するでしょう。
-[チームトポロジー](/TeamTopologies)は、
-2枚のピザチーム（チームトポロジーでは**ストリームアラインドチーム**と呼ばれる）をサポートする
+独自の内部プラットフォームを構築することになるでしょう。
+[チームトポロジー](/TeamTopologies)では、
+2枚のピザチーム（チームトポロジーでは**ストリームアラインドチーム**と呼ばれます）をサポートする
 さまざまな種類のチームやインタラクションを提供しています。
 
 <!-- For business-capability centric teams to be effective, 
@@ -98,11 +98,11 @@ tags: [team organization]
 <!-- This responsibility for such teams to provide services to their peers is often overlooked,
  !-- if it doesn't happen it will lead to sclerotic information silos. -->
 
-ビジネス機能中心のチームが効果的であるためには、
+ビジネス機能中心のチームが効果的であるには、
 チーム同士がお互いの能力を活用する必要があります。
 したがって、チームは慎重に設計されたAPIを使用して、自分たちの能力を仲間に提供する必要があります。
 他のチームにサービスを提供するという責任は見過ごされがちですが、
-これをしないと情報のサイロ化につながってしまいます。
+これをやっておかないと情報のサイロ化につながってしまいます。
 
 <!-- Organizing people around business capabilities like this
  !-- has a profound interaction with the way the software for an organization is structured
@@ -118,7 +118,7 @@ tags: [team organization]
 組織のソフトウェアの構造と深く関係しています。
 [コンウェイの法則](/ConwaysLaw)の影響があるからです。
 2枚のピザチームが構築したソフトウェアコンポーネントは、
-明確なAPIを使用して、うまく制御したインタラクションを行なう必要があります。
+明確なAPIを使用して、制御したインタラクションを行なう必要があります。
 こうした考え方が[マイクロサービス](https://martinfowler.com/microservices/)の開発につながりました。
 しかし、マイクロサービスがすべてではありません。
 モノリシックなランタイムで適切に構造化されたコンポーネントを使用するほうが良いでしょう。
