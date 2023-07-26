@@ -5,7 +5,7 @@ tags: [team organization]
 
 <!-- A two-pizza team is a small team that fully supports software for a particular business capability. The term became popular as it used to describe how Amazon organized their software staff. -->
 
-「2枚のピザチーム」とは、特定のビジネス機能のソフトウェアを完全にサポートする小さなチームのことを指します。Amazonがソフトウェア人材の組織化について説明するときに用いられたことから有名になりました。
+「2枚のピザチーム」とは、特定のビジネス機能のソフトウェアを完全にサポートする小さなチームのことを指します。Amazonがソフトウェア人材の組織化について説明するときに用いたことから有名になりました。
 
 <!-- The name suggests the most obvious aspect of such teams, their size. 
  !-- The name comes from the principle that the team should no larger than can be fed with two pizzas. 
@@ -14,8 +14,8 @@ tags: [team organization]
  !-- Typically I hear this means such teams are about 5-8 people, 
  !-- although my experience suggests that the upper limit is somewhere about 15. -->
 
-その名前が示すように、こうしたチームの最も明らかな特徴は規模です。
-「チームは2枚のピザで満足できる人数を超えるべきではない」という原則に由来しています
+名前が示すように、こうしたチームの最も明らかな特徴は規模です。
+これは「チームは2枚のピザで満足できる人数を超えるべきではない」の原則に由来しています
 （アメリカのピザの話です。はじめて見たときにはびっくりするほど巨大に思えました）。
 チームを小さく保つことで、結束力が高まり、緊密な協力関係が生まれます。
 通常は5〜8人程度になると思いますが、上限は15人程度になるでしょう。
@@ -29,8 +29,8 @@ tags: [team organization]
  !-- 	able to experiment and evolve that software as their customer's needs change. -->
 
 名前が示しているのは規模だけですが、同じくらい重要なのはチームのフォーカスです。
-チームは、他のチームへの引き継ぎや依存関係を最小限に抑えながら、価値のあるソフトウェアをユーザーに届けるために必要なすべての能力を備えている必要があります。
-顧客のニーズを把握し、それを動作するソフトウェアにすばやく変換し、
+チームは、他のチームへの引き継ぎや依存関係を最小限に抑えながら、価値のあるソフトウェアをユーザーに届けるために必要な能力をすべて備えている必要があります。
+つまり、顧客のニーズを把握し、それを動作するソフトウェアにすばやく変換し、
 顧客のニーズの変化に応じてソフトウェアの実験と進化を行なっていくことができるチームです。
 
 <!-- Two-pizza teams are Outcome Oriented rather than Activity Oriented.  -->
@@ -86,10 +86,9 @@ tags: [team organization]
 大規模な組織の場合は、
 面倒な引き継ぎをすることなく、
 2枚のピザチーム同士が協力しやすくなるように、
-独自の内部プラットフォームを構築することになるでしょう。
+独自の社内プラットフォームを構築することになるでしょう。
 [チームトポロジー](/TeamTopologies)では、
-2枚のピザチーム（チームトポロジーでは**ストリームアラインドチーム**と呼ばれます）をサポートする
-さまざまな種類のチームやインタラクションを提供しています。
+2枚のピザチーム（チームトポロジーでは**ストリームアラインドチーム**と呼ばれます）をサポートするさまざまな種類のチームやインタラクションが提供されています。
 
 <!-- For business-capability centric teams to be effective, 
  !-- they will need to make use of each others' capabilities.  -->
@@ -98,9 +97,10 @@ tags: [team organization]
 <!-- This responsibility for such teams to provide services to their peers is often overlooked,
  !-- if it doesn't happen it will lead to sclerotic information silos. -->
 
-ビジネス機能中心のチームが効果的であるには、
-チーム同士がお互いの能力を活用する必要があります。
-したがって、チームは慎重に設計されたAPIを使用して、自分たちの能力を仲間に提供する必要があります。
+ビジネス機能中心のチームが効果的であるためには、
+チーム同士がお互いの能力を利用する必要があります。
+したがって、チームは慎重に設計されたAPIを使用して、
+自分たちの能力を仲間に提供する必要があります。
 他のチームにサービスを提供するという責任は見過ごされがちですが、
 これをやっておかないと情報のサイロ化につながってしまいます。
 
@@ -118,7 +118,7 @@ tags: [team organization]
 組織のソフトウェアの構造と深く関係しています。
 [コンウェイの法則](/ConwaysLaw)の影響があるからです。
 2枚のピザチームが構築したソフトウェアコンポーネントは、
-明確なAPIを使用して、制御したインタラクションを行なう必要があります。
+明確なAPIを使用して、制御されたインタラクションを行なう必要があります。
 こうした考え方が[マイクロサービス](https://martinfowler.com/microservices/)の開発につながりました。
 しかし、マイクロサービスがすべてではありません。
 モノリシックなランタイムで適切に構造化されたコンポーネントを使用するほうが良いでしょう。
