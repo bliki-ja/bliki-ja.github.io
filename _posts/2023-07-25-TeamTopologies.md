@@ -247,7 +247,7 @@ George Boxが「すべてはモデルは間違っているが、なかには役�
 ### 謝辞
 
 <!-- Andrew Thal, Andy Birds, Chris Ford, Deepak Paramasivam, Heiko Gerin, Kief Morris, Matteo Vaccari, Matthew Foster, Pavlo Kerestey, Peter Gillard-Moss, Prashanth Ramakrishnan, and Sandeep Jagtap discussed drafts of this post on our internal mailing list, providing valuable feedback. -->
-Andrew Thal、Andy Birds、Chris Ford、Deepak Paramasivam、Heiko Gerin、Kief Morris、Matteo Vaccari、Matthew Foster、Pavlo Kerestey、Peter Gillard-Moss、Prashanth Ramakrishnan、Sandeep Jagtap たちと草稿について社内メーリングリストで議論し、有益なフィードバックをくれました。
+Andrew Thal、Andy Birds、Chris Ford、Deepak Paramasivam、Heiko Gerin、Kief Morris、Matteo Vaccari、Matthew Foster、Pavlo Kerestey、Peter Gillard-Moss、Prashanth Ramakrishnan、Sandeep Jagtap たちと草稿について社内メーリングリストで議論し、有益なフィードバックをもらいました。
 
 <!-- Matthew Skelton and Manuel Pais kindly provided detailed comments on this post, 
  !-- 	including sharing some of their recent thinking since the book. -->
