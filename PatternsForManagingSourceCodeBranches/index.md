@@ -1,6 +1,7 @@
 ---
 title: ソースコードブランチ管理のパターン
 tags: [continuous integration]
+toc_off: true
 ---
 
 [https://martinfowler.com/articles/branching-patterns.html](https://martinfowler.com/articles/branching-patterns.html)
