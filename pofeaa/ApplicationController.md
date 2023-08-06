@@ -18,13 +18,13 @@ title: アプリケーションコントローラ
 他にも、ある条件下でのみ表示されるものだとか、
 以前の入力に応じて異なる画面が表示されるものなどがある。
 
-ある程度は、[ModelViewController](../ModelViewController) (330) の複数のインプット コントローラでこういった判断を行うことができる。
+ある程度は、[ModelViewController](ModelViewController) (330) の複数のインプット コントローラでこういった判断を行うことができる。
 しかし、アプリケーションが複雑になると、
 扱う画面の異なるいくつかのコントローラが
 同一条件下で何を行えばよいか知る必要がでてきて、
 コードが重複してしまうことがある。
 
-こういった重複は、すべてのフローロジックを[ApplicationController](../ApplicationController)に置くことで解決できる。
-インプット コントローラは[ApplicationController](../ApplicationController)に
+こういった重複は、すべてのフローロジックを[ApplicationController](ApplicationController)に置くことで解決できる。
+インプット コントローラは[ApplicationController](ApplicationController)に
 モデルに対して実行する適切なコマンド、
 アプリケーションのコンテキストに合った適切なビューを尋ねる。
