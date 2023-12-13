@@ -1,11 +1,18 @@
 ---
-layout: page
+layout: 404
 title: 404 Not Found
 permalink: /404.html
 ---
 
 Sorry this page does not exist =(
 
----
-
-末尾の「/」を削ると表示されるかもしれません。
+<script>
+function redirectToUrlWithoutTrailingSlash() {
+    var currentUrl = window.location.href;
+    if(currentUrl.endsWith('/')) {
+        var newUrl = currentUrl.slice(0, -1);
+        window.location.href = newUrl;
+    }
+}
+window.onload = redirectToUrlWithoutTrailingSlash;
+</script>
