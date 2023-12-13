@@ -42,13 +42,14 @@ tags: [testing, programming style]
 <!-- During the process 
  !-- 	we should add more tests to our lists as they occur to us. -->
 
+
 この3つのステップ（レッド・グリーン・リファクタと呼ばれる）がプロセスの中心だが、
 最初にテストケースのリストを書き出すという重要なステップも存在する。
-こうしたテストから1つを選択し、それにレッド・グリーン・リファクタを適用する。
+リストからテストを1つだけ選択し、それにレッド・グリーン・リファクタを適用する。
 それが終わったら、次のテストを選択する。
-テストに適切な順番をつけることはスキルであり、
-我々は設計の重要なポイントまで素早く到達できるテストを選択したいと考えている。
-プロセスの途中でも思いついたテストをリストに追加すべきである。
+設計の重要なポイントまで素早く到達できるテストを選択したい。
+テストに適切な順番をつけることはスキルである。
+また、プロセスの途中でも思いついたテストをリストに追加すべきである。
 
 <!-- Writing the test first, what XPE2 calls Test-First Programming, provides two main benefits. 
  !-- Most obviously it's a way to get SelfTestingCode, 
@@ -58,11 +59,11 @@ tags: [testing, programming style]
 <!-- This focus on interface and how you use a class helps us separate interface from implementation, a key element of good design that many programmers struggle with. -->
 
 テストを先に書くこと（[XPの本](https://www.amazon.co.jp/dp/B012UWOLOQ/)では「テストファーストプログラミング」と呼ばれている）には2つの大きな利点がある。
-わかりやすいのは、[自己テストコード](/SelfTestingCode)が手に入ることだろう。
-なぜならば、テストをパスさせるためのコードしか書くことができないからだ。
-2番目の利点は、テストを先に考えれば、コードのインターフェイスから考えるようになることだ。
+わかりやすいのは、[自己テストコード](/SelfTestingCode)を手に入れる方法になることである。
+なぜなら、テストをパスさせるためのコードを書くことしかできないからだ。
+2番目の利点は、テストを先に考えれば、コードのインターフェイスから考えられるようになることだ。
 インターフェイスとクラスの使い方にフォーカスすることで、インターフェイスと実装の分離ができるようになる。
-これは多くのプログラマーが苦労している優れた設計の重要な要素である。
+このことは、多くのプログラマーが苦労している優れた設計に必要な重要な要素である。
 
 <!-- The most common way that I hear to screw up TDD is neglecting the third step. Refactoring the code to keep it clean is a key part of the process, otherwise we just end up with a messy aggregation of code fragments. (At least these will have tests, so it's a less painful result than most failures of design.) -->
 
@@ -86,7 +87,7 @@ Kentによる[TDDの標準的な方法](https://tidyfirst.substack.com/p/canon-t
  !-- that also connects it to the rest of effective agile development. 
  !-- James also wrote a series of screencasts called Let's Play TDD. -->
 
-James Shoreの著書『[The Art of Agile Development](https://www.amazon.co.jp/Art-Agile-Development-English-ebook/dp/B09JL2JW4V/)』の関連する章もTDDとアジャイル開発を接続するもうひとつの重要な説明である。Jamesは「[Let's Play TDD](https://www.jamesshore.com/v2/projects/lets-play-tdd)」というスクリーンキャストも提供している。
+James Shoreの著書『[The Art of Agile Development](https://www.amazon.co.jp/Art-Agile-Development-English-ebook/dp/B09JL2JW4V/)』のTDDの章は、TDDとアジャイル開発を接続するもうひとつの重要な説明である。Jamesは「[Let's Play TDD](https://www.jamesshore.com/v2/projects/lets-play-tdd)」というスクリーンキャストも提供している。
 
 <!-- Revisions -->
 ### 改訂
