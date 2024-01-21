@@ -5,7 +5,7 @@ tags: [testing, programming style]
 
 <!-- Test-Driven Development (TDD) is a technique for building software 
  !-- 	that guides software development by writing tests. It was developed by Kent Beck in the late 1990's as part of Extreme Programming. In essence we follow three simple steps repeatedly: -->
-テスト駆動開発（Test-Driven Developed: TDD）は、テストを書くことでソフトウェア開発をガイドするソフトウェア構築手法である。
+テスト駆動開発（Test-Driven Development: TDD）は、テストを書くことでソフトウェア開発をガイドするソフトウェア構築手法である。
 1990年代後半に[Kent Beck](https://substack.com/@kentbeck)がエクストリームプログラミングの一部として開発したものである。
 基本的には、以下のシンプルな3つのステップを繰り返して実行する。
 
