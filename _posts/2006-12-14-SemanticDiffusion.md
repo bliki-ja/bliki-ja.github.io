@@ -13,7 +13,7 @@ tags: [agile adoption]
  !-- in a process of semantic diffusion - to use yet another potential addition to our jargon. -->
 
 ソフトウェア開発で目撃したものを説明するために、私は[造語](Neologisms)を作る習慣があります。
-便利な用語が少ないために、ソフトウェア開発の分野の書き手はこのようなことをよくやるのです。
+便利な用語が少ないので、ソフトウェア開発の分野の書き手はこのようなことをよくやります。
 造語を作るときの問題は、意味の希薄化により本来の意味が失われ、別の意味が追加されてしまうことです。
 
 
@@ -22,10 +22,9 @@ tags: [agile adoption]
  !-- 	but then gets spread through the wider community in a way that weakens that definition. 
  !-- This weakening risks losing the definition entirely - and with it any usefulness to the term. -->
 
-意味の希薄化は、個人やグループが作った用語があり、適切に定義されていたにもかかわらず、歪められた定義がコミュニティに広まったときに発生します。
+意味の希薄化が発生するのは、個人やグループが作った用語があり、適切に定義されていたにもかかわらず、歪められた定義がコミュニティに広まったときです。
 これにより、用語の定義が完全に失われる危険性があります。
 また、それに伴い、用語の利便性も失われてしまうでしょう。
-
 
 <!-- I'm partly prompted to write this because I see this semantic diffusion happening very publicly to two terms at the moment: 'agile' and 'Web2.0'.  -->
 <!-- Both were coined in the last few years 
@@ -36,7 +35,7 @@ tags: [agile adoption]
  !-- (A more personal case is RefactoringMalapropism, but I'll leave that aside for the moment.) -->
 
 私が本記事を書こうと思ったのは、「アジャイル」と「[Web 2.0](Web2.0)」に意味の希薄化が発生しているからです。
-いずれも過去数年に作られた用語であり、しっかりとした定義があります（アジャイルには[アジャイルマニフェスト](https://agilemanifesto.org/)があり、署名者たちが執筆した書籍や[記事](https://www.martinfowler.com/articles/newMethodology.html)も多数あります。Web 2.0にはTim O'Reillyが[定義を記したすばらしい記事](http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-web-20.html)があります）。
+いずれも数年前に作られた用語であり、しっかりとした定義があります（アジャイルには[アジャイルマニフェスト](https://agilemanifesto.org/)があり、署名者たちが執筆した書籍や[記事](https://www.martinfowler.com/articles/newMethodology.html)も多数あります。Web 2.0にはTim O'Reillyが[定義を記したすばらしい記事](http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-web-20.html)があります）。
 しかし、どちらの用語も現場では意味が改変されています。
 私は「アジャイル手法では計画を立てることはない」や「Web 2.0とはAJAXを使用することである」と誤解している人たちに出会ったことがあります（個人的なケースとしては[リファクタリングの誤用](RefactoringMalapropism)もありますが、それは脇に置いておきましょう）。
 
@@ -55,7 +54,7 @@ tags: [agile adoption]
 用語の発案者ではない人たちが、元の定義に注意を払うことなく用語について話しているのです。
 その話を聞いた人たちが、さらに独自の歪みを追加します。
 このような伝言ゲームを何度か繰り返していくと、発案者まで戻らない限り、用語の重要な意味が失われます。
-皮肉なことに、この影響を最も受けやすいのが人気の用語です。
+皮肉なことに、この影響を最も受けやすいのが人気のある用語です。
 人気のない用語の伝言ゲームに加わる人はいないので、これは必然とも言えます。
 
 <!-- Semantic diffusion tends to coincide 
@@ -69,7 +68,7 @@ tags: [agile adoption]
  !-- 	that are more likely to lead to misunderstanding - such as writing. 
  !-- Many followers aren't fortunate enough to work directly with the originators and thus learn directly from them. -->
 
-意味の希薄化は、アイデアのハイプサイクルの「ピーク」と一致しやすいです。
+意味の希薄化は、アイデアのハイプサイクルの「ピーク」と一致します。
 アイデアが魅力的になると、多くの人たちが……何と言うか……その魅力にひかれます。
 そして、その用語について話したり、教えたりします。
 こうした人たちが原典に戻ることはありません。伝言ゲームの始まりです。
@@ -87,7 +86,7 @@ tags: [agile adoption]
  !-- 	may reduce semantic diffusion, but I don't think it avoids the problem completely.  -->
 <!-- After all we saw semantic diffusion occur to 'object-oriented' which is a neutral term. -->
 
-人気に関連する指標は「望ましさ」です。
+人気と関連する指標は「望ましさ」です。
 響きの良い単語は意味の希薄化の影響を受けやすいのです。
 「アジャイル」はそうなりたいと思えますが、アジャイルの反対語はそうではありません。
 「Web 1.0」のままでいたい人などいるでしょうか？
@@ -103,7 +102,7 @@ Kent Beckはこうした効果に気づき、意図的に「エクストリー�
 <!-- Extreme Programming's list of concrete practices may also reduce this problem 
  !-- 	compared to agile's broader list of values and principles. -->
 
-意味の希薄化は、具体的な技術よりも幅広い概念で発生する可能性が高いです。
+意味の希薄化は、具体的な技術よりも幅広い概念のほうが発生しやすいです。
 たとえば、今はRuby on Railsがブームですが、具体的なツールなので意味が歪められることは少ないでしょう。
 エクストリームプログラミングの具体的なプラクティスも、アジャイルの価値や原則などと比べると、こうした問題は軽減されるでしょう。
 
@@ -138,9 +137,9 @@ Kent Beckはこうした効果に気づき、意図的に「エクストリー�
 以前、ほぼすべてのソフトウェアツールや手法がオブジェクト指向だった時代がありました。
 数年後の現在では、OOの本質的な意味が理解されています。
 同じことはパターンでも起こりました。
-したがって、用語の意味は回復しており、普及によって用語の意味が失われるわけではありません。
-このプロセスは以前にも経験したことがあり、予想ができたので、それほど心配はしていません。
-これはアイデアが普及する際には避けられないことですし、問題はあるものの、誰にも知られないよりもブームになるほうが良いと思います。
+したがって、用語の意味は回復しており、用語が普及しても意味が失われるわけではありません。
+このプロセスは以前にも経験したことがあり、予想もできているので、それほど心配はしていません。
+これはアイデアが普及する際には避けられないことですし、問題はあるものの、誰にも知られないよりもブームになるほうが好ましいと思います。
 最後に気休めの考えを伝えておくと、同じく避けられない反論があった場合には、本来の意味に立ち戻ればいいのです。
 また、実際に起きたことではありますが、意味が完全に失われた用語をすぐには思いつかないので、私は安心しています（SOAは当てはまりません。合意された意味が最初から存在しなかったからです）。
 
@@ -157,7 +156,7 @@ Kent Beckはこうした効果に気づき、意図的に「エクストリー�
 最終的な結果が何であれ、私たちは意味の希薄化が起こるたびに対処しなければなりません。
 選択肢のひとつは放棄です。希薄化した用語を捨て、新しい用語を選択します。
 私はこの選択肢は好きではありません。新しい用語は混乱を招くだけであり、たとえうまくいったとしても、新しい用語が同じプロセスを繰り返すことになります。
-したがって、本当の意味を理解している人たちに向けて、現在の用語を何度も説明し続けることが私の好みです。
+したがって、本当の意味を理解している人たちに向けて、現在の用語を何度も説明し続けることのほうが私の好みです。
 
 <!-- A further complication is that these terms also shift.  -->
 <!-- I'm sure if you asked the original seventeen authors of the agile manifesto, 
