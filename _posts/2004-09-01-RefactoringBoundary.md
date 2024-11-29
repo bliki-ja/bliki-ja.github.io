@@ -24,6 +24,7 @@ http://martinfowler.com/bliki/RefactoringBoundary.html
 正式に定義することは出来ないが、事例を考えることは有益だと思うので、
 いくつか bliki にエントリしていこうと思う。
 
-* IsFixingAnUnknownBugRefactoring
-* IsOptimizationRefactoring
-* IsDeclarationOrderingRefactoring
+* [インタフェースの変更はリファクタリングか？](IsChangingInterfacesRefactoring)
+* [未知のバグフィックスはリファクタリングか？](IsFixingAnUnknownBugRefactoring)
+* [最適化はリファクタリングか？](IsOptimizationRefactoring)
+* [宣言の順序変更はリファクタリングか？](IsDeclarationOrderingRefactoring)

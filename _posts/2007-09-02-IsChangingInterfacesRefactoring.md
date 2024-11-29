@@ -1,5 +1,5 @@
 ---
-title: インタフェースの変更はリファクタリングか
+title: インタフェースの変更はリファクタリングか？
 tags: [refactoring boundary]
 ---
 
