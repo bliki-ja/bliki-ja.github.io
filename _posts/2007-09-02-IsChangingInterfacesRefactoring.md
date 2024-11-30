@@ -30,8 +30,8 @@ http://www.martinfowler.com/bliki/IsChangingInterfacesRefactoring.html
 
 
 インタフェースの変更によるリファクタリングは、あなたがすべての呼び出し元を把握しているという前提に立っている。
-そのため、PublishedInterfaceを扱うときには注意が必要だ。
-PublishedInterfaceでは、インタフェースそのものがシステムの振る舞いとみなされるからだ。
+そのため、[公布済みインターフェイス](PublishedInterface)を扱うときには注意が必要だ。
+公布済みインターフェイスでは、インタフェースそのものがシステムの振る舞いとみなされるからだ。
 
 
 
