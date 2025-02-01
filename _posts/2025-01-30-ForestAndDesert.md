@@ -3,6 +3,8 @@ title: 森と砂漠
 tags: [agile, process theory]
 ---
 
+![](https://martinfowler.com/bliki/images/forest-desert.png)
+
 <!-- The Forest and the Desert is a metaphor for thinking about software development processes, developed by Beth Anders-Beck and her father Kent Beck.  -->
 <!-- It posits that 
  !-- 	two communities of software developers 
