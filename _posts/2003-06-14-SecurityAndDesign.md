@@ -7,7 +7,7 @@ http://martinfowler.com/bliki/SecurityAndDesign.html
 
 この先週末、フロリダをぶらぶらしてきた。楽しかったなあ。
 マイクロソフトアーキテクチャ会議で、Dan Sandlin と David LeBlanc と話してきたのだ。知らない人のために言うと、David LeBlanc というのは、めちゃくちゃ有名な本『[Writing Secure Code](http://www.amazon.com/exec/obidos/tg/detail/-/0735617228)』を Michael Howard と共著された人。
-私が 『[P of EAA](http://martinfowler.com/books.html#eaa)（今週、Java World の[賞](http://www.javaworld.com/javaworld/jw-06-2003/jw-0609-eca-p3.html)を取ったぜ）』について喋って、質疑応答を受けて、それから、David がセキュリティについて話を続けた。
+私が 『[P of EAA](http://martinfowler.com/books.html#eaa)（今週、JavaWorld の[賞](http://www.javaworld.com/javaworld/jw-06-2003/jw-0609-eca-p3.html)を取ったぜ）』について喋って、質疑応答を受けて、それから、David がセキュリティについて話を続けた。
 
 その組み合わせをおかしいと思った人たちがいたみたいだ。面白い。
 ということはつまり、この2つのトピックに興味を示すひとはいないってことだな。
