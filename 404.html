@@ -8,9 +8,9 @@ Sorry this page does not exist =(
 
 <script>
 function redirectToUrlWithoutTrailingSlash() {
-    var currentUrl = window.location.href;
-    if(currentUrl.endsWith('/')) {
-        var newUrl = currentUrl.slice(0, -1);
+    const currentUrl = window.location.href;
+    if (currentUrl.endsWith('/')) {
+        const newUrl = currentUrl.slice(0, -1);
         window.location.href = newUrl;
     }
 }

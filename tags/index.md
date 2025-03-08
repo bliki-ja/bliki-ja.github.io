@@ -19,15 +19,15 @@ title: tag
 
 <script>
 function getTag() {
-  var href = window.location.href;
+  const href = window.location.href;
   if (href.indexOf('?') == -1) {
     return "";
   }
-  var hashes = href.slice(href.indexOf('?') + 1).split('&');
+  const hashes = href.slice(href.indexOf('?') + 1).split('&');
   return unescape(hashes[0]);
 }
 
-var tag = getTag();
+const tag = getTag();
 if (tag == "") {
   $(".tagsec").each(function() {$(this).show()});
 } else {
