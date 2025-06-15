@@ -3,7 +3,7 @@ title: 電子投票機
 tags: [tools]
 ---
 
-http://martinfowler.com/bliki/VotingMachines.html
+https://martinfowler.com/bliki/VotingMachines.html
 
 つい最近あった選挙における不正行為疑惑についてまだ確信は得ていないが、
 電子投票機の設計については大いに懸念を抱いている。

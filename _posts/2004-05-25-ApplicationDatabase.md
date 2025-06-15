@@ -3,7 +3,7 @@ title: アプリケーションデータベース
 tags: [application integration, database]
 ---
 
-http://martinfowler.com/bliki/ApplicationDatabase.html
+https://martinfowler.com/bliki/ApplicationDatabase.html
 
 私は、単一のアプリケーションによって制御され、アクセスされるデータベースのことを（[IntegrationDatabase](/IntegrationDatabase)とは対照的に）アプリケーションデータベースと呼んでいます。データベースにアクセスするアプリケーションはひとつなので、アプリケーション要求を簡単に満たせるよう、データベースを具体的に定義することが出来ます。これにより、データベーススキーマはより具体的となり、理解しやすくなりますし、[IntegrationDatabase](/IntegrationDatabase)よりも複雑ではなくなります。
 

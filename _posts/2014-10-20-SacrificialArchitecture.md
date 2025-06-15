@@ -3,7 +3,7 @@ title: 犠牲的アーキテクチャ
 tags: [process theory, evolutionary design, application architecture]
 ---
 
-http://martinfowler.com/bliki/SacrificialArchitecture.html
+https://martinfowler.com/bliki/SacrificialArchitecture.html
 
 
 会議の席であなたは考えている。自分のチームが二年間かけて書いてきたコードのことを。そして決断に至る。いま打てる最善の手は、あのコードをすべて投げ捨てまったく新しいアーキテクチャを再構築することだ。死にゆくコード、それに費やした時間、自分が下し続けてきた判断。この決断は、あなたをどんな気持ちにするだろう？

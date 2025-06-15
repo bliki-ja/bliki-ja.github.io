@@ -3,7 +3,7 @@ title: 継続的デリバリー
 tags: [delivery, version control, continuous integration]
 ---
 
-http://martinfowler.com/bliki/ContinuousDelivery.html
+https://martinfowler.com/bliki/ContinuousDelivery.html
 
 継続的デリバリーはソフトウェア開発における規律のひとつだ。
 この規律に従ってソフトウェアを作れば、いつでも本番環境にリリースできるようになる。
@@ -37,11 +37,11 @@ http://martinfowler.com/bliki/ContinuousDelivery.html
 業務的に、あまり頻繁なデプロイが好ましくないなどの理由であることが多い。
 つまり、継続的デプロイメントをするためには継続的デリバリーが必須だということだ。
 
-[継続的インテグレーション](http://martinfowler.com/articles/continuousIntegration.html)は、開発環境の中での統合やビルドそしてテストを指すという考えかたが一般的だ。
+[継続的インテグレーション](https://martinfowler.com/articles/continuousIntegration.html)は、開発環境の中での統合やビルドそしてテストを指すという考えかたが一般的だ。
 継続的デリバリーはこれをベースにしたもので、最終段階を本番環境へのデプロイまでにするというものだ。
 
-詳しい情報は、[ガイドページ](http://martinfowler.com/delivery.html)からたどれる資料をあたって欲しい。
-特に[この本](http://martinfowler.com/books/continuousDelivery.html)を読もう。
+詳しい情報は、[ガイドページ](https://martinfowler.com/delivery.html)からたどれる資料をあたって欲しい。
+特に[この本](https://martinfowler.com/books/continuousDelivery.html)を読もう。
 
 ## 謝辞
 

@@ -3,7 +3,7 @@ title: UpcomingTalks
 tags: TAGS
 ---
 
-http://martinfowler.com/bliki/UpcomingTalks.html
+https://martinfowler.com/bliki/UpcomingTalks.html
 
 2007/1/31
 

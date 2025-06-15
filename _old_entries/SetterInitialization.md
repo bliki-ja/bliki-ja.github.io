@@ -3,7 +3,7 @@ title: SetterInitialization
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/SetterInitialization.html
+https://martinfowler.com/bliki/SetterInitialization.html
 
 //One of two approaches to initializing objects, the other is ConstructorInitialization.
 

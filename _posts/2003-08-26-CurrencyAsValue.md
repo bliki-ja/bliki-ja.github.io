@@ -3,7 +3,7 @@ title: CurrencyAsValue
 tags: [domain driven design]
 ---
 
-http://martinfowler.com/bliki/CurrencyAsValue.html
+https://martinfowler.com/bliki/CurrencyAsValue.html
 
 [バリューオブジェクト](/ValueObject)(パターン)の例はたくさんありますが、私が良く使うのはMoney(クラス)です。そしてMoneyにつきものなのは通貨です。
 

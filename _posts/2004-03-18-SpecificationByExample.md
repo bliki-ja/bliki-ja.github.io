@@ -3,9 +3,9 @@ title: 実例による仕様書
 tags: [testing, requirements analysis]
 ---
 
-http://martinfowler.com/bliki/SpecificationByExample.html
+https://martinfowler.com/bliki/SpecificationByExample.html
 
-XP/Agile Universe 2002のワークショップで「Specification By Example（実例による仕様書、SbE）」という言葉に心を奪われた。これは、[XP](http://martinfowler.com/articles/newMethodology.html#xp)におけるテストのあり方のひとつではないか。
+XP/Agile Universe 2002のワークショップで「Specification By Example（実例による仕様書、SbE）」という言葉に心を奪われた。これは、[XP](https://martinfowler.com/articles/newMethodology.html#xp)におけるテストのあり方のひとつではないか。
 
 （このところ、テスト駆動開発(TDD)のテスト部分を語るのは流行遅れなのだそうだ。ひどい話だ。[Jon](http://blogs.codehaus.org/people/tirsen/archives/000582_tdd_is_about_testing.html)と同じく、私も、そんな副次的なものなんかよりも包括的な自動テストにこそTDDの真髄があると考えている。
 例えば、誰かに「100万ドルあげるから山にハイキングしておいで」と言われたとしよう。私は胸を張ってこう言うね。「今回のハイキングの目的は、自然の美を堪能するためである」と。いや、まあ、もちろん、懐もあたたかくなるけど……ね。

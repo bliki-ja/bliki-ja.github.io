@@ -3,7 +3,7 @@ title: 最適化はリファクタリングか？
 tags: [refactoring boundary]
 ---
 
-http://martinfowler.com/bliki/IsOptimizationRefactoring.html
+https://martinfowler.com/bliki/IsOptimizationRefactoring.html
 
 [リファクタリングの境界線](/RefactoringBoundary)のひとつ
 

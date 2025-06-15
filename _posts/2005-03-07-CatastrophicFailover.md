@@ -3,7 +3,7 @@ title: 壊滅的フェールオーバー
 tags: [delivery, bad things]
 ---
 
-http://martinfowler.com/bliki/CatastrophicFailover.html
+https://martinfowler.com/bliki/CatastrophicFailover.html
 
 （最後の部分を更新）
 

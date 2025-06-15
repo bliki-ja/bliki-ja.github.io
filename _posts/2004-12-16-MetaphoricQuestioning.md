@@ -8,7 +8,7 @@ tags: [lean, process theory]
 常連さんはご存じでしょうが、
 私は他業種のメタファを使ってソフトウェア開発を論ずるのはどうかと思っています。
 とりわけエンジニアリングのメタファは
-[設計と構築を分離する](http://martinfowler.com/articles/newMethodology.html)([翻訳](http://www007.upp.so-net.ne.jp/kengai/fowler/newMethodology_j.html))という考えをもたらし、
+[設計と構築を分離する](https://martinfowler.com/articles/newMethodology.html)([翻訳](http://www007.upp.so-net.ne.jp/kengai/fowler/newMethodology_j.html))という考えをもたらし、
 我々の業界に多大な損害を与えたと信じてやみません。
 
 

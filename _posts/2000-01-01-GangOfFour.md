@@ -3,7 +3,7 @@ title: GangOfFour
 tags: [clean code, object collaboration design]
 ---
 
-http://martinfowler.com/bliki/GangOfFour.html
+https://martinfowler.com/bliki/GangOfFour.html
 
 [Gang of Four](http://www.amazon.com/exec/obidos/tg/detail/-/0201633612)（邦題『[オブジェクト指向における再利用のためのデザインパターン](http://www.amazon.co.jp/exec/obidos/ASIN/4797311126/)』）は、オブジェクト指向設計本の中でベストな本だと思います（もしかするとあらゆる設計本の中でベストかもしれません）。この本はソフトウェア産業に多大なる影響を与えています。Javaや.NETのライブラリだけでも、GOF のパターンがあちこちで使われているのです。
 

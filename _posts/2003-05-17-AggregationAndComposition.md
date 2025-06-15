@@ -3,7 +3,7 @@ title: 集約とコンポジション
 tags: [uml]
 ---
 
-http://martinfowler.com/bliki/AggregationAndComposition.html
+https://martinfowler.com/bliki/AggregationAndComposition.html
 
 集約とコンポジションほど困惑するUML図はありません。通常の関連との違いは、特に難しいものです。
 

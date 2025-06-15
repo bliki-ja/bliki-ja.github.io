@@ -3,7 +3,7 @@ title: 型付きコレクション
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/TypedCollection.html
+https://martinfowler.com/bliki/TypedCollection.html
 
 オブジェクト指向で仕事しようと思ったとき、特に強く型付けされた言語で、よくある疑問はドメインタイプに応じてそれに特化したコレクションクラスを持つべきか? というものです。
 会社クラスが従業員のコレクションを保持しているとするとき、いつものライブラリにあるコレクションクラスを使うべきでしょうか、あるいは、専用の EmployeeList クラス --型付きコレクション を作るべきでしょうか。

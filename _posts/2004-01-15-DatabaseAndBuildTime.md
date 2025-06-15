@@ -3,7 +3,7 @@ title: データベースとビルドタイム
 tags: [delivery, testing]
 ---
 
-http://martinfowler.com/bliki/DatabaseAndBuildTime.html
+https://martinfowler.com/bliki/DatabaseAndBuildTime.html
 
 対照的でとても面白い事例を最近手に入れました。 2つのエンタープライズアプリケーションプロジェクトがありまして、どちらも同じような規模なんですね（〜100k行）。環境も似ている（Javaと.NET）。ビルド（テスト込）を行うのに、一方は1時間かかるのですが、もう一方は2,3分で済んでしまうのです。
 

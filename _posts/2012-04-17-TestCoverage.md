@@ -3,7 +3,7 @@ title: テストカバレッジ
 tags: [testing, metrics]
 ---
 
-http://martinfowler.com/bliki/TestCoverage.html
+https://martinfowler.com/bliki/TestCoverage.html
 
 
 
@@ -11,7 +11,7 @@ http://martinfowler.com/bliki/TestCoverage.html
 
 「テストカバレッジ(コードカバレッジ)の目標値はどれくらいがいいのか？」という質問とか、コードカバレッジの高さの自慢とかを、ときどき耳にする。でも、大事なポイントを外している。コードカバレッジは、コードのテストされていない部分を発見するための有用なツールである。ただテスト自体がどれだけ良いかという指標としては、テストカバレッジはほとんど役に立たない。
 
-![](http://martinfowler.com/bliki/images/testCoverage/sketch.png)
+![](https://martinfowler.com/bliki/images/testCoverage/sketch.png)
 
 
 

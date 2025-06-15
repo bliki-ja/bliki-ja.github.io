@@ -3,7 +3,7 @@ title: 5ポンドの鞄
 tags: [metrics, project planning, estimation]
 ---
 
-http://martinfowler.com/bliki/FivePoundBag.html
+https://martinfowler.com/bliki/FivePoundBag.html
 
 > 10ポンドのクソを5ポンドの鞄に入れることはできない——実際にやってみた人
 

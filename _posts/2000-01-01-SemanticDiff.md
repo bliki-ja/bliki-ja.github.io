@@ -3,7 +3,7 @@ title: セマンティックdiff
 tags: [version control]
 ---
 
-http://martinfowler.com/bliki/SemanticDiff.html
+https://martinfowler.com/bliki/SemanticDiff.html
 
 バージョンコントロールは成果物のバージョン間の違いを理解する
 ——Unixコマンド名から名前をとって「diff」と呼ばれる。

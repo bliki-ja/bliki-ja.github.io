@@ -3,7 +3,7 @@ title: バリューオブジェクト
 tags: [domain driven design, API design]
 ---
 
-http://martinfowler.com/bliki/ValueObject.html
+https://martinfowler.com/bliki/ValueObject.html
 
 プログラミングをする時、物事を複合物として表現すると便利だと思うことがよくあります。
 例えば、2次元座標はx軸とy軸で構成されます。お金の額面は数値と通貨で構成されます。日付の範囲は開始日と終了日で構成されます。日付は年、月、日で構成されることもあります。

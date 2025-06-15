@@ -3,7 +3,7 @@ title: PostModernProgramming
 tags: [programming platforms]
 ---
 
-http://martinfowler.com/bliki/PostModernProgramming.html
+https://martinfowler.com/bliki/PostModernProgramming.html
 
 James NobleとRobert Biddleにより提唱されたプログラミングの考え方。
 その肝となるのは（少なくとも私にとっては）以下のようなことである。

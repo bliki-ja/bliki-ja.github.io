@@ -3,7 +3,7 @@ title: トランザクションレス
 tags: [database, application architecture]
 ---
 
-http://martinfowler.com/bliki/Transactionless.html
+https://martinfowler.com/bliki/Transactionless.html
 
 
 数年前にeBayで働く友人たちと話していたときのことだ。

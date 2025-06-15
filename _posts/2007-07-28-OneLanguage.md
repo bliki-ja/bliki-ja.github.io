@@ -3,7 +3,7 @@ title: 1つの言語
 tags: [programming platforms]
 ---
 
-http://martinfowler.com/bliki/OneLanguage.html
+https://martinfowler.com/bliki/OneLanguage.html
 
 #### 開発における言語は１つだけにするべきか？
 

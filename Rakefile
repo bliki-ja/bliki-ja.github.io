@@ -15,7 +15,7 @@ task :post do
   end
 end
 
-# Usage: rake post_from url="http://martinfowler.com/bliki/UserStory.html"
+# Usage: rake post_from url="https://martinfowler.com/bliki/UserStory.html"
 desc "post_from"
 task :post_from do
   require 'open-uri'

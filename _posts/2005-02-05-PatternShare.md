@@ -3,7 +3,7 @@ title: PatternShare
 tags: [writing]
 ---
 
-http://martinfowler.com/bliki/PatternShare.html
+https://martinfowler.com/bliki/PatternShare.html
 
 マイクロソフトが新しいコミュニティ リソース「[PatternShare](http://patternshare.org/)」をリリースしました。
 これは、多くのパターン作者からパターンのサマリを集め、

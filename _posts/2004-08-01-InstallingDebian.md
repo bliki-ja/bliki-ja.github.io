@@ -3,7 +3,7 @@ title: Debianのインストール
 tags: [tools]
 ---
 
-http://martinfowler.com/bliki/InstallingDebian.html
+https://martinfowler.com/bliki/InstallingDebian.html
 
 ここ数週間ばかし、[Debian](http://www.debian.org/) Linux のインストールをやってみた。
 ここ数ヶ月間、新しい環境をいろいろとセットアップしなきゃいけなかったんだよ。

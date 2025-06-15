@@ -3,7 +3,7 @@ title: リファクタリングの定義
 tags: [refactoring]
 ---
 
-http://martinfowler.com/bliki/DefinitionOfRefactoring.html
+https://martinfowler.com/bliki/DefinitionOfRefactoring.html
 
 リファクタリング本のなかで、リファクタリングの定義を記しました。
 

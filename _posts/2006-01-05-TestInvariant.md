@@ -3,7 +3,7 @@ title: TestInvariant
 tags: [testing]
 ---
 
-http://martinfowler.com/bliki/TestInvariant.html
+https://martinfowler.com/bliki/TestInvariant.html
 
 更新：以前のエントリは説明が簡単すぎたので、サンプルコードを追加した。
 

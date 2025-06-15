@@ -3,7 +3,7 @@ title: 多様性
 tags: [thoughtworks, diversity]
 ---
 
-http://martinfowler.com/bliki/Diversity.html
+https://martinfowler.com/bliki/Diversity.html
 
 
 

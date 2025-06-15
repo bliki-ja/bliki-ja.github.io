@@ -3,7 +3,7 @@ title: リファクタリングの誤用
 tags: [refactoring]
 ---
 
-http://martinfowler.com/bliki/RefactoringMalapropism.html
+https://martinfowler.com/bliki/RefactoringMalapropism.html
 
 かつて、わずかな人しか知らなかった用語「リファクタリング」は、今ではコンピュータ業界の中でフラフラ迷走している。
 これは私にも責任がある。

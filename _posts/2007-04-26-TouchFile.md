@@ -3,7 +3,7 @@ title: タッチファイル
 tags: [build scripting]
 ---
 
-http://martinfowler.com/bliki/TouchFile.html
+https://martinfowler.com/bliki/TouchFile.html
 
 
 

@@ -4,7 +4,7 @@ tags: [ruby]
 ---
 
 
-http://martinfowler.com/bliki/DynamicTypeCheck.html
+https://martinfowler.com/bliki/DynamicTypeCheck.html
 
 2009年6月2日
 

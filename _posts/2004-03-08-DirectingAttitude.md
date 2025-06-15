@@ -3,7 +3,7 @@ title: 直轄主義
 tags: [process theory]
 ---
 
-http://martinfowler.com/bliki/DirectingAttitude.html
+https://martinfowler.com/bliki/DirectingAttitude.html
 
 [ソフトウェア開発の心構え](/SoftwareDevelopmentAttitude)のひとつです。
 多くの開発者はそれほど優秀ではないため（全体の50%が平均以下のスキルという話）、

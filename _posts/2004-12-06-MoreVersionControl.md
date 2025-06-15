@@ -3,7 +3,7 @@ title: もっとVersionControlを！
 tags: [version control, writing]
 ---
 
-http://martinfowler.com/bliki/MoreVersionControl.html
+https://martinfowler.com/bliki/MoreVersionControl.html
 
 みんなはもう使ってるだろうけど、
 バージョンコントロールはもっと使われてもいいように思う。

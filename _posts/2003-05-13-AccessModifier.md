@@ -3,7 +3,7 @@ title: アクセス修飾子
 tags: [encapsulation, language feature]
 ---
 
-<http://martinfowler.com/bliki/AccessModifier.html>
+<https://martinfowler.com/bliki/AccessModifier.html>
 
 オブジェクト指向言語ではプログラムはクラスと呼ばれるモジュール群に分かれます。
 それぞれのクラスは機能(features)をもっており、データ（フィールド）とメソッドで構成されます（すべての言語がこの用語を使うわけではありませんが、役割は一緒です）。

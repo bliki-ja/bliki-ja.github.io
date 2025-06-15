@@ -60,10 +60,10 @@ Martin Fowlerは、何十年にもわたり、ビジネス情報システム開�
 * A refactoring portal maintained by Martin Fowler contains links to refactoring tools and other refactoring sites:http://www.refactoring.com/ 
 ** Martin Fowlerによって運営されているリファクタリングのポーたるサイト。リファクタリングツールや他のリファクタリング関連サイトへのリンクがある。
 
-* Martin Fowler's links to extreme programming resources: http://martinfowler.com/links.html 
+* Martin Fowler's links to extreme programming resources: https://martinfowler.com/links.html 
 ** Martin FowlerによるXPリンク集
 
-*Articles written by Martin Fowler about XP and agile methods:http://martinfowler.com/articles.html#agile 
+*Articles written by Martin Fowler about XP and agile methods:https://martinfowler.com/articles.html#agile 
 ** XPとアジャイル手法についての記事
 
 *UML Distilled: A Brief Guide to the Standard Object Modeling Language, by Martin Fowler and Kendall Scott is at Amazon.com at:http://www.amazon.com/exec/obidos/ASIN/020165783X/ 

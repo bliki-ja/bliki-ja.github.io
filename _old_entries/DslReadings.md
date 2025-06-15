@@ -3,7 +3,7 @@ title: DslReadings
 tags: TAGS
 ---
 
-http://martinfowler.com/bliki/DslReadings.html
+https://martinfowler.com/bliki/DslReadings.html
 
 2007/7/13
 

@@ -3,7 +3,7 @@ title: SmalltalkBooks
 tags: [language feature, writing]
 ---
 
-http://martinfowler.com/bliki/SmalltalkBooks.html
+https://martinfowler.com/bliki/SmalltalkBooks.html
 
 Smalltalkを手に入れて、何が大騒ぎされているのかを調べたいと思っている人によく出会います。
 私の好きなSmalltalkの入門本は絶版になりましたが、

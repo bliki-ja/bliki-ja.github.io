@@ -3,13 +3,13 @@ title: オープンな知的財産
 tags: [thoughtworks]
 ---
 
-http://martinfowler.com/bliki/OpenIntellectualProperty.html
+https://martinfowler.com/bliki/OpenIntellectualProperty.html
 
 ThoughtWorksで働くことが快適なのには、いくつもの理由がある。
 なかでも、ここで働く多くの人間が、私と価値観を共有してくれていることが一番大きな理由だ。
 ここ数年、我々は知的財産に対する立場について何度も話し合ってきた——基本的に知的財産は放棄する方向である。
 
-[Continuous Integration](http://martinfowler.com/articles/continuousIntegration.html)（[継続的インテグレーション](http://www.objectclub.jp/community/XP-jp/xp_relate/cont-j)）に関する、我々のアプローチやツールを例として挙げよう。
+[Continuous Integration](https://martinfowler.com/articles/continuousIntegration.html)（[継続的インテグレーション](http://www.objectclub.jp/community/XP-jp/xp_relate/cont-j)）に関する、我々のアプローチやツールを例として挙げよう。
 ノウハウは秘密にし、ツールは社内だけで利用すればいいじゃないかと思う人もいるだろうが、
 我々はそこで学んだノウハウを公開し、[我々](http://cruisecontrol.sourceforge.net/)の[ツール群](http://ccnet.thoughtworks.com/)はオープンソースコミュニティに還元している。
 これをおかしな行動と見る人間もいるだろう。

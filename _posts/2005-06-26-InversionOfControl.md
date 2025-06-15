@@ -3,7 +3,7 @@ title: 制御の逆転
 tags: [application architecture, API design, object collaboration design]
 ---
 
-http://martinfowler.com/bliki/InversionOfControl.html
+https://martinfowler.com/bliki/InversionOfControl.html
 
 制御の逆転という現象は、フレームワークを拡張とするといつも現れる。 制御の逆転こそが、フレームワークをフレームワークたらしめる特徴であると考えられている場合も多い。
 
@@ -59,7 +59,7 @@ EJBはこういった制御の逆転の良い例だ。 Session Beanを開発す�
 
 これらは制御の逆転の複雑なケースであるが、もっと簡単な状況に出会うことがある。 テンプレートメソッドが良い例だ。 スーパークラスが制御の流れを定義し、サブクラスがメソッドや抽象メソッドをオーバーライドして拡張する。 JUnitでは、フレームワークのコードがsetUpとtearDownメソッドを呼び出し、あなたの書く本文部分の準備と掃除をしてくれる。 フレームワークは呼び出しを行い、それにあなたのコードが反応する——そう、また制御が反転している。
 
-最近、IoCコンテナの盛り上がりにより、制御の逆転の意味をめぐっていくつかの混乱がある。 ここで挙げた一般的な原則を、[依存性注入](http://martinfowler.com/articles/injection.html)(dependency injection)のような特化したスタイルの制御の逆転と混同している人がいる。 IoCコンテナがEJBの競合と見なされるため、その名前が（皮肉にも）紛らわしいのだろう。 EJBも制御の逆転をIoCコンテナ以上に使っているのだが。
+最近、IoCコンテナの盛り上がりにより、制御の逆転の意味をめぐっていくつかの混乱がある。 ここで挙げた一般的な原則を、[依存性注入](https://martinfowler.com/articles/injection.html)(dependency injection)のような特化したスタイルの制御の逆転と混同している人がいる。 IoCコンテナがEJBの競合と見なされるため、その名前が（皮肉にも）紛らわしいのだろう。 EJBも制御の逆転をIoCコンテナ以上に使っているのだが。
 
 語源：ここまで述べてきた「制御の逆転」という言葉は、1988年、Object-Oriented Programming誌に掲載されたJohnsonとFooteの論文『[Designing Reusable Classes](http://www.laputan.org/drc/drc.html)』に最初に登場した。 この雑誌は古いが、15年以上経った今でも十分に読む価値がある。 彼らはこの言葉をどこか別の場所で手に入れたと考えているが、どこなのかは思い出せないようだ。
 

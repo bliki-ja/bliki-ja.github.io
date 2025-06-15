@@ -3,7 +3,7 @@ title: テストの癌
 tags: [testing, bad things]
 ---
 
-http://martinfowler.com/bliki/TestCancer.html
+https://martinfowler.com/bliki/TestCancer.html
 
 2007/12/6
 

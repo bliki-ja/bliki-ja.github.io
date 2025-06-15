@@ -3,7 +3,7 @@ title: ディテスタブル
 tags: [dictionary, testing, bad things, technical debt, clean code]
 ---
 
-http://martinfowler.com/bliki/Detestable.html
+https://martinfowler.com/bliki/Detestable.html
 
 （あなたの辞書に追加してください）
 

@@ -3,7 +3,7 @@ title: トヨタの欠陥
 tags: [lean]
 ---
 
-http://martinfowler.com/bliki/ToyotaFailings.html
+https://martinfowler.com/bliki/ToyotaFailings.html
 
 
 

@@ -3,7 +3,7 @@ title: オープンスペース
 tags: [conferences, collaboration]
 ---
 
-http://martinfowler.com/bliki/OpenSpace.html
+https://martinfowler.com/bliki/OpenSpace.html
 
 「オープンスペース」とは、個人が主催するカンファレンスをうまくやるための手法だ。
 1997年にNorm Kerthに紹介されて以来、私はこの手法が頻繁に使用されているのを見てきた。そして、また、私自身もよくこの手法を使用している。

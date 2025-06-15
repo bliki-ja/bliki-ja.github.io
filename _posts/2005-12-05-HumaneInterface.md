@@ -3,7 +3,7 @@ title: ヒューメインインターフェイス
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/HumaneInterface.html
+https://martinfowler.com/bliki/HumaneInterface.html
 
 Ruby界隈で「ヒューメインインターフェイス」という言葉を何度も耳にした。
 この言葉は、クラスのインタフェースを記述する際のrubyistたちの姿勢(attitude)の一部を表したものである。

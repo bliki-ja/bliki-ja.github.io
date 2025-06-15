@@ -3,7 +3,7 @@ title: リソースプール
 tags: [database, application architecture]
 ---
 
-http://martinfowler.com/bliki/ResourcePool.html
+https://martinfowler.com/bliki/ResourcePool.html
 
 多くのプログラマは生成や維持にコストがかかるリソースを利用する必要がある。そのようなものの例としては、データベースコネクションやスレッドが挙げられる。リソースプールはそれらのリソースを管理するためのよい方法だ。
 

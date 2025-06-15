@@ -3,7 +3,7 @@ title: 財産確保
 tags: [evolutionary design, legacy rehab]
 ---
 
-http://martinfowler.com/bliki/AssetCapture.html
+https://martinfowler.com/bliki/AssetCapture.html
 
 財産確保とは、[ストラングラーアプリケーション](/StranglerApplication)開発のための戦略である。
 多くのアプリケーションは、重要な財産を管理するためのものだと考えることができる。

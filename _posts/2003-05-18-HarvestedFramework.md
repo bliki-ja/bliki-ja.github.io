@@ -3,7 +3,7 @@ title: 収穫型フレームワーク
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/HarvestedFramework.html
+https://martinfowler.com/bliki/HarvestedFramework.html
 
 使えるフレームワークを作るには、フレームワークの構築から始めるのではなく、アプリケーションを作ることから始めよう。アプリケーションを作る時でも、汎用的なコードを開発しようとしないで、うまく分割され設計されたアプリケーションを作るのだ。
 

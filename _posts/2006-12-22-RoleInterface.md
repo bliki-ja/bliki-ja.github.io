@@ -3,7 +3,7 @@ title: RoleInterface
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/RoleInterface.html
+https://martinfowler.com/bliki/RoleInterface.html
 
 
 
@@ -138,7 +138,7 @@ Webサービスのようなリモート環境では、興味深い「ねじれ�
 ポイントは、ここで必要とされる型チェックは、最早終了日が存在しているかどうかだけでよい点である。
 それ以外のデータを無視することができれば、そのデータを提供しても問題ない。
 クラスは複数のインタフェースを実装すればよい。
-この考えは[Consumer Driven Contracts](http://martinfowler.com/articles/consumerDrivenContracts.html)(クライアント駆動契約)の考えとも一致する。
+この考えは[Consumer Driven Contracts](https://martinfowler.com/articles/consumerDrivenContracts.html)(クライアント駆動契約)の考えとも一致する。
 私が、クライアント駆動契約が非常に強い影響力を持つと考えているのは、このためである。
 
 

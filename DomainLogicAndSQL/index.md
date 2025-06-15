@@ -5,7 +5,7 @@ title: ドメインロジックとSQL
 
 <hr />
 
-以下の文章は、Martin Fowler による [Domain Logic and SQL](http://martinfowler.com/articles/dblogic.html)の日本語訳である。
+以下の文章は、Martin Fowler による [Domain Logic and SQL](https://martinfowler.com/articles/dblogic.html)の日本語訳である。
 
 <hr />
 
@@ -28,7 +28,7 @@ SQL には多くの長所があるが、中でもデータベースへの問い�
 
 簡単な例を用いながら詳しくみていこう。図1にあるようなデータモデルから始める。私たちの会社がスペシャルディスカウントを行うとしよう。ここではそのことを「Cuillen」と呼ぶこととする。Cuillenディスカウントが受けられるのは、一度にタリスカー（訳注：ウィスキーの商品名）を5000ドル以上買った顧客だ。3000ドルづつ二回買い物をしても、それは無効。一度の買い物が5000ドルを超えなければならない。さて、ある顧客の去年一年間の買い物のうち、どの月がCuillenディスカウント適用月なのかを調べるとしよう。このときユーザーインターフェイスは考えないものとする。適用月が分かればそれで良しとする。
 
-![例題用のデータベーススキーマ](http://martinfowler.com/articles/dblogic-schema.gif)
+![例題用のデータベーススキーマ](https://martinfowler.com/articles/dblogic-schema.gif)
 
 **図1：例題用のデータベーススキーマ（UML記法）**
 

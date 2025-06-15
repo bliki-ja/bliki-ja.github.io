@@ -3,7 +3,7 @@ title: 好ましい設計スキル
 tags: [team organization, recruiting, technical leadership, thoughtworks]
 ---
 
-http://martinfowler.com/bliki/PreferDesignSkills.html
+https://martinfowler.com/bliki/PreferDesignSkills.html
 
 
 

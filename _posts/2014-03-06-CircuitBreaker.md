@@ -3,18 +3,18 @@ title: サーキットブレイカー
 tags: [delivery, application architecture]
 ---
 
-http://martinfowler.com/bliki/CircuitBreaker.html
+https://martinfowler.com/bliki/CircuitBreaker.html
 
 ネットワークを介して異なるマシンで動作するソフトウェアを呼び出すことは一般的に行われている。インメモリ処理とリモートコールの大きな違いの１つは、リモートコールは失敗したりレスポンスが返ってこないままタイムアウトするまで停止してまう可能性があることだ。レスポンスが遅いシステムが多くの利用者を抱えている場合、
 重要なリソースを使い果たしてしまい、複数のシステムをまたがった障害が発生するだろう。Michael Nygard は名著 [Release It](https://www.amazon.com/gp/product/0978739213?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0978739213)で、このような壊滅的な連鎖を防止するために Circuit Breaker パターンを広めた。
 
 CircuitBreaker の基本は非常にシンプルだ。失敗を監視する CircuitBreaker オブジェクトで関数呼び出しを保護する。失敗数が閾値に達すると Circuit Breaker が作動し、以降の CircuitBreaker オブジェクトの呼び出しは、保護された呼び出しをせずにエラーを返す。通常、CircuitBreaker が作動したら何らかのアラートを上げる事をお勧めする。
 
-![sketch.png](http://martinfowler.com/bliki/images/circuitBreaker/sketch.png)
+![sketch.png](https://martinfowler.com/bliki/images/circuitBreaker/sketch.png)
 
 タイムアウトから保護するためのこれらの振る舞いについて、Ruby によるシンプルな例を示す。
 
-保護された呼び出しとしてブロック ([ラムダ](http://martinfowler.com/bliki/Lambda.html)) を使い、CircuitBreaker をセットアップした。
+保護された呼び出しとしてブロック ([ラムダ](https://martinfowler.com/bliki/Lambda.html)) を使い、CircuitBreaker をセットアップした。
 
 
 ```ruby
@@ -94,7 +94,7 @@ class CircuitBreaker...
 これは建築におけるブレーカーと同様に合理的なアプローチだが、ソフトウェアの CircuitBreaker は呼び出しの復旧を自分自身で検知する。
 適切なインターバルをおいて再試行し、成功した場合は CircuitBreaker をリセットすることで自己復帰する振る舞いを実装可能だ。
 
-![state.png](http://martinfowler.com/bliki/images/circuitBreaker/state.png)
+![state.png](https://martinfowler.com/bliki/images/circuitBreaker/state.png)
 
 この種の CircuitBreaker を作るには再試行の閾値を追加し、最後のエラーからの待機時間を設定する。
 

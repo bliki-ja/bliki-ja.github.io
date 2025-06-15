@@ -3,7 +3,7 @@ title: 欠陥技術の二分法
 tags: [process theory]
 ---
 
-http://martinfowler.com/bliki/FaultyTechniqueDichotomy.html
+https://martinfowler.com/bliki/FaultyTechniqueDichotomy.html
 
 私の人生で最もシビれるのは、ソフトウェア開発技術を集め、改善していくことである。
 そのため、良かれ悪かれ、実際に使用している技術の話を聞くことに多くの時間を割くようにしている。

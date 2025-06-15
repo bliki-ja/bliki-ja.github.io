@@ -3,7 +3,7 @@ title: アジャイル認定試験
 tags: [agile, certification]
 ---
 
-http://martinfowler.com/bliki/AgileCertification.html
+https://martinfowler.com/bliki/AgileCertification.html
 
 アジャイル手法に資格試験は必要か？
 

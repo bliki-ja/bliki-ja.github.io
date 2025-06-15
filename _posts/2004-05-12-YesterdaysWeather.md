@@ -3,7 +3,7 @@ title: 昨日の天気
 tags: [extreme programming, project planning, estimation]
 ---
 
-http://martinfowler.com/bliki/YesterdaysWeather.html
+https://martinfowler.com/bliki/YesterdaysWeather.html
 
 これは「今日の成果は昨日のと（たぶん）一緒」という原則だ。反復型プロジェクトだと、「今回のイテレーションでは、前回のイテレーションで行った作業量と同等のものを行う」と言えるかもしれない。「昨日の天気」という言葉は、XPコミュニティからやってきたものだ。
 

@@ -3,7 +3,7 @@ title: IntelliCsharp
 tags: [tools]
 ---
 
-http://martinfowler.com/bliki/IntelliCsharp.html
+https://martinfowler.com/bliki/IntelliCsharp.html
 
 After much anticipation, the folks at JetBrains have started their Early Access Program for their C# tool. Sadly they ignored my naming advice and instead called it [ReSharper](http://www.twelve71.com/archives/000401.html). Early noise from my colleagues has been enthusiastic if still wanting more.
 

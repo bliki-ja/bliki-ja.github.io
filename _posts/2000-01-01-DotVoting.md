@@ -3,7 +3,7 @@ title: ドット投票
 tags: [writing]
 ---
 
-http://martinfowler.com/bliki/DotVoting.html
+https://martinfowler.com/bliki/DotVoting.html
 
 ミーティングやワークショップの最中には投票を行うといいでしょう。投票によって、ランクをつけたり選んだりするのです。手軽でナイスな投票。それは「ドット投票」です。
 

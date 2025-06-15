@@ -3,7 +3,7 @@ title: Blikiとは
 tags: [website]
 ---
 
-http://martinfowler.com/bliki/WhatIsaBliki.html
+https://martinfowler.com/bliki/WhatIsaBliki.html
 
 しばらくblog開発界隈を見てまして、参加せずにはいられませんでした。ただ、blogに夢中になれない何かがありました。まずその名前です。同僚のMike Twoは「blogというのはなんだか内科医に取り除いてもらうものみたいに聞こえる」と言っていました。名前はさておき、blogの記事の命は本来とても短いのです。パパっと書いたものは、読む分には良いのでしょうが、すぐに古くなってしまいます。消え行くものに筆を費やすのは、大変だということが分かりました。
 
@@ -15,8 +15,8 @@ RSSとアグリゲーターのおかげです。
 
 作りかけのアイデアをポストするのにこれを使おうと思っています。本格的な記事にするには未熟であったり短すぎたりするものもです。メーリングリストやニュースグループで見かけた問いに対して、永続的な答えをここで提供していこうとも思っています。
 
-RSS利用者のために、RSSフィードを２つ用意しました。[Updates](http://martinfowler.com/updates.rss)は私のWebサイトの新しい記事のためだけに使われます。こちらのトラフィックは少な目にしたいと思っています。
-[Bliki](http://martinfowler.com/bliki/bliki.rss)のほうは、blikiに登場した記事を載せていきます。
+RSS利用者のために、RSSフィードを２つ用意しました。[Updates](https://martinfowler.com/updates.rss)は私のWebサイトの新しい記事のためだけに使われます。こちらのトラフィックは少な目にしたいと思っています。
+[Bliki](https://martinfowler.com/bliki/bliki.rss)のほうは、blikiに登場した記事を載せていきます。
 
 （'bliki'という用語はすでに[使われています](http://www.rollerweblogger.org/page/roller/20020906)。そのまま略しただけですので。
 [SnipSoft](http://snipsnap.org/space/Bliki)がGPLライセンスでJavaのblikiを作っています。

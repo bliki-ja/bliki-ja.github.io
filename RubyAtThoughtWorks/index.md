@@ -5,7 +5,7 @@ tags: TAGS
 
 <hr />
 
-以下の文章は、Martin Fowlerによる[Ruby at ThoughtWorks](http://martinfowler.com/articles/rubyAtThoughtWorks.html)の日本語訳である。
+以下の文章は、Martin Fowlerによる[Ruby at ThoughtWorks](https://martinfowler.com/articles/rubyAtThoughtWorks.html)の日本語訳である。
 
 <hr />
 
@@ -58,7 +58,7 @@ Webサイトの開発プロジェクトが多く、RailsはRubyと同様に重�
 
 
 
-![](http://martinfowler.com/articles/rubyAtThoughtWorks/projectScatter.png)
+![](https://martinfowler.com/articles/rubyAtThoughtWorks/projectScatter.png)
 
 **図1: 2006年から2008年におけるThoughtWorksでのRubyプロジェクトに関わった人数（ピーク時）と期間の散布図**
 
@@ -89,7 +89,7 @@ Rubyプロジェクトはほとんどの場合、他のプロジェクトより�
 
 
 
-![](http://martinfowler.com/articles/rubyAtThoughtWorks/yearStrip.png)
+![](https://martinfowler.com/articles/rubyAtThoughtWorks/yearStrip.png)
 
 ''図2: 各年ごとのプロジェクトの工数を表したストリップチャート''
 
@@ -102,7 +102,7 @@ Rubyプロジェクトはほとんどの場合、他のプロジェクトより�
 
 
 
-![](http://martinfowler.com/articles/rubyAtThoughtWorks/countryStrip.png)
+![](https://martinfowler.com/articles/rubyAtThoughtWorks/countryStrip.png)
 
 ''図3: 国別のプロジェクトの工数を表したストリップチャート''
 
@@ -148,7 +148,7 @@ Rubyはまた、アジャイルソフトウェア開発プロセスの使用を�
 
 
 
-![](http://martinfowler.com/articles/rubyAtThoughtWorks/hindsightPie.jpg)
+![](https://martinfowler.com/articles/rubyAtThoughtWorks/hindsightPie.jpg)
 
 ''図4: プロジェクトのプラットフォームにRubyを選んだのは正しかったか？''
 
@@ -192,7 +192,7 @@ Rubyをプロジェクトに使うのは生産性が高いから、というの�
 
 
 
-![](http://martinfowler.com/articles/rubyAtThoughtWorks/productivityBar.jpg)
+![](https://martinfowler.com/articles/rubyAtThoughtWorks/productivityBar.jpg)
 
 ''図5: Rubyによってプロジェクトの生産性はどれくらい高まったか？（生産性が最も高いと思う主流ツールと比べた場合）''
 
@@ -295,7 +295,7 @@ ThoughtWorksの開発者たちは、能力という点では平均よりも高�
 
 
 
-![](http://martinfowler.com/articles/rubyAtThoughtWorks/metaprogramming.png)
+![](https://martinfowler.com/articles/rubyAtThoughtWorks/metaprogramming.png)
 
 ''図6: メタプログラミングに対する感情の経過''
 

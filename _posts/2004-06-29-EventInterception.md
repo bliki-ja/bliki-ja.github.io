@@ -3,7 +3,7 @@ title: イベントインターセプション
 tags: [legacy rehab]
 ---
 
-http://martinfowler.com/bliki/EventInterception.html
+https://martinfowler.com/bliki/EventInterception.html
 
 バックエンドにあるアプリケーションの多くは、
 外の世界での重要な出来事を伝えられて動いている、と考えることもできる。

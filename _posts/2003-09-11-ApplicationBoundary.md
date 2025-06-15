@@ -3,7 +3,7 @@ title: アプリケーション境界
 tags: [team organization, application integration, application architecture]
 ---
 
-http://martinfowler.com/bliki/ApplicationBoundary.html
+https://martinfowler.com/bliki/ApplicationBoundary.html
 
 #### アプリケーションの境界をどのように定義するのか？
 

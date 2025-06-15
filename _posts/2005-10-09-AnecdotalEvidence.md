@@ -3,7 +3,7 @@ title: 事例証拠
 tags: [writing]
 ---
 
-http://martinfowler.com/bliki/AnecdotalEvidence.html
+https://martinfowler.com/bliki/AnecdotalEvidence.html
 
 ソフトウェア開発分野で不満なのは、いくつかある技術やツールの中からひとつを選ぶのが難しいという点である。
 この話題になると、その技術やツールが他の選択肢よりも優れているという「確かなデータ」を見せろと言う人が必ずいる。

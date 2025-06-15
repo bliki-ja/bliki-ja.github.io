@@ -3,7 +3,7 @@ title: コマンド・問い合わせの分離
 tags: [API design, clean code]
 ---
 
-http://martinfowler.com/bliki/CommandQuerySeparation.html
+https://martinfowler.com/bliki/CommandQuerySeparation.html
 
 「コマンド・問い合わせの分離」という言葉は、Bertrand Meyer氏が『オブジェクト指向入門』で最初に述べたものである。これは、オブジェクト指向黎明期における最も影響力のある書籍である。 （1版がその影響力を持っていた。 2版も優れているが、これを持ち運ぶにはスポーツジムに数ヶ月は通う必要があるだろう）
 

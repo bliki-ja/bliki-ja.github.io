@@ -3,7 +3,7 @@ title: オーバーロードしたゲッターとセッター
 tags: [bad things, API design]
 ---
 
-http://martinfowler.com/bliki/OverloadedGetterSetter.html
+https://martinfowler.com/bliki/OverloadedGetterSetter.html
 
 最近、JavaScriptを触っていてひとつ気になったことがあるのだが、それはgetterとsetterに同じ関数名を使うという習慣についてだ。
 つまり、もしjQueryでバナーの高さを知りたい場合は ``$("#banner").height()``を使うことになるし、

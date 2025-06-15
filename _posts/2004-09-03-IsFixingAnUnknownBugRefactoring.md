@@ -3,14 +3,14 @@ title: 未知のバグフィックスはリファクタリングか？
 tags: [refactoring boundary]
 ---
 
-http://martinfowler.com/bliki/IsFixingAnUnknownBugRefactoring.html
+https://martinfowler.com/bliki/IsFixingAnUnknownBugRefactoring.html
 
 [リファクタリングの境界線](/RefactoringBoundary)のひとつ
 
 Przemyslaw Pokrywka が興味深い難題を投稿してくれた。
-[リファクタリング本](http://martinfowler.com/books.html#refactoring)に [Null Object の導入](http://www.refactoring.com/catalog/introduceNullObject.html)が載っている
+[リファクタリング本](https://martinfowler.com/books.html#refactoring)に [Null Object の導入](http://www.refactoring.com/catalog/introduceNullObject.html)が載っている
 ——これは非常に有用なリファクタリングである
-（[Joshの新刊](http://martinfowler.com/books.html#r2p)でも触れられている）。
+（[Joshの新刊](https://martinfowler.com/books.html#r2p)でも触れられている）。
 Przemyslaw は、このリファクタリングは振る舞いを変化させてしまうと指摘した。
 例えば、null を戻すメソッドがあるとする。
 戻ってきた null に対してメソッドを呼び出そうとすると、

@@ -3,7 +3,7 @@ title: ThoughtWorksChina
 tags: [thoughtworks]
 ---
 
-http://martinfowler.com/bliki/ThoughtWorksChina.html
+https://martinfowler.com/bliki/ThoughtWorksChina.html
 
 ThoughtWorksが中国に進出した。
 中国オフィスを開くことは、かねてからの強い願いであった。

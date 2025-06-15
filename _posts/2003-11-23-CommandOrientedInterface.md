@@ -3,7 +3,7 @@ title: コマンド指向インターフェイス
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/CommandOrientedInterface.html
+https://martinfowler.com/bliki/CommandOrientedInterface.html
 
 モジュールのインターフェイスには、
 プロシージャ、またはオブジェクトメソッドを使うのが一般的です。
@@ -38,7 +38,7 @@ Strutsなどのフレームワークで使ったことがあるようでした�
 コマンドの実行結果は、コマンド名と引数をキーとしてキャッシュしておくこともできます。
 
 よく耳にする不満は、コマンドクラス内のロジックが重複してしまうという問題です。
-コマンドクラスがロジックのたくさん含まれた[Transaction Scripts](http://martinfowler.com/eaaCatalog/transactionScript.html)である場合、これはしばしば起こる問題です。コマンド指向だから起こるということではなく、これはTransaction Scriptsの一般的な問題です。if only because many people feel that a class needs a page or two of code to be worthwhile 、適量よりも多くのコードをコマンド内に入れてしまうと、コマンド指向がこれを助長させてしまうかもしれませんが。
+コマンドクラスがロジックのたくさん含まれた[Transaction Scripts](https://martinfowler.com/eaaCatalog/transactionScript.html)である場合、これはしばしば起こる問題です。コマンド指向だから起こるということではなく、これはTransaction Scriptsの一般的な問題です。if only because many people feel that a class needs a page or two of code to be worthwhile 、適量よりも多くのコードをコマンド内に入れてしまうと、コマンド指向がこれを助長させてしまうかもしれませんが。
 
 ここで「インターフェイス」という言葉を使ってきたことに気付いたかと思います。
 コマンドクラスを使うかどうかというのは、

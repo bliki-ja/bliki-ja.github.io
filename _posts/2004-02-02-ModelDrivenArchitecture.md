@@ -3,7 +3,7 @@ title: モデル駆動型アーキテクチャ
 tags: [uml]
 ---
 
-http://martinfowler.com/bliki/ModelDrivenArchitecture.html
+https://martinfowler.com/bliki/ModelDrivenArchitecture.html
 
 [モデル駆動型アーキテクチャ](http://www.omg.org/mda/)(MDA)は、ソフトウェア開発において、アセンブラから初期の高レベル言語への転換以来の大きな転換となるだろう、という人がいます。一方で、単なる『ナイト・オブ・ザ・リビング・CASEツール／ゾンビの誕生(訳注：『ナイト・オブ・ザ・リビング・デッド／ゾンビの誕生』ジョージ・A・ロメロ)』に過ぎないという人もいます。私は後者の立場ですが、こういった''うまい''言い回し以上の何かが必要だと感じています。
 

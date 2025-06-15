@@ -3,7 +3,7 @@ title: リファクタリングの境界線
 tags: [refactoring boundary]
 ---
 
-http://martinfowler.com/bliki/RefactoringBoundary.html
+https://martinfowler.com/bliki/RefactoringBoundary.html
 
 [リファクタリングML](http://groups.yahoo.com/group/refactoring)で「リファクタリングとは何か（何ではないか）」といった議論があった。
 このように、ピンの上に何人の天使が立てるか (how many angels fit on a pin) といった不毛な議論をいつもやらかしてしまう

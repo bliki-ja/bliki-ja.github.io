@@ -3,7 +3,7 @@ title: デプロイメントパイプライン
 tags: [delivery, build scripting]
 ---
 
-http://martinfowler.com/bliki/DeploymentPipeline.html
+https://martinfowler.com/bliki/DeploymentPipeline.html
 
 2013/5/30
 
@@ -30,7 +30,7 @@ http://martinfowler.com/bliki/DeploymentPipeline.html
 継続的デリバリーをうまく導入するには、まず現在のデリバリープロセスをデプロイメントパイプライン化してみればいい。
 それを精査して、ボトルネックを探したりさらなる自動化の余地を見つけたり、共同でできる作業を検討したりする。
 
-詳細な情報は、書籍『[Continuous Delivery](http://martinfowler.com/books/continuousDelivery.html)』
+詳細な情報は、書籍『[Continuous Delivery](https://martinfowler.com/books/continuousDelivery.html)』
 の第5章を参照すること。[ここで、無料で読める](http://www.informit.com/articles/article.aspx?p=1621865)。
 
 ### 謝辞

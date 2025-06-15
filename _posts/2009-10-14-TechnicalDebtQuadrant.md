@@ -3,7 +3,7 @@ title: 技術的負債の四象限
 tags: [technical debt]
 ---
 
-http://martinfowler.com/bliki/TechnicalDebtQuadrant.html
+https://martinfowler.com/bliki/TechnicalDebtQuadrant.html
 
 ここ数ヶ月の間に、
 [技術的負債](/TechnicalDebt)
@@ -108,7 +108,7 @@ http://martinfowler.com/bliki/TechnicalDebtQuadrant.html
 * Deliberate(意図的な) / Inadvertent(不注意な)
 
 
-![技術的負債の四象限](http://martinfowler.com/bliki/images/techDebtQuadrant.png)
+![技術的負債の四象限](https://martinfowler.com/bliki/images/techDebtQuadrant.png)
 
 * reckless-deliberate 「設計する時間がないんだからしょうがない」
 * prudent-deliberate 「今すぐリリースしないといけない。あとでどうにかしよう」

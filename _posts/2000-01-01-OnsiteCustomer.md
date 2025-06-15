@@ -3,7 +3,7 @@ title: オンサイト顧客
 tags: [extreme programming, requirements analysis]
 ---
 
-http://martinfowler.com/bliki/OnsiteCustomer.html
+https://martinfowler.com/bliki/OnsiteCustomer.html
 
 「オンサイト顧客」とは、XPの（白本の中で紹介されている12の）プラクティスのひとつです。顧客はオープンなワークエリアに同席し、質問に答えたり開発チームとやり取りをします。顧客は開発チームの一員であり、チームの成功は自分たちにもかかっているのだということを分かっています。 通常業務をあきらめる必要はありませんが、物理的にそこにいなければなりません。
 

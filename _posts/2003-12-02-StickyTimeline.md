@@ -3,7 +3,7 @@ title: ポストイットタイムライン
 tags: [collaboration, retrospective]
 ---
 
-http://martinfowler.com/bliki/StickyTimeline.html
+https://martinfowler.com/bliki/StickyTimeline.html
 
 プロジェクトのふりかえりのときにプロジェクトタイムラインを作成すると、非常に役に立ちます。プロジェクト中にどんなイベントが起きたのか、そしてそれらのイベントがプロジェクトにどのような影響を与えたのか、タイムラインを見て、それらが分かるようにしなければいけません。
 

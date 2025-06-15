@@ -3,7 +3,7 @@ title: 統合データベース
 tags: [application integration, database]
 ---
 
-http://martinfowler.com/bliki/IntegrationDatabase.html
+https://martinfowler.com/bliki/IntegrationDatabase.html
 
 統合データベースとは、複数のアプリケーション用のデータストアとしてのデータベースのことを指します。つまり、アプリケーションを横断して、データを統合するのです（[ApplicationDatabase](/ApplicationDatabase)とは対照的です）。
 

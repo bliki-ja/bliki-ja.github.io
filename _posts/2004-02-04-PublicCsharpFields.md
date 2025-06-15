@@ -3,7 +3,7 @@ title: PublicCsharpFields
 tags: [encapsulation, language feature]
 ---
 
-http://martinfowler.com/bliki/PublicCsharpFields.html
+https://martinfowler.com/bliki/PublicCsharpFields.html
 
 C#に出会ったときから、プロパティの書き方が気に入った!!感動した!! C++やJavaの getX や setX なんていうオキマリゴトって、なんかアホくさくないか？  obj.X = other.X って書いたほうがどれだけ自然なことか。でも、getter と setter でプロパティを渡すなんていう習慣が、今ではプログラム言語の当たり前の機能となっているんだよなあ。
 

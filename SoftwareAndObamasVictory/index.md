@@ -4,7 +4,7 @@ title: ソフトウェアとオバマの勝利
 
 <hr />
 
-以下の文章は、Martin Fowlerによる[Software and Obama's Victory](http://martinfowler.com/articles/obamaSoftware.html)の日本語訳である。
+以下の文章は、Martin Fowlerによる[Software and Obama's Victory](https://martinfowler.com/articles/obamaSoftware.html)の日本語訳である。
 
 <hr />
 
@@ -63,13 +63,13 @@ title: ソフトウェアとオバマの勝利
 キャンペーン事務所が階層の直下に指示を出し、報告を受けていた。
 キャンペーンは、まるで指揮統制組織のようだった。
 
-![](http://martinfowler.com/articles/obama/commandControl.png)
+![](https://martinfowler.com/articles/obama/commandControl.png)
 
 **図1: 指揮統制組織では、ボランティアを指示するキャンペーンスタッフを、さらに指示するキャンペーンリーダーが存在する。**
 
 ディーンキャンペーンでの大きな転換は、'''ピアツーピア'''モデルへの移行であり、正式なキャンペーン体制の外側にいることが多い個人のボランティアが、一緒になって物事を成し遂げられるようになった。
 
-![](http://martinfowler.com/articles/obama/peerToPeer.png)
+![](https://martinfowler.com/articles/obama/peerToPeer.png)
 
 **図2: ピアツーピア組織では、ボランティアが直接、相互にやり取りする。**
 
@@ -87,7 +87,7 @@ title: ソフトウェアとオバマの勝利
 しかし、これでは指示がなくなってしまう——ディーンキャンペーンでは、アイオワ州党員集会（最初の予備選）で3位という予想外の結果に終わったことで、これが明らかとなった。
 これは、インターネットのおかげで、ピアツーピアモデルと平行して発展した'''大衆組織'''モデルへとつながっていく。
 
-![](http://martinfowler.com/articles/obama/massOrg.png)
+![](https://martinfowler.com/articles/obama/massOrg.png)
 
 **図3: 大衆組織では、キャンペーンリーダーがボランティアを直接指示する。**
 
@@ -114,7 +114,7 @@ MoveOnはブッシュのイラク侵攻に反対する立場をとり、民主�
 口コミが起こると、ミーティングの準備がしやすくなる。
 口コミは、その議題についてのローカルミーティングを探そうとしていた潜在的な参加者にも伝わる。
 
-![](http://martinfowler.com/articles/obama/massp2p.png)
+![](https://martinfowler.com/articles/obama/massp2p.png)
 
 **図4: 大衆組織とピアツーピアモデルの融合**
 
@@ -276,7 +276,7 @@ VANはウォークパケットが返ってきたときも役に立つ。
 キャンペーンは、地方ボランティアグループの運営のような様々な活動の方法をチームが学ぶためのトレーニング講習を行う。
 彼らは、援助やアドバイスを受けるために、スタッフと定期的に連絡をとる。
 
-![](http://martinfowler.com/articles/obama/fullyConnected.png)
+![](https://martinfowler.com/articles/obama/fullyConnected.png)
 
 **図5: ザックの組織モデルの最終形はすべてのレベルのすべての人が完全につながる。**
 

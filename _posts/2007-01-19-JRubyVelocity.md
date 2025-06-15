@@ -3,7 +3,7 @@ title: JRubyVelocity
 tags: [tools]
 ---
 
-http://martinfowler.com/bliki/JRubyVelocity.html
+https://martinfowler.com/bliki/JRubyVelocity.html
 
 昨日、velocityをいじってテンプレートとマクロについて調査する必要があった。 velocityのシンプルなテンプレート言語は好きだが、Javaや.NETのコンテクストでは使っていなかった。当時、velocityを使うために環境をセットアップしたりJavaでプロセッサを実行したりするのは面倒なことだった。
 

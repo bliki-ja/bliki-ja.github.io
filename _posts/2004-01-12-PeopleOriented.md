@@ -3,7 +3,7 @@ title: ピープル指向
 tags: [agile, process theory]
 ---
 
-http://martinfowler.com/bliki/PeopleOriented.html
+https://martinfowler.com/bliki/PeopleOriented.html
 
 アジャイル手法を理解する上でいちばん難しいのは、ピープル指向だと思います。
 アジャイルプロセスに関心のある人々は、

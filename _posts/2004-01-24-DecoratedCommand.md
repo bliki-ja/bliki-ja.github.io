@@ -3,7 +3,7 @@ title: デコレートコマンド
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/DecoratedCommand.html
+https://martinfowler.com/bliki/DecoratedCommand.html
 
 これはありふれたパターンで、とても単純なものである。というのも、Decoratorパターンをコマンドに適用したというだけであるから。私は、[コマンド指向インターフェイス](/CommandOrientedInterface)で多数使われているのを見たことがある。アスペクト指向プログラミングでinterceptorsと呼ばれているのを聞いたことがあるかもしれない。
 

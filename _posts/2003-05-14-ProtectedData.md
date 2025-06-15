@@ -3,7 +3,7 @@ title: ProtectedData
 tags: [encapsulation, language feature]
 ---
 
-http://martinfowler.com/bliki/ProtectedData.html
+https://martinfowler.com/bliki/ProtectedData.html
 
 ### 優れたOO設計者はクラス内のデータをprotectedにする？
 

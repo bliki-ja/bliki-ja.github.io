@@ -3,7 +3,7 @@ title: 内部DSL
 tags: [domain specific language]
 ---
 
-http://martinfowler.com/bliki/InternalDslStyle.html
+https://martinfowler.com/bliki/InternalDslStyle.html
 
 
 内部DSL（組込みDSLとも呼ばれる）は、ホスト言語内に書かれた[ドメイン特化言語](/DomainSpecificLanguage)である。これは多くのプログラミング言語コミュニティでは一般的な考え方だ——特にLispコミュニティではそうだ。だが最近では、急速に成長を遂げているRubyコミュニティでのDSLの扱いに、多くの注目が集まっている。

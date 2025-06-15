@@ -3,7 +3,7 @@ title: 固定スコープの幻想
 tags: [agile, requirements analysis, project planning, estimation]
 ---
 
-http://martinfowler.com/bliki/FixedScopeMirage.html
+https://martinfowler.com/bliki/FixedScopeMirage.html
 
 多くの企業はスコープとコストが固定された契約書の作成を好む。
 なぜなら、その方がリスクを軽減できると考えているからだ。

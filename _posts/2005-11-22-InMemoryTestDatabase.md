@@ -3,7 +3,7 @@ title: メモリ内データベース
 tags: [testing, database]
 ---
 
-http://martinfowler.com/bliki/InMemoryTestDatabase.html
+https://martinfowler.com/bliki/InMemoryTestDatabase.html
 
 最後の部分を更新
 

@@ -3,7 +3,7 @@ title: クラスインスタンス変数
 tags: [language feature, ruby]
 ---
 
-http://martinfowler.com/bliki/ClassInstanceVariable.html
+https://martinfowler.com/bliki/ClassInstanceVariable.html
 
 オブジェクトについて学ぶと、オブジェクトのデータには二種類あることが分かる。
 インスタンス変数とクラス変数だ。
@@ -16,7 +16,7 @@ http://martinfowler.com/bliki/ClassInstanceVariable.html
 
 クラス変数の欠点は、継承が絡んできた場合の振る舞いにある。
 クラス変数が自身のインスタンスを保持することを考えてみてもらいたい。
-（rubyに不慣れなら[ガイド](http://martinfowler.com/articles/readingRuby.html)を参照しておくれ）
+（rubyに不慣れなら[ガイド](https://martinfowler.com/articles/readingRuby.html)を参照しておくれ）
 
 ```ruby
 #ruby

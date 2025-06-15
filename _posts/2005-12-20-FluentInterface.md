@@ -99,7 +99,7 @@ JMockなどのモックライブラリは、振舞の複雑なスペック（仕
 ```
 
 
-私は[JAOO2005](http://martinfowler.com/bliki/JAOO2005.html)で、[Steve Freeman](http://stevef.truemesh.com/)と[Nat Price](http://nat.truemesh.com/)がJMock APIの進化についての素晴らしい講演を拝聴したが、彼らはそれを[OOPSLAの論文(PDF)](http://www.mockobjects.com/files/evolving_an_edsl.ooplsa2006.pdf)としてまとめている。
+私は[JAOO2005](https://martinfowler.com/bliki/JAOO2005.html)で、[Steve Freeman](http://stevef.truemesh.com/)と[Nat Price](http://nat.truemesh.com/)がJMock APIの進化についての素晴らしい講演を拝聴したが、彼らはそれを[OOPSLAの論文(PDF)](http://www.mockobjects.com/files/evolving_an_edsl.ooplsa2006.pdf)としてまとめている。
 
 
 

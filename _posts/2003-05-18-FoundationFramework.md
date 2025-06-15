@@ -3,7 +3,7 @@ title: 基礎型フレームワーク
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/FoundationFramework.html
+https://martinfowler.com/bliki/FoundationFramework.html
 
 Foundation Framework は、どんなアプリケーションよりも先立って作られる。また、そのアプリケーションたちの土台となる。考えとしては、まずそのフレームワークを必要とするアプリケーションの要求を分析し、それからフレームワークを構築する。重要なのは、アプリケーションに関する作業を始める前に、そのフレームワークは安定した API を持たなければならないということだ。フレームワークに異なる変更をいくつも加えてしまうと、アプリケーションとの間の連鎖反応のおかげで管理はとても難しくなるだろう。
 

@@ -3,7 +3,7 @@ title: 初期の苦痛
 tags: [agile, agile adoption]
 ---
 
-http://martinfowler.com/bliki/EarlyPain.html
+https://martinfowler.com/bliki/EarlyPain.html
 
 数年前、我々が採用していたアジャイル方法論なんて嫌いだというクライアントと話したことがある。「プロジェクトの初期段階で、こんな面倒なことをやるのは間違いだと思う」と彼は言った。彼の反応とは対照的に、私は、この初期の痛みこそがアジャイルや反復的開発の最大の利点だと思った。
 

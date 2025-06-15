@@ -3,7 +3,7 @@ title: 文脈型バリデーション
 tags: [domain driven design, application architecture]
 ---
 
-http://martinfowler.com/bliki/ContextualValidation.html
+https://martinfowler.com/bliki/ContextualValidation.html
 
 ずっと、Validationについてまとまった記事を書きたいと思っていた。
 Validationについては多くの混乱があるため、うまくいってる手法についてしっかりと述べるのはよいことだろう。

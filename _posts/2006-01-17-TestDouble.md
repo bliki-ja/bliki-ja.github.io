@@ -3,13 +3,13 @@ title: テストダブル
 tags: [testing]
 ---
 
-http://martinfowler.com/bliki/TestDouble.html
+https://martinfowler.com/bliki/TestDouble.html
 
 
 
 
 
-Gerard Meszarosが、様々な[Xunit](http://martinfowler.com/bliki/Xunit.html)フレームワークを使用したパターンを集めた[書籍を執筆中](http://tap.testautomationpatterns.com:8080/Book%20Outline.html)である。
+Gerard Meszarosが、様々な[Xunit](https://martinfowler.com/bliki/Xunit.html)フレームワークを使用したパターンを集めた[書籍を執筆中](http://tap.testautomationpatterns.com:8080/Book%20Outline.html)である。
 彼は、ある厄介なことに出くわしている。
 システムの一部分をテストするためにスタブ化することがあるが、
 その名前というのが、スタブ、モック、フェイク、ダミーなど、色々とあるのだ。

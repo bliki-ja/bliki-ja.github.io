@@ -3,7 +3,7 @@ title: DebianJava
 tags: [tools]
 ---
 
-http://martinfowler.com/bliki/DebianJava.html
+https://martinfowler.com/bliki/DebianJava.html
 
 ```sh
  # apt-get install java-package

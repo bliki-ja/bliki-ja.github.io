@@ -3,7 +3,7 @@ title: コンストラクタによる初期化
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/ConstructorInitialization.html
+https://martinfowler.com/bliki/ConstructorInitialization.html
 
 2006/2/7
 

@@ -3,7 +3,7 @@ title: LanguageWorkbenchReadings
 tags: [domain specific language]
 ---
 
-http://martinfowler.com/bliki/LanguageWorkbenchReadings.html
+https://martinfowler.com/bliki/LanguageWorkbenchReadings.html
 
 '''更新''':Neal Fordが[サンプルをJavaにポート](http://memeagora.blogspot.com/2005/07/language-workbench-sample-ported-to.html)してくれました。
 
@@ -34,7 +34,7 @@ DSLや言語指向プログラミングに関する参考文献としては、
 手始めに、ここの[概要](http://compose.labri.fr/documentation/dsl/)やここの[参考文献（注釈付き）](http://homepages.cwi.nl/~arie/papers/dslbib/)を読むと良いでしょう。
 
 この分野には今後も注目していこうと思います。
-[martinfowler.com](http://martinfowler.com/) にも記事を追加していくつもりです。
+[martinfowler.com](https://martinfowler.com/) にも記事を追加していくつもりです。
 
 ## コメント
 *2005-06-20 (月) 12:57:01 ''[[pline]]'' : "「MDAの利用」に反対する意見"はdebates over the use of MDA＝MDAの利用をめぐる議論では？

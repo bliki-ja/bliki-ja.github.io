@@ -3,7 +3,7 @@ title: アジャイルの押し付け
 tags: [agile, agile adoption]
 ---
 
-http://martinfowler.com/bliki/AgileImposition.html
+https://martinfowler.com/bliki/AgileImposition.html
 
 
 
@@ -67,7 +67,7 @@ Webを巡回していると、ある開発チームが上層部からアジャ�
 アジャイルを導入するときは通常、多くの新しいことを一度に学習することになる。
 中には直感では理解できないことも多い。
 これは、部分的には、XPの真実である。
-慣れるまでしばらくは、プロセスをチームに合わせることは難しい（この点については、数年前にXPを交えた[記事を書いた](http://martinfowler.com/articles/xpVariation.html)（[邦訳](http://www.objectclub.jp/community/XP-jp/xp_relate/xpvariations-j)））。
+慣れるまでしばらくは、プロセスをチームに合わせることは難しい（この点については、数年前にXPを交えた[記事を書いた](https://martinfowler.com/articles/xpVariation.html)（[邦訳](http://www.objectclub.jp/community/XP-jp/xp_relate/xpvariations-j)））。
 チームはまだ[守破離](/ShuHaRi)の「守」の段階で、コツをつかむまでは盲目的にプラクティスをこなす必要がある。
 このような状況では、「教義主義」や「非柔軟性」も（一時的には）良い学習ツールとなっているのである。
 

@@ -3,7 +3,7 @@ title: 派生情報
 tags: [uml]
 ---
 
-http://martinfowler.com/bliki/DerivedInformation.html
+https://martinfowler.com/bliki/DerivedInformation.html
 
 ### 派生情報をUMLでどう表す？
 

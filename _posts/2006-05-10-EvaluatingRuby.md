@@ -3,7 +3,7 @@ title: EvaluatingRuby
 tags: [ruby]
 ---
 
-http://martinfowler.com/bliki/EvaluatingRuby.html
+https://martinfowler.com/bliki/EvaluatingRuby.html
 
 
 

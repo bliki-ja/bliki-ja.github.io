@@ -3,7 +3,7 @@ title: 建築家
 tags: [process theory, collaboration]
 ---
 
-http://martinfowler.com/bliki/BuildingArchitect.html
+https://martinfowler.com/bliki/BuildingArchitect.html
 
 「ソフトウェアアーキテクト」という言葉を使うとき、
 アーキテクトの役割を理解しやすいように、建築のメタファーを使う。

@@ -3,9 +3,9 @@ title: バグが超少ないプロジェクト
 tags: [delivery, extreme programming]
 ---
 
-http://martinfowler.com/bliki/VeryLowDefectProject.html
+https://martinfowler.com/bliki/VeryLowDefectProject.html
 
-[XP](http://martinfowler.com/articles/newMethodology.html#xp)について話すとき、たいてい「適応型の計画手法」や「進化的な設計手法」といったものに注目が集まりますが、私がとりわけ興味を持っているのは、少ないながらも着実に伸びてきている「低欠陥XPプロジェクト」の数です。ここで言う「低欠陥」とは、バグの発生が月に1つ以下というレベルのことを指します。
+[XP](https://martinfowler.com/articles/newMethodology.html#xp)について話すとき、たいてい「適応型の計画手法」や「進化的な設計手法」といったものに注目が集まりますが、私がとりわけ興味を持っているのは、少ないながらも着実に伸びてきている「低欠陥XPプロジェクト」の数です。ここで言う「低欠陥」とは、バグの発生が月に1つ以下というレベルのことを指します。
 
 最初に出会ったのは、Kentによる、ある企業についての記述でした。
 この企業は食料を分類する機械を持っていました。機械にはベルトコンベアがついており、それがカメラを通り抜け、センサーをくぐり抜けるようになっています。そうして、果物や野菜がそれぞれのカテゴリに分類されていくわけです（これらの仕組みはSmalltalkで動いています）。

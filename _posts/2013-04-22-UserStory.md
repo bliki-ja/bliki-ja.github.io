@@ -3,7 +3,7 @@ title: ユーザーストーリー
 tags: [agile, requirements analysis]
 ---
 
-http://martinfowler.com/bliki/UserStory.html
+https://martinfowler.com/bliki/UserStory.html
 
 ユーザーストーリーとは、ソフトウェアシステムに求められるふるまいをまとめたものだ。
 アジャイルソフトウェア開発の世界で広く使われており、大量の機能を細かく分解して計画作りに生かせるようにしている。
@@ -38,7 +38,7 @@ Bill Wakeは、よいストーリーの特徴を覚えやすくするために
 
 Mike Cohnが、[ユーザーストーリーの書き方についての定番書](http://www.amazon.com/gp/product/0321205685)
 を書いた。XPにおけるユーザーストーリーの根本を理解するには、[白本](http://www.amazon.com/gp/product/0321278658)あるいは
-[緑本](http://martinfowler.com/books/pxp.html)を読もう。
+[緑本](https://martinfowler.com/books/pxp.html)を読もう。
 初期のblikiのエントリの中にも、
 [ユースケースとストーリー](/UseCasesAndStories)の違いをとりあげたものがある。
 

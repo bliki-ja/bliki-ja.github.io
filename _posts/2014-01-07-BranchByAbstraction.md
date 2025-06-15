@@ -3,40 +3,40 @@ title: 抽象化によるブランチ
 tags: [version control, continuous integration]
 ---
 
-http://martinfowler.com/bliki/BranchByAbstraction.html
+https://martinfowler.com/bliki/BranchByAbstraction.html
 
 「抽象化によるブランチ」というテクニック[^fn01]は、ソフトウェアシステムへの大規模な変更を徐々に進めていくときに使われるものだ。
 これを使えば、変更がまだ完了していなくても、定期的にシステムをリリースできるようになる。
 
 こんな状況を考えてみよう。システムのかなりの部分が依存しているモジュール（あるいはライブラリやフレームワーク）があって、それをリプレイスしようとしている。
 
-![](http://martinfowler.com/bliki/images/branch-by-abstraction/step-1.png)
+![](https://martinfowler.com/bliki/images/branch-by-abstraction/step-1.png)
 
 ※Flawed Supplier…欠陥のあるモジュール
 
 抽象化レイヤーを作って、クライアントのコードとモジュールとのやりとりをそこに閉じ込める。
 クライアントのコードの中でモジュールを呼び出しているところをすべて書き換えて、この抽象化レイヤーを経由させる。
 
-![](http://martinfowler.com/bliki/images/branch-by-abstraction/step-2.png)
+![](https://martinfowler.com/bliki/images/branch-by-abstraction/step-2.png)
 
 
 各クライアントについて、この抽象化レイヤーを使うよう徐々に書き換えていく。そして最終的には、モジュールとのやりとりをすべて抽象化レイヤーに閉じ込める。
 こうすることで、モジュールに対するユニットテストのカバレッジを改善できるようになる。この抽象化レイヤーをテスト通してテストできるからだ。
 
-![](http://martinfowler.com/bliki/images/branch-by-abstraction/step-3.png)
+![](https://martinfowler.com/bliki/images/branch-by-abstraction/step-3.png)
 
 
 そして、クライアントに必要な機能を実装した新しいモジュールを作る。このとき、新しいモジュールも先ほどの抽象化レイヤーを使うようにする[^fn02]。
 準備が整ったら、その機能を使うクライアントのコードを変更し、新しいモジュールを使うように切り替える。
 
-![](http://martinfowler.com/bliki/images/branch-by-abstraction/step-4.png)
+![](https://martinfowler.com/bliki/images/branch-by-abstraction/step-4.png)
 
 それ以外のクライアントについても、問題のあるモジュールから新しいモジュールへ徐々に切り替えていく。
 古いモジュールが不要になった時点で、古いモジュールは削除できる。
 この移行作業が終わったら、抽象化レイヤーはそのままでもかまわないし消してしまってもかまわない。
 
 
-![](http://martinfowler.com/bliki/images/branch-by-abstraction/step-5.png)
+![](https://martinfowler.com/bliki/images/branch-by-abstraction/step-5.png)
 
 この例はあくまでも一般的なものだが、実際はいろんなバリエーションがあり得る。
 一部のクライアントだけを先に移行するのが不可能で、全部一括で移行せざるを得ないことだってあるだろう。
@@ -46,7 +46,7 @@ http://martinfowler.com/bliki/BranchByAbstraction.html
 抽象化レイヤーを使って、複数の実装を一つのソフトウェアシステム内で共存できるようにすることだ。
 抽象化レイヤーを一枚増やすことで、一つの実装からもう一つの実装への移行を行っている。
 どの時点であってもシステムがきちんとビルドできて実行できることが保証されているので、
-[継続的デリバリー](http://martinfowler.com/delivery.html)を実現しながらリプレイスを進められる。
+[継続的デリバリー](https://martinfowler.com/delivery.html)を実現しながらリプレイスを進められる。
 段階的な変更の進めかたについては、いろんな方法を探ってみよう。
 
 ## あわせて読みたい

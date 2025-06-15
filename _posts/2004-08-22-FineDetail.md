@@ -3,7 +3,7 @@ title: FineDetail
 tags: [tools]
 ---
 
-http://martinfowler.com/bliki/FineDetail.html
+https://martinfowler.com/bliki/FineDetail.html
 
 大工仕事の職人技を Cindy はしっかりと見ている。私が見落としがちな細かなところまで、彼女は注意して見ていると思う。目には見えにくいが、実はものすごく手の込んだものは特に高く評価している。
 

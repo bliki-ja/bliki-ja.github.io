@@ -3,7 +3,7 @@ title: 儀礼的実装
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/CourtesyImplementation.html
+https://martinfowler.com/bliki/CourtesyImplementation.html
 
 クラスを作るとき、機能はそのクラスに合うようなものにしますよね。
 でも、そうした方が自然だから機能を追加する、ということもあるのです。

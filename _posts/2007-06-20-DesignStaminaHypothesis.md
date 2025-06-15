@@ -3,7 +3,7 @@ title: 設計＝スタミナ仮説
 tags: [productivity, technical debt, process theory, evolutionary design, clean code, software craftsmanship]
 ---
 
-http://martinfowler.com/bliki/DesignStaminaHypothesis.html
+https://martinfowler.com/bliki/DesignStaminaHypothesis.html
 
 > ソフトウェアをきちんと設計するのは、その労力に見合うことなのか？
 
@@ -32,7 +32,7 @@ http://martinfowler.com/bliki/DesignStaminaHypothesis.html
 
 その様子を図示してみたのが、この疑似グラフだ。
 
-![設計スタミナグラフ](http://martinfowler.com/bliki/images/designStaminaGraph.gif)
+![設計スタミナグラフ](https://martinfowler.com/bliki/images/designStaminaGraph.gif)
 
 この疑似グラフは、納品された機能（の累積）と時間との関係を、二種類のありがちなプロジェクトについてプロットしたものだ。
 一方のプロジェクトはきちんと設計をしたもの、もう一方のプロジェクトは設計を軽視したものになる。

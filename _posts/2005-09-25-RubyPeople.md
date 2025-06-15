@@ -3,7 +3,7 @@ title: Rubyピープル
 tags: [ruby]
 ---
 
-http://martinfowler.com/bliki/RubyPeople.html
+https://martinfowler.com/bliki/RubyPeople.html
 
 ここの読者ならご存知だろうが、ここ数年、私は熱心なrubyistだ。
 [言語としてのruby](http://www.ruby-lang.org/)は、リッチでありながらも整った文法、そして、よくデザインされたフレームワークが一体となっていて、すごく気に入っている。

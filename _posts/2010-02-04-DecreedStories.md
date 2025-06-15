@@ -8,5 +8,5 @@ tags: [requirements analysis]
 私は、これをアジャイル思考の深刻な誤解であると考えており、
 [対話的ストーリー](/ConversationalStories)を強く好む。
 
-![](http://martinfowler.com/bliki/images/conversationalStories/decreed.png)
+![](https://martinfowler.com/bliki/images/conversationalStories/decreed.png)
 

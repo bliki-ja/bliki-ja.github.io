@@ -3,7 +3,7 @@ title: テストが失敗したりしなかったり
 tags: [testing, bad things]
 ---
 
-http://martinfowler.com/bliki/ErraticTestFailure.html
+https://martinfowler.com/bliki/ErraticTestFailure.html
 
 先日、本のサンプルコードを書いていたときのことだ。
 いくつか変更を加え、動くのを確認し、テストを走らせ、レポジトリにコミットした。

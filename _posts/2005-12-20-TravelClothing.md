@@ -3,7 +3,7 @@ title: TravelClothing
 tags: [travel]
 ---
 
-http://martinfowler.com/bliki/TravelClothing.html
+https://martinfowler.com/bliki/TravelClothing.html
 
 2005/12/20
 

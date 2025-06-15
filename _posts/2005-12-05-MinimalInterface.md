@@ -3,7 +3,7 @@ title: 最小インタフェース
 tags: [API design]
 ---
 
-http://martinfowler.com/bliki/MinimalInterface.html
+https://martinfowler.com/bliki/MinimalInterface.html
 
 最小インタフェースとはAPI設計のスタイルである。
 ここでは、HumaneInterfaceと比較していく。

@@ -3,7 +3,7 @@ title: 素人プログラマー
 tags: [team organization, domain specific language]
 ---
 
-http://martinfowler.com/bliki/LayProgrammer.html
+https://martinfowler.com/bliki/LayProgrammer.html
 
 自分のことをプログラマだなんて思っちゃいないけれども、実際はプログラミングをしている人のことを、私は「素人プログラマ（Lay Programmer）」と呼んでいる。勤務時間のうちの大部分をスプレッドシートの前で過ごす人がいたら、彼女がしているのはプログラミングだ。そしてそれはとても高度なプログラミングであることがしょっちゅうだ。けれども彼女は自分のことをプログラマと呼んだりはしないし、もっと上手にプログラムを書く方法を学ぼうとしたりもしない。
 

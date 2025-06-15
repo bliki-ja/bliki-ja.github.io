@@ -3,7 +3,7 @@ title: コードの所有
 tags: [team organization, extreme programming, process theory]
 ---
 
-http://martinfowler.com/bliki/CodeOwnership.html
+https://martinfowler.com/bliki/CodeOwnership.html
 
 コードの所有には、私が今まで見てきたものだけでも、いくつかの形がある。ここでは大きく3つのカテゴリに分けてみた。
 

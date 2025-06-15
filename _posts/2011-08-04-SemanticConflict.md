@@ -3,7 +3,7 @@ title: 意味的衝突
 tags: [bad things, version control, continuous integration]
 ---
 
-http://martinfowler.com/bliki/SemanticConflict.html
+https://martinfowler.com/bliki/SemanticConflict.html
 
 私が同僚と[フィーチャーブランチ](/FeatureBranch)について話しているのを聴いた人は、我々があのパターンの大ファンではないということを知っている。
 我々の反論の重要な点は、ブランチ作成は簡単だが、マージは大変だという見解にある。
@@ -23,7 +23,7 @@ http://martinfowler.com/bliki/SemanticConflict.html
 けれども、問題は起こるのだ。もしJezが自分のフィーチャーブランチで、このメソッドへの呼び出しを追加したならどうなるだろう。
 2つがマージされると、テキストレベルのマージはうまくいくだろうが、プログラムは同じようには動かないだろう。
 
-![ブランチの一方で関数をリネームすると、もう一方でリネーム前の名前で追加した関数呼び出しはマージ後にエラーになる](http://martinfowler.com/bliki/images/semanticConflict/rename.png)
+![ブランチの一方で関数をリネームすると、もう一方でリネーム前の名前で追加した関数呼び出しはマージ後にエラーになる](https://martinfowler.com/bliki/images/semanticConflict/rename.png)
 
 
 メソッドのリネームは単純な例だし、
@@ -60,7 +60,7 @@ http://martinfowler.com/bliki/SemanticConflict.html
 役に立つもうひとつのテクニックは、もっと頻繁にマージをする、というものだ。
 もしJezが私の変更を数日後でなく、数時間後に発見したなら、そのほうが
 ずっと困難は軽減されるだろう。そうすれば、もう古い動作をしている大量のコードをビルドすることもない。
-だから、我々はこれほどにも[継続的インテグレーション](http://martinfowler.com/articles/continuousIntegration.html)の大ファンなのだ。
+だから、我々はこれほどにも[継続的インテグレーション](https://martinfowler.com/articles/continuousIntegration.html)の大ファンなのだ。
 
 ツールがフィーチャーブランチを我慢に耐えうるものにしてくれる、という考え方を喧伝する人たちには、2つのグループがあるようだ。その1つは、
 「エンタープライズグレードの」バージョン管理システムの御用商人らだ。

@@ -3,7 +3,7 @@ title: テスト用言語
 tags: [testing]
 ---
 
-http://martinfowler.com/bliki/TestingLanguage.html
+https://martinfowler.com/bliki/TestingLanguage.html
 
 私はいま、[XP day](http://www.xpday.org/) のセッション会場にいる。
 Owen Rogers とRob Styles が、

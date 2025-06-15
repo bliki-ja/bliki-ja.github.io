@@ -3,7 +3,7 @@ title: diffデバッグ
 tags: [delivery, version control]
 ---
 
-http://martinfowler.com/bliki/DiffDebugging.html
+https://martinfowler.com/bliki/DiffDebugging.html
 
 最近の話だが、ある本を執筆中にサンプルコードを書いていた。すると、テストが失敗してしまった。「ぐわっ」青ざめた。「先週はパスしてたじゃん。何だよこれ。」そこで私は目の前にあるコードのバグを探すよりも、思い浮かんだ「ある方法」を試してみることにした。これを「diffデバッグ」と命名することにしよう。
 

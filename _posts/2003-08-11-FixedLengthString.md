@@ -3,7 +3,7 @@ title: 固定長文字型
 tags: [application architecture]
 ---
 
-http://martinfowler.com/bliki/FixedLengthString.html
+https://martinfowler.com/bliki/FixedLengthString.html
 
 アプリケーションプログラムとリレーショナルデータベースの間をやり取りするライブラリを見てみてください。すると、データベースの文字型（ char や varchar ）がプログラム言語の文字型にマッピングされていることに気付くでしょう。簡単です。そりゃそうですよね。でも、これが間違いってこともあるんです。
 
@@ -23,7 +23,7 @@ UI の部品は、固定長の文字列をそのサイズ分だけとってき�
 これは、一般的な設計問題に対する具体的な回答の例です。
 
 * データベースを切り離す。……のは良いことだが、制約はそのままであり、とばっちりはすべて自分に来る。
-* 物事が簡単になるのに、みんな簡単なバリュータイプを作りたがらない（詳しいことは [When To Make a Type](http://martinfowler.com/ieeeSoftware/whenType.pdf)（PDF)で）。
+* 物事が簡単になるのに、みんな簡単なバリュータイプを作りたがらない（詳しいことは [When To Make a Type](https://martinfowler.com/ieeeSoftware/whenType.pdf)（PDF)で）。
 * 簡単なバリデーション機能を UI に入れることで、よりよいインターフェイスが出来る。バリデーションのロジックを重複させないようにするのがポイント。
 
 文字列のチェックというのは、何も長さだけではありません。

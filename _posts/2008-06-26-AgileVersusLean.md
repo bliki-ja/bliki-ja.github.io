@@ -3,7 +3,7 @@ title: アジャイル対リーン
 tags: [agile, lean]
 ---
 
-http://martinfowler.com/bliki/AgileVersusLean.html
+https://martinfowler.com/bliki/AgileVersusLean.html
 
 
 
@@ -40,7 +40,7 @@ http://martinfowler.com/bliki/AgileVersusLean.html
 いくつかのソフトウェア開発手法を総称する名前である。
 これらの多くの手法は1990年代に開発された。
 こうした手法はいずれも、[アジャイルソフトウェア開発マニフェスト](http://agilemanifesto.org/)で価値と原理として述べられている哲学を含んでいる。
-(私のエッセイ「[The New Methodology](http://martinfowler.com/articles/newMethodology.html)」で詳しく説明している。)
+(私のエッセイ「[The New Methodology](https://martinfowler.com/articles/newMethodology.html)」で詳しく説明している。)
 
 
 

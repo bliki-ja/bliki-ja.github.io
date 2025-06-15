@@ -3,7 +3,7 @@ title: ExtemporarySpeaking
 tags: [presentations]
 ---
 
-http://martinfowler.com/bliki/ExtemporarySpeaking.html
+https://martinfowler.com/bliki/ExtemporarySpeaking.html
 
 
 
@@ -20,7 +20,7 @@ Jon Udellが講演のやり方について[2つのモデル](http://weblog.infow
 
 具体的に言うと、私は事前にアウトラインを作っておくことが多い。インデックスカードにラフなアウトラインをスケッチしておく。こうして、おおまかな話の構成を作っておく。
 
-![](http://martinfowler.com/bliki/images/railsCard.jpg)
+![](https://martinfowler.com/bliki/images/railsCard.jpg)
 
 これはRailsConfで使ったインデックスカードである。（字がヘタな件については /dev/null に捨てておくれ。私はいつも我慢してるんだから。）
 

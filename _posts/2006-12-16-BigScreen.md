@@ -3,7 +3,7 @@ title: 大きな画面
 tags: [team environment, productivity, tools]
 ---
 
-http://martinfowler.com/bliki/BigScreen.html
+https://martinfowler.com/bliki/BigScreen.html
 
 2006/12/16
 

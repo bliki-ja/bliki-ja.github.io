@@ -3,7 +3,7 @@ title: ジャンケン見積り
 tags: [project planning, collaboration, estimation]
 ---
 
-http://martinfowler.com/bliki/ThrownEstimate.html
+https://martinfowler.com/bliki/ThrownEstimate.html
 
 XPスタイルで計画を行っているのであれば、
 見積りに関する開発者間の合意を素早くとる必要があるだろう。

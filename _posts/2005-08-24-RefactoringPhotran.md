@@ -3,7 +3,7 @@ title: RefactoringPhotran
 tags: [refactoring]
 ---
 
-http://martinfowler.com/bliki/RefactoringPhotran.html
+https://martinfowler.com/bliki/RefactoringPhotran.html
 
 UIUC（イリノイ大学）のアレゲな人たちが、Fortranをリファクタリングできるようにしているらしい。
 Brian Footeが[そのプロジェクトについて](http://www.laputan.org/catfish/archives/2005_06.html)素晴らしい記事を書いている。

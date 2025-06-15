@@ -3,14 +3,14 @@ title: Datensparsamkeit
 tags: [database, web development, internet culture, legal, data analytics]
 ---
 
-http://martinfowler.com/bliki/Datensparsamkeit.html
+https://martinfowler.com/bliki/Datensparsamkeit.html
 
 2013/12/12
 
 ドイツ語にはDatensparsamkeitっていう言葉があるんだけど、それに該当する適切な英単語はない。
 この言葉は、データを取得したり保存したりするときの心がけを表すもので、「実際に必要なデータだけを扱うべき」という意味だ。
 
-![](http://martinfowler.com/bliki/images/datensparsamkeit/sketch.png)
+![](https://martinfowler.com/bliki/images/datensparsamkeit/sketch.png)
 
 とにかく何でもかんでもビッグデータっていう時代だ。取得できるデータはとりあえず何でもかんでも取っておけという風潮になっている。
 アドレス帳の連絡先情報を今すぐに使うことはないとしても、とりあえずは取得しておく。あとで役立つかもしれないからだ。

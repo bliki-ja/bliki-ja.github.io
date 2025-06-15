@@ -3,7 +3,7 @@ title: アサーションのないテスト
 tags: [testing, bad things]
 ---
 
-http://martinfowler.com/bliki/AssertionFreeTesting.html
+https://martinfowler.com/bliki/AssertionFreeTesting.html
 
 友人の友人に聞いた話である。が、少なくともところどころは実話に違いない。
 

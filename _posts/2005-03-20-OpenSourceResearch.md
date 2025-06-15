@@ -3,7 +3,7 @@ title: オープンソースリサーチ
 tags: [thoughtworks]
 ---
 
-http://martinfowler.com/bliki/OpenSourceResearch.html
+https://martinfowler.com/bliki/OpenSourceResearch.html
 
 我々にとってオープンソース界が興味深いのは、何がオープンソース界を魅力的なリサーチコミュニティにしているのかという点です。
 オープンソースプロジェクトといっても様々な形態がありますが、多くのプロジェクトでは、アイデアを採用し、そのアイデアに沿ってプログラミングを行います。それがどこへ向かうのか、そして、それが価値があるかどうかを確認するためです。

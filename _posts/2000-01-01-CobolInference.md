@@ -3,7 +3,7 @@ title: CobolInference
 tags: [domain specific language]
 ---
 
-http://martinfowler.com/bliki/CobolInference.html
+https://martinfowler.com/bliki/CobolInference.html
 
 「何かしらの技術によってユーザーは自分達のソフトウェアを自らの手で書くことが出来るようになり、将来プログラマは不要になる」という主張を頻繁に耳にする。この手の話を聞く度に思い出すのは、これこそがまさにCOBOLの目標だったということ—そしてその結果がいかなるものであったかについてはみなさんご存知のとおりだ。
 

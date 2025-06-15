@@ -4,7 +4,7 @@ title: Rubyの構文のかんたんな紹介
 
 <hr />
 
-以下の文章は、Martin Fowler による [Simple Ruby Syntax](http://martinfowler.com/articles/simpleRuby.html) の日本語訳である。
+以下の文章は、Martin Fowler による [Simple Ruby Syntax](https://martinfowler.com/articles/simpleRuby.html) の日本語訳である。
 
 <hr />
 

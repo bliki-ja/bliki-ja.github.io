@@ -5,7 +5,7 @@ title: エンタープライズアプリケーション開発のパターン
 
 <hr />
 
-以下の文章は、Martin Fowler による [Developing Patterns of Enterprise Software](http://martinfowler.com/articles/enterprisePatterns.html) の日本語訳である。
+以下の文章は、Martin Fowler による [Developing Patterns of Enterprise Software](https://martinfowler.com/articles/enterprisePatterns.html) の日本語訳である。
 
 <hr />
 
@@ -28,7 +28,7 @@ title: エンタープライズアプリケーション開発のパターン
 パターンを書くってだけで、じゅーぶんハードなんだから！
 
 どのパターンがよいかとか、なぜパターンに興味があるのかというのは、人によって異なる。
-私の立場については、[IEEEソフトウェアのコラム](http://martinfowler.com/ieeeSoftware/patterns.pdf)(PDF)で述べた。
+私の立場については、[IEEEソフトウェアのコラム](https://martinfowler.com/ieeeSoftware/patterns.pdf)(PDF)で述べた。
 
 ここにリストアップしたパターンは、
 少なくとも私がよく知っているパターンであり、
@@ -39,7 +39,7 @@ title: エンタープライズアプリケーション開発のパターン
 
 ここは、私が有用だと思うパターンのカタログである。
 
-### [Patterns of Enterprise Application Architecture](http://martinfowler.com/eaaCatalog/) 
+### [Patterns of Enterprise Application Architecture](https://martinfowler.com/eaaCatalog/) 
 (Fowler)
 
 {{isbn_image_right('0321127420')}}
@@ -87,7 +87,7 @@ Webプレゼンテーション、デプロイ、分散化システムなど。
 これらのパターンは、リッチなドメイン モデルの構築をどのように行えばよいかについて記述している。また、モデリング原則の採用を妨げる現実世界の障害の認識、それを克服する方法についても記述している。
 
 
-### [Analysis Patterns](http://martinfowler.com/books.html#ap) 
+### [Analysis Patterns](https://martinfowler.com/books.html#ap) 
 (Fowler)
 
 {{isbn_image_right('0201895420')}}
@@ -145,7 +145,7 @@ EAAに関する多くの本は、エンタープライズ アプリケーショ�
 EAAはひとつのアプリケーションの構築についてである。
 EnterpriseArchitectureはまったく異なる動物である。
 
-*[Patterns of Enterprise Application Architecture](http://martinfowler.com/eaaCatalog/)
+*[Patterns of Enterprise Application Architecture](https://martinfowler.com/eaaCatalog/)
 
 テクノロジ独立の観点からEAAを考察している。
 
@@ -186,7 +186,7 @@ EAAに焦点をあてた最初の本。J2EEプラットフォームの観点か�
 多くのシステムには非常に複雑なドメイン ロジックが存在するが、
 ビジネスの状況の変化に合わせてロジックは頻繁に変更される。
 
-* [Patterns of Enterprise Application Architecture](http://martinfowler.com/eaaCatalog/)
+* [Patterns of Enterprise Application Architecture](https://martinfowler.com/eaaCatalog/)
 
 ドメイン ロジックを構築する主なパターンについてまとめている節がある。
 
@@ -195,7 +195,7 @@ EAAに焦点をあてた最初の本。J2EEプラットフォームの観点か�
 ドメイン モデルの使用について詳細に書かれている。
 最も洗練されたドメイン ロジック パターンと、複雑なロジックにもっとも適したパターンについて。
 
-* [Analysis Patterns](http://martinfowler.com/books.html#ap)
+* [Analysis Patterns](https://martinfowler.com/books.html#ap)
 
 ドメイン モデルの例を示したパターン
 
@@ -233,7 +233,7 @@ EAAに焦点をあてた最初の本。J2EEプラットフォームの観点か�
 まず火ぶたをきったのは、Sun社Professional ServicesのDeepak Alur、John Crupi、Dan Malksによる『{{isbn('0130648841','CoreJ2EE Patterns')}}（邦題：{{isbn('4894714345','J2EEパターン—明暗を分ける設計の戦略')}}）』である。
 彼らはパターンを作り、J2EEの効果的利用法を示しただけではなく、優れたパターンがいかに効果的かということまで示してくれた。J2EEという特定のプラットフォームと結びついてはいるが、彼らのパターンの多くは他の技術にも同じように適応できる。実際に、他のパターン作成者が彼らのアイデアを別のシチュエーションで使っている。
 
-私も『[[PofEAA](http://martinfowler.com/articles/enterprisePatterns.html)』という本を出版し、この「第二の波」に乗ることができた。本書の狙いは、技術の枠を越えたパターンの提供にあるが、前述のCoreJ2EEの成果を基にしている。
+私も『[[PofEAA](https://martinfowler.com/articles/enterprisePatterns.html)』という本を出版し、この「第二の波」に乗ることができた。本書の狙いは、技術の枠を越えたパターンの提供にあるが、前述のCoreJ2EEの成果を基にしている。
 
 最近加わったエンタープライズアプリケーションパターンは、マイクロソフトによるものだ。.NET用のアーキテクチャパターンである。これは現在、[MSDN](http://msdn.microsoft.com/architecture/patterns/)にて利用可能である。2003年後半にはMicrosoft出版より出版されるだろう。マイクロソフトでは、エンタープライズアプリケーションアーキテクチャ周りのパターンだけでなく、Philip Teale率いるチームによって、データ管理周りのパターンも構築している。彼らはまず最初に[データムーブメント](http://msdn.microsoft.com/practices/type/Patterns/Data/default.asp)のパターンをリリースしてくれた。
 

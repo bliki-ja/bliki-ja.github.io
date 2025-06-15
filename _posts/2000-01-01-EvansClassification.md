@@ -3,13 +3,13 @@ title: エヴァンスの分類
 tags: [domain driven design]
 ---
 
-http://martinfowler.com/bliki/EvansClassification.html
+https://martinfowler.com/bliki/EvansClassification.html
 
 Eric Evansのエクセレントな著書『Domain Driven Design』では、
 我々がしばしば目にする様々なドメインオブジェクトが以下のように分類されている。
 
 * エンティティ：アイデンティティを持ち、時間経過によって形を変えるオブジェクト。「リファレンスオブジェクト」とも呼ばれることがある。
-* バリューオブジェクト：属性の組み合わせに意味があるオブジェクト。同じ値（バリュー）を持つ2つのバリューオブジェクトは、どちらもすべての属性が等しいと見なされる。バリューオブジェクトについては、私も[P of EAA](http://martinfowler.com/books.html#eaa)で触れている。
+* バリューオブジェクト：属性の組み合わせに意味があるオブジェクト。同じ値（バリュー）を持つ2つのバリューオブジェクトは、どちらもすべての属性が等しいと見なされる。バリューオブジェクトについては、私も[P of EAA](https://martinfowler.com/books.html#eaa)で触れている。
 * サービス：ドメインにおける独立したオペレーション。サービスオブジェクトは1つ以上のサービスを持つ。実行文脈におけるサービスオブジェクト型のインスタンスは、通常は1つだけである。
 
 

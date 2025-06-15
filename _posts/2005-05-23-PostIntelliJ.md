@@ -3,7 +3,7 @@ title: PostIntelliJ
 tags: [tools]
 ---
 
-http://martinfowler.com/bliki/PostIntelliJ.html
+https://martinfowler.com/bliki/PostIntelliJ.html
 
 よく、ソフトウェア開発ツールを試用してくれないかというオファーを受ける。
 残念ながら見る時間があまりないのだが——正直言って、いつも失望させられてばかりである。
@@ -12,7 +12,7 @@ http://martinfowler.com/bliki/PostIntelliJ.html
 2000年の後半、私はツールに注目していた——特にJavaのリファクタリング ツールにだ。
 その頃、まともなJavaリファクタリング ツールは存在しなかった。
 Smalltalk Refactoring Browserによって実証されてはいたが、
-私は[Refactoring Rubicon](http://martinfowler.com/articles/refactoringRubicon.html)を超える者を待っていた。
+私は[Refactoring Rubicon](https://martinfowler.com/articles/refactoringRubicon.html)を超える者を待っていた。
 それは（現在JetBrainsと呼ばれる会社の）IntelliJ IDEAを最初に触ったときに表れた。
 
 そのリファクタリング機能には感動した——Javaにおける最初のリファクタリング ツールであった。

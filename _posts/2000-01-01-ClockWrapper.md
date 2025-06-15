@@ -3,7 +3,7 @@ title: ClockWrapper
 tags: [testing]
 ---
 
-http://martinfowler.com/bliki/ClockWrapper.html
+https://martinfowler.com/bliki/ClockWrapper.html
 
 コードのなかで現在のdateやtimeが必要になったとき、
 システム ルーチンに直接アクセスしてはいけない。

@@ -3,7 +3,7 @@ title: VisualChannel
 tags: [presentations]
 ---
 
-http://martinfowler.com/bliki/VisualChannel.html
+https://martinfowler.com/bliki/VisualChannel.html
 
 
 
@@ -24,7 +24,7 @@ http://martinfowler.com/bliki/VisualChannel.html
 プレゼンテーションの問題を回避できるのではないかと思っている
 （問題の多くは平凡な箇条書きのスライドが原因だ）。
 
-![](http://martinfowler.com/bliki/images/visualChannel/sketch.png)
+![](https://martinfowler.com/bliki/images/visualChannel/sketch.png)
 
 
  【図中】
@@ -96,7 +96,7 @@ http://martinfowler.com/bliki/VisualChannel.html
 私のTalkLet（訳注：対話しながら進める講演のことらしい。）
 「アジャイルのエッセンス」から例を示そう。
 
-![](http://martinfowler.com/bliki/images/visualChannel/essenceAgile.015.png)
+![](https://martinfowler.com/bliki/images/visualChannel/essenceAgile.015.png)
 
 ```
  【図中】

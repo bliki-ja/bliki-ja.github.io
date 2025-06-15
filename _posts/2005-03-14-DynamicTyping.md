@@ -3,7 +3,7 @@ title: ダイナミックタイピング
 tags: [language feature, ruby]
 ---
 
-http://martinfowler.com/bliki/DynamicTyping.html
+https://martinfowler.com/bliki/DynamicTyping.html
 
 長年、プログラム言語における静的型付け（スタティックタイピング）と動的型付け（ダイナミックタイピング）の議論に参加したいとは思えませんでした。
 というのも、これは一種の感情的なトピックスであり、人の意見にまったく耳を傾けないような議論になりがちだからです。

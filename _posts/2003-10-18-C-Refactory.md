@@ -3,7 +3,7 @@ title: C-Refactory
 tags: refactoring
 ---
 
-http://martinfowler.com/bliki/C-Refactory.html
+https://martinfowler.com/bliki/C-Refactory.html
 
 ★途中
 
