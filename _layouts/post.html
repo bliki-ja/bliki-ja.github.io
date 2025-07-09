@@ -6,7 +6,11 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta" style="text-align:right">
       {{ page.date | date: "%Y-%m-%d" }}
+      {% if page.tags contains "article" %}
+      [<a href="https://martinfowler.com/articles/{{ page.original_page_name }}">オリジナル記事</a>]
+      {% else %}
       [<a href="https://martinfowler.com/bliki/{{ page.url | remove:'/' }}.html">オリジナル記事</a>]
+      {% endif %}
       [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/{{ page.path }}">翻訳者と原稿</a>]
 
     {% if page.tags.size != 0 %}<br />tags: 
