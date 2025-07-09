@@ -1,0 +1,24 @@
+{% comment %}
+Usage:
+  {% include link to="ValueObject" %}
+    → 記事の title と一致した場合に自動でリンク生成。
+  {% include link to="バリューオブジェクト" %}
+    → 日本語タイトルにも対応。
+
+いずれにも一致しない場合はリンクではなく生文字列が出力される。
+
+{% endcomment %}
+
+
+{% assign posts_by_title = site.posts | where: "title", include.to %}
+{% assign posts_by_slug  = site.posts | where_exp: "item", "item.slug == include.to" %}
+{% assign posts_by_url   = site.posts | where_exp: "item", "item.url contains include.to" %}
+
+{% assign candidates = posts_by_title | concat: posts_by_slug | concat: posts_by_url %}
+{% assign post = candidates | first %}
+
+{% if post %}
+  <a href="{{ post.url }}">{{ post.title }}</a>
+{% else %}
+  {{ include.to }}
+{% endif %}
