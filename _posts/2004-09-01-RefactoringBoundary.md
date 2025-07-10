@@ -3,11 +3,8 @@ title: リファクタリングの境界線
 tags: [refactoring boundary]
 ---
 
-https://martinfowler.com/bliki/RefactoringBoundary.html
-
 [リファクタリングML](http://groups.yahoo.com/group/refactoring)で「リファクタリングとは何か（何ではないか）」といった議論があった。
-このように、ピンの上に何人の天使が立てるか (how many angels fit on a pin) といった不毛な議論をいつもやらかしてしまう
-{{fn('訳注：天使はカウントできないので答えが出ないため、意味のない議論の比喩に用いられる。答えが出ないが故に、ディベートの練習題材になることもあるらしい。')}}。
+このように、ピンの上に何人の天使が立てるか (how many angels fit on a pin) といった不毛な議論をいつもやらかしてしまう（訳注：天使はカウントできないので答えが出ないため、意味のない議論の比喩に用いられる。答えが出ないが故に、ディベートの練習題材になることもあるらしい）。
 しかし、リファクタリングの境界線について考えることは、いくらか意義があるように思う。
 
 [リファクタリング本での定義](DefinitionOfRefactoring)は、

@@ -187,7 +187,6 @@ I think that's also true of extreme programming. The whole value of test-first d
 *2004-02-28 (土) 01:49:16 ''[[奥村]]'' : 申し訳ないです、勘違いの上にフライングでした。確かにこのページはblikiとはデザインが違いますね。大丈夫ですか？とりあえず書いた所までは保存します。
 *2004-02-29 (日) 02:55:06 ''[[奥村]]'' : 残りの訳も上げてしまいます。でもあちこち怪しい上にぜんぜん会話っぽくありません。訳すのって難しいですね。だいたいで読むだけなら何とかなるんですけど...
 *2006-04-28 (金) 16:49:14 pagerank : Thanks!!! Links: <a href='http://www.areaseo.com'>pagerank main</a> : [http://www.areaseo.com improve pagerank default] - [HTTP://www.areaseo.com improve pagerank default] : [PageRank 11|http://www.areaseo.com] - [PageRank 11|HTTP://www.areaseo.com] : http://www.areaseo.com/improvepr/ : [http://www.areaseo.com google rank 20]] : [[http://www.areaseo.com ]( pagerank 5) : "online pr16" http://www.areaseo.com : [http://www.areaseo.com|google pr]
-{{comment}}
 
 
 ----

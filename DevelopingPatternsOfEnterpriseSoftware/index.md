@@ -42,8 +42,6 @@ title: エンタープライズアプリケーション開発のパターン
 ### [Patterns of Enterprise Application Architecture](https://martinfowler.com/eaaCatalog/) 
 (Fowler)
 
-{{isbn_image_right('0321127420')}}
-{{isbn_image_right('4798105538')}}
 レイヤ化されたアーキテクチャという文脈で、エンタープライズ アプリケーション アーキテクチャに焦点をあてている。
 主な節は、ドメイン ロジック、Webプレゼンテーション、データベース統合、オフライン コンカレンシー（David Riceによる）、および、分散化である。
 データベース統合の節が最も大きく、オブジェクト/リレーショナル マッピングのパターンを多く掲載している。
@@ -52,14 +50,12 @@ title: エンタープライズアプリケーション開発のパターン
 ### [Core J2EE Patterns](http://www.corej2eepatterns.com/) 
 (Alur, Crupi, and Malks)
 
-{{isbn_image_right('0131422464')}}
-{{isbn_image_right('4894714345')}}
 Java J2EEプラットフォームに関するエンタープライズ アプリケーション アーキテクチャ パターン。J2EEプラットフォームにフォーカスしているが、他のエンタープライズ アプリケーション プラットフォームにも適用可能（工夫が必要だが）。
 
 ### [Enterprise Integration Patterns](http://www.enterpriseintegrationpatterns.com/) 
 (Hohpe and Woolf)
 
-{{isbn_image_right('0321200683')}}
+
 非同期メッセージングによる統合は、最も効果的なエンタープライズ アプリケーションの統合方法のひとつではないかと思う。EIPには、基本的なパターンが掲載されている。
 
 
@@ -82,7 +78,7 @@ Webプレゼンテーション、デプロイ、分散化システムなど。
 ### [Domain Driven Design](http://domainlanguage.com/) 
 (Evans)
 
-{{isbn_image_right('0321125215')}}
+
 オブジェクト指向ドメイン モデルの構築は、ドメイン ロジックを作るためのポピュラーな手法である。これは、複雑なドメインの構築に向いている。欠点は、その作業が非常に複雑なことである。
 これらのパターンは、リッチなドメイン モデルの構築をどのように行えばよいかについて記述している。また、モデリング原則の採用を妨げる現実世界の障害の認識、それを克服する方法についても記述している。
 
@@ -90,8 +86,7 @@ Webプレゼンテーション、デプロイ、分散化システムなど。
 ### [Analysis Patterns](https://martinfowler.com/books.html#ap) 
 (Fowler)
 
-{{isbn_image_right('0201895420')}}
-{{isbn_image_right('4894716933')}}
+
 多くのドメイン モデルを見ると、何度も登場する「構造」に気付くだろう。
 この本では、そういった共通点をパターンという形で記述しようとした。
 アップデートが必要な個所も多くあるが、基本的な考えは今でも十分使える。
@@ -101,7 +96,7 @@ Webプレゼンテーション、デプロイ、分散化システムなど。
 ### [Data Model Patterns](http://www.amazon.com/exec/obidos/ASIN/0932633293) 
 (Hay)
 
-{{isbn_image_right('0932633293')}}
+
 データモデルに関する一般的なパターン集。
 これらのパターンは非常に概念的なアプローチで開発されているため、
 データモデリングのみならず、オブジェクトモデリングにも有用である。
@@ -110,8 +105,7 @@ Webプレゼンテーション、デプロイ、分散化システムなど。
 (Gamma, Helm, Johnson, and Vlissides)
 
 
-{{isbn_image_right('0201633612')}}
-{{isbn_image_right('4797311126')}}
+
 最初の、そして最も有用な、パターン本。
 ここに掲載されているパターンの多くは基本的なものであり、エンタープライズ ソフトウェア開発に限定してはいない。
 しかし、多くのエンタープライズ パターンはこれらのパターンを参照している。
@@ -119,8 +113,7 @@ Webプレゼンテーション、デプロイ、分散化システムなど。
 ### [POSA](http://www.amazon.com/exec/obidos/ASIN/0471958697) 
 (Buschmann, Meunier, Rohnert, Sommerlad, and Stal)
 
-{{isbn_image_right('0471606952')}}
-{{isbn_image_right('4764902834')}}
+
 アーキテクチャ パターンに影響を及ぼしている。
 レイヤ（エンタープライズ アプリケーション）とパイプ アンド フィルター（メッセージング）は、多くのエンタープライズ パターンが機能するための基本的なパターンである。
 
@@ -230,7 +223,7 @@ EAAに焦点をあてた最初の本。J2EEプラットフォームの観点か�
 
 90年代半ばに最初のパターン本のラッシュ期があった。だがその後、なかなか良いパターンが生まれなかったように思う。特定のドメインに特化できなかったことにも原因がある。現在、パターン記述の「第二の波」がきているのではないだろうか。エンタープライズソフトウェアの世界は、幸運なことに、この波の恩恵を受けることができる。
 
-まず火ぶたをきったのは、Sun社Professional ServicesのDeepak Alur、John Crupi、Dan Malksによる『{{isbn('0130648841','CoreJ2EE Patterns')}}（邦題：{{isbn('4894714345','J2EEパターン—明暗を分ける設計の戦略')}}）』である。
+まず火ぶたをきったのは、Sun社Professional ServicesのDeepak Alur、John Crupi、Dan Malksによる『CoreJ2EE Patterns（邦題：J2EEパターン—明暗を分ける設計の戦略』である。
 彼らはパターンを作り、J2EEの効果的利用法を示しただけではなく、優れたパターンがいかに効果的かということまで示してくれた。J2EEという特定のプラットフォームと結びついてはいるが、彼らのパターンの多くは他の技術にも同じように適応できる。実際に、他のパターン作成者が彼らのアイデアを別のシチュエーションで使っている。
 
 私も『[[PofEAA](https://martinfowler.com/articles/enterprisePatterns.html)』という本を出版し、この「第二の波」に乗ることができた。本書の狙いは、技術の枠を越えたパターンの提供にあるが、前述のCoreJ2EEの成果を基にしている。
@@ -267,6 +260,3 @@ May 2003:
 * (C)Copyright [Martin Fowler](http://www.martinfowler.com/), all rights reserved 
 * 翻訳者：[[kdmsnr]]
 
-## comment
-
-{{rcomment}}

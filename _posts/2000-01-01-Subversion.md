@@ -3,10 +3,6 @@ title: Subversion
 tags: [version control]
 ---
 
-https://martinfowler.com/bliki/Subversion.html
-
-2005/3/16
-
 （新しい本へのリンクを追加した）
 
 Subversionは新しいオープンソースのバージョン管理システムだ——つまり、CVSの後継ってわけだ。
@@ -49,7 +45,7 @@ Windows上だと、Tortoise SVNがいい感じだ。
 長年、CVSを使って作業ディレクトリのバックアップを行ってきた。
 今は[複数のデスクトップ環境](MultipleDesktops)を使っているが、
 ソース管理システムを使って、これらすべての環境を同期させることが出来ることに気が付いた。
-数ヶ月前、レポジトリを [subverted](http://subversion.tigris.org/){{fn('訳注：CVSからSubversionへの移行')}} したんだが、
+数ヶ月前、レポジトリを [subverted](http://subversion.tigris.org/)（訳注：CVSからSubversionへの移行）したんだが、
 これがもうめちゃくちゃウマくいってる。移行して良かった。ハッピー。
 シングルユーザーで利用してるもんだから、
 コミット衝突の回避みたいな恩恵はまったく受けてないんだけど、
@@ -58,7 +54,7 @@ Windows上だと、Tortoise SVNがいい感じだ。
 
 svnクライアントは今のところまだあまり存在してない。
 しかし、それは一時的な問題だ。
-私はWindows上のコマンドラインと[tortoise](http://tortoisesvn.tigris.org/){{fn('訳注：エクスプローラを拡張する感じのsvnクライアント。')}}でやってるが、
+私はWindows上のコマンドラインと[tortoise](http://tortoisesvn.tigris.org/)（訳注：エクスプローラを拡張する感じのsvnクライアント）でやってるが、
 まあなんとかできとるよ。
 
 いちばん悩んだのは、レポジトリを単一にするか複数にするかだった。
@@ -68,4 +64,4 @@ svnクライアントは今のところまだあまり存在してない。
 レポジトリは単一ですよ！と言うので、そうした。
 やっぱ単一ですよ！
 
-{{rcomment}}
+

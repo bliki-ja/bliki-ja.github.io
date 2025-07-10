@@ -2,9 +2,6 @@
 title: シグニチャシリーズの判断基準
 tags: [writing]
 ---
-
-http://www.martinfowler.com/bliki/SignatureSeriesCriteria.html
-
 時々、私のシグニチャシリーズに入れてもらうにはどうすればよいかと聞かれます。
 シグニチャシリーズは数多くありますが、それぞれに独自の取り決めが設けてあります。
 ここでは、私のシグニチャシリーズの取り決めについてお話しましょう。
@@ -52,9 +49,3 @@ http://www.martinfowler.com/bliki/SignatureSeriesCriteria.html
 
 * [The Addison-Wesley Signature Series Series](http://www.awprofessional.com/series/series.asp?st=44126)
 
-
-* {{isbn_image('0321127420')}}
-* {{isbn_image('0201775948')}}
-* {{isbn_image('0321200683')}}
-* {{isbn_image('0321213351')}}
-* {{isbn_image('0321130006')}}

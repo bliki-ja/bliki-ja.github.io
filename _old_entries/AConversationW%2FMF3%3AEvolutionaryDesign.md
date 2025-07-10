@@ -12,7 +12,6 @@ AConversationWithMartinFowler
 
 * Version:0.8（引用部分の日本語訳を誰か教えてください）
 ----
-{{toc}}
 
 ## 計画的設計 vs 進化的設計(Planned versus Evolutionary Design)
 

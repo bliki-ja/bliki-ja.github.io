@@ -15,4 +15,3 @@ https://martinfowler.com/bliki/ResourcePool.html
 
 リソースプールに関するさらに詳しい情報については、[POSA 3](http://www.amazon.com/gp/product/0470845252?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0470845252)を参照のこと。
 
-{{comment}}

@@ -108,4 +108,4 @@ JavaやC#よりもSmalltalkやRubyのほうがなぜ楽しいかなんて、口�
 *2004-03-26 (金) 18:04:04 ''[[takai]]'' : http://www.csg.is.titech.ac.jp/~chiba/notes/oosympo02.pdf にドメイン専用言語(domain specific language)って訳あり。
 *2004-03-26 (金) 18:21:45 ''[[kdmsnr]]'' : お、いい勝負だ（Google）。
 *2008-03-23 (日) 16:18:08 名無しさん : eena ruby
-{{comment}}
+

@@ -31,7 +31,7 @@ title: "パターンカタログ（日本語）"
 [モデルビューコントローラ(ModelViewController)](ModelViewController) (351), [ページコントローラ(PageController)](PageController) (354), [フロントコントローラ(FrontController)](FrontController) (366), [テンプレートビュー(TemplateView)](TemplateView) (373), [トランスフォームビュー(TransformView)](TransformView) (384), [ツーステップビュー(TwoStepView)](TwoStepView) (388), [アプリケーションコントローラ(ApplicationController)](ApplicationController) (403).
 
 ## 「分散パターン」(Distribution Patterns):
-[リモートファサード(RemoteFacade)](RemoteFacade) (411), [データ変換オブジェクト(DataTransferObject)](DataTransferObject) (425){{fn 'DataTransferObjectの"邦訳"名は、データ変換オブジェクトが"正しい"です。データ"転送"オブジェクトではありません。'}}
+[リモートファサード(RemoteFacade)](RemoteFacade) (411), [データ変換オブジェクト(DataTransferObject)](DataTransferObject) (425)（訳注：DataTransferObjectの"邦訳"名は、データ変換オブジェクトが"正しい"です。データ"転送"オブジェクトではありません。）
 
 ## 「オフライン並行性パターン」(Offline Concurrency Patterns):
 [軽オフラインロック(OptimisticOfflineLock)](OptimisticOfflineLock) (439), [重オフラインロック(PessimisticOfflineLock)](PessimisticOfflineLock) (450), [緩ロック(CoarseGrainedLock)](CoarseGrainedLock) (462), [暗黙ロック(ImplicitLock)](ImplicitLock) (474).
