@@ -2,7 +2,7 @@
 title: LLMは新しい抽象化をもたらす
 original_page_name: 2025-nature-abstraction.html
 tags:
-  - enerative AI
+  - generative AI
   - article
 ---
 
