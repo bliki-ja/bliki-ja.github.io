@@ -34,9 +34,3 @@ blikiとは別にarticleの記事を訳すときは、新規フォルダのな�
 ## 手元で確認するとき
 
 ``jekyll serve``でローカルにサーバを起動して、ブラウザで確認してください。
-
-## TODO
-
-* _old_entries 以下の移行
-* HikiDoc形式からMarkdownへの変換
-* タイトルの日本語訳
