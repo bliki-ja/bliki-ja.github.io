@@ -7,7 +7,11 @@ layout: default
     <p class="post-meta" style="text-align:right">
       {{ page.date | date: "%Y-%m-%d" }}
       {% if page.tags contains "article" %}
-      [<a href="https://martinfowler.com/articles/{{ page.original_page_name }}">オリジナル記事</a>]
+        {% if page.original_page_name %}
+        [<a href="https://martinfowler.com/articles/{{ page.original_page_name }}">オリジナル記事</a>]
+        {% else %}
+        [<a href="https://martinfowler.com/articles/{{ page.url | remove: '/'}}.html">オリジナル記事</a>]
+        {% endif %}
       {% else %}
       [<a href="https://martinfowler.com/bliki/{{ page.url | remove:'/' }}.html">オリジナル記事</a>]
       {% endif %}
