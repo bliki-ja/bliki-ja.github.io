@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: static
 title: Random
 ---
 
