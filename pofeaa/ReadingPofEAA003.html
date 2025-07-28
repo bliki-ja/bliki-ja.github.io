@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ReadingPofEAA003.md - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/pofeaa/ReadingPofEAA003">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">ReadingPofEAA003.md</h1>
+  </header>
+
+  <article class="post-content">
+    <p class="post-meta" style="text-align:right">
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/pofeaa/ReadingPofEAA003.md">source and translators</a>]
+    </p>
+
+    <article class="post-content" id="post-content">
+    <p>連絡用に<a href="PofEAAReadingMailingList">PofEAA読書会メーリングリスト</a>を用意しています。読書会への参加を検討されている方は、メーリングリストにもご参加ください。</p>
+
+<h1 id="開催概要">開催概要</h1>
+<ul>
+  <li>日時：2005/05/22(日) 13:00〜18:00頃</li>
+  <li>場所：(株)オージス総研 東京オフィス</li>
+  <li>参加費：無料</li>
+  <li>準備物：用意するものページ参照</li>
+</ul>
+
+<h1 id="出席者">出席者</h1>
+<p>申込順、敬称略。</p>
+<ol>
+  <li><a href="http://capsctrl.que.jp/kdmsnr/diary/">kdmsnr</a></li>
+  <li><a href="http://secure.ddo.jp/~kaku/tdiary/">かっくん</a></li>
+  <li><a href="http://www.csus4.net/d/">WR</a></li>
+  <li><a href="http://d.hatena.ne.jp/thata/">thata</a></li>
+  <li><a href="http://d.hatena.ne.jp/yojik/">yojik</a></li>
+  <li><a href="http://www.rubycolor.org/maki/">高橋征義</a></li>
+  <li><a href="http://rektunpe.dip.jp/~masayuki/diary/">たかはしまさゆ記</a></li>
+  <li><a href="http://blog.prebyte.jp/">dot</a></li>
+  <li><a href="http://d.hatena.ne.jp/yyamano/">yyamano</a></li>
+  <li><a href="http://d.hatena.ne.jp/aufheben/">Ito Yoshiichi</a></li>
+  <li><a href="http://kakutani.com/">かくたに</a></li>
+  <li><a href="http://d.hatena.ne.jp/higayasuo/">ひがやすを</a></li>
+  <li><a href="http://arton.no-ip.info/diary/">arton</a></li>
+  <li><a href="http://d.hatena.ne.jp/ogijun/">ogino.</a></li>
+  <li><a href="http://d.hatena.ne.jp/t-wada/">t-wada</a></li>
+  <li><a href="http://d.hatena.ne.jp/babie/">babie</a></li>
+</ol>
+
+<h1 id="内容">内容</h1>
+
+<ul>
+  <li>再開宣言(かくたに)</li>
+  <li>ポジションペーパーベースの自己紹介(全員)</li>
+  <li>「PREVIOUSLY ON Reading PofEAA」(kdmsnrさん)</li>
+  <li>「第3章: Mapping to Relational Databases(リレーショナルデータベースへのマッピング)」の概要(WRさん)</li>
+  <li>休憩</li>
+  <li>「Raisな考え方」(makiさん)</li>
+  <li>「S2DAOな考え方」(ひがさん)</li>
+  <li>ふりかえり(Keep/Problem/Try)</li>
+  <li>懇親会</li>
+</ul>
+
+<h1 id="反応リンク">反応リンク</h1>
+
+<ul>
+  <li><a href="http://rektunpe.dip.jp/~masayuki/diary/?date=20050522">たかはしまさゆ記</a></li>
+  <li><a href="http://d.hatena.ne.jp/thata/20050523#1116775712">ちくわプログラマの作業履歴@はてな</a></li>
+  <li><a href="http://d.hatena.ne.jp/ogijun/20050522/p1">ogijunの日記</a></li>
+  <li><a href="http://arton.no-ip.info/diary/20050522.html#p01">L’eclat des jours</a></li>
+</ul>
+
+<h1 id="track-back">Track Back</h1>
+
+<ul>
+  <li>trackback : [[[PofEAA] PofEAA 読書会 (Aufheben - GLAD!! の日記)|http://d.hatena.ne.jp/aufheben/20050522#1117295760]] (2005-06-12 (日) 13:21:13)
+    <blockquote>
+      <p>ISBN:4798105538:detail  Pattern of Enterprise Application Architecture  の読書会(勉強会?)へ行ってきました。   http://capsctrl.que.jp/kdmsnr/wiki/PofEAA/?ReadingPofEAA003  この手の勉強会へ参加するのは久しぶり。  アナリシスパターンの勉強会と比べると  ち..</p>
+    </blockquote>
+  </li>
+  <li>trackback : <a href="http://arton.no-ip.info/diary/20050531.html#p01">PofEAA読書会 (L’eclat des jours)</a> (2005-05-31 (火) 01:02:19)
+    <blockquote>
+      <p>高橋さんとひがさんの競演に刺激を受けまくった。
+これは広く伝えたいね。ということで日記ではなくIT*Proの記事にさせていただきました。</p>
+    </blockquote>
+  </li>
+  <li>trackback : [[[tech]PofEAA読書会参加 (yojikの日記)|http://d.hatena.ne.jp/yojik/20050522#1116775679]] (2005-05-27 (金) 18:37:53)
+    <blockquote>
+      <p>凄い多彩なジャンルの人が集まってて刺激を受けました。blog等でいつも読んでいてる人とリアルで会うのも不思議な気分。(当たり前ですが頭で想像してたイメージとは違う)  参加記はもう少しまとめて書きます。(長文になりすぎたらオブジェクトの広場で出すかも)</p>
+    </blockquote>
+  </li>
+  <li>trackback : [[[Event] PofEAA読書会 (ogijunの日記)|http://d.hatena.ne.jp/ogijun/20050522/p1]] (2005-05-27 (金) 17:48:37)
+    <blockquote>
+      <p>再開第一回。かくたにさんコーディネートたいへんお疲れさまでした。 おかげさまでとてもたのしかった。メンツがしょっちゅう会ってるような人たちと微妙にズレてる感じで、これまでなかった視点が得られたり。 ActiveRecordパターンについて、Java界隈ではテーブルとクラスが直接(一対一)対応するかどうかよりも、特定のベースクラスを持つか持たないか(POJOでないか、POJOか)で分類する方が広..</p>
+    </blockquote>
+  </li>
+  <li>trackback : [[[event]PofEAA読書会第3回 (t-wadaの日記)|http://d.hatena.ne.jp/t-wada/20050522#1116865140]] (2005-05-24 (火) 13:59:12)
+    <blockquote>
+      <p>参加してきました。当日のメニューは以下の感じ。すごいメンツが集まりました。  - ポジションペーパー発表(各自) - kdmsnrさんによる1,2章の振り返り - WRさんによる3章のまとめと議論 - 高橋さんによるRailsな考え方 - ひがさんによるS2Daoな考え方  若い順にポジションペーパーを各自制限時間3分で発表。初めてお会いする人も多く、わくわくします。私はポジションペーパーを良..</p>
+    </blockquote>
+  </li>
+  <li>trackback : [[[PofEAA] 約束の地 for ordinary people (遅レス。)|http://d.hatena.ne.jp/babie/20050523#p2]] (2005-05-24 (火) 11:50:29)
+    <blockquote>
+      <p>高橋さんのポジションペーパーの内容について思い巡らせている。   「普通のプログラマは休日にプログラム書かないし、そういう人達でもうまく回せるようにしたい。多くの現場で、ハッカーの集合を作るってのは現実的な解じゃない。」って内容だったかな。ちょっと適当すぎるか。（見直さないとわからないが、印刷物と記憶が無いのであった！）   よく言えば普通の人でも労力・脳力をかけずにそれなりの物ができる。やな..</p>
+    </blockquote>
+  </li>
+  <li>trackback : [[[PofEAA] 読書会感想 (遅レス。)|http://d.hatena.ne.jp/babie/20050522#p2]] (2005-05-24 (火) 11:49:28)
+    <blockquote>
+      <p>無事帰宅しますた。   皆様、快く迎えてくださりありがとうございました。 特に、発表者の皆様、会場を提供してくださったオージス総研の皆様、ありがとうございました。   おしながきはこんな感じ。 + 角谷さんの開会宣言 + 全員ポジションペーパー発表 + kdmsnr さんによる1,2章の復習 + WR さんによる3章サマリー解説＆皆でツッコミ + 高橋さんの「Rails な考え方」 + ひがさ..</p>
+    </blockquote>
+  </li>
+  <li>trackback : <a href="http://www.csus4.net/d/2005/05/22/poeaa-3rd/">PoEAA 3rd (Csus4.net - Just example.)</a> (2005-05-24 (火) 09:14:18)
+    <blockquote>
+      <p>PoEAA読書会 第3回に参加した。まとまりなく書いてみる。</p>
+
+      <ul>
+        <li>発表資料はこちら</li>
+      </ul>
+
+      <h3 id="駆け込みで前夜に資料作成">駆け込みで前夜に資料作成</h3>
+      <p>前夜1:00am-6:00amぐらいで3章のサマリをPPTで作成し、持参&amp;発表。
+直前に駆..</p>
+    </blockquote>
+  </li>
+  <li>trackback : <a href="http://kakutani.com/20050522.html#p02"> (角谷HTML化計画)</a> (2005-05-24 (火) 07:52:45)
+    <blockquote>
+      <p>会議室を提供していただいたオージス総研さん、ありがとうございました。一名、合流し損ねたのはダンドリスト失格だったが、それを除いては(ってクリティカルだけど)、再開第1回としては及第点は取れたかな、と思ってますが真実は出席者の心の中にある。</p>
+    </blockquote>
+  </li>
+  <li>trackback : <a href="http://capsctrl.que.jp/kdmsnr/diary/20050522.html#p01">第3回ReadingPofEAA (capsctrldays)</a> (2005-05-24 (火) 02:56:08)
+    <blockquote>
+
+      <p>角谷さんありがとうございました。
+思えば前回から1年以上経っていたわけですが（プレゼン資料作ってて愕然とした）、会社では誰とも話すことなく淡々と不毛な作業をしているので、たまにはこうやって外の空気を吸っていかねばなーと思いました。聞くばかりで議論にはまったく参加できませんでしたが、聞くだけも刺激になりますのでよい経験でした。なんといっても、特定のアーキテクチャや言語に特化してないのがイイ!!..</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h1 id="キャッシュバック飲み会事務連絡">キャッシュバック(飲み会事務連絡)</h1>
+<p>一人あたり2600円ですみました。。飲み会参加者のうち先に帰られた方
+(dotさん,babieさん,角谷さん)は400円キャッシュバックです</p>
+
+    </article>
+
+    <hr />
+
+    <div style="text-align:right">
+      <a href="/pofeaa">PofEAA index</a>
+      |
+      <a href="/pofeaa/CatalogOfPofEAA_Ja">パターンカタログの日本語版</a>
+      |
+      <a href="/pofeaa/CatalogOfPofEAA_EnJa">パターンカタログの英日対応表</a>
+    </div>
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

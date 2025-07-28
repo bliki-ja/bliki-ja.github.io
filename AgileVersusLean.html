@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>アジャイル対リーン - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="https://martinfowler.com/bliki/AgileVersusLean.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/AgileVersusLean">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">アジャイル対リーン</h1>
+    <p class="post-meta" style="text-align:right">
+      2008-06-26
+      
+      [<a href="https://martinfowler.com/bliki/AgileVersusLean.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2008-06-26-AgileVersusLean.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?agile" style="background-color: #ffc">agile</a>
+    ,
+    <a href="/tags?lean" style="background-color: #ffc">lean</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p>https://martinfowler.com/bliki/AgileVersusLean.html</p>
+
+<p>「アジャイルソフトウェア開発をしようと思っています。
+ですが、アジャイルの代わりにリーンソフトウェア開発をしたほうがいいんでしょうか？」</p>
+
+<p>最近、こういう質問を何回か受けた。安易に答えるわけにはいかない——
+そもそも、アジャイルとリーンの関係について誤解があるのだ。
+そこで、まず歴史をひもといて、その関係について説明しよう。</p>
+
+<p>「リーン」は、もともとは工業生産の世界で1950年代にトヨタが開発した手法を指す。
+当時日本は第二次世界大戦の打撃から立ち直りつつあった。
+リーン手法は、トヨタ生産方式と呼ばれることも多いが、
+主に<a href="http://en.wikipedia.org/wiki/Taiichi_Ohno">大野耐一</a>の功績とされている。
+もっとも、大野は西洋の多くの思想の影響を受けている。
+特に<a href="http://en.wikipedia.org/wiki/W._Edwards_Deming">デミング</a>の影響が強い。
+トヨタ生産方式が日本以外の世界中で知られるようになったのは、
+日本が数多くの業種でアメリカを打ち負かした理由について、
+西洋人が1990年代になってから多数の書籍を著してからである。
+西洋の著者はこの手法をリーン生産方式と呼んだ。
+その後日本の業界は全体としては苦しい時代を迎えているが、
+トヨタは西洋のほとんどの自動車会社に勝ち続けている。</p>
+
+<p>アジャイルソフトウェア開発とは、エクストリームプログラミングやSCRUMなど、
+いくつかのソフトウェア開発手法を総称する名前である。
+これらの多くの手法は1990年代に開発された。
+こうした手法はいずれも、<a href="http://agilemanifesto.org/">アジャイルソフトウェア開発マニフェスト</a>で価値と原理として述べられている哲学を含んでいる。
+(私のエッセイ「<a href="https://martinfowler.com/articles/newMethodology.html">The New Methodology</a>」で詳しく説明している。)</p>
+
+<p>リーン生産とアジャイルソフトウェアには最初からつながりがあったのだ。
+アジャイル手法の開発者は、いろいろな形でリーン生産から影響を受けている。
+<a href="http://www.poppendieck.com/">メリー・ポペンディークとトム・ポペンディーク</a>がこのつながりをよりはっきりさせた。
+メリーはリーン生産方式を導入した生産工場で働いていたことがあり、
+トムのほうは熟練したソフトウェア開発者だ。
+2人はリーンをソフトウェアの世界に適用することについて何冊も本を書いた。
+リーンソフトウェアという言葉は、ほとんどの場合、2人の著書から来ている。
+もっとも、他にも同じようなつながりを作った人たちがいる。</p>
+
+<p>リーン生産方式とアジャイルソフトウェア手法はきわめて似通った哲学を持っている。
+どちらも柔軟で適応的な計画を重視し、人間に焦点を当てた手法を大事にしている。
+その結果、リーンのアイデアはアジャイルソフトウェアの場面にとてもしっくりと馴染む。
+メリーとトムは2人ともアジャイルコミュニティで精力的に活動している
+——<a href="http://www.agilealliance.org/">アジャイルアライアンス</a>の設立にはメリーが重要な役割を果たしたと私は考えている。
+(私と同じく彼女もアジャイルアライアンスの創立メンバーだ。
+だが私より、彼女のほうがはるかに功績がある。)</p>
+
+<p>前に述べたように、リーン生産は最初からアジャイルに影響を与えてきており、ここ数年は特に、
+リーン生産から継承されていることがはっきりしているアイデアがアジャイルで採用されている。
+バリューストリームマップのような確立した手法や、
+以前からアジャイルでうたわれていたことに名前を付けたと言える「最終責任時点」など、
+多岐にわたっている。
+分析や設計のドキュメントを在庫と考える手法はポペンディークの書籍から来たものだ。
+私が知っている何人ものアジャイラーがサイクルタイムを短縮することの重要さを訴えている
+——これもまたリーンに強い影響を受けたアイデアである。
+私の同僚のRichard Durnallが<a href="http://www.richarddurnall.com/?p=44#more-44">リーンの知識がアジャイル思想とどう混ざったかに関する考察</a>を書いている。</p>
+
+<p>リーンのアイデアが多くの人に特に強く訴えかけるポイントは、
+アジャイルソフトウェア開発を人に説明する方法、
+とりわけIT業界や顧客のなかでも年寄りの人々(senior)に対してうまく説明する方法を提供してくれるところだ。
+リーンを利用した説明には、単純にトヨタ式と同じだと乱暴に説明するものから、
+リーン生産方式をソフトウェア開発にあてはめるとどんな利点があるか詳細に議論するものまで、いろいろある。</p>
+
+<p>このとおり、リーンとアジャイルはソフトウェア業界において互いに深い関係にある。
+そのため、互いに代替できるものではないことがわかると思う。
+アジャイルをやっていればリーンをやっていることになるし、その逆もまた真である。
+アジャイルという言葉はとても広い意味を持つものとして扱われてきた。
+表面的には異なるプロセスであっても、価値と原理というコアの部分を共有しており、そここそがアジャイルである。
+実践するのはアジャイルまたはリーンではない。
+アジャイルとリーンだ。
+違いがあるとしたら、リーン生産方式のアイデアをどれだけ直接的に利用するかという部分だけである。</p>
+
+<p>ポペンディーク夫妻はリーンを、独立したアイデアだとか、
+SCRUMやXPのような確立したプロセスだとかいうふうには紹介していない。
+2人の紹介の仕方は、リーンを一連の思考ツールとして扱い、
+どのアジャイル手法とも簡単に混ぜることができるというものだ。</p>
+
+<p>リーンの名を冠したメーリングリストや、自分自身を「リーン思想」と呼ぶ人々のように、
+リーンソフトウェアだけの独立したコミュニティは存在する。
+これはXPだけ、あるいはSCRUMだけ、または他の手法だけのコミュニティが存在するという状況となんら変わりない。
+こうしたコミュニティの多くのメンバーは、広範な意味でのアジャイル活動に参加していると考えているし、
+一つ以上のアジャイルコミュニティで活動している人も少なくない。
+「アジャイル」という言葉を使うことのそもそもの目的は、私たちがコアの価値と原理を共有し、
+そして共有している部分のほうが互いの差異よりもずっと大きいと認め合うことにあるのだ。</p>
+
+<p>(最初に訳した人: <a href="http://d.hatena.ne.jp/yach/">やっとむ</a>)</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

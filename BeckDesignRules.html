@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ケント・ベックの設計のルール - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/BeckDesignRules">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">ケント・ベックの設計のルール</h1>
+    <p class="post-meta" style="text-align:right">
+      2015-03-02
+      
+      [<a href="https://martinfowler.com/bliki/BeckDesignRules.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2015-03-02-BeckDesignRules.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?extreme%20programming" style="background-color: #ffc">extreme programming</a>
+    ,
+    <a href="/tags?programming%20style" style="background-color: #ffc">programming style</a>
+    ,
+    <a href="/tags?refactoring" style="background-color: #ffc">refactoring</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- Kent Beck came up with his four rules of simple design while he was developing ExtremeProgramming in the late 1990's. I express them like this. [1]- -->
+
+<p>Kent Beckが1990年代に<a href="/ExtremeProgramming">エクストリームプログラミング（XP）</a>を開発したときに、シンプルな設計の4つのルールを考案した。私なりに表現したものが以下になる[1]。</p>
+
+<!-- Passes the tests
+ !-- Reveals intention
+ !-- No duplication
+ !-- Fewest elements -->
+
+<ul>
+  <li>テストをパスさせる</li>
+  <li>意図を明らかにする</li>
+  <li>重複を排除する</li>
+  <li>要素を最小限にする</li>
+</ul>
+
+<!-- The rules are in priority order, so "passes the tests" takes priority over "reveals intention" -->
+<p>ルールには優先順位がある。たとえば「テストをパスさせる」は「意図を明らかにする」よりも優先される。</p>
+
+<!-- The most important of the rules is "passes the tests".  -->
+<!-- XP was revolutionary in how it raised testing to a first-class activity in software development, 
+ !-- 	so it's natural that testing should play a prominent role in these rules.  -->
+<!-- The point is 
+ !-- that whatever else you do with the software, 
+ !-- 	the primary aim is that it works as intended and 
+ !-- 	tests are there to ensure that happens. -->
+
+<p>このルールで最も重要なのは「テストをパスさせる」だ。XPが革新的だったのは、テストをソフトウェア開発におけるファーストクラスの活動に持ち上げたことである。このルールのなかでテストが最も重要な役割を担うのは当然だろう。ソフトウェアで何をするにしても、第一の目的は意図どおりにソフトウェアが動作することであり、テストはそれを確実にするためのものである。</p>
+
+<!-- "Reveals intention" is Kent's way of saying the code should be easy to understand.  -->
+<!-- Communication is a core value of Extreme Programing, 
+ !-- 	and many programmers like to stress that programs are there to be read by people.  -->
+<!-- Kent's form of expressing this rule
+ !-- 	implies that the key to enabling understanding 
+ !-- 	is to express your intention in the code,  -->
+<!-- so that your readers can understand what your purpose was when writing it. -->
+
+<p>「意図を明らかにする」は、Kentの言葉を借りれば、コードは理解しやすくなければならないというものだ。コミュニケーションはXPの中心的な価値である。多くのプログラマーは「プログラムは読まれるためにある」と主張する。このルールには、コードを理解しやすくするには、コードを書いた意図を表現すべきという意味が込められている。コードを書いたときの目的を読み手に理解してもらうのである。</p>
+
+<!-- The "no duplication" is perhaps the most powerfully subtle of these rules.  -->
+<!-- It's a notion expressed elsewhere as DRY or SPOT [2], 
+ !-- 	Kent expressed it as saying everything should be said "Once and only Once."  -->
+<!-- Many programmers have observed 
+ !-- 	that the exercise of eliminating duplication is a powerful way to drive out good designs. [3] -->
+
+<p>「重複を排除する」は、おそらく最もわかりにくいルールだろう。これはDRYやSPOT[2]とも呼ばれる概念であり、Kentはすべてのことは「Once and only Once（ただ一度だけ）」言うべきだと表現している。多くのプログラマーが、重複を排除することで優れた設計につながることに気づいている[3]。</p>
+
+<!-- The last rule tells us that anything that doesn't serve the three prior rules 
+ !-- 	should be removed.  -->
+<!-- At the time 
+ !-- 	these rules were formulated there was a lot of design advice 
+ !-- 	around adding elements to an architecture in order to increase flexibility 
+ !-- 	for future requirements.  -->
+<!-- Ironically the extra complexity of all of these elements
+ !-- 	usually made the system harder
+ !-- 	to modify and thus less flexible in practice. -->
+
+<p>最後のルールは、それまでの3つのルールに当てはまらないものは削除すべきというものだ。このルールができた当時は、将来の要求に向けた柔軟性を確保するために、アーキテクチャには要素を追加すべきというアドバイスが巷にありふれていた。皮肉なことに、要素を追加するとさらに複雑になり、システムの修正が困難になり、柔軟性が損なわれてしまうのだった。</p>
+
+<!-- People often find there is some tension between "no duplication" and "reveals intention", 
+ !-- 	leading to arguments about which order those rules should appear.  -->
+<!-- I've always seen their order as unimportant,  -->
+<!-- since they feed off each other in refining the code.  -->
+<!-- Such things as adding duplication to increase clarity is often papering over a problem
+ !-- , when it would be better to solve it[4]. -->
+
+<p>「重複を排除する」と「意図を明らかにする」は緊張関係にあるため、どちらを優先すべきかについて議論になることがある。私はコードを洗練させるためにお互いに影響し合うものなので、優先順位は重要ではないと考えている。たとえば、わかりやすくするために重複を追加すると、解決すべき問題を覆い隠してしまうことがある[4]。</p>
+
+<p><img src="https://martinfowler.com/bliki/images/beckDesignRules/sketch.png" alt="" /></p>
+
+<!-- What I like about these rules is 
+ !-- that they are very simple to remember, 
+ !-- 	yet following them improves code in any language or programming paradigm
+ !-- that I've worked with.  -->
+<!-- They are an example of Kent's skill in finding principles
+ !-- 	that are generally applicable and yet concrete enough to shape my actions. -->
+
+<p>私がこのルールが好きなのは、シンプルなのに覚えやすいところだ。また、ルールに従えば、これまでに私が扱ってきたどの言語やプログラミングパラダイムであっても、コードを改良することができる。一般的に適用可能でありながら、行動につながるほど具体的な原則を発見するという、Kentのスキルを示した一例である。</p>
+
+<!-- At the time there was a lot of “design is subjective”, “design is a matter of taste” 
+ !-- bullshit going around. I disagreed.  -->
+<!-- There are better and worse designs.  -->
+<!-- These criteria aren’t perfect,
+ !--  but they serve to sort out some of the obvious crap and (importantly) 
+ !--  you can evaluate them right now.  -->
+<!-- The real criteria for quality of design, 
+ !-- “minimizes cost (including the cost of delay) and maximizes benefit over the lifetime of the software,” can only be evaluated post hoc,  -->
+<!-- and even then any evaluation will be subject to a large bag full of cognitive biases. 
+ !-- The four rules are generally predictive. -->
+
+<blockquote>
+  <p>当時は「設計は主観的だ」「設計は好みの問題だ」などという戯言があふれていた。私はそうは思わなかった。設計には「良い設計」と「悪い設計」があるはずだ。その評価基準は完璧なものではないかもしれないが、明らかに悪いものを判別できるし、（こちらのほうが重要だが）すぐにでも評価に使うことができる。設計の真の評価基準は「ソフトウェアのライフサイクルにおいて、コスト（遅延コストも含む）を最小化し、ベネフィットを最大化する」であるが、それは事後的にしか評価できない。評価できたとしても、多くの認知バイアスに左右されてしまうだろう。この4つのルールは予測可能なものである。</p>
+
+  <p>– Kent Beck</p>
+</blockquote>
+
+<!-- Further Reading -->
+<h2 id="さらに詳しく知るために">さらに詳しく知るために</h2>
+
+<!-- There are many expressions of these rules out there, here are a few that I think are worth exploring: -->
+
+<p>このルールについてはいくつかの表現がある。私が探索する価値があると思うものを紹介する。</p>
+
+<!-- J.B. Rainsberger's summary. He also has a good discussion of the interplay between the rules 2&3.
+ !-- These rules, like much else of Extreme Programming, were originally discussed and refined on Ward's Wiki. -->
+<ul>
+  <li><a href="https://blog.jbrains.ca/permalink/the-four-elements-of-simple-design">J.B. Rainsbergerのまとめ</a>。彼は<a href="https://blog.thecodewhisperer.com/permalink/putting-an-age-old-battle-to-rest">ルール2と3の相互作用について</a>も考察している。</li>
+  <li><a href="https://ronjeffries.com/xprog/classics/expemergentdesign/">Ron Jeffries</a></li>
+  <li>このルールは、XPの他のルールと同様に、元々は<a href="http://wiki.c2.com/?XpSimplicityRules">WardのWiki</a>で議論されたものである。</li>
+</ul>
+
+<!-- Acknowledgements -->
+<h2 id="謝辞">謝辞</h2>
+
+<!-- Kent reviewed this post and sent me some very helpful feedback, 
+ !-- 	much of which I appropriated into the text. -->
+
+<p>Kentに記事をレビューしてもらった。彼は有益なフィードバックを送ってくれた。その多くを本文でも使用させてもらった。</p>
+
+<!-- Notes -->
+<h2 id="注記">注記</h2>
+
+<!-- 1: Authoritative Formulation -->
+<p>1: 権威ある表現形式</p>
+
+<!-- There are many expressions of the four rules out there, 
+ !-- Kent stated them in lots of media, 
+ !-- and plenty of other people have liked them and phrased them their own way.  -->
+<!-- So you'll see plenty of descriptions of the rules, 
+ !-- 	but each author has their own twist - as do I. -->
+
+<p>このルールにはさまざまな表現がある。Kentが多くのメディアで触れていたり、それを好んだ多くの人たちが自分なりの表現をしていたりするからだ。そのため、ルールの説明もたくさんある。各自が工夫しているからだ。私もそのひとりである。</p>
+
+<!-- If you want an authoritative formulation 
+ !-- 	from the man himself, probably your best bet is from the first edition of The White Book (p 57) in the section that outlines the XP practice of Simple Design. -->
+
+<p>本家の権威ある表現形式を読みたいのなら、<a href="https://www.amazon.com/gp/product/0201616416">白本</a>の初版の「シンプルな設計」のXPプラクティスのところを読むべきだろう。</p>
+
+<!-- Runs all the tests
+ !-- Has no duplicated logic. Be wary of hidden duplication like parallel class hierarchies
+ !-- States every intention important to the programmer
+ !-- Has the fewest possible classes and methods -->
+
+<ul>
+  <li>すべてのテストを実行する。</li>
+  <li>ロジックの重複を排除する。並列したクラス階層などの隠れた重複に注意すること。</li>
+  <li>プログラマーにとって重要な意図をすべて記述する。</li>
+  <li>クラスやメソッドを可能な限り少なくする。</li>
+</ul>
+
+<!-- (Just to be confusing, there's another formulation on page 109 that omits "runs all the tests" and splits "fewest classes" and "fewest methods" over the last two rules.  -->
+<!-- I recall this was an earlier formulation that Kent improved on while writing the White Book.) -->
+
+<p>（なお、「すべてのテストを実行する」を削除して、最後のルールを「最小限のクラス」と「最小限のメソッド」に分割したルールもある。これはKentが白本を書きながら改良した初期の表現形式だったと記憶している。）</p>
+
+<!-- 2: DRY stands for Don't Repeat Yourself, and comes from The Pragmatic Programmer. SPOT stands for Single Point Of Truth. -->
+
+<p>2: DRYは「Don’t Repeat Yourself（繰り返すな）」の略であり、『<a href="https://www.amazon.com/gp/product/020161622X">達人プログラマー</a>』で紹介されたものである。SPOTは「<a href="http://www.catb.org/~esr/writings/taoup/html/ch04s02.html#spot_rule">Single Point Of Truth</a>（単一真実点）」の略である。</p>
+
+<!-- 3: This principle was the basis of my first design column for IEEE Software. -->
+<p>3: この原則は、私がはじめて<a href="https://martinfowler.com/ieeeSoftware/repetition.pdf">IEEE Softwareに寄稿した設計に関するコラム</a>のベースになった。</p>
+
+<!-- 4: When reviewing this post, Kent said "In the rare case they are in conflict 
+ !-- (in tests are the only examples I can recall), 
+ !-- empathy wins over some strictly technical metric." 
+ !-- I like his point about empathy 
+ !-- - it reminds us that when writing code we should always be thinking of the reader. -->
+<p>4: Kentに記事をレビューしてもらったとき、彼は「コンフリクトが発生する稀なケースでは（私が思い出せるのはテストだけだが）、技術的な指標よりも共感のほうが勝る」と言った。共感について指摘するところが彼のいいところだ。コードを書くときには常に読み手のことを考えるべきだということを思い出させてくれる。</p>
+
+<hr />
+
+<p><img src="https://martinfowler.com/bliki/images/beckDesignRules/kent.jpg" alt="" /></p>
+
+<!-- Kent Beck developed Extreme Programming, Test Driven Development, 
+ !-- 	and can always be relied on for good Victorian facial hair for his local ballet. -->
+<p>Kent BeckはXPとテスト駆動開発を開発した人物だ。地元の舞台のために生やしたヴィクトリア朝のヒゲを持つ男として常に信頼されている。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

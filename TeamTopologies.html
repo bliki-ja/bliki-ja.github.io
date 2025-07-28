@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>チームトポロジー - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/TeamTopologies">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">チームトポロジー</h1>
+    <p class="post-meta" style="text-align:right">
+      2023-07-25
+      
+      [<a href="https://martinfowler.com/bliki/TeamTopologies.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2023-07-25-TeamTopologies.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?team%20organization" style="background-color: #ffc">team organization</a>
+    ,
+    <a href="/tags?enterprise%20architecture" style="background-color: #ffc">enterprise architecture</a>
+    ,
+    <a href="/tags?platforms" style="background-color: #ffc">platforms</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- Any large software effort, such as the software estate for a large company, requires a lot of people - and whenever you have a lot of people you have to figure out 
+ !-- how to divide them into effective teams.  -->
+<!-- Forming Business Capability Centric teams helps software efforts to be responsive to customers’ needs, 
+ !-- 	but the range of skills required often overwhelms such teams.  -->
+<!-- Team Topologies is a model for describing the organization of software development teams, 
+ !-- 	developed by Matthew Skelton and Manuel Pais.  -->
+<!-- It defines four forms of teams and three modes of team interactions.  -->
+<!-- The model encourages healthy interactions 
+ !-- 	that allow business-capability centric teams
+ !-- 	to flourish in their task of providing a steady flow of valuable software. -->
+
+<p>大規模なソフトウェア開発、たとえば大企業向けのソフトウェア開発では、多くの人を必要とします。
+多くの人が関与するときには、うまくチームに分ける方法を考える必要があります。
+<a href="BusinessCapabilityCentric">ビジネス機能中心</a>のチームを作れば、顧客のニーズに対応したソフトウェア開発ができるでしょう。
+しかし、求められるスキルの範囲が膨大になります。
+<a href="https://www.amazon.com/gp/product/1942788819/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1942788819&amp;linkCode=as2&amp;tag=martinfowlerc-20">チームトポロジー</a>とは、ソフトウェア開発チームの組織化を記述するモデルです。
+Matthew SkeltonとManuel Paisによって開発されました。
+チームトポロジーでは、4つの形態のチームと3つのインタラクションモードが定義されています。
+ビジネス機能中心のチームが価値あるソフトウェアの流れを提供できるように、
+健全なインタラクションを促すモデルです。</p>
+
+<!-- The primary kind of team in this framework is the stream-aligned team, 
+ !-- 	a Business Capability Centric team that is responsible for software for a single business capability.  -->
+<!-- These are long-running teams, thinking of their efforts 
+ !-- 	as providing a software product to enhance the business capability. -->
+
+<p>このフレームワークにおける主要なチーム形態は、<strong>ストリームアラインドチーム</strong>です。
+ストリームアラインドチームとは、ひとつのビジネス機能のソフトウェアを担当する<a href="BusinessCapabilityCentric">ビジネス機能中心</a>のチームです。
+チームの寿命は長く、自分たちはビジネス機能を強化する<a href="https://martinfowler.com/articles/products-over-projects.html">ソフトウェアプロダクト</a>を提供すると考えています。</p>
+
+<!-- Each stream-aligned team is full-stack and full-lifecycle: responsible for front-end, back-end, database, business analysis, feature prioritization, UX, testing, deployment, monitoring - the whole enchilada of software development.  -->
+<!-- They are Outcome Oriented, focused on business outcomes rather than Activity Oriented teams focused on a function such as business analysis, testing, or databases.  -->
+<!-- But they also shouldn't be too large, 
+ !-- 	ideally each one is a Two Pizza Team.  -->
+<!-- A large organization will have many such teams, 
+ !-- 	and while they have different business capabilities to support, 
+ !-- they have common needs such as data storage, network communications, and observability. -->
+
+<p>各ストリームアラインドチームは、フルスタックであり、フルライフサイクル（フロントエンド、バックエンド、データベース、ビジネス分析、機能の優先順位付け、UX、テスト、デプロイ、モニタリングといった、ソフトウェア開発全般）を担当します。
+ストリームアラインドチームは<a href="OutcomeOriented">アウトカム指向</a>であり、
+<a href="ActivityOriented">アクティビティ指向</a>のチームのようにビジネス分析、テスト、データベースなどの機能にフォーカスするのではなく、ビジネスの結果にフォーカスします。
+規模は大きすぎてはいけません。理想的なのは<a href="TwoPizzaTeam">2枚のピザチーム</a>です。
+大きな組織にはそのようなチームがたくさんあります。
+各チームは異なるビジネス機能をサポートしていますが、
+すべてに共通するニーズ（データストレージ、ネットワーク通信、オビザーバビリティなど）もあります。</p>
+
+<!-- A small team like this calls for ways to reduce their cognitive load, so they can concentrate on supporting the business needs, not on (for example) data storage issues. -->
+<!-- An important part of doing this is to build on a platform
+ !-- 	that takes care of these non-focal concerns.  -->
+<!-- For many teams a platform can be a widely available third party platform, such as Ruby on Rails for a database-backed web application. -->
+<!-- But for many products 
+ !-- 	there is no single off-the-shelf platform to use,  -->
+<!-- a team is going to have to find and integrate several platforms. In a larger organization they will have to access a range of internal services and follow corporate standards. -->
+
+<p>このような小さなチームは認知的負荷を軽減する方法を求めています。
+データストレージの問題よりも、ビジネスニーズのサポートに集中したいからです。
+そのために重要となるのは、チームがフォーカスしていない問題を扱うプラットフォームを構築することです。
+多くのチームでは、広く利用されているサードパーティのプラットフォームになるでしょう。
+たとえば、データベースバックエンドのウェブアプリケーションにRuby on Railsを使うようなことです。
+しかし、あらゆるプロダクトから利用できる単一のプラットフォームはありません。
+複数のプラットフォームを見つけて、それらを統合する必要があります。
+また、大きな組織では社内サービスにアクセスしたり、会社のルールに従ったりする必要もあります。</p>
+
+<!-- This problem can be addressed by building an internal platform for the organization.  -->
+<!-- Such a platform can do that integration of third-party services, near-complete platforms, 
+ !-- 	and internal services. 
+ !-- Team Topologies classifies the team that builds this (unimaginatively-but-wisely) as a platform team. -->
+
+<p>このような問題は社内にプラットフォームを構築することで解決できます。
+そうすれば、サードパーティのサービス、ほぼ完璧に近いサービス、社内サービスなどを統合できます。
+チームトポロジーでは、こうしたプラットフォームを構築するチームを（何のひねりもないが、わかりやすく）<strong>プラットフォームチーム</strong>と呼んでいます。</p>
+
+<!-- Smaller organizations can work with a single platform team, 
+ !-- which produces a thin layer over an externally provided set of products.  -->
+<!-- Larger platforms, however, require more people than can be fed with two-pizzas.  -->
+<!-- The authors are thus moving to describe a platform grouping of many platform teams. -->
+
+<p>小さな組織であれば、プラットフォームチームはひとつでいいでしょう。
+プラットフォームチームは外部から提供されたプロダクトの上に薄いレイヤーを作ります。
+しかし、大きなプラットフォームでは、2枚のピザよりも多くの人が必要になるでしょう。
+そこで著者たちは、複数のプラットフォームチームをまとめる<strong>プラットフォームグルーピング</strong>を説明する方向に動いています。</p>
+
+<!-- An important characteristic of a platform 
+ !-- 	is that it's designed to be used in a mostly self-service fashion.  -->
+<!-- The stream-aligned teams are still responsible for the operation of their product, 
+ !-- 	and direct their use of the platform 
+ !-- 	without expecting an elaborate collaboration with the platform team.  -->
+<!-- In the Team Topologies framework, this interaction mode is referred to as X-as-a-Service mode,  -->
+<!-- with the platform acting as a service to the stream-aligned teams. -->
+
+<p>プラットフォームの重要な特徴は、
+基本的にセルフサービスで使用できるように設計されていることです。
+ストリームアラインドチームは、
+プラットフォームチームと細かく調整することなくプラットフォームを使用して、
+自分たちのプロダクトを担当します。
+チームトポロジーのフレームワークでは、
+こうしたインタラクションは<strong>X-as-a-Serviceモード</strong>と呼ばれています。
+プラットフォームがストリームアラインドチームに対するサービスとして振る舞うのです。</p>
+
+<!-- Platform teams, however, need to build their services 
+ !-- 	as products themselves, 
+ !-- 	with a deep understanding of their customer's needs.  -->
+<!-- This often requires that they use a different interaction mode, one of collaboration mode, 
+ !-- 	while they build that service.  -->
+<!-- Collaboration mode is a more intensive partnership form of interaction, and should be seen as a temporary approach until the platform is mature enough to move to x-as-a service mode. -->
+
+<p>しかし、プラットフォームチームも顧客のニーズを深く理解して、自分たちのサービスをプロダクトとして構築する必要があります。
+そのためには、別のインタラクションモードを使用する必要があります。
+<strong>コラボレーションモード</strong>です。
+コラボレーションモードとは、より強力なパートナーシップを結ぶインタラクションの形式です。
+プラットフォームがX-as-a-Serviceモードに移行するまでの一時的なアプローチです。</p>
+
+<!-- So far, the model doesn't represent anything particularly inventive.  -->
+<!-- Breaking organizations down between business-aligned and technology support teams 
+ !-- 	is an approach as old as enterprise software.  -->
+<!-- In recent years, 
+ !-- 	plenty of writers have expressed the importance of making these business capability teams 
+ !-- 	be responsible for the full-stack and the full-lifecycle.  -->
+<!-- For me, the bright insight of Team Topologies is focusing on the problem 
+ !-- 	that 
+ !-- 	having business-aligned teams that are full-stack and full-lifecycle 
+ !-- 		means that they are often faced with an excessive cognitive load, 
+ !-- 			which works against the desire for small, responsive teams. -->
+<!-- The key benefit of a platform is that it reduces this cognitive load. -->
+
+<p>今のところ、このモデルは特に新しいものではありません。
+ビジネスアラインドチームと技術サポートチームを分けるというアプローチは、
+エンタープライズソフトウェアと同じくらい昔からあるものです。
+近年、多くの著者が、
+ビジネス機能チームはフルスタックであり、
+フルライフサイクルを担当すべきということを述べています。
+私が考えるチームトポロジーの素晴らしいインサイトは、ある問題にフォーカスしているところです。
+その問題とは、フルスタックでフルライフサイクルのビジネスアラインドチームは過剰な認知的負荷に直面することが多く、小規模で反応性の高いチームに対する要望の足かせになっているという問題です。
+プラットフォームの主な利点は、この認知的負荷を軽減することです。</p>
+
+<!-- A crucial insight of Team Topologies is that the primary benefit of a platform is to reduce the cognitive load on stream-aligned teams -->
+
+<!-- This insight has profound implications.  -->
+<!-- For a start 
+ !-- 	it alters how platform teams should think about the platform.  -->
+<!-- Reducing client teams' cognitive load  -->
+<!-- leads to different design decisions and product roadmap to platforms intended primarily for standardization or cost-reduction.  -->
+<!-- Beyond the platform this insight leads Team Topologies to develop their model further by identifying two more kinds of team. -->
+
+<p>このインサイトは深い意味を持ちます。
+まず、プラットフォームチームのプラットフォームに対する考え方が変わります。
+クライアントチームの認知的負荷を軽減することで、
+標準化やコスト削減を主な目的としたプラットフォームの設計決定やプロダクトロードマップが変わります。
+このインサイトはプラットフォーム以外にも当てはまります。
+このインサイトによって、チームトポロジーはあと2種類のチームを特定し、モデルをさらに発展させました。</p>
+
+<!-- Some capabilities require specialists -->
+<!-- who can put considerable time and energy into mastering a topic 
+ !-- 	important to many stream-aligned teams.  -->
+<!-- A security specialist may spend more time 
+ !-- 	studying security issues and interacting with the broader security community 
+ !-- 	than would be possible as a member of a stream-aligned team.  -->
+<!-- Such people congregate in enabling teams, 
+ !-- 	whose role is to grow relevant skills inside other teams 
+ !-- 		so that those teams can remain independent and better own and evolve their services. -->
+<!-- To achieve this enabling teams 
+ !-- 	primarily use the third and final interaction mode 
+ !-- 	in Team Topologies.  -->
+<!-- Facilitating mode involves a coaching role,  -->
+<!-- where the enabling team isn't there to write and ensure conformance to standards,  -->
+<!-- but instead to educate and coach their colleagues 
+ !-- 	so that the stream-aligned teams become more autonomous. -->
+
+<p>いくつかの機能には、
+多くのストリームアラインドチームの重要なトピックについて、
+膨大な時間と労力を割くことができる専門家が必要です。
+たとえば、セキュリティの専門家は、
+ストリームアラインドチームのメンバーよりも、
+セキュリティの問題の調査やコミュニティとの交流に多くの時間を使うでしょう。
+こうした人たちは<strong>イネイブリングチーム</strong>になります。
+他のチームで関連するスキルを高め、そのチームが独立性を維持し、サービスの所有と進化がうまくできるようにするという役割です。
+イネイブリングチームを実現するには、最後のインタラクションモードを使います。
+<strong>ファシリテーションモード</strong>にはコーチングの役割が含まれます。
+イネイブリングチームは標準に準拠していることを確認するために存在しているのではなく、
+ストリームアラインドチームが自律的になるように、教育・指導するために存在しているのです。</p>
+
+<!-- Stream-aligned teams are responsible for the whole stream of value for their customers,  -->
+<!-- but occasionally we find aspects of a stream-aligned team's work 
+ !-- 	that is sufficiently demanding that it needs a dedicated group to focus on it, 
+ !-- leading to the fourth and final type of team: complicated-subsystem team.  -->
+<!-- The goal of a complicated-subsystem team 
+ !-- 	is to reduce the cognitive load of the stream-aligned teams  -->
+<!-- that use that complicated subsystem.  -->
+<!-- That's a worthwhile division 
+ !-- 	even if there's only one client team for that subsystem.  -->
+<!-- Mostly complicated-subsystem teams strive to interact with their clients using x-as-a service mode, but will need to use collaboration mode for short periods. -->
+
+<p>ストリームアラインドチームは顧客に対する価値のすべての流れを担当しますが、
+専門のグループが必要なほど難しい作業が発生することがあります。
+最後のチームにつながります。
+<strong>コンプリケイテッド・サブシステムチーム</strong>です。
+このチームの目的は、
+複雑なサブシステムを使用するストリームアラインドチームの認知的負荷を軽減することです。
+サブシステムのクライアントがひとつだけであっても、
+コンプリケイテッド・サブシステムチームを作ることは有用です。
+コンプリケイテッド・サブシステムチームのクライアントとのインタラクションはX-as-a-Serviceモードですが、短期間はコラボレーションモードを使用する必要があります。</p>
+
+<p><img src="https://martinfowler.com/bliki/images/team-topologies/diagram.png" alt="" /></p>
+
+<!-- Team Topologies includes a set of graphical symbols to illustrate teams and their relationships.  -->
+<!-- These shown here are from the current standards, which differ from those used in the book.  -->
+<!-- A recent article elaborates on how to use these diagrams. -->
+
+<p><em>図：チームトポロジーには、チームとその関係を示すグラフィカルな記号が含まれています。上記の図は<a href="https://github.com/TeamTopologies/Team-Shape-Templates">現在の標準</a>のものであり、書籍で使用されているものとは異なります。<a href="https://teamtopologies.com/key-concepts-content/team-interaction-modeling-with-team-topologies">最近の記事</a>では、これらの図の使用方法について詳しく説明されています。</em></p>
+
+<!-- Team Topologies is designed explicitly recognizing the influence of Conways Law.  -->
+<!-- The team organization that it encourages takes into account 
+ !-- 	the interplay between human and software organization.  -->
+<!-- Advocates of Team Topologies intend its team structure to shape the future development of the software architecture into responsive and decoupled components aligned to business needs. -->
+
+<p>チームトポロジーは、<a href="ConwaysLaw">コンウェイの法則</a>の影響を明確に認識して設計されています。
+チームトポロジーが奨励するチーム組織は、
+人間の組織とソフトウェアの組織の相互作用を考慮に入れています。
+チームトポロジーの提唱者は、
+チーム構造がソフトウェアアーキテクチャの将来の開発に影響を与え、
+ビジネスニーズに合わせた、反応性のある、分離されたコンポーネントを生み出すと考えています。</p>
+
+<!-- George Box neatly quipped: "all models are wrong, some are useful".  -->
+<!-- Thus Team Topologies is wrong: complex organizations cannot be simply broken down into just four kinds of teams and three kinds of interactions.  -->
+<!-- But constraints like this are what makes a model useful. -->
+<!-- Team Topologies is a tool 
+ !-- 	that impels people to evolve their organization into a more effective way of operating, 
+ !-- one that allows stream-aligned teams to maximize their flow by lightening their cognitive load. -->
+
+<p>George Boxが「すべてはモデルは間違っているが、なかには役に立つものもある」と言っています。
+つまり、チームトポロジーは間違っています。
+複雑な組織を4種類のチームと3種類のインタラクションに単純に分割することはできません。
+しかし、このような制約があるからこそ、このモデルは役に立つのです。
+チームトポロジーは、組織を効率的に運営していくためのツールです。
+ストリームアラインドチームの認知的負荷を軽減し、流れを最大化できるようにするのです。</p>
+
+<!-- Acknowledgements -->
+<h3 id="謝辞">謝辞</h3>
+
+<!-- Andrew Thal, Andy Birds, Chris Ford, Deepak Paramasivam, Heiko Gerin, Kief Morris, Matteo Vaccari, Matthew Foster, Pavlo Kerestey, Peter Gillard-Moss, Prashanth Ramakrishnan, and Sandeep Jagtap discussed drafts of this post on our internal mailing list, providing valuable feedback. -->
+<p>Andrew Thal、Andy Birds、Chris Ford、Deepak Paramasivam、Heiko Gerin、Kief Morris、Matteo Vaccari、Matthew Foster、Pavlo Kerestey、Peter Gillard-Moss、Prashanth Ramakrishnan、Sandeep Jagtap たちと草稿について社内メーリングリストで議論し、有益なフィードバックをもらいました。</p>
+
+<!-- Matthew Skelton and Manuel Pais kindly provided detailed comments on this post, 
+ !-- 	including sharing some of their recent thinking since the book. -->
+<p>Matthew Skelton と Manuel Pais は、書籍以降の考え方を共有してくれるなど、詳細なコメントを提供してくれました。</p>
+
+<!-- Further Reading -->
+<h3 id="さらに詳しく知るために">さらに詳しく知るために</h3>
+
+<!-- The best treatment of the Team Topologies framework is the book of the same name, published in 2019.  -->
+<!-- The authors also maintain the Team Topologies website and 
+ !-- 	provide education and training services.  -->
+<!-- Their recent article on team interaction modeling 
+ !-- 	is a good intro to how the Team Topologies (meta-)model can be used 
+ !-- 	to build and evolve a model of an organization. [1] -->
+
+<p>チームトポロジーのフレームワークについて最も詳しいのは、2019年に出版された同名の<a href="https://www.amazon.com/gp/product/1942788819/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1942788819&amp;linkCode=as2&amp;tag=martinfowlerc-20">書籍</a>です。
+著者たちは<a href="https://teamtopologies.com/">チームトポロジーのウェブサイト</a>も運営しており、
+教育およびトレーニングのサービスを提供しています。
+<a href="https://teamtopologies.com/key-concepts-content/team-interaction-modeling-with-team-topologies">チームインタラクションモデリング</a>に関する最近の記事は、
+チームトポロジーの（メタ）モデルを使用して、
+組織のモデルを構築・進化させる入門的な内容になっています[1]。</p>
+
+<!-- Much of Team Topologies is based on the notion of Cognitive Load.  -->
+<!-- The authors explored cognitive load in Tech Beacon.  -->
+<!-- Jo Pearce expanded on how cognitive load may apply to software development. -->
+
+<p>チームトポロジーの多くは、認知的負荷の考えにもとづいています。
+著者たちは、TechBeaconで<a href="https://techbeacon.com/app-dev-testing/forget-monoliths-vs-microservices-cognitive-load-what-matters">認知的負荷について調査しました</a>。
+Jo Pearceは、<a href="https://12devsofxmas.co.uk/2015/12/day-3-managing-cognitive-load-for-team-learning/">ソフトウェア開発における認知的負荷</a>について詳しく説明しています。</p>
+
+<!-- The model in Team Topologies resonates well with much of the thinking on software team organization that I've published on this site. You can find this collected together at the team organization tag. -->
+
+<p>チームトポロジーのモデルは、
+私がこのサイトで公開しているソフトウェアチーム組織に関する考えと共通する部分が多くあります。
+<a href="/#tag_team organization">team organizationタグ</a>から読むことができます。</p>
+
+<!-- Notes -->
+<h3 id="脚注">脚注</h3>
+
+<!-- 1: To be more strict in my modeling lingo, I would say that Team Topologies usually acts as a meta-model.  -->
+<!-- If I use Team Topologies to build a model of an airline's software development organization,  -->
+<!-- then that model shows 
+ !-- the teams in the airline classified according to Team Topologies's terminology. I would then say that that the Team Topologies model is a meta-model to my airline model. -->
+
+<p>[1] 私のモデリング用語で厳密に言うとすれば、チームトポロジーは<strong>メタモデル</strong>として機能していると言えるでしょう。私がチームトポロジーを使って、航空会社のソフトウェア開発組織のモデルを構築したとすると、チームトポロジーの用語に従って分類された航空会社のチームのモデルが示されます。その場合、チームトポロジーのモデルは、私の航空会社のモデルのメタモデルであると言えます。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

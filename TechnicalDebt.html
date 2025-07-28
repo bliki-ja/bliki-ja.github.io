@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>技術的負債 - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/TechnicalDebt">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">技術的負債</h1>
+    <p class="post-meta" style="text-align:right">
+      2019-05-21
+      
+      [<a href="https://martinfowler.com/bliki/TechnicalDebt.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2019-05-21-TechnicalDebt.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?technical%20debt" style="background-color: #ffc">technical debt</a>
+    ,
+    <a href="/tags?programming%20style" style="background-color: #ffc">programming style</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- Software systems are prone to the build up of cruft - deficiencies in internal quality that make it harder than it would ideally be to modify and extend the system further.  Technical Debt is a metaphor, coined by Ward Cunningham, that frames how to think about dealing with this cruft, thinking of it like a financial debt. The extra effort that it takes to add new features is the interest paid on the debt. -->
+
+<p>ソフトウェアシステムでは、<strong>クラフト</strong>（出来の悪いもの）が生まれやすい。システムの修正や拡張をしようとしても、内部品質の欠如がそれを難しくしている。「技術的負債」とは、Ward Cunninghamが作ったメタファーである。ファイナンスの負債のように考えることで、こうしたクラフトの扱いのことを考えやすくなる。たとえば、新機能の追加にかかる余分な労力は、負債の返済にかかる利子である。</p>
+
+<p><img src="https://martinfowler.com/bliki/images/tech-debt/sketch.png" alt="" /></p>
+
+<blockquote>
+  <p>あらゆるソフトウェアシステムには、タスクを実行するために必要とされる「本質的な」複雑さが一定量含まれている……
+……だが、ほとんどのシステムには「クラフト」が存在しており、理解を難しくしている。</p>
+</blockquote>
+
+<blockquote>
+  <p>クラフトがあると、変更するのに余分な労力がかかる。</p>
+</blockquote>
+
+<blockquote>
+  <p>技術的負債のメタファーは、こうしたクラフトを「負債」として扱う。変更に必要な余分な労力は、負債の利子の返済に相当する。</p>
+</blockquote>
+
+<!-- Imagine I have a confusing module structure in my code base.  I need to add a new feature.  If the module structure was clear, then it would take me four days to add the feature but with this cruft, it takes me six days. The two day difference is the interest on the debt. -->
+
+<p>私のコードのモジュール構造が複雑だったとしよう。ここに新機能を追加したい。モジュール構造が明確ならば、4日で終わるだろう。だが、クラフトがあるので6日もかかってしまう。この2日の違いが、負債の利子である。</p>
+
+<!-- What most appeals to me about the debt metaphor is how it frames how I think about how to deal with this cruft.  I could take five days to clean up the modular structure, removing that cruft, metaphorically paying off the principal.  If I only do it for this one feature, that's no gain, as I'd take nine days instead of six.  But if I have two more similar features coming up, then I'll end up faster by removing the cruft first. -->
+
+<p>私が負債のメタファーを気に入っているのは、こうしたクラフトの扱いのことを考えやすくしてくれるところだ。たとえば、クラフトを削除してモジュール構造をクリーンにするのに5日かかるとしよう。負債のメタファーを使えば、元本を返済していることになる。だが、この機能のためだけにやったとすると、何の得も得られない。本来なら6日で終わるところが、9日もかかっているからだ。だが、似たような機能が他に2つあったとすれば、先にクラフトを削除することで、日数が短縮されただろう。</p>
+
+<!-- Stated like that, this sounds like a simple matter of working the numbers, and any manager with a spreadsheet should figure out the choices.  Sadly since we CannotMeasureProductivity, none of these costs are objectively measurable.  We can estimate how long it takes to do a feature, estimate what it might be like if the cruft was removed, and estimate the cost of removing the cruft.  But our accuracy of such estimates is pretty low. -->
+
+<p>このように言うと、数字をいじるだけの簡単なことのように聞こえる。スプレッドシートを操作するマネージャーが選択すればいいだけのようにも思える。だが、残念ながら<a href="/CannotMeasureProductivity">生産性は計測できない</a>ので、これらのコストも客観的にはわからない。ある機能に必要な工数、クラフトを削除したあとにかかる工数、クラフトの削除にかかる工数を見積もることはできる。だが、こうした見積もりの正確度はかなり低い。</p>
+
+<!-- Given this, usually the best route is to do what we usually do with financial debts, pay the principal off gradually.  On the first feature I'll spend an extra couple of days to remove some of the cruft.  That may be enough to reduce the interest rate on future enhancements to a single day.  That's still going to take extra time, but by removing the cruft I'm making it cheaper for future changes to this code.  The great benefit of gradual improvement like this is that it naturally means we spend more time on removing cruft in those areas that we modify frequently, which are exactly those areas of the code base where we most need the cruft to be removed. -->
+
+<p>以上を踏まえると、我々がファイナンスの負債でやっているように、元本を少しずつ返済していくのが最善の道筋になるだろう。最初の機能については、余分な日数をかけてクラフトを削除する。これで新規に機能追加するときに、金利が1日くらいに下がるだろう。これでもまだ余分な時間はかかるだろうが、クラフトを削除したことで、これからコードを変更するときに安価にできる。このように少しずつ改善する大きな利点は、頻繁に修正する部分のクラフトの削除に時間をかけられるということだ。これは、コードから最もクラフトを削除したい部分でもある。</p>
+
+<!-- Thinking of this as paying interest versus paying of principal can help decide which cruft to tackle.  If I have a terrible area of the code base, one that's a nightmare to change, it's not a problem if I don't have to modify it.  I only trigger an interest payment when I have to work with that part of the software (this is a place where the metaphor breaks down, since financial interest payments are triggered by the passage of time).  So crufty but stable areas of code can be left alone.  In contrast, areas of high activity need a zero-tolerance attitude to cruft, because the interest payments are cripplingly high.  This is especially important since cruft accumulates where developers make changes without paying attention to internal quality - the more changes, the greater risk of cruft building up. -->
+
+<p>利子を返済するのか、それとも元本を返済するのかを考えれば、どのクラフトに対処すべきかを決定しやすくなる。コードにひどい部分があり、変更するのは悪夢のようだと思っていても、修正する必要がなければ問題にはなることはない。この部分に手を入れることがあっても、利子を支払えば済む（ファイナンスの利子は時間経過によって発生するので、ここはメタファーがうまく機能していない）。したがって、クラフトはあるが安定している部分が残る。一方、変更が激しい部分ではクラフトを容認できない。利子の支払いが異常に高くなるからだ。ここは特に重要である。開発者が内部品質に注意を払わずに変更を加えていると、クラフトが累積していくからだ。つまり、変更を加えていけば、クラフトが増加するリスクが高まるのである。</p>
+
+<!-- The metaphor of debt is sometimes used to justify neglecting internal quality.  The argument is that it takes time and effort to stop cruft from building up.  If there new features that are needed urgently, then perhaps it's best to take on the debt, accepting that this debt will have to be managed in the future. -->
+
+<p>負債のメタファーは、内部品質に対する無視を正当化するために使われることがある。クラフトが増えないようにするには、時間も労力もかかるという主張だ。緊急で必要な新機能があったときに、これから管理しなければいけないことを受け入れながら、負債を背負うこともあるだろう。</p>
+
+<!-- The danger here is that most of the time this analysis isn't done well.  Cruft has a quick impact, slowing down the very new features that are needed quickly.  Teams who do this end up maxing out all their credit cards, but still delivering later than they would have done had they put the effort into higher internal quality.  Here the metaphor often leads people astray, as the dynamics don't really match those for financial loans.  Taking on debt to speed delivery only works if you stay below the design payoff line of the DesignStaminaHypothesis, and teams hit that line in weeks rather than months. -->
+
+<p>ここで危険なのは、分析が十分ではないことが多いことだ。クラフトの影響はすぐに出る。緊急で必要な新機能を遅延させてしまうのだ。クレジットカードの限度額いっぱいまで使ってしまったチームは、内部品質を高めるために労力をかけたときよりもデリバリーが遅い。こうしたダイナミクスはファイナンスのローンとは一致していないため、メタファーを使っているとよくわからなくなってくる。負債を抱えることでデリバリーを加速できるのは、<a href="/DesignStaminaHypothesis/">設計＝スタミナ仮説</a>の設計損益ラインを下回っているときだけである。そして、この設計損益ラインに到達するのは数か月ではなく数週間以内である。</p>
+
+<!-- There are regular debates whether different kinds of cruft should be considered as debt or not.  I found it useful to think about whether the debt is acquired deliberately and whether it is prudent or reckless - leading me to the TechnicalDebtQuadrant. -->
+
+<p>クラフトの種類によって負債とそれ以外に分けるべきか、という議論が定期的に起こる。私としては、その負債が「意図的」なものか、「慎重」なのか「無鉄砲」なのかで考えることが有益であると思っている。このことについては、<a href="/TechnicalDebtQuadrant">技術的負債の四象限</a>にまとめた。</p>
+
+<!-- ## Further Reading -->
+<h2 id="さらに詳しく知るために">さらに詳しく知るために</h2>
+
+<!-- As far as I can tell, Ward first introduced this concept in an experience report for OOPSLA 1992. It has also been discussed on the wiki. -->
+
+<p>私の知る限り、Wardが最初にこの概念を提供したのは、<a href="http://c2.com/doc/oopsla92.html">OOPSLA 1992</a>の体験レポートだった。今でも<a href="http://wiki.c2.com/?ComplexityAsDebt">Wiki</a>で議論が続いている。</p>
+
+<!-- Ward Cunningham has a video talk where he discusses this metaphor he created. -->
+
+<p>Ward Cunninghamは、彼の作ったこのメタファーについて<a href="https://www.youtube.com/watch?v=pqeJFYwnkjE">動画で語っている</a>。</p>
+
+<!-- Dave Nicolette expands on Ward's view of technical debt with a fine case study of what I refer to as Prudent Intentional debt -->
+
+<p>Dave Nicoletteは、Wardの技術的負債の考えを拡張し、<a href="https://neopragma.com/2019/03/technical-debt-the-man-the-metaphor-the-message/">優れたケーススタディ</a>としてまとめている。私はこれを「<a href="TechnicalDebtQuadrant">慎重かつ不注意</a>」型と呼んでいる。</p>
+
+<!-- A couple of readers sent in some similarly good names.  David Panariti refers to ugly programming as deficit programming.  Apparently he originally started using a few years ago when it fitted in with government policy; I suppose it's natural again now. -->
+
+<p>数名の読者から同様のいい名前が送られてきた。David Panaritiは、醜悪なプログラミングのことを「赤字プログラミング」と呼んでいる。彼は数年前から使い始めたようだが、当時の政策をよく表している。今でも自然に使える名前だ。</p>
+
+<!-- Scott Wood suggested "Technical Inflation could be viewed as the ground lost when the current level of technology surpasses that of the foundation of your product to the extent that it begins losing compatibility with the industry.  Examples of this would be falling behind in versions of a language to the point where your code is no longer compatible with main stream compilers." -->
+
+<p>Scott Woodは「現在の技術レベルがプロダクトの基盤のレベルを上回り、業界との互換性が失われるようになると、こうした基盤の喪失は『技術的インフレ』と見なせるだろう。言語のバージョンを例にすると、あなたのコードと主流のコンパイラとの互換性がなくなるようなことである」と提案している。</p>
+
+<!-- Steve McConnell brings out several good points in the metaphor, particularly how keeping your unintended debt down gives you more room to intentionally take on debt when it's useful to do so.  I also like his notion of minimum payments (which are very high to fix issues with embedded systems as opposed to web sites). -->
+
+<p><a href="http://www.construx.com/10x_Software_Development/Technical_Debt/">Steve McConnell</a>は、技術的負債の優れたポイントをいくつか明らかにしている。たとえば、意図しない負債を抑えておくことで、便利な負債を意図的に受け入れる余裕を残す方法を述べている。彼の「最低限の返済」の考えも好きだ（ウェブサイトとは違い、組込みシステムで問題を修正するのは非常に高い）。</p>
+
+<!-- Aaron Erickson talks about Enron financing. -->
+<p>Aaron Ericksonは、<a href="https://www.informit.com/articles/article.aspx?p=1401640">エンロンの財務管理</a>について語っている。</p>
+
+<!-- Henrik Kniberg argues that it's older technical debt that causes the greatest problem and that it's wise to a qualitative debt ceiling to help manage it. -->
+
+<p><a href="https://blog.crisp.se/2013/10/11/henrikkniberg/good-and-bad-technical-debt">Henrik Kniberg</a>は、最大の問題を引き起こすのは最古の技術的負債であると主張している。そして、こうした負債を管理するには、質的に上限を設けるべきだと述べている。</p>
+
+<!-- Erik Dietrich discusses the human cost of technical debt: team infighting, atrophied skills, and attrition. -->
+
+<p>Erik Dietrichは、<a href="https://daedtech.com/human-cost-tech-debt/">技術的負債の人的コスト</a>（チーム内の紛争、スキルの退化、疲弊）について説明している。</p>
+
+<!-- ## Revisions -->
+<h2 id="履歴">履歴</h2>
+
+<!-- I originally published this post on October 1 2003.  I gave it a thorough rewrite in April 2019. -->
+
+<p>最初に投稿したのは2003年10月1日である。2019年4月に大幅に書き換えた。（訳注：過去のバージョンはgithubの履歴でたどれます）</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>コンウェイの法則 - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/ConwaysLaw">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">コンウェイの法則</h1>
+    <p class="post-meta" style="text-align:right">
+      2022-10-20
+      
+      [<a href="https://martinfowler.com/bliki/ConwaysLaw.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2022-10-20-ConwaysLaw.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?team%20organization" style="background-color: #ffc">team organization</a>
+    ,
+    <a href="/tags?enterprise%20architecture" style="background-color: #ffc">enterprise architecture</a>
+    ,
+    <a href="/tags?application%20architecture" style="background-color: #ffc">application architecture</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- Pretty much all the practitioners I favor in Software Architecture are deeply suspicious of any kind of general law in the field.  -->
+<!-- Good software architecture is very context-specific, 
+ !-- 	analyzing trade-offs that resolve differently across a wide range of environments.  -->
+<!-- But if there is one thing they all agree on, it's the importance and power of Conway's Law.  -->
+<!-- Important enough to affect every system I've come across, and powerful enough that you're doomed to defeat if you try to fight it. -->
+
+<p>私が敬愛するソフトウェアアーキテクチャの専門家たちは、この分野のあらゆる一般法則に対して懐疑的です。
+優れたソフトウェアアーキテクチャはコンテキストに固有であり、さまざまな環境下で異なる解決をしなければならないトレードオフを分析するものだからです。
+とはいえ、彼ら全員が同意するものがひとつだけあります。
+それは、コンウェイの法則の重要性とパワーです。
+私がこれまでに経験したすべてのシステムに影響を与えるほど重要であり、抗えないほどのパワーがあります。</p>
+
+<!-- The law is probably best stated, by its author, as: [1] -->
+
+<p>この法則を説明するには、作者の言葉がいちばんでしょう<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>。</p>
+
+<!-- Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.
+ !-- -- Melvin Conway -->
+
+<blockquote>
+  <p>システム（広義に定義）を設計するあらゆる組織は、組織のコミュニケーション構造をコピーした構造を持つ設計を生み出す。<br />
+―<a href="https://www.melconway.com/Home/Conways_Law.html">メルヴィン・コンウェイ</a></p>
+</blockquote>
+
+<!-- Conway's Law is essentially the observation 
+ !-- that the architectures of software systems look remarkably similar to the organization of the development team that built it.  -->
+<!-- It was originally described to me by saying that if a single team writes a compiler, 
+ !-- 	it will be a one-pass compiler, but if the team is divided into two, then it will be a two-pass compiler.  -->
+<!-- Although we usually discuss it with respect to software, the observation applies broadly to systems in general. [2] -->
+
+<p>コンウェイの法則とは、ソフトウェアシステムのアーキテクチャは開発チームの組織とよく似る、というものです。
+元々は、1つのチームでコンパイラーを作るとワンパスのコンパイラーになり、2つのチームでコンパイラーを作るとツーパスのコンパイラーになる、というものでした。
+通常はソフトウェアに関するものですが、システム全般に広く適用されます<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>。</p>
+
+<p><img src="https://martinfowler.com/bliki/images/conwaysLaw/card.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>設計者のコミュニケーションのやり方が...
+...システムの設計に制約を与える
+</code></pre></div></div>
+
+<!-- As my colleague Chris Ford said to me:  -->
+<!-- "Conway understood that software coupling 
+ !-- 	is enabled and encouraged by human communication."  -->
+<!-- If I can talk easily to the author of some code, 
+ !-- 	then it is easier for me to build up a rich understanding of that code.  -->
+<!-- This makes it easier for my code to interact,
+ !-- 	and thus be coupled, to that code.  -->
+<!-- Not just in terms of explicit function calls, 
+ !-- but also in the implicit shared assumptions and way of thinking about the problem domain. -->
+<p>同僚のChris Fordが私に言ったように「ソフトウェアの結合は人間のコミュニケーションによって可能になり、強化されるものであることをコンウェイは理解していました」。
+コードの作成者と簡単に話をすることができれば、私はそのコードを深く理解できます。
+私のコードはそのコードとやり取りしやすくなり、両者は結合していくでしょう。
+結合とは明示的な関数呼び出しのことだけではありません。
+暗黙的な共有理解や問題領域に対する考え方なども含まれます。</p>
+
+<!-- We often see how inattention to the law can twist system architectures.  -->
+<!-- If an architecture is designed at odds with the development organization's structure, 
+ !-- 	then tensions appear in the software structure.  -->
+<!-- Module interactions that were designed to be straightforward become complicated, 
+ !-- 	because the teams responsible for them don't work together well.  -->
+<!-- Beneficial design alternatives aren't even considered 
+ !-- 	because the necessary development groups aren't talking to each other. -->
+<p>この法則に注意を払っていないと、システムアーキテクチャにねじれが生じます。
+アーキテクチャが開発組織の構造と違った形で設計されていると、ソフトウェアの構造に緊張が生まれます。
+素直に設計されたモジュールのやり取りが複雑になっていきます。
+それらを担当するチームがうまく連携できないからです。
+開発グループ同士が話し合わないので、有益な設計の代替案も考慮されません。</p>
+
+<!-- A dozen or two people can have deep and informal communications, so Conways Law indicates they will create a monolith.  -->
+<!-- That's fine - so Conway's Law doesn't impact our thinking for smaller teams.  -->
+<!-- It's when the humans need organizing that Conway's Law should affect decision making. -->
+
+<p>10〜20人程度であれば、非公式に深くコミュニケーションできます。
+コンウェイの法則に従えば、彼らはモノリスを生み出すことになるでしょう。
+特に問題はありません。
+小規模のチームであれば、コンウェイの法則が考え方に影響を与えることはありません。
+コンウェイの法則が意思決定に影響を与えるのは、人間が組織化を必要とするときです。</p>
+
+<!-- The first step in dealing with Conway's Law is know not to fight it.  -->
+<!-- I still remember one sharp technical leader,  -->
+<!-- who was just made the architect of a large new project that consisted of six teams 
+ !-- 	in different cities all over the world.  -->
+<!-- “I made my first architectural decision” he told me.  -->
+<!-- “There are going to be six major subsystems. I have no idea what they are going to be, 
+ !-- but there are going to be six of them.” -->
+
+<p>コンウェイの法則に対応する最初のステップは、抗わないことです。
+ある優秀なテクニカルリーダーのことを今でも覚えています。
+そのリーダーは、世界中の都市にいる6つのチームで構成された、大規模な新規プロジェクトのアーキテクトに任命されたばかりでした。
+彼は私にこう言いました。
+「最初のアーキテクチャを決めました。6つの主要なサブシステムにする予定です。それぞれ何になるかはわかりませんが、数は6つになると思います」</p>
+
+<!-- This example recognized the big impact location has on human communication.  -->
+<!-- Putting teams on separate floors of the same building is enough 
+ !-- 	to significantly reduce communication.  -->
+<!-- Putting teams in separate cities, and time zones, further gets in the way of regular conversation.  -->
+<!-- The architect recognized this,
+ !-- 	and realized that he needed take this into account in his technical design from the beginning.  -->
+<!-- Components developed in different time-zones 
+ !-- needed to have a well-defined and limited interaction 
+ !-- 	because their creators would not be able to talk easily.[3] -->
+<p>この例では、場所が人間のコミュニケーションに大きな影響を与えることが認識されています。
+同じ建物であってもチームを別々のフロアに配置するだけで、コミュニケーションが大幅に減少します。
+異なる都市や別々のタイムゾーンにチームを配置すると、日常的な会話がさらに妨げられます。
+このアーキテクトはそのことを認識しており、技術的な設計では最初から考慮しておかなければならないことを理解していました。
+異なるタイムゾーンで開発されたコンポーネントは、相互のやり取りを厳密に定義して制限する必要がありました。
+作成者同士が簡単に話せなかったからです<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>。</p>
+
+<!-- A common mismatch with Conways Law is 
+ !-- 	where an ActivityOriented team organization 
+ !-- 	works at cross-purposes to feature development. 
+ !-- Teams organized by software layer (eg front-end, back-end, and database) lead to dominant 
+ !-- PresentationDomainDataLayering structures,  -->
+<!-- which is problematic because each feature needs close collaboration between the layers.  -->
+<!-- Similarly dividing people along the lines of life-cycle activity
+ !-- (analysis, design, coding, testing) means lots of hand-offs 
+ !-- 	to get a feature from idea to production. -->
+<p>コンウェイの法則のよくあるミスマッチは、<a href="/ActivityOriented">アクティビティ指向</a>のチーム組織がさまざまな目的で機能開発をしている場合です。
+ソフトウェアレイヤー（フロントエンド、バックエンド、データベースなど）で組織化されたチームは、<a href="/PresentationDomainDataLayering">プレゼンテーションドメインデータレイヤリング</a>の構造になります。
+これには問題があります。
+機能ごとにすべてのレイヤーでコラボレーションが必要になるからです。
+同様に、ライフサイクルのアクティビティ（分析、設計、実装、テスト）で組織を分割すると、機能をアイデアから実装するまでに何度も受け渡しが必要になってしまいます。</p>
+
+<!-- Accepting Conway's Law is superior to ignoring it,  -->
+<!-- and in the last decade, we've seen a third way to respond to this law.  -->
+<!-- Here we deliberately alter the development team's organization structure 
+ !-- 	to encourage the desired software architecture, 
+ !-- 	an approach referred to as the Inverse Conway Maneuver [4]. 
+This approach is often talked about in the world of microservices,  -->
+<!-- where advocates advise building small, long-lived BusinessCapabilityCentric teams
+ !-- 	that contain all the skills needed to deliver customer value.  -->
+<!-- By organizing autonomous teams this way,  -->
+<!-- we employ Conway's Law to encourage similarly autonomous services 
+ !-- 	that can be enhanced and deployed independently of each other.  -->
+<!-- This, indeed, is why I describe microservices as primarily a tool to structure a development organization. -->
+
+<p>コンウェイの法則を受け入れることは無視するよりも優れていますが、この10年間で3番目の方法が見られるようになりました。
+開発チームの組織構造を変更して、望ましいソフトウェアアーキテクチャを目指すというものです。
+これは<strong>逆コンウェイ作戦</strong>と呼ばれるアプローチです<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>。
+このアプローチは、<a href="https://martinfowler.com/articles/microservices.html#OrganizedAroundBusinessCapabilities">マイクロサービス</a>の世界でよく話題に上ります。
+マイクロサービスの支持者たちは、顧客価値を提供するためのすべてのスキルを持つ、小規模で寿命の長い<a href="/BusinessCapabilityCentric">ビジネスケイパビリティ中心</a>のチームを作ることを推奨しています。
+このような自律的なチームを編成し、コンウェイの法則を利用することで、チームと同様の自律的なサービスを促進するのです。各サービスは独立して改良およびデプロイできます。
+私が「マイクロサービスは開発組織の構造を作るためのツールである」と説明するのはそのためです。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>コンウェイの法則に対する反応</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>無視する</td>
+      <td>コンウェイの法則を考慮に入れていない。聞いたことがないか、当てはまらないと思っているからだ（ナレーター：当てはまります）。</td>
+    </tr>
+    <tr>
+      <td>受け入れる</td>
+      <td>コンウェイの法則の影響を認識している。アーキテクチャが設計者のコミュニケーションパターンと衝突しないようにしている。</td>
+    </tr>
+    <tr>
+      <td>逆コンウェイ作戦</td>
+      <td>設計者のコミュニケーションパターンを変更して、望ましいソフトウェアアーキテクチャを促進している。</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Responses to Conway's Law
+ !-- Ignore	
+ !-- Don't take Conway's Law into account, because you've never heard of it, or you don't think it applies (narrator: it does) -->
+
+<!-- Accept 
+ !-- Recognize the impact of Conway's Law, and ensure your architecture doesn't clash with designers' communication patterns. -->
+
+<!-- Inverse Conway Maneuver   
+ !-- Change the communication patterns of the designers to encourage the desired software architecture. -->
+
+<!-- While the inverse Conway maneuver is a useful tool, it isn't all-powerful.  -->
+<!-- If you have an existing system with a rigid architecture 
+ !-- 	that you want to change,  -->
+<!-- changing the development organization isn't going to be an instant fix.  -->
+<!-- Instead it's more likely to result in a mismatch between developers and code
+ !-- 	that adds friction to further enhancement.  -->
+<!-- With an existing system like this,  -->
+<!-- the point of Conway's Law is that we need to take into account its presence while changing both organization and code base.  -->
+<!-- And as usual, I'd recommend taking small steps while being vigilant for feedback. -->
+
+<p>逆コンウェイ作戦は便利なツールですが、万能ではありません。
+既存のシステムのアーキテクチャに柔軟性がない場合、それを変更しようとして開発組織を変更しても<a href="https://verraes.net/2022/05/conways-law-vs-rigid-designs/">即効性はありません</a>。
+むしろ開発者とコードにミスマッチが生まれ、変更に摩擦が生じる可能性が高くなります。
+このような既存のシステムでは、コンウェイの法則の存在を考慮しながら、組織とコードベースの両方を変更する必要があります。
+いつものように、フィードバックに気を配りながら小さなステップで進めることをお勧めします。</p>
+
+<!-- Domain-Driven Design plays a role with Conway's Law 
+ !-- 	to help define organization structures, 
+ !-- since a key part of DDD is to identify BoundedContexts.  -->
+<!-- A key characteristic of a Bounded Context is that it has its own UbiquitousLanguage, defined and understood by the group of people working in that context.  -->
+<!-- Such contexts form ways to group people around a subject matter 
+ !-- 	that can then align with the flow of value. -->
+
+<p>ドメイン駆動設計（DDD）はコンウェイの法則において重要な役割を果たします。
+DDDで重要となるのは<a href="/BoundedContext">境界づけられたコンテキスト</a>を特定することなので、組織構造の定義を支援します。
+境界づけられたコンテキストの特徴は、独自の<a href="/UbiquitousLanguage">ユビキタス言語</a>を持ち、そのコンテキストで働く人たちが言語を定義および理解できることです。
+そのようなコンテキストが、価値の流れに沿ったテーマの周囲に人々を集める方法になります。</p>
+
+<!-- The key thing to remember about Conways Law is that the modular decomposition of a system and the decomposition of the development organization must be done together.  -->
+<!-- This isn't just at the beginning,  -->
+<!-- evolution of the architecture and reorganizing the human organization 
+ !-- must go hand-in-hand throughout the life of an enterprise. -->
+
+<p>コンウェイの法則で覚えておきべきことは、システムのモジュール分解と開発組織の分割は同時に行わなければならない、ということです。
+これは最初だけではありません。
+アーキテクチャの進化と人間組織の再編成は、企業が存続する限り密接に連携させなければなりません。</p>
+
+<!-- ### Further Reading -->
+<h3 id="さらに詳しく知るために">さらに詳しく知るために</h3>
+
+<!-- Recognizing the importance of Conway's Law 
+ !-- means that budding software architects need to think about IT organization design.  -->
+<!-- Two worthwhile books on this topic are Agile IT Organization Design by Narayan and Team Topologies by Skelton and Pais. -->
+
+<p>コンウェイの法則の重要性を認識するというのは、これからのソフトウェアアーキテクトはIT組織の設計について考えなければならないことを意味します。
+このトピックに関する価値ある2冊は、Narayanの『Agile IT Organization Design』とSkeltonとPaisの『Team Topologies』です。</p>
+
+<!-- Birgitta Böckeler, Mike Mason, James Lewis and I discuss our experiences with Conway's Law on the ThoughtWorks Technology Podcast -->
+<p>Birgitta Böckeler、Mike Mason、James Lewisと私は、<a href="https://www.thoughtworks.com/insights/podcasts/technology-podcasts/reckoning-with-the-force-conways-law">ThoughtWorks Technology Podcast</a>でコンウェイの法則の経験を話し合っています。</p>
+
+<!-- ### Acknowledgements -->
+<h3 id="謝辞">謝辞</h3>
+
+<!-- Bill Codding, Birgitta Boeckeler, Camilla Crispim, Chris Ford, Gabriel Sadaka, Matteo Vaccari, Michael Chaffee, and Unmesh Joshi reviewed drafts of this article and suggested improvements -->
+<p>Bill Codding、Birgitta Boeckeler、Camilla Crispim、Chris Ford、Gabriel Sadaka、Matteo Vaccari、Michael Chaffee、Unmesh Joshiは、この記事の草稿をレビューして、改善点を提案してくれました。</p>
+
+<!-- ### Revisions -->
+<h3 id="更新履歴">更新履歴</h3>
+
+<!-- 2022-10-24: I added the paragraph about the inverse Conway maneuver and rigid architectures. I also added the footnote about remote-first working. -->
+
+<p>2022-10-24: 逆コンウェイ作戦と柔軟性のないアーキテクチャに関する段落を追加しました。また、リモートファーストの働き方に関する脚注も追加しました。</p>
+
+<!-- ### Notes -->
+<h3 id="脚注">脚注</h3>
+
+<!-- 1: The source for Conway's law is an article written by Melvin Conway in 1968.  -->
+<!-- It was published by Datamation, one of the most important journals for the software industry at that time.  -->
+<!-- It was later dubbed “Conway’s Law” by Fred Brooks in his hugely influential book The Mythical Man-Month.  -->
+<!-- I ran into it there at the beginning of my career in the 1980s, 
+ !-- and it has been a thought-provoking companion ever since. -->
+
+<!-- 2: As Conway mentions,  -->
+<!-- consider how the social problems around poverty, health care, housing, and education are influenced by the structures of government. -->
+
+<!-- 3: While location makes a big contribution to in-person communication patterns,  -->
+<!-- one of the features of remote-first working, is that it reduces the role of distance, as everyone is communicating online. Conway's Law still applies,  -->
+<!-- but it's based on the online communication patterns.  -->
+<!-- Time zones still have a big effect, even online. -->
+
+<!-- 4: The term “inverse Conway maneuver” was coined by Jonny LeRoy and Matt Simons in an article published in the December 2010 issue of the Cutter IT journal. -->
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>コンウェイの法則の出典は、1968年にメルヴィン・コンウェイが書いた<a href="https://www.melconway.com/Home/Committees_Paper.html">記事</a>です。当時のソフトウェア業界で最も重要なジャーナルのひとつであるDatamationから出版されました。後にそれはFred Brooksの非常に影響力のある著書『人月の神話』で「コンウェイの法則」と呼ばれました。私はキャリアの初期の1980年代にそれに出会いました。それ以来、思考を刺激してくれる仲間です。 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>コンウェイが言及しているように、貧困、医療、住宅、教育に関する社会問題が、政府の構造にどのような影響を受けているかを考えてみてください。 <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>場所は対面のコミュニケーションパターンに大きく貢献します。<a href="https://martinfowler.com/articles/remote-or-co-located.html#remote-first">リモートファースト</a>の働き方では、全員がオンラインでコミュニケーションするため、距離の役割が低下します。コンウェイの法則は引き続き有効ですが、オンラインコミュニケーションパターンに基づきます。タイムゾーンはオンラインであっても大きな影響があります。 <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>「逆コンウェイ作戦」という言葉は、Cutter ITジャーナルの2010年12月号に掲載された<a href="http://jonnyleroy.com/2011/02/03/dealing-with-creaky-legacy-platforms/">記事</a>において、Jonny LeRoyとMatt Simonsが生み出したものです。 <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

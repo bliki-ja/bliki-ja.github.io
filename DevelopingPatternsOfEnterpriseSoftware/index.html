@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>エンタープライズアプリケーション開発のパターン - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/DevelopingPatternsOfEnterpriseSoftware/">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">エンタープライズアプリケーション開発のパターン</h1>
+    <p class="post-meta" style="text-align:right">
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/DevelopingPatternsOfEnterpriseSoftware/index.md">翻訳者と原稿</a>]
+    </p>
+  </header>
+
+  <article class="post-content" id="page-content">
+    <hr />
+
+<p>以下の文章は、Martin Fowler による <a href="https://martinfowler.com/articles/enterprisePatterns.html">Developing Patterns of Enterprise Software</a> の日本語訳である。</p>
+
+<hr />
+
+<blockquote>
+  <p>以下は、個人的な調査で集めたエンタープライズ ソフトウェア開発に関するパターンのカタログである。</p>
+</blockquote>
+
+<p>最終更新日: 2005/2/19</p>
+
+<p>近年、小粒だが有用なエンタープライズ システム開発パターンが記述されてきている。
+このページでは、特筆すべきパターンや、パターンの相互作用などについて述べていく。</p>
+
+<p>各パターンに関するより詳しい情報については、
+<a href="http://patternshare.org/">PatternShare</a>を参照するとよいだろう。
+ここはマイクロソフト パターン グループにより運営されており、
+独自にパターン カタログの体系付けを行っている。</p>
+
+<p>パターン作者を結びつける公式的な組織は存在していない。
+しかし、私たちは非公式な関係で結びついている——お互いの作品をレビューしあっているのだ。
+何らかのグループを作ったほうがいいんじゃないかと思ったりもするのだが、
+なかなか実際の行動に移せずにいる。
+パターンを書くってだけで、じゅーぶんハードなんだから！</p>
+
+<p>どのパターンがよいかとか、なぜパターンに興味があるのかというのは、人によって異なる。
+私の立場については、<a href="https://martinfowler.com/ieeeSoftware/patterns.pdf">IEEEソフトウェアのコラム</a>(PDF)で述べた。</p>
+
+<p>ここにリストアップしたパターンは、
+少なくとも私がよく知っているパターンであり、
+使っていて気持ちの良いパターンである。
+このカタログにすべてのパターンを載せようというつもりはない。</p>
+
+<h2 id="カタログ">カタログ</h2>
+
+<p>ここは、私が有用だと思うパターンのカタログである。</p>
+
+<h3 id="patterns-of-enterprise-application-architecture"><a href="https://martinfowler.com/eaaCatalog/">Patterns of Enterprise Application Architecture</a></h3>
+<p>(Fowler)</p>
+
+<p>レイヤ化されたアーキテクチャという文脈で、エンタープライズ アプリケーション アーキテクチャに焦点をあてている。
+主な節は、ドメイン ロジック、Webプレゼンテーション、データベース統合、オフライン コンカレンシー（David Riceによる）、および、分散化である。
+データベース統合の節が最も大きく、オブジェクト/リレーショナル マッピングのパターンを多く掲載している。</p>
+
+<h3 id="core-j2ee-patterns"><a href="http://www.corej2eepatterns.com/">Core J2EE Patterns</a></h3>
+<p>(Alur, Crupi, and Malks)</p>
+
+<p>Java J2EEプラットフォームに関するエンタープライズ アプリケーション アーキテクチャ パターン。J2EEプラットフォームにフォーカスしているが、他のエンタープライズ アプリケーション プラットフォームにも適用可能（工夫が必要だが）。</p>
+
+<h3 id="enterprise-integration-patterns"><a href="http://www.enterpriseintegrationpatterns.com/">Enterprise Integration Patterns</a></h3>
+<p>(Hohpe and Woolf)</p>
+
+<p>非同期メッセージングによる統合は、最も効果的なエンタープライズ アプリケーションの統合方法のひとつではないかと思う。EIPには、基本的なパターンが掲載されている。</p>
+
+<h3 id="microsoft-enterprise-solution-patterns"><a href="http://msdn.microsoft.com/architecture/patterns/default.aspx?pull=/library/en-us/dnpatterns/html/esp.asp">Microsoft Enterprise Solution Patterns</a></h3>
+<p>(Trowbridge, Mancini, Quick, Hohpe, Newkirk, and Lavigne)</p>
+
+<p>マイクロソフト初のエンタープライズ ソフトウェア パターン集。
+Webプレゼンテーション、デプロイ、分散化システムなど。</p>
+
+<h3 id="microsoft-data-patterns"><a href="http://msdn.microsoft.com/architecture/patterns/default.aspx?pull=/library/en-us/dnpatterns/html/dp.asp">Microsoft Data Patterns</a></h3>
+<p>(Teale, Etx, Kiel and Zeitz)</p>
+
+<p>データ移行（リプリケーション、同期）に関するパターン集。</p>
+
+<h3 id="microsoft-integration-patterns"><a href="http://msdn.microsoft.com/architecture/patterns/default.aspx?pull=/library/en-us/dnpag/html/intpatt.asp">Microsoft Integration Patterns</a></h3>
+<p>(Trowbridge, Roxburgh, Hohpe, Manolescu and Nadhan)</p>
+
+<p>マイクロソフトの統合パターン集。統合レイヤに向けての戦略、システム接続のアプローチ、統合の効果など。</p>
+
+<h3 id="domain-driven-design"><a href="http://domainlanguage.com/">Domain Driven Design</a></h3>
+<p>(Evans)</p>
+
+<p>オブジェクト指向ドメイン モデルの構築は、ドメイン ロジックを作るためのポピュラーな手法である。これは、複雑なドメインの構築に向いている。欠点は、その作業が非常に複雑なことである。
+これらのパターンは、リッチなドメイン モデルの構築をどのように行えばよいかについて記述している。また、モデリング原則の採用を妨げる現実世界の障害の認識、それを克服する方法についても記述している。</p>
+
+<h3 id="analysis-patterns"><a href="https://martinfowler.com/books.html#ap">Analysis Patterns</a></h3>
+<p>(Fowler)</p>
+
+<p>多くのドメイン モデルを見ると、何度も登場する「構造」に気付くだろう。
+この本では、そういった共通点をパターンという形で記述しようとした。
+アップデートが必要な個所も多くあるが、基本的な考えは今でも十分使える。
+この教材が有用だと思えば、私のサイトにある新しい副教材にも目を通して欲しい。</p>
+
+<h3 id="data-model-patterns"><a href="http://www.amazon.com/exec/obidos/ASIN/0932633293">Data Model Patterns</a></h3>
+<p>(Hay)</p>
+
+<p>データモデルに関する一般的なパターン集。
+これらのパターンは非常に概念的なアプローチで開発されているため、
+データモデリングのみならず、オブジェクトモデリングにも有用である。</p>
+
+<h3 id="gang-of-four"><a href="http://www.amazon.com/exec/obidos/ASIN/0201633612/">Gang of Four</a></h3>
+<p>(Gamma, Helm, Johnson, and Vlissides)</p>
+
+<p>最初の、そして最も有用な、パターン本。
+ここに掲載されているパターンの多くは基本的なものであり、エンタープライズ ソフトウェア開発に限定してはいない。
+しかし、多くのエンタープライズ パターンはこれらのパターンを参照している。</p>
+
+<h3 id="posa"><a href="http://www.amazon.com/exec/obidos/ASIN/0471958697">POSA</a></h3>
+<p>(Buschmann, Meunier, Rohnert, Sommerlad, and Stal)</p>
+
+<p>アーキテクチャ パターンに影響を及ぼしている。
+レイヤ（エンタープライズ アプリケーション）とパイプ アンド フィルター（メッセージング）は、多くのエンタープライズ パターンが機能するための基本的なパターンである。</p>
+
+<h2 id="エンタープライズ-ソフトウェアの観点">エンタープライズ ソフトウェアの観点</h2>
+
+<p>このカタログは、エンタープライズ ソフトウェア開発の様々な観点をカバーしている。
+様々な観点別にカタログ化した、もうひとつのパターン カタログである。</p>
+
+<h3 id="エンタープライズ-アプリケーション-アーキテクチャ">エンタープライズ アプリケーション アーキテクチャ</h3>
+
+<p>エンタープライズ アプリケーションとは、ある種のソフトウェア システム（多くのビジネスで使われるデータ中心的なソフトウェア システム）のことを指す。
+情報を処理あるいは操作するため、情報システムとも呼ばれる（こちらの方がいいかもしれない）。</p>
+
+<p>EAAに関する多くの本は、エンタープライズ アプリケーションを論理的な層に分けることから始める。
+このレイヤリング構造は、レイヤ内あるいはレイヤ間の設計の決定につながる。
+したがって、レイヤを介したパターンが似てくるのは、何も驚くことではない。
+パターン作者は自分のレイヤリング構造を持っている。
+しかし、どのレイヤリング戦略も共通点がある。</p>
+
+<p>エンタープライズ アーキテクチャ（Enterprise Architecture）とエンタープライズ アプリケーション アーキテクチャ（Enterprise Application Architecture）を混同しているひとが多く見られる。
+二番目の「A」で始まる単語が重要である。
+EAAはひとつのアプリケーションの構築についてである。
+EnterpriseArchitectureはまったく異なる動物である。</p>
+
+<p>*<a href="https://martinfowler.com/eaaCatalog/">Patterns of Enterprise Application Architecture</a></p>
+
+<p>テクノロジ独立の観点からEAAを考察している。</p>
+
+<p>*<a href="http://www.corej2eepatterns.com/">Core J2EE Patterns</a></p>
+
+<p>EAAに焦点をあてた最初の本。J2EEプラットフォームの観点からEAAを考察している。</p>
+
+<ul>
+  <li><a href="http://msdn.microsoft.com/architecture/patterns/default.aspx?pull=/library/en-us/dnpatterns/html/dp.asp">Microsoft Enterprise Solution Patterns</a></li>
+</ul>
+
+<p>.NETの観点からEAAを考察している。</p>
+
+<h3 id="エンタープライズ-インテグレーション">エンタープライズ インテグレーション</h3>
+
+<p>エンタープライズ アプリケーションは、孤独な狼である。
+しかし、それを機能させるためには、他のアプリケーションと一緒に動かす必要がある。
+ばらばらに開発されたエンタープライズ アプリケーションを縫合すること、これが統合（インテグレーション）の仕事である。
+統合を考えて設計されていないアプリケーションを統合しなければならないことがよくあるが、あなたが使っているテクノロジならともかく、あなたが使ったことのないテクノロジを使って統合しなきゃならないことだってある。</p>
+
+<ul>
+  <li><a href="http://www.enterpriseintegrationpatterns.com/">Enterprise Integration Patterns</a></li>
+</ul>
+
+<p>メッセージングに関するパターン。
+著者（と私）は、メッセージングが最も将来性のある統合手法だと思っている。</p>
+
+<ul>
+  <li><a href="http://msdn.microsoft.com/architecture/patterns/default.aspx?pull=/library/en-us/dnpag/html/intpatt.asp">Microsoft Integration Patterns</a></li>
+</ul>
+
+<p>マイクロソフト テクノロジを使った統合戦略</p>
+
+<ul>
+  <li><a href="http://msdn.microsoft.com/architecture/patterns/default.aspx?pull=/library/en-us/dnpatterns/html/dp.asp">Microsoft Data Patterns</a></li>
+</ul>
+
+<p>データのリプリケーションおよび同期に関するパターン。
+この2つは統合において非常に有用な技術である。</p>
+
+<h3 id="ドメイン-ロジック">ドメイン ロジック</h3>
+
+<p>エンタープライズ アプリケーションにおいて、最も重要なもののひとつだが、よく忘れられてしまうのが、ドメイン ロジックである。
+ここには、データを処理するビジネス ルール、検証、および計算が含まれており、そのデータを情報システムに入れたり、表示したりする。
+例えば、データベース ファイリング システムには、ドメインロジックが少ない。または、まったくない。
+多くのシステムには非常に複雑なドメイン ロジックが存在するが、
+ビジネスの状況の変化に合わせてロジックは頻繁に変更される。</p>
+
+<ul>
+  <li><a href="https://martinfowler.com/eaaCatalog/">Patterns of Enterprise Application Architecture</a></li>
+</ul>
+
+<p>ドメイン ロジックを構築する主なパターンについてまとめている節がある。</p>
+
+<ul>
+  <li><a href="http://domainlanguage.com/">Domain Driven Design</a></li>
+</ul>
+
+<p>ドメイン モデルの使用について詳細に書かれている。
+最も洗練されたドメイン ロジック パターンと、複雑なロジックにもっとも適したパターンについて。</p>
+
+<ul>
+  <li><a href="https://martinfowler.com/books.html#ap">Analysis Patterns</a></li>
+</ul>
+
+<p>ドメイン モデルの例を示したパターン</p>
+
+<ul>
+  <li><a href="http://www.amazon.com/exec/obidos/ASIN/0932633293">Data Model Patterns</a></li>
+</ul>
+
+<p>ドメインの例を示したパターン。データモデリング手法を使っている。</p>
+
+<h2 id="更新履歴">更新履歴</h2>
+<ul>
+  <li>2005/02/19: 情報を新しくするためにリライト</li>
+  <li>2003/10/19: Microsoft data patterns を追加</li>
+  <li>2003/01/04: 初出</li>
+</ul>
+
+<hr />
+<hr />
+
+<p>これより以下の文章は、以前掲載されていた文章です。–[kdmsnr]]</p>
+
+<p>最終更新日：2003年5月</p>
+
+<blockquote>
+  <p>エンタープライズアプリケーション開発向けパターンコミュニティの高まりと、パターン獲得成果について簡単に述べる。</p>
+</blockquote>
+
+<p>パターンとは、ソフトウェア開発において繰り返し発生する「解決策」を記述したものである。これは10年ほど前から存在している。私を含め、多くの人間がこの分野において活動を行ってきた。私たちの狙いは、効果的かつ共有可能な解決策を見つけ、それらを記述し、ソフトウェア開発者たちに広く知ってもらうことにある。</p>
+
+<p>一般的なソフトウェアパターンの問題は、システム全体にきちんと適応できるパターンには限界があるという点だ。そのため、ここ数年間は、「エンタープライズソフトウェア」ドメイン向けのパターンが集中的に作られてきた。</p>
+
+<p>エンタープライズアプリケーションにはいくつかの特徴がある。大規模かつ複雑なデータ、サポートを必要とするユーザーからの数多くの問い合わせ、複雑かつ変則的なビジネスロジック、他のテクノロジーとのインテグレーション。こういったドメイン固有の問題から、繰り返し発生する解決策が生み出されることとなる。</p>
+
+<h3 id="未完成のパターン">未完成のパターン</h3>
+
+<p>90年代半ばに最初のパターン本のラッシュ期があった。だがその後、なかなか良いパターンが生まれなかったように思う。特定のドメインに特化できなかったことにも原因がある。現在、パターン記述の「第二の波」がきているのではないだろうか。エンタープライズソフトウェアの世界は、幸運なことに、この波の恩恵を受けることができる。</p>
+
+<p>まず火ぶたをきったのは、Sun社Professional ServicesのDeepak Alur、John Crupi、Dan Malksによる『CoreJ2EE Patterns（邦題：J2EEパターン—明暗を分ける設計の戦略』である。
+彼らはパターンを作り、J2EEの効果的利用法を示しただけではなく、優れたパターンがいかに効果的かということまで示してくれた。J2EEという特定のプラットフォームと結びついてはいるが、彼らのパターンの多くは他の技術にも同じように適応できる。実際に、他のパターン作成者が彼らのアイデアを別のシチュエーションで使っている。</p>
+
+<p>私も『[<a href="https://martinfowler.com/articles/enterprisePatterns.html">PofEAA</a>』という本を出版し、この「第二の波」に乗ることができた。本書の狙いは、技術の枠を越えたパターンの提供にあるが、前述のCoreJ2EEの成果を基にしている。</p>
+
+<p>最近加わったエンタープライズアプリケーションパターンは、マイクロソフトによるものだ。.NET用のアーキテクチャパターンである。これは現在、<a href="http://msdn.microsoft.com/architecture/patterns/">MSDN</a>にて利用可能である。2003年後半にはMicrosoft出版より出版されるだろう。マイクロソフトでは、エンタープライズアプリケーションアーキテクチャ周りのパターンだけでなく、Philip Teale率いるチームによって、データ管理周りのパターンも構築している。彼らはまず最初に<a href="http://msdn.microsoft.com/practices/type/Patterns/Data/default.asp">データムーブメント</a>のパターンをリリースしてくれた。</p>
+
+<p>以上のパターンのことを、私が最初に「エンタープライズアプリケーションアーキテクチャパターン」と名づけた−−アプリケーションをどのように構築するかといったものだ。しかし、エンタープライズアプリケーション開発者たちは、本来統合されるよう設計されていないアプリケーションを複数統合しなくてはならない。
+PofEAAでKyle Brownと仕事するなかで、必要とされる重要な分野はメッセージ経由での統合であると気付いた。</p>
+
+<p>この分野の専門家であるGregor HohpeとBobby Woolfを何度となく説得して、彼らの専門知識を記録しておくよう求めた。今のところ、彼らはGregorの<a href="http://eaipatterns.com/">Webサイト</a>で強力なパターンを構築している。2003年の後半にはパターンを出版される予定だ。</p>
+
+<p>複雑なドメインロジックを扱うポイントは、ドメインモデルをキレイに作ることだと経験豊富なOO開発者は知っている。問題は、優れたドメインモデルをつくることは難しい上に、教えるのも難しいという点だ。Eric Evansに数年前に出会い、彼は極めて稀な、優秀なドメインモデラーのブリーダー（育てるひと）であると気付いた。彼はパターン本も記述しており、それらのパターンは彼の<a href="http://domainlanguage.com/">Webサイト</a>上で作られている。2003年中ごろに<a href="http://www.amazon.com/exec/obidos/ASIN/0321125215">本</a>が出版されるだろう。</p>
+
+<h3 id="コミュニティをつくる">コミュニティをつくる</h3>
+
+<p>ここで述べた成果はすべて、みんなとのコラボレーションによって生まれた。
+コラボレーションによってアイデアを共有し、成果を成長させていったのだ。</p>
+
+<p>コラボレーション多くは、パターンコミュニティ主催のカンファレンスと合同で行われた。
+よくワークショップの形をとり、そこで構想を練った。
+このような集まりは、Kyle Brownが立ち上げた2002年のPLoP、2003年初期に行われたChiliPLoPより始まった。
+私たちはPLoP 2003で、Randy Stafford（PofEAAの貢献者）とBobby Woolf主催の<a href="http://jerry.cs.uiuc.edu/~plop/plop2003/focus-enterprise.html">enterprise patterns focus group</a>に参加するつもりだ。
+もしパターン世界の拡大に興味があるようだったら、
+このような会やワークショップに参加してみることをお勧めする。
+私もこのWebサイトを通じて情報を提供していくよう努める。</p>
+
+<h4 id="revision-history">Revision History</h4>
+
+<p>メジャーアップデートの記録</p>
+
+<p>May 2003:</p>
+
+<hr />
+<ul>
+  <li>(C)Copyright <a href="http://www.martinfowler.com/">Martin Fowler</a>, all rights reserved</li>
+  <li>翻訳者：[[kdmsnr]]</li>
+</ul>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

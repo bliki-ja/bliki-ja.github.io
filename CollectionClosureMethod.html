@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>コレクションクロージャメソッド - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="https://martinfowler.com/bliki/CollectionClosureMethod.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/CollectionClosureMethod">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">コレクションクロージャメソッド</h1>
+    <p class="post-meta" style="text-align:right">
+      2015-06-25
+      
+      [<a href="https://martinfowler.com/bliki/CollectionClosureMethod.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2015-06-25-CollectionClosureMethod.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?object%20collaboration%20design" style="background-color: #ffc">object collaboration design</a>
+    ,
+    <a href="/tags?API%20design" style="background-color: #ffc">API design</a>
+    ,
+    <a href="/tags?ruby" style="background-color: #ffc">ruby</a>
+    ,
+    <a href="/tags?language%20feature" style="background-color: #ffc">language feature</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p>https://martinfowler.com/bliki/CollectionClosureMethod.html</p>
+
+<p>(detectとinject部分を明確にするよう更新)</p>
+
+<p>Smalltalkでプログラミングを始めたときから、コレクションクラスが好きでした。
+よく使う強力なオペレーションを簡単に使うことができました。
+Javaが登場したとき、このようなメソッドがなくなって物足りないと感じました——Java（およびC#）のコレクションは、Smalltalkのそれと比べて非常に限定されたものでした。
+というのも、Javaには<a href="/Closure">クロージャ</a>が実装されていなかったからです。
+Smalltalkの強力なコレクションのメソッドは、すべてクロージャに依存しています。</p>
+
+<p>近年、私はRubyで頻繁にプログラミングをするようになりました。
+Rubyに引き付けられたのは、Rubyには強力なコレクションメソッドがあったからです。
+Rubyは言語内にクロージャを持っています。</p>
+
+<p>では、クロージャを使ったコレクションのメソッドには何があるでしょうか？
+最も重要なメソッドは<code class="language-plaintext highlighter-rouge">each</code>です。
+デザインパターンの用語を使うと、これは内部イテレータです。
+（Smalltalkでは<code class="language-plaintext highlighter-rouge">do</code>メソッドと呼んでいました。）</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">employees</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">e</span><span class="o">|</span>
+   <span class="n">e</span><span class="p">.</span><span class="nf">doSomething</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">each</code>メソッドはブロック引数をひとつ取ります（RubyやSmalltalkでは、クロージャのことをブロックと呼びます）。
+それから、コレクション内の各要素に対してブロックを実行します。
+これは、多くの現代のプログラム言語に見られる<code class="language-plaintext highlighter-rouge">foreach</code>ステートメントと本質的に同じです（先頃、Java 1.5にも採り入れられました）。
+<code class="language-plaintext highlighter-rouge">foreach</code>メソッドにはこの機能しかありませんのでこれで終わりですが、
+コレクションとクロージャを使った場合は、<code class="language-plaintext highlighter-rouge">each</code>メソッドは始まりにすぎません。</p>
+
+<p>コレクションを使ってよく行うのは、
+ある条件に合う要素を探し出すことです。
+例えば、以下のようなコードになります。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">managers</span> <span class="o">=</span> <span class="p">[]</span>
+ <span class="k">for</span> <span class="n">e</span> <span class="k">in</span> <span class="n">employees</span>
+   <span class="k">if</span> <span class="n">e</span><span class="p">.</span><span class="nf">manager?</span>
+     <span class="n">managers</span> <span class="o">&lt;&lt;</span> <span class="n">e</span> 
+   <span class="k">end</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>これはRuby的には正しい構文です（<code class="language-plaintext highlighter-rouge">&lt;&lt;</code>はコレクションへの追加です）。
+ただ、優秀なrubyistたちはこのようには書かないでしょう。
+以下のように書くと思います。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">managers</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">manager?</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>eachメソッドのように、selectメソッドもブロック引数を取ります。
+この場合、ブロックは<code class="language-plaintext highlighter-rouge">do...end</code>ではなく「中括弧<code class="language-plaintext highlighter-rouge">{}</code>」で括られます（どちらも正しい構文ですが、ワンライナー（一行コード）の場合は中括弧を使用します）。
+リストの各要素に対してブロックが適用されます。
+ブロックが<code class="language-plaintext highlighter-rouge">true</code>を返した要素は、最後に返される結果コレクションの要素になります。
+こういったメソッドがあるおかげで、ずいぶんと楽になることが分かると思います。
+Smalltalkでもこのメソッドを<code class="language-plaintext highlighter-rouge">select</code>と呼んでいました。
+Rubyには<code class="language-plaintext highlighter-rouge">find_all</code>というエイリアスもあります。
+ブロックが<code class="language-plaintext highlighter-rouge">false</code>を返した要素のコレクションを返す兄弟メソッド<code class="language-plaintext highlighter-rouge">reject</code>もあります。</p>
+
+<p>次によく使うコレクションのクロージャメソッドは<code class="language-plaintext highlighter-rouge">collect</code>です。
+ブロック引数に対してメソッド呼び出しを行う必要があるということ以外は、先ほどと同じです。
+以下が伝統的なコードです。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">offices</span> <span class="o">=</span> <span class="p">[]</span>
+ <span class="k">for</span> <span class="n">e</span> <span class="k">in</span> <span class="n">employees</span>
+   <span class="n">offices</span> <span class="o">&lt;&lt;</span> <span class="n">e</span><span class="p">.</span><span class="nf">office</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>このコードもワンライナーになります。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">offices</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="nf">collect</span> <span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">office</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>これが何を行っているか分かると思います。
+selectに似ていますが、メソッド呼び出しの結果を返却するコレクションに入れています。
+Smalltalkも<code class="language-plaintext highlighter-rouge">collect</code>と呼んでいました。
+Lispにも同様の機能があり、<code class="language-plaintext highlighter-rouge">map</code>と呼んでいます。
+Rubyにも<code class="language-plaintext highlighter-rouge">collect</code>のエイリアスとして<code class="language-plaintext highlighter-rouge">map</code>が用意されています。</p>
+
+<p>現代の関数型言語から出てきた概念があります。
+それは先ほどの2つのクロージャメソッドに似ています——List Comprehension（リスト内包表現）と呼ばれています。
+List Comprehensionは、Pythonに<a href="http://www.secnetix.de/~olli/Python/list_comprehensions.hawk">採用されました</a>。
+これまで見てきたようなメリットを得るために、
+List Comprehensionでは統合アプローチを提供しています。
+以下にPythonのList Comprehensionを使った例を2つ挙げました。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">managers</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="k">in</span> <span class="n">employees</span> <span class="k">if</span> <span class="n">e</span><span class="p">.</span><span class="nf">isManager</span><span class="p">]</span>
+ <span class="n">offices</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="p">.</span><span class="nf">office</span> <span class="k">for</span> <span class="n">e</span> <span class="k">in</span> <span class="n">employees</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>List Comprehensionを使うと、上の2つを簡単に結びつけることができます。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">managersOffices</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span><span class="p">.</span><span class="nf">office</span> <span class="k">for</span> <span class="n">e</span> <span class="k">in</span> <span class="n">employees</span> <span class="k">if</span> <span class="n">e</span><span class="p">.</span><span class="nf">isManager</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>ブロック同士をつなげることで実現できますが、ちょっとダサい感じがします。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">managersOffices</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="nf">select</span><span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">manager?</span><span class="p">}.</span><span class="nf">map</span> <span class="p">{</span><span class="o">|</span><span class="n">m</span><span class="o">|</span> <span class="n">m</span><span class="p">.</span><span class="nf">office</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>List Comprehensionは素晴らしいのですが、<code class="language-plaintext highlighter-rouge">select</code>と<code class="language-plaintext highlighter-rouge">collect</code>しか扱えません。
+ブロックにはまだまだ機能があります。
+これからコレクションとブロックを使った例をいくつかお見せします。</p>
+
+<p><code class="language-plaintext highlighter-rouge">select</code>と似ていますが、
+すべての要素が条件にマッチしているか（またはマッチしていないか）を調べています。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">allManagers</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="nf">all?</span> <span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">manager?</span><span class="p">}</span>
+ <span class="n">noManagers</span> <span class="o">=</span> <span class="o">!</span> <span class="n">employees</span><span class="p">.</span><span class="nf">any?</span> <span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">manager?</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">partition</code>メソッドは<code class="language-plaintext highlighter-rouge">select</code>と<code class="language-plaintext highlighter-rouge">reject</code>を合わせたものです。
+複数の変数に割り当てる際に役に立ちます。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">managers</span><span class="p">,</span> <span class="n">plebs</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="nf">partition</span><span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">manager?</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>ブロック引数がひとつあればよいわけではありません。
+私は<code class="language-plaintext highlighter-rouge">sort</code>メソッドもよく使います。
+これは（古いスタイルでは）ブロック引数をふたつ取ります。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">sortedEmployees</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="nf">sort</span> <span class="p">{</span><span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="p">.</span><span class="nf">lastname</span> <span class="o">&lt;=&gt;</span> <span class="n">b</span><span class="p">.</span><span class="nf">lastname</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">sort</code>メソッドはブロック内のコードを使ってソートされたリストを返します。
+<code class="language-plaintext highlighter-rouge">&lt;=&gt;</code>演算子は比較演算子です。スターシップ演算子(starship operator)として知られています。
+<code class="language-plaintext highlighter-rouge">a</code>が<code class="language-plaintext highlighter-rouge">b</code>よりも小さければ<code class="language-plaintext highlighter-rouge">-1</code>を返します。
+<code class="language-plaintext highlighter-rouge">a</code>が<code class="language-plaintext highlighter-rouge">b</code>よりも大きければ<code class="language-plaintext highlighter-rouge">+1</code>を返します。
+同じ場合は0を返します。</p>
+
+<p>Ruby 1.8からより簡単にソートが行えるようになりました。
+これだとブロック引数はひとつで済みます。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">sortedEmployees</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="nf">sort_by</span> <span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">lastname</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>ブロック引数をふたつ取るメソッドは他にもあります。
+例えば<code class="language-plaintext highlighter-rouge">each_with_index</code>メソッドなどです。
+これは<code class="language-plaintext highlighter-rouge">each</code>と同じようにリスト内をイテレートしますが、
+<code class="language-plaintext highlighter-rouge">each</code>とは違い、要素の値以外にインデックスも渡してくれます。</p>
+
+<p><code class="language-plaintext highlighter-rouge">find</code>メソッド（Smalltalk風のエイリアスは<code class="language-plaintext highlighter-rouge">detect</code>）は
+条件にマッチした最初の要素を探し出します。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">volunteer</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="nf">find</span> <span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">steppedForward?</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">find</code>のようなメソッドを使う際によくあることですが、
+すべての要素が条件にマッチしない場合に何か処理を行う必要があります。
+<code class="language-plaintext highlighter-rouge">find</code>メソッドは、何も条件にマッチしない場合は<code class="language-plaintext highlighter-rouge">nil</code>を返します。
+その結果から何もマッチしなかったということが分かります。
+また、何も条件にマッチしなかった際の処理として、もうひとつブロックを渡すこともできます。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">volunteer</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="nb">lambda</span><span class="p">{</span><span class="nb">self</span><span class="p">.</span><span class="nf">pickVictim</span><span class="p">})</span> <span class="p">{</span><span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="p">.</span><span class="nf">steppedForward?</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>ブロックがひとつの場合だと、Rubyの構文は非常にナイスですが、
+ブロックが複数になるとちょっとダサい感じがします。
+Smalltalkでは（ちょっと自信ないけれど）こういう感じになったと思います。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">volunteer</span> <span class="p">:</span><span class="o">=</span> <span class="n">employees</span> 
+                <span class="ss">detect: </span><span class="p">[</span><span class="ss">:each</span><span class="o">|</span> <span class="n">each</span> <span class="n">hasSteppedForward</span><span class="p">]</span>
+                <span class="ss">ifNone: </span><span class="p">[</span><span class="nb">self</span> <span class="n">pickVictim</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Smalltalkのキーワード パラメータにより、
+複数のブロックでも読みやすいものとなっています。</p>
+
+<p>最後に触れるのは、よく理解しにくいと言われる<code class="language-plaintext highlighter-rouge">inject</code>です。
+injectは、コレクションの累計を出す場合などに便利です。
+従業員（<code class="language-plaintext highlighter-rouge">employee</code>）の給料（<code class="language-plaintext highlighter-rouge">salary</code>）の合計を出してみましょう。
+伝統的な方法では、以下のようになります。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+ <span class="k">for</span> <span class="n">e</span> <span class="k">in</span> <span class="n">employees</span>
+   <span class="n">total</span> <span class="o">+=</span> <span class="n">e</span><span class="p">.</span><span class="nf">salary</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">inject</code>を使うと、以下のようになります。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">total</span> <span class="o">=</span> <span class="n">employees</span><span class="p">.</span><span class="nf">inject</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">result</span><span class="p">,</span> <span class="n">e</span><span class="o">|</span> <span class="n">result</span> <span class="o">+</span> <span class="n">e</span><span class="p">.</span><span class="nf">salary</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>コレクションの各要素において、
+<code class="language-plaintext highlighter-rouge">inject</code>はブロックの実行結果を変数<code class="language-plaintext highlighter-rouge">result</code>に代入しています。
+処理が完了すると、<code class="language-plaintext highlighter-rouge">inject</code>メソッドの戻り値として<code class="language-plaintext highlighter-rouge">result</code>が返されます。</p>
+
+<p>ここでの目的は、クロージャメソッドを持つRuby（やSmalltalk、Lispなど）がいかに素晴らしいかについて述べることではありません。
+ポイントは、クロージャとコレクションのコンビネーションによって、
+素晴らしいことができるという点です。
+クロージャを持たない言語はこういったメリットを得る機会を失っているのです。
+クロージャを持った言語でプログラミングする機会があれば、
+こういったメソッドを使えるようになってください。
+きっと役に立つと思います。</p>
+
+<p>（Masanori Kado、Rik Hemsley、Christian Neukirchen、Stanislav Karchebnyに感謝。初校の誤りを訂正してくれました。）</p>
+
+<hr />
+
+<ul>
+  <li><a href="http://d.hatena.ne.jp/sumim/20050803/p1">sumim’s smalltalking-tos - コレクションクロージャメソッド</a></li>
+  <li><a href="http://d.hatena.ne.jp/sumim/20050803/p2">sumim’s smalltalking-tos - Squeak の Smalltalk にあるコレクションブロックメソッド</a></li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

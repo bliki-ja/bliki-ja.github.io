@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>パターンカタログ - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/pofeaa/CatalogOfPofEAA">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">パターンカタログ</h1>
+  </header>
+
+  <article class="post-content">
+    <p class="post-meta" style="text-align:right">
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/pofeaa/CatalogOfPofEAA.md">source and translators</a>]
+    </p>
+
+    <article class="post-content" id="post-content">
+    <p>原文: <a href="https://www.martinfowler.com/eaaCatalog/index.html">https://www.martinfowler.com/eaaCatalog/index.html</a></p>
+
+<p>Last Significant Update: January 2003</p>
+
+<p><em>以下は、『<a href="https://www.martinfowler.com/books.html#eaa">Patterns of Enterprise Application Architecture (P of EAA)</a>』で扱ったパターンの簡単なサマリである。</em></p>
+
+<p>各パターンの概要をページ毎に載せているが、パターンは単独で用いられることを想定していない。これは、パターンに馴染みのある人向けの、単なる覚書のようなものである。これで気軽にオンラインでパターンを参照することが出来ましょうぞ。
+将来的にここにコメントを追加するかもしれないが、とりあえずこれがうまく行くことを見守ろう。</p>
+
+<p>David Heinemeier Hanssonが私のために素晴らしいダイアグラムを書いてくれたんだが……このVisioが吐いたGIFのきたなさったら。</p>
+
+<h2 id="domain-logic-patterns">Domain Logic Patterns:</h2>
+<p><a href="TransactionScript">TransactionScript</a> (110), <a href="DomainModel">DomainModel</a> (116), <a href="TableModule">TableModule</a> (125), <a href="ServiceLayer">ServiceLayer</a> (133).</p>
+
+<h2 id="data-source-architectural-patterns">Data Source Architectural Patterns:</h2>
+<p><a href="TableDataGateway">TableDataGateway</a> (144), <a href="RowDataGateway">RowDataGateway</a> (152), <a href="ActiveRecord">ActiveRecord</a> (160), <a href="DataMapper">DataMapper</a> (165).</p>
+
+<h2 id="object-relational-behavioral-patterns">Object-Relational Behavioral Patterns:</h2>
+<p><a href="UnitofWork">UnitofWork</a> (184), <a href="IdentityMap">IdentityMap</a> (195), <a href="LazyLoad">LazyLoad</a> (200)</p>
+
+<h2 id="object-relational-structural-patterns">Object-Relational Structural Patterns:</h2>
+<p><a href="IdentityField">IdentityField</a> (216), <a href="ForeignKeyMapping">ForeignKeyMapping</a> (236), <a href="AssociationTableMapping">AssociationTableMapping</a> (248), <a href="DependentMapping">DependentMapping</a> (262), <a href="EmbeddedValue">EmbeddedValue</a> (268), <a href="SerializedLOB">SerializedLOB</a> (272), <a href="SingleTableInheritance">SingleTableInheritance</a> (278), <a href="ClassTableInheritance">ClassTableInheritance</a> (285), <a href="ConcreteTableInheritance">ConcreteTableInheritance</a> (293), <a href="InheritanceMappers">InheritanceMappers</a> (302).</p>
+
+<h2 id="object-relational-metadata-mapping-patterns">Object-Relational Metadata Mapping Patterns:</h2>
+<p><a href="MetadataMapping">MetadataMapping</a> (306), <a href="QueryObject">QueryObject</a> (316), <a href="Repository">Repository</a> (322).</p>
+
+<h2 id="web-presentation-patterns">Web Presentation Patterns:</h2>
+<p><a href="ModelViewController">ModelViewController</a> (330), <a href="PageController">PageController</a> (333), <a href="FrontController">FrontController</a> (344), <a href="TemplateView">TemplateView</a> (350), <a href="TransformView">TransformView</a> (361), <a href="TwoStepView">TwoStepView</a> (365), <a href="ApplicationController">ApplicationController</a> (379).</p>
+
+<h2 id="distribution-patterns">Distribution Patterns:</h2>
+<p><a href="RemoteFacade">RemoteFacade</a> (388), <a href="DataTransferObject">DataTransferObject</a> (401)</p>
+
+<h2 id="offline-concurrency-patterns">Offline Concurrency Patterns:</h2>
+<p><a href="OptimisticOfflineLock">OptimisticOfflineLock</a> (416), <a href="PessimisticOfflineLock">PessimisticOfflineLock</a> (426), <a href="CoarseGrainedLock">CoarseGrainedLock</a> (438), <a href="ImplicitLock">ImplicitLock</a> (449).</p>
+
+<h2 id="session-state-patterns">Session State Patterns:</h2>
+<p><a href="ClientSessionState">ClientSessionState</a> (456), <a href="ServerSessionState">ServerSessionState</a> (458), <a href="DatabaseSessionState">DatabaseSessionState</a> (462).</p>
+
+<h2 id="base-patterns">Base Patterns:</h2>
+<p><a href="Gateway">Gateway</a> (466), <a href="Mapper">Mapper</a> (473), <a href="LayerSupertype">LayerSupertype</a> (475), <a href="SeparatedInterface">SeparatedInterface</a> (476), <a href="Registry">Registry</a> (480), <a href="ValueObject">ValueObject</a> (486), <a href="Money">Money</a> (488), <a href="SpecialCase">SpecialCase</a> (496), <a href="Plugin">Plugin</a> (499), <a href="ServiceStub">ServiceStub</a> (504), <a href="RecordSet">RecordSet</a> (508)</p>
+
+<h2 id="revision-history">Revision History</h2>
+
+<p>Here’s a list of the major updates to this paper</p>
+
+<ul>
+  <li><em>January 2003:</em></li>
+</ul>
+
+    </article>
+
+    <hr />
+
+    <div style="text-align:right">
+      <a href="/pofeaa">PofEAA index</a>
+      |
+      <a href="/pofeaa/CatalogOfPofEAA_Ja">パターンカタログの日本語版</a>
+      |
+      <a href="/pofeaa/CatalogOfPofEAA_EnJa">パターンカタログの英日対応表</a>
+    </div>
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

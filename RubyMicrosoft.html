@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RubyMicrosoft - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="https://martinfowler.com/bliki/RubyMicrosoft.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/RubyMicrosoft">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">RubyMicrosoft</h1>
+    <p class="post-meta" style="text-align:right">
+      2007-05-30
+      
+      [<a href="https://martinfowler.com/bliki/RubyMicrosoft.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2007-05-30-RubyMicrosoft.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?microsoft" style="background-color: #ffc">microsoft</a>
+    ,
+    <a href="/tags?ruby" style="background-color: #ffc">ruby</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p>https://martinfowler.com/bliki/RubyMicrosoft.html</p>
+
+<p>（更新：反応リンク集を末尾に追加）</p>
+
+<p><a href="/RailsConf2007">RailsConf2007</a>ではJRubyが大盛況だった。
+この小さなチームは瀕死のプロジェクトを引き受け、JVM上で動くファーストクラスのRubyプラットフォームに変えた。彼らが多くの賞賛を得たのは当然だ。</p>
+
+<p>JRubyについてはまさにそんな感じとして、注目すべきはもう一つの共通マネージコード・ランタイム——.NETだ。
+Rubyに対するマイクロソフトの意図は今のところすごく不透明だ。
+彼らはSilverlightのスクリプティング言語としてRubyを発表した——でも未解決の問題が多く残っている。
+Ruby言語をフル実装するのか、それともRuby++みたいなもの——Rubyサブセットの拡張——なのか？</p>
+
+<p>JRubyの目的は2つある。それぞれ明確に異なるものだが、相補的なものでもある。
+1つ目の目的はJVM用の強力なスクリプト言語である。これによりJavaアプリケーションに動的言語を織り込むことができる。
+2番目の目的はJVM上のRubyプラットフォームの実装である。これはRubyアプリケーション、特にRuby on Railsアプリケーションを、MRI(Matz’s Ruby Interpreter、現在のC版ランタイム)で動くのと同じようにJVM上で動かすことができる。</p>
+
+<p>マイクロソフトの”Iron Ruby”に対する大きな疑問は、どのくらい互換性をもつことになるか？だ。CLR上にフル実装されるのか？
+私が受信した電波によれば、John Lam(Iron Rubyの中の人)は完全互換実装にするつもりらしい。でもこれは今の状況だとかなり困難なことかもしれない。もうじきThoughtWorksの中の人になるOla Bini(JRubyのコミッタ)は、MRIのソースコードを見ずにRubyランタイムを実装する方法を知るのはほぼ不可能だと考えている——しかしマイクロソフトは、従業員がOSSのソースコードを見ることだけでなく、ダウンロードすることにも徹底した制限をかけている。
+オープンソースコミュニティでは、多くのコミュニケーションがソースコードを通して行われる——このため、マイクロソフトはオープンソースコミュニティとの共同作業が非常に難しくなっている。</p>
+
+<p>これに暗雲を投げかけているのはもちろん、マイクロソフトとオープンソース界との歴史的な難しい関係だ。過去においては、マイクロソフトは盛んにオープンソースコミュニティを中傷したり脅したりしていた。近年、事態は改善されたけれど、マイクロソフトの真の意図については本当に謎だ。最近の特許に関する脅しは、マイクロソフトはオープンソースが死ぬまで戦おうとしていることの証しだと見ている人も多い。</p>
+
+<p>他の多くの技術会社とは違い、マイクロソフトはオープンソース界と共存する方法を発見するのに苦労している。マイクロソフトにとっては難しいことなのだ——SunやAppleやIBMとは違い、彼らは完全にソフトウェア会社なのだから。
+LinuxやGNUやOpen Officeのようなオープンソースプロジェクトは、マイクロソフトの重要事業とモロに競合する。
+しかし私は、オープンソースに宣戦布告し、それを根絶しにしようすることが、長期的に現実的な解決案だと感じたことはない。
+オープンソースはすでに定着している。
+問題は、どのように対応するべきかということだ。</p>
+
+<p>Rubyでは、マイクロソフトの立ち位置は先のようなデスマッチ状態とは違う。
+Rubyはマイクロソフト製品群の中心的な収益発生源とは競合しない。
+それ以上に、Rubyコミュニティはマイクロソフトと協力したいと本当に願っている。
+私がRailsConfで話した人たちの大部分は、マイクロソフトが Rubyを全面的に支援するのをとても見たがっていた——そして、どうすればそれを実現させるような提案を持ち込むことができるかについての創造的な意見がたくさん出回っていた。
+コミュニティで聞いた意見は圧倒的に、「Rubyは邪悪なマイクロソフトを倒す」ではなく「どうすれば問題を解決してマイクロソフトのRubyを得ることができるのだろうか」だった。</p>
+
+<p>Chris Sellsが指摘したように、「マイクロソフトは何を狙っているのか」という疑問を考慮しないといけない。理由はいくつか思いつく。1つ目は、データセンター内での.NETやWindowsの役割だ。もしマイクロソフトがRubyプラットフォームをサポートしなかったら、Ruby on Railsが成功したときに、サーバーファームにおいて.NET(およびWindows)から人々が去ってしまうリスクを冒すことになる。</p>
+
+<p>もう1つの理由は人だ。マイクロソフトは公式に認めたくないだろうが、<a href="/AlphaGeek">アルファギーク</a>たちがマイクロソフトプラットフォームから<a href="http://www.hanselman.com/blog/IsMicrosoftLosingTheAlphaGeeks.aspx">去りつつある</a>というのが本当に懸念されている。
+マイクロソフトのビジョンは指揮管理組織における死の軍隊だという意見が増えている。優秀なエンタープライズ開発者に可能性を与えるツールや、アジャイル開発プロセスに対するあからさまな支障がたびたび見られる。</p>
+
+<p>数年前、レドモンドの（ちょっとした）伝手が、技術リーダーたちがWindowsプラットフォームから実際に離れていっているのを見ていると言っていた。最近、この兆候は増加しているようだ。うちのブログロール（訳注：<a href="http://blogs.thoughtworks.com/">blog roll</a>）のマイクロソフト関連記事★’softie part★を読んでいると、長い間マイクロソフトのサポーターだった人たちの間に実際に幻滅があるという感じを受けた。
+アジャイル指向の開発者たちはマイクロソフトツールの方向性に不満を持っている。マイクロソフトのカンファレンスは、アジャイルプロセスにはほとんど触れず、ウォーターフォールアプローチにかなり傾いている。ツールは、役割の分離が厳密なため、アジャイラーたちが好むぼんやりとした境界を積極的に阻止している。</p>
+
+<p>Tim BrayはRailsConfで、技術についての鍵となる決定はプログラミングコミュニティによってなされると主張した。私はこれに部分的に同意する。
+ブロートウェアがIT界に多すぎる理由は、ITの購買が、ソフトウェア開発の現実との大きな接点をなくした人々によって、ゴルフコース上で決定されるのが普通だからだ。
+短期的にはゴルフコースでの決定が支配するかもしれないが、時間が過ぎれば、Timの主張が正しいと思う。だからアルファギークを失っても、今年や来年には影響しないかもしれないが、時間とともに容赦なくマイクロソフトに危害をもたらすだろう。</p>
+
+<p>実はマイクロソフトにとってはすでに「来年」が過ぎている。
+我たちはマイクロソフトのプロジェクトに対する顧客（特にアメリカの顧客）の関心が著しく減少しているのに気づいた。
+オーストラリアでは、.NETは顧客の地盤をまったく得られなかった。このデータから何を受け取ればいいのかはよく分からない。私たちは統計学的に有効なサンプルになるほど大きくはない。ただ、そうは言っても、私たちの顧客は「アルファITショップ」だと考えているから、部分的には役に立つデータポイントだろう。</p>
+
+<p>たぶんもっと重要なのはThoughtWorksの中の話だ。
+.NETが登場したときは多くの関心が注がれた。
+たくさんの人がJavaプラットフォームに強力な競争相手が現れたことを歓迎し、.NETのプロジェクトに参画したがった。
+しかし去年あたりから.NETに見向きもしなくなった。
+レドモンドから出てくるものには本当に面白いものもあったにも関わらずだ。
+Mike TwoはWindows Workflowツールにすごく熱心だし、私はLINQや他の言語進化にとても感心した。
+でも、マイクロソフト技術の全体図にはあくびが出る。
+これが重要なのは、Tim O’Reillyが信じるように、アルファギークたちは他の人たちが数年以内にやるであろうことを指し示すからだ★。
+そして決定的な点は、マイクロソフトに対する態度が憎悪（多くのギークの一般的な態度）ではなく、退屈であるということだ。
+これが、Paul Grahamが「<a href="http://www.yamdas.org/column/technique/microsoftj.html">マイクロソフトは死んだ</a>」と言ったことの意味だ。
+マイクロソフトはもはや危険な存在ではないのである。</p>
+
+<p>オープンソースに対する態度こそがこの問題の大部分だ。
+Javaが現れたとき、そのポートフォリオには大きな隙間があったし、さらに悪いことには APIにはひどい標準ツールがあった(Entity Beansのビジョンが思い浮かぶ)。
+これらの隙間やひどいアイディアは、オープンソースコミュニティが修正した。
+Antがビルドツールを与え、EJBはSpringとHibernateで置き換えられた。
+.NETにもギャップはあって、再びオープンソースコミュニティがギャップを埋めるために力を注いだ。ところがマイクロソフトは、こうした努力に協力することを拒否している。
+むしろ台無しにしようと努力しているかのようだ。
+特にうんざりしたのは<a href="http://nunit.com/">NUnit</a>に対するマイクロソフトの反応だ——優れたxUnitテストツールであり、その設計要素がOOPSLAでAnders Hejlsbergに称賛されたが、マイクロソフトは競合ライブラリを出荷してきただけでなく、故意に非互換にしてきた。これは、人々がプラットフォームに対して時間をつぎこむことを奨励するような反応ではない。</p>
+
+<p>公平に言えば、この大失敗は2年も前のことだ。
+Jim HuguninとJohn Lamを雇うといった行動は、あの印象に払拭するのに一役買った。
+Chris Sells、Don Box、Jim Newkirkといった技術者は、マイクロソフトがより開かれた環境になるための努力をしている。しかし、大きな組織はどれも同じだが、マイクロソフトは矛盾する勢力であふれており、どれが勝利するのかは私たちには分からない。</p>
+
+<p>同僚のJohn Kordybackは、大切なのはRubyが「もう一つの.NET言語」ということではなく、Rubyのコミュニティやソフトウェア開発に対する態度なのだということに気付くことだと指摘した。
+Rubyとは、オープンソース、アジャイル思考法、軽量ソリューションが、価値として、深く浸透したコミュニティなのだ。
+彼が言うには、レドモンドの問題は、
+「なぜこの考えが重要なのか？」じゃなくて、
+「なぜこの言語が重要なのか？」って聞いてるところ
+だということだ。</p>
+
+<p>まとめると、私がRubyとマイクロソフトに見ているものは、チャンスだ。
+Rubyコミュニティは、マイクロソフトとともに働きたがっているようだ。
+このことが、レドモンドがオープンソースとともに働くという問題にどう対処するべきか知ることと、将来の協同作業のための模範となる努力のための機会を提供する。
+完全なRubyプラットフォームの.NETでのファーストクラス実装は、この共同作業のすばらしい成果となるだろう。
+もっといい結果はたぶん、マイクロソフトがオープンとアジャイルを対象にしたコミュニティとどうやって共同作業するかという例を、この作業が示すことだろう——たとえば、プログラマーと顧客にとって、さらに役に立つ姿勢が、マイクロソフト界の中でさらに広がっていくような、そんな跳躍台となりえるだろう。</p>
+
+<p>これについてかなりの反応があった(全リストは<a href="http://technorati.com/search/https://martinfowler.com/bliki/RubyMicrosoft.html">Technorati</a>にある)。特に読むべきなのは次の人たちからの反応だ: Sam Gentile, Cory Foy, Luke Melia, Jeremy Miller, Rockford Lhotka, John Lam, Evan Hoff, Karl Seguin, Ola Bini, Miro Adamy, Charles Nutter, Peter Laudati, Nick Malik(訳注：リンクするのが面倒なので本家を見てください)。</p>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+  <li><a href="http://blog.inomata.lolipop.jp/?eid=662847">空気を読まずにRubyMicrosoft粗訳した</a>←あとでコピる←コピった。</li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

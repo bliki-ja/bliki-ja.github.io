@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>実例による仕様書 - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="https://martinfowler.com/bliki/SpecificationByExample.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/SpecificationByExample">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">実例による仕様書</h1>
+    <p class="post-meta" style="text-align:right">
+      2004-03-18
+      
+      [<a href="https://martinfowler.com/bliki/SpecificationByExample.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2004-03-18-SpecificationByExample.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?testing" style="background-color: #ffc">testing</a>
+    ,
+    <a href="/tags?requirements%20analysis" style="background-color: #ffc">requirements analysis</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p>https://martinfowler.com/bliki/SpecificationByExample.html</p>
+
+<p>XP/Agile Universe 2002のワークショップで「Specification By Example（実例による仕様書、SbE）」という言葉に心を奪われた。これは、<a href="https://martinfowler.com/articles/newMethodology.html#xp">XP</a>におけるテストのあり方のひとつではないか。</p>
+
+<p>（このところ、テスト駆動開発(TDD)のテスト部分を語るのは流行遅れなのだそうだ。ひどい話だ。<a href="http://blogs.codehaus.org/people/tirsen/archives/000582_tdd_is_about_testing.html">Jon</a>と同じく、私も、そんな副次的なものなんかよりも包括的な自動テストにこそTDDの真髄があると考えている。
+例えば、誰かに「100万ドルあげるから山にハイキングしておいで」と言われたとしよう。私は胸を張ってこう言うね。「今回のハイキングの目的は、自然の美を堪能するためである」と。いや、まあ、もちろん、懐もあたたかくなるけど……ね。
+）</p>
+
+<p>仕様書について議論する際、SbEという考えは今まで出てこなかった。仕様書とは、システム全体を網羅するものである。しかし、実例は部分的にしかフォーカスしない。そのため、そこから全体を推測しなくてはならない。SbEだけで要求定義は出来ないように思う。だが、要求定義における主役級の技術に成り得るかもしれない。</p>
+
+<p>これまでは厳密な仕様書があり、事前／事後条件でもって、「成功した」「失敗した」という判定を明確に下すことができた。そして、こういった技術が一般的でもあった。
+これは<a href="http://archive.eiffel.com/doc/manuals/technology/contract/">契約による設計(DbC)</a>にも適用されている。こういった技術が現在幅を利かせてはいるが、これが理想的だとはいえないだろう。
+事前／事後条件を使った方が簡単な状況もあるだろうが、
+むちゃくちゃトリッキーになってしまうこともあるのだ。
+私はこれまでいくつかのエンタープライズアプリケーションで使おうとしたことがあるが、
+事前／事後条件を書くのはソリューションを記述するのと同じくらい難しいように思った。
+SbEのグレートなところは、書くのがとても簡単だという点だ。
+我々がソフトウェアを提供する非ナードだって書けてしまう。
+（
+<a href="http://www.amazon.com/exec/obidos/tg/detail/-/0201824191">Timothy Budd</a>がこう指摘している。
+「
+スタックの振る舞いの多くは事前／事後条件という形で示すことができるけど、（スタックが）後入れ先出し(LIFO)になっていることがわかるように事前／事後条件を書こうとすると、相当トリッキーな仕事になっちゃうよね」。
+）</p>
+
+<p>TDDのテストで重要なのは、二重チェックが入っているというところだ。
+これはXPコミュニティのちょっとした「嘘」でもある。
+XPコミュニティは「一度、たった一度だけ(Once and Only Once)」と強調しているが、
+実際は、コードでチェックして、テストでチェック……と、2回やってるのだ。</p>
+
+<p>Kentはこう指摘していた。
+「二重チェックの原則は重要である。人間が常に行っている原則である」。
+二重チェックの肝は、チェックごとに違ったアプローチをとるというところにある。
+SbEとコードによるチェックというような全く違った2つのものを組み合わせれば、
+君のエラー発見能力はきっと向上するはずだ。</p>
+
+<p>形式仕様書のコミュニティでは、
+設計が仕様書を満たしているかどうか検証する術がないという問題を絶えず抱えていた。
+エラーを犯してしまうのは人間であるため、人間抜きに検証できないかと考えている。
+これ、SbEを使えば簡単。これが SbE のもうひとつの側面である。
+理論的には役に立たないように思えるが、実は大変役に立つのである。</p>
+
+<p>あるDbCファンがこう指摘していた。
+テストという観点から仕様書を書くとなれば、
+実装側は仕様を満たすために、特定の入力に対する応答をハードコードするだけでよくなってしまうじゃないか、と(訳注：例えば足し算の実装の場合、テストケースに「1+1」を設定したときに、単に2と返すコードを作ればいいのか（んなわきゃない）、というイメージ)。
+そうねえ、そうかもしれないねえ、どうだろうねえ。
+でも、このこと自体はそれほど問題じゃあない。
+ただし、重要なポイントがある。
+テストでは不完全なことが往々にしてあるのだ。
+だから常に「代替案」を用意おかなければならない。
+私のような天邪鬼は、これを「プラス」と考えている。
+SbE は明らかに十分じゃないのだから、すべてがまるっと伝わっているか確認しなきゃいかんのは当然じゃないか。
+昔ながらの要求仕様書で一番危なっかしいのは、
+「仕様書に書いてるから読んでるだろう」と考えてしまうことである。</p>
+
+<p>SbEは、みなが協調しており、ケンカなどしてない状況下でのみ有効である。
+実例は設計チームのアイデアの引き金となる。
+しかも、地に足のついたアイデアである。
+他にもまだやることはある。通常の会話、<a href="http://www.amazon.com/exec/obidos/tg/detail/-/0321125215">Domain Driven Design</a> のような技術、DbCだって必要になるだろう。
+私はDbC（またはEiffel）を完璧に行う機会がなかったが、
+いつも契約通りにインターフェイスは作っている(訳注：DbCの「契約」と取引の「契約」が掛かっている……が、日本語にすると何が何やら)。
+SbEは強力なツールである。おそらく私が一番よく使ってるものかもしれないなあ。
+でも、唯一のツールというわけではない。</p>
+
+<p>（
+SbE に関してもうちょっと考えたい方へ。<a href="http://testing.com/">Brian Marick</a> の書いたものを読んで欲しい（SbEという名前じゃないけど）。彼のサイトのどこかに、彼なりの意見をまとめたページがあるはずだ。もちろん、そのまとめページを探すよりも、全部読んじゃったほうがいいんだけど。
+）</p>
+
+<ul>
+  <li>[[kdmsnr]] ありがとうございます。プロパティって何？って思ってました…(^^;;
+*2004-10-28 (木) 16:13:06 ‘’[[keis]]’’ : お疲れ様です。Timothy Budd の指摘のところを、ちょっと変えてみました。</li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

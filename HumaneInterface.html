@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ヒューメインインターフェイス - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="https://martinfowler.com/bliki/HumaneInterface.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/HumaneInterface">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">ヒューメインインターフェイス</h1>
+    <p class="post-meta" style="text-align:right">
+      2005-12-05
+      
+      [<a href="https://martinfowler.com/bliki/HumaneInterface.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2005-12-05-HumaneInterface.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?API%20design" style="background-color: #ffc">API design</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p>https://martinfowler.com/bliki/HumaneInterface.html</p>
+
+<p>Ruby界隈で「ヒューメインインターフェイス」という言葉を何度も耳にした。
+この言葉は、クラスのインタフェースを記述する際のrubyistたちの姿勢(attitude)の一部を表したものである。
+APIの設計については、2つの異なる考え方を対比していくと面白い（もうひとつは最小インターフェイス(/MinimalInterface)である）。</p>
+
+<p>ヒューメインインターフェイスの肝は、みんなが何をやりたいかを見つけ出し、何度も起きることを簡単に行えるためのインタフェースを設計することだ。</p>
+
+<p>最小インタフェースとの明確な違いは、ヒューメインインターフェイスの方が大きくなる傾向があるという点だ。ただ、ヒューメインインターフェイスの設計者はインタフェースが大きくなることをそれほど気にしてはいない。
+以上のことは、ヒューメインインターフェイスで設計されたクラスの実装が必ず大きくなる、ということではない。
+基本的な機能に関しては、どちらもよく似たものになる。</p>
+
+<p>ヒューメインインターフェイスと最小インタフェースの違いを見つけるには、JavaとRubyのListコンポーネントを比べるとよいだろう。
+Javaには、インスタンスメソッドを25個持つinterface（<a href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/List.html">java.util.List</a>）がある。
+一方のRubyには、メソッドを78個持つ<a href="http://www.ruby-doc.org/core/classes/Array.html">Array</a>クラス（arrayではなくlistである）がある。
+両者のスタイルの違いが、メソッドの数の違いとして表れている。
+どちらのコンポーネントにも同じような基本的な機能がある。
+ただ、RubyのArrayには、その他多くの機能があるのだ。</p>
+
+<p>それでは、その違いを表す例を見ていこう。
+Listの最後の項目を取得する例だ。
+Javaでは、以下のようにやるだろう。</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">aList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">aList</span><span class="o">.</span><span class="na">size</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>Rubyだと、こうだ。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">anArray</span><span class="p">.</span><span class="nf">last</span>
+</code></pre></div></div>
+
+<p>実際にはまだ他にも驚くべき点がある。
+例えば、RubyのArrayには<code class="language-plaintext highlighter-rouge">first</code>メソッドもある。
+つまり、<code class="language-plaintext highlighter-rouge">anArray[0]</code>ではなく、<code class="language-plaintext highlighter-rouge">anArray.first</code>とできるわけだ。</p>
+
+<p>もっと大きな機能もある。
+RubyのArrayには<code class="language-plaintext highlighter-rouge">flatten</code>メソッドがあり、
+ネストされた配列を平滑化する。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">irb</span><span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span><span class="mi">7</span><span class="p">],</span><span class="mi">8</span><span class="p">].</span><span class="nf">flatten</span>
+ <span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>ここでポイントとなるのは、以上のような機能（<code class="language-plaintext highlighter-rouge">last</code>のようなシンプルなものにしろ<code class="language-plaintext highlighter-rouge">flatten</code>のような複雑なものにしろ）は、クライアント自身が作ることもできるという点である。クライアント自身が作れば、listクラスのサイズは大きくはならない。
+最小インタフェース派は、このような振る舞いをサポートする必要最小限のメソッドに焦点をあてている。
+一方のヒューメインインターフェイス派は、必要となるメソッドを追加したいと考えている。</p>
+
+<p>とすると、次のような質問が頭に浮かぶかもしれない。
+「ヒューメインインターフェイスに追加すべき機能の判断基準って何？」
+あらゆる人が必要とするすべての機能を追加してしまうと、とてつもなく複雑なクラスができあがってしまう。
+ヒューメインインターフェイスの設計者は、クラスが最もよく使用される場合を見出そうとしている。そして、それらの場合において、簡単に使えるようにインタフェースを設計している。</p>
+
+<p>この原則はメソッドの追加を促すだけでなく、メソッドの名前付けにも影響してくる。
+RubyConfでは、田中哲氏が「よく使うメソッドは短い名前の方が良い」と指摘していた。
+メソッドを使う機会が多くなれば、親しみが出てくる。
+何度も使うのであれば、短い名前のほうが覚えやすいし、
+タイプ量も減るし、コードを読む時間も少なくなる。
+田中氏の例では、<code class="language-plaintext highlighter-rouge">DateTime</code>クラスの<code class="language-plaintext highlighter-rouge">parse</code>メソッドは標準の日付フォーマットでパースするが、様々な日付フォーマットを扱うことのできるより柔軟な<code class="language-plaintext highlighter-rouge">strptime</code>メソッドはあまり使われていない、とあった。</p>
+
+<p>上記のようなメソッド名の原則は、最小インタフェース手法と衝突しない。
+実際、Javaの<code class="language-plaintext highlighter-rouge">List</code>インターフェイスが登場したとき、それは古い<code class="language-plaintext highlighter-rouge">Vector</code>の<code class="language-plaintext highlighter-rouge">elementAt</code>メソッドを<code class="language-plaintext highlighter-rouge">get</code>に変更した。</p>
+
+<p>Rubyのヒューメインインターフェイス哲学の面白いところは、他にもある。
+メソッド名のエイリアスだ。
+listの長さを取得したいとき、<code class="language-plaintext highlighter-rouge">length</code>を使う？それとも<code class="language-plaintext highlighter-rouge">size</code>を使う？
+<code class="language-plaintext highlighter-rouge">length</code>しか用意していないライブラリもあれば、<code class="language-plaintext highlighter-rouge">size</code>しか用意していないライブラリもあるだろう。
+RubyのArrayは、どちらも用意している。
+エイリアスが張られているので、同じコード内でどちらの名前でも呼ぶことができる。
+Rubyistたちは、ライブラリの使用者にどっちのメソッドだったかを覚させるよりも、
+ライブラリ側で両方用意したほうが簡単だ、と思っている。</p>
+
+<p>どちらのインタフェース設計がベストなのかーとかいう長くてツマんねースレッドがあるけれども、ここで私がヒューメインインターフェイス派の主張をまとめてみよう（最小インターフェイス派についてはそちらのページを参照のこと）。</p>
+
+<p>オブジェクトの強みの大部分は、その振る舞いにあるのであって、データにあるのではない。
+最小の機能しか提供しないのであれば、複数のクライアントがよくある同じようなコードを重複して書かなければならない。
+<code class="language-plaintext highlighter-rouge">flatten</code>のようなメソッドがなかったら、再帰処理を大勢の人間が書かなければならないだろう。
+まあ、それほど難しいことではないかもしれない。だが、頻繁に使用するのになんでいちいち面倒くさいことをしなきゃいけないの？</p>
+
+<p><code class="language-plaintext highlighter-rouge">last</code>のようにシンプルにできる場合でも、読み手はイディオムを覚えなければならない。
+どうしてそんな間接的なことをしなきゃいけないわけ？直接読めるメソッドがあるってのに？
+優れたソフトウェアはユーザのことを第一に考え、ユーザーの生活を楽にしようとする。
+ヒューメインインターフェイスはこの原則に従っている。</p>
+
+<p>ヒューメインインターフェイスでは、クライアントがしなくていいように、代わりにいろいろとやってあげる。
+そのAPIを使う人間に対しては、彼らのタスクが簡単にできるようにするには、色々なことが必要となる（読みやすいようにする必要もあるし、書きやすいようにする必要もある）</p>
+
+<p>どちらの「だよ派」にも優れた論旨がある。
+個人的にはヒューメインインターフェイスだよ派だが、
+結構難しいよなあーとも思っている。</p>
+
+<h3 id="フォローアップ">フォローアップ</h3>
+
+<p>上の文章がちょっとした祭りになったようだ。
+興味深い、有用なディスカッションが繰り広げられている。
+いつか一連の話をまとめたいと思うが、とりあえずリストだけ。
+<a href="http://www.cafeaulait.org/oldnews/news2005December6.html">Elliotte Harold</a>のヒューメイン手法に対する端的ながらも強い反論に対して、<a href="http://www.cincomsmalltalk.com/blog/blogView?showComments=true&amp;entry=3311314085">James Robertson</a>がコメントしたのが最初（そのコメントは自分でチェックしてくれ）。
+以降、<a href="http://www.cdegroot.com/blog/2005/12/06/simplicity-rules-in-the-right-place/">Cees de Groot</a>、<a href="http://blogs.sun.com/roller/page/swinger?entry=harold_martin_and_kisses">Antonio Vieiro</a>、<a href="http://davidhoefler.com/blog/index.php?title=humane_interface_and_ruby_and_some_java&amp;more=1&amp;c=1&amp;tb=1&amp;pb=1">David Hoefler</a>、<a href="http://staff.interesource.com/james/PermaLink.aspx?guid=ac626a46-1728-4488-bbda-6c05254656ec">James Higgs</a>、<a href="http://pezra.barelyenough.org/blog/2005/12/humane-interfaces/">Peter Williams</a>、<a href="http://beust.com/weblog/archives/000346.html">Cedric Beust</a>、<a href="http://weblogs.java.net/blog/johnm/archive/2005/12/humane_interfac.html">John D. Mitchell</a>、<a href="http://www.typingahead.com/management/2005/12/humane_interfac.html">Stuart Roebuck</a>(ry(訳注：めんどーなので本家でリンクを確認してください)らが加わって祭り化。</p>
+
+<p>つーか、多杉ｗ。
+燃料を投下しつつ殺伐としないお前ら最高。
+ただ、基本的な原則ではなく、例（RubyのArrayとJavaのList）にばかり注目している傾向にあるようだが、まあ、それは仕方ないだろう。
+議論はいくつかのよい方向に進んでいる。
+私もそのうちの1つ2つについて議論を深めてみたい。</p>
+
+<p>もしくは、<a href="http://farm.tucows.com/blog/_archives/2005/12/9/1443435.html">Joey deVilla</a>がまとめてくれているのでそれを読むのもよいだろう。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RailsConf2007 - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="http://www.martinfowler.com/bliki/RailsConf2007.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/RailsConf2007">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">RailsConf2007</h1>
+    <p class="post-meta" style="text-align:right">
+      2007-05-22
+      
+      [<a href="https://martinfowler.com/bliki/RailsConf2007.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2007-05-22-RailsConf2007.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?conferences" style="background-color: #ffc">conferences</a>
+    ,
+    <a href="/tags?ruby" style="background-color: #ffc">ruby</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p>http://www.martinfowler.com/bliki/RailsConf2007.html</p>
+
+<p>以前ほどカンファレンスに参加することはなくなったが、
+その分、好きなカンファレンスに参加する時間ができた。
+ずっと前からRubyコミュニティには特別な愛情を捧げている。
+というわけで、RailsConfに一般参加者として参加してきたよ。</p>
+
+<p>Chad FowlerとRich Kilmerによってカンファレンスの紹介が行われた。
+Chadとは苗字が一緒だが、彼ほどのウクレレのスキルは私にはない。</p>
+
+<p>若いテクノロジーには新しくて重要な特筆すべき点がいくつもある。
+だが、私にとって最も重要なのは、<a href="http://jruby.codehaus.org/">JRuby</a>だ。
+現在、JRubyは最終的なRCの段階だ。
+Java VM上で動くスクリプティング言語を提供するだけでなく、
+Rubyプラットフォームの完全な実装をJVM上で行おうとしている。
+ThoughtWorksで我々が行っていること、
+そして、多くのRuby/Rails開発者たちにとって、
+（たとえ”include java”をしたことがなくても）
+これはかなり重要なことである。</p>
+
+<p>我々のRubyチームが開発中に直面した最も大きな問題はデプロイだ。
+Rubyのアプリケーションを実践投入するには、非常に多くの新しいテクノロジーが必要となる。それに、データセンターはこういったことに保守的だ。
+我々の<a href="http://studios.thoughtworks.com/rubyworks">RubyWorks</a>もこの点をシンプルにしようと努力している。
+JRubyはこの点について、Javaコンテナにデプロイすればよいので、
+Railsアプリケーションもwarファイルとして簡単にデプロイできると主張している。
+これにより、Ruby on Railsが多くのエンタープライズ環境における選択肢となる得るのではないかと私は思っている。</p>
+
+<p>JDKからJRubyが出てきたとなると、他のマネージドランタイムではどうなのかという声が上がるのも当然だ。
+Microsoftからは反応がほとんどなかった。
+Microsoft贔屓の有名なギークである<a href="http://www.hanselman.com/blog/">Scott Hanselman</a>と<a href="http://www.sellsbrothers.com/">Chris Sells</a>がその場にいたのはよかった。Chris Sellsに会ったとき、闘技場にいるような気分だったが(訳注：arenaは闘技場の意味だろう。FOSSに敵対的なMicrosoftと対決するイメージ)。
+Rubyコミュニティには、よくある争いごとやレドモンドバッシング(訳注：ご存知の通りMSの本社があるのがレドモンド)ではなく、Microsoftとコラボレーションしたいという強い願いがある。私はそこが好きだ。</p>
+
+<p>RailsConfで私が感じた印象は、産業化への使命感であった。
+去年のカンファレンスでは、その成功にコミュニティが感激し、驚いているというような感じだった。
+DHHのイメージは映画『マトリックス』のNeoであり、
+エンタープライズソフトウェアのルールを破り、
+その成功に喜んでいるというものだった。</p>
+
+<p>今年の印象は、もっと重要なものだった。
+成功はIT業界の熱狂的なブームにとどまらず、IT業界そのものを牽引している。
+これから数年間、Ruby on RailsがIT開発における重要なプラットフォームになる可能性が十分にあるように思えた。
+我々はすでにThoughtWorksでこの兆候を垣間見ている。
+今年のUSにおける我々の新しいビジネスの40%がRubyの仕事なのだ。</p>
+
+<p>これまでのプラットフォームとは違い、
+Rubyは特定のベンダーにコントロールされていない。
+ましてや、占有されてもいない。
+Rubyはコミュニティの賜物なのである。
+以前から、LAMPテクノロジーから企業ITにブレイクスルーをもたらしてくれるものが登場することを望んでいたが、まさにRubyがそれをやってのけてくれそうだ。</p>
+
+<p>企業ITではブロートウェアが席巻している。
+我々は、ゴルフコース(訳注：エラい人がゴルフ中に買っちゃった！)で購入された高価なソフトウェアを扱わなければならない。そのソフトウェアは、アホみたいに価値がないにもかかわらず、我々の邪魔をし、開発時間を削ってくる。
+プログラマがベストと思えるやり方ができないテクノロジーは、
+携わっているビジネスにも影響を及ぼしてしまう。
+（今週聞いたとっておきの話。ある大企業が800万ドルを費やしてエンタープライズ規模のバージョンコントロールシステムを購入したんだけど、ブランチがうまく動かないんだって。）</p>
+
+<p>コミュニティにコントロールされたプラットフォームに対して私が求めるのは、
+シンプルさの追求である。つまり、やらなければならない鍵となることを見つけ出し、プログラマがベストなやり方でできるというものだ。</p>
+
+<p>Michael KoziarskiとJamis Buckがthe Rails Wayについて説明していた。
+それは、Rubyコミュニティに深く根ざしたスタイルであった。</p>
+
+<p>これは、Rubyコミュニティがベストなオブジェクト指向の考えとXPコミュニティに囲まれて形成されているということが大きいだろう。
+<a href="http://therailsway.com/">Jamis BuckとMichael Koziarski</a>の基調講演を聞いて私は嬉しかった。
+Ward、Kent、それから、キレイなコード、うまく整理されたオブジェクト指向設計、そして、テストしやすさについて提唱してきたすべての人たちの価値が、そこに受け継がれていたのだ。
+これらの考えは、他の多くの技術コミュニティにとっても大きなインパクトだったはずだが、Ruby界ではそれが「正統」になっている。</p>
+
+<p>カンファレンスの間ずっと、我々の業界が変曲点にいると感じていた。
+鍵となる技術的な転換によって、新たな主要なプラットフォームが使われ始める。
+JavaOneについて見聞きすると、
+そこでも大きな転換が行われたようだ。
+Javaの言語という側面ではなく、JavaのJVMにフォーカスがあたっているというのだ。
+ひとつの言語を複数の言語に置き換えて、
+それらを密接に組み合わせるというのである。</p>
+
+<p>Rubyコミュニティで特に興味深いのは、参加者の年齢層が幅広いことだ。
+DHHやコアチームのように若い「パラダイムブレイカー（破壊者）」だけでなく、PragDaveやRubyCentralの3人などのような年寄り……ええと……熟練の活動家たちも目にすることができる。
+重要なのは、世代間に多くのリスペクトとコラボレーションがあることだ。
+よくある世代間の「壁」は存在しない。
+お互いに提供することに対して、
+どちらのグループも本当に感謝していた。</p>
+
+<p>ただし、良いことばかりではない。
+Rubyコミュニティでは、女性を一切見かけることがない。
+これは才能ある人材を見逃しているということでもあるが、
+それよりもこれは、コミュニティに別の問題があるということではないだろうか。
+<a href="http://www.devchix.com/">DevChix</a>グループがこの状況を是正するための活動している。
+また、カンファレンスにおいて、<a href="/Diversity">多様性</a>問題を改善する方法を模索する会話を目にしたことが私はとても嬉しかった。</p>
+
+<p>数年前、RubyPeopleは他のソフトウェアコミュニティの人たちよりもフレンドリーだということを述べた。RailsConfの参加者と話したところ、残念ながら事態は悪くなっているようだ。
+RubyとRailsのメーリングリストは（特にRailsは）、インターネットの嘆かわしい平均値に近づいてきている。
+オープニングの基調講演でChad Fowlerが、
+railsコミュニティは「態度のデカい奴ら」だという悪評判があると述べたが、
+私も、（確かに少数ではあるが）一部の人たちが勝利の雄叫びを上げているのには、ウンザリした。</p>
+
+<p>嬉しかったのは、ChadをはじめRuby界のリーダーたちから、この状況を変化させようという強い後押しがあったということだ。
+いくつかの話に共通して出てきたのは、ソフトウェア業界仲間をNetNastinessの泥沼や多様性のない状態から救い出すことにより、新たなコミュニティを造り出す、すなわち多種多様な人々を心から受け入れる肥沃で快適な環境を造り出す機会があるというテーマだった。
+私はもうギークな会話に飽き飽きしている。
+Rubyコミュニティがこの状況を本当に打破できるようなら、
+本当に喜ばしいことである。
+それは、この先に燦然と輝いて見える栄冠や勝利すべてにも勝るものだ。</p>
+
+<p>(写真撮影：<a href="http://blog.duncandavidson.com/">James Duncan Davidson</a>)</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

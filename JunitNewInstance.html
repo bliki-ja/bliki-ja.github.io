@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Junit新インスタンス - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="JUnit testing framework のあるデザインについて、よく質問を受ける。テストメソッドを走らせるたびに、新しいオブジェクトができる点についてだ。blikiへ投稿するに値する内容だと思ったのでここに記す。（念のために言っておくが、JUnitについて何か書くからといって、その他のテストのやり方が重要...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/JunitNewInstance">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Junit新インスタンス</h1>
+    <p class="post-meta" style="text-align:right">
+      2004-08-24
+      
+      [<a href="https://martinfowler.com/bliki/JunitNewInstance.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2004-08-24-JunitNewInstance.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?testing" style="background-color: #ffc">testing</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p><a href="http://junit.org/">JUnit</a> testing framework のあるデザインについて、よく質問を受ける。
+テストメソッドを走らせるたびに、新しいオブジェクトができる点についてだ。
+blikiへ投稿するに値する内容だと思ったのでここに記す。
+（
+念のために言っておくが、JUnitについて何か書くからといって、
+その他のテストのやり方が重要じゃないと思っているわけじゃないですから。
+有益なテスト方法はたくさんあるわけで、
+JUnit やその親戚（xUnit）がいくら便利だからって、
+すべてを解決してくれるわけじゃない。
+テストについて言及してるblogがいくつかあるから、
+そちらを読んでみることをお勧めする
+（
+<a href="http://www.io.com/~wazmo/blog/">Brett Pettichord</a>, 
+<a href="http://www.testing.com/cgi-bin/blog">Brian Marick</a>, 
+<a href="http://blackbox.cs.fit.edu/blog/james/">James Bach</a>
+）。
+あと、これも念のために言っておくが、
+xUnitについて何か書くからといって、
+リファクタリングやユースケース、flossing（★）が重要じゃないと言ってるわけじゃないですから。
+）</p>
+
+<p>下の Java の簡単な Test クラスを見て欲しい。</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">import</span> <span class="nn">junit.framework.*</span><span class="o">;</span>
+ <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+ 
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tester</span> <span class="kd">extends</span> <span class="nc">TestCase</span> <span class="o">{</span>
+       <span class="kd">public</span> <span class="nf">Tester</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span><span class="kd">super</span><span class="o">(</span><span class="n">name</span><span class="o">);}</span>
+       <span class="kd">private</span> <span class="nc">List</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">();</span>
+       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testFirst</span><span class="o">()</span> <span class="o">{</span>
+             <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"one"</span><span class="o">);</span>
+             <span class="n">assertEquals</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+       <span class="o">}</span>
+       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testSecond</span><span class="o">()</span> <span class="o">{</span>
+             <span class="n">assertEquals</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+       <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre></div></div>
+
+<p>気付かないひともいるかもしれないが、このテストメソッドはどちらもパスする
+——ついでに言っておくと、実行順序はどちらが先でも構わない。
+なぜなら、JUnit が test メソッドごとに Tester クラスのインスタンスを作っているからだ。
+list は、テストが実行されるたびに新規にインスタンス化されている。
+<a href="http://beust.com/weblog/archives/000082.html">JUnitのバグ</a>じゃねーの？そう思ったひともいるはずだ。
+でも、バグじゃない。意図的にこうデザインされているのだ
+（詳しくはKentの新刊を読むべし）。</p>
+
+<p>JUnit の基本的なデザインは、Kent が Smalltalk で作ったテスティングフレームワークから来ている
+（
+これをフレームワークと呼ぶのは間違いかもしれない
+——Kent はフレームワークとして発表したわけじゃないし。
+1，2時間で出来てしまうんだから、彼はむしろ、
+みんなに自分たちで作ってもらいたかったんだと思う。
+そのほうが違ったものが欲しいと思ったときに、
+恐がらずに変更することが出来るしね。
+）
+JUnitの大切な原則は何かというと、それは「分離(isolation)」である。
+つまり、テストは、他のテストを失敗させるようなことをしてはならないということだ。</p>
+
+<p>分離によるメリットはいくつかある。</p>
+
+<ul>
+  <li>どんな組み合わせをしても、どの順で実行しても、テストの結果は変わらない。</li>
+  <li>テストを書く→他のテストが失敗→なぜだー！というシチュエーションがなくなる。</li>
+  <li>テストが失敗したときに、ゴミを残してしまって他のテストを失敗させたりはしないだろうかと心配しなくても済む。エラーのカスケードは本当のバグを隠してしまうが、これを避けることも出来る。</li>
+</ul>
+
+<p>JUnitには分離をサポートするためのメカニズムが他にも備わっている。
+setUp と tearDown メソッドである。
+それぞれ、各テストメソッドの最初と最後に実行される。
+上記の例で使用するには、以下のようにすればいい。</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="o">()</span> <span class="o">{</span>
+             <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">();</span>
+       <span class="o">}</span>
+</code></pre></div></div>
+
+<p>tearDownを使うことはほとんどない。
+setUp メソッドが、必要な初期化処理をやってくれる。</p>
+
+<p>JUnitを批判するひとは、setUp と tearDown があるなら毎回新しいオブジェクトは必要ないんじゃないかと言う。
+JUnitの支持者は、それはもっともだが、フィールドで初期化する人は多いし、分離させといたほうが良いと反論する。
+結局のところ、コストはどうなっているのか？</p>
+
+<p>コストに関する議論の中心となるのは、
+JUnitのテストケースや初期化における余分なオブジェクトの生成についてである。
+だがこれは、ほとんどの場合においてなんら問題にならない。
+オブジェクトを生成しすぎることを心配するかもしれないが、
+それには<a href="http://www-106.ibm.com/developerworks/java/library/j-jtp01274.html#author1">何ら根拠がない</a>——そんな考えは時代遅れなのだ。
+たしかにオブジェクトの生成が問題になることもあった。
+初期のJavaも、そんな問題を抱えていた。
+だが、現在のJavaではオブジェクトの生成コストはほとんどかからない。
+まったく問題にならないのだ。
+（
+Smalltalkでは長年そんなことは問題にならなかった。
+Kent と Erich がそんなことに悩まなくて済んだのはそのためだ。
+）
+というわけで、オブジェクトの生成についてあれこれ悩まないこと。</p>
+
+<p>先ほど「ほとんど」問題ないとは言ったが、「常に」問題ないとは言ってない。
+頻繁に生成したくないオブジェクトだってある。データベースコネクションがいい例だ。
+こいつを共有するのは当然として、
+テストメソッド間での共有だけでは、十分共有できてるとは言えない。
+もっと広い範囲で共有したいと思うだろう。
+手っ取り早いのは static 変数を使うことだ。
+一般に、static 変数の使用は避けたほうが賢明だが、
+テストなら別に構わないだろう——でもまあ、私はやらないけども。
+JUnitでは、テスト用のオブジェクトを共有するための柔軟なメカニズムが用意されている。
+<a href="http://junit.sourceforge.net/javadoc/junit/extensions/TestSetup.html">TestSetup</a> デコレータだ。
+これはテスト用にある状態をセットアップし、
+テスト間で柔軟に状態を共有できるようにしてくれるものだ。
+クラス内のメソッド間共有だけではなく、もっと広範囲で共有可能だ。</p>
+
+<p>おそらく、TestSetup で最も問題となるのは、
+TestSetup に関する情報を見つけるのが非常に困難だという点だ。
+私も、ドキュメントの中に「豹に注意(訳注：beware of the leopard - 『銀河ヒッチハイクガイド』より)）」とでも書いてあるのかと思ったくらいだ。
+で、やはり、豹はいた。
+TestSetupを使うと分離が効かなくなる。
+分離されてないと、バグの発見が厄介になる。
+本当に本当に本当に本当に必要になるまで、TestSetupは使わないようにすること。
+（
+それでも使うっていうんだったら、
+<a href="http://www.testdriven.com/modules/newbb/viewtopic.php?viewmode=flat&amp;order=ASC&amp;topic_id=1115&amp;forum=7&amp;move=prev&amp;topic_time=1089140252">このスレ</a>を読むとヒントを得られるかもしれない。
+J.B. Rainsberger の新刊も役に立つだろう。
+）</p>
+
+<p>（
+テストメソッドをクラスにしちゃえばいいじゃんと思った人もいるかもしれない。
+実は、JUnitもかつてはそうだった。
+インナークラスを TestCase のサブクラスにして使っていたのだ。
+これは分かりやすいデザインのようだが、
+テストを書くのがかなり大変だった。
+というわけで、ちょっと分かりにくい <a href="http://junit.sourceforge.net/doc/cookstour/cookstour.htm">pluggable selector</a> パターン を使うようになっていったわけだ。
+）</p>
+
+<p>2番目の反論は「直感的ではない」というものだ。
+引っ張ってくるメカニズムが分かりにくいそうだ（★）。
+まあ、そうだね。
+Pluggable Selector パターンはあまり知られていないし、
+馴染みのないパターンを使うのは心地悪いのだろう。
+だが、私は JUnit のアプローチが好きだ。
+きちんと分離ができて、テストを書くのが簡単なら、
+実装が難解でも別に構わないと思う。</p>
+
+<p>だが、これに賛同してくれない仲間もいる。
+Cedric Beust の <a href="http://www.beust.com/testng/">TestNG</a> は分離していない。
+たぶん驚くと思うが、あの <a href="http://nunit.org/">NUnit</a> も分離していないのだ。（★分離でいいのかな？）。
+以下の NUnit のテストケースは失敗する。</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">[</span><span class="nc">TestFixture</span><span class="o">]</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ServerTester</span>
+    <span class="o">{</span>
+       <span class="kd">private</span> <span class="nc">IList</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">();</span>
+       <span class="o">[</span><span class="nc">Test</span><span class="o">]</span>
+       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span>
+          <span class="n">list</span><span class="o">.</span><span class="na">Add</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+          <span class="nc">Assert</span><span class="o">.</span><span class="na">AreEqual</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">list</span><span class="o">.</span><span class="na">Count</span><span class="o">);</span>
+       <span class="o">}</span>
+       <span class="o">[</span><span class="nc">Test</span><span class="o">]</span>
+       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">second</span><span class="o">()</span> <span class="o">{</span>
+          <span class="nc">Assert</span><span class="o">.</span><span class="na">AreEqual</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">list</span><span class="o">.</span><span class="na">Count</span><span class="o">);</span>
+       <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<p>こういった類のフレームワークを使っているのであれば、
+setupメソッドを使ってすべてのインスタンス変数を初期化しておくことを強くお奨めする。
+こうしてテストを分離することが出来る。
+ひいては、デバッグのやり杉で毛が抜けるなんてこともなくなるのだ。</p>
+
+<p>テストケースのインスタンスは再利用したほうがいいとはちょっと考えられないが、
+だからといって、再利用してるひとたちの
+IQが一桁しかないとか、
+財政的に圧迫しているとか、
+宇宙服を着ておかしな行動をしてるんじゃねーかとか
+そんなことはぜんっぜん思ってませんから（★）。
+これは、デザインのトレードオフの仕方が違うだけなのである。
+ソフトウェアデザインの流動性に関して、
+敬意をもって賛同できないと言えるということは、
+よいことだと思うのだなあ。</p>
+
+<h2 id="comment">comment</h2>
+<ul>
+  <li>2004-08-27 (金) 11:14:12 ‘‘[holic]]’’ : TestNG や NUnit はデザインとして分離しないことを選択しているので、「分離できていない」じゃなくて「分離していない」の方が訳として適切な気がします。</li>
+  <li>2004-08-30 (月) 12:33:12 ‘’[[kdmsnr]]’’ : [<a href="http://beust.com/weblog/archives/000175.html">Otaku, Cedric’s weblog: More on JUnit and multiple instantiations</a></li>
+  <li>2005-01-12 (水) 00:19:49 ‘’[[babie]]’’ : flossing はfloss(free libre open sourse software)化することかなぁ。文脈から「フリーソフトウェア化」というよりは日本で言う「オープン化」に近い物だと思います。</li>
+</ul>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

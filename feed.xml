@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Martin Fowler&apos;s Bliki (ja)</title>
+    <description></description>
+    <link>https://bliki-ja.github.io/</link>
+    <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 28 Jul 2025 12:24:03 +0900</pubDate>
+    <lastBuildDate>Mon, 28 Jul 2025 12:24:03 +0900</lastBuildDate>
+    <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>LLMとは誰か？</title>
+
+        <pubDate>Tue, 22 Jul 2025 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/who-is-llm</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/who-is-llm</guid>
+        
+        <category>article</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>LLMは新しい抽象化をもたらす</title>
+
+        <pubDate>Tue, 24 Jun 2025 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/LLMsBringNewNatureOfAbstraction</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/LLMsBringNewNatureOfAbstraction</guid>
+        
+        <category>generative AI</category>
+        
+        <category>article</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>自分の文章を声に出してみよう</title>
+
+        <pubDate>Wed, 28 May 2025 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/SayYourWriting</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/SayYourWriting</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>森と砂漠</title>
+
+        <pubDate>Thu, 30 Jan 2025 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/ForestAndDesert</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/ForestAndDesert</guid>
+        
+        <category>agile</category>
+        
+        <category>process theory</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>定期的な対面の機会</title>
+
+        <pubDate>Tue, 27 Feb 2024 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/PeriodicFaceToFace</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/PeriodicFaceToFace</guid>
+        
+        <category>team organization</category>
+        
+        <category>collaboration</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>ソフトウェアとエンジニアリング</title>
+
+        <pubDate>Wed, 13 Dec 2023 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/SoftwareAndEngineering</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/SoftwareAndEngineering</guid>
+        
+        <category>computer history</category>
+        
+        <category>process theory</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>テスト駆動開発</title>
+
+        <pubDate>Mon, 11 Dec 2023 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/TestDrivenDevelopment</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/TestDrivenDevelopment</guid>
+        
+        <category>testing</category>
+        
+        <category>programming style</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>2枚のピザチーム</title>
+
+        <pubDate>Tue, 25 Jul 2023 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/TwoPizzaTeam</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/TwoPizzaTeam</guid>
+        
+        <category>team organization</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>チームトポロジー</title>
+
+        <pubDate>Tue, 25 Jul 2023 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/TeamTopologies</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/TeamTopologies</guid>
+        
+        <category>team organization</category>
+        
+        <category>enterprise architecture</category>
+        
+        <category>platforms</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>コンウェイの法則</title>
+
+        <pubDate>Thu, 20 Oct 2022 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/ConwaysLaw</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/ConwaysLaw</guid>
+        
+        <category>team organization</category>
+        
+        <category>enterprise architecture</category>
+        
+        <category>application architecture</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

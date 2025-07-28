@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>プレゼンテーションドメインデータレイヤリング - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/PresentationDomainDataLayering">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">プレゼンテーションドメインデータレイヤリング</h1>
+    <p class="post-meta" style="text-align:right">
+      2015-08-26
+      
+      [<a href="https://martinfowler.com/bliki/PresentationDomainDataLayering.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2015-08-26-PresentationDomainDataLayering.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?team%20organization" style="background-color: #ffc">team organization</a>
+    ,
+    <a href="/tags?database" style="background-color: #ffc">database</a>
+    ,
+    <a href="/tags?encapsulation" style="background-color: #ffc">encapsulation</a>
+    ,
+    <a href="/tags?application%20architecture" style="background-color: #ffc">application architecture</a>
+    ,
+    <a href="/tags?web%20development" style="background-color: #ffc">web development</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- One of the most common ways to modularize an information-rich program 
+ !-- is to separate it into three broad layers: presentation (UI), domain logic (aka business logic), and data access.  -->
+<!-- So you often see web applications divided into a web layer 
+ !-- 	that knows about handling HTTP requests and rendering HTML, 
+ !-- 	a business logic layer that contains validations and calculations, 
+ !-- 	and a data access layer that sorts out how to manage persistent data in a database or remote services. -->
+
+<p>情報がリッチなプログラムをモジュール化する一般的な方法は、大きく3つのレイヤーに分割することです。
+その3つとは、プレゼンテーション（UI）、ドメインロジック（ビジネスロジック）、データアクセスです。
+ウェブアプリケーションであれば、HTTPリクエストをハンドリングしてHTMLをレンダリングするウェブレイヤー、バリデーションや計算が含まれるビジネスロジックレイヤー、データをデータベースやリモートサービスに永続化する方法を管理するデータアクセスレイヤーに分けられます。</p>
+
+<p><img src="https://martinfowler.com/bliki/images/presentationDomainDataLayering/all_basic.png" alt="" /></p>
+
+<!-- On the whole 
+ !-- 	I've found this to be an effective form of modularization for many applications 
+ !-- 	and one that I regularly use and encourage.  -->
+<!-- It's biggest advantage (for me) is 
+ !-- 	that it allows me to reduce the scope of my attention
+ !-- 	by allowing me to think about the three topics relatively independently.  -->
+<!-- When I'm working on domain logic code I can mostly ignore the UI 
+ !-- 	and treat any interaction with data sources 
+ !-- 	as an abstract set of functions 
+ !-- 		that give me the data I need and update it as I wish. -->
+<!-- When I'm working on the data access layer 
+ !-- 	I focus on the details of wrangling the data into the form required by my interface.  -->
+<!-- When I'm working on the presentation I can focus on the UI behavior, 
+ !-- 	treating any data to display or update as magically appearing by function calls.  -->
+<!-- By separating these elements I narrow the scope of my thinking in each piece, 
+ !-- 	which makes it easier for me to follow what I need to do. -->
+
+<p>これは多くのアプリケーションに使えるモジュール化の形式です。
+また、私が定期的に使用したり推奨したりするものです。
+（私にとっての）最大の利点は、<strong>意識のスコープを狭められる</strong>ところです。3つのトピックを比較的独立して考えることができるからです。
+ドメインロジックのコードに取り組んでいるときは、UIをほぼ無視したり、データソースを必要なデータをくれる、あるいは必要に応じてデータを更新してくれる抽象的な関数のセットとして扱ったりすることができます。
+データアクセスレイヤーに取り組んでいるときは、インターフェイスで必要な形式になるようにデータを扱うことに集中できます。
+プレゼンテーションに取り組んでいるときは、UIの振る舞いに集中しながら、関数の呼び出しに合わせて魔法のようにデータを表示・更新できます。
+これらの要素に分割することで、思考のスコープを狭くなり、やるべきことに集中しやすくなります。</p>
+
+<!-- This narrowing of scope doesn't imply any sequence to programming them  -->
+<!-- - I usually find I need to iterate between the layers.  -->
+<!-- I might build the data and domain layers off my initial understanding of the UX, but when refining the UX I need to change the domain which necessitates a change to the data layer. -->
+<!-- But even with that kind of cross-layer iteration, 
+ !-- I find it easier to focus on one layer at a time as I make changes.  -->
+<!-- It's similar to the switching of thinking modes you get with refactoring's two hats. -->
+
+<p>スコープが狭くなるというのは、プログラミングの順番を意味するものではありません。
+通常、レイヤー間で何度も行き来する必要があります。
+たとえば、UXの理解とは関係なく、データやドメインのレイヤーを構築することがありますが、UXを改良するときは、ドメインを変更する必要がありますし、それによってデータレイヤーも変更する必要があります。
+ただし、レイヤー間を何度も行き来するとしても、変更を加えるときにはひとつのレイヤーに集中するほうが簡単です。
+<a href="https://martinfowler.com/articles/workflowsOfRefactoring/#2hats">リファクタリングの2つの帽子</a>を使った思考モードの切り替えとよく似ています。</p>
+
+<!-- Another reason to modularize is  -->
+<!-- to allow me to substitute different implementations of modules.  -->
+<!-- This separation allows me to build multiple presentations on top of the same domain logic
+ !-- 	without duplicating it.  -->
+<!-- Multiple presentations could be separate pages in a web app, 
+ !-- 	having a web app plus mobile native apps, 
+ !-- 	an API for scripting purposes, 
+ !-- 	or even an old fashioned command line interface.  -->
+<!-- Modularizing the data source allows me
+ !-- 	to cope gracefully with a change in database technology, 
+ !-- 	or to support services for persistence that may change with little notice.  -->
+<!-- However I have to mention that while I often hear about data access substitution being a driver for separating the data source layer, 
+ !-- 	I rarely hear of someone actually doing it. -->
+
+<p>モジュール化をするもうひとつの理由は、モジュールの<strong>実装の置き換えが可能になる</strong>ことです。
+モジュールを分割することで、ドメインロジックを複製することなく、複数のプレゼンテーションを構築できます。
+複数のプレゼンテーションとは、ウェブアプリの別のページ、ウェブアプリとモバイルネイティブアプリ、スクリプト作成用のAPI、古のコマンドラインインターフェイスなどです。
+データソースをモジュール化すれば、データベース技術の変更に対応したり、予告なしに変更される永続化サービスをサポートしたりすることが可能です。
+ただし、データアクセスが代替可能になることがデータソースレイヤーを分離する原動力だという話はよく耳にしますが、実際にそれをやっている人は知りません。</p>
+
+<!-- Modularity also supports testability, which naturally appeals to me as a big fan of SelfTestingCode.  -->
+<!-- Module boundaries expose seams that are good affordance for testing. UI code is often tricky to test, so it's good to get as much logic as you can into a domain layer 
+ !-- 	which is easily tested without having to do gymnastics to access the program through a UI [1]. 
+ !-- Data access is often slow and awkward, 
+ !-- so using TestDoubles around the data layer often makes 
+ !-- 	domain logic testing much easier and responsive. -->
+
+<p>モジュール化によって、テスト容易性がサポートされます。
+<a href="/SelfTestingCode">自己テストコード</a>の大ファンである私にとっては非常に魅力的です。
+モジュールの境界は、<strong>テストのつなぎ目</strong>になります。
+UIのコードはテストが難しいので、テストしやすくするためにロジックはできるだけドメインレイヤーに入れましょう。
+そうすれば、技巧を凝らしてUI経由でプログラムにアクセスしてテストする必要がありません<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>。
+データアクセスは遅くて扱いにくいため、データレイヤーに<a href="/TestDouble">テストダブル</a>を使うことで、ドメインロジックのテストが簡単で高速になります。</p>
+
+<!-- While substitutability and testability are certainly benefits of this layering, I must stress that even without either of these reasons 
+ !-- 	I would still divide into layers like this.  -->
+<!-- The reduced scope of attention reason is sufficient on its own. -->
+
+<p>こうした代替可能性やテスト可能性もレイヤー化の魅力ではありますが、これらがなくてもレイヤーに分割すべきであることを強調しておきたいと思います。
+意識のスコープを狭めることができるだけで、レイヤー化をする十分な理由になるのです。</p>
+
+<!-- When talking about this we can either look at it as one pattern (presentation-domain-data) or split it into two patterns (presentation-domain, and domain-data). Both points of view are useful - I think of presentation-domain-data as a composite of presentation-domain and domain-data. -->
+
+<p>プレゼンテーション・ドメイン・データは、1つのパターン（プレゼンテーション・ドメイン・データ）もしくは2つのパターン（プレゼンテーション・ドメインとドメイン・データ）として扱うことができます。
+どちらの見方も有益です。
+ちなみに私は、プレゼンテーション・ドメインとドメイン・データであると考えています。</p>
+
+<!-- I consider these layers to be a form of module,  -->
+<!-- which is a generic word I use for how we clump our software 
+ !-- into relatively independent pieces. -->
+<!-- Exactly how this corresponds to code depends on the programming environment we're in.  -->
+<!-- Usually the lowest level is some form of subroutine or function.  -->
+<!-- An object-oriented language will have a notion of class that collects functions and data structure.  -->
+<!-- Most languages have some form of higher level called packages or namespaces,
+ !-- which often can be formed into a hierarchy.  -->
+<!-- Modules may correspond to separately deployable units: 
+ !-- 	libraries, or services, but they don't have to. -->
+<p>私はこれらのレイヤーをモジュールの一種であると考えています。
+モジュールはソフトウェアを比較的独立した部分にまとめる一般的な言葉です。
+これがコードにどのように対応するかは、使用しているプログラミング環境によって違います。
+通常、最下位のレベルは何らかのサブルーチンや関数になります。
+オブジェクト指向言語には、関数とデータ構造をまとめるクラスの概念があります。
+ほとんどの言語には、階層構造が作れるパッケージまたは名前空間と呼ばれる上位のレベルがあります。
+モジュールは、デプロイ可能な単位（ライブラリやサービス）に対応することもありますが、必ずしもそうである必要はありません。</p>
+
+<!-- Layering can occur at any of these levels.  -->
+<!-- A small program may just put separate functions for the layers into different files. 
+ !-- A larger system may have layers corresponding to namespaces with many classes in each. -->
+
+<p>レイヤー化はこれらのどのレベルでも発生します。
+小規模なプログラムでは、レイヤーに含まれる関数を別々のファイルに入れるだけかもしれません。
+大規模なシステムでは、複数のクラスが含まれる名前空間に対応したレイヤーを作ることもあるでしょう。</p>
+
+<!-- I've mentioned three layers here, but it's common to see architectures with more than three layers. 
+ !-- A common variation is to put a service layer between the domain and presentation,  -->
+<!-- or to split the presentation layer into separate layers with something 
+ !-- like Presentation Model.  -->
+<!-- I don't find that more layers breaks the essential pattern, 
+ !-- 	since the core separations still remain. -->
+<p>ここでは3つのレイヤーを説明しましたが、3つより多いレイヤーを持つアーキテクチャもあります。
+よくあるのが、ドメインとプレゼンテーションの間にサービスレイヤーを入れたものです。
+あるいは、プレゼンテーションレイヤーを<a href="https://martinfowler.com/eaaDev/PresentationModel.html">プレゼンテーションモデル</a>などで分割したものもあります。
+レイヤーを追加しても、中心となる分割が維持されるのであれば、基本的なパターンが壊れることはありません。</p>
+
+<p><img src="https://martinfowler.com/bliki/images/presentationDomainDataLayering/all_more.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>レイヤーの数が多いアーキテクチャも、
+基本的なドメイン・データパターンに従っている
+</code></pre></div></div>
+
+<!-- The dependencies generally run from top to bottom through the layer stack: 
+ !-- 	presentation depends on the domain, which then depends on the data source.  -->
+<!-- A common variation is to arrange things 
+ !-- 	so that the domain does not depend on its data sources 
+ !-- 	by introducing a mapper between the domain and data source layers. This approach is often referred to as a Hexagonal Architecture. -->
+
+<p>依存関係は上から下に向かいます。
+つまり、プレゼンテーションがドメインに依存し、ドメインがデータソースに依存します。
+一般的には、ドメインがデータソースに依存しないように、間に<a href="/pofeaa/Mapper/">マッパー</a>を導入します。
+このアプローチは「<a href="http://alistair.cockburn.us/Hexagonal+architecture">ヘクサゴナルアーキテクチャ</a>」と呼ばれます。</p>
+
+<!-- These layers are logical layers not physical tiers. -->
+<!-- I can run all three layers on my laptop,  -->
+<!-- I can run the presentation and domain model in a desktop with a database on a server,  -->
+<!-- I can split the presentation with a rich client in the browser and a 
+ !-- 	Backed For Frontend on the server.  -->
+<!-- In that case I treat the BFF as a presentation layer 
+ !-- 	as it's focused on supporting a particular presentation option. -->
+<p>これは物理層ではなく論理レイヤーです。
+3つのレイヤーは1台のノートパソコンでも実現できます。
+あるいは、デスクトップでプレゼンテーションとドメインモデルを実行して、サーバーでデータベースを実行することもできます。
+プレゼンテーションをブラウザのリッチクライアントとサーバーの<a href="https://samnewman.io/patterns/architectural/bff/">Backed For Frontend</a>に分割することもできます。
+なお、BFFは特定のプレゼンテーションをサポートするものなので、プレゼンテーションレイヤーとして扱います。</p>
+
+<!-- Although presentation-domain-data separation is a common approach, 
+ !-- it should only be applied at a relatively small granularity.  -->
+<!-- As an application grows, each layer can get sufficiently complex on its own 
+ !-- 	that you need to modularize further.  -->
+<!-- When this happens 
+ !-- 	it's usually not best to use presentation-domain-data as the higher level of modules.  -->
+<!-- Often frameworks encourage you to have something like 
+ !-- 	view-model-data as the top level namespaces;  -->
+<!-- that's OK for smaller systems, but once any of these layers gets too big 
+ !-- you should split your top level into domain oriented modules which are internally layered. -->
+<p>プレゼンテーション・ドメイン・データの分割は一般的なアプローチですが、
+比較的小さな粒度で適用する必要があります。
+アプリケーションが成長すると、各レイヤーも複雑になるので、さらにモジュール化する必要があります。
+このような場合、上位のレベルでプレゼンテーション・ドメイン・データを使用することは最善の方法ではありません。
+多くのフレームワークは、トップレベルの名前空間にビュー・モデル・データなどを設定することを推奨しています。小規模なシステムであれば、これで問題ないでしょう。
+しかし、レイヤーが大きくなっていくと、トップレベルをドメイン別のモジュール（内部がレイヤー化されたもの）に分割する必要があります。</p>
+
+<p><img src="https://martinfowler.com/bliki/images/presentationDomainDataLayering/all_top.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>複雑なアプリケーションでは、トップレベルのモジュールにレイヤーを使用しない...
+...代わりに、トップレベルのモジュールをフルスタックにする
+</code></pre></div></div>
+
+<!-- One common way I've seen this layering lead organizations astray 
+ !-- 	is the AntiPattern of separating development teams by these layers.  -->
+<!-- This looks appealing 
+ !-- 	because front-end and back-end development require different frameworks (or even languages) 
+ !-- 	making it easy for developers 
+ !-- 	to specialize in one or the other.  -->
+<!-- Putting those people with common skills together 
+ !-- supports skill sharing and 
+ !-- allows the organization to treat the team
+ !-- 	as a provider of a single, well-delineated type of work.  -->
+<!-- In the same way, 
+ !-- 	putting all the database specialists together fits in with 
+ !-- 	the common centralization of databases and schemas.  -->
+<!-- But the rich interplay between these layers 
+ !-- 	necessitates frequent swapping between them.  -->
+<!-- This isn't too hard when you have specialists in the same team 
+ !-- 	who can casually collaborate,  -->
+<!-- but team boundaries add considerable friction, as well as reducing an individual's motivation to develop the important cross-layer understanding of a system.  -->
+<!-- Worse, separating the layers into teams adds distance between developers and users.  -->
+<!-- Developers don't have to be full-stack (although that is laudable) but teams should be. -->
+
+<p>レイヤー化で組織が迷走するのは、開発チームをレイヤーに分割するという<a href="/AntiPattern">アンチパターン</a>です。
+フロントエンドとバックエンドでは、使用するフレームワーク（や言語）が違うので、開発者がいずれかに特化できるという意味では、魅力的に思えます。
+共通のスキルを持つ人たちを集めると、スキルの共有が可能になり、組織は特定の仕事ができる人たちとして扱うことができます。
+同様に、データベースの専門家を集めることは、共通のデータベースやスキーマには適しているでしょう。
+しかし、レイヤー間で頻繁にやり取りをするためには、チームを何度も行き来する必要があります。
+同じチームに専門家がいて、気軽に話しかけることができるのなら問題ありませんが、チームの境界があると、大きな摩擦が発生するだけでなく、レイヤーを横断するシステムを理解したいという個人のモチベーションが低下します。
+さらに悪いことに、レイヤーをチームごとに分割すると、開発者とユーザーの間に距離が生まれます。
+開発者はフルスタックである必要はありませんが（フルスタックであれば素晴らしいですが）、チームはフルスタックであるべきです。</p>
+
+<!-- Developers don't have to be full-stack but teams should be. -->
+<blockquote>
+  <p>開発者はフルスタックである必要はありませんが、チームはフルスタックであるべきです。</p>
+</blockquote>
+
+<!-- ### Further Reading -->
+<h3 id="さらに詳しく知るために">さらに詳しく知るために</h3>
+
+<!-- I've written about this separation from a number of different angles elsewhere.  -->
+<!-- This layering drives the structure of P of EAA 
+ !-- 	and chapter 1 of that book talks more about this layering.  -->
+<!-- I didn't make this layering a pattern in its own right in that book  -->
+<!-- but have toyed with that territory with Separated Presentation and PresentationDomainSeparation. -->
+
+<p>こうした分割については、別のところでさまざまな角度から書いています。
+レイヤー化は<a href="https://martinfowler.com/books/eaa.html">PofEAA</a>本の構成にもなっています。
+また、PofEAAの第1章では、これらのレイヤーについて詳しく説明しています。
+PofEAAではレイヤー化をパターンにしていませんでしたが、<a href="https://martinfowler.com/eaaDev/SeparatedPresentation.html">Separated Presentation</a>や<a href="/PresentationDomainSeparation">プレゼンテーションとドメインの分離</a>などを考えています。</p>
+
+<!-- For more on why presentation-domain-data shouldn't be the highest level modules in a larger system, take a look at the writing and speaking of Simon Brown.  -->
+<!-- I also agree with him that software architecture should be embedded in code. -->
+
+<p>大規模なシステムの最上位モジュールをプレゼンテーション・ドメイン・データにすべきではない理由については、<a href="https://simonbrown.je/">Simon Brown</a>の著書と講演を参照してください。
+また、ソフトウェアアーキテクチャをコードに組み込むべきだという彼の意見にも同意します。</p>
+
+<!-- I had a fascinating discussion with my colleague Badri Janakiraman about the nature of hexagonal architectures.  -->
+<!-- The context was mostly around applications using Ruby on Rails, but much of the thinking applies to other cases when you may be considering this approach. -->
+
+<p>同僚のBadri Janakiramanとヘキサゴナルアーキテクチャについて<a href="https://martinfowler.com/articles/badri-hexagonal/">興味深い議論を交わしました</a>。Ruby on Railsを使用したアプリケーションに関するものでしたが、このアプローチを検討している他のケースにも当てはまると思います。</p>
+
+<!-- ## Acknowledgements -->
+<h3 id="謝辞">謝辞</h3>
+
+<!-- James Lewis, Jeroen Soeters, Marcos Brizeno, Rouan Wilsenach, and Sean Newham discussed drafts of this post with me. -->
+<p>James Lewis、Jeroen Soeters、Marcos Brizeno、Rouan Wilsenach、Sean Newhamが、この投稿の草稿について議論してくれました。</p>
+
+<!-- Notes -->
+<h3 id="脚注">脚注</h3>
+
+<!-- 1: A PageObject is also an important tool to help testing around UIs. -->
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="/PageObject">ページオブジェクト</a>は、UIのテストに役立つ重要なツールでもあります。 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

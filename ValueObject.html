@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>バリューオブジェクト - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="https://martinfowler.com/bliki/ValueObject.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/ValueObject">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">バリューオブジェクト</h1>
+    <p class="post-meta" style="text-align:right">
+      2016-11-14
+      
+      [<a href="https://martinfowler.com/bliki/ValueObject.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2016-11-14-ValueObject.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?domain%20driven%20design" style="background-color: #ffc">domain driven design</a>
+    ,
+    <a href="/tags?API%20design" style="background-color: #ffc">API design</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p>https://martinfowler.com/bliki/ValueObject.html</p>
+
+<p>プログラミングをする時、物事を複合物として表現すると便利だと思うことがよくあります。
+例えば、2次元座標はx軸とy軸で構成されます。お金の額面は数値と通貨で構成されます。日付の範囲は開始日と終了日で構成されます。日付は年、月、日で構成されることもあります。</p>
+
+<p>これを実践してみると、2つの複合オブジェクトが同じものであるかどうかという疑問が湧いてきます。
+例として、2つの点オブジェクトを考えてみましょう。それらは両方とも(2,3)のデカルト座標を示しています。この2つの点オブジェクトを等価として扱うことは理にかなっています。
+プロパティの値が同じであるオブジェクト（この場合のプロパティはx座標とy座標）はバリューオブジェクトと呼ばれます。</p>
+
+<p>しかしながら注意してプログラミングしないと、意図した動作にならない可能性があります。</p>
+
+<p>例として、JavaScriptで点を表現したい場合</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">p1</span> <span class="o">=</span> <span class="p">{</span><span class="na">x</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">3</span><span class="p">};</span>
+<span class="kd">const</span> <span class="nx">p2</span> <span class="o">=</span> <span class="p">{</span><span class="na">x</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="mi">3</span><span class="p">};</span>
+<span class="nx">assert</span><span class="p">(</span><span class="nx">p1</span> <span class="o">!==</span> <span class="nx">p2</span><span class="p">);</span>  <span class="c1">// 求めている結果ではない</span>
+</code></pre></div></div>
+
+<p>残念ながら、このテストは通過してしまいます。
+このようになってしまうのは、JavaScriptではオブジェクトが等価かどうかをテストする際、オブジェクトの参照を見にいく一方でオブジェクトに含まれている値を無視するためです。</p>
+
+<p>大抵の場合、参照を利用することの方が値を利用することよりも理にかなっています。
+例えば膨大な量の販売注文をロードし、コントロールしているとしましょう。各注文を一つの場所にロードすることは理にかなっています。その後、アリスの最後の注文が次回の配送に含まれるかどうかを確認する必要がある場合、アリスの注文のメモリ参照(もしくはID)を取得し、その参照が配送される注文一覧に含まれているかどうかを確認することができます。</p>
+
+<p>したがって、オブジェクトの2つのクラス、バリューオブジェクトと参照オブジェクトは、それらをどのように区別するか、という観点で考えるのがいいと思います。<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> 各オブジェクトが等価性をどのように扱うかを確認し、プログラムすることで、期待通りに動作するでしょう。どうやってこれを実現するかは、利用しているプログラミング言語に依存します。</p>
+
+<p>言語によっては複合データを値として扱うものもあります。Clojureで単純な複合データを作ると、次のような感じになります。</p>
+
+<div class="language-clojure highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">&gt;</span><span class="w"> </span><span class="p">(</span><span class="nb">=</span><span class="w"> </span><span class="p">{</span><span class="no">:x</span><span class="w"> </span><span class="mi">2</span><span class="n">,</span><span class="w"> </span><span class="no">:y</span><span class="w"> </span><span class="mi">3</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="no">:x</span><span class="w"> </span><span class="mi">2</span><span class="n">,</span><span class="w"> </span><span class="no">:y</span><span class="w"> </span><span class="mi">3</span><span class="p">})</span><span class="w">
+</span><span class="n">true</span><span class="w">
+</span></code></pre></div></div>
+
+<p>これは関数型の様式で、全てを不変の値として扱います。</p>
+
+<p>関数型言語でない場合でもバリューオブジェクトを作ることはよくあります。例えばJavaでは、デフォルトの点クラスは期待通りに動作します。</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">assertEquals</span><span class="o">(</span><span class="k">new</span> <span class="nc">Point</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">),</span> <span class="k">new</span> <span class="nc">Point</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">));</span> <span class="c1">// Java</span>
+</code></pre></div></div>
+
+<p>これが機能するのは、Pointクラスがデフォルトのequalsメソッドを値のテストのためにオーバーライドするからです。<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup></p>
+
+<p>JavaScriptでも似た様なことができます。</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="nx">Point</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="nx">y</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">equals</span> <span class="p">(</span><span class="nx">other</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">===</span> <span class="nx">other</span><span class="p">.</span><span class="nx">x</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">y</span> <span class="o">===</span> <span class="nx">other</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">const</span> <span class="nx">p1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">p2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="nx">assert</span><span class="p">(</span><span class="nx">p1</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="nx">p2</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p>ここでのJavaScriptの問題点は、定義したequalsメソッドが謎に包まれていることです。</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">const</span> <span class="nx">somePoints</span> <span class="o">=</span> <span class="p">[</span><span class="k">new</span> <span class="nx">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)];</span>
+<span class="kd">const</span> <span class="nx">p</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="nx">assert</span><span class="p">.</span><span class="nx">isFalse</span><span class="p">(</span><span class="nx">somePoints</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">p</span><span class="p">));</span> <span class="c1">// 求めている結果ではない</span>
+
+<span class="c1">//こうする必要がある</span>
+<span class="nx">assert</span><span class="p">(</span><span class="nx">somePoints</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">i</span> <span class="o">=&gt;</span> <span class="nx">i</span><span class="p">.</span><span class="nx">equals</span><span class="p">(</span><span class="nx">p</span><span class="p">)));</span>
+</code></pre></div></div>
+
+<p>これはJavaでは問題にはなりません。Object.equalsがJavaのコアライブラリで定義されており、全てのライブラリがObject.equalsを利用して比較しているためです。(==が利用されるのは通常プリミティブの比較のみです)</p>
+
+<p>バリューオブジェクトによる優れた帰結の一つとして、メモリ上に同じオブジェクトへの参照が存在する、もしくは等価な値に対して異なる参照が存在することを気にする必要がない、ということが挙げられます。しかしながら、知らぬが仏の状態によって問題が引き起こされる可能性があります。Javaを使って説明します。</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nc">Date</span> <span class="n">retirementDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="nc">Date</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"Tue 1 Nov 2016"</span><span class="o">));</span>
+
+<span class="c1">// 退職パーティーが必要であることを意味している</span>
+<span class="nc">Date</span> <span class="n">partyDate</span> <span class="o">=</span> <span class="n">retirementDate</span><span class="o">;</span>
+
+<span class="c1">// しかし退職日が火曜日になっている、パーティーを週末にしよう</span>
+<span class="n">partyDate</span><span class="o">.</span><span class="na">setDate</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+
+<span class="n">assertEquals</span><span class="o">(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="nc">Date</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"Sat 5 Nov 2016"</span><span class="o">)),</span> <span class="n">retirementDate</span><span class="o">);</span>
+<span class="c1">// あれれ、さらに3日働かなければならなくなった :-(</span>
+</code></pre></div></div>
+
+<p>これはエイリアスバグの例です。ある場所で日付を変更したところ、想定外の結果になってしまいました。<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>
+エイリアスバグを避けるために、私はシンプルですが重要なルール: <b>バリューオブジェクトは不変であるべき</b>　に従っています。
+パーティーの日付を変更したい場合は、代わりに新しいオブジェクトを生成します。</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Date</span> <span class="n">retirementDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="nc">Date</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"Tue 1 Nov 2016"</span><span class="o">));</span>
+<span class="nc">Date</span> <span class="n">partyDate</span> <span class="o">=</span> <span class="n">retirementDate</span><span class="o">;</span>
+
+<span class="c1">// 日付を不変として扱う</span>
+<span class="n">partyDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="nc">Date</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"Sat 5 Nov 2016"</span><span class="o">));</span>
+
+<span class="c1">// これでまだ火曜日に退職できる</span>
+<span class="n">assertEquals</span><span class="o">(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="nc">Date</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"Tue 1 Nov 2016"</span><span class="o">)),</span> <span class="n">retirementDate</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>もちろんオブジェクトが本当に不変なのであれば、バリューオブジェクトを不変として扱う方が遥かに簡単です。
+オブジェクトの場合、設定メソッドを書くことなく実現できます。初期のJavaScriptのクラスだと次の様になります。<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="nx">Point</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">_data</span> <span class="o">=</span> <span class="p">{</span><span class="na">x</span><span class="p">:</span> <span class="nx">x</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="nx">y</span><span class="p">};</span>
+  <span class="p">}</span>
+  <span class="kd">get</span> <span class="nx">x</span><span class="p">()</span> <span class="p">{</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_data</span><span class="p">.</span><span class="nx">x</span><span class="p">;}</span>
+  <span class="kd">get</span> <span class="nx">y</span><span class="p">()</span> <span class="p">{</span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_data</span><span class="p">.</span><span class="nx">y</span><span class="p">;}</span>
+  <span class="nx">equals</span> <span class="p">(</span><span class="nx">other</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">===</span> <span class="nx">other</span><span class="p">.</span><span class="nx">x</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">y</span> <span class="o">===</span> <span class="nx">other</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>不変性が私の好みの技術である理由はエイリアスバグを回避することができるためです。一方で代入時にコピーを作成することでエイリアスバグを回避することも可能です。C#の構造体の様に、言語によってはこうした機能を提供しています。</p>
+
+<p>概念を参照オブジェクトとして扱うか、バリューオブジェクトとして扱うかは文脈に依存します。 例えば、郵便物の住所は値の等しい単純な構造体として扱うのがいいでしょう。しかしながら、より洗練されたマッピングシステムにおいては、階層化モデルとして定義し、参照オブジェクト化する方が良いかもしれません。モデリングの問題は大抵の場合、文脈によって解決策が異なります。<sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup></p>
+
+<p>文字列の様な一般的なプリミティブを適切なバリューオブジェクトに置き換えることは良いアイデアです。例えば、電話番号は文字列として表現することが可能ですが、電話番号オブジェクトに置き換えることで変数やパラメータがより明確になり（言語がサポートしている場合は型チェックを行います）、自然と照合の方にフォーカスでき、不適切な動作（整数のID番号で演算するなど）を回避できます。</p>
+
+<p>点、お金、範囲といった小さなオブジェクトはバリューオブジェクトの良い例です。しかし、より大きな構造体でも、概念的な同一性を持たない場合や、プログラム周りで参照を共有する必要がない場合は、バリューオブジェクトとしてプログラムすることもあります。このことは、不変性をデフォルトとする関数型言語とより自然に適合します。<sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup></p>
+
+<p>バリューオブジェクト、特に小さなオブジェクトに関しては見逃されがちで、考える価値がないほど些細なものとして見なされている様に思います。しかし一度良いバリューオブジェクトのセットを見つけてしまえば、よりリッチな振る舞いを作り込むことができます。試したい時は、まず範囲オブジェクトを利用し、開始属性と終了属性の重複操作を防ぐところから見ていきましょう。よりリッチな振る舞いになるはずです。こうしたドメイン固有のバリューオブジェクトがリファクタリングの焦点になったコードベースによって、システムが劇的に単純化することは少なくありません。</p>
+
+<p>この様な単純化がサプライズになることは少なくないでしょう。何度か見かける頃には良き友人になっています。</p>
+
+<h3 id="謝辞">謝辞</h3>
+<p>James Shore、Beth Andres-Beck、Pete Hodgsonが、JavaScriptでバリューオブジェクトを使用した経験を共有してくれました。</p>
+
+<p>Graham Brooks、James Birnie、Jeroen Soeters、Mariano Giuffrida、Matteo Vaccari、Ricardo Cavalcanti、Steven Lowe は、メーリングリストで貴重なコメントを提供してくれました。</p>
+
+<h3 id="さらに読む">さらに読む</h3>
+<p><a href="https://www.amazon.com/gp/product/0321834577?ie=UTF8&amp;tag=martinfowlerc-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321834577">Vaughn Vernon氏の説明</a>は、DDDの観点からバリューオブジェクトを議論したものとしては、おそらく最高のものでしょう。彼は、値とエンティティの決定方法、実装のヒント、バリューオブジェクトを永続化するためのテクニックを網羅しています。</p>
+
+<p>この用語が広まり始めたのは90年代初頭のことです。その頃の話をしている2冊の本が<a href="https://martinfowler.com/books/eaa.html">PoEAA</a>と<a href="https://www.amazon.com/gp/product/0321125215?ie=UTF8&amp;tag=martinfowlerc-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321125215">DDD</a>です。<a href="http://wiki.c2.com/?ValueObject">WardのWiki</a>にも興味深い議論がありました。</p>
+
+<p>用語の混乱の原因の1つは、今世紀に入ってからJ2EEの文献で<a href="https://martinfowler.com/eaaCatalog/dataTransferObject.html">Data Transfer Object</a>に対して “バリューオブジェクト”が使われたことがあるためです。今ではそのような使い方はほとんどされていませんが、たまに遭遇する可能性もあります。</p>
+
+<h3 id="注釈">注釈</h3>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>ドメイン駆動設計では、Evansはバリューオブジェクトとエンティティを対比関係として分類しています。私はエンティティを参照オブジェクトの一般的な形態として捉えていますが、「エンティティ」という用語はドメインモデル内でのみしか使用しません。一方で参照/バリューオブジェクトの二分法は全てのコードに対して使用しています。 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>これは厳密には awt.Point のスーパークラスである awt.geom.Point2D で行われます。 <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Java におけるオブジェクトの比較はほとんどの場合等号で行われますが、これ自体が少し厄介です。というのも、等価演算子==以上にそれを利用することを覚えなければならないためです。煩わしいですが、Javaプログラマはすぐそれに慣れてしまいます。Stringが同じ様に振る舞うためです。他のOO言語ではこれを避けることができます。Rubyは ==演算子を使いますが、それをオーバーライドすることができます。 <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Java-8以前の日付と時刻のシステムの機能性は最悪で、たくましく競い合っています - しかし、私の一票はこれ一択です。ありがたいことに、Java8のjava.timeパッケージを使えばこうした現象はほぼ回避できます。 <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>これは厳密には不変ではありません。クライアントが_dataプロパティを操作できるためです。しかし、規律のあるチームであれば、実際には不変にすることができます。もしチームの規律が不十分ではないかと心配になった場合は、freeze を使うかもしれません。実際、単純な JavaScript オブジェクトに freeze を使うこともできますが、私はアクセサが宣言されているクラスの明示性の方が好きです。 <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>この点については、<a href="https://www.amazon.com/gp/product/0321125215?ie=UTF8&amp;tag=martinfowlerc-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321125215">Evans氏のDDDの本</a>に詳しく書かれています。 <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>不変性は参照オブジェクトにとっても価値があります。例えば販売注文がリクエスト取得中に変更されない場合、それを不変にすることは価値があります。しかし、もし一意の注文番号に基づいて等価性を判断しているのであれば、その販売注文はバリューオブジェクトにはできません。 <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

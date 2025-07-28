@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>機能の専念 - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="https://martinfowler.com/bliki/FeatureDevotion.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/FeatureDevotion">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">機能の専念</h1>
+    <p class="post-meta" style="text-align:right">
+      2006-11-02
+      
+      [<a href="https://martinfowler.com/bliki/FeatureDevotion.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2006-11-02-FeatureDevotion.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?agile" style="background-color: #ffc">agile</a>
+    ,
+    <a href="/tags?bad%20things" style="background-color: #ffc">bad things</a>
+    ,
+    <a href="/tags?requirements%20analysis" style="background-color: #ffc">requirements analysis</a>
+    ,
+    <a href="/tags?process%20theory" style="background-color: #ffc">process theory</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p>https://martinfowler.com/bliki/FeatureDevotion.html</p>
+
+<p>一般的な（おそらく最も使用されている）アジャイル方法論のプラクティスは、構築するソフトウェアの機能リスト（ストーリーカード）を作ることだろう。
+リスト化された機能は、インデックスカード、作業キュー、バーンダウンチャート、バックログなど、あなたにとって最適なツールで追跡することになる。</p>
+
+<p>こういったやり方は、私は好きである。やるべきことをすべて数週間程度で完遂できる小さなタスクに分解し、進捗を見える化し、成し遂げたことを一目見て分かるようにする。
+反復開発の利点は、ある程度まとまりのあるソフトウェアを完遂させることにより、リスクを低減することにある。これは、期間が長く管理しにくいアクティビティ（テスト、結合）をプロジェクトの後半まで残しておくウォーターフォール開発とは異なる点だ。</p>
+
+<p>ただし、この機能リストが<a href="http://dannorth.net/archives/32">突如としてツノを生やし、牙を剥き、固定価格、固定スコープ、前払い設計プロジェクトになってしまう</a>ときが問題だ。
+Caraig Larmanは、かつて「ウォーターフォールプロセスには、反復開発を何らかのウォーターフォールに変形させる強い抗体がある」というジョークを言った。
+RUPはその抗体の犠牲になった一例だ。
+RUPの「フェーズ」は「分析、設計、実装、テスト」コンベアの変種へと形を変えてしまった。</p>
+
+<p>ウォーターフォールを跳ね返すカギは、Danも言っているように、アジャイラ(agilist)の価値である「機能よりも成果<sup id="fnref:fn" role="doc-noteref"><a href="#fn:fn" class="footnote" rel="footnote">1</a></sup>にある。
+機能リストは有用なツールである。だが、それは手段であって目的ではない。
+重要なのは、最終的な成果である。私はそれを「顧客価値」だと考えている。</p>
+
+<p>重要なのは、機能リストはプロジェクトが進むにつれて変わりうるものだということを、あらかじめ認識しておくところにある。
+その都度、新しくできることを発見し、再度、優先付けを行う。
+これが<a href="http://www007.upp.so-net.ne.jp/kengai/fowler/newMethodology_j.html#A40">適応型計画</a>の肝であり、アジャイルな考え方の指標である。
+これにより、計画に対する考えに大きな変化がもたらされた。
+計画駆動プロジェクトでは、成功（あるいは失敗）は「計画通りだったか？」という観点で語られることが多い。
+しかしアジャイルプロジェクトでは、これは意味のない質問である。
+その計画が頻繁に変更されるからだ。
+計画とは、主に変更による影響（「この機能を追加したら、どれだけ影響がでるか」）を測るために使用するツールである。
+計画とは、FivePoundBagにどれだけ入るかを見積もるためのツールである。
+計画が頻繁に変更しないのであれば、適応型計画をしていないのであり、つまりは、アジャイルではないということである。</p>
+
+<p>機能リストには他にも問題がある——機能に価値をもたらすコンテクストを容易に見失ってしまう点だ。
+Alistair Cockburnがユースケースを提唱しているのはそのためだ。
+ユースケースは、システム利用者の利用方法をナラティブ（物語）として描写しているからだ。
+Marc NcNeilも「<a href="http://www.dancingmango.com/blog/2006/10/19/ditch-the-feature-shopping-list-think-customer-journeys/">Customer Journeys</a>（顧客旅行）」という言葉を使って同様のことを述べている。
+計画時におけるユースケースの弱点は、
+進捗をチェックしたり、プロジェクトの★したりできるような明確な単位に分かれていないことだ。
+そのため、ユースケースは計画ツールとしてはあまり役に立たない。
+しかし、最適な成果は何なのかを想像するには良いツールであることを否定してはいけない。</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:fn" role="doc-endnote">
+      <p>訳注：アジャイル宣言の5番目の価値と呼ばれている。 <a href="#fnref:fn" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

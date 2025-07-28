@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>設計＝スタミナ仮説 - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="https://martinfowler.com/bliki/DesignStaminaHypothesis.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/DesignStaminaHypothesis">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">設計＝スタミナ仮説</h1>
+    <p class="post-meta" style="text-align:right">
+      2007-06-20
+      
+      [<a href="https://martinfowler.com/bliki/DesignStaminaHypothesis.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2007-06-20-DesignStaminaHypothesis.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?productivity" style="background-color: #ffc">productivity</a>
+    ,
+    <a href="/tags?technical%20debt" style="background-color: #ffc">technical debt</a>
+    ,
+    <a href="/tags?process%20theory" style="background-color: #ffc">process theory</a>
+    ,
+    <a href="/tags?evolutionary%20design" style="background-color: #ffc">evolutionary design</a>
+    ,
+    <a href="/tags?clean%20code" style="background-color: #ffc">clean code</a>
+    ,
+    <a href="/tags?software%20craftsmanship" style="background-color: #ffc">software craftsmanship</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p>https://martinfowler.com/bliki/DesignStaminaHypothesis.html</p>
+
+<blockquote>
+  <p>ソフトウェアをきちんと設計するのは、その労力に見合うことなのか？</p>
+</blockquote>
+
+<p>「ソフトウェアをきちんと設計することって、そんなに大切なことなの？」という問題について、遠回しなやりとりをすることが時々ある。
+あえて「遠回しなやりとり」と言ったのは、はっきりと「ソフトウェアの設計なんて無意味だ」と言う人を見たことがないからだ。
+そういう考えの人は、たいていこんな言い回しをする。
+「立ち止まっている暇なんてない。とにかく前に進まないと来年の目標を達成できないんだ。
+だから、≪設計に関する何かの作業≫は省略するよ」</p>
+
+<p>そこにあるのは、設計と素早い開発の間には何らかのトレードオフがあるという思い込みだ。
+実際、「設計に時間を掛けると開発の速度は落ちるけど、プログラマーはそれを補って余りあるだけのメリットを得られる」的な物言いにも何度か遭遇したことがある。</p>
+
+<p>もし設計に力を入れたせいでプログラミングの効率が落ちるなどと言うことがあり得るのなら、私はきっと設計なんかしないだろう。
+大半の開発者もそれに同意してくれるはずだ。
+良い設計とは何ぞやと問われたらそれぞれ違う答えを返すだろうが、皆それぞれ何かしら、お気に入りの「良い設計」がある。
+そうすれば生産性が向上すると信じているからだ
+（ここでいう「設計」には、事前に行う設計も含むし、アジャイル開発の文脈での設計も含む。つまり、
+<a href="http://objectclub.jp/community/XP-jp/xp_relate/isdesigndead#n71">計画的設計と進化的設計</a>
+の両方の意味での設計だ）。</p>
+
+<p>設計に関する作業には時間も労力もかかる。それは間違いない。でも、それだけの価値はある。
+将来そのソフトウェアを成長させるのが楽になるからだ。設計をサボったら、短期的には時間の節約になるだろう。
+でも、そのぶんだけ<a href="/TechnicalDebt">技術的負債</a>はかさみ、後々の生産性を落としてしまう。
+ソフトウェアの設計に力を入れると、あなたのプロジェクトのスタミナが向上するのだ。
+成長する速度も上がり、長生きできるようになる。</p>
+
+<p>その様子を図示してみたのが、この疑似グラフだ。</p>
+
+<p><img src="https://martinfowler.com/bliki/images/designStaminaGraph.gif" alt="設計スタミナグラフ" /></p>
+
+<p>この疑似グラフは、納品された機能（の累積）と時間との関係を、二種類のありがちなプロジェクトについてプロットしたものだ。
+一方のプロジェクトはきちんと設計をしたもの、もう一方のプロジェクトは設計を軽視したものになる。
+設計を軽視したほうのプロジェクトでは、設計に関する労力を一切費やしていない。計画的設計と進化的設計の両方の意味でだ。
+そのため、開始当初はこちらのプロジェクトのほうが多くの機能を納品している。</p>
+
+<p>設計を軽視したプロジェクトの問題は、設計を軽視したが故に、
+コードベースがだんだん劣化して変更しづらくなるということだ。
+その結果、生産性も下がる。というのが、グラフの勾配にあらわれている。
+きちんと設計をすれば生産性もきちんと維持できるので、ある時点（設計損益ライン）
+に達すると、設計を軽視したプロジェクトよりも累積の納品量が上回るようになる。
+そしてその後は、ずっと上回ったままだ。</p>
+
+<p>これはあくまでも仮説に過ぎない。推測に基づくものだし、実際にそうなるという客観的な証拠もない。
+科学的に言うと、厳密には仮説としてもあまりよろしくない。というのも、検証するのが難しいからだ。
+<a href="/CannotMeasureProductivity">生産性は計測不能</a>
+だし、設計の品質もまた計測不能だ。</p>
+
+<p>ただ、仮説に過ぎないとは言え、大半の人にとっては「そのとおり」と納得できるものだ。
+もちろん私もそう思っている。客観的に証明することは不可能かもしれない。
+でも、多くの人は、この仮説が現状をうまく表していると感じている。
+ソフトウェアの設計に関する書籍を書き続けてきたこれまでの私の実績が、この仮説を実証しているのではないだろうか。
+もし設計が生産性の改善に何も寄与しないのだとしたら、私の著書の大半はまったくの役立たずだと言うことになる。</p>
+
+<p>多くの人にとって、仮説を公理と見なすのは奇妙に思えることだろう。
+でも、実際によくあることだ。
+何かの仮説が真であるという判断を下すときに、客観的な観点でのその仮説の弱点を無視しているわけではない。
+私は何かを証明するのも好きだけれども、それと同程度には何かを反証するのも好きだ。</p>
+
+<p>この仮説から、こんな系を導ける。設計損益ラインに由来するものだ。
+最初のリリースに含まれるある機能が仮にこの線より下にあるとすると、
+設計を軽視してでも開発速度を追い求めた方がいい<em>かもしれない</em>。
+でも、もしこの線より上にあるのなら、そんなトレードオフはまやかしだ。
+納品予定の機能が設計損益ラインを上回る場合は、設計を無視すれば、必ず納期は遅れる。
+これを技術的負債の用語で言い換えると、融資を受けたのにその元金をずっと使わずにいる状態に等しい。
+ある一定の時期を過ぎてから使い始めると、支払う利息が増えてしまう。</p>
+
+<p>ここで気になるのが、じゃあ実際のところ、設計損益ラインはどのあたりにあるのかということだ。
+設計＝スタミナ説に賛同してくれる人たちの間でも、この件については大きな見解の相違がある。
+私は個人的に、一般に言われているよりもずっと低い位置にあると思っている。数ヶ月ではなく、数週間というあたりだ。
+しかし、これはあくまでも個人的見解だ。</p>
+
+<p>ここから、技術的負債に関する結論が導ける。
+技術的負債というたとえは絶妙なものなので、私はよく使っている。
+でも、設計損益ラインを考えるとわかるように、技術的負債を抱える価値があるのはある特定の時点までだ。
+もたらす価値が支払う利息を上回るかどうかを検討しなければいけないのはもちろんだが、
+それだけではなく、そもそももたらす価値が設計損益ラインを上回るのかどうかも判断する必要がある。</p>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>犠牲的アーキテクチャ - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="https://martinfowler.com/bliki/SacrificialArchitecture.html">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/SacrificialArchitecture">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">犠牲的アーキテクチャ</h1>
+    <p class="post-meta" style="text-align:right">
+      2014-10-20
+      
+      [<a href="https://martinfowler.com/bliki/SacrificialArchitecture.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2014-10-20-SacrificialArchitecture.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?process%20theory" style="background-color: #ffc">process theory</a>
+    ,
+    <a href="/tags?evolutionary%20design" style="background-color: #ffc">evolutionary design</a>
+    ,
+    <a href="/tags?application%20architecture" style="background-color: #ffc">application architecture</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <p>https://martinfowler.com/bliki/SacrificialArchitecture.html</p>
+
+<p>会議の席であなたは考えている。自分のチームが二年間かけて書いてきたコードのことを。そして決断に至る。いま打てる最善の手は、あのコードをすべて投げ捨てまったく新しいアーキテクチャを再構築することだ。死にゆくコード、それに費やした時間、自分が下し続けてきた判断。この決断は、あなたをどんな気持ちにするだろう？</p>
+
+<p>多くの人にとって、コードを捨てるのは失敗の証だ。ソフトウェア開発の探索的な性質を考えれば、わからない判断ではないかもしれない。けれど失敗には違いない。</p>
+
+<p>ところが、いま書ける最良のコードは二年経ったら捨てるつもりのコードだということはよくある。</p>
+
+<p>私たちは偉大なコードとして長命なソフトウェアを思い描くことが多い。私は 1980 年代に生まれたエディタでこの記事を書いている。ソフトウェアアーキテクチャに関する論考の多くはそうした長寿を導く方法に関するものだ。にもかかわらず、成功の礎となるのがずっとむかし /dev/null 送りにしたコードということもある。</p>
+
+<p>ウェブにおける大規模ビジネスのうちもっとも大きな成功の一つである eBay の成り立ちを見てみよう。そのはじまりは、1995 年のある週末に書かれた Perl のスクリプト一式だった。1997 年にコードは丸ごと捨てられ、 C++ で書かれたシステムがそれを置き換えた。そのシステムは当時の Windows の上で動作した。2002 年、アプリケーションは再び、今度は Java で書き直された。置き換えられてしまったということは、初期バージョンたちは間違っていたのだろうか？とてもそうは思えない。eBay はこれまでのウェブの中でおきた大成功の一つだが、その成功の多くは、お払い箱になった 90 年代のソフトウェアに依っている。1996 年の eBay を支える上で正しかったアーキテクチャは 2006 年の eBay にとって正しいアーキテクチャではないだろう。1996 年版は 2006 年の負荷を捌けないだろうが、2006 年版は作るにも保守するにも育てるにも複雑すぎる。1996 年のニーズにはそぐわない。</p>
+
+<p>実際、この指針を組織の行動原理に焼き込むこともできるだろう。Google では、現時点の十倍の負荷を捌けるようシステムを設計するのがはっきり定められたルールとなっている。負荷がある規模を超えたら現行の版を捨て、最初から作り直した方が良いという含みがここにはある [1]。サブシステム群を数年おきに再設計しては捨てるのが普通なのだ。</p>
+
+<p>成熟したコードベースを前に、人々が性能やスケーラビリティの無さをこき下ろすのはよく目にする光景だ。けれどソフトウェアシステムの初期には、その真のニーズがそれほど確かでないことが多い。だから機能変更の柔軟性に焦点を置く方が、性能や可用性より重要になる。そのあとユーザが増えたら優先度を変える必要はある。けれど出来の悪いコードの上に多すぎるユーザを抱え込むのはふつう、その逆よりもマシだ。Jeff Atwood は「性能は機能」という標語を作った。性能の優先度はいつも一番上だとこの標語を解釈する人もいる。けれど機能というのはどれも、他の機能と比較した上で選び取る必要があるものだ。性能なんて無視していい、という話でもない。ソフトウェアが遅すぎたり不安定すぎたりして事業をダメにすることはある。チームは異なるニーズの間で難しい舵取りをしなければいけない。多くの場合、これは技術というより事業の決断なのだ。</p>
+
+<p>なら犠牲的なアーキテクチャを意識的に選ぶとは、つまりどういうことなのだろう？それは、数年後には（願わくば）今作っているものを捨てることになる現状を受け入れる、ということだ。それは、作っているものが応えることのできる機能横断的なニーズへの限界を受け入れる、ということかもしれない。それは、時が来たら取り替えが効くよう今のうちから物事を考えておく、ということかもしれない - ソフトウェアの設計者は、交換のしやすさなんて滅多に考慮しない。それは、比較的短時間で捨ててしまうソフトウェアだって多くの価値を生み出しうると認めること、でもある。</p>
+
+<p>アーキテクチャが犠牲的だからといって、そのソフトウェアの内的品質がどうでもよくなるわけではない。ふつう内的品質を犠牲にすると、交換の時期が来るより早く酷い目にあう。そのコードベースの引退に向け既に作業しているなら別だが。優れたモジュール性は健やかなコードの不可欠な要素だ。そしてシステムを交換するときにも大きな助けとなる。実際、初期バージョンのシステムでひとつやっておくと良いのは、あるべき最適なモジュール構造についてよく考えること。交換に備えて知見を蓄える。初期のシステムなら丸ごと捨てるのも悪くないかもしれないが、システムが大きくなるにつれて個々のモジュールを捨てる方が良くなる。それができるのは、うまい具合のモジュール境界がある時だけだ。</p>
+
+<p>この問題を扱う際に見逃されがちな話題の一つが会計処理。いや、ほんとに。コードベースの償却方法を理由に、どうみても行き詰まってしまったシステムの置き換えを渋る人々に出くわしたことがある。どちらかというと大企業病の類いだが、自分がそんな世界に暮らしていないか忘れず確認すること。</p>
+
+<p>犠牲的アーキテクチャの原則は既存システムの機能開発にもあてはめることができる。新機能を作るとき、その機能を一部のユーザだけに公開する。そうやってアイデアの善し悪しについてフィードバックを得る。この方法なら最初は犠牲的な作り方をとれる。全ユーザにデプロイする価値はないとわかったとき、そこに全力を投じなくて済む。</p>
+
+<p>モジュールの交換可能性はマイクロサービシズ・アーキテクチャの主たる強みだが、犠牲的アーキテクチャで使うのには慎重でありたい。マイクロサービシズには分散と非同期性があり、どちらも複雑さを助長する。本当は必要のないマイクロサービスに手を出したプロジェクトを、私はもう二つも見かけた。結果として機能開発の速度を著しく損ねていた。一枚岩が良い犠牲的アーキテクチャになることは多い。後から徐々にコードを引きはがし、マイクロサービスにすればいい。</p>
+
+<p>犠牲的アーキテクチャのコードを書いたチームが、その潮時を決める。これは新しくやってきたチームがそれまでのコードを嫌って書き直す、という話とは違う。自分が書いたのではないコードを嫌うのは簡単だ。文脈なんてわかりはしないのだから。自分が書いたコードをわかった上で生贄に差し出すとき、そこにはまったく違う力が働いている。そして自分が今から書くコードを生贄に捧げると胸に刻むのは、その意義深い変奏なのだ。</p>
+
+<h3 id="備考">備考</h3>
+
+<p>1: <a href="http://static.googleusercontent.com/media/research.google.com/en//people/jeff/WSDM09-keynote.pdf">Jeff Dean 曰く</a> “design for ~10X growth, but plan to rewrite before ~100X”</p>
+
+<h3 id="謝辞">謝辞</h3>
+
+<p>Randy Shoup との会話がこの記事を書く助けになった。具体的には eBay の歴史 (と同じような Google の逸話) に関する記述で助けられた。Jonny Leroy は会計上の問題を指摘してくれた。Keif Morris, Jason Yip, Mahendra Kariya, Jessica Kerr, Rahul Jain, Andrew Kiellor, Fabio Pereira, Pramod Sadalage, Jen Smith, Charles Haynes, Scott Robinson and Paul Hammant は有意義なコメントを寄せてくれた。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

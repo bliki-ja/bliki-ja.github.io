@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>パターンカタログ（日本語） - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/pofeaa/CatalogOfPofEAA_Ja">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">パターンカタログ（日本語）</h1>
+  </header>
+
+  <article class="post-content">
+    <p class="post-meta" style="text-align:right">
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/pofeaa/CatalogOfPofEAA_Ja.md">source and translators</a>]
+    </p>
+
+    <article class="post-content" id="post-content">
+    <p><a href="CatalogOfPofEAA">PofEAAのパターンカタログ</a>の邦訳名/原著名の対応です。以下の一覧にあるパターン名の後ろのカッコ内の数字は邦訳のページ番号です。原文のページ番号は<a href="CatalogOfPofEAA">PofEAAのパターンカタログ</a>を参照してください。</p>
+
+<p>邦訳版のパターン名に関する議論などは、<a href="JapanesePatternNames">JapanesePatternNames</a>のページを参照。</p>
+
+<h2 id="ドメインロジックパターンdomain-logic-patterns">「ドメインロジックパターン」(Domain Logic Patterns):</h2>
+
+<p><a href="TransactionScript">トランザクションスクリプト(TransactionScript)</a> (115), <a href="DomainModel">ドメインモデル(DomainModel)</a> (123), <a href="TableModule">テーブルモジュール(TableModule)</a> (133), <a href="ServiceLayer">サービスレイヤ(ServiceLayer)</a> (142).</p>
+
+<h2 id="データソースのアーキテクチャに関するパターンdata-source-architectural-patterns">「データソースのアーキテクチャに関するパターン」(Data Source Architectural Patterns):</h2>
+
+<p><a href="TableDataGateway">テーブルデータゲートウェイ(TableDataGateway)</a> (153), <a href="RowDataGateway">行データゲートウェイ(RowDataGateway)</a> (162), <a href="ActiveRecord">アクティブレコード(ActiveRecord)</a> (170), <a href="DataMapper">データマッパー(DataMapper)</a> (175).</p>
+
+<h2 id="オブジェクトリレーショナル振る舞いパターンobject-relational-behavioral-patterns">「オブジェクトリレーショナル振る舞いパターン」(Object-Relational Behavioral Patterns):</h2>
+
+<p><a href="UnitofWork">ユニットオブワーク(UnitofWork)</a> (197), <a href="IdentityMap">一意マッピング(IdentityMap)</a> (209), <a href="LazyLoad">レイジーロード(LazyLoad)</a> (213)</p>
+
+<h2 id="オブジェクトリレーショナル構造パターンobject-relational-structural-patterns">「オブジェクトリレーショナル構造パターン」(Object-Relational Structural Patterns):</h2>
+
+<p><a href="IdentityField">一意フィールド(IdentityField)</a> (231), <a href="ForeignKeyMapping">外部キーマッピング(ForeignKeyMapping)</a> (254), <a href="AssociationTableMapping">関連テーブルマッピング(AssociationTableMapping)</a> (266), <a href="DependentMapping">依存マッピング(DependentMapping)</a> (282), <a href="EmbeddedValue">組込バリュー(EmbeddedValue)</a> (288), <a href="SerializedLOB">シリアライズBLOB(SerializedLOB)</a> (292), <a href="SingleTableInheritance">シングルテーブル継承(SingleTableInheritance)</a> (298), <a href="ClassTableInheritance">クラステーブル継承(ClassTableInheritance)</a> (306), <a href="ConcreteTableInheritance">具象テーブル継承(ConcreteTableInheritance)</a> (314), <a href="InheritanceMappers">継承マッパー(InheritanceMappers)</a> (324).</p>
+
+<h2 id="オブジェクトリレーショナルメタデータマッピングパターンobject-relational-metadata-mapping-patterns">「オブジェクトリレーショナルメタデータマッピングパターン」(Object-Relational Metadata Mapping Patterns):</h2>
+
+<p><a href="MetadataMapping">メタデータマッピング(MetadataMapping)</a> (327), <a href="QueryObject">クエリーオブジェクト(QueryObject)</a> (338), <a href="Repository">リポジトリ(Repository)</a> (345).</p>
+
+<h2 id="webプレゼンテーションパターンweb-presentation-patterns">「Webプレゼンテーションパターン」(Web Presentation Patterns):</h2>
+<p><a href="ModelViewController">モデルビューコントローラ(ModelViewController)</a> (351), <a href="PageController">ページコントローラ(PageController)</a> (354), <a href="FrontController">フロントコントローラ(FrontController)</a> (366), <a href="TemplateView">テンプレートビュー(TemplateView)</a> (373), <a href="TransformView">トランスフォームビュー(TransformView)</a> (384), <a href="TwoStepView">ツーステップビュー(TwoStepView)</a> (388), <a href="ApplicationController">アプリケーションコントローラ(ApplicationController)</a> (403).</p>
+
+<h2 id="分散パターンdistribution-patterns">「分散パターン」(Distribution Patterns):</h2>
+<p><a href="RemoteFacade">リモートファサード(RemoteFacade)</a> (411), <a href="DataTransferObject">データ変換オブジェクト(DataTransferObject)</a> (425)（訳注：DataTransferObjectの”邦訳”名は、データ変換オブジェクトが”正しい”です。データ”転送”オブジェクトではありません。）</p>
+
+<h2 id="オフライン並行性パターンoffline-concurrency-patterns">「オフライン並行性パターン」(Offline Concurrency Patterns):</h2>
+<p><a href="OptimisticOfflineLock">軽オフラインロック(OptimisticOfflineLock)</a> (439), <a href="PessimisticOfflineLock">重オフラインロック(PessimisticOfflineLock)</a> (450), <a href="CoarseGrainedLock">緩ロック(CoarseGrainedLock)</a> (462), <a href="ImplicitLock">暗黙ロック(ImplicitLock)</a> (474).</p>
+
+<h2 id="セッションステートパターンsession-state-patterns">「セッションステートパターン」(Session State Patterns):</h2>
+<p><a href="ClientSessionState">クライアントセッションステート(ClientSessionState)</a> (479), <a href="ServerSessionState">サーバセッションステート(ServerSessionState)</a> (481), <a href="DatabaseSessionState">データベースセッションステート(DatabaseSessionState)</a> (485).</p>
+
+<h2 id="ベースパターンbase-patterns">「ベースパターン」(Base Patterns):</h2>
+<p><a href="Gateway">ゲートウェイ(Gateway)</a> (489), <a href="Mapper">マッパー(Mapper)</a> (496), <a href="LayerSupertype">レイヤースーパータイプ(LayerSupertype)</a> (497), <a href="SeparatedInterface">セパレートインタフェース(SeparatedInterface)</a> (499), <a href="Registry">レジストリ(Registry)</a> (502), <a href="ValueObject">バリューオブジェクト(ValueObject)</a> (508), <a href="Money">マネー(Money)</a> (510), <a href="SpecialCase">スペシャルケース(SpecialCase)</a> (518), <a href="Plugin">プラグイン(Plugin)</a> (521), <a href="ServiceStub">サービススタブ(ServiceStub)</a> (526), <a href="RecordSet">レコードセット(RecordSet)</a> (530)</p>
+
+    </article>
+
+    <hr />
+
+    <div style="text-align:right">
+      <a href="/pofeaa">PofEAA index</a>
+      |
+      <a href="/pofeaa/CatalogOfPofEAA_Ja">パターンカタログの日本語版</a>
+      |
+      <a href="/pofeaa/CatalogOfPofEAA_EnJa">パターンカタログの英日対応表</a>
+    </div>
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

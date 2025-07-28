@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ドメインロジックとSQL - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/DomainLogicAndSQL/">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewbox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">ドメインロジックとSQL</h1>
+    <p class="post-meta" style="text-align:right">
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/DomainLogicAndSQL/index.md">翻訳者と原稿</a>]
+    </p>
+  </header>
+
+  <article class="post-content" id="page-content">
+    <hr>
+
+<p>以下の文章は、Martin Fowler による <a href="https://martinfowler.com/articles/dblogic.html">Domain Logic and SQL</a>の日本語訳である。</p>
+
+<hr>
+
+<blockquote>
+  <p>データベース指向ソフトウェア開発者とメモリ上(in-memory)アプリケーションソフトウェア開発者との間のギャップは、ここ数十年、徐々に広がってきている。このギャップが原因で、データベースの機能(SQLやストアドプロシージャ)をどのように扱えばよいのかという議論が数多く巻き起こっている。ここでは、ビジネスロジックを SQL に置くべきか、それともメモリ上のコードに置くべきかといった問題について、主にパフォーマンスと更新性の観点から考察を行う。考察には簡単な例を使うが、SQL クエリはしっかりとしたもの（rich SQL queries）を用いるので悪しからず。</p>
+</blockquote>
+
+<p>エンタープライズアプリケーション（訳注：以下、EA）構築に関する本（私の近著『<a href="http://www.martinfowler.com/books.html#eaa">P of EAA</a>』など）を読むと、ロジックが、様々な個所で、複数のレイヤに分割されていることに気付くと思う。著者によってレイヤの分け方は違うが、よくあるのはドメインロジック（ビジネスルール）とデータソースロジック（データをどこから取得するか）との分離である。EAのデータはだいたい RDB に保存してあるため、このレイヤの分け方はビジネスロジックを RDB から離すための分け方だと言える。</p>
+
+<p>アプリケーション開発者の多くは（特に私のような超 OO 開発者は）RDB のことを裏側に隠しておくのにちょうどいいストレージ装置だと思いがちだ。フレームワークというものもあるが、これだって、アプリケーション開発者は SQL の複雑さを考える必要なんかありませんよーとしつこい。</p>
+
+<p>SQL は、今では単にデータをアップデートしたり、検索したりするためだけのものではなくなっている。SQL クエリを使えば様々なタスクを処理することができるのだ。アプリケーション開発者がSQLを使わないのは、強力なツールを排除しているのに等しい。</p>
+
+<p>ここでは、リッチな SQL クエリを使うことの良い点、悪い点を深く掘り下げていく。リッチな SQL クエリにはドメインロジックが含まれることもある。そうだ、言っておかねばならないことがある。私はこの議題にオブジェクト指向のバイアスをかける。とはいえ、私は反対側の人間だったこともあるわけだが（以前のクライアントに OO エキスパートグループがあり、彼らに会社を追い出されたことがある。私が「データモデラー」だったからだ）。</p>
+
+<h2 id="複雑なクエリcomplex-queries">複雑なクエリ（Complex Queries）</h2>
+
+<p>すべての RDB は、標準的な問い合わせ言語である SQL をサポートしている。RDB が成功し拡大し得たのは、基本的にこのSQLのおかげだと私は思っている。データベースとやり取りをする標準的な方法がほぼベンダー非依存で提供されたことで RDB は成長できた。だがこれにより、オブジェクト指向的な課題は先送りされることとなる。</p>
+
+<p>SQL には多くの長所があるが、中でもデータベースへの問い合わせは非常にパワフルだ。これを使えばわずか数行の SQL コードで大容量のデータにフィルタをかけたり、サマリを行ったりすることが出来る。ドメインロジックを組み込むことも出来るが、「EAアーキテクチャはレイヤで構成される」という基本原則には反することになる。</p>
+
+<p>簡単な例を用いながら詳しくみていこう。図1にあるようなデータモデルから始める。私たちの会社がスペシャルディスカウントを行うとしよう。ここではそのことを「Cuillen」と呼ぶこととする。Cuillenディスカウントが受けられるのは、一度にタリスカー（訳注：ウィスキーの商品名）を5000ドル以上買った顧客だ。3000ドルづつ二回買い物をしても、それは無効。一度の買い物が5000ドルを超えなければならない。さて、ある顧客の去年一年間の買い物のうち、どの月がCuillenディスカウント適用月なのかを調べるとしよう。このときユーザーインターフェイスは考えないものとする。適用月が分かればそれで良しとする。</p>
+
+<p><img src="https://martinfowler.com/articles/dblogic-schema.gif" alt="例題用のデータベーススキーマ"></p>
+
+<p><strong>図1：例題用のデータベーススキーマ（UML記法）</strong></p>
+
+<p>いくつかやり方があるが、まずはよくある3つの解き方（transaction script, domain model, complex SQL）から始めよう。</p>
+
+<p>今回、Rubyを使ってサンプルを作っている。いつもはJavaやC#（アプリケーション開発者が読めるC言語ベースのプログラミング言語）を使うのだが、まあいいややっちゃえーって思ってやってみた。Rubyを選んだのは実験でもある。私が Ruby が好きなのは、コンパクトながらも構造化されたコードが書けて、OO的なものを作るのが簡単だからだ。スクリプト言語はもうコレ。決まり。ここで使っているRubyの<a href="/SimpleRubySyntax">クイックガイド</a>を作ったから、見ておくれ。</p>
+
+<h3 id="トランザクションスクリプトtransaction-script">トランザクションスクリプト（Transaction Script）</h3>
+
+<p>トランザクションスクリプトとは、<a href="http://www.martinfowler.com/books.html#eaa">P of EAA</a>の中で私が作ったパターン名である。リクエストによって処理を行う手続き型(a procedual style)のパターンのことだ。プロシージャは必要なデータをすべて読み込み、メモリ上でどの月が必要なのかを探し、それから処理を行うことになる。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">cuillen_months</span> <span class="nb">name</span>
+   <span class="n">customerID</span> <span class="o">=</span> <span class="n">find_customerID_named</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+   <span class="n">find_orders</span><span class="p">(</span><span class="n">customerID</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span> 
+     <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">row</span><span class="p">[</span><span class="s1">'date'</span><span class="p">].</span><span class="nf">month</span> <span class="k">if</span> <span class="n">cuillen?</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'orderID'</span><span class="p">])</span>
+   <span class="k">end</span>
+   <span class="k">return</span> <span class="n">result</span><span class="p">.</span><span class="nf">uniq</span>
+ <span class="k">end</span>
+ 
+ <span class="k">def</span> <span class="nf">cuillen?</span> <span class="n">orderID</span>
+   <span class="n">talisker_total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="nf">dollars</span>
+   <span class="n">find_line_items_for_orderID</span><span class="p">(</span><span class="n">orderID</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+     <span class="n">talisker_total</span> <span class="o">+=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'cost'</span><span class="p">].</span><span class="nf">dollars</span> <span class="k">if</span> <span class="s1">'Talisker'</span> <span class="o">==</span> <span class="n">row</span><span class="p">[</span><span class="s1">'product'</span><span class="p">]</span>
+   <span class="k">end</span>
+   <span class="k">return</span> <span class="p">(</span><span class="n">talisker_total</span> <span class="o">&gt;</span> <span class="mi">5000</span><span class="p">.</span><span class="nf">dollars</span><span class="p">)</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>この２つのメソッド（<code class="language-plaintext highlighter-rouge">cuillen_months</code>, <code class="language-plaintext highlighter-rouge">cuillen?</code>）は、ドメインロジックを含んでいる。メソッド内でデータベースにクエリを発行する ファインダーメソッド(<code class="language-plaintext highlighter-rouge">find_XXX</code>)が呼ばれている。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">find_customerID_named</span> <span class="nb">name</span>
+   <span class="n">sql</span> <span class="o">=</span> <span class="s1">'SELECT * from customers where name = ?'</span>
+   <span class="k">return</span> <span class="vg">$dbh</span><span class="p">.</span><span class="nf">select_one</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="nb">name</span><span class="p">)[</span><span class="s1">'customerID'</span><span class="p">]</span>
+ <span class="k">end</span>
+ 
+ <span class="k">def</span> <span class="nf">find_orders</span> <span class="n">customerID</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+   <span class="n">sql</span> <span class="o">=</span> <span class="s1">'SELECT * FROM orders WHERE customerID = ?'</span>
+   <span class="vg">$dbh</span><span class="p">.</span><span class="nf">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">customerID</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">sth</span><span class="o">|</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="n">sth</span><span class="p">.</span><span class="nf">collect</span><span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">row</span><span class="p">.</span><span class="nf">dup</span><span class="p">}</span>
+   <span class="k">end</span>
+   <span class="k">return</span> <span class="n">result</span>
+ <span class="k">end</span>
+ 
+ <span class="k">def</span> <span class="nf">find_line_items_for_orderID</span> <span class="n">orderID</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+   <span class="n">sql</span> <span class="o">=</span> <span class="s1">'SELECT * FROM lineItems l WHERE orderID = ?'</span>
+   <span class="vg">$dbh</span><span class="p">.</span><span class="nf">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">orderID</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">sth</span><span class="o">|</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="n">sth</span><span class="p">.</span><span class="nf">collect</span><span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">row</span><span class="p">.</span><span class="nf">dup</span><span class="p">}</span>
+   <span class="k">end</span>
+   <span class="k">return</span> <span class="n">result</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>まあ、これは簡単に思いつくやり方だな。SQL は効果的に使われていないしな[これだとデータを取り出すのに複数回クエリを発行する必要がある（2 + N 回：Nは注文の回数）]。だが、今はあまり深く考えないこと。後から改良していくので。今はこのアプローチのエッセンスに注目すること。エッセンス：「扱うデータを一度に読み込み、ループでまわして、必要なものをセレクト」。</p>
+
+<p>（ところで、上のドメインロジック。読みやすいけど、Rubyっぽくはない。できれば下のような、Rubyの強力なブロックとコレクションメソッドを使ったメソッドが望ましい。このコードを奇妙に思うひとも多いと思うが、Smalltalkerたちは喜んでくれると思う。）</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">cuillen_months2</span> <span class="nb">name</span>
+   <span class="n">customerID</span> <span class="o">=</span> <span class="n">find_customerID_named</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+   <span class="n">qualifying_orders</span> <span class="o">=</span> <span class="n">find_orders</span><span class="p">(</span><span class="n">customerID</span><span class="p">).</span><span class="nf">select</span> <span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span>  <span class="n">cuillen?</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'orderID'</span><span class="p">])}</span>
+   <span class="k">return</span> <span class="p">(</span><span class="n">qualifying_orders</span><span class="p">.</span><span class="nf">collect</span> <span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">row</span><span class="p">[</span><span class="s1">'date'</span><span class="p">].</span><span class="nf">month</span><span class="p">}).</span><span class="nf">uniq</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="ドメインモデルdomain-model">ドメインモデル(Domain Model)</h3>
+
+<p>さて次。古典的なオブジェクト指向ドメインモデルについて考えてみよう。ここでは、メモリ上にオブジェクトを作り、データベースのテーブル上にそれと同じ物を反映させる方法をとる（実際のシステムでは正確に一致することはないが）。ファインダーオブジェクト（finder object）がデータベースからオブジェクトを取り出し、一度メモリ上にオブジェクトを展開して、それからオブジェクト内でロジックを走らせている。</p>
+
+<p>ファインダー(finder)から見ていこう。データベースにSQLをぶち込み、それからオブジェクトを作っている。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">CustomerMapper</span>
+   <span class="k">def</span> <span class="nf">find</span> <span class="nb">name</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="kp">nil</span>
+     <span class="n">sql</span> <span class="o">=</span> <span class="s1">'SELECT * FROM customers WHERE name = ?'</span>
+     <span class="k">return</span> <span class="nb">load</span><span class="p">(</span><span class="vg">$dbh</span><span class="p">.</span><span class="nf">select_one</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="nb">name</span><span class="p">))</span> 
+   <span class="k">end</span>
+   <span class="k">def</span> <span class="nf">load</span> <span class="n">row</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="no">Customer</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'customerID'</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">'NAME'</span><span class="p">])</span>
+     <span class="n">result</span><span class="p">.</span><span class="nf">orders</span> <span class="o">=</span> <span class="no">OrderMapper</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">find_for_customer</span> <span class="n">result</span>
+     <span class="k">return</span> <span class="n">result</span>
+   <span class="k">end</span>
+ <span class="k">end</span>
+ 
+ <span class="k">class</span> <span class="nc">OrderMapper</span>
+   <span class="k">def</span> <span class="nf">find_for_customer</span> <span class="n">aCustomer</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+     <span class="n">sql</span> <span class="o">=</span> <span class="s2">"SELECT * FROM orders WHERE customerID = ?"</span> 
+     <span class="vg">$dbh</span><span class="p">.</span><span class="nf">select_all</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">aCustomer</span><span class="p">.</span><span class="nf">db_id</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="nb">load</span><span class="p">(</span><span class="n">row</span><span class="p">)}</span>
+     <span class="n">load_line_items</span> <span class="n">result</span>
+     <span class="k">return</span> <span class="n">result</span>
+   <span class="k">end</span>
+   <span class="k">def</span> <span class="nf">load</span> <span class="n">row</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="no">Order</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'orderID'</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">'date'</span><span class="p">])</span>
+     <span class="k">return</span> <span class="n">result</span>  
+   <span class="k">end</span>
+   <span class="k">def</span> <span class="nf">load_line_items</span> <span class="n">orders</span>
+     <span class="c1">#Cannot load with load(row) as connection gets busy</span>
+     <span class="n">orders</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span>
+       <span class="o">|</span><span class="n">anOrder</span><span class="o">|</span> <span class="n">anOrder</span><span class="p">.</span><span class="nf">line_items</span> <span class="o">=</span> <span class="no">LineItemMapper</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">find_for_order</span> <span class="n">anOrder</span>
+     <span class="k">end</span>
+   <span class="k">end</span>
+ <span class="k">end</span>
+ 
+ <span class="k">class</span> <span class="nc">LineItemMapper</span>
+   <span class="k">def</span> <span class="nf">find_for_order</span> <span class="n">order</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+     <span class="n">sql</span> <span class="o">=</span> <span class="s2">"select * from lineItems where orderID = ?"</span>
+     <span class="vg">$dbh</span><span class="p">.</span><span class="nf">select_all</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">order</span><span class="p">.</span><span class="nf">db_id</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="nb">load</span><span class="p">(</span><span class="n">row</span><span class="p">)}</span>
+     <span class="k">return</span> <span class="n">result</span>
+   <span class="k">end</span>
+   <span class="k">def</span> <span class="nf">load</span> <span class="n">row</span>
+     <span class="k">return</span> <span class="no">LineItem</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'lineNumber'</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">'product'</span><span class="p">],</span>  <span class="n">row</span><span class="p">[</span><span class="s1">'cost'</span><span class="p">].</span><span class="nf">to_i</span><span class="p">.</span><span class="nf">dollars</span><span class="p">)</span>
+   <span class="k">end</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>上記のloadメソッドは、以下のクラスをロードする。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">Customer</span><span class="o">...</span>
+   <span class="nb">attr_accessor</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:db_id</span><span class="p">,</span> <span class="ss">:orders</span>
+   <span class="k">def</span> <span class="nf">initialize</span> <span class="n">db_id</span><span class="p">,</span> <span class="nb">name</span>
+     <span class="vi">@db_id</span><span class="p">,</span> <span class="vi">@name</span> <span class="o">=</span> <span class="n">db_id</span><span class="p">,</span> <span class="nb">name</span>
+   <span class="k">end</span>
+ 
+ <span class="k">class</span> <span class="nc">Order</span><span class="o">...</span>
+   <span class="nb">attr_accessor</span> <span class="ss">:date</span><span class="p">,</span> <span class="ss">:db_id</span><span class="p">,</span> <span class="ss">:line_items</span>
+   <span class="k">def</span> <span class="nf">initialize</span> <span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
+     <span class="vi">@db_id</span><span class="p">,</span> <span class="vi">@date</span><span class="p">,</span> <span class="vi">@line_items</span> <span class="o">=</span> <span class="nb">id</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="p">[]</span>
+   <span class="k">end</span>
+ 
+ <span class="k">class</span> <span class="nc">LineItem</span><span class="o">...</span>
+   <span class="nb">attr_reader</span> <span class="ss">:line_number</span><span class="p">,</span> <span class="ss">:product</span><span class="p">,</span> <span class="ss">:cost</span>
+   <span class="k">def</span> <span class="nf">initialize</span> <span class="n">line_number</span><span class="p">,</span> <span class="n">product</span><span class="p">,</span> <span class="n">cost</span>
+     <span class="vi">@line_number</span><span class="p">,</span> <span class="vi">@product</span><span class="p">,</span> <span class="vi">@cost</span> <span class="o">=</span> <span class="n">line_number</span><span class="p">,</span> <span class="n">product</span><span class="p">,</span> <span class="n">cost</span>
+   <span class="k">end</span>
+</code></pre></div></div>
+
+<p>Cuillen月を決めるロジックは数メソッドで済む。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">Customer</span><span class="o">...</span>
+   <span class="k">def</span> <span class="nf">cuillenMonths</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+     <span class="n">orders</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">o</span><span class="o">|</span>
+       <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">o</span><span class="p">.</span><span class="nf">date</span><span class="p">.</span><span class="nf">month</span> <span class="k">if</span> <span class="n">o</span><span class="p">.</span><span class="nf">cuillen?</span>
+     <span class="k">end</span>
+     <span class="k">return</span> <span class="n">result</span><span class="p">.</span><span class="nf">uniq</span>
+   <span class="k">end</span>
+ 
+ <span class="k">class</span> <span class="nc">Order</span><span class="o">...</span>
+   <span class="k">def</span> <span class="nf">cuillen?</span>
+     <span class="n">discountableAmount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="nf">dollars</span>
+     <span class="n">line_items</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span> 
+       <span class="n">discountableAmount</span> <span class="o">+=</span> <span class="n">line</span><span class="p">.</span><span class="nf">cost</span> <span class="k">if</span> <span class="s1">'Talisker'</span> <span class="o">==</span> <span class="n">line</span><span class="p">.</span><span class="nf">product</span>
+     <span class="k">end</span>
+     <span class="k">return</span> <span class="n">discountableAmount</span> <span class="o">&gt;</span> <span class="mi">5000</span><span class="p">.</span><span class="nf">dollars</span>
+   <span class="k">end</span>
+</code></pre></div></div>
+
+<p>これだとトランザクションスクリプトよりもコードは長くなる。だが、オブジェクトをロードするロジックと実際のドメインロジックとがちゃんと分割されている。ここがポイント。このドメインオブジェクト上であれば、どんな処理でも同じ読み込みロジックが使えるというわけ。つまり、小さなドメインロジックがもっとたくさんあっても、それぞれに読み込みロジックを実装する必要はなく、コードの長さがそこで相殺され、結果的に何ら問題にはならないわけだ。<a href="http://www.martinfowler.com/eaaCatalog/metadataMapping.html">メタデータマッピング</a>のような技術を使えば、ここのコストはさらに削減できる。</p>
+
+<p>ただ、これでもまだSQLクエリが多いよなあ（2 + 注文の数 回）。</p>
+
+<h3 id="sql内にロジックlogic-in-sql">SQL内にロジック（Logic in SQL）</h3>
+
+<p>先ほどの2つは、データベースをストレージ同然に扱っている。やったことといえば、ごく簡単なフィルタリング機能を使って、テーブルからすべてのレコードを取り出しただけ。SQLはパワフルなクエリ言語なので、例で使ったものよりももっと凄いことが出来る。</p>
+
+<p>では、SQLの機能を目一杯使ってみよう。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">discount_months</span> <span class="n">customerID</span>
+   <span class="n">sql</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">END_SQL</span><span class="sh">
+   SELECT DISTINCT MONTH(o.date) AS month
+     FROM lineItems l 
+       INNER JOIN orders o ON l.orderID = o.orderID 
+       INNER JOIN customers c ON o.customerID = c.customerID
+     WHERE (c.name = ?) AND (l.product = 'Talisker')
+     GROUP BY o.orderID, o.date, c.NAME
+     HAVING (SUM(l.cost) &gt; 5000)
+</span><span class="no">   END_SQL</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+   <span class="vg">$dbh</span><span class="p">.</span><span class="nf">select_all</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">customerID</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">row</span><span class="p">[</span><span class="s1">'month'</span><span class="p">]}</span>
+   <span class="k">return</span> <span class="n">result</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>これを「複雑なクエリ」と呼んだが、あくまでも先ほどの例で使った簡単な select と where だけのクエリと比べて複雑だ、という意味だ。SQLクエリはもっと複雑なことが出来る。ただ、アプリケーション開発者はこれくらい複雑なだけでも避けちゃうんだよね。</p>
+
+<h2 id="パフォーマンスを考慮するlooking-at-performance">パフォーマンスを考慮する(Looking at Performance)</h2>
+
+<p>こういった問題を考える場合、みんなが最初に疑問に思うことは「パフォーマンス」についてだ。ただ個人的にはパフォーマンスは最初に考えることではないように思う。それよりも更新性に優れたコードを書くことに時間を費やすべきだ。それからプロファイラを使ってボトルネックを見つけ、その部分だけ処理の速い（だが少しだけ見にくい）コードと取り替えるといい。というのも、実際にパフォーマンスが求められる個所はシステムのほんのわずかな部分だからだ。それと、更新性に優れたコードであれば、パフォーマンスを改善するのは簡単だというのもある。</p>
+
+<p>だがまあ、とりあえず、パフォーマンスのトレードオフについて考えることにしよう。私の小さなラップトップだと、複雑な SQL クエリは他の２つのアプローチよりも20倍も速かった。スッキリとした（でも時代遅れの）ラップトップからデータセンターのサーバにアクセスしたときのパフォーマンスなんかで結論を出すわけにはいかないが、複雑なクエリがこれほど速いとは思いもしなかった。</p>
+
+<p>これは、メモリ上にロジックを置くアプローチ(in-memory approaches)の方に原因がある。これらは非効率な SQL クエリで書かれているのだ。説明の中でも言ったが、それぞれが別々にSQLクエリを発行し、顧客の注文を取得しているのだ（私のテストデータベースでは、顧客ひとりにつき1000件の注文がある）。</p>
+
+<p>これをひとつのSQLクエリに書き換えることで、ここのロード時間を大幅に削減することが出来る。まずはトランザクションスクリプトから書き換えてみよう。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="no">SQL</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">END_SQL</span><span class="sh">
+     SELECT * from orders o
+       INNER JOIN lineItems li ON li.orderID = o.orderID
+       INNER JOIN customers c ON c.customerID = o.customerID
+     WHERE c.name = ?
+</span><span class="no">   END_SQL</span>
+ 
+ <span class="k">def</span> <span class="nf">cuillen_months</span> <span class="n">customer_name</span>
+   <span class="n">orders</span> <span class="o">=</span> <span class="p">{}</span>
+   <span class="vg">$dbh</span><span class="p">.</span><span class="nf">select_all</span><span class="p">(</span><span class="no">SQL</span><span class="p">,</span> <span class="n">customer_name</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+     <span class="n">process_row</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">orders</span><span class="p">)</span>
+   <span class="k">end</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+   <span class="n">orders</span><span class="p">.</span><span class="nf">each_value</span> <span class="k">do</span> <span class="o">|</span><span class="n">o</span><span class="o">|</span>
+     <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">o</span><span class="p">.</span><span class="nf">date</span><span class="p">.</span><span class="nf">month</span> <span class="k">if</span> <span class="n">o</span><span class="p">.</span><span class="nf">talisker_cost</span> <span class="o">&gt;</span> <span class="mi">5000</span><span class="p">.</span><span class="nf">dollars</span>
+   <span class="k">end</span>
+   <span class="k">return</span> <span class="n">result</span><span class="p">.</span><span class="nf">uniq</span>
+ <span class="k">end</span>
+ 
+ <span class="k">def</span> <span class="nf">process_row</span> <span class="n">row</span><span class="p">,</span> <span class="n">orders</span>
+   <span class="n">orderID</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'orderID'</span><span class="p">]</span>
+   <span class="n">orders</span><span class="p">[</span><span class="n">orderID</span><span class="p">]</span> <span class="o">=</span> <span class="no">Order</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'date'</span><span class="p">])</span> <span class="k">unless</span> <span class="n">orders</span><span class="p">[</span><span class="n">orderID</span><span class="p">]</span>
+   <span class="k">if</span> <span class="s1">'Talisker'</span> <span class="o">==</span> <span class="n">row</span><span class="p">[</span><span class="s1">'product'</span><span class="p">]</span>
+     <span class="n">orders</span><span class="p">[</span><span class="n">orderID</span><span class="p">].</span><span class="nf">talisker_cost</span> <span class="o">+=</span> <span class="n">row</span><span class="p">[</span><span class="s1">'cost'</span><span class="p">].</span><span class="nf">dollars</span> 
+   <span class="k">end</span>
+ <span class="k">end</span>
+ 
+ <span class="k">class</span> <span class="nc">Order</span>
+   <span class="nb">attr_accessor</span> <span class="ss">:date</span><span class="p">,</span> <span class="ss">:talisker_cost</span>
+   <span class="k">def</span> <span class="nf">initialize</span> <span class="n">date</span>
+     <span class="vi">@date</span><span class="p">,</span> <span class="vi">@talisker_cost</span>  <span class="o">=</span> <span class="n">date</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="nf">dollars</span>
+   <span class="k">end</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>これは大幅な変更である。だが、3倍のスピードになった。</p>
+
+<p>ドメインモデルにも同じように変更を加えよう。ドメインモデルが複雑な構造であるメリットは分かっているはず。そう、ドメインオブジェクト内のビジネスロジックには一切手を触れず、読み込みメソッドを修正するだけでよいのだ。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">CustomerMapper</span>
+    <span class="no">SQL</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">END_SQL</span><span class="sh">
+      SELECT c.customerID,
+             c.NAME as NAME,
+             o.orderID,
+             o.date as date,
+             li.lineNumber as lineNumber,
+             li.product as product,
+             li.cost as cost
+        FROM customers c
+          INNER JOIN orders o ON o.customerID = c.customerID
+          INNER JOIN lineItems li ON o.orderID = li.orderID
+        WHERE c.name = ?
+</span><span class="no">    END_SQL</span>
+ 
+  <span class="k">def</span> <span class="nf">find</span> <span class="nb">name</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="kp">nil</span>
+    <span class="n">om</span> <span class="o">=</span> <span class="no">OrderMapper</span><span class="p">.</span><span class="nf">new</span>
+    <span class="n">lm</span> <span class="o">=</span> <span class="no">LineItemMapper</span><span class="p">.</span><span class="nf">new</span>
+    <span class="vg">$dbh</span><span class="p">.</span><span class="nf">execute</span> <span class="p">(</span><span class="no">SQL</span><span class="p">,</span> <span class="nb">name</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">sth</span><span class="o">|</span>
+      <span class="n">sth</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="nb">load</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="kp">nil</span>
+    <span class="k">unless</span> <span class="n">result</span><span class="p">.</span><span class="nf">order</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'orderID'</span><span class="p">])</span>
+      <span class="n">result</span><span class="p">.</span><span class="nf">add_order</span><span class="p">(</span><span class="n">om</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
+    <span class="k">end</span>
+    <span class="n">result</span><span class="p">.</span><span class="nf">order</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'orderID'</span><span class="p">]).</span><span class="nf">add_line_item</span><span class="p">(</span><span class="n">lm</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">row</span><span class="p">))</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="k">return</span> <span class="n">result</span>
+  <span class="k">end</span>
+</code></pre></div></div>
+
+<p>（すまん。ドメインオブジェクトを一切変更する必要ないと言ったが、あれはちょっと嘘。パフォーマンスを上げるためには顧客のデータ構造を array から hash に変える必要があったんだ。だが、何度も言うが、これは本当にオブジェクトの内部的な変更でしかない。ディスカウントの計算部分には何の影響も与えてはいない）</p>
+
+<p>いくつかのポイントがある。まず最初。これは覚えておいて損はない。メモリ上のコードは、インテリジェントなクエリを使えばさらにスピードアップすることがある。それから次。データベースに何度も問い合わせていないか注意してみてみよう。読み込みを１回に出来ないか確認してみよう。ドメインモデルを使っているとき、これは見落としがちなことなんだ。クラスは１度しかアクセスしていないんじゃないかと勘違いしがちだからね（一度に一行ずつしか読み込まないひとを見たことがあるが、こんな頭おかしいやり方はレアケース）。</p>
+
+<p>トランザクションスクリプトとドメインモデルとの一番大きな違いは、クエリ構造への影響である。トランザクションスクリプトの例では、まったく新しいスクリプトを作ったと言ってもよい。さらに言うと、似たようなデータを使っているドメインロジックスクリプトがたくさんあれば、それぞれを変更しなくてはならないことになる。一方、ドメインモデルを使うと、ドメインロジック部分はきれいに離されているため、何も変更せずに済む。ドメインロジックがたくさんあればあるほど、これは大きな違いになるだろう。これは、トランザクションスクリプトとドメインロジックのいずれかを選択する際の一般的なトレードオフである（ドメインモデルの場合、ドメインロジックがたくさんあればあるほど、ドメインロジックがデータベースにアクセスする部分の複雑なコード[いわば初期投資分だな]が回収できるってわけ）。</p>
+
+<p>複数テーブルへのクエリでも、インメモリのアプローチは複雑なSQLよりも遅い（私が計測したときは6倍の時間がかかっていた）。これは理解できる。複雑なSQLは、レコードを選択し、データベース内でコストを合計し、ちょっとした値をクライアントに戻すだけでよいが、一方、インメモリアプローチでは、5000行を必死に集めて、それからクライアントに戻さなければならないからだ。</p>
+
+<p>パフォーマンスが唯一の懸念事項ではない。だが、パフォーマンスを重視してしまうことが往々にしてある。ぜったい改良しなければならないボトルネックがあれば、他の要因はそりゃまあ二の次になるわな。結果として、ドメインモデルファンの多くは、最初からメモリ上でロジックを動かすようになる。で、ボトルネックが発生したときだけ、複雑なSQLクエリを使う、と。こうなる。</p>
+
+<p>これも指摘しといたほうがいいかもしれない。この例から、データベースの強みが分かるのだ。多くのクエリは、ここでやったような強力な select や集約機能を使ってない。だから、こんなにパフォーマンスが変わることもない。あとひとつ。ユーザーが複数人いると、クエリの振る舞いが劇的に変わることがある。なので、実際のプロファイリングはちゃんと複数人の環境でやったほうがいい。単独のクエリでは発生しないような重たーいロックがかかったりするから。</p>
+
+<h2 id="更新性modifiability">更新性（Modifiability）</h2>
+
+<p>EAは寿命が長いので、これだけは覚えておいてもらいたい。「EAはこれからめちゃくちゃ変わる」。つまり、変更しやすいようシステムを設計しなくてはいかんわけだ。メモリ上にビジネスロジックを埋め込むのは、保守のためだと言っていい。</p>
+
+<p>SQLはいろんなことが出来る。ただ、それには限度がある。ものすごくクレバーなコーディングを要求するものがあるのだ。たとえば、データセットのメジアンを一目見て分かるようアルゴリズムを組むとか。標準ではない拡張機能を使わざるを得ないものもある。ただそれだと、移植性は損なわれてしまう。</p>
+
+<p>データベースにデータを格納する前に、ビジネスロジックを走らせたいことがよくある（特に情報が保留中の時など）。このとき、データベースにデータを入れてしまうと問題になることがある。一時的なデータ(pending session data)は本番用のデータ(fully accepted data)と別にしておきたいからだ。一時的なデータには、本番用データと同じ検証ルールを適用しないほうがよい。</p>
+
+<h3 id="分かりやすさunderstandability">分かりやすさ(Understandability)</h3>
+
+<p>SQLは特別な言語として見られがちだ。アプリケーション開発者はSQLを使わなくてもいいとまで言われている。データベースフレームワークを使えば、SQLを触らなくても済むとも言われている。私はこういった意見を聞くにつけ、ちょっとおかしいんじゃないかと思っている。ちょっとくらい複雑なSQLだったらぜんぜん平気だし、それで満足できているもの。だけど多くの開発者たちは、SQLはこれまでの言語に比べて扱いが難しいし、文法を理解できるのはSQLエキスパートだけだと思っているようだ。</p>
+
+<p>いいテストがある。前述の3つのソリューションをみてみよう。そして、ドメインロジックを追うのが一番簡単なのはどれか、一番修正しやすいのはどれなのかを決めるのだ。私はドメインモデルバージョン（いくつかのメソッドだけのやつ）が一番コードを追いやすい（データベースアクセス部分が切り離されているからだ）。次はSQLバージョン（それからトランザクションスクリプト）。ただ、人によって好みはある。</p>
+
+<p>もしチーム内にSQLに詳しいひとがいなかったら、ドメインロジックをSQLから切り離したほうがいい（と同時に、メンバにSQLのトレーニングをしたほうがいいだろう。せめて中位のレベルになるまでは）。このとき、チーム構成にも気を配ったほうがいい。人によってアーキテクチャが決定されることもあるからだ。</p>
+
+<h3 id="重複排除avoiding-duplication">重複排除(Avoiding Duplication)</h3>
+
+<p>今まで出会ったものの中で、シンプルだが最もパワフルな設計原則。それは、「重複排除の原則」だ。これは『<a href="http://www.amazon.com/exec/obidos/ASIN/020161622X">the Pragmatic Programmers</a>（邦訳『<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4894712741/">達人プログラマー</a>』）』の中で「DRY（Don’t Repeat Yourself）原則」として提唱されたものだ。</p>
+
+<p>DRY原則をこのケースに適用して考えてみよう。このアプリケーションに別の仕様を加えことにする。「ある月の顧客の注文リストがある。注文には、注文ID、日付、合計金額、Cuillenに該当するかが表示されており、合計金額でソートされている」。</p>
+
+<p>このクエリをドメインオブジェクトのアプローチを使って行おうとすれば、
+注文クラスに合計金額を計算するメソッドを追加する必要がある。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">Order</span><span class="o">...</span>
+   <span class="k">def</span> <span class="nf">total_cost</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="nf">dollars</span>
+     <span class="n">line_items</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span><span class="o">|</span><span class="n">line</span><span class="o">|</span> <span class="n">result</span> <span class="o">+=</span> <span class="n">line</span><span class="p">.</span><span class="nf">cost</span><span class="p">}</span>
+     <span class="k">return</span> <span class="n">result</span>
+   <span class="k">end</span>
+</code></pre></div></div>
+
+<p>適切な場所にメソッド置けば、注文リストを簡単に表示できる。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">class</span> <span class="nc">Customer</span>
+   <span class="k">def</span> <span class="nf">order_list</span> <span class="n">month</span>
+     <span class="n">result</span> <span class="o">=</span> <span class="s1">''</span>
+     <span class="n">selected_orders</span> <span class="o">=</span> <span class="n">orders</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span><span class="o">|</span><span class="n">o</span><span class="o">|</span> <span class="n">month</span> <span class="o">==</span> <span class="n">o</span><span class="p">.</span><span class="nf">date</span><span class="p">.</span><span class="nf">month</span><span class="p">}</span>
+     <span class="n">selected_orders</span><span class="p">.</span><span class="nf">sort!</span> <span class="p">{</span><span class="o">|</span><span class="n">o1</span><span class="p">,</span> <span class="n">o2</span><span class="o">|</span> <span class="n">o2</span><span class="p">.</span><span class="nf">total_cost</span> <span class="o">&lt;=&gt;</span> <span class="n">o1</span><span class="p">.</span><span class="nf">total_cost</span><span class="p">}</span>
+     <span class="n">selected_orders</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">o</span><span class="o">|</span>
+       <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="nb">sprintf</span><span class="p">(</span><span class="s2">"%10d %20s %10s %3s</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>  
+       <span class="n">o</span><span class="p">.</span><span class="nf">db_id</span><span class="p">,</span> <span class="n">o</span><span class="p">.</span><span class="nf">date</span><span class="p">,</span> <span class="n">o</span><span class="p">.</span><span class="nf">total_cost</span><span class="p">,</span> <span class="n">o</span><span class="p">.</span><span class="nf">discount?</span><span class="p">)</span>
+     <span class="k">end</span>
+     <span class="k">return</span> <span class="n">result</span>
+   <span class="k">end</span>
+</code></pre></div></div>
+
+<p>同じことをSQL単体で行うとすれば、サブクエリ（a correlated sub-query）が必要となる。サブクエリ……怖いよね。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">order_list</span> <span class="n">customerName</span><span class="p">,</span> <span class="n">month</span>
+   <span class="n">sql</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">END_SQL</span><span class="sh">
+      SELECT o.orderID, o.date, sum(li.cost) as totalCost,
+             CASE WHEN
+               (SELECT SUM(li.cost)
+                  FROM lineitems li
+                  WHERE li.product = 'Talisker' 
+                    AND o.orderID = li.orderID) &gt; 5000 
+                THEN 'Y' 
+                ELSE 'N' 
+             END AS isCuillen
+        FROM  dbo.CUSTOMERS c 
+          INNER JOIN dbo.orders o ON c.customerID = o.customerID 
+          INNER JOIN lineItems li ON o.orderID = li.orderID
+        WHERE (c.name = ?) 
+          AND (MONTH(o.date) = ?) 
+        GROUP by o.orderID, o.date
+        ORDER BY totalCost desc 
+</span><span class="no">   END_SQL</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="s2">""</span>
+   <span class="vg">$dbh</span><span class="p">.</span><span class="nf">select_all</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">customerName</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+       <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="nb">sprintf</span><span class="p">(</span><span class="s2">"%10d %20s %10s %3s</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> 
+            <span class="n">row</span><span class="p">[</span><span class="s1">'orderID'</span><span class="p">],</span> 
+            <span class="n">row</span><span class="p">[</span><span class="s1">'date'</span><span class="p">],</span> 
+            <span class="n">row</span><span class="p">[</span><span class="s1">'totalCost'</span><span class="p">],</span>
+            <span class="n">row</span><span class="p">[</span><span class="s1">'isCuillen'</span><span class="p">])</span>
+   <span class="k">end</span>
+   <span class="k">return</span> <span class="n">result</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>人によってどっちが分かりやすいかは違うだろう。だが、ここで私が言いたいのは、重複についてである。今回のクエリは、単に月を返すだけの前回のクエリと重複している部分がある。ドメインオブジェクトのアプローチだと、この重複は起こらない。Cuillenの仕組みを変えたいと思っても、cuillen? メソッドを変更するだけで、すべてのユーザーがアップデートされる。</p>
+
+<p>重複排除問題でSQLに触れないのはフェアではないだろう。リッチなSQLアプローチでも、重複問題を避けることは出来るのだ。データベース熱狂者は必死になってこう言うに違いない。ビューを使え、と。</p>
+
+<p>ビューを定義しよう。下のクエリから Orders2 というビューを定義した。</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span>  <span class="n">TOP</span> <span class="mi">100</span> <span class="n">PERCENT</span> 
+              <span class="n">o</span><span class="p">.</span><span class="n">orderID</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">customerID</span><span class="p">,</span> <span class="n">o</span><span class="p">.</span><span class="nb">date</span><span class="p">,</span> 
+              <span class="k">SUM</span><span class="p">(</span><span class="n">li</span><span class="p">.</span><span class="n">cost</span><span class="p">)</span> <span class="k">AS</span> <span class="n">totalCost</span><span class="p">,</span> 
+              <span class="k">CASE</span> <span class="k">WHEN</span>
+                    <span class="p">(</span><span class="k">SELECT</span> <span class="k">SUM</span><span class="p">(</span><span class="n">li2</span><span class="p">.</span><span class="n">cost</span><span class="p">)</span>
+                       <span class="k">FROM</span> <span class="n">lineitems</span> <span class="n">li2</span>
+                       <span class="k">WHERE</span> <span class="n">li2</span><span class="p">.</span><span class="n">product</span> <span class="o">=</span> <span class="s1">'Talisker'</span> 
+                         <span class="k">AND</span> <span class="n">o</span><span class="p">.</span><span class="n">orderID</span> <span class="o">=</span> <span class="n">li2</span><span class="p">.</span><span class="n">orderID</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5000</span> 
+                 <span class="k">THEN</span> <span class="s1">'Y'</span> 
+                 <span class="k">ELSE</span> <span class="s1">'N'</span> 
+              <span class="k">END</span> <span class="k">AS</span> <span class="n">isCuillen</span>
+  <span class="k">FROM</span> <span class="n">dbo</span><span class="p">.</span><span class="n">orders</span> <span class="n">o</span> 
+    <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">dbo</span><span class="p">.</span><span class="n">lineItems</span> <span class="n">li</span> <span class="k">ON</span> <span class="n">o</span><span class="p">.</span><span class="n">orderID</span> <span class="o">=</span> <span class="n">li</span><span class="p">.</span><span class="n">orderID</span> 
+    <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">dbo</span><span class="p">.</span><span class="n">CUSTOMERS</span> <span class="k">c</span> <span class="k">ON</span> <span class="n">o</span><span class="p">.</span><span class="n">customerID</span> <span class="o">=</span> <span class="k">c</span><span class="p">.</span><span class="n">customerID</span>
+  <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">o</span><span class="p">.</span><span class="n">orderID</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">customerID</span><span class="p">,</span> <span class="n">o</span><span class="p">.</span><span class="nb">date</span>
+  <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">totalCost</span> <span class="k">DESC</span>
+</code></pre></div></div>
+
+<p>これで、月を取得するのも、注文リストを作るのも、このビューから行うことが出来る。</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">def</span> <span class="nf">cuillen_months_view</span> <span class="n">customerID</span>
+   <span class="n">sql</span> <span class="o">=</span> <span class="s2">"SELECT DISTINCT month(date) FROM orders2 WHERE name = ? AND isCuillen  = 'Y'"</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+   <span class="vg">$dbh</span><span class="p">.</span><span class="nf">select_all</span><span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">customerID</span><span class="p">)</span> <span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span>
+   <span class="k">return</span> <span class="n">result</span>
+ <span class="k">end</span>
+ 
+ <span class="k">def</span> <span class="nf">order_list_from_view</span> <span class="n">customerName</span><span class="p">,</span> <span class="n">month</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="s1">''</span>
+   <span class="n">sql</span> <span class="o">=</span> <span class="s2">"SELECT * FROM Orders2 WHERE name = ? AND month(date) = ?"</span>
+   <span class="vg">$dbh</span><span class="p">.</span><span class="nf">select_all</span><span class="p">(</span><span class="no">SQL</span><span class="p">,</span> <span class="n">customerName</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+       <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="nb">sprintf</span><span class="p">(</span><span class="s2">"%10d %10s %10s</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> 
+            <span class="n">row</span><span class="p">[</span><span class="s1">'orderID'</span><span class="p">],</span> 
+            <span class="n">row</span><span class="p">[</span><span class="s1">'date'</span><span class="p">],</span> 
+            <span class="n">row</span><span class="p">[</span><span class="s1">'isCuillen'</span><span class="p">])</span>
+   <span class="k">end</span>
+   <span class="k">return</span> <span class="n">result</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>このビューのおかげで、2つのクエリは簡単になり、キーとなるビジネスロジックもひとつの場所に置くことが出来た。</p>
+
+<p>このようにビューを作って重複を回避することはあまり行われていないようだ。今までに読んだSQL本でもこういったことには触れていない。データベース開発者とアプリケーション開発者との間にギャップがあるために、こういったことを行うのも難しい場合がある。
+アプリケーション開発者はビューを作らせてもらえず、データベース開発者はこういったビューを作らずにボトルネックを作り、アプリケーション開発者を困らせる。DBAは、ひとつのアプリケーションが必要だからといってビューを作るようなことはしない。SQLも、他のものと同じく、十分注意して設計する必要があると思うのだが。</p>
+
+<h3 id="カプセル化encapsulation">カプセル化(Encapsulation)</h3>
+
+<p>カプセル化はよく知られたオブジェクト指向設計の原則だ。この原則はソフトウェア設計全般にも適用できるように思う。原則としてプログラムは、プロシージャコールインターフェイスの裏側にデータ構造を隠すモジュール群に分解されるべきだと言われる。これはシステムに大きな影響を与えずに基本データ構造を変更できるようにするためである。</p>
+
+<p>すると、データベースはどうやってカプセル化すればよいだろう？ うまい具合にカプセル化できると、アプリケーション全体を変更することなく、データベーススキーマを変更することが可能なはずだ。</p>
+
+<p>企業アプリケーションをカプセル化する一般的なやり方は、レイヤ分けである。ドメインロジックをデータソースロジックから切り離すことが目的である。これで、ビジネスロジックを担当するコードがデータベース設計変更時に影響を与えられることはない。</p>
+
+<p>ドメインモデルバージョンは上記のカプセル化の良い例である。ドメインロジックはメモリ上のオブジェクトでのみ動くようになっており、データを取得するところは完全に切り離されている。トランザクションスクリプトのアプローチだと result set が返ってくるのでデータベースの構造は分かってしまうが、 ファインダーメソッド(find_XXX)でデータベースはカプセル化されている。</p>
+
+<p>アプリケーションの世界では、プロシージャやオブジェクトのAPI経由でカプセル化を行うことが出来る。SQLでそれに相当するものはビューである。もしテーブルを変更するとすれば、変更前の古いテーブルをサポートするビューを作ればよい。問題はアップデートだ。ビュー経由ではちゃんとアップデートが行われないことがある。多くのshopsがDML(Data Management Language)をストアドプロシージャでラップするのはこのためである。</p>
+
+<p>カプセル化はビューの変更をサポートするだけじゃない。データへのアクセス部分とビジネスロジックの定義部分を分けるためにも役立つ。SQLを使ってしまうと、上記の2点ははっきりと分けることができない。だが、ある種のカプセル化を行うことは出来る。</p>
+
+<p>たとえば、上でクエリ内の重複を避けるために作ったビューだが、
+あのビューはデータソースビューとビジネスロジックビューに分けることが出来る。
+データソースビューはこんな感じになる。</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">o</span><span class="p">.</span><span class="n">orderID</span><span class="p">,</span> <span class="n">o</span><span class="p">.</span><span class="nb">date</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">customerID</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> 
+        <span class="k">SUM</span><span class="p">(</span><span class="n">li</span><span class="p">.</span><span class="n">cost</span><span class="p">)</span> <span class="k">AS</span> <span class="n">total_cost</span><span class="p">,</span>
+        <span class="p">(</span><span class="k">SELECT</span> <span class="k">SUM</span><span class="p">(</span><span class="n">li2</span><span class="p">.</span><span class="n">cost</span><span class="p">)</span>
+           <span class="k">FROM</span> <span class="n">lineitems</span> <span class="n">li2</span>
+           <span class="k">WHERE</span> <span class="n">li2</span><span class="p">.</span><span class="n">product</span> <span class="o">=</span> <span class="s1">'Talisker'</span> <span class="k">AND</span> <span class="n">o</span><span class="p">.</span><span class="n">orderID</span> <span class="o">=</span><span class="n">li2</span><span class="p">.</span><span class="n">orderID</span>
+         <span class="p">)</span> <span class="k">AS</span> <span class="n">taliskerCost</span>
+    <span class="k">FROM</span>  <span class="n">dbo</span><span class="p">.</span><span class="n">CUSTOMERS</span> <span class="k">c</span> 
+      <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">dbo</span><span class="p">.</span><span class="n">orders</span> <span class="n">o</span> <span class="k">ON</span> <span class="k">c</span><span class="p">.</span><span class="n">customerID</span> <span class="o">=</span> <span class="n">o</span><span class="p">.</span><span class="n">customerID</span> 
+      <span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">dbo</span><span class="p">.</span><span class="n">lineItems</span> <span class="n">li</span> <span class="k">ON</span> <span class="n">li</span><span class="p">.</span><span class="n">orderID</span> <span class="o">=</span> <span class="n">o</span><span class="p">.</span><span class="n">orderID</span>
+    <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">o</span><span class="p">.</span><span class="n">orderID</span><span class="p">,</span> <span class="n">o</span><span class="p">.</span><span class="nb">date</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">customerID</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">name</span>
+</code></pre></div></div>
+
+<p>このビューは、よりドメインロジックにフォーカスした他のビュー内でも使うことができる。以下は、Cuillenに該当するかどうかを示すものだ。</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">SELECT</span> <span class="n">orderID</span><span class="p">,</span> <span class="nb">date</span><span class="p">,</span> <span class="n">customerID</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">total_cost</span><span class="p">,</span> 
+        <span class="k">CASE</span> <span class="k">WHEN</span> <span class="n">taliskerCost</span> <span class="o">&gt;</span> <span class="mi">5000</span> <span class="k">THEN</span> <span class="s1">'Y'</span> <span class="k">ELSE</span> <span class="s1">'N'</span> <span class="k">END</span> <span class="k">AS</span> <span class="n">isCuillen</span>
+   <span class="k">FROM</span> <span class="n">dbo</span><span class="p">.</span><span class="n">OrdersTal</span>
+</code></pre></div></div>
+
+<p>こういった考え方は、ドメインモデル内にデータを読み込む際にも使える。前もって、ドメインモデルのパフォーマンス問題にどう取り組めばよいか述べた。Cuillen月を取得する完全なクエリを使うか、それとも代わりにシングル SQL クエリを使うかという話だ。もうひとつの方法は、上記のデータソースビューを使う方法である。これを使えばドメインロジックをドメインモデルの中に入れたままハイパフォーマンスを維持できる。商品は必要なときに <a href="http://www.martinfowler.com/eaaCatalog/lazyLoad.html">Lazy Load</a>で読み込まれる。それにあった要約情報は、ビュー経由で取得することができる。</p>
+
+<p>ビューを使うと（もしくはストアドプロシージャを使うと）、ある程度カプセル化を行うことが出来る。多くのEAデータはいろいろな場所に存在している。様々なRDBだけでなく、レガシーシステムにも、他のアプリケーションにも、ファイルにもデータは含まれる。XMLが成長していけば、ネットワーク経由で平文のファイルを共有しあうこともあるだろう。この場合、アプリケーションコード内のレイヤでのみ完全なカプセル化を行うことが出来る。これは、ドメインロジックをメモリにおいたほうがいいということを示すことでもある。</p>
+
+<h3 id="データベース移植性database-portability">データベース移植性（Database Portability）</h3>
+
+<p>開発者の多くが複雑なSQLを避けているのは、データベースの移植性に原因がある。標準SQLはどのデータベースでも使えたはずじゃなかったのか。だからデータベースの移植は簡単だったんじゃないのか。</p>
+
+<p>実際は、そんなことはない。だいたい標準ではあるのだが、あちこちで躓くことになる。注意してSQLを作ればデータベースサーバを変更するのに手間がかからないこともない。ただそれだと、SQLの機能が大きく損なわれることになる（訳注：標準的なSQL機能しか互換性がない）。</p>
+
+<p>データベースを移植するかどうかというのはプロジェクト次第だ。ただこれは、以前よりも問題にならなくなっている。データベース市場は拡大し、主要な３企業で占められており、企業はそのいずれかのデータベース会社と強力に結びついているからだ。データベースの変更要請がないのであれば、持っているデータベースの特別な機能を十分活用したほうが良い。</p>
+
+<p>移植性が必要なひともまだいる。複数のデータベースと接続できる製品を提供しているひとたちだ。安全に使用できるのはどのSQLなのか注意しなくてはならないと言って、彼らはロジックをSQLに埋め込むことに強く反対している。</p>
+
+<h3 id="テストの容易性testability">テストの容易性（Testability）</h3>
+
+<p>テストの容易性は設計の話題にあまりあがらない。<a href="http://www.amazon.com/exec/obidos/ASIN/0321146530%20">テスト駆動型開発</a>（TDD）の良さは、テストの容易性が設計に欠くことのできないものであることを再認識させてくれたところにある。</p>
+
+<p>実務ではSQLのテストは行われていないように思う。重要なビューやストアドプロシージャが構成管理ツール上に置かれているのさえ見たことが無い。テストが容易なSQLを作ることは、確実に出来る。データベース環境でテストできる<a href="http://www.xprogramming.com/software.htm">xunit</a>ツールがいくつかあったはずだ。テストができるようにテストデータベースを作るといった<a href="http://www.martinfowler.com/articles/evodb.html">Evolutionary database</a>（日本語訳：<a href="http://objectclub.esm.co.jp/eXtremeProgramming/evodb-jp.html">データベースの進化的設計</a>）テクニックは、TDDプログラマが楽しんでやっていることに非常に近い。</p>
+
+<p>違いがよく分かるのはパフォーマンスである。製品の中にSQLを組み込むよりも、直接 SQL を発行した方が速いわけだが、ビジネスロジックのテストであればメモリ上で行ったほうがより速い。実際のデータベースに接続する代わりに <a href="http://www.martinfowler.com/eaaCatalog/serviceStub.html">Service Stub</a>を使えるようデータベースまわりがきちんと設計されていたら、という話ではあるが。</p>
+
+<h2 id="まとめsumming-up">まとめ(Summing Up)</h2>
+
+<p>いろいろ語ってきたけど、そろそろ結論。私がここで語ってきたいろんなことについて、あなた方はしっかりと考えなきゃいけない。あなた自身のバイアスをかけて、良いのか悪いのか判断して欲しい。それから、あなたがどのやり方を採用すればよいのかを決めて欲しい。リッチなクエリにドメインロジックを入れるのが本当に良いのかどうか。</p>
+
+<p>私が状況を考察するときに注意するのは、データが論理的にひとつのRDBに存在しているのか、それとも分散して存在して（SQLは使えないで）いるのかという点である。データが分散しているようであれば、データソース層をカプセル化して、ドメインロジックをメモリ上に置くようにすると良い。SQLが強力であっても、ここでは意味がない。SQLが使えないデータソースもあるからだ。</p>
+
+<p>データのほとんどが論理的にひとつのデータベースに格納されている場合、けっこう面白いことになる。まず2つ考えることがある。ひとつはプログラム言語は何にするか（SQLかアプリケーション用の言語か）。もうひとつは、どこでコードを走らせるかである（SQLを使ってデータベース上で走らせるか、それともメモリ上か）。</p>
+
+<p>SQLによって簡単になることもあるし、難しくなることもある。SQLが簡単だと思う人もいれば、何がなんだかよくわからないっていう人もいる。ここでは、その人が快適かどうかというのが大切だ。ロジックをSQLに入れるならば、移植性は諦めた方がいい（ベンダ依存の拡張機能を使って楽しんでいるだろうし）。移植性を確保しておきたいのなら、SQLにロジックを入れないこと。</p>
+
+<p>これまで更新性について述べてきた。これはまず先に考えなければならないものだと思う。だが、致命的なパフォーマンス問題が発生したらそちらを優先すべきだろう。インメモリのアプローチをとっている時にボトルネックが発生したら、強力なSQLを使って解決したほうがよい。上でまとめたように、クエリをデータソースよりに近づけたらどれだけパフォーマンスが上がるのかをちゃんと見ておいたほうが良いと思う。そうすることで、SQL内のドメインロジックを最小限にとどめることができるはずだから。</p>
+
+<h2 id="改定履歴revision-history">改定履歴(Revision History)</h2>
+
+<p>このドキュメントをアップデートしたらここに記述しておく。</p>
+
+<p>'’February 2003’’:</p>
+
+<hr>
+
+<ul>
+  <li>日本語訳：kdmsnr</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>この記事の存在を教えてくれた、[[かくたに</td>
+          <td>http://www.kakutani.com/compass/]]さんにピース。</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>牛尾剛さんの日本語訳を参考にしました。ありがとうございます。</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>arton様の[[ご指摘</td>
+          <td>http://arton.no-ip.info/diary/20031216.html#p06]]。どうも！</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[[ファウラーが立てた(?)スレ</td>
+          <td>http://www.artima.com/forums/flat.jsp?forum=32&amp;thread=4304]]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>2003-12-16 (火) 20:22:21 ‘’[[つとむくん]]’’ : portability は移植性ではないでしょうか？</li>
+  <li>2003-12-16 (火) 23:45:20 ‘’[[kdmsnr]]’’ : アルクもそうみたいですね。修正します。</li>
+  <li>2003-12-18 (木) 19:21:18 ‘’[[kdmsnr]]’’ : はんばあぐさんの日記より<a href="http://sgtpepper.net/hyspro/diary/20031218.html#p03">http://sgtpepper.net/hyspro/diary/20031218.html#p03</a>
+</li>
+  <li>2003-12-22 (月) 15:44:47 ‘’[[kdmsnr]]’’ : <a href="http://www.ku3g.org/negi/diary/?20031221#200312212">http://www.ku3g.org/negi/diary/?20031221#200312212</a>
+</li>
+  <li>2003-12-22 (月) 15:45:59 ‘’[[kdmsnr]]’’ : <a href="http://arton.no-ip.info/diary/20031217.html#p04">http://arton.no-ip.info/diary/20031217.html#p04</a>
+</li>
+  <li>2004-01-02 (金) 19:37:56 ‘’[[kdmsnr]]’’ : <a href="http://www.commentout.com/people/takai/diary/index.cgi/view/books/0321127420.html">http://www.commentout.com/people/takai/diary/index.cgi/view/books/0321127420.html</a>
+</li>
+  <li>2005-05-07 (土) 22:55:36 ‘’[[名無しさん]]’’ : http://c2.com/cgi/wiki?DomainLogicAndSqlArticle</li>
+  <li>2005-07-10 (日) 12:34:57 名無しさん : 「早い」は「速い」の間違い？</li>
+  <li>2005-10-25 (火) 22:28:27 kdmsnr : <a href="http://d.hatena.ne.jp/yuuntim/20051025#p1">http://d.hatena.ne.jp/yuuntim/20051025#p1</a>
+</li>
+</ul>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewbox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>意味の希薄化 - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/SemanticDiffusion">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">意味の希薄化</h1>
+    <p class="post-meta" style="text-align:right">
+      2006-12-14
+      
+      [<a href="https://martinfowler.com/bliki/SemanticDiffusion.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2006-12-14-SemanticDiffusion.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?agile%20adoption" style="background-color: #ffc">agile adoption</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- http://www.martinfowler.com/bliki/SemanticDiffusion.html -->
+
+<!-- I have the habit of creating Neologisms to describe the things I see in software development. 
+ !-- It's a common habit amongst writers in this field, 
+ !-- 	for software development still lacks much useful jargon. 
+ !-- One of the problems with building a jargon 
+ !-- 	is that terms are vulnerable to losing their meaning, 
+ !-- in a process of semantic diffusion - to use yet another potential addition to our jargon. -->
+
+<p>ソフトウェア開発で目撃したものを説明するために、私は<a href="Neologisms">造語</a>を作る習慣があります。
+便利な用語が少ないので、ソフトウェア開発の分野の書き手はこのようなことをよくやります。
+造語を作るときの問題は、意味の希薄化により本来の意味が失われ、別の意味が追加されてしまうことです。</p>
+
+<!-- Semantic diffusion 
+ !-- 	occurs when you have a word that is coined by a person or group,often with a pretty good definition, 
+ !-- 	but then gets spread through the wider community in a way that weakens that definition. 
+ !-- This weakening risks losing the definition entirely - and with it any usefulness to the term. -->
+
+<p>意味の希薄化が発生するのは、個人やグループが作った用語があり、適切に定義されていたにもかかわらず、歪められた定義がコミュニティに広まったときです。
+これにより、用語の定義が完全に失われる危険性があります。
+また、それに伴い、用語の利便性も失われてしまうでしょう。</p>
+
+<!-- I'm partly prompted to write this because I see this semantic diffusion happening very publicly to two terms at the moment: 'agile' and 'Web2.0'.  -->
+<!-- Both were coined in the last few years 
+ !-- 	and both come with lengthy definitions. (Agile has the agile manifesto, together with numerous books and articles by the authors of the manifesto.  -->
+<!-- Web 2.0 has an excellent definitional article by Tim O'Reilly.)  -->
+<!-- Yet both of these face a lot of corruption in the field.  -->
+<!-- I've run into people who think agile methods mean you shouldn't do any planning and those who think Web 2.0 is solely about using AJAX. 
+ !-- (A more personal case is RefactoringMalapropism, but I'll leave that aside for the moment.) -->
+
+<p>私が本記事を書こうと思ったのは、「アジャイル」と「<a href="Web2.0">Web 2.0</a>」に意味の希薄化が発生しているからです。
+いずれも数年前に作られた用語であり、しっかりとした定義があります（アジャイルには<a href="https://agilemanifesto.org/">アジャイルマニフェスト</a>があり、署名者たちが執筆した書籍や<a href="https://www.martinfowler.com/articles/newMethodology.html">記事</a>も多数あります。Web 2.0にはTim O’Reillyが<a href="http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-web-20.html">定義を記したすばらしい記事</a>があります）。
+しかし、どちらの用語も現場では意味が改変されています。
+私は「アジャイル手法では計画を立てることはない」や「Web 2.0とはAJAXを使用することである」と誤解している人たちに出会ったことがあります（個人的なケースとしては<a href="RefactoringMalapropism">リファクタリングの誤用</a>もありますが、それは脇に置いておきましょう）。</p>
+
+<!-- Semantic diffusion is essentially a succession of the telephone game 
+ !-- 	where a different group of people to the originators of a term start talking about it 
+ !-- 	without being careful about following the original definition.  -->
+<!-- These people are listened to by a further group 
+ !-- 	which then goes on to add their own distortions.  -->
+<!-- After a few of these hand-offs 
+ !-- 	it's easy to lose a lot of the key meaning of the term 
+ !-- 	unless you make the point of going back to the originators.  -->
+<!-- It's ironic that it's popular terms that tend to suffer from this the most.  -->
+<!-- That's inevitable, of course, since unpopular terms have less people to create the telephone chains. -->
+
+<p>意味の希薄化は<a href="https://en.wikipedia.org/wiki/Chinese_whispers">伝言ゲーム</a>の一種です。
+用語の発案者ではない人たちが、元の定義に注意を払うことなく用語について話しているのです。
+その話を聞いた人たちが、さらに独自の歪みを追加します。
+このような伝言ゲームを何度か繰り返していくと、発案者まで戻らない限り、用語の重要な意味が失われます。
+皮肉なことに、この影響を最も受けやすいのが人気のある用語です。
+人気のない用語の伝言ゲームに加わる人はいないので、これは必然とも言えます。</p>
+
+<!-- Semantic diffusion tends to coincide 
+ !-- 	with hype phase of an idea.  -->
+<!-- As an idea becomes attractive, lots of people are... well... attracted.  -->
+<!-- Many of these followers talk about the term and teach about it.  -->
+<!-- If these people aren't careful to go back to the source, 
+ !-- 	the telephone game begins.  -->
+<!-- Popular ideas also spread primarily 
+ !-- 	though communication media 
+ !-- 	that are more likely to lead to misunderstanding - such as writing. 
+ !-- Many followers aren't fortunate enough to work directly with the originators and thus learn directly from them. -->
+
+<p>意味の希薄化は、アイデアのハイプサイクルの「ピーク」と一致します。
+アイデアが魅力的になると、多くの人たちが……何と言うか……その魅力にひかれます。
+そして、その用語について話したり、教えたりします。
+こうした人たちが原典に戻ることはありません。伝言ゲームの始まりです。
+また、人気のあるアイデアは誤解を生みやすいメディア（文書）を通じて広がります。
+多くの人たちが発案者から直接学べるわけではないのです。</p>
+
+<!-- A related indicator to popularity is desirability.  -->
+<!-- A word that sounds good may be more likely to suffer from semantic diffusion.  -->
+<!-- 'Agile' sounds like something you'd certainly want to be, 
+ !-- 	the antonyms of agile aren't at all appealing.  -->
+<!-- Who would want to still be merely 1.0 of the web?  -->
+<!-- Kent Beck noticed this effect and thus deliberately picked Extreme Programming as a name 
+ !-- 	because it less inherently desirable: 'extreme' is often used as a pejorative.  -->
+<!-- Using a less desirable term 
+ !-- 	may reduce semantic diffusion, but I don't think it avoids the problem completely.  -->
+<!-- After all we saw semantic diffusion occur to 'object-oriented' which is a neutral term. -->
+
+<p>人気と関連する指標は「望ましさ」です。
+響きの良い単語は意味の希薄化の影響を受けやすいのです。
+「アジャイル」はそうなりたいと思えますが、アジャイルの反対語はそうではありません。
+「Web 1.0」のままでいたい人などいるでしょうか？
+Kent Beckはこうした効果に気づき、意図的に「エクストリームプログラミング」という名前を選びました。
+「エクストリーム」は本質的に望ましいものではなく、非難するときに使われる言葉だからです。
+望ましくない用語を使用すると、意味の希薄化の可能性は下がるでしょうが、問題を完全に回避できるわけではありません。
+中立的な用語である「オブジェクト指向」にも意味の希薄化が発生したわけですから。</p>
+
+<!-- Semantic diffusion is more likely to occur with things 
+ !-- 	that are broad concepts rather than hard technologies. 
+ !-- Ruby on Rails is getting a lot of hype at the moment, 
+ !-- 	but since it's a concrete tool it's hard for its meaning to weaken.  -->
+<!-- Extreme Programming's list of concrete practices may also reduce this problem 
+ !-- 	compared to agile's broader list of values and principles. -->
+
+<p>意味の希薄化は、具体的な技術よりも幅広い概念のほうが発生しやすいです。
+たとえば、今はRuby on Railsがブームですが、具体的なツールなので意味が歪められることは少ないでしょう。
+エクストリームプログラミングの具体的なプラクティスも、アジャイルの価値や原則などと比べると、こうした問題は軽減されるでしょう。</p>
+
+<!-- Semantic diffusion is a painful process to watch, 
+ !-- particularly for those who find the ideas useful. 
+ !-- At the moment I see signs of despair for both of these terms, 
+ !-- some people in the agile world are talking of ditching the word agile. -->
+
+<p>意味の希薄化は、これらのアイデア（アジャイルとWeb 2.0）が有用だと思っている人たちにとっては見るのが辛いプロセスです。
+現時点では、どちらの用語にも絶望の兆しが見えています。
+アジャイルの世界にいる一部の人たちは「アジャイル」を捨てようとしています。</p>
+
+<!-- I'm more sanguine about all this, 
+ !-- 	largely because I've seen it before.  -->
+<!-- There was a time 
+ !-- 	when almost any software tool or method was described as object-oriented.  -->
+<!-- But now, years later, the essential meaning of OO is reasonably well understood.  -->
+<!-- I saw the same thing happen with patterns.  -->
+<!-- So terms do recover their semantic integrity 
+ !-- 	and the current diffusion doesn't inevitably mean the terms will lose their meaning.  -->
+<!-- I'm also less worried about it because I expected it, again having gone through this process before.  -->
+<!-- I think it's an inevitable consequence of ideas becoming popular and despite its problems, 
+ !-- 	I prefer the hype to ignorance.  -->
+<!-- A final comforting thought is that once the equally inevitable backlash 
+ !-- 	comes we get a refocusing on the original meaning.  -->
+<!-- As I'm writing this I'm comforted by the fact that 
+ !-- 	I can't think of a term that lost its meaning entirely, 
+ !-- although I'm sure it's happened. 
+ !-- (SOA doesn't count, as I don't think there ever was a commonly agreed meaning for that to start with.) -->
+
+<p>しかし、私は楽観的です。似たような状況を見たことがあるからです。
+以前、ほぼすべてのソフトウェアツールや手法がオブジェクト指向だった時代がありました。
+数年後の現在では、OOの本質的な意味が理解されています。
+同じことはパターンでも起こりました。
+したがって、用語の意味は回復しており、用語が普及しても意味が失われるわけではありません。
+このプロセスは以前にも経験したことがあり、予想もできているので、それほど心配はしていません。
+これはアイデアが普及する際には避けられないことですし、問題はあるものの、誰にも知られないよりもブームになるほうが好ましいと思います。
+最後に気休めの考えを伝えておくと、同じく避けられない反論があった場合には、本来の意味に立ち戻ればいいのです。
+また、実際に起きたことではありますが、意味が完全に失われた用語をすぐには思いつかないので、私は安心しています（SOAは当てはまりません。合意された意味が最初から存在しなかったからです）。</p>
+
+<!-- Whatever the eventual outcome 
+ !-- 	we still have to cope with semantic diffusion as it happens.  -->
+<!-- One option is abandonment, 
+ !-- 	to drop the diffuse term and pick a new one.  -->
+<!-- I don't like this option 
+ !-- 	because a new term only adds to the confusion and 
+ !-- 	even if you're successful you just end up repeating the process for the new term.  -->
+<!-- So my preference is to keep re-articulating the current terminology, 
+ !-- 	pointing to those who understand the true meaning. -->
+
+<p>最終的な結果が何であれ、私たちは意味の希薄化が起こるたびに対処しなければなりません。
+選択肢のひとつは放棄です。希薄化した用語を捨て、新しい用語を選択します。
+私はこの選択肢は好きではありません。新しい用語は混乱を招くだけであり、たとえうまくいったとしても、新しい用語が同じプロセスを繰り返すことになります。
+したがって、現在の用語を何度も明確にしながら、真の意味を理解している人々を指し示すほうが私の好みです。</p>
+
+<!-- A further complication is that these terms also shift.  -->
+<!-- I'm sure if you asked the original seventeen authors of the agile manifesto, 
+ !-- they would come up with a different document today. 
+ !-- (Let alone the fact that that group wouldn't be the best group to speak for the movement today.)  -->
+<!-- Again it's a responsibility for those who are identified as originators to point this out, both by talking about the way the ideas evolve and by pointing to new people who are playing an active role in that evolution.
+ !-- (I'm pleased that the original seventeen "let the ship sail" to go its own way.)  -->
+<!-- Let's not forget there's a tricky balance between holding to a clear definition and dogmatism. -->
+
+<p>さらに複雑なのは、これらの用語が変化することです。
+アジャイルマニフェストの署名者17人は、今なら別の文書を残すことでしょう
+（彼らは現在のムーブメントを語るのに最適なグループではありません）。
+繰り返しになりますが、このことを指摘するのは発案者の責任です。
+そのためには、アイデアの進化について語ったり、進化に積極的に関与している新しい人たちに注意を向けたりする必要があります（この点に関して言えば、発案者の17人が「<a href="agileStory">船を出航</a>」させ、自由な展開を許したことを嬉しく思います）。
+明確な定義を維持することと教義主義の間には難しいバランスがあることを忘れないでください。</p>
+
+<!-- All of this is hard work, but a good term is worth fighting for - particularly since the only bullets you need are words. -->
+
+<p>いずれも大変な作業ですが、優れた用語は守る価値があります。必要な武器は言葉だけなのですから。</p>
+
+<!-- Semantic Inversion -->
+<h2 id="意味の反転">意味の反転</h2>
+
+<!-- A common form of semantic diffusion is
+ !-- 	when the term ends up meaning the opposite of what it was coined to describe. 
+ !-- Such as "DevOps" turning into the name for a separated operations team or "Minimal Viable Product" being used for a $12M first release. Holly Cummins neatly coined "Semantic Inversion" to describe this variant of concern. -->
+
+<p>意味の希薄化の一般的な形態は、当初の意味とは反対の意味になってしまうというものです。
+たとえば、「DevOps」が隔離された運用チームの名前になったり、「MVP」が1,200万ドルかかった最初のリリースに使用されたりすることです。
+Holly Cumminsはこうした概念を説明するために「意味の反転」という用語を<a href="https://x.com/holly_cummins/status/1416040187889688582">作りました</a>。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>
