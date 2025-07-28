@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>リソースプール - Martin Fowler's Bliki (ja)</title>
-  <meta name="description" content="https://martinfowler.com/bliki/ResourcePool.html">
+  <meta name="description" content="多くのプログラマは生成や維持にコストがかかるリソースを利用する必要がある。そのようなものの例としては、データベースコネクションやスレッドが挙げられる。リソースプールはそれらのリソースを管理するためのよい方法だ。">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/ResourcePool">
@@ -65,9 +65,7 @@
   </header>
 
   <article class="post-content" id="post-content">
-    <p>https://martinfowler.com/bliki/ResourcePool.html</p>
-
-<p>多くのプログラマは生成や維持にコストがかかるリソースを利用する必要がある。そのようなものの例としては、データベースコネクションやスレッドが挙げられる。リソースプールはそれらのリソースを管理するためのよい方法だ。</p>
+    <p>多くのプログラマは生成や維持にコストがかかるリソースを利用する必要がある。そのようなものの例としては、データベースコネクションやスレッドが挙げられる。リソースプールはそれらのリソースを管理するためのよい方法だ。</p>
 
 <p>クライアントがデータベースコネクションを必要とする際は、自身でコネクションを生成するのではなく、プールに対してそれを要求する。クライアントがそのコネクションを使った処理を終えた後は、それをプールに返す。プールは立ち上げ時にたくさんのコネクションを生成しておくケースが多いだろう。プールのサイズは通常構成管理により設定することが可能で、クライアントからの需要の量と、リソースの維持に要するコストに従い調整される。</p>
 

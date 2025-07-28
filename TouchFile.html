@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>タッチファイル - Martin Fowler's Bliki (ja)</title>
-  <meta name="description" content="https://martinfowler.com/bliki/TouchFile.html">
+  <meta name="description" content="makeを使ってビルドするときは、出力ファイルと入力ファイルの修正日を比較して、実行する必要があるかどうかを決める。コンパイルではこれでもうまくいく（a.outがfoo.cに依存している状態）。しかし、出力ファイルが不明なものもある。">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/TouchFile">
@@ -63,9 +63,7 @@
   </header>
 
   <article class="post-content" id="post-content">
-    <p>https://martinfowler.com/bliki/TouchFile.html</p>
-
-<p><a href="http://en.wikipedia.org/wiki/Make">make</a>を使ってビルドするときは、出力ファイルと入力ファイルの修正日を比較して、実行する必要があるかどうかを決める。コンパイルではこれでもうまくいく（a.outがfoo.cに依存している状態）。しかし、出力ファイルが不明なものもある。</p>
+    <p><a href="http://en.wikipedia.org/wiki/Make">make</a>を使ってビルドするときは、出力ファイルと入力ファイルの修正日を比較して、実行する必要があるかどうかを決める。コンパイルではこれでもうまくいく（a.outがfoo.cに依存している状態）。しかし、出力ファイルが不明なものもある。</p>
 
 <p>たとえばテストの実行だ。テストにおける出力ファイルとは何だろうか？ひとつは、テストレポートだ。テストレポートはレポートファイルの日付を記録し、実行可能なテストデータファイルと比較する。この方法だと、何か変更があったときにテストを実行すればよい。</p>
 

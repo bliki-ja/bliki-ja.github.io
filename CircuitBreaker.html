@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>サーキットブレイカー - Martin Fowler's Bliki (ja)</title>
-  <meta name="description" content="https://martinfowler.com/bliki/CircuitBreaker.html">
+  <meta name="description" content="ネットワークを介して異なるマシンで動作するソフトウェアを呼び出すことは一般的に行われている。インメモリ処理とリモートコールの大きな違いの１つは、リモートコールは失敗したりレスポンスが返ってこないままタイムアウトするまで停止してまう可能性があることだ。レスポンスが遅いシステムが多くの利用者を抱えている場合、重要なリ...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/CircuitBreaker">
@@ -65,9 +65,7 @@
   </header>
 
   <article class="post-content" id="post-content">
-    <p>https://martinfowler.com/bliki/CircuitBreaker.html</p>
-
-<p>ネットワークを介して異なるマシンで動作するソフトウェアを呼び出すことは一般的に行われている。インメモリ処理とリモートコールの大きな違いの１つは、リモートコールは失敗したりレスポンスが返ってこないままタイムアウトするまで停止してまう可能性があることだ。レスポンスが遅いシステムが多くの利用者を抱えている場合、
+    <p>ネットワークを介して異なるマシンで動作するソフトウェアを呼び出すことは一般的に行われている。インメモリ処理とリモートコールの大きな違いの１つは、リモートコールは失敗したりレスポンスが返ってこないままタイムアウトするまで停止してまう可能性があることだ。レスポンスが遅いシステムが多くの利用者を抱えている場合、
 重要なリソースを使い果たしてしまい、複数のシステムをまたがった障害が発生するだろう。Michael Nygard は名著 <a href="https://www.amazon.com/gp/product/0978739213?ie=UTF8&amp;tag=martinfowlerc-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0978739213">Release It</a>で、このような壊滅的な連鎖を防止するために Circuit Breaker パターンを広めた。</p>
 
 <p>CircuitBreaker の基本は非常にシンプルだ。失敗を監視する CircuitBreaker オブジェクトで関数呼び出しを保護する。失敗数が閾値に達すると Circuit Breaker が作動し、以降の CircuitBreaker オブジェクトの呼び出しは、保護された呼び出しをせずにエラーを返す。通常、CircuitBreaker が作動したら何らかのアラートを上げる事をお勧めする。</p>

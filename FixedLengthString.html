@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>固定長文字型 - Martin Fowler's Bliki (ja)</title>
-  <meta name="description" content="https://martinfowler.com/bliki/FixedLengthString.html">
+  <meta name="description" content="アプリケーションプログラムとリレーショナルデータベースの間をやり取りするライブラリを見てみてください。すると、データベースの文字型（ char や varchar ）がプログラム言語の文字型にマッピングされていることに気付くでしょう。簡単です。そりゃそうですよね。でも、これが間違いってこともあるんです。">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/FixedLengthString">
@@ -63,9 +63,7 @@
   </header>
 
   <article class="post-content" id="post-content">
-    <p>https://martinfowler.com/bliki/FixedLengthString.html</p>
-
-<p>アプリケーションプログラムとリレーショナルデータベースの間をやり取りするライブラリを見てみてください。すると、データベースの文字型（ char や varchar ）がプログラム言語の文字型にマッピングされていることに気付くでしょう。簡単です。そりゃそうですよね。でも、これが間違いってこともあるんです。</p>
+    <p>アプリケーションプログラムとリレーショナルデータベースの間をやり取りするライブラリを見てみてください。すると、データベースの文字型（ char や varchar ）がプログラム言語の文字型にマッピングされていることに気付くでしょう。簡単です。そりゃそうですよね。でも、これが間違いってこともあるんです。</p>
 
 <p>なぜこう思うかというと、SQL のvarchar型は固定の長さを持っているんですね。一方、ほとんどのアプリケーションの文字型は任意の長さを扱うことが出来ます。となると、データベースをアップデートするとき、文字が長すぎるといった問題が起こり得るんです。</p>
 

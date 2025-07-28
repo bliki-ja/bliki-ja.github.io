@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>デコレートコマンド - Martin Fowler's Bliki (ja)</title>
-  <meta name="description" content="https://martinfowler.com/bliki/DecoratedCommand.html">
+  <meta name="description" content="これはありふれたパターンで、とても単純なものである。というのも、Decoratorパターンをコマンドに適用したというだけであるから。私は、コマンド指向インターフェイスで多数使われているのを見たことがある。アスペクト指向プログラミングでinterceptorsと呼ばれているのを聞いたことがあるかもしれない。">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/DecoratedCommand">
@@ -63,9 +63,7 @@
   </header>
 
   <article class="post-content" id="post-content">
-    <p>https://martinfowler.com/bliki/DecoratedCommand.html</p>
-
-<p>これはありふれたパターンで、とても単純なものである。というのも、Decoratorパターンをコマンドに適用したというだけであるから。私は、<a href="/CommandOrientedInterface">コマンド指向インターフェイス</a>で多数使われているのを見たことがある。アスペクト指向プログラミングでinterceptorsと呼ばれているのを聞いたことがあるかもしれない。</p>
+    <p>これはありふれたパターンで、とても単純なものである。というのも、Decoratorパターンをコマンドに適用したというだけであるから。私は、<a href="/CommandOrientedInterface">コマンド指向インターフェイス</a>で多数使われているのを見たことがある。アスペクト指向プログラミングでinterceptorsと呼ばれているのを聞いたことがあるかもしれない。</p>
 
 <p>commandの例から始めよう。通常それは基本的な機能の形式から構成されていて、あとで機能が追加される可能性があるものだ。したがって例えば、請求書の支払い(PayInvoice) というようなある問題領域(ドメイン)のためのcommandとなるかもしれない。これらcommandは、実行メソッドの一種である。</p>
 

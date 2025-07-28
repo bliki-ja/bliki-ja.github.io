@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>diffデバッグ - Martin Fowler's Bliki (ja)</title>
-  <meta name="description" content="https://martinfowler.com/bliki/DiffDebugging.html">
+  <meta name="description" content="最近の話だが、ある本を執筆中にサンプルコードを書いていた。すると、テストが失敗してしまった。「ぐわっ」青ざめた。「先週はパスしてたじゃん。何だよこれ。」そこで私は目の前にあるコードのバグを探すよりも、思い浮かんだ「ある方法」を試してみることにした。これを「diffデバッグ」と命名することにしよう。">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/DiffDebugging">
@@ -65,9 +65,7 @@
   </header>
 
   <article class="post-content" id="post-content">
-    <p>https://martinfowler.com/bliki/DiffDebugging.html</p>
-
-<p>最近の話だが、ある本を執筆中にサンプルコードを書いていた。すると、テストが失敗してしまった。「ぐわっ」青ざめた。「先週はパスしてたじゃん。何だよこれ。」そこで私は目の前にあるコードのバグを探すよりも、思い浮かんだ「ある方法」を試してみることにした。これを「diffデバッグ」と命名することにしよう。</p>
+    <p>最近の話だが、ある本を執筆中にサンプルコードを書いていた。すると、テストが失敗してしまった。「ぐわっ」青ざめた。「先週はパスしてたじゃん。何だよこれ。」そこで私は目の前にあるコードのバグを探すよりも、思い浮かんだ「ある方法」を試してみることにした。これを「diffデバッグ」と命名することにしよう。</p>
 
 <p>まずは、最後に動いていたと思われるコード（5/14分）を新規にチェックアウトした。
 そしてコンパイル。それからテスト。よし、さっき失敗してた項目はパス出来た。次に、レポジトリのログを見てみた。そのときから変更されたのは、ええと、次の日だな。auto-import用にコメントを追加したんだ。5/15分を別のディレクトリにチェックアウト。今回はテストが失敗してしまった。うーん、つまり、この5/15に何かヤッチまったわけだな。</p>

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>型付きコレクション - Martin Fowler's Bliki (ja)</title>
-  <meta name="description" content="https://martinfowler.com/bliki/TypedCollection.html">
+  <meta name="description" content="オブジェクト指向で仕事しようと思ったとき、特に強く型付けされた言語で、よくある疑問はドメインタイプに応じてそれに特化したコレクションクラスを持つべきか? というものです。会社クラスが従業員のコレクションを保持しているとするとき、いつものライブラリにあるコレクションクラスを使うべきでしょうか、あるいは、専用の Em...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/TypedCollection">
@@ -63,9 +63,7 @@
   </header>
 
   <article class="post-content" id="post-content">
-    <p>https://martinfowler.com/bliki/TypedCollection.html</p>
-
-<p>オブジェクト指向で仕事しようと思ったとき、特に強く型付けされた言語で、よくある疑問はドメインタイプに応じてそれに特化したコレクションクラスを持つべきか? というものです。
+    <p>オブジェクト指向で仕事しようと思ったとき、特に強く型付けされた言語で、よくある疑問はドメインタイプに応じてそれに特化したコレクションクラスを持つべきか? というものです。
 会社クラスが従業員のコレクションを保持しているとするとき、いつものライブラリにあるコレクションクラスを使うべきでしょうか、あるいは、専用の EmployeeList クラス –型付きコレクション を作るべきでしょうか。</p>
 
 <p>(もちろん型総称機能があれば、パラメータクラスを使うところでしょう。しかし、ここではJavaやC#のような、まだそういった機能のない言語を使っていると仮定します。)</p>
