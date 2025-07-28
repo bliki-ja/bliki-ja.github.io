@@ -49,24 +49,14 @@
         <p class="text">{{ site.description }}</p>
       </div>
     </div>
-
-
-
-    <script>
-     (function() {
-       const cx = '010278526350603011374:ubkdl6gezwc';
-       const gcse = document.createElement('script');
-       gcse.type = 'text/javascript';
-       gcse.async = true;
-       gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                  '//cse.google.com/cse.js?cx=' + cx;
-       const s = document.getElementsByTagName('script')[0];
-       s.parentNode.insertBefore(gcse, s);
-     })();
-    </script>
-    <gcse:search></gcse:search>
-
-
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
   </div>
 
 </footer>
