@@ -1,0 +1,44 @@
+name: Build and Deploy Jekyll with Pagefind
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.4.4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Jekyll dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Install Pagefind
+        run: npm install -g pagefind
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Run Pagefind
+        run: pagefind --source _site
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
