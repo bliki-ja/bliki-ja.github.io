@@ -3,8 +3,6 @@ title: 優秀なほうが安い仮説
 tags: [bad things, productivity, recruiting, thoughtworks]
 ---
 
-https://martinfowler.com/bliki/CheaperTalentHypothesis.html
-
 2008/2/8
 
 

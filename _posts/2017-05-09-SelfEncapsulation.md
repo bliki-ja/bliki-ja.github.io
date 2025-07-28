@@ -3,8 +3,6 @@ title: 自己カプセル化
 tags: [encapsulation]
 ---
 
-https://martinfowler.com/bliki/SelfEncapsulation.html
-
 **注意：以下は古いバージョン**
 
 

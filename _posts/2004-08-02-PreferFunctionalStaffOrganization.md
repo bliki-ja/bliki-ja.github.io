@@ -3,8 +3,6 @@ title: やっぱり機能別組織が好き
 tags: [team organization, process theory]
 ---
 
-https://martinfowler.com/bliki/PreferFunctionalStaffOrganization.html
-
 私がソフトウェア業界に身を置いて以来、
 [機能別組織](/FunctionalStaffOrganization)か[技術別組織](/TechnicalStaffOrganization)かという議論は尽きることがない。
 こういった議論はプロジェクト内、いや、ITに関わる組織の至るところで巻き起こっている。

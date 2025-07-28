@@ -3,8 +3,6 @@ title: 大規模アジャイルプロジェクト
 tags: [agile, agile adoption, team organization, project planning]
 ---
 
-https://martinfowler.com/bliki/LargeAgileProjects.html
-
 大規模プロジェクトでアジャイル手法が使えるかどうかというのはよくある質問である。そもそも多くのアジャイル手法は小規模プロジェクト向けに設計されているため、大規模なプロジェクトでは、アジャイル手法と対抗する重量級の発想・構想(idea)のほうが必要となっている。
 
 これが質問となっているという主な理由は、我々がまだ知らないからだ。

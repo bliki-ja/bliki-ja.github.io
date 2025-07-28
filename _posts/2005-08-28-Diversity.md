@@ -3,8 +3,6 @@ title: 多様性
 tags: [thoughtworks, diversity]
 ---
 
-https://martinfowler.com/bliki/Diversity.html
-
 
 
 ThoughtWorksでの大きなテーマのひとつに、全社的に人材の多様性を促進するというものがある（ここでいう「多様性」とは、ジェンダー・人種・性的嗜好などを指す）。我々は、女性や非白人種など歴史的に恵まれないグループが快適に過ごせ、伝統的なWASPのリーダーと同様の機会を得られる会社にしたいと思っている。 Royも混血であり、彼もこの多様性について気にかけている。

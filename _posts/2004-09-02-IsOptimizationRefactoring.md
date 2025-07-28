@@ -3,8 +3,6 @@ title: 最適化はリファクタリングか？
 tags: [refactoring boundary]
 ---
 
-https://martinfowler.com/bliki/IsOptimizationRefactoring.html
-
 [リファクタリングの境界線](/RefactoringBoundary)のひとつ
 
 > プログラムのパフォーマンスを向上させるために変更を行った。これはリファクタリングと呼べるのか？

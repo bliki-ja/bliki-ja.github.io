@@ -3,8 +3,6 @@ title: アジャイル対リーン
 tags: [agile, lean]
 ---
 
-https://martinfowler.com/bliki/AgileVersusLean.html
-
 
 
 

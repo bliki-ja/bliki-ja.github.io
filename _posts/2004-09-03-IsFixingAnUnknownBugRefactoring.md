@@ -3,8 +3,6 @@ title: 未知のバグフィックスはリファクタリングか？
 tags: [refactoring boundary]
 ---
 
-https://martinfowler.com/bliki/IsFixingAnUnknownBugRefactoring.html
-
 [リファクタリングの境界線](/RefactoringBoundary)のひとつ
 
 Przemyslaw Pokrywka が興味深い難題を投稿してくれた。

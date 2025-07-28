@@ -3,8 +3,6 @@ title: コマンド指向インターフェイス
 tags: [API design]
 ---
 
-https://martinfowler.com/bliki/CommandOrientedInterface.html
-
 モジュールのインターフェイスには、
 プロシージャ、またはオブジェクトメソッドを使うのが一般的です。
 たとえば契約料の計算をするモジュールが欲しいときには、

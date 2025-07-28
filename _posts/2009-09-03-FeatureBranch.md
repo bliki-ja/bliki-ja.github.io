@@ -3,8 +3,6 @@ title: フィーチャブランチ
 tags: [version control, continuous integration]
 ---
 
-https://martinfowler.com/bliki/FeatureBranch.html
-
 gitやMercurialのような分散バージョン管理システム(DVCS)の台頭と共に、ブランチ戦略やマージ戦略をどうするか、そしてそれらをどのように[継続的インテグレーション](https://martinfowler.com/articles/continuousIntegration.html)(CI)に適合させるかという話し合いを数多く見てきた。その中で、特にフィーチャーブランチのプラクティスと、それをCIにどのように適合させるかに関しては、少し議論の混乱があるようだ。
 
 ## シンプルな(分離した)フィーチャーブランチ

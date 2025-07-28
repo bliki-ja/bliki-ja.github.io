@@ -3,8 +3,6 @@ title: 高頻度は問題を容易にする
 tags: [agile, process theory, productivity, continuous delivery]
 ---
 
-https://martinfowler.com/bliki/FrequencyReducesDifficulty.html
-
 私が気に入っている引用の一つに「もしそれが痛みを伴うのであれば、さらに頻繁にそれを行え」という引用がある。
 この言葉は、表面的には馬鹿げたことに見えるという幸せな性質も持っているが、深く探れば価値のあることがわかる。
 このことを説明するための例示できる文脈は、統合だ。

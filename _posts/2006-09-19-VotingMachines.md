@@ -3,8 +3,6 @@ title: 電子投票機
 tags: [tools]
 ---
 
-https://martinfowler.com/bliki/VotingMachines.html
-
 つい最近あった選挙における不正行為疑惑についてまだ確信は得ていないが、
 電子投票機の設計については大いに懸念を抱いている。
 特に、明瞭かつ監査可能な文書足跡のない電子投票機が、

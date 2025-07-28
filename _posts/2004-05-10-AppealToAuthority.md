@@ -3,8 +3,6 @@ title: 虎の威を借りてみる
 tags: [writing]
 ---
 
-https://martinfowler.com/bliki/AppealToAuthority.html
-
 私が言ったことに反論するならともかく、こう指摘してくるひとがしょっちゅういます。
 「あなたのような御大がそんなことを言ったら、多くのひとは盲目的にそれに従ってしまうじゃないか」と。
 

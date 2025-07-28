@@ -3,8 +3,6 @@ title: インタフェースと実装のペア
 tags: [API design, object collaboration design]
 ---
 
-https://martinfowler.com/bliki/InterfaceImplementationPair.html
-
 <!-- The practice of taking every class and pairing it with an interface. So as a result you see pairs of things - maybe ICustomer and Customer or Customer and CustomerImpl. In many ways it echoes the C/C++ habit of header files for each class, although in this case the interfaces and implementations are actually separate types. -->
 すべてのクラスをインタフェースとペアにする手法である。
 たとえば、ICustomerとCustomer、CustomerとCustomerImplのようなペアができる。

@@ -3,8 +3,6 @@ title: データモデル
 tags: [database]
 ---
 
-https://martinfowler.com/bliki/DataModels.html
-
 [Tsichritzis と Lochovsky](http://www.amazon.com/exec/obidos/tg/detail/-/0131964283) のデータモデル本が以前好きでした。
 この本では、様々なデータモデル考え方が議論されていました。
 当時は特に以下の3つのモデルがよく取り上げられていました。

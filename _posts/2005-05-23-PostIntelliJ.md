@@ -3,8 +3,6 @@ title: PostIntelliJ
 tags: [tools]
 ---
 
-https://martinfowler.com/bliki/PostIntelliJ.html
-
 よく、ソフトウェア開発ツールを試用してくれないかというオファーを受ける。
 残念ながら見る時間があまりないのだが——正直言って、いつも失望させられてばかりである。
 私がツールに惚れ込むことなど滅多にない。

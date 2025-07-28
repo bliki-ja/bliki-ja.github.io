@@ -3,8 +3,6 @@ title: アジャイルの押し付け
 tags: [agile, agile adoption]
 ---
 
-https://martinfowler.com/bliki/AgileImposition.html
-
 
 
 

@@ -3,8 +3,6 @@ title: RubyPloticus
 tags: [ruby]
 ---
 
-https://martinfowler.com/bliki/RubyPloticus.html
-
 
 
 先ごろ[EvaluatingRuby](/EvaluatingRuby)を投稿したが、その中で私は、

@@ -3,8 +3,6 @@ title: EvaluatingRuby
 tags: [ruby]
 ---
 
-https://martinfowler.com/bliki/EvaluatingRuby.html
-
 
 
 ここの読者なら世の中でRubyが騒ぎになっていることをご存知だと思う。

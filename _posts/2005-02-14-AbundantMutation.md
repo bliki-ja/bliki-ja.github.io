@@ -3,8 +3,6 @@ title: 度重なる変異
 tags: [evolutionary design, technical leadership]
 ---
 
-https://martinfowler.com/bliki/AbundantMutation.html
-
 読者の方々は、私が[evolutionary design](https://martinfowler.com/articles/designDead.html#PlannedAndEvolutionaryDesign)（[進化的設計](http://www.objectclub.jp/community/XP-jp/xp_relate/isdesigndead#n71)）を広く提唱していることをご存知だと思う。
 しかし、手法を提唱はしているものの、今だ完全なテクニックがあるわけではない。
 進化的設計に成功するのもハッピーではあるが、

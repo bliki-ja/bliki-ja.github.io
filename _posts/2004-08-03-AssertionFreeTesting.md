@@ -3,8 +3,6 @@ title: アサーションのないテスト
 tags: [testing, bad things]
 ---
 
-https://martinfowler.com/bliki/AssertionFreeTesting.html
-
 友人の友人に聞いた話である。が、少なくともところどころは実話に違いない。
 
 ある巨大システムのプロジェクトが始まった。

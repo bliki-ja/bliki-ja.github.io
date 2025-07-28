@@ -3,8 +3,6 @@ title: LazyInitialization
 tags: [object collaboration design]
 ---
 
-https://martinfowler.com/bliki/LazyInitialization.html
-
 遅延初期化とは、変数（オブジェクト指向の文脈ではクラスのフィールド値）を最初にアクセスしたときに初期化する手法である。基本的には以下のような形になる。
 
 ```java

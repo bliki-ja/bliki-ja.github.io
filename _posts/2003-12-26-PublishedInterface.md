@@ -3,8 +3,6 @@ title: 公布済みインターフェイス
 tags: [encapsulation, language feature, application architecture, API design]
 ---
 
-https://martinfowler.com/bliki/PublishedInterface.html
-
 ''公布済みインターフェイス（Published Interface）''とは、
 定義されているコードベース外で使われるクラスインターフェイス
 を表すために私が使った用語です

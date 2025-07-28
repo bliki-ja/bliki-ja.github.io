@@ -3,8 +3,6 @@ title: 意味的衝突
 tags: [bad things, version control, continuous integration]
 ---
 
-https://martinfowler.com/bliki/SemanticConflict.html
-
 私が同僚と[フィーチャーブランチ](/FeatureBranch)について話しているのを聴いた人は、我々があのパターンの大ファンではないということを知っている。
 我々の反論の重要な点は、ブランチ作成は簡単だが、マージは大変だという見解にある。
 時折耳にする議論としては、モダンな[バージョン管理ツール](/VersionControlTools)があれば、

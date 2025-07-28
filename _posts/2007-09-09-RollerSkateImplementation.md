@@ -3,8 +3,6 @@ title: ローラースケート実装
 tags: [projects, requirements analysis, project planning]
 ---
 
-https://martinfowler.com/bliki/RollerSkateImplementation.html
-
 
 
 アジャイル開発の重要な特性として、小さな機能サブセットに分割してシステムを稼動させる方法をあれこれ考える、というものがある。

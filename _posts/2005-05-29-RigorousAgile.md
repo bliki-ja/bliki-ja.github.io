@@ -3,8 +3,6 @@ title: 厳密なアジャイル
 tags: [agile, certification, metrics]
 ---
 
-https://martinfowler.com/bliki/RigorousAgile.html
-
 「アジャイル手法には厳密な定義がない」との不満をよく耳にする。
 これは「チームがアジャイル手法を使っているかどうかをどうやって判断するんだ」ということなのだと思う。
 厳密な定義がないと、他人に教えることが難しいということもあるのだろう——どんなカリキュラムだろうか？

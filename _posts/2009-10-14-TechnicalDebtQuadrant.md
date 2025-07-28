@@ -3,8 +3,6 @@ title: 技術的負債の四象限
 tags: [technical debt]
 ---
 
-https://martinfowler.com/bliki/TechnicalDebtQuadrant.html
-
 ここ数ヶ月の間に、
 [技術的負債](/TechnicalDebt)
 に関する投稿がいくつかあった。設計上の不備の中で、技術的負債と呼ぶべきものは何か？

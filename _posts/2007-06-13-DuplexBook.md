@@ -3,8 +3,6 @@ title: DuplexBook
 tags: [writing]
 ---
 
-https://martinfowler.com/bliki/DuplexBook.html
-
 2007/6/13
 
 先週、私のシグニチャシリーズの新刊が出た。 Gerard Meszarosによる『[xUnit Test Patterns](https://martinfowler.com/books.html#meszaros)』だ。 Gerardとは数年間この件についてやり取りをしてきたので、内容についてはよく知っているのだが、実際の本を見てかなりショックを受けた。なにこの厚さ。883ページて。シグニチャシリーズのなかでダントツの厚さだ。

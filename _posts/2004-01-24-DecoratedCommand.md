@@ -3,8 +3,6 @@ title: デコレートコマンド
 tags: [API design]
 ---
 
-https://martinfowler.com/bliki/DecoratedCommand.html
-
 これはありふれたパターンで、とても単純なものである。というのも、Decoratorパターンをコマンドに適用したというだけであるから。私は、[コマンド指向インターフェイス](/CommandOrientedInterface)で多数使われているのを見たことがある。アスペクト指向プログラミングでinterceptorsと呼ばれているのを聞いたことがあるかもしれない。
 
 commandの例から始めよう。通常それは基本的な機能の形式から構成されていて、あとで機能が追加される可能性があるものだ。したがって例えば、請求書の支払い(PayInvoice) というようなある問題領域(ドメイン)のためのcommandとなるかもしれない。これらcommandは、実行メソッドの一種である。

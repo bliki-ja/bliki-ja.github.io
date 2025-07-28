@@ -3,8 +3,6 @@ title: Rubyのアノテーション
 tags: [language feature, domain specific language, ruby]
 ---
 
-https://martinfowler.com/bliki/RubyAnnotations.html
-
 Rubyで人気のある機能のひとつにメタプログラミングのサポートがある。
 メタプログラミングとは言語自身を変えてしまうように動作する機能のことだ。
 たとえば、新しい予約語を導入するみたいな、ね。

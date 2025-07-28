@@ -3,8 +3,6 @@ title: ボールとソケット
 tags: [uml]
 ---
 
-https://martinfowler.com/bliki/BallAndSocket.html
-
 UML 2 で登場した新しい記法のなかに、
 クラスに必要なインターフェースを表す「ソケット」があります。
 元は、複数のインターフェースのimplementを表すためにマイクロソフトによって一般化された「ロリポップ」でした。

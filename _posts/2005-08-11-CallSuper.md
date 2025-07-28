@@ -3,8 +3,6 @@ title: superの呼び出し
 tags: [bad things, language feature]
 ---
 
-https://martinfowler.com/bliki/CallSuper.html
-
 親メソッド呼び出しは、オブジェクト指向フレームワークのなかで
 不吉な匂い(アンチパターンと言っても良いでしょう)を出しています。
 その症状は簡単に見つけることができます。

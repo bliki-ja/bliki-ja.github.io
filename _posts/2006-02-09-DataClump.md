@@ -3,8 +3,6 @@ title: データの塊
 tags: [bad things, clean code, refactoring]
 ---
 
-https://martinfowler.com/bliki/DataClump.html
-
 > 2、3個の値があったら、それ$%#$%^オブジェクトにできるよ——俺（楽しそうに）
 
 これは著書『リファクタリング』のなかでも好きなCodeSmellだ。

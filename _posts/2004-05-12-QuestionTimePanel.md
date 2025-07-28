@@ -3,8 +3,6 @@ title: Question Time方式の討論会
 tags: [presentations]
 ---
 
-https://martinfowler.com/bliki/QuestionTimePanel.html
-
 討論会にパネリストとして参加したことは何回もあるし、主催する側になったこともある。討論会を催す際には、英国の時事討論番組 "Question Time" を参考にした形式を用いるのが好みだ。数回やってみて、伝統的な討論会の形式よりも好ましく感じている。
 
 パネリストが何人かおり、各パネリストが自らの見解を示すのに半分の時間を使い、残りの半分でフロアからの質問を受ける。それが、

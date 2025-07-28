@@ -3,8 +3,6 @@ title: リファクタリングの定義
 tags: [refactoring]
 ---
 
-https://martinfowler.com/bliki/DefinitionOfRefactoring.html
-
 リファクタリング本のなかで、リファクタリングの定義を記しました。
 
 :リファクタリング（名詞）:外部から見たときの振る舞いを保ちつつ、理解や修正が簡単になるように、ソフトウェアの内部構造を変更させること。 

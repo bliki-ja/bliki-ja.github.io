@@ -3,8 +3,6 @@ title: トランザクションレス
 tags: [database, application architecture]
 ---
 
-https://martinfowler.com/bliki/Transactionless.html
-
 
 数年前にeBayで働く友人たちと話していたときのことだ。
 大規模サイトで使われる技術の話を聞くのはいつも楽しいが、特に興味深かったのが、eBayでは滅多にデータベーストランザクションを使用しないという話だった。

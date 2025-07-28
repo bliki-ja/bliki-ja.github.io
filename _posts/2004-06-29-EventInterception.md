@@ -3,8 +3,6 @@ title: イベントインターセプション
 tags: [legacy rehab]
 ---
 
-https://martinfowler.com/bliki/EventInterception.html
-
 バックエンドにあるアプリケーションの多くは、
 外の世界での重要な出来事を伝えられて動いている、と考えることもできる。
 イベントドリブンエンタープライズアプリケーションというアイデアは、非常に古くからある考え方だ。

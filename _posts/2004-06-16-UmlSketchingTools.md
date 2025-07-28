@@ -3,8 +3,6 @@ title: UMLスケッチツール
 tags: [uml]
 ---
 
-https://martinfowler.com/bliki/UmlSketchingTools.html
-
 私は多くのUMLダイアグラムを描いているが、CASEツールは使っていない。
 というのも、私は[スケッチとしてのUML](/UmlAsSketch)に興味があるのであって、
 あの倉庫に積まれた一式全部には興味がないからだ。

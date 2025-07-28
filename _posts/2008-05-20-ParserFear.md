@@ -3,8 +3,6 @@ title: パーサー恐怖症
 tags: [domain specific language]
 ---
 
-https://martinfowler.com/bliki/ParserFear.html
-
 
 
 最近は[ドメイン特化言語](/DomainSpecificLanguage)についてみんなと話すことが多いのだが、外部DSLのことになると、だいたい決まって「パーサーを書くのは難しいよ」とか言われる。外部DSLの構文としてXMLがよく使われるのは、「パーサーが無料で手に入るから」だったりする。でも、パーサーを書くのは思ったよりも簡単なことなのだよ。いやマジで。 XMLのパースができれば簡単なことだよ。

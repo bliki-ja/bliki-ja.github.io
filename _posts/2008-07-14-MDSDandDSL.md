@@ -3,8 +3,6 @@ title: MDSDとDSL
 tags: [domain specific language]
 ---
 
-https://martinfowler.com/bliki/MDSDandDSL.html
-
 
 
 [モデル駆動ソフトウェア開発](/ModelDrivenSoftwareDevelopment)（MDSD）と[ドメイン特化言語](/DomainSpecificLanguage)（DSL）の関係は？

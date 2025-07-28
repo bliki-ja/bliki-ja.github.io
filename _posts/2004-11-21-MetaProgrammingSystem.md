@@ -3,8 +3,6 @@ title: メタプログラミングシステム
 tags: [domain specific language]
 ---
 
-https://martinfowler.com/bliki/MetaProgrammingSystem.html
-
 [JetBrains](http://www.jetbrains.com/)社のリーダーのひとりである Sergey Dmitriev が近頃、実験的開発についての[記事](http://www.onboard.jetbrains.com/articles/04/10/lop/)を公開した（[JetBrains](http://www.jetbrains.com/)社は、[IntelliJ Idea](http://www.jetbrains.com/idea/) や [ReSharper](http://www.jetbrains.com/resharper/) などの素晴らしいツールを我々に提供してくれている）。
 彼はそれを「メタプログラミングシステム(Meta Programming System)」と呼び、
 「言語指向プログラミング(Language Oriented Programming)」と呼ばれるムーブメントの一例であると捉えている。

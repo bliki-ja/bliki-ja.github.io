@@ -3,8 +3,6 @@ title: 制御の逆転
 tags: [application architecture, API design, object collaboration design]
 ---
 
-https://martinfowler.com/bliki/InversionOfControl.html
-
 制御の逆転という現象は、フレームワークを拡張とするといつも現れる。 制御の逆転こそが、フレームワークをフレームワークたらしめる特徴であると考えられている場合も多い。
 
 単純な例で考えてみよう。 ユーザーに情報を入力させるプログラムを書いていると思ってほしい。 コマンドライン入力で、情報を取得している。こんな感じだ。

@@ -3,8 +3,6 @@ title: 型インスタンス同音異義語
 tags: [domain driven design]
 ---
 
-https://martinfowler.com/bliki/TypeInstanceHomonym.html
-
 
 
 

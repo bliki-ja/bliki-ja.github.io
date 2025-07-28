@@ -3,8 +3,6 @@ title: クラスインスタンス変数
 tags: [language feature, ruby]
 ---
 
-https://martinfowler.com/bliki/ClassInstanceVariable.html
-
 オブジェクトについて学ぶと、オブジェクトのデータには二種類あることが分かる。
 インスタンス変数とクラス変数だ。
 通常、インスタンス変数はオブジェクトのインスタンスごとに値が変わる。

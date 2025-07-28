@@ -3,8 +3,6 @@ title: LeadershipDivide
 tags: [thoughtworks]
 ---
 
-https://martinfowler.com/bliki/LeadershipDivide.html
-
 企業が大きくなるにつれ、どのように、そして、誰がリーダーを選ぶのかが懸念事項となってくる。
 多くの企業にはオーナー（株主）がいて、彼らが取締役を任命する。
 そして、その取締役が企業のほぼすべての事項について決定を下す（少なくとも彼ら自身がやることくらいは自分達で考えるだろう）。

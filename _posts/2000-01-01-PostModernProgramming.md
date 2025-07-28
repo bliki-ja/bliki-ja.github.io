@@ -3,8 +3,6 @@ title: PostModernProgramming
 tags: [programming platforms]
 ---
 
-https://martinfowler.com/bliki/PostModernProgramming.html
-
 James NobleとRobert Biddleにより提唱されたプログラミングの考え方。
 その肝となるのは（少なくとも私にとっては）以下のようなことである。
 ソフトウェア開発におけるモダンな見解では、ソフトウェアシステムは画一的かつシンプルな方法で構成された同型のコンポーネントから成り立つものとされている。

@@ -3,8 +3,6 @@ title: エヴァンスの分類
 tags: [domain driven design]
 ---
 
-https://martinfowler.com/bliki/EvansClassification.html
-
 Eric Evansのエクセレントな著書『Domain Driven Design』では、
 我々がしばしば目にする様々なドメインオブジェクトが以下のように分類されている。
 

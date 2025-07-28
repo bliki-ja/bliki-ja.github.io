@@ -3,8 +3,6 @@ title: StandardsSpeak
 tags: [writing]
 ---
 
-https://martinfowler.com/bliki/StandardsSpeak.html
-
 多くの標準文書を読むと、大量のコーヒーが必要というのもあるが、いくつかの言葉の意味に気を付ける必要がある。
 
 標準では、'''shall'''（すべきである）を絶対的に守らなければならない事柄を示すときに使う（また、'''shall not'''（すべきでない）を絶対的に禁止する事項を示すときに使う）。 shallに違反すると、標準に従っていないことになる。 '''required'''や'''must'''は同義語である。

@@ -3,8 +3,6 @@ title: 階層型データモデル
 tags: [database]
 ---
 
-https://martinfowler.com/bliki/HierarchicDataModel.html
-
 階層型データモデルは、階層型もしくはツリー型のデータモデルである。
 初期のデータベースやプログラムデータ構造は階層型モデルを使っていたが、
 人気がなくなってしまった。

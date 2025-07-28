@@ -3,8 +3,6 @@ title: いちばん大切なのは人
 tags: [thoughtworks]
 ---
 
-https://martinfowler.com/bliki/PeopleMatterMost.html
-
 最近、考えるようになったことがいくつかある。
 それは、私のソフトウェア開発観の基礎となるものである。
 ソフトウェア開発の鍵となるものをまず1つ挙げるとしたら、

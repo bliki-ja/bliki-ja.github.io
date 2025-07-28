@@ -3,8 +3,6 @@ title: 宣言の順序変更はリファクタリングか？
 tags: [refactoring boundary]
 ---
 
-https://martinfowler.com/bliki/IsDeclarationOrderingRefactoring.html
-
 [リファクタリングの境界線](/RefactoringBoundary)のひとつ
 
 ### 宣言（Javaで言うメソッドやフィールド）の順序を変更することは、リファクタリングと呼べるのか？

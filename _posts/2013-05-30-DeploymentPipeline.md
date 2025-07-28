@@ -3,8 +3,6 @@ title: デプロイメントパイプライン
 tags: [delivery, build scripting]
 ---
 
-https://martinfowler.com/bliki/DeploymentPipeline.html
-
 2013/5/30
 
 自動ビルドやテスト環境を構築するときに、問題になることがある。そのひとつが、

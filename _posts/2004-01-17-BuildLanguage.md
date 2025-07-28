@@ -3,8 +3,6 @@ title: ビルド言語
 tags: [build scripting]
 ---
 
-https://martinfowler.com/bliki/BuildLanguage.html
-
 **追記:** [Jon Tirsen](http://blogs.codehaus.org/people/jutopia/archives/000562_using_ruby_to_build_java_systems.html)が、Rubyを使って複雑なantビルドプロセスを動かすという面白いストーリーを書いていました。
 
 Bruce Eckel が[最近、antとmakeに関する投稿](http://mindview.net/WebLog/log0046)をしたのだが、それに影響を受けて、私のビルド言語に関する考えをここでシェアしておきたいと思う。

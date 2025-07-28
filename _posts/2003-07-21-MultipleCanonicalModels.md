@@ -3,8 +3,6 @@ title: 複数の正規化モデル
 tags: [application integration]
 ---
 
-https://martinfowler.com/bliki/MultipleCanonicalModels.html
-
 大企業を一皮めくってみると、企業規模の概念モデリング(enterprise-wide conceptual modeling)を中心に扱うグループに出くわすでしょう。おそらくそれは、データマネージメントグループ(data management group)とかいうやつです。彼らは企業規模のサービス(enterprise-wide services)の定義に関わっていることもあります。
 なぜ企業規模なのかというと、単一アプリケーションを中心に扱うよりも、複数のアプリケーションを統合することに専念しているからです。
 

@@ -3,8 +3,6 @@ title: 柔軟なスコープ
 tags: [requirements analysis, project planning, thoughtworks]
 ---
 
-https://martinfowler.com/bliki/ScopeLimbering.html
-
 アジャイル開発の基本的な教義のひとつに
 「要求変更は予測できないが、喜んで受け入れる」
 というものがある。

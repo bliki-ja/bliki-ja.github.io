@@ -3,8 +3,6 @@ title: アプリケーション境界
 tags: [team organization, application integration, application architecture]
 ---
 
-https://martinfowler.com/bliki/ApplicationBoundary.html
-
 #### アプリケーションの境界をどのように定義するのか？
 
 ソフトウェア開発における未決着の問題のひとつに、ソフトウェアの境界をどのように決定するのかということがあります（ブラウザはオペレーティングシステムの一部でしょうか、それとも違うのでしょうか？）。

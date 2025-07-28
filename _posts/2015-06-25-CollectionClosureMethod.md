@@ -3,8 +3,6 @@ title: コレクションクロージャメソッド
 tags: [object collaboration design, API design, ruby, language feature]
 ---
 
-https://martinfowler.com/bliki/CollectionClosureMethod.html
-
 (detectとinject部分を明確にするよう更新)
 
 Smalltalkでプログラミングを始めたときから、コレクションクラスが好きでした。

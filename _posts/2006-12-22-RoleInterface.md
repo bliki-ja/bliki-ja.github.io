@@ -3,8 +3,6 @@ title: RoleInterface
 tags: [API design]
 ---
 
-https://martinfowler.com/bliki/RoleInterface.html
-
 
 
 

@@ -3,8 +3,6 @@ title: 標準ストーリーポイント
 tags: [metrics, requirements analysis, project planning, estimation]
 ---
 
-https://martinfowler.com/bliki/StandardStoryPoints.html
-
 標準ストーリーポイントというのを XP やってる複数のチームに適応するなんてーのはどうですかという質問を受けた。同じストーリーポイントを使っているチームをいくつか集めて、あるチームの3ストーリーポイントが他のチームのそれと同じだーとかなんとかやりたいんだと。
 
 そんなもんたかが知れてるように思うんだがなあ。最悪、デンジャラスなことも起こるしなあ。

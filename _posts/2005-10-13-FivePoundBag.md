@@ -3,8 +3,6 @@ title: 5ポンドの鞄
 tags: [metrics, project planning, estimation]
 ---
 
-https://martinfowler.com/bliki/FivePoundBag.html
-
 > 10ポンドのクソを5ポンドの鞄に入れることはできない——実際にやってみた人
 
 Kentと一緒に『XPエクストリーム・プログラミング実行計画』を書いたとき、計画がどんなものなのか端的に示すために、この一風変わった文章を引用をした。

@@ -3,8 +3,6 @@ title: Annotation
 tags: [language feature]
 ---
 
-https://martinfowler.com/bliki/Annotation.html
-
 プログラム要素（主にクラス、メソッド、フィールドなど）につくAnnotationとは、
 メタデータの部品(a piece of meta-data)のことで、プログラム要素に拡張コードを追加します。
 

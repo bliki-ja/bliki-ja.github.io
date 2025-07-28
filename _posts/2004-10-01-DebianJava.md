@@ -3,8 +3,6 @@ title: DebianJava
 tags: [tools]
 ---
 
-https://martinfowler.com/bliki/DebianJava.html
-
 ```sh
  # apt-get install java-package
  download the sun jdk from java.sun.com

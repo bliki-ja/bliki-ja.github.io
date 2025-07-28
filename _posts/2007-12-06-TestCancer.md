@@ -3,8 +3,6 @@ title: テストの癌
 tags: [testing, bad things]
 ---
 
-https://martinfowler.com/bliki/TestCancer.html
-
 2007/12/6
 
 本の執筆に専念するようになってから、ソフトウェア開発の現場と疎遠になるのがよく心配になる。これまでに現場を離れた有名人を何人も目にしているが、私は彼らと同じような運命をたどりたくはない。私にはThoughtWorksという最高の情報源があるので、まだ地に足をつけていられるのだ。

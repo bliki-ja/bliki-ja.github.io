@@ -3,8 +3,6 @@ title: ThoughtWorksChina
 tags: [thoughtworks]
 ---
 
-https://martinfowler.com/bliki/ThoughtWorksChina.html
-
 ThoughtWorksが中国に進出した。
 中国オフィスを開くことは、かねてからの強い願いであった。
 Royも以前からRoysSocialExperimentの一部に入れており、

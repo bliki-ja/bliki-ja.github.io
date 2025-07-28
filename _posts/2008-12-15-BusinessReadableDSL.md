@@ -3,8 +3,6 @@ title: ビジネスリーダブルDSL
 tags: [domain specific language]
 ---
 
-https://martinfowler.com/bliki/BusinessReadableDSL.html
-
 > ビジネスピープルは、DSLを使えば、プログラマがいなくてもソフトウェアのルールを書けるのだろうか？
 
 

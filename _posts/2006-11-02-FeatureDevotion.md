@@ -3,8 +3,6 @@ title: 機能の専念
 tags: [agile, bad things, requirements analysis, process theory]
 ---
 
-https://martinfowler.com/bliki/FeatureDevotion.html
-
 
 
 

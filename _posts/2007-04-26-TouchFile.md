@@ -3,8 +3,6 @@ title: タッチファイル
 tags: [build scripting]
 ---
 
-https://martinfowler.com/bliki/TouchFile.html
-
 
 
 [make](http://en.wikipedia.org/wiki/Make)を使ってビルドするときは、出力ファイルと入力ファイルの修正日を比較して、実行する必要があるかどうかを決める。コンパイルではこれでもうまくいく（a.outがfoo.cに依存している状態）。しかし、出力ファイルが不明なものもある。

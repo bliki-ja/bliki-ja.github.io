@@ -3,8 +3,6 @@ title: レイヤリングの原則
 tags: [application architecture]
 ---
 
-https://martinfowler.com/bliki/LayeringPrinciples.html
-
 ここ数日、ノルウェーで開かれたエンタープライズソフトウェアのワークショップに参加してきました。Jimmy Nilssonが主催するワークショップです。
 そのなかで、いくつかの設計原則を挙げ、それに投票するというセッションを行いました。
 

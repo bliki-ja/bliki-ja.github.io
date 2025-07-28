@@ -3,8 +3,6 @@ title: ドメイン特化言語
 tags: [domain specific language]
 ---
 
-https://martinfowler.com/bliki/DomainSpecificLanguage.html
-
 
 
 

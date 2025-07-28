@@ -3,8 +3,6 @@ title: RubyMicrosoft
 tags: [microsoft, ruby]
 ---
 
-https://martinfowler.com/bliki/RubyMicrosoft.html
-
 
 
 

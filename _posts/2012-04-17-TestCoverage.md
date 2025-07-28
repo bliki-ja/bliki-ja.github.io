@@ -3,8 +3,6 @@ title: テストカバレッジ
 tags: [testing, metrics]
 ---
 
-https://martinfowler.com/bliki/TestCoverage.html
-
 
 
 

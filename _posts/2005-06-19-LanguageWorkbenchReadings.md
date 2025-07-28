@@ -3,8 +3,6 @@ title: LanguageWorkbenchReadings
 tags: [domain specific language]
 ---
 
-https://martinfowler.com/bliki/LanguageWorkbenchReadings.html
-
 '''更新''':Neal Fordが[サンプルをJavaにポート](http://memeagora.blogspot.com/2005/07/language-workbench-sample-ported-to.html)してくれました。
 
 先頃『LanguageWorkbench』という記事を書きましたが、

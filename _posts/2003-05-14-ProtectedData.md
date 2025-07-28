@@ -3,8 +3,6 @@ title: ProtectedData
 tags: [encapsulation, language feature]
 ---
 
-https://martinfowler.com/bliki/ProtectedData.html
-
 ### 優れたOO設計者はクラス内のデータをprotectedにする？
 
 [すべてのデータはprivateにするべきだというOO設計者もいれば、いくつかはpublicにするというOO設計者もいます](http://groups.google.com/groups?threadm=db9bbf31.0303260938.a4bad42%40posting.google.com)。

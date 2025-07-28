@@ -3,8 +3,6 @@ title: JRubyVelocity
 tags: [tools]
 ---
 
-https://martinfowler.com/bliki/JRubyVelocity.html
-
 昨日、velocityをいじってテンプレートとマクロについて調査する必要があった。 velocityのシンプルなテンプレート言語は好きだが、Javaや.NETのコンテクストでは使っていなかった。当時、velocityを使うために環境をセットアップしたりJavaでプロセッサを実行したりするのは面倒なことだった。
 
 こういったときにはスクリプト言語が必要だ。私好みのスクリプト言語はRubyなので、JRubyを試す良い機会だろう。結論から言うと、うまくはいくんだが、たぶん話はつまんないよ。

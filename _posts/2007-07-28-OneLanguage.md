@@ -3,8 +3,6 @@ title: 1つの言語
 tags: [programming platforms]
 ---
 
-https://martinfowler.com/bliki/OneLanguage.html
-
 #### 開発における言語は１つだけにするべきか？
 
 ソフトウェア開発の際に1つの標準言語に集中することが、ここ10年の間ほぼずっと、エンタープライズ・ソフトウェア界における流行であった。多くの開発組織が、すべての作業をJava(もしくはC#/VB)でこなそうとしている。

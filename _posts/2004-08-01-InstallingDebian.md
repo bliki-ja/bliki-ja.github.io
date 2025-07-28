@@ -3,8 +3,6 @@ title: Debianのインストール
 tags: [tools]
 ---
 
-https://martinfowler.com/bliki/InstallingDebian.html
-
 ここ数週間ばかし、[Debian](http://www.debian.org/) Linux のインストールをやってみた。
 ここ数ヶ月間、新しい環境をいろいろとセットアップしなきゃいけなかったんだよ。
 新しいデスクトップを手に入れたから、Windows XPをインストールしたでしょう？ それから、MacOS Xの入ったPowerbookでしょう？ それからそれから、Windows XPの入った仕事用のノートでしょう？ あーなんかいろんな作業があるんですけど……。仕事用のノートにはThoughtWorksが設定したWindows XPがインストールされてるんだけど、私が仕事に使うアプリケーションは別途インストールしなきゃいけないわけじゃない？（面倒くせー）

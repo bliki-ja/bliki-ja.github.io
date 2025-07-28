@@ -3,8 +3,6 @@ title: 回収不能コスト駆動型アーキテクチャ
 tags: [bad things, application architecture]
 ---
 
-https://martinfowler.com/bliki/SunkCostDrivenArchitecture.html
-
 おお、これが一般的な"アーキテクチャ"スタイルだとはなさけない……。
 君の会社がめちゃくちゃ高価なソフトウェア（サーバとかね）を購入するとする。
 で、君はこう言われるわけだ。

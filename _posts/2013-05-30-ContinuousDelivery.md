@@ -3,8 +3,6 @@ title: 継続的デリバリー
 tags: [delivery, version control, continuous integration]
 ---
 
-https://martinfowler.com/bliki/ContinuousDelivery.html
-
 継続的デリバリーはソフトウェア開発における規律のひとつだ。
 この規律に従ってソフトウェアを作れば、いつでも本番環境にリリースできるようになる。
 

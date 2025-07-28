@@ -3,8 +3,6 @@ title: 顧客ロイヤルティソフトウェア
 tags: [domain driven design]
 ---
 
-https://martinfowler.com/bliki/CustomerLoyaltySoftware.html
-
 
 
 

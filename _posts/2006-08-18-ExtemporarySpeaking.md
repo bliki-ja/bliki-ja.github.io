@@ -3,8 +3,6 @@ title: ExtemporarySpeaking
 tags: [presentations]
 ---
 
-https://martinfowler.com/bliki/ExtemporarySpeaking.html
-
 
 
 Jon Udellが講演のやり方について[2つのモデル](http://weblog.infoworld.com/udell/2006/04/09.html)を挙げていた。

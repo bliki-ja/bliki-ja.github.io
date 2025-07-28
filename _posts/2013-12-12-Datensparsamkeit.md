@@ -3,8 +3,6 @@ title: Datensparsamkeit
 tags: [database, web development, internet culture, legal, data analytics]
 ---
 
-https://martinfowler.com/bliki/Datensparsamkeit.html
-
 2013/12/12
 
 ドイツ語にはDatensparsamkeitっていう言葉があるんだけど、それに該当する適切な英単語はない。

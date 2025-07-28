@@ -3,8 +3,6 @@ title: 設計＝スタミナ仮説
 tags: [productivity, technical debt, process theory, evolutionary design, clean code, software craftsmanship]
 ---
 
-https://martinfowler.com/bliki/DesignStaminaHypothesis.html
-
 > ソフトウェアをきちんと設計するのは、その労力に見合うことなのか？
 
 「ソフトウェアをきちんと設計することって、そんなに大切なことなの？」という問題について、遠回しなやりとりをすることが時々ある。

@@ -3,8 +3,6 @@ title: サーキットブレイカー
 tags: [delivery, application architecture]
 ---
 
-https://martinfowler.com/bliki/CircuitBreaker.html
-
 ネットワークを介して異なるマシンで動作するソフトウェアを呼び出すことは一般的に行われている。インメモリ処理とリモートコールの大きな違いの１つは、リモートコールは失敗したりレスポンスが返ってこないままタイムアウトするまで停止してまう可能性があることだ。レスポンスが遅いシステムが多くの利用者を抱えている場合、
 重要なリソースを使い果たしてしまい、複数のシステムをまたがった障害が発生するだろう。Michael Nygard は名著 [Release It](https://www.amazon.com/gp/product/0978739213?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0978739213)で、このような壊滅的な連鎖を防止するために Circuit Breaker パターンを広めた。
 

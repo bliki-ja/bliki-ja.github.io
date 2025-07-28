@@ -3,8 +3,6 @@ title: CurrencyAsValue
 tags: [domain driven design]
 ---
 
-https://martinfowler.com/bliki/CurrencyAsValue.html
-
 [バリューオブジェクト](/ValueObject)(パターン)の例はたくさんありますが、私が良く使うのはMoney(クラス)です。そしてMoneyにつきものなのは通貨です。
 
 多くのシステムにとって通貨は値(value object)として扱うと上手くいきます。

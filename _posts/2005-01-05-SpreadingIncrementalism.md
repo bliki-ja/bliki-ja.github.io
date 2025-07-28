@@ -3,8 +3,6 @@ title: 漸進主義の広まり
 tags: [agile, agile adoption, process theory]
 ---
 
-https://martinfowler.com/bliki/SpreadingIncrementalism.html
-
 漸進手法が他の分野でも使えることに疑問を抱いている人がいる。
 「
 アジャイルプロジェクトでは (セキュリティ|ユーザーインターフェース設計|データベース|国際化|*) を行うことは出来ない。

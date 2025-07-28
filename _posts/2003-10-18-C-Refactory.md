@@ -3,8 +3,6 @@ title: C-Refactory
 tags: refactoring
 ---
 
-https://martinfowler.com/bliki/C-Refactory.html
-
 ★途中
 
 これまで、様々な言語用に[リファクタリングツール](http://www.refactoring.com/tools.html)が開発されてきた。

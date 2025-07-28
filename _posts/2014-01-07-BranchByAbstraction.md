@@ -3,8 +3,6 @@ title: 抽象化によるブランチ
 tags: [version control, continuous integration]
 ---
 
-https://martinfowler.com/bliki/BranchByAbstraction.html
-
 「抽象化によるブランチ」というテクニック[^fn01]は、ソフトウェアシステムへの大規模な変更を徐々に進めていくときに使われるものだ。
 これを使えば、変更がまだ完了していなくても、定期的にシステムをリリースできるようになる。
 

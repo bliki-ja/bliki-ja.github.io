@@ -3,8 +3,6 @@ title: VisualChannel
 tags: [presentations]
 ---
 
-https://martinfowler.com/bliki/VisualChannel.html
-
 
 
 1990年代の終わり頃、

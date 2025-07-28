@@ -3,8 +3,6 @@ title: GroovyOrJRuby
 tags: [ruby]
 ---
 
-https://martinfowler.com/bliki/GroovyOrJRuby.html
-
 
 
 

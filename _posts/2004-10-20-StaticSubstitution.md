@@ -3,8 +3,6 @@ title: staticの置き換え
 tags: [testing, application architecture, refactoring]
 ---
 
-https://martinfowler.com/bliki/StaticSubstitution.html
-
 周囲の開発チームのそれぞれに、自分たちの仕事について思うところを訊いてみた。すると共通するテーマがあきらかになった。staticで保持することは嫌われている。
 
 その典型的な例は、共通サービスやコンポーネントだ。これらはstatic変数で保持され、staticイニシャライザで初期化される。

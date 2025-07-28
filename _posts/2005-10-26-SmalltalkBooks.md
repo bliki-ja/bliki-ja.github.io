@@ -3,8 +3,6 @@ title: SmalltalkBooks
 tags: [language feature, writing]
 ---
 
-https://martinfowler.com/bliki/SmalltalkBooks.html
-
 Smalltalkを手に入れて、何が大騒ぎされているのかを調べたいと思っている人によく出会います。
 私の好きなSmalltalkの入門本は絶版になりましたが、
 多くのSmalltalk関連の資料と一緒に[ここからダウンロード](http://www.iam.unibe.ch/~ducasse/FreeBooks.html)することができます。

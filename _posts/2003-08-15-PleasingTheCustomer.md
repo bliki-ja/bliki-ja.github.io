@@ -3,8 +3,6 @@ title: 顧客満足
 tags: [agile, collaboration]
 ---
 
-https://martinfowler.com/bliki/PleasingTheCustomer.html
-
 すべてのアジャイル方法論は、
 システム開発者と、最終的に利益を得る顧客とが、直接やり取りをすることの重要性を強調しています。アジャイル宣言にこうあります。
 「ビジネスをする人と開発者はプロジェクトを通して

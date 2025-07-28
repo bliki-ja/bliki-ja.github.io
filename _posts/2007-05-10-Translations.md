@@ -3,8 +3,6 @@ title: Translations
 tags: [writing]
 ---
 
-https://martinfowler.com/bliki/Translations.html
-
 休憩時間にこのblogを読んでいる人がいると思う。
 だが中には、休憩時間に翻訳をしたいと思う人間もいる。
 

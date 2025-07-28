@@ -3,8 +3,6 @@ title: 委任主義
 tags: [process theory]
 ---
 
-https://martinfowler.com/bliki/EnablingAttitude.html
-
 [ソフトウェア開発の心構え](/SoftwareDevelopmentAttitude)のひとつです。
 開発者は責任あるプロフェッショナルであり、彼らが必要だと思うことを自由にやらせればよい、
 というのが委任主義です。

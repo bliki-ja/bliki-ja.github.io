@@ -3,8 +3,6 @@ title: ウェスタン
 tags: [diversions]
 ---
 
-https://martinfowler.com/bliki/OnceUponaTimeInTheWest.html
-
 私の友達はみんなオタクなわけだが、彼らは2003年11月を心待ちにしていた。
 『ロード・オブ・ザ・リング 二つの塔』のDVDが出たのだ（当然、 スペシャル・エクステンデッド・エディションを買ったわけだが）。
 でも私にとってその日は、あるものの発売日だった。

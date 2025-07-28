@@ -3,8 +3,6 @@ title: TravelClothing
 tags: [travel]
 ---
 
-https://martinfowler.com/bliki/TravelClothing.html
-
 2005/12/20
 
 多くのギークがそうであるように、私もファッションにもファッションの流行にも無頓着である。私の信念は「中身に興味がなかったら荷造りは楽だ」である。ただ、ギークな友達と服について話していてインスパイヤされたので、このエントリを書いてみる。

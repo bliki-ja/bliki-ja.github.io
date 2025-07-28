@@ -3,8 +3,6 @@ title: テストダブル
 tags: [testing]
 ---
 
-https://martinfowler.com/bliki/TestDouble.html
-
 
 
 

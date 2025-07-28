@@ -3,8 +3,6 @@ title: オープンな知的財産
 tags: [thoughtworks]
 ---
 
-https://martinfowler.com/bliki/OpenIntellectualProperty.html
-
 ThoughtWorksで働くことが快適なのには、いくつもの理由がある。
 なかでも、ここで働く多くの人間が、私と価値観を共有してくれていることが一番大きな理由だ。
 ここ数年、我々は知的財産に対する立場について何度も話し合ってきた——基本的に知的財産は放棄する方向である。

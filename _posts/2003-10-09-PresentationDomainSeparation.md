@@ -3,8 +3,6 @@ title: プレゼンテーションとドメインの分離
 tags: [application architecture]
 ---
 
-https://martinfowler.com/bliki/PresentationDomainSeparation.html
-
 最も有用な設計原則に、
 プログラム（ユーザーインターフェイス）のプレゼンテーション層とその他の機能をうまく分ける、というのがあります。
 私はこれを発見して以来、ずっと慣行しています。

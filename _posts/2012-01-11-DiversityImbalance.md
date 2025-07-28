@@ -3,8 +3,6 @@ title: 多様性のアンバランス
 tags: [bad things, diversity, internet culture]
 ---
 
-https://martinfowler.com/bliki/DiversityImbalance.html
-
 
 2012/01/11
 
