@@ -153,6 +153,16 @@ Eiffelを使うと、クラス不変表明は、メソッドの呼び出し前�
       </div>
     </div>
 
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+
   </div>
 
 </footer>

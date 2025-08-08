@@ -239,6 +239,16 @@ DSLには文法が比較的整った動的型言語が向いていると思う�
       </div>
     </div>
 
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+
   </div>
 
 </footer>

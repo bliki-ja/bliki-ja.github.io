@@ -114,6 +114,16 @@ Brian Footeが<a href="http://www.laputan.org/catfish/archives/2005_06.html">そ
       </div>
     </div>
 
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+
   </div>
 
 </footer>

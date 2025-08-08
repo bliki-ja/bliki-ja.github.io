@@ -128,6 +128,16 @@ UML以前の方法論には、部分−全体の関係を示す一般的な記�
       </div>
     </div>
 
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+
   </div>
 
 </footer>

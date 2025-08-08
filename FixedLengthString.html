@@ -134,6 +134,16 @@ UI の部品は、固定長の文字列をそのサイズ分だけとってき�
       </div>
     </div>
 
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+
   </div>
 
 </footer>
