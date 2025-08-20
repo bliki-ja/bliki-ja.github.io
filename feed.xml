@@ -5,9 +5,21 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Aug 2025 21:56:23 +0900</pubDate>
-    <lastBuildDate>Fri, 08 Aug 2025 21:56:23 +0900</lastBuildDate>
+    <pubDate>Wed, 20 Aug 2025 20:45:36 +0900</pubDate>
+    <lastBuildDate>Wed, 20 Aug 2025 20:45:36 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>伸縮ジョイント</title>
+
+        <pubDate>Mon, 18 Aug 2025 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/ExpansionJoints</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/ExpansionJoints</guid>
+        
+        <category>presentation technique</category>
+        
+        
+      </item>
     
       <item>
         <title>LLMとは誰か？</title>
@@ -125,22 +137,6 @@
         <category>enterprise architecture</category>
         
         <category>platforms</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>コンウェイの法則</title>
-
-        <pubDate>Thu, 20 Oct 2022 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/ConwaysLaw</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/ConwaysLaw</guid>
-        
-        <category>team organization</category>
-        
-        <category>enterprise architecture</category>
-        
-        <category>application architecture</category>
         
         
       </item>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>伸縮ジョイント - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/ExpansionJoints">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">伸縮ジョイント</h1>
+    <p class="post-meta" style="text-align:right">
+      2025-08-18
+      
+      [<a href="https://martinfowler.com/bliki/ExpansionJoints.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2025-08-18-ExpansionJoints.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?presentation%20technique" style="background-color: #ffc">presentation technique</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- Back in the days when I did live talks, one of my abilities was to finish on time, even if my talk time was cut at the last moment (perhaps due to the prior speaker running over). The key to my ability to do this was to use Expansion Joints - parts of the talk that I'd pre-planned so I could cover them quickly or slowly depending on how much time I had. -->
+
+<p>過去に講演をしていた頃、私の能力のひとつは「時間通りに終わらせること」だった。たとえ（前の登壇者の時間オーバーなどで）直前に私の講演時間が短くなったとしてもだ。私の能力の鍵だったのは「伸縮ジョイント（Expansion Joints）」である。これは、持ち時間に応じて、はやく進めたり、ゆっくり進めたりできように、あらかじめ用意しておいた部分のことだ。</p>
+
+<!-- The way I'd do this would be to plan for some topics to be optional. The talk would work if I skipped over them, but I could also witter on about them for five (or ten) minutes. Ideally, each of these topics would get one slide, usually with a bunch of key phrases on it - the headings of what I'd talk about should I be talking about it. When I got to the slide, I'd look at how time was going with the talk. If (as was usually the case) I was running short of time, I could cover the slide in about thirty seconds, saying something like: “in doing this, there's a bunch of things you need to consider, but they are out of scope for today's talk”. -->
+
+<p>私がやっていたのは、いくつかのトピックをオプションとして計画する方法である。その部分をスキップしても講演は成立するが、逆に5分（や10分）かけてだらだら話すこともできる。理想的には、トピックごとに1枚のスライドを割り当て、いくつかのキーフレーズ（話すときの見出し）を並べておく。そのスライドに来た時点で、残り時間を確認するのである。時間が足りなければ（たいていはそうなのだが）、「そのためには、考慮すべきことがさまざまあるが、それは本日の講演のスコープ外である」などと言いながら、30秒程度でそのスライドを終わらせる。</p>
+
+<!-- If, however, I did have time, I could then spend some time talking about them. The slide would be simple, and not provide much of a Visual Channel, but that wasn't so important, after all this material was optional in the first place. -->
+
+<p>時間が余っていれば、そのトピックに時間を使うこともできる。スライドはシンプルであり、<a href="/VisualChannel">視覚チャンネル</a>もほとんどないが、大したことではない。もともとそのスライドはオプションだったからだ。</p>
+
+<!-- The single flex-slide was my favorite Expansion Joint, as it was easy to use. Sometimes however my optional topic required a proper visual channel, necessitating dedicated slides. My solution here was good control over slide handling. Presentation tools include the ability to skip over slides while I'm talking, and I made sure I practiced how to use them so I could skip a bunch of slides without the audience knowing. It's crucial here that it's invisible to the audience, I find it looks sloppy if anyone says “in the interests of time I'll skip over these slides”. To do this, however, I do need access to my laptop while presenting, venues that only provide a clicker while loading the slides on some other machine lack that control. That started to happen in my last couple of years, much to my annoyance. -->
+
+<p>1枚の調整スライドは使いやすく、私のお気に入りの伸縮ジョイントだった。ただし、オプションのトピックであっても<a href="/VisualChannel">視覚チャンネル</a>が必要になることもあった。そうした場合はスライド操作で乗り切った。プレゼンツールには講演中にスライドをスキップする機能がある。私はその機能の使い方を練習して、聴衆に気づかれないように複数枚のスライドをスキップできるようにしていた。重要なのは「聴衆に気づかれない」という点である。「時間がないのでこのスライドは飛ばします」と言うのはみっともない。ただし、そのためには講演中に自分でパソコンを操作する必要がある。リモコンだけを渡されて、会場のどこかにあるパソコンのスライドを投影する場合は制御できない。最後の数年間はそうした状況が多く、ひどく苛立ったものである。</p>
+
+<!-- When creating talks, I was always worried that I would run out of things to say, even though experience told me I reliably crammed more stuff in than I could possibly cover. Expansion Joints helped with this, I could aggressively trim the core talk to less than I needed, and rely on the Expansion Joints to fill the gap. In practice I usually didn't need the Expansion Joints anyway, but their presence helped my confidence. -->
+
+<p>講演を考えているときは「話すことがなくなるのではないか」といつも不安だった。実際には、時間内に話せないくらい内容を詰め込みすぎてしまうのだが……。だが、伸縮ジョイントがあるおかげで、講演の核となる部分を思いっきり削ることができた。足りない部分は伸縮ジョイントで補完すればいいからだ。実際に伸縮ジョイントをほとんど使うことはなかったが、その存在が自信につながった。</p>
+
+<!-- Using Expansion Joints was particularly important for me as I never rehearsed my talks. I was always someone whose ability to present was driven by adrenaline. Talking to a rubber duck just didn't work, the duck was clearly every bit as bored as I was. Consequently the first time I gave a talk, I was hazy as to how long it would take. Yet with Expansion Joints in place, I was able to finish a talk right on time. -->
+
+<p>私はリハーサルをしないので、伸縮ジョイントが非常に重要だった。私のプレゼン能力はアドレナリンに突き動かされていたのである。ゴム製のアヒルを相手に練習しても効果はなかった。私と同じくアヒルも退屈そうにしているのは明らかだった。したがって、はじめてのテーマで講演するときには、どれくらい時間がかかるのか見当もつかなかった。だが、伸縮ジョイントのおかげで、時間通りにきっちりと講演を終わらせることができた。</p>
+
+<!-- Expansion Joints enabled me to give the same talk to different time slots. Sometimes I'd have thirty minutes, sometimes forty-five. With Expansion Joints, I didn't need to change my slides, particularly handy if a time cut (or more rarely a time increase) appeared at the last moment. (Although in my later years, I handled this by doing a Suite Of Talks.) -->
+
+<p>伸縮ジョイントがあれば、同じ講演でも異なる時間に対応できる。講演時間は30分のときもあれば、45分のときもある。だが、伸縮ジョイントがあれば、スライドを変更する必要がない。直前に時間が削られたときには（滅多にないが、時間が延長されたときも）伸縮ジョイントは便利だった。（後年は<a href="/SuiteOfTalks">講演スイート</a>という別の方法で対応していた）</p>
+
+<!-- Talks that encourage audience interaction need these because we can never predict how much time the interaction will use up. Sometimes we get a steady stream of questions, other times (particularly in Scandinavia, or upper-Midwest America) a lack of questions had me blasting through the agenda. Any such talk needed a double-dose of this temporal ballast. -->
+
+<p>聴衆とのやり取りが発生する講演では、どれだけ時間がかかるかわからないので、この仕組みが必要だった。質疑応答が延々と続くこともあれば、（特にスカンジナビアやアメリカ北中西部では）質問がまったくなく、予定をすぐに終えてしまうこともある。そうした講演では、時間調整のスライドが2倍必要だった。</p>
+
+<!-- Expansion Joints are at their most useful in later parts of the talk, as it's then that I have the most information on how much time I have. Earlier ones can still be handy, particularly if they come after an interactive section when I'd like to rebase my timing. -->
+
+<p>伸縮ジョイントが最も役に立つのは講演の後半である。残り時間を把握しやすくなっているからだ。前半でも役に立たないわけではない。特に聴衆とのやり取りのあとで自分のタイミングを立て直すときに有効だ。</p>
+
+<!-- Further Reading -->
+<h2 id="さらに詳しく知るために">さらに詳しく知るために</h2>
+
+<!-- The name was coined by Neal Ford, Matthew McCullough, and Nathaniel Schutta in their excellent book Presentation Patterns. -->
+
+<p>この名前はNeal Ford, Matthew McCullough, Nathaniel Schuttaの著書『Presentation Patterns』でつけられたものだ。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>
