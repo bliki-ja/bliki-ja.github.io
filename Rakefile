@@ -16,7 +16,7 @@ task :post do
 end
 
 # Usage: rake post_from url="https://martinfowler.com/bliki/UserStory.html"
-desc "post_from"
+desc "ex.) rake post_from url=https://martinfowler.com/bliki/UserStory.html"
 task :post_from do
   require 'open-uri'
   require 'nokogiri'
@@ -32,7 +32,7 @@ task :post_from do
   }.uniq.join(', ') + "]"
   create_file_name = "#{t.strftime("%Y-%m-%d-")}#{title}.md"
 
-  puts "Creating new post: #{create_file_name}"
+  puts "Creating new post: _posts/#{create_file_name}"
   filename = File.join("_posts", create_file_name)
   open(filename, 'w') do |post|
     post.puts "---"
