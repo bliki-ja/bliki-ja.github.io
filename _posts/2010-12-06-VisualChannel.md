@@ -1,5 +1,5 @@
 ---
-title: VisualChannel
+title: 視覚チャンネル
 tags: [presentations]
 ---
 
