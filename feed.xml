@@ -5,9 +5,21 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Aug 2025 20:45:36 +0900</pubDate>
-    <lastBuildDate>Wed, 20 Aug 2025 20:45:36 +0900</lastBuildDate>
+    <pubDate>Fri, 29 Aug 2025 21:05:36 +0900</pubDate>
+    <lastBuildDate>Fri, 29 Aug 2025 21:05:36 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>LLMとソフトウェア開発に関する考察</title>
+
+        <pubDate>Thu, 28 Aug 2025 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/202508-ai-thoughts</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/202508-ai-thoughts</guid>
+        
+        <category>article</category>
+        
+        
+      </item>
     
       <item>
         <title>伸縮ジョイント</title>
@@ -121,22 +133,6 @@
         <guid isPermaLink="true">https://bliki-ja.github.io/TwoPizzaTeam</guid>
         
         <category>team organization</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>チームトポロジー</title>
-
-        <pubDate>Tue, 25 Jul 2023 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/TeamTopologies</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/TeamTopologies</guid>
-        
-        <category>team organization</category>
-        
-        <category>enterprise architecture</category>
-        
-        <category>platforms</category>
         
         
       </item>

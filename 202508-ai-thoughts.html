@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LLMとソフトウェア開発に関する考察 - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/202508-ai-thoughts">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">LLMとソフトウェア開発に関する考察</h1>
+    <p class="post-meta" style="text-align:right">
+      2025-08-28
+      
+        
+        [<a href="https://martinfowler.com/articles/202508-ai-thoughts.html">オリジナル記事</a>]
+        
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/_posts/2025-08-28-202508-ai-thoughts.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?article" style="background-color: #ffc">article</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- I’m about to head away from looking after this site for a few weeks (part vacation, part work stuff). As I contemplate some weeks away from the daily routine, I feel an urge to share some scattered thoughts about the state of LLMs and AI. -->
+
+<p>私はこれから数週間、このサイトの管理を離れる予定だ（半分は休暇、半分は仕事）。日々のルーティンから離れることを考えているうちに、LLMやAIの現状について、散漫な考えを共有したいと思った。</p>
+
+<hr />
+
+<!-- I’ve seen a few early surveys on the effect AI is having on software development, is it really speeding folks up, does it improve or wreck code quality? One of the big problems with these surveys is that they aren’t taking into account how people are using the LLMs. From what I can tell the vast majority of LLM usage is fancy auto-complete, often using co-pilot. But those I know who get the most value from LLMs reckon that auto-complete isn’t very useful, preferring approaches that allow the LLM to directly read and edit source code files to carry out tasks. My concern is that surveys that ignore the different work-flows of using LLMs will produce data that’s going to send people down the wrong paths. -->
+
+<p>AIがソフトウェア開発に与える影響についての初期の調査をいくつか目にした。生産性は向上しているのか？コードの品質は上がったのか？下がったのか？などである。こうした調査の大きな問題は、LLMの使い方を考慮していない点だ。私が知る限り、LLMの使い方の大半は（主にco-pilotを使用した）「高機能なオートコンプリート」である。だが、LLMを使いこなしている私の知人たちは、オートコンプリートはあまり役立たないと考えており、LLMにソースコードのファイルの読み込みと編集を許可し、タスクを実行させるアプローチを好んでいる。LLMの使い方を無視した調査は、誤った方向へ人々を導くデータを生み出すのではないかと懸念している。</p>
+
+<p><!-- (Another complication is the varying capabilities of different models.) -->
+（もうひとつの複雑な要因は、モデルの能力差である）</p>
+
+<hr />
+
+<!-- I’m often asked, “what is the future of programming?” Should people consider entering software development now? Will LLMs eliminate the need for junior engineers? Should senior engineers get out of the profession before it’s too late? My answer to all these questions is “I haven’t the foggiest”. Furthermore I think anyone who says they know what this future will be is talking from an inappropriate orifice. We are still figuring out how to use LLMs, and it will be some time before we have a decent idea of how to use them well, especially if they gain significant improvements. -->
+
+<p>よく「プログラミングの未来はどうなるのか？」と聞かれる。今からソフトウェア開発に参加すべきか？LLMでジュニアエンジニアは不要になるのか？シニアエンジニアは手遅れになる前に仕事を離れるべきか？私の答えは「まったくわからない」だ。さらに言えば、未来を知っていると主張する人は、口ではないところから言葉を発しているのだと思う。我々はLLMの使い方を模索している。これからLLMの使い方を理解するまでに、特にLLMの性能が大幅に向上した場合にどう使うべきかを理解するまでに、しばらく時間がかかるだろう。</p>
+
+<!-- What I suggest, is that people experiment with them. At the least, read about what others are doing, but pay attention to the details of their workflows. Preferably experiment yourself, and do share your experiences. -->
+
+<p>私が提案するのは、とにかく試してみることだ。少なくとも他の人が何をしているのかを把握しよう。特に具体的な使い方に注目しよう。できれば自分でも実験し、経験を共有するといいだろう。</p>
+
+<hr />
+
+<!-- I’m also asked: “is AI a bubble”? To which my answer is “OF COURSE IT’S A BUBBLE”. All major technological advances have come with economic bubbles, from canals and railroads to the internet. We know with near 100% certainty that this bubble will pop, causing lots of investments to fizzle to nothing. However what we don’t know is when it will pop, and thus how big the bubble will have grown, generating some real value in the process, before that happens. It could pop next month, or not for a couple of years. -->
+
+<p>「AIはバブルか？」もよく聞かれる。これに対して私は「もちろんバブルだ」と答える。主要な技術的進歩は経済的バブルと一緒にやってくる。運河、鉄道、インターネット、どれもそうだった。いずれはバブルが弾け、多くの投資が無価値になることをほぼ確実にわかっている。しかし、いつ弾けるのかはわからない。バブルがどこまで膨らみ、その過程でどれだけ価値を生み出すかは不明だ。来月弾けるかもしれないし、数年後かもしれない。</p>
+
+<!-- We also know that when the bubble pops, many firms will go bust, but not all. When the dot-com bubble burst, it killed pets.com, it killed Webvan… but it did not kill Amazon. -->
+
+<p>バブルが弾ければ、多くの企業は潰れる。だが、すべてではない。ドットコム・バブルが弾けたとき、pets.comやWebvanは消えた。だが、Amazonは消えなかった。</p>
+
+<hr />
+
+<!-- I retired from public speaking a couple of years ago. But while I don’t miss the stress of giving talks, I do miss hanging out with my friends in the industry. So I’m looking forward to catching up with many of them at GOTO Copenhagen. I’ve been involved with the GOTO conference series since the 1990s (when it was called JAOO), and continue to be impressed with how they put together a fascinating program. -->
+
+<p>数年前、私は講演活動を引退した。講演のストレスは恋しくないが、業界の友人たちと交流できなくなったのはさびしい。だからGOTO Copenhagenで多くの人たちに会えるのを楽しみにしている。私は1990年代（まだJAOOと呼ばれていた頃）からGOTOカンファレンスに関わっている。彼らが興味深いプログラムを企画していることに今でも感心する。</p>
+
+<hr />
+
+<!-- My former colleague Rebecca Parsons, has been saying for a long time that hallucinations aren’t a bug of LLMs, they are a feature. Indeed they are the feature. All an LLM does is produce hallucinations, it’s just that we find some of them useful. -->
+
+<p>元同僚のレベッカ・パーソンズは、ずっと前から「ハルシネーションはLLMのバグではなく、特徴である」と言っている。確かに特徴だと思う。LLMがやっているのはすべてハルシネーションである。その一部を我々が有用だと感じているにすぎない。</p>
+
+<!-- One of the consequences of this is that we should always consider asking the LLM the same question more than once, perhaps with some variation in the wording. Then we can compare answers, indeed perhaps ask the LLM to compare answers for us. The difference in the answers can be as useful as the answers themselves. -->
+
+<p>したがって、LLMには同じ質問を（表現を変えながら）何度も聞くべきだ。そうすれば、答えを比較できる。LLMに答えを比較してもらってもいい。答え自体よりも、答えの違いのほうが有益なこともあるだろう。</p>
+
+<!-- Certainly if we ever ask a hallucination engine for a numeric answer, we should ask it at least three times, so we get some sense of the variation. Furthermore we shouldn’t ask an LLM to calculate an answer than we can calculate deterministically (yes, I’ve seen this). It is OK to ask an LLM to generate code to calculate an answer (but still do it more than once). -->
+
+<p>ハルシネーションエンジンに数値的な答えを聞く場合は、少なくとも3回は質問するべきだ。そうすれば、ばらつきの幅がわかる。また、我々が決定論的に計算できるものをLLMに計算させるべきではない（実際にやってる人がいる）。答えを計算するコードを生成させるのは構わない（その場合も複数回生成させるべきだ）。</p>
+
+<hr />
+
+<!-- Other forms of engineering have to take into account the variability of the world. A structural engineer builds in tolerance for all the factors she can’t measure. (I remember being told early in my career that the unique characteristic of digital electronics was that there was no concept of tolerances.) Process engineers consider that humans are executing tasks, and will sometimes be forgetful or careless. Software Engineering is unusual in that it works with deterministic machines. Maybe LLMs mark the point where we join our engineering peers in a world on non-determinism. -->
+
+<p>他の工学分野では、世界の不確実性を考慮する必要がある。構造エンジニアは、測定できない要因に備えて許容範囲を織り込む（私はキャリアの初期に、デジタル電子工学では「許容範囲」という概念は存在しないと教えられた）。プロセスエンジニアは、人間がタスクを実行するときには忘却や不注意があることを織り込む。ソフトウェア工学は独特で、決定論的なマシンを扱っている。LLMは、我々が非決定論的な世界において他の工学の仲間に加わる転換点になるかもしれない。</p>
+
+<hr />
+
+<!-- I’ve often heard, with decent reason, an LLM compared to a junior colleague. But I find LLMs are quite happy to say “all tests green”, yet when I run them, there are failures. If that was a junior engineer’s behavior, how long would it be before H.R. was involved? -->
+
+<p>LLMはジュニアエンジニアと比較される。そこにはもっともな理由もある。だが、LLMが平気で「すべてのテストはグリーンです」と言うのを見てきた。実際に実行すると、テストは失敗する。ジュニアエンジニアがそんなことをしたら、すぐに人事部がやってくるだろう。</p>
+
+<hr />
+
+<!-- LLMs create a huge increase in the attack surface of software systems. Simon Willison described the The Lethal Trifecta for AI agents: an agent that combines access to your private data, exposure to untrusted content, and a way to externally communicate (“exfiltration”). That “untrusted content” can come in all sorts of ways, ask it to read a web page, and an attacker can easily put instructions on the website in 1pt white-on-white font to trick the gullible LLM to obtain that private data. -->
+
+<p>LLMはソフトウェアシステムの攻撃対象領域を大幅に広げてしまう。サイモン・ウィリソンはAIエージェントの「破滅の三要素」を唱えている。つまり、プライベートデータへのアクセス、信頼されていないコンテンツへの露出、外部と通信する手段（データ流出）を合わせ持ったAIエージェントである。「信頼されていないコンテンツ」はさまざまな形で現れる。たとえば、エージェントにウェブページを読み込ませたとき、そのページには攻撃者が白背景に1ptの白文字で指示を書き込んでいるかもしれない。そうすれば、LLMをだましてプライベートデータを引き出すことができる。</p>
+
+<!-- This is particularly serious when it comes to agents acting in a browser. Read an attacker’s web page, and it could trick the agent to go to your bank account in another tab and “buy you a present” by transferring your balance to the kind attacker. Willison’s view is that “the entire concept of an agentic browser extension is fatally flawed and cannot be built safely”. -->
+
+<p>ブラウザで動作するエージェントの場合は深刻だ。攻撃者のウェブページを読み込んだエージェントは、別のタブで銀行口座にアクセスし、「プレゼントを買う」ために攻撃者の口座に送金するかもしれない。ウィリソンは「エージェント型のブラウザ拡張はコンセプトに致命的に欠陥があり、安全に構築することはできない」としている。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>
