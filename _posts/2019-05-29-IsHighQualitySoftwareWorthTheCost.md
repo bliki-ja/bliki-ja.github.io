@@ -1,10 +1,8 @@
 ---
 title: 品質の高いソフトウェアはそのコストに見合うのか？
-tags: ["programming style", productivity, "project planning", "technical debt"]
+tags: ["programming style", productivity, "project planning", "technical debt", "article"]
+original_page_name: is-quality-worth-cost.html
 ---
-
-[https://martinfowler.com/articles/is-quality-worth-cost.html](https://martinfowler.com/articles/is-quality-worth-cost.html)
-
 
 <!-- TOC -->
 - [私たちは品質とコストはトレードオフであるという考えに慣れている](#私たちは品質とコストはトレードオフであるという考えに慣れている)
