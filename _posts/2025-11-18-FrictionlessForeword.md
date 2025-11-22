@@ -13,7 +13,7 @@ tags: [article]
 
 <!-- Almost every engineering manager I've met wants to make their team more productive, but almost every developer I've met wants to be more effective at what they do. But lunches like that easily lead developers to the cynicism that talking about productivity is about making simplistic measurements which forget the invincible power of Goodhart's Law: “When a measure becomes a target, it ceases to be a good measure”. -->
 
-私がこれまでに出会ったほぼすべてのエンジニアリングマネージャーはチームの生産性の向上を望んでいたが、私がこれまでに出会ったほぼすべての開発者は自分たちの仕事を効果的に進めたいと思っていた。先ほどの昼食会の話を開発者が耳にすると、生産性の向上は揺るぎないグッドハートの法則（ある指標を目標に設定すると良い指標ではなくなる）を無視した、単純化された測定にすぎないと冷笑的に考えてしまう。
+私がこれまでに出会ったほぼすべてのエンジニアリングマネージャーはチームの生産性の向上を望んでいたが、私がこれまでに出会ったほぼすべての開発者は自分たちの仕事を効果的に進めたいと思っていた。先ほどの昼食会の話を開発者が耳にすると、生産性の向上は揺るぎない[グッドハートの法則](https://en.wikipedia.org/wiki/Goodhart%27s_law)（ある指標を目標に設定すると良い指標ではなくなる）を無視した、単純化された測定にすぎないと冷笑的に考えてしまう。
 
 <!-- But occasionally I run into folks who study developer productivity without falling into magical thinking - such as Nicole and Abi. -->
 
@@ -21,7 +21,7 @@ tags: [article]
 
 <!-- The key to this book is that they don't think in terms of how to whip people into greater productivity, but how to find the sources of friction that slow them down. Friction is when I have to submit a pull request that sits for a couple of days while I forget about the code, or spend two days wrangling some infrastructure that ought to be a simple API call. Smoothing away these points of friction is the essence of improving Developer Experience - and thus speeding up getting useful software into the hands of its users. -->
 
-本書の重要なポイントは、人々の生産性を強制的に高めようとするのではなく、生産性を低下させる摩擦の要因を特定しようとしているところにある。摩擦とは、数日前に書いて内容を忘れたコードをプルリクエストしなければならないことや、単純なAPI呼び出しで済むはずだったのにインフラの整備に2日間かけてしまったことである。こうした摩擦点を取り除くことが、開発者体験の向上（さらには有用なソフトウェアをユーザーにいち早く届けること）の本質だ。
+本書の重要なポイントは、人々の生産性を強制的に高めようとするのではなく、生産性を低下させる**摩擦**の要因を特定しようとしているところにある。摩擦とは、数日前に書いて内容を忘れたコードをプルリクエストしなければならないことや、単純なAPI呼び出しで済むはずだったのにインフラの整備に2日間かけてしまったことである。こうした摩擦点を取り除くことが、開発者体験の向上（さらには有用なソフトウェアをユーザーにいち早く届けること）の本質だ。
 
 <!-- They describe effective developer experience in terms of three elements: feedback loops, flow state, and cognitive load. We can only find out whether we are on the right path by getting rapid feedback. The longer the delay between that blue dot moving on my phone-map, the longer I walk in the wrong direction before realizing my mistake. If our feedback is rapid, we can remain in the second element, a flow state, where we can smoothly and rapidly get things done, improving our products and our motivation. Flow also depends on our ability to understand what we need to do, which means we must be wary of being overwhelmed by cognitive load, whether it comes in the form of poorly structured code, flaky tests, or interruptions that break our flow. -->
 
@@ -43,7 +43,7 @@ tags: [article]
 <!-- -- Jessica Kerr -->
 
 > 不完全な測定であっても、それを判断材料ではなく手がかりとして扱うのであれば、まったく測定しないよりもマシだ。
-> ―Jessica Kerr
+> ―[Jessica Kerr](https://jessitron.com/2024/12/22/okrs-for-evil-and-good/)
 
 <!-- This is a guide book to finding clues. -->
 本書は、こうした手がかりを見つけるためのガイドブックである。
