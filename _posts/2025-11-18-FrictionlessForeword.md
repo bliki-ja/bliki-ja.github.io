@@ -1,5 +1,6 @@
 ---
 title: 『Frictionless』のまえがき
+original_page_name: frictionless-foreword.html
 tags: [article]
 ---
 
