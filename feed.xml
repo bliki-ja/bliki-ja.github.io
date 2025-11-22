@@ -5,9 +5,21 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Aug 2025 17:29:57 +0900</pubDate>
-    <lastBuildDate>Sat, 30 Aug 2025 17:29:57 +0900</lastBuildDate>
+    <pubDate>Sun, 23 Nov 2025 00:10:37 +0900</pubDate>
+    <lastBuildDate>Sun, 23 Nov 2025 00:10:37 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>『Frictionless』のまえがき</title>
+
+        <pubDate>Tue, 18 Nov 2025 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/FrictionlessForeword</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/FrictionlessForeword</guid>
+        
+        <category>article</category>
+        
+        
+      </item>
     
       <item>
         <title>LLMとソフトウェア開発に関する考察</title>
@@ -121,18 +133,6 @@
         <category>testing</category>
         
         <category>programming style</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>2枚のピザチーム</title>
-
-        <pubDate>Tue, 25 Jul 2023 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/TwoPizzaTeam</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/TwoPizzaTeam</guid>
-        
-        <category>team organization</category>
         
         
       </item>
