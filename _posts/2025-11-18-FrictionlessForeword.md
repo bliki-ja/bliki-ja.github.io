@@ -14,7 +14,7 @@ tags: [article]
 
 <!-- Almost every engineering manager I've met wants to make their team more productive, but almost every developer I've met wants to be more effective at what they do. But lunches like that easily lead developers to the cynicism that talking about productivity is about making simplistic measurements which forget the invincible power of Goodhart's Law: “When a measure becomes a target, it ceases to be a good measure”. -->
 
-私がこれまでに出会ったほぼすべてのエンジニアリングマネージャーはチームの生産性の向上を望んでいたが、私がこれまでに出会ったほぼすべての開発者は自分たちの仕事を効果的に進めたいと思っていた。先ほどの昼食会の話を開発者が耳にすると、生産性の向上は揺るぎない[グッドハートの法則](https://en.wikipedia.org/wiki/Goodhart%27s_law)（ある指標を目標に設定すると良い指標ではなくなる）を無視した、単純化された測定にすぎないと冷笑的に考えてしまう。
+私がこれまでに出会ったほぼすべてのエンジニアリングマネージャーはチームの生産性の向上を望んでいたが、私がこれまでに出会ったほぼすべての開発者は自分たちの仕事を効果的に進めたいと思っていた。先ほどの昼食会の話を開発者が耳にすると、生産性は揺るぎない[グッドハートの法則](https://en.wikipedia.org/wiki/Goodhart%27s_law)（ある指標を目標に設定すると良い指標ではなくなる）を無視した、単純化された測定にすぎないと冷笑的に考えてしまう。
 
 <!-- But occasionally I run into folks who study developer productivity without falling into magical thinking - such as Nicole and Abi. -->
 
