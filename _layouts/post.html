@@ -15,7 +15,7 @@ layout: default
       {% else %}
       [<a href="https://martinfowler.com/bliki/{{ page.url | remove:'/' }}.html">オリジナル記事</a>]
       {% endif %}
-      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/master/{{ page.path }}">翻訳者と原稿</a>]
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/main/{{ page.path }}">翻訳者と原稿</a>]
 
     {% if page.tags.size != 0 %}<br />tags: 
     {% for tag in page.tags %}<a href="/tags?{{tag | uri_escape}}" style="background-color: #ffc">{{ tag }}</a>
