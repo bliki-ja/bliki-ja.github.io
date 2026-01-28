@@ -106,6 +106,7 @@ https://bliki-ja.github.io/redirects.json
 https://bliki-ja.github.io/sitemap.xml
 https://bliki-ja.github.io/robots.txt
 
+https://bliki-ja.github.io/ExcessiveBold
 https://bliki-ja.github.io/FrictionlessForeword
 https://bliki-ja.github.io/202508-ai-thoughts
 https://bliki-ja.github.io/ExpansionJoints
