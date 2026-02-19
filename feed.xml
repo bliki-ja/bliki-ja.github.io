@@ -5,9 +5,25 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 29 Jan 2026 01:06:32 +0900</pubDate>
-    <lastBuildDate>Thu, 29 Jan 2026 01:06:32 +0900</lastBuildDate>
+    <pubDate>Thu, 19 Feb 2026 23:51:32 +0900</pubDate>
+    <lastBuildDate>Thu, 19 Feb 2026 23:51:32 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>ホスト・リーダーシップ</title>
+
+        <pubDate>Thu, 19 Feb 2026 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/HostLeadership</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/HostLeadership</guid>
+        
+        <category>agile</category>
+        
+        <category>team organization</category>
+        
+        <category>technical leadership</category>
+        
+        
+      </item>
     
       <item>
         <title>過剰な太字</title>
@@ -115,20 +131,6 @@
         <category>team organization</category>
         
         <category>collaboration</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>ソフトウェアとエンジニアリング</title>
-
-        <pubDate>Wed, 13 Dec 2023 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/SoftwareAndEngineering</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/SoftwareAndEngineering</guid>
-        
-        <category>computer history</category>
-        
-        <category>process theory</category>
         
         
       </item>
