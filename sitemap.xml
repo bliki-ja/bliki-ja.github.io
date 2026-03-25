@@ -1281,6 +1281,10 @@
 <lastmod>2026-02-19T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>https://bliki-ja.github.io/ArchitectureDecisionRecord</loc>
+<lastmod>2026-03-24T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>https://bliki-ja.github.io/pofeaa/ActiveRecord</loc>
 </url>
 <url>
@@ -1576,6 +1580,6 @@
 </url>
 <url>
 <loc>https://bliki-ja.github.io/pofeaa/OrganizingDomainLogic.pdf</loc>
-<lastmod>2026-02-19T23:50:52+09:00</lastmod>
+<lastmod>2026-03-25T13:36:50+09:00</lastmod>
 </url>
 </urlset>

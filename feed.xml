@@ -5,9 +5,25 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Feb 2026 23:51:32 +0900</pubDate>
-    <lastBuildDate>Thu, 19 Feb 2026 23:51:32 +0900</lastBuildDate>
+    <pubDate>Wed, 25 Mar 2026 13:37:32 +0900</pubDate>
+    <lastBuildDate>Wed, 25 Mar 2026 13:37:32 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>アーキテクチャデシジョンレコード</title>
+
+        <pubDate>Tue, 24 Mar 2026 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/ArchitectureDecisionRecord</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/ArchitectureDecisionRecord</guid>
+        
+        <category>enterprise architecture</category>
+        
+        <category>collaboration</category>
+        
+        <category>application architecture</category>
+        
+        
+      </item>
     
       <item>
         <title>ホスト・リーダーシップ</title>
@@ -117,20 +133,6 @@
         <category>agile</category>
         
         <category>process theory</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>定期的な対面の機会</title>
-
-        <pubDate>Tue, 27 Feb 2024 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/PeriodicFaceToFace</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/PeriodicFaceToFace</guid>
-        
-        <category>team organization</category>
-        
-        <category>collaboration</category>
         
         
       </item>

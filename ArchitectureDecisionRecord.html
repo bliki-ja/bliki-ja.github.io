@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>アーキテクチャデシジョンレコード - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/ArchitectureDecisionRecord">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">アーキテクチャデシジョンレコード</h1>
+    <p class="post-meta" style="text-align:right">
+      2026-03-24
+      
+      [<a href="https://martinfowler.com/bliki/ArchitectureDecisionRecord.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/main/_posts/2026-03-24-ArchitectureDecisionRecord.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?enterprise%20architecture" style="background-color: #ffc">enterprise architecture</a>
+    ,
+    <a href="/tags?collaboration" style="background-color: #ffc">collaboration</a>
+    ,
+    <a href="/tags?application%20architecture" style="background-color: #ffc">application architecture</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- An Architecture Decision Record (ADR) is a short document that captures and explains a single decision relevant to a product or ecosystem. Documents should be short, just a couple of pages, and contain the decision, the context for making it, and significant ramifications. They should not be modified if the decision is changed, but linked to a superseding decision. -->
+
+<p>アーキテクチャデシジョンレコード（Architecture Decision Record: ADR）とは、プロダクトやエコシステムに関する重要なひとつの決定を記録および説明する簡潔な文書である。文書は短く、数ページ程度に収め、内容には決定事項、決定の背景、重要な影響を含めなければならない。決定を変更した場合は、文書を修正するのではなく、置き換えた決定にリンクしておく。</p>
+
+<!-- As with most written documents, writing ADRs serves two purposes. Firstly they act as a record of decisions, allowing people months or years later to understand why the system is constructed in the way that it is. But perhaps even more valuable, the act of writing them helps to clarify thinking, particularly with groups of people. Writing a document of consequence often surfaces different points of view - forcing those differences to be discussed, and hopefully resolved. -->
+
+<p>ほとんどの文書がそうであるように、ADRの作成にも2つの目的がある。まず、決定の記録である。数か月後あるいは数年後でもシステムが現在のように構築された理由を理解できる。だが、それよりも重要なのが、文書を書くことで考えが明確になる点である。グループの場合は特にそうだ。重要な文書を書くことで、異なる見解が浮かび上がってくる。こうした意見の違いについて議論し、できれば解消することが望ましい。</p>
+
+<!-- A general rule is to follow an “inverted pyramid” style of writing, commonly associated with news stories. The key is to put the most important material at the start, and push details to later in the record. -->
+
+<p>一般的なルールとして「逆ピラミッド」の書き方を踏襲する。これはニュース記事でよく使われる手法だ。最も重要なことを冒頭に配置し、詳細は記録の後半に配置する。</p>
+
+<!-- The common advice is to keep decision records in the source repository of the code base to which they apply. A common choice for their location is doc/adr. This way they are easily available to those working on the code base. For similar reasons they should be written in a lightweight markup language, such as markdown, so they can be easily read and diffed just like any code. We can use a build task to publish them to a product team's website. -->
+
+<p>決定の記録はソースコードと同じリポジトリに保存することが推奨されている。保存ディレクトリは「doc/adr」が使われる。こうすることで、コードベースを扱うすべての人が容易に利用できる。同様の理由から、Markdownなどの軽量マークアップ言語で書くことが推奨されている。そのほうが読みやすく、コードと同じように差分が取れるからだ。ビルドタスクを利用して、プロダクトチームのウェブサイトに公開することも可能である。</p>
+
+<!-- Storing them in a product repository won't work for ADRs that cover a broader ecosystem than a single code base. Some folks also feel that keeping ADRs in git makes it too hard for non-developers to work with them. -->
+
+<p>ただし、複数のコードベースにまたがる広範なエコシステムのADRをプロダクトのリポジトリに保存するのは適していない。また、ADRをgitに保存すると非開発者が扱いにくいという意見もある。</p>
+
+<!-- Each record should be its own file, and should be numbered in a monotonic sequence as part of their file name, with a name that captures the decision, so that they are easy to read in a directory listing. (for example: “0001-HTMX-for-active-web-pages“). -->
+
+<p>各記録には個別のファイルを用意する。ファイル名には連番と記録内容を付ける。こうすれば、一覧表示したときに読みやすい（例：0001-HTMX-for-active-web-pages）。</p>
+
+<!-- Each ADR has a status. “proposed” while it is under discussion, “accepted” once the team accepts it and it is active, “superseded” once it is significantly modified or replaced - with a link to the superseding ADR. Once an ADR is accepted, it should never be reopened or changed - instead it should be superseded. That way we have a clear log of decisions and how long they governed the work. -->
+
+<p>ADRにはステータスがある。議論中は「proposed（提案済み）」、チームが承認してアクティブなものは「accepted（受け入れ済み）」、大幅に修正または上書きされたものは「superseded（廃止済み）」とする（置き換えたADRにリンクする）。一度ADRを受け入れたら、議論に戻したり変更したりすることは認められない。そのような場合は、廃止にするべきである。このようにすることで、明確な決定の履歴と作業に適用された期間を保持できる。</p>
+
+<!-- ADRs contain not just the decision, but also a brief rationale for the decision. This should summarize the problem that led to this decision being needed and the trade-offs that were taken into account. A good way to think of them follows the notion of “forces” when writing a pattern. As part of this it's valuable to explicitly list all the serious alternatives that were considered, together with their pros and cons. -->
+
+<p>ADRに含まれるのは決定だけではない。決定に至った簡潔な理由も記載しておく。そこには決定が必要になった問題の要約と考慮したトレードオフを含める。これを考えるときには、パターンを書くときの「フォース」が参考になる。これを書くときには、検討したすべての代替案とそれぞれの長所と短所を明示的に列挙することが重要である。</p>
+
+<!-- Any decision has consequences. Sometimes these are clearly implied from the rationale, but sometimes it's worth clearly stating them in a explicit section. Decisions are usually made under some degree of uncertainty, so it's handy to record the confidence level of the decision. This is a good place to mention any changes in the product context that should trigger the team to reevaluate the decision. -->
+
+<p>すべての決定には影響が伴う。理由から読み取れるものもあるが、セクションを分けて明記しておいたほうがいい場合もある。決定は一定の不確実性の下で行われるため、決定の信頼度を記録しておくことは有用である。チームが決定を再評価すべきプロダクトの文脈の変更についても、ここに記載しておくといいだろう。</p>
+
+<!-- ADRs play a central role in the Advice Process, where they are not only used to document decisions, but the act of writing them is used to elicit expertise and alignment. In this case they should also include advice gathered in forming the ADR, although in order to keep things brief, it may be better to summarize the advice in the ADR and keep a full record of advice separately. -->
+
+<p>ADRは<a href="https://martinfowler.com/articles/scaling-architecture-conversationally.html">アドバイスプロセス</a>において中心的な役割を果たす。そこではADRは単に決定を文書化したものではなく、文書を作成することで専門知識を引き出し、関係者で認識を合わせる。本来ならばADRの作成中のアドバイスも記録するべきだが、ADRを簡潔に保つために、アドバイスの要約だけを記載し、詳細な記録は別途保存しておくといいだろう。</p>
+
+<!-- The most important thing to bear in mind here is brevity. Keep the ADR short and to the point - typically a single page. If there's supporting material, link to it. -->
+
+<p>最も重要なのは簡潔さである。ADRは短く要点を押さえたものにする。通常は1ページ以内に収める。補足資料があれば、それらにリンクする。</p>
+
+<!-- While ADRs are a form for recording decisions in software architecture, the broader concept of writing short decision records is worth considering in other contexts. This kind of decision log creates a valuable historic record that can do much to explain why things are the way they turned out. -->
+
+<p>ADRはソフトウェアアーキテクチャの決定を記録する形式だが、簡潔に決定を記録するという概念は他の分野でも検討すべきだろう。このような決定の履歴は、物事が現在のようになっている理由を説明するための歴史的記録になる。</p>
+
+<!-- Further Reading -->
+<h2 id="さらに詳しく知るために">さらに詳しく知るために</h2>
+
+<!-- Michael Nygard coined the term “Architecture Decision Record” with an ADR-formatted article in 2011. While he did not originate the idea of a decision log he did make case for a lightweight document, with a focus on the decision itself. In this he was particularly inspired by Phillipe Kruchten talking about decision registers / decision logs, and by the writing style of software patterns. His article is better than pretty much everything else written on the topic, my only desire to write this one was to point to some developments since. -->
+
+<p>2011年、Michael Nygardが<a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">ADRの書式に関する記事</a>で「アーキテクチャデシジョンレコード」という用語を提唱した。彼が「決定の履歴」というアイデアを考案したわけではないが、彼は決定の重要性と軽量な文書の必要性を強く主張した。この点については、Phillipe Kruchtenの決定目録や決定履歴（decision registers / decision logs）や<a href="https://martinfowler.com/articles/writingPatterns.html">ソフトウェアパターンの書き方</a>に影響を受けている。このテーマについては、彼の記事が他のどの文章よりも優れている。私が本記事を書こうと思ったのは、その後の展開を示したかったからだ。</p>
+
+<!-- On this site, there are brief examples of ADR formats in articles by Harmel-Law and Rowse and Shepherd. -->
+
+<p>本サイトでは、<a href="https://martinfowler.com/articles/scaling-architecture-conversationally.html#adr">Harmel-Law</a>および<a href="https://martinfowler.com/articles/building-infrastructure-platform.html#ArchitecturalDecisionRecords">RowseとShepherd</a>が執筆した記事のなかで、ADRの書式の実例を使っている。</p>
+
+<!-- adr-tools is a simple command line tool to manage ADRs. It includes a set of ADRs for itself that are a good example of the form. -->
+
+<p>adr-toolsはADRを管理するためのシンプルなコマンドラインツールである。このツール自体のADR一式も含まれているため、実例として参考になる。</p>
+
+<!-- Acknowledgements -->
+<h2 id="謝辞">謝辞</h2>
+
+<!-- Andrew Harmel-Law, Brandon Cook, David Lucas, Francisco Dias, Giuseppe Matheus Pereira, John King, Kief Morris, Michael Joyce, Neil Price, Shane Gibson, Steven Peh, and Vijay Raghavan Aravamudhan discussed drafts of this post on our internal chat. Michael Nygard gave some background on the origins of his writing. -->
+
+<p>Andrew Harmel-Law, Brandon Cook, David Lucas, Francisco Dias, Giuseppe Matheus Pereira, John King, Kief Morris, Michael Joyce, Neil Price, Shane Gibson, Steven Peh, Vijay Raghavan Aravamudhanとは、本記事の草稿について社内チャットで議論を交わした。Michael Nygardからは彼が記事を書いた背景について説明を受けた。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>
