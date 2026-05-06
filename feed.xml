@@ -5,9 +5,23 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 Mar 2026 22:10:13 +0900</pubDate>
-    <lastBuildDate>Wed, 25 Mar 2026 22:10:13 +0900</lastBuildDate>
+    <pubDate>Wed, 06 May 2026 12:08:08 +0900</pubDate>
+    <lastBuildDate>Wed, 06 May 2026 12:08:08 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>人月の神話</title>
+
+        <pubDate>Tue, 05 May 2026 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/MythicalManMonth</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/MythicalManMonth</guid>
+        
+        <category>computer history</category>
+        
+        <category>project planning</category>
+        
+        
+      </item>
     
       <item>
         <title>アーキテクチャデシジョンレコード</title>
@@ -119,20 +133,6 @@
         <pubDate>Wed, 28 May 2025 00:00:00 +0900</pubDate>
         <link>https://bliki-ja.github.io/SayYourWriting</link>
         <guid isPermaLink="true">https://bliki-ja.github.io/SayYourWriting</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>森と砂漠</title>
-
-        <pubDate>Thu, 30 Jan 2025 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/ForestAndDesert</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/ForestAndDesert</guid>
-        
-        <category>agile</category>
-        
-        <category>process theory</category>
         
         
       </item>
