@@ -25,6 +25,7 @@
 
 .site-nav {
     float: right;
+    position: relative;
     line-height: 56px;
 
     .menu-icon {
@@ -39,6 +40,44 @@
         &:not(:first-child) {
             margin-left: 20px;
         }
+    }
+
+    .nav-search-toggle {
+        cursor: pointer;
+    }
+
+    .nav-search-toggle[aria-expanded="true"] {
+        text-decoration: underline;
+    }
+
+    .nav-search-panel {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        z-index: 20;
+        width: 320px;
+        max-width: calc(100vw - #{$spacing-unit});
+        max-height: 70vh;
+        overflow: auto;
+        padding: 16px;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-search-fallback {
+        margin: 0;
+    }
+
+    .nav-search-fallback-input {
+        width: 100%;
+        padding: 10px 12px;
+        color: $grey-color;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 6px;
+        box-sizing: border-box;
     }
 
     @include media-query($on-palm) {
@@ -82,6 +121,19 @@
         .page-link {
             display: block;
             padding: 5px 10px;
+        }
+
+        .nav-search-toggle {
+            padding: 5px 10px;
+        }
+
+        .nav-search-panel {
+            position: static;
+            width: auto;
+            max-width: none;
+            max-height: none;
+            margin: 0 10px 10px;
+            box-shadow: none;
         }
     }
 }
