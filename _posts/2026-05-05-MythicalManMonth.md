@@ -9,7 +9,7 @@ tags: [computer history, project planning]
 
 <!-- The book contains Brooks's law: “Adding manpower to a late software project makes it later.” The issue here is communication, as the number of people grows, the number of communication paths between those people grows exponentially. Unless these paths are skillfully designed, then work quickly falls apart. -->
 
-この本にはブルックスの法則「**遅れているソフトウェアプロジェクトへの要因追加はさらに遅らせるだけだ**」が含まれている。ここでの課題はコミュニケーションにある。要因が増えるとコミュニケーション経路が指数関数的に増加する。コミュニケーション経路を適切に設計しなければ、作業はたちまち混乱に陥る。
+この本にはブルックスの法則「**遅れているソフトウェアプロジェクトへの要員追加はさらに遅らせるだけだ**」が含まれている。ここでの課題はコミュニケーションにある。要員が増えるとコミュニケーション経路が指数関数的に増加する。コミュニケーション経路を適切に設計しなければ、作業はたちまち混乱に陥る。
 
 <!-- Perhaps my most enduring lesson from this book is the importance of conceptual integrity -->
 私が本書で印象に残っている教訓は「**コンセプトの完全性**」の重要性である。
