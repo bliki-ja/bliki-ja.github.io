@@ -55,8 +55,9 @@
         top: calc(100% + 8px);
         right: 0;
         z-index: 20;
-        width: 320px;
-        max-width: calc(100vw - #{$spacing-unit});
+        width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+        min-width: 320px;
+        max-width: calc(100vw - (#{$spacing-unit} * 2));
         max-height: 70vh;
         overflow: auto;
         padding: 16px;
