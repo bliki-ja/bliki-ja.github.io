@@ -70,7 +70,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 .site-nav .page-link:not(:first-child) { margin-left: 20px; }
 .site-nav .nav-search-toggle { cursor: pointer; }
 .site-nav .nav-search-toggle[aria-expanded="true"] { text-decoration: underline; }
-.site-nav .nav-search-panel { position: absolute; top: calc(100% + 8px); right: 0; z-index: 20; width: calc(800px - (30px * 2)); min-width: 320px; max-width: calc(100vw - (30px * 2)); max-height: 70vh; overflow: auto; padding: 16px; background-color: #fdfdfd; border: 1px solid #e8e8e8; border-radius: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); }
+.site-nav .nav-search-panel { position: absolute; top: calc(100% + 8px); right: 0; z-index: 20; width: calc(800px - (30px * 2)); min-width: 320px; max-width: calc(100vw - (30px * 2)); line-height: 1.5; text-align: left; max-height: 70vh; overflow: auto; padding: 16px; background-color: #fdfdfd; border: 1px solid #e8e8e8; border-radius: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); }
 .site-nav .nav-search-fallback { margin: 0; }
 .site-nav .nav-search-fallback-input { width: 100%; padding: 10px 12px; color: #828282; background-color: #fdfdfd; border: 1px solid #e8e8e8; border-radius: 6px; box-sizing: border-box; }
 @media screen and (max-width: 600px) { .site-nav { position: absolute; top: 9px; right: 30px; background-color: #fdfdfd; border: 1px solid #e8e8e8; border-radius: 5px; text-align: right; }
