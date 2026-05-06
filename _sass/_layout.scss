@@ -58,6 +58,8 @@
         width: calc(#{$content-width} - (#{$spacing-unit} * 2));
         min-width: 320px;
         max-width: calc(100vw - (#{$spacing-unit} * 2));
+        line-height: $base-line-height;
+        text-align: left;
         max-height: 70vh;
         overflow: auto;
         padding: 16px;
