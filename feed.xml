@@ -5,9 +5,21 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 May 2026 02:38:58 +0900</pubDate>
-    <lastBuildDate>Thu, 07 May 2026 02:38:58 +0900</lastBuildDate>
+    <pubDate>Fri, 15 May 2026 14:29:54 +0900</pubDate>
+    <lastBuildDate>Fri, 15 May 2026 14:29:54 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>質問型LLM</title>
+
+        <pubDate>Thu, 14 May 2026 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/InterrogatoryLLM</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/InterrogatoryLLM</guid>
+        
+        <category>generative AI</category>
+        
+        
+      </item>
     
       <item>
         <title>人月の神話</title>
@@ -123,16 +135,6 @@
         <category>generative AI</category>
         
         <category>article</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>自分の文章を声に出してみよう</title>
-
-        <pubDate>Wed, 28 May 2025 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/SayYourWriting</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/SayYourWriting</guid>
         
         
       </item>

@@ -106,6 +106,7 @@ https://bliki-ja.github.io/redirects.json
 https://bliki-ja.github.io/sitemap.xml
 https://bliki-ja.github.io/robots.txt
 
+https://bliki-ja.github.io/InterrogatoryLLM
 https://bliki-ja.github.io/MythicalManMonth
 https://bliki-ja.github.io/ArchitectureDecisionRecord
 https://bliki-ja.github.io/HostLeadership
