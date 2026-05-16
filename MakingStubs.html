@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>スタブの生成 - Martin Fowler's Bliki (ja)</title>
-  <meta name="description" content="http://www.martinfowler.com/bliki/MakingStubs.html">
+  <meta name="description" content="テストによって拡張されてきた設計における一般的な問題は、実際に動くものが製品向け(やテスト向け)にある一方で、テストモードにおいてサービススタブをどのように生成するかです。私の同僚の何人かは、同じ考えをもっています。">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/MakingStubs">
@@ -69,9 +69,7 @@
   </header>
 
   <article class="post-content" id="post-content">
-    <p>http://www.martinfowler.com/bliki/MakingStubs.html</p>
-
-<p>テストによって拡張されてきた設計における一般的な問題は、実際に動くものが製品向け(やテスト向け)にある一方で、テストモードにおいてサービススタブをどのように生成するかです。私の同僚の何人かは、同じ考えをもっています。</p>
+    <p>テストによって拡張されてきた設計における一般的な問題は、実際に動くものが製品向け(やテスト向け)にある一方で、テストモードにおいてサービススタブをどのように生成するかです。私の同僚の何人かは、同じ考えをもっています。</p>
 
 <p>Jeremy Stell-Smithは、Abstract Factoryに基づくアプローチを見せてくれました。スタブにすることができるサービスを、すべて一つのファクトリから引き出すようにするのです。次の例は、そうして動くPersistenceクラスです。</p>
 
