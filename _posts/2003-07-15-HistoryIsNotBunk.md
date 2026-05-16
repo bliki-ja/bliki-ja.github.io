@@ -3,7 +3,6 @@ title: 歴史はでたらめじゃない
 tags: [requirements analysis, legacy rehab]
 ---
 
-http://www.martinfowler.com/bliki/HistoryIsNotBunk.html
 
 ""「歴史は（多かれ少なかれ）でたらめだ」ヘンリー・フォード
 

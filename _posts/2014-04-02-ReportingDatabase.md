@@ -3,7 +3,6 @@ title: レポーティングデータベース
 tags: [database, application architecture]
 ---
 
-http://www.martinfowler.com/bliki/ReportingDatabase.html
 
 [ドメインモデル](https://martinfowler.com/eaaCatalog/domainModel.html)を使っているとき、アドホックなSQLへの対応はどうすればよいか？'''
 
@@ -42,4 +41,3 @@ http://www.martinfowler.com/bliki/ReportingDatabase.html
 * 2004-04-05 (月) 13:43:09 ''[[kdmsnr]]'' : 最後のあたり、ぐだぐだです。理解できてない。何がSOAなのだ？
 * 2004-04-06 (火) 15:14:45 ''[[keis]]'' : 最後のところは、「データベースのカプセル化をSOAの目的のひとつと見なしている人も多いが（別にSOAでなくても可能なんだよ）」という意味ではないでしょうか。
 * 2004-04-06 (火) 16:36:13 ''[[kdmsnr]]'' : 「目的」という言葉がいけないんですかねえ。いまいちよく分かりません。SOAの目指すところ？
-

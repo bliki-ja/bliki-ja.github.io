@@ -3,7 +3,6 @@ title: 構文ノイズ
 tags: [language feature, domain specific language]
 ---
 
-http://www.martinfowler.com/bliki/SyntacticNoise.html
 
 
 

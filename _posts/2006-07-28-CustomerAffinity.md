@@ -3,7 +3,6 @@ title: 顧客親近性
 tags: [agile, team organization, requirements analysis]
 ---
 
-http://www.martinfowler.com/bliki/CustomerAffinity.html
 
 
 

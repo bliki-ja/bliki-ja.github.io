@@ -3,7 +3,6 @@ title: インタフェースの変更はリファクタリングか？
 tags: [refactoring boundary]
 ---
 
-http://www.martinfowler.com/bliki/IsChangingInterfacesRefactoring.html
 
 
 

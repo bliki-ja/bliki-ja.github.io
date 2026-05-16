@@ -3,7 +3,6 @@ title: 生産性は計測不能
 tags: [productivity, metrics, project planning, estimation]
 ---
 
-http://www.martinfowler.com/bliki/CannotMeasureProductivity.html
 
 設計手法などのソフトウェアプロセスについて、感情的に議論されているのをよく目にします。しかし、その議論に答えを出すのは不可能です。ソフトウェア産業では、ソフトウェア開発の効果要因を計測する術がないからです。特に、生産性を合理的に計測する方法はありません。
 
@@ -95,4 +94,3 @@ http://www.martinfowler.com/bliki/CannotMeasureProductivity.html
 * 2007-09-27 (木) 07:44:02 松本 安雄 : 生産性が計れないのは　計らないからです。経営成果に無関係な　労働生産性への偏向を捨てて、「基本投入費原理」に基づく　経営資本利益率に高度に相関する　「総合生産性指標」で計れば、ソフトウェアプロセスであろうとも　立派に測定が可能です。「基本投入費原理」を　ご研究下さい。◇
 * 2008-06-23 (月) 17:56:32 名無しさん : プログラマの開発効率
 * 2008-11-27 (木) 14:02:46 zjkpvcwd : muVBkdgwRmR
-

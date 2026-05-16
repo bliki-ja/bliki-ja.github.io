@@ -3,7 +3,6 @@ title: クラス図におけるコレクション
 tags: [uml]
 ---
 
-http://www.martinfowler.com/bliki/CollectionsOnClassDiagrams.html
 
 ### 曲の Array List をもった音楽アルバムクラスがあるとしよう。UMLクラス図ではどう表す？
 

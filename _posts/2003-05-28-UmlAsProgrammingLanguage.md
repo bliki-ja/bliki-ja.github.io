@@ -3,7 +3,6 @@ title: プログラミング言語としてのUML
 tags: [uml]
 ---
 
-http://www.martinfowler.com/bliki/UmlAsProgrammingLanguage.html
 
 UMLを十分知り尽くし、ソフトウェアに必要なものをすべて満たすことが出来るなら、
 UMLをプログラミング言語として扱うことができるでしょう。

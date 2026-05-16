@@ -3,7 +3,6 @@ title: エンタープライズRails
 tags: [ruby]
 ---
 
-http://www.martinfowler.com/bliki/EnterpriseRails.html
 
 
 

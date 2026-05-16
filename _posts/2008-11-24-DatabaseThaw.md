@@ -3,7 +3,6 @@ title: DatabaseThaw
 tags: [database, noSQL]
 ---
 
-http://www.martinfowler.com/bliki/DatabaseThaw.html
 
 2008/11/24
 

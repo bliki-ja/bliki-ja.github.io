@@ -3,7 +3,6 @@ title: 依存と関連
 tags: [uml]
 ---
 
-http://www.martinfowler.com/bliki/DependencyAndAssociation.html
 
 ### 「依存」と「関連」の違いは？
 

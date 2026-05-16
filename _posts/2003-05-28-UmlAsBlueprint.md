@@ -3,7 +3,6 @@ title: 設計図としてのUML
 tags: [uml]
 ---
 
-http://www.martinfowler.com/bliki/UmlAsBlueprint.html
 
 ソフトウェアプロセスに影響を及ぼしたエンジニアリングは、長年、
 ソフトウェアの設計をどのように表現すればよいか模索してきました。
