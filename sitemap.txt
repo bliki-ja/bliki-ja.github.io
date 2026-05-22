@@ -107,6 +107,7 @@ https://bliki-ja.github.io/sitemap.xml
 https://bliki-ja.github.io/robots.txt
 
 https://bliki-ja.github.io/VibeCoding
+https://bliki-ja.github.io/AgenticProgramming
 https://bliki-ja.github.io/InterrogatoryLLM
 https://bliki-ja.github.io/MythicalManMonth
 https://bliki-ja.github.io/NovemberInflection
