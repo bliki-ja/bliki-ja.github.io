@@ -19,4 +19,4 @@ tags: [generative AI]
 
 <!-- The change was reinforced by the Christmas break. For a couple of weeks people who were too busy with their day job to play with AI had the opportunity to try out these new models. -->
 
-この変化はクリスマス休暇でさらに強化されました。数週間の間、本業が忙しくてAIを試す時間がなかった人々も、新しいモデルを触っていみる機会を得たのです。
+この変化はクリスマス休暇でさらに強化されました。数週間の間、本業が忙しくてAIを試す時間がなかった人々も、新しいモデルを触ってみる機会を得たのです。
