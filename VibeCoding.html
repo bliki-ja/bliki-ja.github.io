@@ -74,7 +74,7 @@
 <p>バイブコーディングとは、LLMに指示を与えてソフトウェアを構築する手法です。何を作りたいのかを伝え、試行錯誤しながら、修正指示を出しますが、LLMが生成したコードを確認することはありません。プログラミングの知識がない人でも活用できる技術です。ただし、生成されたソフトウェアには保守性、正確性、セキュリティの問題が頻繁に発生するため、限定的なユーザーを対象にした使い捨てソフトウェアとして使うのが最適です。</p>
 
 <!-- The term was coined in February 2025 by Andrej Karpathy, an experienced programmer, in a post on X: -->
-<p>この用語は、2025年2月に経験豊富なプログラマーであるAndrej KarpathyがXに投稿しました。</p>
+<p>この用語は、経験豊富なプログラマーであるAndrej Karpathyが2025年2月のXの投稿で作ったものです。</p>
 
 <!-- There's a new kind of coding I call “vibe coding”, where you fully give in to the vibes, embrace exponentials, and forget that the code even exists. It's possible because the LLMs (e.g. Cursor Composer w Sonnet) are getting too good. Also I just talk to Composer with SuperWhisper so I barely even touch the keyboard. I ask for the dumbest things like “decrease the padding on the sidebar by half” because I'm too lazy to find it. I “Accept All” always, I don't read the diffs anymore. When I get error messages I just copy paste them in with no comment, usually that fixes it. The code grows beyond my usual comprehension, I'd have to really read through it for a while. Sometimes the LLMs can't fix a bug so I just work around it or ask for random changes until it goes away. It's not too bad for throwaway weekend projects, but still quite amusing. I'm building a project or webapp, but it's not really coding - I just see stuff, say stuff, run stuff, and copy paste stuff, and it mostly works. -->
 
@@ -109,11 +109,11 @@
 
 <!-- LLMs are famous for habit of hallucinating incorrect facts and presenting these with great confidence. This habit also leads them to create software that behaves incorrectly - and those errors may not be manifest to the user. Furthermore the non-determinism of LLMs means that it's likely that asking an LLM to enhance some software could easily lead it to introduce errors, even in parts of the code that shouldn't change due to the new request. We should thus treat LLM-generated software with skepticism, it can still be useful, but we need to be aware of the risks. -->
 
-<p>LLMは自信たっぷりに間違った事実を示す「ハルシネーション」で有名です。これがソフトウェア開発でも同様の問題を引き起こし、誤った動作をするソフトウェアを生成する可能性があります。しかもそのエラーはユーザーには認識できません。さらにLLMの非決定性を考慮すると、あるソフトウェアの機能拡張をLLMに依頼した場合、変更すべきではないコードにもエラーが混入する可能性があります。したがって、LLMが生成したソフトウェアには懐疑的な姿勢で臨む必要があります。便利なこともありますが、リスクは認識しておきましょう。</p>
+<p>LLMは自信たっぷりに間違った事実を示す「ハルシネーション」で有名です。これがソフトウェア開発でも同様の問題を引き起こし、誤った動作をするソフトウェアを生成する可能性があります。しかもそのエラーはユーザーからは見えないことがあります。さらにLLMの非決定性を考慮すると、あるソフトウェアの機能拡張をLLMに依頼した場合、変更すべきではないコードにもエラーが混入する可能性があります。したがって、LLMが生成したソフトウェアには懐疑的な姿勢で臨む必要があります。便利なこともありますが、リスクは認識しておきましょう。</p>
 
 <!-- On the whole vibe coding software is best used for disposable software that's only used by its author or a close group of collaborators who understand and accept the risks involved. Code that is more complex, more widely-used, and with more consequences to its risks should not be forgotten about. -->
 
-<p>バイブコーディングで生成したソフトウェアは、リスクを理解して受け入れている本人や少人数の仲間だけが使用する、使い捨てのソフトウェアに最適です。複雑なコード、広く使用されるコード、リスクの影響が大きなコードについては、そうしたリスクを忘れてはいけません。</p>
+<p>バイブコーディングで生成したソフトウェアは、リスクを理解して受け入れている本人や少人数の仲間だけが使用する、使い捨てのソフトウェアに最適です。複雑なコード、広く使用されるコード、リスクの影響が大きなコードについては、その存在を忘れてはいけません。</p>
 
   </article>
 
