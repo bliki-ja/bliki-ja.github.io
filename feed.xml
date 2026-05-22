@@ -5,9 +5,21 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 May 2026 23:46:42 +0900</pubDate>
-    <lastBuildDate>Fri, 22 May 2026 23:46:42 +0900</lastBuildDate>
+    <pubDate>Sat, 23 May 2026 00:47:10 +0900</pubDate>
+    <lastBuildDate>Sat, 23 May 2026 00:47:10 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>バイブコーディング</title>
+
+        <pubDate>Thu, 21 May 2026 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/VibeCoding</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/VibeCoding</guid>
+        
+        <category>generative AI</category>
+        
+        
+      </item>
     
       <item>
         <title>質問型LLM</title>
@@ -121,18 +133,6 @@
         <guid isPermaLink="true">https://bliki-ja.github.io/ExpansionJoints</guid>
         
         <category>presentation technique</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>LLMとは誰か？</title>
-
-        <pubDate>Tue, 22 Jul 2025 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/who-is-llm</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/who-is-llm</guid>
-        
-        <category>article</category>
         
         
       </item>
