@@ -108,6 +108,7 @@ https://bliki-ja.github.io/robots.txt
 
 https://bliki-ja.github.io/InterrogatoryLLM
 https://bliki-ja.github.io/MythicalManMonth
+https://bliki-ja.github.io/NovemberInflection
 https://bliki-ja.github.io/ArchitectureDecisionRecord
 https://bliki-ja.github.io/HostLeadership
 https://bliki-ja.github.io/ExcessiveBold

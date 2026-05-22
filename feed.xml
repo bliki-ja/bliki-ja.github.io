@@ -5,8 +5,8 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 16 May 2026 11:00:46 +0900</pubDate>
-    <lastBuildDate>Sat, 16 May 2026 11:00:46 +0900</lastBuildDate>
+    <pubDate>Fri, 22 May 2026 23:46:42 +0900</pubDate>
+    <lastBuildDate>Fri, 22 May 2026 23:46:42 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
       <item>
@@ -31,6 +31,18 @@
         <category>computer history</category>
         
         <category>project planning</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>11月の転換点</title>
+
+        <pubDate>Fri, 01 May 2026 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/NovemberInflection</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/NovemberInflection</guid>
+        
+        <category>generative AI</category>
         
         
       </item>
@@ -119,20 +131,6 @@
         <pubDate>Tue, 22 Jul 2025 00:00:00 +0900</pubDate>
         <link>https://bliki-ja.github.io/who-is-llm</link>
         <guid isPermaLink="true">https://bliki-ja.github.io/who-is-llm</guid>
-        
-        <category>article</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>LLMは新しい抽象化をもたらす</title>
-
-        <pubDate>Tue, 24 Jun 2025 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/LLMsBringNewNatureOfAbstraction</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/LLMsBringNewNatureOfAbstraction</guid>
-        
-        <category>generative AI</category>
         
         <category>article</category>
         
