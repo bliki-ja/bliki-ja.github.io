@@ -9,7 +9,7 @@ tags: [generative AI]
 
 <!-- I like to distinguish agentic programming from Vibe Coding. With vibe coding humans don't look at the code, indeed they forget that it even exists, while with agentic programming they are concerned with the code, often giving it detailed review. Agentic programming is also distinct from using LLMs as a sophisticated code completion mechanism, where LLMs participate in writing code inside an IDE environment. -->
 
-私は「{% include link to=AgenticProgramming %}」と「{% include link to=VibeCoding %}」を明確に区別しています。バイブコーディングでは、人間はコードを見ません。その存在を忘れています。一方、エージェントプログラミングでは、人間はコードに関心を払い、詳細なレビューを行います。また、エージェントプログラミングは、LLMを（IDEの環境内で）高度なコード補完ツールとして使用する場合とも違います。
+私は「{% include link to="AgenticProgramming" %}」と「{% include link to="VibeCoding" %}」を明確に区別しています。バイブコーディングでは、人間はコードを見ません。その存在を忘れています。一方、エージェントプログラミングでは、人間はコードに関心を払い、詳細なレビューを行います。また、エージェントプログラミングは、LLMを（IDEの環境内で）高度なコード補完ツールとして使用する場合とも違います。
 
 <!-- This way of working hasn't got a widely established name, but the “agentic” adjective is common, used as “agentic programming”, “agentic (software) engineering, “agentic coding”, etc. (Currently I'm inclined to go with “agentic programming”.) -->
 
