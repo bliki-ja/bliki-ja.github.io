@@ -10,6 +10,16 @@ layout: default
 
 <img src="/images/bliki_ja_mfsig.gif" />
 
+<div>
+<h1>新着記事</h1>
+<ul>
+{% for post in site.posts limit:7 %}
+<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+</div>
+
+<h1>タグ</h1>
 <p class="toc">
 {% capture tagNames %}{% for tag in site.tags %}{{ tag[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign sortedTagNames = tagNames | split:',' | sort %}
