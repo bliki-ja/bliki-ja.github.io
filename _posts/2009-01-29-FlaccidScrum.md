@@ -3,8 +3,6 @@ title: ヘロヘロScrum
 tags: [agile, agile adoption, bad things, scrum]
 ---
 
-2009/1/29
-
 多くのプロジェクトで混乱が起こっているようだ。次のようなことになっているらしい。
 
 * アジャイルプロセスを使ってみたいと思ってScrumを選ぶ。
