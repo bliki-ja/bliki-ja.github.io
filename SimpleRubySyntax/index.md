@@ -2,11 +2,12 @@
 title: Rubyの構文のかんたんな紹介
 ---
 
-<hr />
+
+---
 
 以下の文章は、Martin Fowler による [Simple Ruby Syntax](https://martinfowler.com/articles/simpleRuby.html) の日本語訳である。
 
-<hr />
+---
 
 最終更新日: 2003年3月
 
@@ -48,9 +49,9 @@ Rubyについてもっと知りたい場合は、Andy Hunt とDave Thomas によ
 
 メジャーアップデートをしたときにここに記す。
 
-* 2003年3月： 
+* 2003年3月：
 
-<hr />
+---
 
 * 日本語訳：kdmsnr
 
@@ -58,4 +59,3 @@ Rubyについてもっと知りたい場合は、Andy Hunt とDave Thomas によ
 
 * 2008-12-03 (水) 10:45:37 umejava : and is something old Smalltalkers miss a lot.の訳は、「(今は別の言語を使っている)旧Smalltalkerはこの機能を待ち望んでいた」ということだと思います。SmalltalkもまさにRubyと同様、リソースを自動解放するためにブロックを使いますので。
 * kdmsnr : ありがとうございます。反映しました。
-
