@@ -16,11 +16,9 @@ Martin Fowler氏とAddison-Wesley Pub Coの許可を得て、パターンカタ�
 
 ## ページ一覧
 
-<ul>
 {% for page in site.pages %}
-{% if page.dir contains 'pofeaa' and page.url != '/pofeaa/' %}
-<li><a href="{{ page.url }}">{{ page.title }}</a></li>
-{% endif %}
-{% endfor %}
-</ul>
+{%- if page.dir contains 'pofeaa' and page.url != '/pofeaa/' -%}
+- [{{ page.title }}]({{ page.url }})
+{% endif -%}
 
+{% endfor %}
