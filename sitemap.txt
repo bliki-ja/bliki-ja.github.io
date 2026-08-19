@@ -127,6 +127,7 @@ https://bliki-ja.github.io/TestDrivenDevelopment
 https://bliki-ja.github.io/TwoPizzaTeam
 https://bliki-ja.github.io/TeamTopologies
 https://bliki-ja.github.io/ConwaysLaw
+https://bliki-ja.github.io/bitemporal-history
 https://bliki-ja.github.io/HumbleObject
 https://bliki-ja.github.io/PairProgramming
 https://bliki-ja.github.io/WaterfallProcess
