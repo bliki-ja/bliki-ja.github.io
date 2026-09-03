@@ -13,7 +13,7 @@ tags: [dictionary]
 
 <!-- The importance of dosage was noticed by a 16th century Swiss physician called Paracelsus. His quote was originally in German “Alle Dinge sind Gift, und nichts ist ohne Gift; allein die Dosis macht, dass ein Ding kein Gift ist.” which (according to Wikipedia) translates as “All things are poison, and nothing is without poison; the dosage alone makes it so a thing is not a poison. ” It's also known as “The dose makes the poison” or if you prefer your sayings in Latin “dosis sola facit venenum”. -->
 
-投与量の重要性は、16世紀のスイスの医師パラケルススが指摘したものだ。彼の言葉は「Alle Dinge sind Gift, und nichts ist ohne Gift; allein die Dosis macht, dass ein Ding kein Gift ist.」というドイツ語だった。これは（Wikipediaによれば）「全てのものは毒であり、毒でないものなど存在しない。その服用量こそが毒であるか、そうでないかを決めるのだ」という意味になる。これは「服用量が毒を作る」として知られ、ラテン語では「dosis sola facit venenum」と表現される。
+服用量の重要性は、16世紀のスイスの医師パラケルススが指摘したものだ。彼の言葉は「Alle Dinge sind Gift, und nichts ist ohne Gift; allein die Dosis macht, dass ein Ding kein Gift ist.」というドイツ語だった。これは（Wikipediaによれば）「全てのものは毒であり、毒でないものなど存在しない。その服用量こそが毒であるか、そうでないかを決めるのだ」という意味になる。これは「服用量が毒を作る」として知られ、ラテン語では「dosis sola facit venenum」と表現される。
 
 <!-- In programming, global data is a good example of the Paracelsus Maxim (as I like to call it). A little global data, especially when immutable, can be a handy way of propagating information that may needed anywhere in a program, but it quickly becomes dangerous if there is a lot of it about. -->
 
