@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>パラケルススの格言 - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/ParacelsusMaxim">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+        <a class="page-link nav-search-toggle" href="#search-panel" aria-controls="search-panel" aria-expanded="false">検索</a>
+      </div>
+      <div id="search-panel" class="nav-search-panel" hidden>
+        <div id="search"></div>
+        <div class="nav-search-fallback">
+          <input class="nav-search-fallback-input" type="search" placeholder="ローカルでは Pagefind 生成後に検索できます" disabled>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">パラケルススの格言</h1>
+    <p class="post-meta" style="text-align:right">
+      2026-09-02
+      
+      [<a href="https://martinfowler.com/bliki/ParacelsusMaxim.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/main/_posts/2026-09-02-ParacelsusMaxim.md">翻訳者と原稿</a>]
+
+    <br />tags: 
+    <a href="/tags?dictionary" style="background-color: #ffc">dictionary</a>
+    
+    
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- The difference between a medicine and a poison is dosage. -->
+
+<p><strong>薬と毒の違いは、服用量にある。</strong></p>
+
+<!-- Often we talk about certain habits, in programming or life, are good or bad. But few things are simple binaries. Some vary with context: reading a book is a good thing sitting in my garden, but not while driving my car. But another variable is dosage: a little pain-killer salves my headache, but too much will kill me. -->
+
+<p>私たちはプログラミングや日常生活における習慣について、それが「良い」か「悪い」かと議論する。だが、物事の多くは単純な二元論では語れない。なかには状況によって変化するものもある。たとえば、庭で本を読むのは良いことだが、車の運転中に本を読むのは悪いことである。また、服用量によっても変わってくる。少量の鎮痛剤は頭痛を和らげるが、過剰に摂取すれば命に関わる。</p>
+
+<!-- The importance of dosage was noticed by a 16th century Swiss physician called Paracelsus. His quote was originally in German “Alle Dinge sind Gift, und nichts ist ohne Gift; allein die Dosis macht, dass ein Ding kein Gift ist.” which (according to Wikipedia) translates as “All things are poison, and nothing is without poison; the dosage alone makes it so a thing is not a poison. ” It's also known as “The dose makes the poison” or if you prefer your sayings in Latin “dosis sola facit venenum”. -->
+
+<p>投与量の重要性は、16世紀のスイスの医師パラケルススが指摘したものだ。彼の言葉は「Alle Dinge sind Gift, und nichts ist ohne Gift; allein die Dosis macht, dass ein Ding kein Gift ist.」というドイツ語だった。これは（Wikipediaによれば）「全てのものは毒であり、毒でないものなど存在しない。その服用量こそが毒であるか、そうでないかを決めるのだ」という意味になる。これは「服用量が毒を作る」として知られ、ラテン語では「dosis sola facit venenum」と表現される。</p>
+
+<!-- In programming, global data is a good example of the Paracelsus Maxim (as I like to call it). A little global data, especially when immutable, can be a handy way of propagating information that may needed anywhere in a program, but it quickly becomes dangerous if there is a lot of it about. -->
+
+<p>プログラミングでは、グローバルデータがパラケルススの格言（私の好きな呼び方）の好例だ。少量のグローバルデータであれば（特にそれが不変であれば）、プログラムの至るところから必要とされる情報を伝達する便利な方法になる。だが、それが大量にあると、すぐに危険な状態になるだろう。</p>
+
+<!-- This kind of thing crops up in lots of places. So when thinking about when things are good or bad, we should always ask “in what contexts” and “in what doses”? -->
+
+<p>このようなことはさまざまな場面で生じる。物事について「良い」か「悪い」かを考えるときには、「どのような状況なのか」と「どれくらいの量なのか」を考えるべきである。</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const searchRoot = document.getElementById('search');
+    const navSearchToggle = document.querySelector('.nav-search-toggle');
+    const navSearchPanel = document.querySelector('.nav-search-panel');
+    const fallback = document.querySelector('.nav-search-fallback');
+
+    const setNavSearchOpen = (isOpen) => {
+      if (!navSearchToggle || !navSearchPanel) {
+        return;
+      }
+
+      navSearchToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      navSearchPanel.hidden = !isOpen;
+
+      if (isOpen) {
+        const searchInput = navSearchPanel.querySelector('input:not([disabled])');
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    };
+
+    if (navSearchToggle && navSearchPanel) {
+      navSearchToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        setNavSearchOpen(navSearchPanel.hidden);
+      });
+
+      document.addEventListener('click', (event) => {
+        const clickedToggle = navSearchToggle === event.target || navSearchToggle.contains(event.target);
+        const clickedPanel = navSearchPanel.contains(event.target);
+
+        if (!navSearchPanel.hidden && !clickedToggle && !clickedPanel) {
+          setNavSearchOpen(false);
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setNavSearchOpen(false);
+        }
+      });
+    }
+
+    const initPagefind = () => {
+      if (!searchRoot || !window.PagefindUI) {
+        return;
+      }
+
+      new PagefindUI({ element: "#search", showSubResults: true });
+
+      if (fallback) {
+        fallback.hidden = true;
+      }
+    };
+
+    if (window.PagefindUI) {
+      initPagefind();
+      return;
+    }
+
+    const pagefindStyles = document.createElement('link');
+    pagefindStyles.rel = 'stylesheet';
+    pagefindStyles.href = '/pagefind/pagefind-ui.css';
+    document.head.appendChild(pagefindStyles);
+
+    const pagefindScript = document.createElement('script');
+    pagefindScript.src = '/pagefind/pagefind-ui.js';
+    pagefindScript.async = true;
+    pagefindScript.addEventListener('load', initPagefind);
+    document.body.appendChild(pagefindScript);
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>

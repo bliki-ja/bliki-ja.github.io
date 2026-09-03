@@ -5,9 +5,21 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 19 Aug 2026 12:18:33 +0900</pubDate>
-    <lastBuildDate>Wed, 19 Aug 2026 12:18:33 +0900</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2026 15:52:42 +0900</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2026 15:52:42 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>パラケルススの格言</title>
+
+        <pubDate>Wed, 02 Sep 2026 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/ParacelsusMaxim</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/ParacelsusMaxim</guid>
+        
+        <category>dictionary</category>
+        
+        
+      </item>
     
       <item>
         <title>バイブコーディング</title>
@@ -119,18 +131,6 @@
         <pubDate>Tue, 18 Nov 2025 00:00:00 +0900</pubDate>
         <link>https://bliki-ja.github.io/FrictionlessForeword</link>
         <guid isPermaLink="true">https://bliki-ja.github.io/FrictionlessForeword</guid>
-        
-        <category>article</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>LLMとソフトウェア開発に関する考察</title>
-
-        <pubDate>Thu, 28 Aug 2025 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/202508-ai-thoughts</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/202508-ai-thoughts</guid>
         
         <category>article</category>
         
