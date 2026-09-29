@@ -5,9 +5,19 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Sep 2026 15:55:13 +0900</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2026 15:55:13 +0900</lastBuildDate>
+    <pubDate>Wed, 30 Sep 2026 02:01:30 +0900</pubDate>
+    <lastBuildDate>Wed, 30 Sep 2026 02:01:30 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>賢明なデフォルト</title>
+
+        <pubDate>Tue, 29 Sep 2026 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/SensibleDefault</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/SensibleDefault</guid>
+        
+        
+      </item>
     
       <item>
         <title>パラケルススの格言</title>
@@ -121,18 +131,6 @@
         <pubDate>Wed, 28 Jan 2026 00:00:00 +0900</pubDate>
         <link>https://bliki-ja.github.io/ExcessiveBold</link>
         <guid isPermaLink="true">https://bliki-ja.github.io/ExcessiveBold</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>『Frictionless』のまえがき</title>
-
-        <pubDate>Tue, 18 Nov 2025 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/FrictionlessForeword</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/FrictionlessForeword</guid>
-        
-        <category>article</category>
         
         
       </item>
