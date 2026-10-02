@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>リファクタリングの語源 - Martin Fowler's Bliki (ja)</title>
-  <meta name="description" content="'’リファクタリング’‘はどこからやってきた？">
+  <meta name="description" content="リファクタリングはどこからやってきた？">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/EtymologyOfRefactoring">
@@ -69,18 +69,42 @@
   </header>
 
   <article class="post-content" id="post-content">
-    <h3 id="リファクタリングはどこからやってきた">'’リファクタリング’‘はどこからやってきた？</h3>
+    <!-- Where did the word refactoring come from? -->
+<h3 id="リファクタリングはどこからやってきた"><em>リファクタリング</em>はどこからやってきた？</h3>
 
-<p>リファクタリング本を執筆中、この疑問が何度か頭に浮かびました。ただそのときは、語源を捜し求めることが遣り甲斐のあることだとは思えませんでした——焦点をあてていたのは’‘技術’‘だったからです。ですが、リファクタンリングのアイデアをつくりあげるのを手伝ってきた人ち（Ward Cunningham, Kent Beck, Bill Opdyke, John Brant, Don Roberts, Ralph Johnson…)に聞いてみることにはしました。</p>
+<!-- This question struck my mind a few times when writing the refactoring book. I knew the term was used within a fairly small community, so in order to discover the etymology of refactoring I talked to the people in that group (Ward Cunningham, Kent Beck, Bill Opdyke, John Brant, Don Roberts, Ralph Johnson...) to find what had led them to come up with the term. -->
 
-<p>リファクタリングが、数学の因数分解（ファクタリング）から来ていることは明らかです。x^2 + 5x + 6 という式は、(x+2)(x+3)というふうに因数分解できます。因数分解を行うことで、複雑な式が簡単になるのです。もちろん、18 を 2*3^2 と表すのも、同じことです。I’ve certainly often heard of people talking about a program as well factored once it’s broken out into similarly logical chunks.★
-（案１：一度うまく分解されたプログラムは、論理的なまとまりにうまく分かれているとよく耳にします。）（案２：一旦論理的なまとまりに分かれたプログラムが、良く因数分解されたのと同様に言われるのをしばしば耳にします。)（案３：プログラムを論理的な塊に分けるということは因数分解のようなものだとよく耳にします。）(案４：ソフトウェアが似たロジックの塊ごとにうまく分割されていることを、うまくファクタリングされていると説明するのはよく聞きます。)</p>
+<p>この疑問は、私が『リファクタリング』の執筆中に何度か頭をよぎりました。この用語は比較的小さなコミュニティ内で使用されていることを知っていたため、彼ら（ウォード・カニンガム、ケント・ベック、ビル・オプダイク、ジョン・ブラント、ドン・ロバート、ラルフ・ジョンソンなど）にリファクタリングの語源について話を聞くことにしました。彼らはどこから用語の着想を得たのでしょうか。</p>
 
-<p>リファクタリングのクリエーターたち(the creators of refactoring)に語源を聞いてまわったら、口を揃えて「分からない」と言われました。用語としては、しばらく使われてきたはずなのですが、どこから来たのか、語源は分かりません。</p>
+<!-- 以前の文章の翻訳：リファクタリング本を執筆中、この疑問が何度か頭に浮かびました。ただそのときは、語源を捜し求めることが遣り甲斐のあることだとは思えませんでした——焦点をあてていたのは''技術''だったからです。ですが、リファクタンリングのアイデアをつくりあげるのを手伝ってきた人ち（Ward Cunningham, Kent Beck, Bill Opdyke, John Brant, Don Roberts, Ralph Johnson...)に聞いてみることにはしました。 -->
 
-<p>リファクタリングについて<a href="ftp://st.cs.uiuc.edu/pub/papers/refactoring/opdyke-thesis.ps.Z">最初の論文</a>を書いた <a href="http://csc.noctrl.edu/f/opdyke/">Bill Opdyke</a> から聞いた確かな情報があります。彼は、Ralph Johnson と立ち話で、当時流行っていた「ソフトウェアファクトリー」について議論していたそうです。
-ソフトウェア開発というものは、<a href="http://patricklogan.blogspot.com/2003_08_31_patricklogan_archive.html">製造というより設計である</a>。故に、ソフトウェア’‘リ’‘ファクトリーと呼んだほうがいいんじゃないか。彼らはそう思ったそうです。
-「リファクトリー」は、Ralphらの<a href="http://www.refactory.com/">コンサルティング会社</a>の名前となって残っています。</p>
+<!-- The obvious answer comes from the notion of factoring in mathematics. You can take an expressions such as x^2 + 5x + 6 and factor it into (x+2)(x+3). 
+By factoring it you can make a number of mathematical operations much easier. 
+Obviously this is much the same as representing 18 as 2*3^2. 
+I've certainly often heard of people talking about a program as well factored once it's broken out into similarly logical chunks. -->
+
+<p>リファクタリングが数学の因数分解（ファクタリング）に由来するのは明らかです。たとえば、<code class="language-plaintext highlighter-rouge">x^2 + 5x + 6</code>は<code class="language-plaintext highlighter-rouge">(x+2)(x+3)</code>に因数分解できます。因数分解することで、数学的な演算を大幅に簡略化できます。<code class="language-plaintext highlighter-rouge">18</code>を<code class="language-plaintext highlighter-rouge">2*3^2</code>にするのも同じことです。プログラムを論理的に意味のある単位に分解できたことを「うまく因数分解できた」と表現している人がいるというのはよく耳にします。</p>
+
+<!-- リファクタリングが、数学の因数分解（ファクタリング）から来ていることは明らかです。x^2 + 5x + 6 という式は、(x+2)(x+3)というふうに因数分解できます。因数分解を行うことで、複雑な式が簡単になるのです。もちろん、18 を 2*3^2 と表すのも、同じことです。I've certainly often heard of people talking about a program as well factored once it's broken out into similarly logical chunks.★
+ !-- （案１：一度うまく分解されたプログラムは、論理的なまとまりにうまく分かれているとよく耳にします。）（案２：一旦論理的なまとまりに分かれたプログラムが、良く因数分解されたのと同様に言われるのをしばしば耳にします。)（案３：プログラムを論理的な塊に分けるということは因数分解のようなものだとよく耳にします。）(案４：ソフトウェアが似たロジックの塊ごとにうまく分割されていることを、うまくファクタリングされていると説明するのはよく聞きます。) -->
+
+<!-- When I asked around the creators of refactoring, the common answer was that they had no idea. The term had been around for a while and they don't know where it came from. -->
+<p>リファクタリングの考案者たちに用語の由来について質問したところ、口をそろえて「知らない」という答えが返ってきました。以前から使われてきたはずですが、その由来については誰も把握していなかったのです。</p>
+
+<!-- リファクタリングのクリエーターたち(the creators of refactoring)に語源を聞いてまわったら、口を揃えて「分からない」と言われました。用語としては、しばらく使われてきたはずなのですが、どこから来たのか、語源は分かりません。 -->
+
+<!-- The one definite answer I got was from Bill Opdyke, who did the first thesis on refactoring. He remembered a conversation during a walk with Ralph Johnson. 
+They were discussing the notion of Software Factory, which was then in vogue. 
+They surmised that since software development was more like design than like manufacturing, it would be better to call it a Software Refactory. 
+Refactory has gone on to be the name for the consulting organization that Ralph and his colleagues use. -->
+
+<p>確かな回答が<a href="https://csc.noctrl.edu/f/opdyke/">ビル・オプダイク</a>から得られました。彼はリファクタリングに関する<a href="ftp://st.cs.uiuc.edu/pub/papers/refactoring/opdyke-thesis.ps.Z">最初の学位論文</a>を書いた人物です。彼は散歩中にラルフ・ジョンソンと交わした会話を覚えていました。彼らは当時流行していた「ソフトウェア・ファクトリー」の概念について議論していました。彼らは、ソフトウェア開発は<a href="https://patricklogan.blogspot.com/2003_08_31_patricklogan_archive.html">製造よりも設計に近い</a>ため、「ソフトウェア・リファクトリー」と呼ぶほうが適切だと考えました。なお、「リファクトリー」はラルフたちの<a href="https://refactory.com/">コンサルティング会社</a>の社名に採用されています。</p>
+
+<!-- リファクタリングについて[最初の論文](ftp://st.cs.uiuc.edu/pub/papers/refactoring/opdyke-thesis.ps.Z)を書いた [Bill Opdyke](http://csc.noctrl.edu/f/opdyke/) から聞いた確かな情報があります。彼は、Ralph Johnson と立ち話で、当時流行っていた「ソフトウェアファクトリー」について議論していたそうです。ソフトウェア開発というものは、[製造というより設計である](http://patricklogan.blogspot.com/2003_08_31_patricklogan_archive.html)。故に、ソフトウェア''リ''ファクトリーと呼んだほうがいいんじゃないか。彼らはそう思ったそうです。「リファクトリー」は、Ralphらの[コンサルティング会社](http://www.refactory.com/)の名前となって残っています。 -->
+
+<!-- The foundations of what we refer to these days as refactoring comes from the Smalltalk communities. However the metaphor of factoring a program was also part of the Forth community. Bill Wake dug out the first known printed mention of the word “refactoring” in a Thinking Forth, a 1984 book by Leo Brodie. We're pretty sure that this usage didn't pass from the Forth community to the Smalltalk community, but developed independently. -->
+
+<p>現在「リファクタリング」と呼ばれる手法の基礎はSmalltalkコミュニティに由来します。ただし、プログラムを「因子分解する」という比喩表現は、Forthコミュニティでも用いられていました。<a href="https://www.laputan.org/catfish/2011/03/post.html">ビル・ウェイクの調査</a>によると「リファクタリング」という用語がはじめて印刷物に登場したのは、レオ・ブロディの著書『Thinking Forth』（1984年）だそうです。ただし、ForthコミュニティからSmalltalkコミュニティに伝播したわけではなく、それぞれが独立して発展したと私たちは考えています。</p>
 
   </article>
 
