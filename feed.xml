@@ -5,9 +5,19 @@
     <description></description>
     <link>https://bliki-ja.github.io/</link>
     <atom:link href="https://bliki-ja.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Oct 2026 13:10:39 +0900</pubDate>
-    <lastBuildDate>Fri, 02 Oct 2026 13:10:39 +0900</lastBuildDate>
+    <pubDate>Fri, 30 Oct 2026 11:17:30 +0900</pubDate>
+    <lastBuildDate>Fri, 30 Oct 2026 11:17:30 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>LLMの文体</title>
+
+        <pubDate>Thu, 29 Oct 2026 00:00:00 +0900</pubDate>
+        <link>https://bliki-ja.github.io/LLM-Voice</link>
+        <guid isPermaLink="true">https://bliki-ja.github.io/LLM-Voice</guid>
+        
+        
+      </item>
     
       <item>
         <title>賢明なデフォルト</title>
@@ -121,16 +131,6 @@
         <category>team organization</category>
         
         <category>technical leadership</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>過剰な太字</title>
-
-        <pubDate>Wed, 28 Jan 2026 00:00:00 +0900</pubDate>
-        <link>https://bliki-ja.github.io/ExcessiveBold</link>
-        <guid isPermaLink="true">https://bliki-ja.github.io/ExcessiveBold</guid>
         
         
       </item>

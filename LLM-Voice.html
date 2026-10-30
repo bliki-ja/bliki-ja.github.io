@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LLMの文体 - Martin Fowler's Bliki (ja)</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://bliki-ja.github.io/LLM-Voice">
+  <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
+  <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
+  <script src="/js/jquery.toc.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">Martin Fowler's Bliki (ja)</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" href="/tags/">タグ</a>
+        <a class="page-link" href="/hot/">人気エントリー</a>
+        <a class="page-link" href="/random/">ランダム</a>
+        <a class="page-link" href="/pofeaa/">PofEAA</a>
+        <a class="page-link nav-search-toggle" href="#search-panel" aria-controls="search-panel" aria-expanded="false">検索</a>
+      </div>
+      <div id="search-panel" class="nav-search-panel" hidden>
+        <div id="search"></div>
+        <div class="nav-search-fallback">
+          <input class="nav-search-fallback-input" type="search" placeholder="ローカルでは Pagefind 生成後に検索できます" disabled>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">LLMの文体</h1>
+    <p class="post-meta" style="text-align:right">
+      2026-10-29
+      
+      [<a href="https://martinfowler.com/bliki/LLM-Voice.html">オリジナル記事</a>]
+      
+      [<a href="http://github.com/bliki-ja/bliki-ja.github.io/blob/main/_posts/2026-10-29-LLM-Voice.md">翻訳者と原稿</a>]
+
+    
+    </p>
+  </header>
+
+  <article class="post-content" id="post-content">
+    <!-- Sometimes when I read a post, I get the growing feeling that I'm reading the output of an LLM. I can't necessarily define why, although there are the common tells (it's not the em-dashes, it's the load-bearing tapestries). As I do this my desire to read on atrophies, sometimes to the point of revulsion -->
+
+<p>投稿を読んでいると、LLMが生成した文章を読んでいるのではないかと思うことがある。理由を明確に定義できるわけではないが、共通の特徴があることに気づく（エムダッシュを多用するなどの表面的なことではなく、タペストリーのように大げさな表現を使った文体のことだ）。そうしているうちに読む気が薄れ、時には嫌悪感を覚えることすらある。</p>
+
+<!-- There are tools out there that claim to be able to tell the difference between LLM-written prose and the old-fashioned biological product. I'm wary of them, partly due skeptism about their accuracy, but also because it rather misses the point. The reaction to LLM-Voice is a human one, that sense that we are in an uncanny valley of prose. By the time I'd reach for a tool to tell me what I'm reading, it's already too late, even if it confidently tells me there's no LLM present. -->
+
+<p>LLMが書いた文章と昔ながらの「生物」が書いた文章を見分けられるというツールも存在するが、私は懐疑的である。それらは精度も疑わしいが、そもそも本質を見失っているからだ。LLMの文体に対する反応は人間的なものである。これは文章の「<a href="https://ja.wikipedia.org/wiki/%E4%B8%8D%E6%B0%97%E5%91%B3%E3%81%AE%E8%B0%B7%E7%8F%BE%E8%B1%A1">不気味の谷</a>」に迷い込んだときの反応だ。したがって、いま読んでいるものが何かを教えてくれるツールを使う時点で手遅れなのである。たとえそれが「LLMは使われていない」と自信を持って教えてくれたとしても同じだ。</p>
+
+<!-- I'm also suspicious of my own ability to accurately recognize LLM voice. Language changes over time, so a common sign of age is complaining about the language of the youngs. I'm inclined to bristle at prose that talks about “adopting a new sales motion,” or “a sharp round-up of news”. But I've heard these constructs coming out of human mouths, so that's more a generational difference rather than between carbon and silicon. (And as a transplanted Brit, don't get me started on Americanisms, I'm sure I'll get used to them momentarily.) -->
+
+<p>自分がLLMの文体を見極められるかどうかにも懐疑的である。言語は時代で変化する。若者言葉に文句を言い始めたら老いの兆候だ。「新しいセールスモーションを導入する（adopting a new sales motion）」や「ニュースのシャープなラウンドアップ（まとめ）（a sharp round-up of news）」といった表現を目にするたびに反発したくなる。だが、これらは人間の話し言葉としても使われているようだ。つまり、炭素（人間）とシリコン（AI）の違いというよりも、世代間の違いなのだろう。（移住してきたイギリス人としては、アメリカ英語の話を始めたらきりがないのでこれくらいにしておこう。「すぐに<sup id="fnref:momentarily" role="doc-noteref"><a href="#fn:momentarily" class="footnote" rel="footnote">1</a></sup>」慣れると思う）。</p>
+
+<!-- Right now I urge authors to be extra-wary of LLM-Voice. In particular I strongly recommend that authors should not fall into the trap of getting the LLM to write a draft. Even if it's edited by a human, it's very hard to expel the LLM-Voice - thus causing the uncanny valley reaction. 1 Even accepting suggestions of rephrasing is dangerous. I have heard of people using LLMs to develop outline and structure, that may be ok, but only as far as an outline. 2 Authors should fill the prose themselves. -->
+
+<p>文章を書く人たちに言いたい。LLMの文体には細心の注意を払うべきだ。「LLMに下書きを書かせる」という罠に陥らないようにしてほしい。あとから人間が編集したとしても、LLMの文体を排除するのは非常に困難である<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">2</a></sup>。それが「不気味の谷」の反応を引き起こす。LLMから提案された言い換えを受け入れるのも危険である。LLMにアウトラインや構成を考えさせているという人もいるそうだが、アウトラインまでなら問題ないかもしれない<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup>。だが、文章は著者自身が書くべきである。</p>
+
+<!-- Say Your Writing is even more important in the age of LLMs. I habitually speak the words in my head and then write them down (and then edit what I've just written). This advice is particularly important to anyone who has any desire to communicate regularly with writing. Like many things, learning to be a good writer relies on lots of practice. It's a skill worth the time to acquire, but surrendering to an LLM will undermine any progress. -->
+
+<p>LLMの時代では「<a href="/SayYourWriting">自分の文章を声に出してみよう</a>」がさらに重要になっている。私は頭の中にある言葉を口に出してから、それを書き留めている（その後、書いたものを編集する）。文章を通じて定期的にコミュニケーションしたいと願う人たちにとって、これは極めて重要なアドバイスである。優れた書き手になるには膨大な練習が必要だ。それは時間をかける価値のあるスキルである。だが、LLMに譲り渡してしまえば、あらゆる成長が失われてしまう。</p>
+
+<!-- In time it may be that LLMs will be so good that we can't tell the difference. In many ways, that's more worrying. Like most writers, I find writing an almost-essential tool for thinking. Often it's only by writing something down, that I can really get my thoughts on a topic into coherence. I've often started an essay knowing I don't really understand something, but the act of wrestling with the words forces me to overcome my confusions. As more people delegate writing to LLMs they will also delegate thinking and comprehension to LLMs. I don't want to do that, where's the fun of writing then? -->
+
+<p>いずれはLLMの文章を見分けられなくなる日が来るだろう。多くの意味で、そのほうが心配である。多くの書き手がそう思っているだろうが、私は書くことが思考に欠かせないツールだと考えている。私は何かを書き始めてから、ようやくそのことについて理解できることがよくある。あまり理解できていないことについてエッセイを書き始め、言葉と格闘するなかで混乱を乗り越えられることがよくある。書くことをLLMに委ねるようになると、思考や理解までもLLMに委ねるようになるだろう。私はそんなことはしたくない。それでは書く楽しみが失われてしまう。</p>
+
+<!-- Although avoiding LLM-Voice is a general rule, it isn't an absolute one. An important example is that of Jim Highsmith (who contributes to this site). He finds working with an LLM is essential to his writing to overcome the bane of Parkinson's disease. I'll gladly deal with LLM-Voice in order to continue imbibing my old friend's wisdom. -->
+
+<p>LLMの文体は避けるべきだが、絶対的なルールではない。その重要な一例が、ジム・ハイスミスの文章である（このサイトに掲載してある）。彼は<a href="https://bjsm.bmj.com/content/60/9/677">パーキンソン病の困難</a>を乗り越えて執筆するために、LLMの活用が不可欠だと考えている。旧友の知恵を手に入れられるのならば、LLMの文体も喜んで受け入れよう。</p>
+
+<!-- A more awkward case is that of translation. Many of my colleagues aren't comfortable in English, it is their second or fourth language. Some have found LLM translation an important part to their communication with those of us who know rather less Marathi. But I also would prefer rather a genuine human's clunky prose to the smooth but soulless LLM. -->
+
+<p>厄介な例は翻訳だ。私の同僚の多くは英語に堪能ではなく、英語が第二言語や第四言語といった者もいる。マラーティー語（インド西部の公用語）をよく知らない私たちとのコミュニケーションにおいて、LLMを使った翻訳を重要な手段と考えている人もいる。ただし、私は流暢だが魂のこもっていないLLMの文体よりも、不格好でも本物の人間が書いた文章のほうが好きである。</p>
+
+<!-- There are situations where it would be reasonable for even a native Englishman to let LLMs write the prose. Such as if I'm writing a form letter to an official, or preparing a report I suspect no-one will ever read 3. Maybe most documentation in the future will only be read by LLMs, and they won't have my uncanny valley worries. But if I want to communicate with humans, my humanity has to shine (or at least ooze) out of my prose. -->
+
+<p>英語ネイティブでもLLMに文章を書かせたほうが合理的な状況もある。たとえば、行政向けの定型文を書くときや誰も読まない報告書を書くときだ<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">4</a></sup>。将来的にほとんどの文書はLLMにしか読まれなくなるだろう。LLMなら私のように「不気味の谷」を感じることもない。だが、人間とコミュニケーションしたいのであれば、人間性があふれ出す（少なくとも滲み出る）文章でなければならない。</p>
+
+<h2 id="謝辞">謝辞</h2>
+<!-- Acknowledgements
+ !-- Alessio Ferri, Caer Sanders, Ian Cartwright, Jie Jessie Xia, Joshua Kerievsky, Michael Feathers, Michael Nygard, Scott Davies, and Wei Zhang commented on drafts of this post. -->
+<p>Alessio Ferri、Caer Sanders、Ian Cartwright、Jie Jessie Xia、Joshua Kerievsky、Michael Feathers、Michael Nygard、Scott Davies、Wei Zhangにコメントをいただいた。</p>
+
+<!-- I did not use AI or LLMs in any way while writing this post. -->
+<p>本記事の執筆にあたり、AIやLLMは使用していない。</p>
+
+<h2 id="注記">注記</h2>
+
+<!-- Notes
+ !-- 1: Very hard, but not impossible. I've come across one case where I do know the first draft was entirely done by LLM, but I detected no LLM Voice when I read the final piece. It did, however, need a professional editor at a major periodical publication to clean it up. -->
+
+<!-- 2: My policy on this site, is that anyone who uses AI to help them write should declare how they used it, usually in the acknowledgments. This is partly for transparency, and partly so that readers can learn useful ways to use AI. In my own case, I don't use AI for generating prose, nor for help in structure. The only way I use it for writing is as a search tool (but I verify any information by going to the source). -->
+
+<!-- 3: Michael Nygard commented: “There you really aren't trying to communicate thoughts from one person to other people. You're communicating with a process rather than a human. A human may open the envelope but that person is acting as a component in a cybernetic organism.” -->
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:momentarily" role="doc-endnote">
+      <p>訳注：momentarilyはイギリス英語とアメリカ英語で意味が違う。 <a href="#fnref:momentarily" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:1" role="doc-endnote">
+      <p>非常に困難だが、不可能なことではない。初稿をLLMに書かせた文章を読んだことがあるが、完成時にはLLMの文体は感じられなかった。ただし、校正にはプロの編集者が必要だった。 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>このサイトの方針として、執筆にAIを使用した人には、どのように使用したかを謝辞の欄に書いてもらっている。これは透明性を確保する意味もあるが、読者にAIの有用な使い方を学んでもらうためでもある。私は文章の生成や構成の補助にAIは使っていない。執筆に使うのは検索ツールとしてだけである（出典の情報は自分で確認している）。 <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>マイケル・ナイガードは以下のように述べている。「この場合、誰かの考えを伝えたいわけではない。つまり、人間ではなくプロセスとコミュニケーションしているのである。人間が封筒を開封するかもしれないが、その人間はサイバネティックな有機体のコンポーネントとして機能しているのである」 <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Martin Fowler's Bliki (ja)</h3>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Martin Fowler's Bliki (ja)</li>
+          <li><a href="mailto:kdmsnr@gmail.com">kdmsnr@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bliki-ja">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bliki-ja</span>
+            </a>
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const searchRoot = document.getElementById('search');
+    const navSearchToggle = document.querySelector('.nav-search-toggle');
+    const navSearchPanel = document.querySelector('.nav-search-panel');
+    const fallback = document.querySelector('.nav-search-fallback');
+
+    const setNavSearchOpen = (isOpen) => {
+      if (!navSearchToggle || !navSearchPanel) {
+        return;
+      }
+
+      navSearchToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      navSearchPanel.hidden = !isOpen;
+
+      if (isOpen) {
+        const searchInput = navSearchPanel.querySelector('input:not([disabled])');
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    };
+
+    if (navSearchToggle && navSearchPanel) {
+      navSearchToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        setNavSearchOpen(navSearchPanel.hidden);
+      });
+
+      document.addEventListener('click', (event) => {
+        const clickedToggle = navSearchToggle === event.target || navSearchToggle.contains(event.target);
+        const clickedPanel = navSearchPanel.contains(event.target);
+
+        if (!navSearchPanel.hidden && !clickedToggle && !clickedPanel) {
+          setNavSearchOpen(false);
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setNavSearchOpen(false);
+        }
+      });
+    }
+
+    const initPagefind = () => {
+      if (!searchRoot || !window.PagefindUI) {
+        return;
+      }
+
+      new PagefindUI({ element: "#search", showSubResults: true });
+
+      if (fallback) {
+        fallback.hidden = true;
+      }
+    };
+
+    if (window.PagefindUI) {
+      initPagefind();
+      return;
+    }
+
+    const pagefindStyles = document.createElement('link');
+    pagefindStyles.rel = 'stylesheet';
+    pagefindStyles.href = '/pagefind/pagefind-ui.css';
+    document.head.appendChild(pagefindStyles);
+
+    const pagefindScript = document.createElement('script');
+    pagefindScript.src = '/pagefind/pagefind-ui.js';
+    pagefindScript.async = true;
+    pagefindScript.addEventListener('load', initPagefind);
+    document.body.appendChild(pagefindScript);
+  });
+</script>
+  </div>
+
+</footer>
+
+
+
+<script>
+ $('#page-content').toc({
+   showAlways:
+ });
+</script>
+
+
+
+  </body>
+
+</html>
